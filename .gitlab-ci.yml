@@ -1,0 +1,45 @@
+image:
+  name: alpine/git:v2.32.0
+  entrypoint: ["/bin/sh", "-c"]
+
+stages:
+  - setup
+
+#-------------- Scripts --------------
+
+# A simple script to authenticate git with SSH
+.git_auth: &git_auth
+  - eval `ssh-agent -s`
+  - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p ~/.ssh && chmod 700 ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  - git config --global user.name  "oneML-bot"
+  - git config --global user.email "oneml@sertiscorp.com"
+
+#-------------- Jobs --------------
+
+# An automatic way to check if github remote is ahead of gitlab's.
+# The opposite will never happen because gitlab takes care of the mirror-push logic.
+# This is the flow:
+# - authenticate git
+# - add the remote mirror and fetch everything
+# - checkout develop branch of gitlab repo because it's the only branch we want to mirror-pull
+# - compare the latest commit hash of develop branch on gitlab and github
+# - if the hash is the same, then do nothing
+# - if the hash is different, then we pull the github develop branch into gitlab's and push it
+mirror-pull:
+  stage: setup
+  script:
+    - *git_auth
+    - git remote add upstream https://github.com/sertiscorp/oneML-bootcamp.git
+    - git fetch --all && git checkout origin/develop
+    - >
+      if [ "$(git rev-parse origin/develop)" != "$(git rev-parse upstream/develop)" ];
+      then
+        git pull upstream develop
+        # If we push right away, there's an authentication issue. As a workaround, we remove and add again the remote
+        git remote rm origin && git remote add origin git@gitlab.com:sertiscorp/mle/edge/oneml-bootcamp.git
+        git push origin HEAD
+      fi
+  tags:
+    - build
