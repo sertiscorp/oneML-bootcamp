@@ -98,7 +98,7 @@ then
 fi
 
 # artifacts
-TAG=v0.1.0-rc.0
+TAG=v0.1.0
 BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/${TAG}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
 BINARY_PATH=${ROOT_DIR}/assets/binaries/${TARGET_ARCH}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
 if [ ! -f "$BINARY_PATH" ];
