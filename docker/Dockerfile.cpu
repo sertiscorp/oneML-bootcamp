@@ -1,0 +1,21 @@
+ARG base_image
+FROM $base_image
+
+# Install dependencies
+RUN apt-get update && \
+    apt-get install -y \
+        g++-arm-linux-* \
+        g++-aarch64-linux-* && \
+    apt-get clean > /dev/null && \
+    apt-get autoremove -y --purge && \
+    apt-get update -qq > /dev/null && \
+    rm -rf /var/lib/apt/lists/ && \
+    rm -rf /tmp/* /var/tmp/*
+
+# Create symlinks
+RUN ln -sf /usr/bin/aarch64-linux-gnu-gcc-9 /bin/aarch64-linux-gnu-gcc && \
+    ln -sf /usr/bin/aarch64-linux-gnu-g++-9 /bin/aarch64-linux-gnu-g++
+RUN ln -sf /usr/bin/arm-linux-gnueabihf-gcc-9 /bin/arm-linux-gnueabihf-gcc && \
+    ln -sf /usr/bin/arm-linux-gnueabihf-g++-9 /bin/arm-linux-gnueabihf-g++
+RUN ln -sf /usr/bin/arm-linux-gnueabi-gcc-9 /bin/arm-linux-gnueabi-gcc && \
+    ln -sf /usr/bin/arm-linux-gnueabi-g++-9 /bin/arm-linux-gnueabi-g++
