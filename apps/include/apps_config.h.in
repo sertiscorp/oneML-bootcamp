@@ -1,0 +1,9 @@
+#ifndef APPS_CONFIG_H_
+#define APPS_CONFIG_H_
+
+/** These templates will be replaced with CMake's variables 
+ *  by a `configure_file` command.
+ */
+#define ASSETS_DIR_PATH "@ASSETS_DIR_PATH@"
+
+#endif // APPS_CONFIG_H_

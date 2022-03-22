@@ -4,6 +4,10 @@ image:
 
 stages:
   - setup
+  - docker-base
+  - docker
+  - env-check
+  - build
 
 #-------------- Scripts --------------
 
@@ -15,6 +19,69 @@ stages:
   - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   - git config --global user.name  "oneML-bot"
   - git config --global user.email "oneml@sertiscorp.com"
+
+# A script to asses if a new docker image is necessary for a new branch or not
+.docker_check: &docker_check # DOCKER_FILES
+  - >
+    if [ -z "${CI_COMMIT_TAG}" ] && [ "$CI_COMMIT_REF_NAME" != "develop" ];
+    then
+      COUNT=0
+      git fetch
+      for DOCKER_FILE in ${DOCKER_FILES//,/ };
+      do
+        COUNT=$((COUNT+$(git diff origin/$CI_COMMIT_REF_NAME origin/develop -- ${DOCKER_FILE} | wc -c)));
+      done
+      if [ ${COUNT} -eq 0 ]; then
+        echo "Using develop docker image..."
+        exit 0;
+      fi
+    fi
+
+# A script to identify the right docker image to use for each job
+.env_check: &env_check # IMAGE
+  - mkdir -p ~/.docker
+  - 'echo ''{"experimental": "enabled"}'' > ~/.docker/config.json'
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  - docker manifest inspect $IMAGE && echo "BUILD_IMAGE=$IMAGE" >> env_setup.env || echo "BUILD_IMAGE=$DEVELOP_IMAGE" >> env_setup.env
+
+
+#-------------- Base CI --------------
+
+.base_docker: # Base CI for docker stage
+  stage: docker-base
+  image: docker:19.03.11-git
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_FILES: docker/Dockerfile
+  rules:
+    - changes:
+      - docker/Dockerfile
+  tags:
+    - build
+  needs: ["mirror-pull"]
+
+.base_env_check: # Base CI env-check stage
+  stage: env-check
+  image: docker:19.03.11
+  variables:
+    IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu
+    DEVELOP_IMAGE: $CI_REGISTRY_IMAGE:develop-cpu
+  script:
+    - *env_check
+  artifacts:
+    reports:
+      dotenv: env_setup.env
+  tags:
+    - build
+
+.base_build: # Base CI for build stage
+  stage: build
+  image: $BUILD_IMAGE
+  tags:
+    - build
+  needs:
+    - cpu-env-check
+    - mirror-pull
 
 #-------------- Jobs --------------
 
@@ -43,3 +110,136 @@ mirror-pull:
       fi
   tags:
     - build
+
+docker-build-cpu-base:
+  extends: .base_docker
+  script:
+    - *git_auth
+    - *docker_check
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base -f $DOCKER_FILES --build-arg base_image=ubuntu:20.04 .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base
+
+docker-build-gpu-base:
+  extends: .base_docker
+  script:
+    - *git_auth
+    - *docker_check
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base -f $DOCKER_FILES --build-arg base_image=nvidia/cuda:11.5.1-cudnn8-runtime-ubuntu20.04 .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base
+
+docker-build-cpu:
+  extends: .base_docker
+  stage: docker
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_FILES: docker/Dockerfile.cpu
+  rules:
+    - changes:
+      - docker/Dockerfile.cpu
+  script:
+    - *git_auth
+    - *docker_check
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu -f $DOCKER_FILES --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu
+  needs: ["docker-build-cpu-base"]
+
+docker-build-gpu:
+  extends: .base_docker
+  stage: docker
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_FILES: docker/Dockerfile.gpu
+  rules:
+    - changes:
+      - docker/Dockerfile.gpu
+  script:
+    - *git_auth
+    - *docker_check
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu -f $DOCKER_FILES --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu
+  needs: ["docker-build-gpu-base"]
+
+docker-build-android:
+  extends: .base_docker
+  stage: docker
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_FILES: docker/Dockerfile.android
+  rules:
+    - changes:
+      - docker/Dockerfile.android
+  script:
+    - *git_auth
+    - *docker_check
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android -f $DOCKER_FILES --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android
+  needs: ["docker-build-cpu-base"]
+
+cpu-env-check:
+  extends: .base_env_check
+
+gpu-env-check:
+  extends: .base_env_check
+  variables:
+    IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu
+    DEVELOP_IMAGE: $CI_REGISTRY_IMAGE:develop-gpu
+
+android-env-check:
+  extends: .base_env_check
+  variables:
+    IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android
+    DEVELOP_IMAGE: $CI_REGISTRY_IMAGE:develop-android
+
+build-cpp-x86_64:
+  extends: .base_build
+  script:
+    - ./build.sh -t x86_64 -cc --clean
+
+build-cpp-aarch64-linux-gnu:
+  extends: .base_build
+  script:
+    - ./build.sh -t aarch64-linux-gnu -cc --clean
+
+build-cpp-arm-linux-gnueabihf:
+  extends: .base_build
+  script:
+    - ./build.sh -t arm-linux-gnueabihf -cc --clean
+
+build-cpp-aarch64-linux-android:
+  extends: .base_build
+  script:
+    - ./build.sh -t aarch64-linux-android -cc --clean
+  needs:
+    - android-env-check
+    - mirror-pull
+
+build-cpp-arm-linux-android:
+  extends: .base_build
+  script:
+    - ./build.sh -t arm-linux-android -cc --clean
+  needs:
+    - android-env-check
+    - mirror-pull
+
+build-python:
+  extends: .base_build
+  script:
+    - echo "Implement me!"
+    # - ./build.sh -t x86_64 -py --clean
+
+build-java:
+  extends: .base_build
+  script:
+    - echo "Implement me!"
+    # - ./build.sh -t x86_64 -jni --clean
+
+build-golang:
+  extends: .base_build
+  script:
+    - echo "Implement me!"
+    # - ./build.sh -t x86_64 -go --clean
