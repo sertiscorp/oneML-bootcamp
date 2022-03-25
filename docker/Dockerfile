@@ -9,7 +9,9 @@ RUN apt-get update && \
         build-essential \
         curl \
         openssl \
-        libssl-dev && \
+        libssl-dev \
+        python3 \
+        python3-pip && \
     apt-get clean > /dev/null && \
     apt-get autoremove -y --purge && \
     apt-get update -qq > /dev/null && \

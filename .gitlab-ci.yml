@@ -117,7 +117,7 @@ docker-build-cpu-base:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base -f $DOCKER_FILES --build-arg base_image=ubuntu:20.04 .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base -f docker/Dockerfile --build-arg base_image=ubuntu:20.04 .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base
 
 docker-build-gpu-base:
@@ -126,7 +126,7 @@ docker-build-gpu-base:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base -f $DOCKER_FILES --build-arg base_image=nvidia/cuda:11.5.1-cudnn8-runtime-ubuntu20.04 .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base -f docker/Dockerfile --build-arg base_image=nvidia/cuda:11.5.1-cudnn8-runtime-ubuntu20.04 .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base
 
 docker-build-cpu:
@@ -134,15 +134,16 @@ docker-build-cpu:
   stage: docker
   variables:
     DOCKER_DRIVER: overlay2
-    DOCKER_FILES: docker/Dockerfile.cpu
+    DOCKER_FILES: docker/Dockerfile.cpu,docker/Dockerfile
   rules:
     - changes:
       - docker/Dockerfile.cpu
+      - docker/Dockerfile
   script:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu -f $DOCKER_FILES --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu -f docker/Dockerfile.cpu --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu
   needs: ["docker-build-cpu-base"]
 
@@ -151,15 +152,16 @@ docker-build-gpu:
   stage: docker
   variables:
     DOCKER_DRIVER: overlay2
-    DOCKER_FILES: docker/Dockerfile.gpu
+    DOCKER_FILES: docker/Dockerfile.gpu,docker/Dockerfile
   rules:
     - changes:
       - docker/Dockerfile.gpu
+      - docker/Dockerfile
   script:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu -f $DOCKER_FILES --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu -f docker/Dockerfile.gpu --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu
   needs: ["docker-build-gpu-base"]
 
@@ -168,15 +170,16 @@ docker-build-android:
   stage: docker
   variables:
     DOCKER_DRIVER: overlay2
-    DOCKER_FILES: docker/Dockerfile.android
+    DOCKER_FILES: docker/Dockerfile.android,docker/Dockerfile
   rules:
     - changes:
       - docker/Dockerfile.android
+      - docker/Dockerfile
   script:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android -f $DOCKER_FILES --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android -f docker/Dockerfile.android --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android
   needs: ["docker-build-cpu-base"]
 
@@ -229,8 +232,7 @@ build-cpp-arm-linux-android:
 build-python:
   extends: .base_build
   script:
-    - echo "Implement me!"
-    # - ./build.sh -t x86_64 -py --clean
+    - ./build.sh -t x86_64 -py --clean
 
 build-java:
   extends: .base_build

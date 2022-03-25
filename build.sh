@@ -71,13 +71,15 @@ done
 
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
+SUPPORTED_TARGETS=( x86_64 aarch64-linux-gnu arm-linux-gnueabihf aarch64-linux-android arm-linux-android )
 if [[ ! -n ${TARGET_ARCH} ]];
 then
     echo "ERROR: Unspecified target architecture. Please use -t from CLI to specify an architecture."
     exit 1
-else # check if architecture is supported
-    #TODO: implement this
-    :
+elif [[ ! " ${SUPPORTED_TARGETS[*]} " =~ " ${TARGET_ARCH} " ]]; # check if architecture is supported
+then
+  echo "ERROR: target ${TARGET_ARCH} is not supported yet. Please use one of (${SUPPORTED_TARGETS[@]})."
+  exit 1
 fi
 
 # clean build
@@ -139,8 +141,13 @@ fi
 
 if [[ -v PYTHON_BUILD ]];
 then
-  #TODO: implement this
-  :
+  if [[ -v CLEAN || ! $(pip list | grep oneML) ]];
+  then
+    pip3 install -U pip setuptools wheel
+    cd assets/binaries/${TARGET_ARCH}/bindings/python && ./install_oneml.sh
+  else
+    echo "Using existing oneML installation. Use --clean to reinstall."
+  fi
 fi
 
 if [[ -v JAVA_BUILD ]];
