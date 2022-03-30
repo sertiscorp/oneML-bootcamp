@@ -2,6 +2,7 @@ ARG base_image
 FROM $base_image
 
 ENV TZ=Asia/Bangkok
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies
 RUN apt-get update && \
@@ -11,7 +12,8 @@ RUN apt-get update && \
         openssl \
         libssl-dev \
         python3 \
-        python3-pip && \
+        python3-pip \
+        openjdk-8-jdk && \
     apt-get clean > /dev/null && \
     apt-get autoremove -y --purge && \
     apt-get update -qq > /dev/null && \

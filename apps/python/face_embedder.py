@@ -30,7 +30,6 @@ def main():
         + "".join("{:.6f}, ".format(k) for k in result.get_embedding()[0:5])[:-2]
         + "]"
     )
-    # TODO: MO-623
     print("Embedding sum: " + "".join("{:.5f}".format(sum(result.get_embedding()))))
 
 

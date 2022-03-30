@@ -47,13 +47,13 @@ IF "%TARGET_ARCH%"=="" (
 )
 
 ::check if architecture is supported
-IF NOT "%TARGET_ARCH%"=="%SUPPORTED_TARGETS%" ( 
-  ECHO ERROR: target %TARGET_ARCH% is not supported yet. Please use (%SUPPORTED_TARGETS%).
+IF NOT "%TARGET_ARCH%"=="%SUPPORTED_TARGETS%" (
+  ECHO ERROR: target %TARGET_ARCH% is not supported yet. Please use (%SUPPORTED_TARGETS%^).
   EXIT /B 1
 )
 
 :: check if need to clean
-SET BINARY_PATH=assets\binaries\%TARGET_ARCH%
+SET BINARY_PATH=%CD%\assets\binaries\%TARGET_ARCH%
 IF NOT "%CLEAN%"=="" (
   CALL :clean_build %BINARY_PATH%
 )
@@ -115,18 +115,53 @@ IF NOT "%PYTHON_BUILD%"=="" (
   
   ECHO Using existing oneML installation. Use --clean to reinstall.
   GOTO end_python_build
+) ELSE (
+  GOTO end_python_build
 )
 
 :python_build
 pip3 install -U pip setuptools wheel
-CD assets\binaries\%TARGET_ARCH%\bindings\python
+CD %BINARY_PATH%\bindings\python
 POWERSHELL -command "& .\install_oneml.ps1"
 
 :end_python_build
 
 IF NOT "%JAVA_BUILD%"=="" (
-  ECHO implement this
+  IF NOT "%CLEAN%"=="" (
+    GOTO java_build
+  )
+  IF NOT EXIST "%BINARY_PATH%\bindings\java\face\build" (
+    GOTO java_build
+  )
+  IF NOT EXIST "%BINARY_PATH%\bindings\java\alpr\build" (
+    GOTO java_build
+  )
+  
+  ECHO Using existing Java classes for oneML. Use --clean to compile again.
+  GOTO end_java_build
+) ELSE (
+  GOTO end_java_build
 )
+
+:java_build
+CD %BINARY_PATH%\bindings\java\face
+POWERSHELL -command "& .\build.ps1"
+CD ..\alpr
+POWERSHELL -command "& .\build.ps1"
+
+CD ..\..\..\..\..\..\apps\java
+IF NOT EXIST "classes" MKDIR classes
+SET CLASSPATH=classes;%BINARY_PATH%\bindings\java\face\oneml\oneml-face-api.jar;%BINARY_PATH%\bindings\java\alpr\oneml\oneml-alpr-api.jar;%CD%
+SET APPS=FaceEmbedderApp FaceIdApp FaceDetectorApp FaceVerificationApp VehicleDetectorApp
+FOR %%A IN (%APPS%) DO (
+  javac -cp %CLASSPATH% -d classes %%A.java
+)
+
+COPY %BINARY_PATH%\bin\oneml.dll .
+COPY %BINARY_PATH%\bindings\java\face\build\Release\oneMLfaceJava.dll .
+COPY %BINARY_PATH%\bindings\java\alpr\build\Release\oneMLalprJava.dll .
+
+:end_java_build
 
 IF NOT "%GO_BUILD%"=="" (
   ECHO implement this
@@ -156,11 +191,12 @@ EXIT /B 0
 
 :clean_build
 ECHO Cleanup build in progress...
-RMDIR /S /Q build bin 2>NUL
+RMDIR /S /Q build bin apps\java\classes 2>NUL
 DEL /S /Q *.tar.gz 2>NUL
 DEL /S /Q *.zip 2>NUL
 DEL /S /Q *.json 2>NUL
 DEL /S /Q *.yaml 2>NUL
+DEL /S /Q *.dll 2>NUL
 RMDIR /S /Q %~1\bin 2>NUL
 RMDIR /S /Q %~1\bindings 2>NUL
 RMDIR /S /Q %~1\include 2>NUL

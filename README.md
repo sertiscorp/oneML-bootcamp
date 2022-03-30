@@ -87,6 +87,11 @@ To build `Python` apps for `aarch64-linux-gnu` target:
 ./build.sh -t aarch64-linux-gnu -py --clean
 ```
 
+To build `Java` apps for `x86_64` target:
+```bash
+./build.sh -t x86_64 -jni --clean
+```
+
 If `--clean` is not specified, the existing `oneML` artifacts will be used and
 the old build files will not be deleted.
 
@@ -130,6 +135,11 @@ build.bat -t msvc-x64 -cc --clean
 To build `Python` apps for `msvc-x64` target:
 ```batch
 build.bat -t msvc-x64 -py --clean
+```
+
+To build `Java` apps for `msvc-x64` target:
+```batch
+build.bat -t msvc-x64 -jni --clean
 ```
 
 If `--clean` is not specified, the existing `oneML` artifacts will be used and
