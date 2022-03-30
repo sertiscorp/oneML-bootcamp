@@ -83,15 +83,17 @@ then
 fi
 
 # clean build
+BINARY_PATH=${ROOT_DIR}/assets/binaries/${TARGET_ARCH}
 clean_build() {
   echo "Cleanup build in progress..."
   rm -rf build \
-         bin
+         bin \
+         apps/java/classes
   find . -name "*.tar.gz" -type f -delete
   find . -name "*.zip" -type f -delete
   find . -name "*.json" -type f -delete
-  find assets/binaries/${TARGET_ARCH}/ -type f -not -name '*.md' -delete
-  find assets/binaries/${TARGET_ARCH}/ -maxdepth 1 -mindepth 1 -type d -exec rm -rf '{}' \;
+  find ${BINARY_PATH}/ -type f -not -name '*.md' -delete
+  find ${BINARY_PATH}/ -maxdepth 1 -mindepth 1 -type d -exec rm -rf '{}' \;
 }
 
 if [[ -v CLEAN ]];
@@ -102,12 +104,11 @@ fi
 # artifacts
 TAG=v0.1.0
 BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/${TAG}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
-BINARY_PATH=${ROOT_DIR}/assets/binaries/${TARGET_ARCH}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
 if [ ! -f "$BINARY_PATH" ];
 then
     echo "Downloading artifacts to ${BINARY_PATH}... "
-    curl -L ${BASE_URL} > ${BINARY_PATH}
-    tar xzf ${BINARY_PATH} -C ${ROOT_DIR}/assets/binaries/${TARGET_ARCH}/ --strip-components=1
+    curl -L ${BASE_URL} > ${BINARY_PATH}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
+    tar xzf ${BINARY_PATH}/oneml-bootcamp-${TARGET_ARCH}.tar.gz -C ${BINARY_PATH}/ --strip-components=1
 fi
 
 # toolchian
@@ -144,7 +145,7 @@ then
   if [[ -v CLEAN || ! $(pip list | grep oneML) ]];
   then
     pip3 install -U pip setuptools wheel
-    cd assets/binaries/${TARGET_ARCH}/bindings/python && ./install_oneml.sh
+    cd ${BINARY_PATH}/bindings/python && ./install_oneml.sh
   else
     echo "Using existing oneML installation. Use --clean to reinstall."
   fi
@@ -152,8 +153,23 @@ fi
 
 if [[ -v JAVA_BUILD ]];
 then
-  #TODO: implement this
-  :
+  cd ${BINARY_PATH}/bindings/java/face && ./build.sh
+  cd ${BINARY_PATH}/bindings/java/alpr && ./build.sh
+  if [[ -v LD_LIBRARY_PATH ]];
+  then
+    export LD_LIBRARY_PATH=${BINARY_PATH}/bindings/java/face/build:${BINARY_PATH}/bindings/java/alpr/build:$LD_LIBRARY_PATH
+  else
+    export LD_LIBRARY_PATH=${BINARY_PATH}/bindings/java/face/build:${BINARY_PATH}/bindings/java/alpr/build
+  fi
+
+  cd ${ROOT_DIR}
+  mkdir -p apps/java/classes && cd apps/java
+  CLASSPATH=${ROOT_DIR}/apps/java/classes:${BINARY_PATH}/bindings/java/face/oneml/oneml-face-api.jar:${BINARY_PATH}/bindings/java/alpr/oneml/oneml-alpr-api.jar:${ROOT_DIR}/apps/java
+  APPS=FaceEmbedderApp,FaceIdApp,FaceDetectorApp,FaceVerificationApp,VehicleDetectorApp
+  for APP in ${APPS//,/ };
+  do
+    javac -cp ${CLASSPATH} -d classes ${APP}.java
+  done
 fi
 
 if [[ -v GO_BUILD ]];

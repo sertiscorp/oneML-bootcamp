@@ -47,6 +47,12 @@ stages:
 
 #-------------- Base CI --------------
 
+.base_ci: # Base CI
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - when: on_success
+
 .base_docker: # Base CI for docker stage
   stage: docker-base
   image: docker:19.03.11-git
@@ -54,6 +60,8 @@ stages:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile
   rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
     - changes:
       - docker/Dockerfile
   tags:
@@ -61,6 +69,7 @@ stages:
   needs: ["mirror-pull"]
 
 .base_env_check: # Base CI env-check stage
+  extends: .base_ci
   stage: env-check
   image: docker:19.03.11
   variables:
@@ -75,6 +84,7 @@ stages:
     - build
 
 .base_build: # Base CI for build stage
+  extends: .base_ci
   stage: build
   image: $BUILD_IMAGE
   tags:
@@ -95,6 +105,7 @@ stages:
 # - if the hash is the same, then do nothing
 # - if the hash is different, then we pull the github develop branch into gitlab's and push it
 mirror-pull:
+  extends: .base_ci
   stage: setup
   script:
     - *git_auth
@@ -136,6 +147,8 @@ docker-build-cpu:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile.cpu,docker/Dockerfile
   rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
     - changes:
       - docker/Dockerfile.cpu
       - docker/Dockerfile
@@ -154,6 +167,8 @@ docker-build-gpu:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile.gpu,docker/Dockerfile
   rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
     - changes:
       - docker/Dockerfile.gpu
       - docker/Dockerfile
@@ -172,6 +187,8 @@ docker-build-android:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile.android,docker/Dockerfile
   rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
     - changes:
       - docker/Dockerfile.android
       - docker/Dockerfile
@@ -237,8 +254,7 @@ build-python:
 build-java:
   extends: .base_build
   script:
-    - echo "Implement me!"
-    # - ./build.sh -t x86_64 -jni --clean
+    - ./build.sh -t x86_64 -jni --clean
 
 build-golang:
   extends: .base_build
