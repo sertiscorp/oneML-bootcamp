@@ -47,6 +47,12 @@ stages:
 
 #-------------- Base CI --------------
 
+.base_ci: # Base CI
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - when: on_success
+
 .base_docker: # Base CI for docker stage
   stage: docker-base
   image: docker:19.03.11-git
@@ -54,6 +60,8 @@ stages:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile
   rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
     - changes:
       - docker/Dockerfile
   tags:
@@ -61,6 +69,7 @@ stages:
   needs: ["mirror-pull"]
 
 .base_env_check: # Base CI env-check stage
+  extends: .base_ci
   stage: env-check
   image: docker:19.03.11
   variables:
@@ -75,6 +84,7 @@ stages:
     - build
 
 .base_build: # Base CI for build stage
+  extends: .base_ci
   stage: build
   image: $BUILD_IMAGE
   tags:
@@ -95,6 +105,7 @@ stages:
 # - if the hash is the same, then do nothing
 # - if the hash is different, then we pull the github develop branch into gitlab's and push it
 mirror-pull:
+  extends: .base_ci
   stage: setup
   script:
     - *git_auth
@@ -117,7 +128,7 @@ docker-build-cpu-base:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base -f $DOCKER_FILES --build-arg base_image=ubuntu:20.04 .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base -f docker/Dockerfile --build-arg base_image=ubuntu:20.04 .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base
 
 docker-build-gpu-base:
@@ -126,7 +137,7 @@ docker-build-gpu-base:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base -f $DOCKER_FILES --build-arg base_image=nvidia/cuda:11.5.1-cudnn8-runtime-ubuntu20.04 .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base -f docker/Dockerfile --build-arg base_image=nvidia/cuda:11.5.1-cudnn8-runtime-ubuntu20.04 .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base
 
 docker-build-cpu:
@@ -134,15 +145,18 @@ docker-build-cpu:
   stage: docker
   variables:
     DOCKER_DRIVER: overlay2
-    DOCKER_FILES: docker/Dockerfile.cpu
+    DOCKER_FILES: docker/Dockerfile.cpu,docker/Dockerfile
   rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
     - changes:
       - docker/Dockerfile.cpu
+      - docker/Dockerfile
   script:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu -f $DOCKER_FILES --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu -f docker/Dockerfile.cpu --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu
   needs: ["docker-build-cpu-base"]
 
@@ -151,15 +165,18 @@ docker-build-gpu:
   stage: docker
   variables:
     DOCKER_DRIVER: overlay2
-    DOCKER_FILES: docker/Dockerfile.gpu
+    DOCKER_FILES: docker/Dockerfile.gpu,docker/Dockerfile
   rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
     - changes:
       - docker/Dockerfile.gpu
+      - docker/Dockerfile
   script:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu -f $DOCKER_FILES --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu -f docker/Dockerfile.gpu --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu
   needs: ["docker-build-gpu-base"]
 
@@ -168,15 +185,18 @@ docker-build-android:
   stage: docker
   variables:
     DOCKER_DRIVER: overlay2
-    DOCKER_FILES: docker/Dockerfile.android
+    DOCKER_FILES: docker/Dockerfile.android,docker/Dockerfile
   rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
     - changes:
       - docker/Dockerfile.android
+      - docker/Dockerfile
   script:
     - *git_auth
     - *docker_check
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android -f $DOCKER_FILES --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android -f docker/Dockerfile.android --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android
   needs: ["docker-build-cpu-base"]
 
@@ -229,14 +249,12 @@ build-cpp-arm-linux-android:
 build-python:
   extends: .base_build
   script:
-    - echo "Implement me!"
-    # - ./build.sh -t x86_64 -py --clean
+    - ./build.sh -t x86_64 -py --clean
 
 build-java:
   extends: .base_build
   script:
-    - echo "Implement me!"
-    # - ./build.sh -t x86_64 -jni --clean
+    - ./build.sh -t x86_64 -jni --clean
 
 build-golang:
   extends: .base_build

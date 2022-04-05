@@ -40,38 +40,42 @@ GOTO parse
 :endparse
 
 :: check TARGET_ARCH value
+SET SUPPORTED_TARGETS=msvc-x64
 IF "%TARGET_ARCH%"=="" (
   ECHO ERROR: Unspecified target architecture. Please use -t from CLI to specify an architecture.
   EXIT /B 1
-) ELSE ( ::check if architecture is supported
-  ECHO implement this
+)
+
+::check if architecture is supported
+IF NOT "%TARGET_ARCH%"=="%SUPPORTED_TARGETS%" (
+  ECHO ERROR: target %TARGET_ARCH% is not supported yet. Please use (%SUPPORTED_TARGETS%^).
+  EXIT /B 1
 )
 
 :: check if need to clean
+SET BINARY_PATH=%CD%\assets\binaries\%TARGET_ARCH%
 IF NOT "%CLEAN%"=="" (
-  CALL :clean_build
+  CALL :clean_build %BINARY_PATH%
 )
 
 :: artifacts
-SET TAG=v0.1.0
+SET TAG=v0.2.0
 SET ARCHIVE_NAME=oneml-bootcamp-%TARGET_ARCH%.tar.gz
 SET BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/%TAG%/%ARCHIVE_NAME%
-SET BINARY_PATH=assets/binaries/%TARGET_ARCH%
-::SET BINARY_PATH=test
-IF NOT EXIST "%BINARY_PATH%/%ARCHIVE_NAME%" (
+IF NOT EXIST "%BINARY_PATH%\%ARCHIVE_NAME%" (
     ECHO Downloading artifacts to %BINARY_PATH%... 
-    curl -L %BASE_URL% > %BINARY_PATH%/%ARCHIVE_NAME%
-    tar xzf %BINARY_PATH%/%ARCHIVE_NAME% -C %BINARY_PATH%/ --strip-components=1
+    curl -L %BASE_URL% > %BINARY_PATH%\%ARCHIVE_NAME%
+    tar xzf %BINARY_PATH%\%ARCHIVE_NAME% -C %BINARY_PATH%\ --strip-components=1
 )
 
 :: toolchian
 SET EXTRA_FLAGS=
 IF "%TARGET_ARCH%"=="aarch64-linux-android" GOTO android
 IF "%TARGET_ARCH%"=="arm-linux-android" GOTO android
-IF "%TARGET_ARCH%"=="msvc-x64" GOTO endtoolchain
+IF "%TARGET_ARCH%"=="msvc-x64" GOTO end_toolchain
 
-SET EXTRA_FLAGS=-DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/%TARGET_ARCH%.cmake
-GOTO endtoolchain
+SET EXTRA_FLAGS=-DCMAKE_TOOLCHAIN_FILE=cmake\toolchains\%TARGET_ARCH%.cmake
+GOTO end_toolchain
 
 :android
 IF "%TARGET_ARCH%"=="arm-linux-android" (
@@ -81,39 +85,91 @@ IF "%TARGET_ARCH%"=="arm-linux-android" (
   SET ABI=arm64-v8a
 )
 
-SET EXTRA_FLAGS=-DCMAKE_TOOLCHAIN_FILE=%ANDROID_NDK_HOME%/build/cmake/android.toolchain.cmake^
+SET EXTRA_FLAGS=-DCMAKE_TOOLCHAIN_FILE=%ANDROID_NDK_HOME%\build\cmake\android.toolchain.cmake^
                 -DANDROID_ABI=%ABI%^
                 -DANDROID_NATIVE_API_LEVEL=23^
                 -DANDROID_STL=c++_shared^
                 %EXTRA_FLAGS%
 
-:endtoolchain
+:end_toolchain
 
 :: apps build
 IF NOT "%CPP_BUILD%"=="" (
-  IF NOT EXIST "build" mkdir build
-  cd build
+  IF NOT EXIST "build" MKDIR build
+  CD build
   cmake -G "Visual Studio 16 2019" -A x64 -DTARGET_ARCH=%TARGET_ARCH% %EXTRA_FLAGS% ..
   cmake --build . --config Release
-  cd ..
-  copy %BINARY_PATH%/bin/oneml.dll bin/Release/
+  CD ..
+  COPY %BINARY_PATH%\bin\oneml.dll bin\Release\
 )
 
 IF NOT "%PYTHON_BUILD%"=="" (
-  ECHO implement this
+  IF NOT "%CLEAN%"=="" (
+    GOTO python_build
+  )
+
+  pip list | findstr oneML
+  IF NOT %ERRORLEVEL%==0 (
+    GOTO python_build
+  )
+  
+  ECHO Using existing oneML installation. Use --clean to reinstall.
+  GOTO end_python_build
+) ELSE (
+  GOTO end_python_build
 )
 
+:python_build
+pip3 install -U pip setuptools wheel
+CD %BINARY_PATH%\bindings\python
+POWERSHELL -command "& .\install_oneml.ps1"
+
+:end_python_build
+
 IF NOT "%JAVA_BUILD%"=="" (
-  ECHO implement this
+  IF NOT "%CLEAN%"=="" (
+    GOTO java_build
+  )
+  IF NOT EXIST "%BINARY_PATH%\bindings\java\face\build" (
+    GOTO java_build
+  )
+  IF NOT EXIST "%BINARY_PATH%\bindings\java\alpr\build" (
+    GOTO java_build
+  )
+  
+  ECHO Using existing Java classes for oneML. Use --clean to compile again.
+  GOTO end_java_build
+) ELSE (
+  GOTO end_java_build
 )
+
+:java_build
+CD %BINARY_PATH%\bindings\java\face
+POWERSHELL -command "& .\build.ps1"
+CD ..\alpr
+POWERSHELL -command "& .\build.ps1"
+
+CD ..\..\..\..\..\..\apps\java
+IF NOT EXIST "classes" MKDIR classes
+SET CLASSPATH=classes;%BINARY_PATH%\bindings\java\face\oneml\oneml-face-api.jar;%BINARY_PATH%\bindings\java\alpr\oneml\oneml-alpr-api.jar;%CD%
+SET APPS=FaceEmbedderApp FaceIdApp FaceDetectorApp FaceVerificationApp VehicleDetectorApp
+FOR %%A IN (%APPS%) DO (
+  javac -cp %CLASSPATH% -d classes %%A.java
+)
+
+COPY %BINARY_PATH%\bin\oneml.dll .
+COPY %BINARY_PATH%\bindings\java\face\build\Release\oneMLfaceJava.dll .
+COPY %BINARY_PATH%\bindings\java\alpr\build\Release\oneMLalprJava.dll .
+
+:end_java_build
 
 IF NOT "%GO_BUILD%"=="" (
   ECHO implement this
 )
 
-:: functions
 EXIT /B %ERRORLEVEL%
 
+:: functions
 :print_usage
 ECHO Usage: build.bat
 ECHO         -t target_arch
@@ -135,14 +191,15 @@ EXIT /B 0
 
 :clean_build
 ECHO Cleanup build in progress...
-RMDIR /S /Q build bin 2>NUL
+RMDIR /S /Q build bin apps\java\classes 2>NUL
 DEL /S /Q *.tar.gz 2>NUL
 DEL /S /Q *.zip 2>NUL
 DEL /S /Q *.json 2>NUL
 DEL /S /Q *.yaml 2>NUL
-RMDIR /S /Q %BINARY_PATH%\bin 2>NUL
-RMDIR /S /Q %BINARY_PATH%\bindings 2>NUL
-RMDIR /S /Q %BINARY_PATH%\include 2>NUL
-RMDIR /S /Q %BINARY_PATH%\lib 2>NUL
-RMDIR /S /Q %BINARY_PATH%\share 2>NUL
+DEL /S /Q *.dll 2>NUL
+RMDIR /S /Q %~1\bin 2>NUL
+RMDIR /S /Q %~1\bindings 2>NUL
+RMDIR /S /Q %~1\include 2>NUL
+RMDIR /S /Q %~1\lib 2>NUL
+RMDIR /S /Q %~1\share 2>NUL
 EXIT /B 0
