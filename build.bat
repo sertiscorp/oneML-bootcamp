@@ -59,7 +59,7 @@ IF NOT "%CLEAN%"=="" (
 )
 
 :: artifacts
-SET TAG=v0.1.0
+SET TAG=v0.2.0
 SET ARCHIVE_NAME=oneml-bootcamp-%TARGET_ARCH%.tar.gz
 SET BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/%TAG%/%ARCHIVE_NAME%
 IF NOT EXIST "%BINARY_PATH%\%ARCHIVE_NAME%" (
