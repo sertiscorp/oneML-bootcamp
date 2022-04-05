@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2022-04-05
+
+### Added
+- support Python implementation -> [47ab3fe7](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/47ab3fe747524b5c9440fed7cea2afc4abbc80ff)
+- support Java implementation -> [da1d099a](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/da1d099a861d30b865744116230caf349d068363)
+
 ## [0.1.0] - 2022-03-22
 
 ### Added
