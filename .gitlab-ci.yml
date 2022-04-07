@@ -49,7 +49,7 @@ stages:
 
 .base_ci: # Base CI
   rules:
-    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
       when: never
     - when: on_success
 
@@ -60,7 +60,7 @@ stages:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile
   rules:
-    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
       when: never
     - changes:
       - docker/Dockerfile
@@ -147,7 +147,7 @@ docker-build-cpu:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile.cpu,docker/Dockerfile
   rules:
-    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
       when: never
     - changes:
       - docker/Dockerfile.cpu
@@ -167,7 +167,7 @@ docker-build-gpu:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile.gpu,docker/Dockerfile
   rules:
-    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
       when: never
     - changes:
       - docker/Dockerfile.gpu
@@ -187,7 +187,7 @@ docker-build-android:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile.android,docker/Dockerfile
   rules:
-    - if: '$CI_COMMIT_BRANCH == "master" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
       when: never
     - changes:
       - docker/Dockerfile.android
