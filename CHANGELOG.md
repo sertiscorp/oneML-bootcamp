@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2022-04-19
+
+### Added
+- support Golang implementation -> [56df5937](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/56df5937d69fdba2ce8692798d596ef350be27c4)
+- documentation to align with community standards -> [15a8940e](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/15a8940e799aa73af10e581827774daaef5d7203)
+
+### Fixed
+- branch naming convention in the CI -> [aa4bbed5](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/aa4bbed59ee32add9ced40ef6efb05b5a69fb26f)
+
 ## [0.2.0] - 2022-04-05
 
 ### Added
