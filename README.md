@@ -115,7 +115,7 @@ successfully:
 - Python 3.6 or newer and `pip` (for `Python` build only)
 - JDK 1.8 (for `Java` build only)
 - Android Studio xxx (for `Android` build only)
-- Golang xxx (for `Golang` build only)
+- Golang 1.15 (for `Golang` build only)
 - Powershell, a recent version (for any build, but `C++`)
 
 ### Apps build
@@ -140,6 +140,11 @@ build.bat -t msvc-x64 -py --clean
 To build `Java` apps for `msvc-x64` target:
 ```batch
 build.bat -t msvc-x64 -jni --clean
+```
+
+To build `Golang` apps for `x86_64` target:
+```batch
+build.bat -t x86_64 -go --clean
 ```
 
 If `--clean` is not specified, the existing `oneML` artifacts will be used and

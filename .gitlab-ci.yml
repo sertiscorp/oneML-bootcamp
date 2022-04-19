@@ -259,5 +259,4 @@ build-java:
 build-golang:
   extends: .base_build
   script:
-    - echo "Implement me!"
-    # - ./build.sh -t x86_64 -go --clean
+    - ./build.sh -t x86_64 -go --clean

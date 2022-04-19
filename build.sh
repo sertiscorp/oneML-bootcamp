@@ -104,7 +104,7 @@ fi
 # artifacts
 TAG=v0.2.0
 BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/${TAG}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
-if [ ! -f "$BINARY_PATH" ];
+if [ ! -f "$BINARY_PATH/oneml-bootcamp-${TARGET_ARCH}.tar.gz" ];
 then
     echo "Downloading artifacts to ${BINARY_PATH}... "
     curl -L ${BASE_URL} > ${BINARY_PATH}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
@@ -174,6 +174,22 @@ fi
 
 if [[ -v GO_BUILD ]];
 then
-  #TODO: implement this
-  :
+  LIB_NAMES=("face" "alpr")
+  BINARY_ABS_PATH=$(realpath ${BINARY_PATH})
+  # Update paths to oneML lib and headers
+  for LIB_NAME in ${LIB_NAMES[@]}
+  do
+    cd ${BINARY_PATH}/bindings/go
+    sed -i "s~/path/to/oneml/lib~${BINARY_ABS_PATH}/lib~g" ${LIB_NAME}/lib.go
+    sed -i "s~/path/to/oneml/include~${BINARY_ABS_PATH}/include~g" ${LIB_NAME}/lib.go
+  done
+
+  # Build all apps
+  cd ${ROOT_DIR}/apps/golang
+  go mod edit -replace oneml=../../assets/binaries/${TARGET_ARCH}/bindings/go
+  APPS=face_detector,face_embedder,face_id,face_verification,vehicle_detector,utils_app
+  for APP in ${APPS//,/ };
+  do
+    go build ${APP}.go
+  done
 fi
