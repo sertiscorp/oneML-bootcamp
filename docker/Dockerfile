@@ -32,3 +32,12 @@ RUN cd cmake-* && \
     make install && \
     cd .. && \
     rm -rf cmake-*
+
+# Golang
+RUN curl -o go-linux-amd64.tar.gz -Lq https://golang.org/dl/go1.15.12.linux-amd64.tar.gz && \
+    tar -zxf go-linux-amd64.tar.gz && \
+    mv go /usr/local/go && \
+    rm go-linux-amd64.tar.gz
+ENV GOROOT=/usr/local/go
+ENV GOBIN=$GOROOT/bin
+ENV PATH=$PATH:$GOBIN
