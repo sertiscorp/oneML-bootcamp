@@ -40,14 +40,21 @@ GOTO parse
 :endparse
 
 :: check TARGET_ARCH value
-SET SUPPORTED_TARGETS=msvc-x64
 IF "%TARGET_ARCH%"=="" (
   ECHO ERROR: Unspecified target architecture. Please use -t from CLI to specify an architecture.
   EXIT /B 1
 )
 
 ::check if architecture is supported
-IF NOT "%TARGET_ARCH%"=="%SUPPORTED_TARGETS%" (
+SET SUPPORTED_TARGETS=msvc-x64;aarch64-linux-android;arm-linux-android
+:: easy-to-undestand checking if TARGET_ARCH is in SUPPORTED_TARGETS list
+FOR %%A IN (%SUPPORTED_TARGETS%) DO (
+  IF "%TARGET_ARCH%"=="%%A" (
+    SET VALID_TARGET_ARCH=1
+  )
+)
+
+IF "%VALID_TARGET_ARCH%"=="" (
   ECHO ERROR: target %TARGET_ARCH% is not supported yet. Please use (%SUPPORTED_TARGETS%^).
   EXIT /B 1
 )
@@ -59,7 +66,7 @@ IF NOT "%CLEAN%"=="" (
 )
 
 :: artifacts
-SET TAG=v0.3.0
+SET TAG=v0.4.0-rc.0
 SET ARCHIVE_NAME=oneml-bootcamp-%TARGET_ARCH%.tar.gz
 SET BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/%TAG%/%ARCHIVE_NAME%
 IF NOT EXIST "%BINARY_PATH%\%ARCHIVE_NAME%" (
@@ -78,6 +85,7 @@ SET EXTRA_FLAGS=-DCMAKE_TOOLCHAIN_FILE=cmake\toolchains\%TARGET_ARCH%.cmake
 GOTO end_toolchain
 
 :android
+SET ANDROID_BUILD=true
 IF "%TARGET_ARCH%"=="arm-linux-android" (
   SET ABI=armeabi-v7a
   SET EXTRA_FLAGS=-DANDROID_ARM_NEON=ON
@@ -144,23 +152,35 @@ IF NOT "%JAVA_BUILD%"=="" (
 )
 
 :java_build
-CD %BINARY_PATH%\bindings\java\face
-POWERSHELL -command "& .\build.ps1"
-CD ..\alpr
-POWERSHELL -command "& .\build.ps1"
+IF NOT "%ANDROID_BUILD%"=="" (
+  :: Build Android application
+  CD .\apps\android-simple
 
-CD ..\..\..\..\..\..\apps\java
-IF NOT EXIST "classes" MKDIR classes
-SET CLASSPATH=classes;%BINARY_PATH%\bindings\java\face\oneml\oneml-face-api.jar;%BINARY_PATH%\bindings\java\alpr\oneml\oneml-alpr-api.jar;%CD%
-SET APPS=FaceEmbedderApp FaceIdApp FaceDetectorApp FaceVerificationApp VehicleDetectorApp
-FOR %%A IN (%APPS%) DO (
-  javac -cp %CLASSPATH% -d classes %%A.java
+  :: Alternative `touch` command for Windows
+  IF NOT EXIST .\local.properties (
+   TYPE nul > local.properties
+  )
+
+  ECHO Build by Gradle wrapper
+  CALL .\gradlew.bat build
+) else (
+  :: Build Java application
+  CD %BINARY_PATH%\bindings\java\face
+  POWERSHELL -command "& .\build.ps1"
+  CD ..\alpr
+  POWERSHELL -command "& .\build.ps1"
+  CD ..\..\..\..\..\..\apps\java
+  IF NOT EXIST "classes" MKDIR classes
+  SET CLASSPATH=classes;%BINARY_PATH%\bindings\java\face\oneml\oneml-face-api.jar;%BINARY_PATH%\bindings\java\alpr\oneml\oneml-alpr-api.jar;%CD%
+  SET APPS=FaceEmbedderApp FaceIdApp FaceDetectorApp FaceVerificationApp VehicleDetectorApp
+  FOR %%A IN (%APPS%) DO (
+    javac -cp %CLASSPATH% -d classes %%A.java
+  )
+
+  COPY %BINARY_PATH%\bin\oneml.dll .
+  COPY %BINARY_PATH%\bindings\java\face\build\Release\oneMLfaceJava.dll .
+  COPY %BINARY_PATH%\bindings\java\alpr\build\Release\oneMLalprJava.dll .
 )
-
-COPY %BINARY_PATH%\bin\oneml.dll .
-COPY %BINARY_PATH%\bindings\java\face\build\Release\oneMLfaceJava.dll .
-COPY %BINARY_PATH%\bindings\java\alpr\build\Release\oneMLalprJava.dll .
-
 :end_java_build
 
 IF NOT "%GO_BUILD%"=="" (

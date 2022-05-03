@@ -1,12 +1,18 @@
 ARG base_image
 FROM $base_image
 
-ENV ANDROID_NDK_HOME /opt/android-ndk
+ENV ANDROID_SDK_TOOLS_VERSION "7583922"
+ENV ANDROID_SDK_HOME "/opt/android-sdk"
+ENV ANDROID_HOME "$ANDROID_SDK_HOME"
+ENV JAVA_HOME "/usr/lib/jvm/java-8-openjdk-amd64/"
+
+ENV ANDROID_NDK_HOME "/opt/android-ndk"
 ENV ANDROID_NDK_VERSION r23b
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y unzip && \
+    apt-get install -y \
+        unzip && \
     apt-get clean > /dev/null && \
     apt-get autoremove -y --purge && \
     apt-get update -qq > /dev/null && \
@@ -14,13 +20,44 @@ RUN apt-get update && \
     rm -rf /tmp/* /var/tmp/*
 
 # Android NDK
-RUN mkdir /opt/android-ndk-tmp && \
-    cd /opt/android-ndk-tmp && \
-    curl -L https://dl.google.com/android/repository/android-ndk-${ANDROID_NDK_VERSION}-linux.zip > android-ndk.zip && \
-    unzip -q android-ndk.zip && \
-    mv ./android-ndk-${ANDROID_NDK_VERSION} ${ANDROID_NDK_HOME} && \
-    cd ${ANDROID_NDK_HOME} && \
-    rm -rf /opt/android-ndk-tmp
+RUN echo "Install Android NDK: ${ANDROID_NDK_VERSION}" && \
+    curl -L -o android-ndk.zip \
+    "http://dl.google.com/android/repository/android-ndk-${ANDROID_NDK_VERSION}-linux.zip" && \
+    unzip -q android-ndk.zip -d /tmp && \
+    mv /tmp/android-ndk-* "${ANDROID_NDK_HOME}" && \
+    rm -f android-ndk.zip
+
+# Install Android SDK
+RUN echo "Install Android SDK tools: ${ANDROID_SDK_TOOLS_VERSION}" && \
+    curl -L -o sdk-tools.zip \
+        "https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_SDK_TOOLS_VERSION}_latest.zip" &&\
+    mkdir -p "$ANDROID_HOME" && \
+    unzip -q sdk-tools.zip -d "$ANDROID_HOME/cmdline-tools" && \
+    rm -f sdk-tools.zip
+
+ENV SDKMANAGER_CMD="${ANDROID_HOME}/cmdline-tools/cmdline-tools/bin/sdkmanager"
+
+RUN mkdir -p "$HOME/.android/" && \
+    echo '### User Sources for Android SDK Manager' > \
+        "${HOME}/.android/repositories.cfg" && \
+    yes | ${SDKMANAGER_CMD} --licenses > /dev/null
+
+RUN echo "SDK Manager: Installing Platforms 25-30" && \
+    yes | ${SDKMANAGER_CMD} \
+        "platforms;android-30" \
+        "platforms;android-29" \
+        "platforms;android-28" \
+        "platforms;android-27" \
+        "platforms;android-26" \
+        "platforms;android-25" > /dev/null
+
+RUN echo "SDK Manager: Install Platform tools" && \
+    yes | ${SDKMANAGER_CMD} \
+        "platform-tools" > /dev/null
+
+RUN echo "SDK Manager: Install Build tools: 30" && \
+    yes | ${SDKMANAGER_CMD} \
+        "build-tools;30.0.2" > /dev/null
 
 # update PATH
-ENV PATH ${PATH}:${ANDROID_NDK_HOME}
+ENV PATH "${PATH}:${ANDROID_NDK_HOME}"

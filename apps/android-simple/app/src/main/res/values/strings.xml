@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">oneML Simple App</string>
+    <string name="action_settings">Settings</string>
+    <string name="register_image">Register Images</string>
+    <string name="predict_image">Predict a Image</string>
+    <string name="app_storage_name">oneml-android-simple-app</string>
+</resources>
