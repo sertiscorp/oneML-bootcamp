@@ -20,7 +20,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/ && \
     rm -rf /tmp/* /var/tmp/*
 
-# CMake
+# Install CMake
 RUN apt-get --assume-yes remove --purge cmake && \
     hash -r
 RUN curl -L https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1.tar.gz > cmake.tar.gz && \
@@ -33,7 +33,7 @@ RUN cd cmake-* && \
     cd .. && \
     rm -rf cmake-*
 
-# Golang
+# Install Golang
 RUN curl -o go-linux-amd64.tar.gz -Lq https://golang.org/dl/go1.15.12.linux-amd64.tar.gz && \
     tar -zxf go-linux-amd64.tar.gz && \
     mv go /usr/local/go && \

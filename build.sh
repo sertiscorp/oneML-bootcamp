@@ -102,7 +102,7 @@ then
 fi
 
 # artifacts
-TAG=v0.3.0
+TAG=v0.4.0
 BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/${TAG}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
 if [ ! -f "$BINARY_PATH/oneml-bootcamp-${TARGET_ARCH}.tar.gz" ];
 then
@@ -115,12 +115,13 @@ fi
 EXTRA_FLAGS=
 if [[ ${TARGET_ARCH} == "aarch64-linux-android" || ${TARGET_ARCH} == "arm-linux-android" ]];
 then
+  ANDROID_BUILD=true
   if [[ ${TARGET_ARCH} == "arm-linux-android" ]];
   then
-    ABI=armeabi-v7a
+    export ABI=armeabi-v7a
     EXTRA_FLAGS="-DANDROID_ARM_NEON=ON"
   else
-    ABI=arm64-v8a
+    export ABI=arm64-v8a
   fi
   
   EXTRA_FLAGS="-DCMAKE_TOOLCHAIN_FILE=${ANDROID_NDK_HOME}/build/cmake/android.toolchain.cmake \
@@ -151,7 +152,7 @@ then
   fi
 fi
 
-if [[ -v JAVA_BUILD ]];
+if [[ -v JAVA_BUILD && ! -v ANDROID_BUILD ]];
 then
   cd ${BINARY_PATH}/bindings/java/face && ./build.sh
   cd ${BINARY_PATH}/bindings/java/alpr && ./build.sh
@@ -170,6 +171,11 @@ then
   do
     javac -cp ${CLASSPATH} -d classes ${APP}.java
   done
+elif [[ -v JAVA_BUILD && -v ANDROID_BUILD ]];
+then
+  cd ${ROOT_DIR}/apps/android-simple
+  touch local.properties
+  ./gradlew build
 fi
 
 if [[ -v GO_BUILD ]];

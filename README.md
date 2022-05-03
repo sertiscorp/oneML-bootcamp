@@ -92,6 +92,11 @@ To build `Java` apps for `x86_64` target:
 ./build.sh -t x86_64 -jni --clean
 ```
 
+To build `Android` apps for `aarch64-linux-android` target:
+```bash
+./build.sh -t aarch64-linux-android -jni --clean
+```
+
 If `--clean` is not specified, the existing `oneML` artifacts will be used and
 the old build files will not be deleted.
 
