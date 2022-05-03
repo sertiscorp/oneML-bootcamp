@@ -64,6 +64,8 @@ stages:
       when: never
     - changes:
       - docker/Dockerfile
+      - docker/Dockerfile.android
+      - docker/Dockerfile.cpu
   tags:
     - build
   needs: ["mirror-pull"]
@@ -251,10 +253,22 @@ build-python:
   script:
     - ./build.sh -t x86_64 -py --clean
 
-build-java:
+build-java-x86_64:
   extends: .base_build
   script:
     - ./build.sh -t x86_64 -jni --clean
+
+build-java-aarch64-linux-android:
+  extends: .base_build
+  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android
+  script:
+    - ./build.sh -t aarch64-linux-android -jni --clean
+
+build-java-arm-linux-android:
+  extends: .base_build
+  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android
+  script:
+    - ./build.sh -t arm-linux-android -jni --clean
 
 build-golang:
   extends: .base_build
