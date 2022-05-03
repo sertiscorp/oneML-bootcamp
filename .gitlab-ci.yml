@@ -263,12 +263,18 @@ build-java-aarch64-linux-android:
   image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android
   script:
     - ./build.sh -t aarch64-linux-android -jni --clean
+  needs:
+    - android-env-check
+    - mirror-pull
 
 build-java-arm-linux-android:
   extends: .base_build
   image: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android
   script:
     - ./build.sh -t arm-linux-android -jni --clean
+  needs:
+    - android-env-check
+    - mirror-pull
 
 build-golang:
   extends: .base_build
