@@ -153,16 +153,30 @@ IF NOT "%JAVA_BUILD%"=="" (
 
 :java_build
 IF NOT "%ANDROID_BUILD%"=="" (
-  :: Build Android application
-  CD .\apps\android-simple
 
-  :: Alternative `touch` command for Windows
-  IF NOT EXIST .\local.properties (
-   TYPE nul > local.properties
+  SET ANDROID_APPS=android-simple;android-camera
+
+  FOR %%A IN (%ANDROID_APPS%) DO (
+    ECHO Build Android app: %%A
+
+    CD .\apps\"%%A"
+    :: Alternative `touch` command for Windows
+    IF NOT EXIST .\local.properties (
+      TYPE nul > local.properties
+    )
+    
+    IF NOT "%CLEAN%"=="" (
+      ECHO Clean a project by Gradle wrapper
+      :: Clean flag is set. Clean a project before building
+      CALL .\gradlew.bat clean
+    )
+    
+    ECHO Build by Gradle wrapper
+    CALL .\gradlew.bat build
+
+    CD ..\..
   )
 
-  ECHO Build by Gradle wrapper
-  CALL .\gradlew.bat build
 ) else (
   :: Build Java application
   CD %BINARY_PATH%\bindings\java\face

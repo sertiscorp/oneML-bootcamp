@@ -173,9 +173,15 @@ then
   done
 elif [[ -v JAVA_BUILD && -v ANDROID_BUILD ]];
 then
-  cd ${ROOT_DIR}/apps/android-simple
-  touch local.properties
-  ./gradlew build
+  # A list of all Android apps to be built
+  ANDROID_APPS=android-simple,android-camera
+  for ANDROID_APP in ${ANDROID_APPS//,/ };
+  do
+    echo "Build Android app: ${ANDROID_APP}"
+    cd ${ROOT_DIR}/apps/${ANDROID_APP}
+    touch local.properties
+    ./gradlew build
+  done
 fi
 
 if [[ -v GO_BUILD ]];
