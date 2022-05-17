@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2022-05-17
+### Added
+- add Android camera app -> [c9ac9ddf](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/c9ac9ddf2a0127f09f18097f58898edf22e5fb14)
+- 
 ## [0.4.0] - 2022-05-03
 ### Added
 - support Android implementation -> [14d43b7a](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/14d43b7aa61076bdda752ea577b6c3ba53ea76a0)
