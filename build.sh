@@ -71,7 +71,7 @@ done
 
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
-SUPPORTED_TARGETS=( x86_64 aarch64-linux-gnu arm-linux-gnueabihf aarch64-linux-android arm-linux-android )
+SUPPORTED_TARGETS=( x86_64 x86_64-cuda aarch64-linux-gnu arm-linux-gnueabihf aarch64-linux-android arm-linux-android )
 if [[ ! -n ${TARGET_ARCH} ]];
 then
     echo "ERROR: Unspecified target architecture. Please use -t from CLI to specify an architecture."
@@ -102,7 +102,7 @@ then
 fi
 
 # artifacts
-TAG=v0.5.0
+TAG=v0.6.0
 BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/${TAG}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
 if [ ! -f "$BINARY_PATH/oneml-bootcamp-${TARGET_ARCH}.tar.gz" ];
 then
@@ -129,7 +129,7 @@ then
               -DANDROID_NATIVE_API_LEVEL=23 \
               -DANDROID_STL=c++_shared \
               ${EXTRA_FLAGS}"
-elif [[ ${TARGET_ARCH} != "x86_64" ]];
+elif [[ ${TARGET_ARCH} != "x86_64" && ${TARGET_ARCH} != "x86_64-cuda" ]];
 then
   EXTRA_FLAGS="-DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/$TARGET_ARCH.cmake"
 fi

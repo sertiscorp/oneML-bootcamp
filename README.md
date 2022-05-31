@@ -97,6 +97,11 @@ To build `Android` apps for `aarch64-linux-android` target:
 ./build.sh -t aarch64-linux-android -jni --clean
 ```
 
+On `x86_64`, Cuda-enabled GPU is also supported. To build `C++` apps for `x86-64-cuda` target:
+```bash
+./build.sh -t x86_64-cuda -cc --clean
+```
+
 If `--clean` is not specified, the existing `oneML` artifacts will be used and
 the old build files will not be deleted.
 
@@ -109,6 +114,17 @@ before proceeding with the build process and run the applications.
 
 ### Requirements
 Only Windows 10 64 bit is currently supported.
+
+### Cuda
+Currently `x86-64-cuda` target supports only Cuda 11.x runtime. We also plan to support Cuda 10.2 in the future. Moreover, it is built with backward compatibility in mind. `x86-64-cuda` supports the following Cuda compute capabilities 
+  * 7.5
+  * 7.0
+  * 6.1
+  * 6.0
+  * 5.2
+  * 5.0
+
+For compute capabilities later than `7.5`, it might not work.
 
 ### Dependencies
 The following dependencies must be installed in order for the project to build and run

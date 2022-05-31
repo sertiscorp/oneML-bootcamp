@@ -95,6 +95,12 @@ stages:
     - cpu-env-check
     - mirror-pull
 
+.base_build_gpu: # Base CI for build stage
+  extends: .base_build
+  needs:
+    - gpu-env-check
+    - mirror-pull
+
 #-------------- Jobs --------------
 
 # An automatic way to check if github remote is ahead of gitlab's.
@@ -222,6 +228,11 @@ build-cpp-x86_64:
   script:
     - ./build.sh -t x86_64 -cc --clean
 
+build-cpp-x86_64-cuda:
+  extends: .base_build_gpu
+  script:
+    - ./build.sh -t x86_64-cuda -cc --clean
+
 build-cpp-aarch64-linux-gnu:
   extends: .base_build
   script:
@@ -248,15 +259,25 @@ build-cpp-arm-linux-android:
     - android-env-check
     - mirror-pull
 
-build-python:
+build-python-x86-64:
   extends: .base_build
   script:
     - ./build.sh -t x86_64 -py --clean
+
+build-python-x86-64-cuda:
+  extends: .base_build_gpu
+  script:
+    - ./build.sh -t x86_64-cuda -py --clean
 
 build-java-x86_64:
   extends: .base_build
   script:
     - ./build.sh -t x86_64 -jni --clean
+
+build-java-x86_64-cuda:
+  extends: .base_build_gpu
+  script:
+    - ./build.sh -t x86_64-cuda -jni --clean
 
 build-java-aarch64-linux-android:
   extends: .base_build
