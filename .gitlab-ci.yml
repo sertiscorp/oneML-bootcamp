@@ -64,7 +64,6 @@ stages:
       when: never
     - changes:
       - docker/Dockerfile
-      - docker/Dockerfile.android
       - docker/Dockerfile.cpu
   tags:
     - build
@@ -147,6 +146,12 @@ docker-build-gpu-base:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base -f docker/Dockerfile --build-arg base_image=nvidia/cuda:11.5.1-cudnn8-runtime-ubuntu20.04 .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - changes:
+      - docker/Dockerfile
+      - docker/Dockerfile.gpu
 
 docker-build-cpu:
   extends: .base_docker
@@ -154,17 +159,16 @@ docker-build-cpu:
   variables:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile.cpu,docker/Dockerfile
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
-      when: never
-    - changes:
-      - docker/Dockerfile.cpu
-      - docker/Dockerfile
+    IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base
+    DEVELOP_IMAGE: $CI_REGISTRY_IMAGE:develop-cpu-base
   script:
     - *git_auth
     - *docker_check
+    - *env_check
+    - set -a && source env_setup.env && set +a
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu -f docker/Dockerfile.cpu --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
+    - docker pull $BUILD_IMAGE
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu -f docker/Dockerfile.cpu --build-arg base_image=$BUILD_IMAGE .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu
   needs: ["docker-build-cpu-base"]
 
@@ -174,6 +178,8 @@ docker-build-gpu:
   variables:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile.gpu,docker/Dockerfile
+    IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base
+    DEVELOP_IMAGE: $CI_REGISTRY_IMAGE:develop-gpu-base
   rules:
     - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
       when: never
@@ -183,8 +189,11 @@ docker-build-gpu:
   script:
     - *git_auth
     - *docker_check
+    - *env_check
+    - set -a && source env_setup.env && set +a
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu -f docker/Dockerfile.gpu --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base .
+    - docker pull $BUILD_IMAGE
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu -f docker/Dockerfile.gpu --build-arg base_image=$BUILD_IMAGE .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu
   needs: ["docker-build-gpu-base"]
 
@@ -194,6 +203,8 @@ docker-build-android:
   variables:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile.android,docker/Dockerfile
+    IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base
+    DEVELOP_IMAGE: $CI_REGISTRY_IMAGE:develop-cpu-base
   rules:
     - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
       when: never
@@ -203,8 +214,11 @@ docker-build-android:
   script:
     - *git_auth
     - *docker_check
+    - *env_check
+    - set -a && source env_setup.env && set +a
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android -f docker/Dockerfile.android --build-arg base_image=$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base .
+    - docker pull $BUILD_IMAGE
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android -f docker/Dockerfile.android --build-arg base_image=$BUILD_IMAGE .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-android
   needs: ["docker-build-cpu-base"]
 
