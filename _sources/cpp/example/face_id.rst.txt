@@ -1,0 +1,49 @@
+.. _cpp_face_idexample:
+
+C++ Face Id Example
+^^^^^^^^^^^^^^^^^^^^
+
+Initialize faceID model
+
+.. code-block:: c++
+
+    oneML::face::FaceEmbedder embedder;
+    oneML::face::FaceId face_id(embedder);
+
+Initialize faceID model with licensing
+
+.. code-block:: c++
+
+    oneML::LicenseManager license_manager;
+    license_manager.set_key("LICENSE_KEY_VALUE_HERE");
+    license_manager.activate_key();
+    oneML::face::FaceEmbedder embedder(license_manager);
+    oneML::face::FaceId face_id(embedder, license_manager);
+
+Initialize oneML's Utils
+
+.. code-block:: c++
+
+    oneML::Utils utils;
+
+Initialize oneML's Utils with licensing
+
+.. code-block:: c++
+
+    oneML::Utils utils(license_manager);
+
+Create oneML's Image input object
+
+.. code-block:: c++
+
+    oneML::Image img1;
+    oneML::Image img2;
+
+    utils.read_image_cv(path1, img1);
+    utils.read_image_cv(path2, img2);
+
+Run the model
+
+.. code-block:: c++
+
+    std::pair<oneML::ReturnStatus, bool> result =  face_id.is_the_same_person(img1, img2);

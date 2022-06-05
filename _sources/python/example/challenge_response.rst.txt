@@ -1,0 +1,84 @@
+.. _python_challenge_response_example:
+
+Python Challenge Response Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Initialize Challenge Response module
+
+.. code-block:: python
+
+    from oneML import faceAPI as api
+    challenge = api.ChallengeResponse()
+
+Initialize Challenge Response module from existing FaceDetector and FaceLandmarkDetector
+
+.. code-block:: python
+
+    from oneML import faceAPI as api
+    face_detector = api.FaceDetector()
+    face_landmark = api.FaceLandmarkDetector()
+    challenge = api.ChallengeResponse(face_detector, face_landmark)
+
+Initialize Challenge Response module with licensing
+
+.. code-block:: python
+
+    from oneML import faceAPI as api
+    license_manager = api.LicenseManager()
+    license_manager.set_key("LICENSE_KEY_VALUE_HERE")
+    license_manager.activate_key()
+    challenge = api.ChallengeResponse(license_manager)
+
+Initialize Challenge Response module with licensing from existing FaceDetector and FaceLandmarkDetector
+
+.. code-block:: python
+
+    from oneML import faceAPI as api
+    license_manager = api.LicenseManager()
+    license_manager.set_key("LICENSE_KEY_VALUE_HERE")
+    license_manager.activate_key()
+
+    face_detector = api.FaceDetector(license_manager)
+    face_landmark = api.FaceLandmarkDetector(license_manager)
+    challenge = api.ChallengeResponse(face_detector, face_landmark, license_manager)
+
+Run the module from videos
+
+.. code-block:: python
+
+    video_path = "path/to/video.mp4"
+    result = challenge.run_video(video_path)
+
+Run the module from stream of images (can be used with opencv VideoCapture)
+
+.. code-block:: python
+
+    # if we can still read frame from image stream
+    while can_read_frame:
+        # use any function to get each frame from image stream
+        frame = get_one_frame()
+        result = challenge.run_frame(frame)
+    challenge.reset()
+
+Run the module with numpy array of images
+
+.. code-block:: python
+    
+    # create numpy array of images
+    utils = api.Utils()
+
+    video_path = "path/to/video.mp4";
+    images = utils.video_to_images(video_path)
+
+    # run ChallengeResponse with numpy array of images
+    result = challenge.run(images);
+
+Get result
+
+.. code-block:: python
+
+    print("status:", int(result.get_return_status()))
+    print("is_blink:", int(result.is_blink()))
+    print("number of blinks:", result.get_num_blinks())
+    print("liveness score:", result.get_liveness_score())
+    best_frame = result.get_best_frame()

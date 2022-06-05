@@ -1,0 +1,26 @@
+.. _python_public_face_pad:
+
+Python Face Pad API
+===================
+
+oneML model for Presentation Attack Detection (PAD)
+
+.. doxygenclass:: oneML::faceAPI::FacePad
+.. doxygenclass:: oneML::faceAPI::FacePadResult
+.. doxygenclass:: oneML::faceAPI::FacePadStatus
+.. doxygenclass:: oneML::faceAPI::FacePadResultVector
+.. code-block::
+
+   List of FacePadResult objects.
+
+.. only:: face_pad_rgb
+
+    .. doxygenvariable:: oneML::faceAPI::PadType_Rgb
+
+.. only:: face_pad_paper
+
+    .. doxygenvariable:: oneML::faceAPI::PadType_Paper
+
+.. only:: face_pad_ir
+
+    .. doxygenvariable:: oneML::faceAPI::PadType_Ir

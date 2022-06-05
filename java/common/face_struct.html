@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Java Face Structures &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Java Alpr Structures" href="alpr_struct.html" />
+    <link rel="prev" title="Java License Manager API" href="../public/license_manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                oneml-version
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Java APIs</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#java-data-structures">Java Data Structures</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Java Face Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpr_struct.html">Java Alpr Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#java-examples">Java Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Java APIs</a> &raquo;</li>
+        
+      <li>Java Face Structures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/java/common/face_struct.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="java-face-structures">
+<span id="java-common-face-struct"></span><h1>Java Face Structures<a class="headerlink" href="#java-face-structures" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face5ImageE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face5ImageE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5ImageE"></span><span id="org::sertiscorp::oneml::face::Image"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Image</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> class is used as a representation of an input image. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face5Image8setWidthEi">
+<span id="_CPPv3N3org10sertiscorp5oneml4face5Image8setWidthEi"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Image8setWidthEi"></span><span id="org::sertiscorp::oneml::face::Image::setWidth__i"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1a96954de0eb81346591294f2a5e45b6fa"></span>void <code class="sig-name descname">setWidth</code><span class="sig-paren">(</span>int <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Image8setWidthEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> width. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: an integer value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face5Image9setHeightEi">
+<span id="_CPPv3N3org10sertiscorp5oneml4face5Image9setHeightEi"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Image9setHeightEi"></span><span id="org::sertiscorp::oneml::face::Image::setHeight__i"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1aae76fc0c14e5ea39087ef32eae19bf8d"></span>void <code class="sig-name descname">setHeight</code><span class="sig-paren">(</span>int <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Image9setHeightEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> height. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: an integer value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face5Image8setDepthEi">
+<span id="_CPPv3N3org10sertiscorp5oneml4face5Image8setDepthEi"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Image8setDepthEi"></span><span id="org::sertiscorp::oneml::face::Image::setDepth__i"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1a9a84cd95068e8f1a6d01ed1998511819"></span>void <code class="sig-name descname">setDepth</code><span class="sig-paren">(</span>int <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Image8setDepthEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> depth. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: an integer value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face5Image8getWidthEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face5Image8getWidthEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Image8getWidthEv"></span><span id="org::sertiscorp::oneml::face::Image::getWidth"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1ae0b7cbf8aec54f0d07cfbc2e79f52939"></span>int <code class="sig-name descname">getWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Image8getWidthEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> width. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an integer value. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face5Image9getHeightEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face5Image9getHeightEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Image9getHeightEv"></span><span id="org::sertiscorp::oneml::face::Image::getHeight"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1ad5c1123873400290700f67afe5677d7b"></span>int <code class="sig-name descname">getHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Image9getHeightEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> height. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an integer value. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face5Image8getDepthEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face5Image8getDepthEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Image8getDepthEv"></span><span id="org::sertiscorp::oneml::face::Image::getDepth"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1a1da1984f014dfe4077a7e64ecf5cc4ec"></span>int <code class="sig-name descname">getDepth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Image8getDepthEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> depth. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a short value. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1ae4313fd886ec190cbae36fbf384167c9"></span><code class="sig-name descname">void setBuffer (java.nio.ByteBuffer data)</code></dt>
+<dd><p>Set <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> data as a buffer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>: an instance of <strong>java.nio.ByteBuffer</strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1a0583ea2a26cc8ab2cf1f8f2cf7e095fb"></span><code class="sig-name descname">Image (int w, int h, short d, java.nio.ByteBuffer data)</code></dt>
+<dd><p>Create an <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> instance from a <strong>java.nio.ByteBuffer</strong>. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code>: image width. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code>: image height. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code>: image depth. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>: pointer to image data. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1aa3d3cc3b5fe1ff19543bbbb0be6023c2"></span><code class="sig-name descname">Image (int w, int h, short d, byte[] array)</code></dt>
+<dd><p>Create an <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> instance from a byte array. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code>: image width. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code>: image height. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code>: image depth. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">array</span></code>: pointer to image data. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1a6d60836ba1894ef8abf6ea657eb292be"></span><code class="sig-name descname">java.nio.ByteBuffer getBuffer ()</code></dt>
+<dd><p>Get <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> data as a buffer. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>ByteBuffer</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1a5dfee00351bfd922b1ddde8b78859284"></span><code class="sig-name descname">byte[] getArray ()</code></dt>
+<dd><p>Get <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> data as a byte array. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a byte array. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_1ac029a915fb20b5d3645679a9f18a8ceb"></span><code class="sig-name descname">Image convert (java.awt.image.BufferedImage in)</code></dt>
+<dd><p>Converts <strong>java.awt.image.BufferedImage</strong> to <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">in</span></code>: an instance of <strong>java.awt.image.BufferedImage</strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"></span><code class="sig-name descname">org::sertiscorp::oneml::face::ImageBatch : public java::util::AbstractList&lt; Image &gt; , public java.util.RandomAccess</code></dt>
+<dd><p>The <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong> class is used as a container for <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> class. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch_1a5f9bee7836a88663b5027718832f247e"></span><code class="sig-name descname">ImageBatch add (byte[] byteArray, int width, int height, short depth)</code></dt>
+<dd><p>Creates and adds an instance of <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong> from <code class="docutils literal notranslate"><span class="pre">byte[]</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code>, <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">depth</span></code>. </p>
+<p>For this method, image byte array is expected to be in RGB format.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">byteArray</span></code>: byte array representing an image. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">height</span></code>: image height. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code>: image width. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">depth</span></code>: image depth. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch_1aaee40ae9160f5c8ac67e85e5b05177e9"></span><code class="sig-name descname">ImageBatch add (java.awt.image.BufferedImage in)</code></dt>
+<dd><p>Adds an instance of <strong>java.awt.image.BufferedImage</strong> to <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">in</span></code>: an instance of <strong>java.awt.image.BufferedImage</strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch_1a1e6ddfc746b83630c19ec5af02ec6c53"></span><code class="sig-name descname">ImageBatch add (java.util.List&lt; java.awt.image.BufferedImage &gt; in)</code></dt>
+<dd><p>Adds a list of <strong>java.awt.image.BufferedImage</strong> instances to <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">in</span></code>: an instance of <strong>java.util.List&lt;java.awt.image.BufferedImage&gt;</strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N3org10sertiscorp5oneml4faceE">
+<span id="_CPPv3N3org10sertiscorp5oneml4faceE"></span><span id="_CPPv2N3org10sertiscorp5oneml4faceE"></span><span id="org::sertiscorp::oneml::face"></span><span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4faceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4BBoxE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4BBoxE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4BBoxE"></span><span id="org::sertiscorp::oneml::face::BBox"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box"></span><em class="property">class </em><code class="sig-name descname">BBox</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4BBoxE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">bounding</span> <span class="n">box</span> <span class="nb">object</span> <span class="n">used</span> <span class="k">for</span> <span class="nb">object</span> <span class="n">detection</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4BBox6getTopEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4BBox6getTopEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4BBox6getTopEv"></span><span id="org::sertiscorp::oneml::face::BBox::getTop"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box_1a20d162e85b7f14eccb8e79893606612a"></span>float <code class="sig-prename descclassname">org::sertiscorp::oneml::face::BBox<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getTop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4BBox6getTopEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="n">the</span> <span class="n">top</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">BBox</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4BBox9getBottomEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4BBox9getBottomEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4BBox9getBottomEv"></span><span id="org::sertiscorp::oneml::face::BBox::getBottom"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box_1abbaf238544ac415ddfb1df0f868376b8"></span>float <code class="sig-prename descclassname">org::sertiscorp::oneml::face::BBox<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getBottom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4BBox9getBottomEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="n">the</span> <span class="n">bottom</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">BBox</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4BBox8getRightEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4BBox8getRightEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4BBox8getRightEv"></span><span id="org::sertiscorp::oneml::face::BBox::getRight"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box_1a28c9bd0a52708d350a04406102df9feb"></span>float <code class="sig-prename descclassname">org::sertiscorp::oneml::face::BBox<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getRight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4BBox8getRightEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="n">the</span> <span class="n">right</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">BBox</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4BBox7getLeftEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4BBox7getLeftEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4BBox7getLeftEv"></span><span id="org::sertiscorp::oneml::face::BBox::getLeft"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box_1abfdfa8904ea14f424d16cb69e2f08b8c"></span>float <code class="sig-prename descclassname">org::sertiscorp::oneml::face::BBox<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">getLeft</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4BBox7getLeftEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="n">the</span> <span class="n">left</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">BBox</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4BBox6setTopEf">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4BBox6setTopEf"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4BBox6setTopEf"></span><span id="org::sertiscorp::oneml::face::BBox::setTop__float"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box_1aff6fde2b14a9af2a27ef73433b1771a1"></span>void <code class="sig-prename descclassname">org::sertiscorp::oneml::face::BBox<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">setTop</code><span class="sig-paren">(</span>float <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4BBox6setTopEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Set</span> <span class="n">the</span> <span class="n">top</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">BBox</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4BBox9setBottomEf">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4BBox9setBottomEf"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4BBox9setBottomEf"></span><span id="org::sertiscorp::oneml::face::BBox::setBottom__float"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box_1a844611652e304908057ac5120b174844"></span>void <code class="sig-prename descclassname">org::sertiscorp::oneml::face::BBox<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">setBottom</code><span class="sig-paren">(</span>float <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4BBox9setBottomEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Set</span> <span class="n">the</span> <span class="n">bottom</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">BBox</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4BBox7setLeftEf">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4BBox7setLeftEf"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4BBox7setLeftEf"></span><span id="org::sertiscorp::oneml::face::BBox::setLeft__float"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box_1a267a97fe5eb1e6e8c2d4269bcb4bf5fc"></span>void <code class="sig-prename descclassname">org::sertiscorp::oneml::face::BBox<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">setLeft</code><span class="sig-paren">(</span>float <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4BBox7setLeftEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Set</span> <span class="n">left</span> <span class="n">top</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">BBox</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4BBox8setRightEf">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4BBox8setRightEf"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4BBox8setRightEf"></span><span id="org::sertiscorp::oneml::face::BBox::setRight__float"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box_1a5e3f8d87170456fde968bc157ac18456"></span>void <code class="sig-prename descclassname">org::sertiscorp::oneml::face::BBox<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">setRight</code><span class="sig-paren">(</span>float <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4BBox8setRightEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Set</span> <span class="n">the</span> <span class="n">right</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">BBox</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp class">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_b_box_list"></span><code class="sig-name descname">org::sertiscorp::oneml::face::BBoxList : public java::util::AbstractList&lt; BBox &gt; , public java.util.RandomAccess</code></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">BBox</span> <span class="n">objects</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14Landmark5ArrayE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14Landmark5ArrayE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14Landmark5ArrayE"></span><span id="org::sertiscorp::oneml::face::Landmark5Array"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_landmark5_array"></span><em class="property">class </em><code class="sig-name descname">Landmark5Array</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14Landmark5ArrayE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Array</span> <span class="n">containing</span> <span class="mi">5</span> <span class="n">floating</span> <span class="n">point</span> <span class="n">numbers</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face9Landmark5E">
+<span id="_CPPv3N3org10sertiscorp5oneml4face9Landmark5E"></span><span id="_CPPv2N3org10sertiscorp5oneml4face9Landmark5E"></span><span id="org::sertiscorp::oneml::face::Landmark5"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_landmark5"></span><em class="property">class </em><code class="sig-name descname">Landmark5</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face9Landmark5E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Struct</span> <span class="n">of</span> <span class="n">landmarks</span> <span class="n">containing</span> <span class="n">a</span> <span class="n">Landmark5Array</span> <span class="n">of</span> <span class="mi">5</span> <span class="n">x</span> <span class="n">points</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">Landmark5Array</span> <span class="n">of</span> <span class="mi">5</span> <span class="n">y</span> <span class="n">points</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_landmark5_list"></span><code class="sig-name descname">Landmark5List : public java::util::AbstractList&lt; Landmark5 &gt; , public java.util.RandomAccess</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">Landmark5</span> <span class="n">objects</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfile: Cannot find file “face/oneml/Landmark106Array.java </p>
+</aside>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Array</span> <span class="n">containing</span> <span class="mi">106</span> <span class="n">floating</span> <span class="n">point</span> <span class="n">numbers</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfile: Cannot find file “face/oneml/Landmark106.java </p>
+</aside>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Struct</span> <span class="n">of</span> <span class="n">landmarks</span> <span class="n">containing</span> <span class="n">a</span> <span class="n">Landmark106Array</span> <span class="n">of</span> <span class="mi">106</span> <span class="n">x</span> <span class="n">points</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">Landmark106Array</span> <span class="n">of</span> <span class="mi">106</span> <span class="n">y</span> <span class="n">points</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><br /></dt>
+<dd><dl class="cpp enum">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face8FacePoseE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face8FacePoseE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face8FacePoseE"></span><span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_pose"></span><em class="property">enum </em><code class="sig-name descname">FacePose</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face8FacePoseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_pose_1ae409ce271268a4cb1b1c5afdb0fd0cdb"></span><code class="sig-name descname">Front   =(FaceJNI.FacePose_Front_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_pose_1a6d242c838b0e86409ec5f7ee3fa5b0f3"></span><code class="sig-name descname">Left</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_pose_1a3fece005825b399844d7c8947d11af98"></span><code class="sig-name descname">Right</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_pose_1a0428267b807daed39877631f013e5212"></span><code class="sig-name descname">Up</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_pose_1ae80142b2f979d4a41d84e4083c1595c4"></span><code class="sig-name descname">Down</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_pose_1afb3a22d5f3357bcb1af3826189e00758"></span><code class="sig-name descname">Undefined</code></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_pose_list"></span><code class="sig-name descname">FacePoseList : public java::util::AbstractList&lt; FacePose &gt; , public java.util.RandomAccess</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">FacePose</span> <span class="n">objects</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face9EmbeddingE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face9EmbeddingE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face9EmbeddingE"></span><span id="org::sertiscorp::oneml::face::Embedding"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_embedding"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Embedding</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face9EmbeddingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_embedding_1adefedf3712a963a47240e995022f3ca7"></span><code class="sig-name descname">float[] toArray ()</code></dt>
+<dd><p>Returns an embedding. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an embedding. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_score_list"></span><code class="sig-name descname">ScoreList : public java::util::AbstractList&lt; Float &gt; , public java.util.RandomAccess</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="nb">float</span> <span class="k">as</span> <span class="n">detection</span> <span class="n">scores</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="alpr_struct.html" class="btn btn-neutral float-right" title="Java Alpr Structures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../public/license_manager.html" class="btn btn-neutral float-left" title="Java License Manager API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

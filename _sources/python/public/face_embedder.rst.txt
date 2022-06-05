@@ -1,0 +1,13 @@
+.. _python_public_face_embedder:
+
+Python Face Embedder API
+========================
+
+oneML model to embed faces in images, returning faces as vectors.
+
+.. doxygenclass:: oneML::faceAPI::FaceEmbedder
+.. doxygenclass:: oneML::faceAPI::FaceEmbedderResult
+.. doxygenclass:: oneML::faceAPI::FaceEmbedderResultVector
+.. code-block::
+
+   List of FaceEmbedderResult objects.

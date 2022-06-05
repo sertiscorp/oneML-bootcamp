@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Python License Manager API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python Face Structures" href="../common/face_struct.html" />
+    <link rel="prev" title="Python Utils API" href="utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                oneml-version
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Python APIs</a> &raquo;</li>
+        
+      <li>Python License Manager API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/python/public/license_manager.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="python-license-manager-api">
+<span id="python-public-license-manager"></span><h1>Python License Manager API<a class="headerlink" href="#python-license-manager-api" title="Permalink to this headline">¶</a></h1>
+<p>oneML class that manages licensing of all oneML APIs.</p>
+<dl class="py class">
+<dt>
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager"></span><code class="sig-name descname">oneML.faceAPI.LicenseManager : public object</code></dt>
+<dd><p>The oneML <a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_license_manager"><span class="std std-ref">LicenseManager</span></a> object. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">to</span> <span class="n">manage</span> <span class="n">licensing</span><span class="o">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="init__">
+<span id="__init__"></span><span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a1ec4d31cb29e01c2ce9b56304df7a58f"></span><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_license_manager"><span class="std std-ref">LicenseManager</span></a> object. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">args</span><span class="p">:</span>
+
+    <span class="o">-</span> <span class="n">LicenseManager</span> <span class="n">instance</span> <span class="p">(</span><span class="n">optional</span><span class="p">,</span> <span class="n">copy</span> <span class="n">the</span> <span class="n">instance</span><span class="p">)</span>
+</pre></div>
+</div>
+ <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code>: Variable length argument list.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="set_key">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1aaa1127a4e7f51731b38fe9d53525bda8"></span><code class="sig-name descname">set_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#set_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the oneML product key. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code>: string of product key </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="set_machine_code">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a8defb9a1df264858cf5503a836ffefca"></span><code class="sig-name descname">set_machine_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">code</span></em><span class="sig-paren">)</span><a class="headerlink" href="#set_machine_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the oneML machine code. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: string of machine code </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_key">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1ae37ec6b28a846829b642ab6d4546b01a"></span><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get product key. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string: product key </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="activate_key">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a3e9abed9b9c6129ca1a1ab33a98c0cda"></span><code class="sig-name descname">activate_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#activate_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activate a product key, requires a key to be set first. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus: Ok if activation is successful, Error otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="activate_trial">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1ada0fc50fe0f5f06e1050602f3766819e"></span><code class="sig-name descname">activate_trial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#activate_trial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activate trial version. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus: Ok if activation is successful, Error otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_machine_code">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a7725f4ef37494abd6ef37ed8b0e6c7a6"></span><code class="sig-name descname">get_machine_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_machine_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get machine code used as a machine unique identifier. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string: machine code </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="is_trial">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1adb75cd5894e59a492d7efe8625414546"></span><code class="sig-name descname">is_trial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_trial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the current activation is trial or not. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool: true if the activation is trial, false otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="is_valid_activation">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1aaf31f32480639eda566a77edc90350b6"></span><code class="sig-name descname">is_valid_activation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_valid_activation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if an activation whether by a key or trial is valid or not (not expired) </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool: true if an activation is valid and not expired, false otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_activation_type">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a4ff3408851c52bd44643e08a2f9b6481"></span><code class="sig-name descname">get_activation_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_activation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the type of the current activation. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseActivationType: an enum of activation type<ul class="simple">
+<li><p>NotFound: If a license is not activated or not found</p></li>
+<li><p>KeyOnline: If an activation is done by a license key and an online service</p></li>
+<li><p>TrialOnline: If a trial activation is done by an online service </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_activation_expiry_date">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a760e47c523f0c0245939623f4e5fd59f"></span><code class="sig-name descname">get_activation_expiry_date</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_activation_expiry_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the key expiry date. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>int: unix time (also, LOG info of expiry time in Y-M-D) </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager"></span><code class="sig-name descname">oneML.alprAPI.LicenseManager : public object</code></dt>
+<dd><p>The oneML <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_license_manager"><span class="std std-ref">LicenseManager</span></a> object. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">to</span> <span class="n">manage</span> <span class="n">licensing</span><span class="o">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="id0">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1af2fee0cadf76d5b7a8f9dd42931cd3ea"></span><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_license_manager"><span class="std std-ref">LicenseManager</span></a> object. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">args</span><span class="p">:</span>
+
+    <span class="o">-</span> <span class="n">LicenseManager</span> <span class="n">instance</span> <span class="p">(</span><span class="n">optional</span><span class="p">,</span> <span class="n">copy</span> <span class="n">the</span> <span class="n">instance</span><span class="p">)</span>
+</pre></div>
+</div>
+ <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code>: Variable length argument list.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id1">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a61aee37471ba94437d0a966caf2626f0"></span><code class="sig-name descname">set_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the oneML product key. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code>: string of product key </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id2">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a49ae61018808514732d02fd4edcb4eac"></span><code class="sig-name descname">set_machine_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">code</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the oneML machine code. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p></p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: string of machine code </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id3">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a7865e1941b85bb6b025101f5163a2a24"></span><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get product key. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string: product key </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id4">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a5d80f5f43753342a098473f45c7ce155"></span><code class="sig-name descname">activate_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activate a product key, requires a key to be set first. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus: Ok if activation is successful, Error otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id5">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a7e51938c3ddc04c0a537e10337bb6c55"></span><code class="sig-name descname">activate_trial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activate trial version. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus: Ok if activation is successful, Error otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id6">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1ac6c5b22721d7844c47047872e9b03fe6"></span><code class="sig-name descname">get_machine_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get machine code used as a machine unique identifier. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string: machine code </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id7">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a349f6b5123597713d197106e74e1669e"></span><code class="sig-name descname">is_trial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the current activation is trial or not. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool: true if the activation is trial, false otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id8">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a69f0e9c671ddc0c41b3f4552dad089b2"></span><code class="sig-name descname">is_valid_activation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if an activation whether by a key or trial is valid or not (not expired) </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool: true if an activation is valid and not expired, false otherwise </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id9">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a42aeeae3420de046f51bebc6fa8c42c4"></span><code class="sig-name descname">get_activation_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the type of the current activation. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseActivationType: an enum of activation type<ul class="simple">
+<li><p>NotFound: If a license is not activated or not found</p></li>
+<li><p>KeyOnline: If an activation is done by a license key and an online service</p></li>
+<li><p>TrialOnline: If a trial activation is done by an online service </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id10">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a2a873b457766f307edfbe912490100a9"></span><code class="sig-name descname">get_activation_expiry_date</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the key expiry date. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>int: unix time (also, LOG info of expiry time in Y-M-D) </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../common/face_struct.html" class="btn btn-neutral float-right" title="Python Face Structures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="utils.html" class="btn btn-neutral float-left" title="Python Utils API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

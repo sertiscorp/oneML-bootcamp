@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>C++ Face Detector API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C++ Face Landmark API" href="face_landmark.html" />
+    <link rel="prev" title="C++ APIs" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                oneml-version
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C++ APIs</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C++ Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">C++ Face Embedder API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">C++ Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C++ Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">C++ Utils API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">C++ APIs</a> &raquo;</li>
+        
+      <li>C++ Face Detector API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/cpp/public/face_detector.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="c-face-detector-api">
+<span id="cpp-public-face-detector"></span><h1>C++ Face Detector API<a class="headerlink" href="#c-face-detector-api" title="Permalink to this headline">¶</a></h1>
+<p>oneML model to detect faces in images, returning their confidence score, bounding box, face landmarks and poses.</p>
+<dl class="cpp class">
+<dt id="_CPPv4N5oneML4face12FaceDetectorE">
+<span id="_CPPv3N5oneML4face12FaceDetectorE"></span><span id="_CPPv2N5oneML4face12FaceDetectorE"></span><span id="oneML::face::FaceDetector"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector"></span><em class="property">class </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceDetector</code><a class="headerlink" href="#_CPPv4N5oneML4face12FaceDetectorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The oneML <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_detector"><span class="std std-ref">FaceDetector</span></a> API object. </p>
+<p>Class to create and use oneML face detector model. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face12FaceDetector12FaceDetectorERN5oneML14LicenseManagerE">
+<span id="_CPPv3N5oneML4face12FaceDetector12FaceDetectorERN5oneML14LicenseManagerE"></span><span id="_CPPv2N5oneML4face12FaceDetector12FaceDetectorERN5oneML14LicenseManagerE"></span><span id="oneML::face::FaceDetector::FaceDetector__oneML::LicenseManagerR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector_1a003f425faa4e587d7193011052952dcb"></span><code class="sig-name descname">FaceDetector</code><span class="sig-paren">(</span>oneML::<a class="reference internal" href="license_manager.html#_CPPv4N5oneML14LicenseManagerE" title="oneML::LicenseManager">LicenseManager</a> &amp;<em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face12FaceDetector12FaceDetectorERN5oneML14LicenseManagerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_detector"><span class="std std-ref">FaceDetector</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: Licensemanager instance </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face12FaceDetector6detectERK10MultiImageRNSt6vectorI18FaceDetectorResultEE">
+<span id="_CPPv3N5oneML4face12FaceDetector6detectERK10MultiImageRNSt6vectorI18FaceDetectorResultEE"></span><span id="_CPPv2N5oneML4face12FaceDetector6detectERK10MultiImageRNSt6vectorI18FaceDetectorResultEE"></span><span id="oneML::face::FaceDetector::detect__MultiImageCR.std::vector:FaceDetectorResult:R"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector_1afb36d7301e22b20a3a400ad0942371bf"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">detect</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML10MultiImageE" title="oneML::MultiImage">MultiImage</a> &amp;<em>imgs</em>, std::vector&lt;<a class="reference internal" href="#_CPPv4N5oneML4face18FaceDetectorResultE" title="oneML::face::FaceDetectorResult">FaceDetectorResult</a>&gt; &amp;<em>results</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face12FaceDetector6detectERK10MultiImageRNSt6vectorI18FaceDetectorResultEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>detect faces in images </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">imgs</span></code>: vector of raw images </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">results</span></code>: vector of result objects </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face12FaceDetector6detectERK5ImageR18FaceDetectorResult">
+<span id="_CPPv3N5oneML4face12FaceDetector6detectERK5ImageR18FaceDetectorResult"></span><span id="_CPPv2N5oneML4face12FaceDetector6detectERK5ImageR18FaceDetectorResult"></span><span id="oneML::face::FaceDetector::detect__ImageCR.FaceDetectorResultR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector_1a5567e0a1a00eb7b09135688bdda3fed7"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">detect</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>img</em>, <a class="reference internal" href="#_CPPv4N5oneML4face18FaceDetectorResultE" title="oneML::face::FaceDetectorResult">FaceDetectorResult</a> &amp;<em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face12FaceDetector6detectERK5ImageR18FaceDetectorResult" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>detect faces in images </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">img</span></code>: raw image </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">result</span></code>: result object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N5oneML4face18FaceDetectorResultE">
+<span id="_CPPv3N5oneML4face18FaceDetectorResultE"></span><span id="_CPPv2N5oneML4face18FaceDetectorResultE"></span><span id="oneML::face::FaceDetectorResult"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector_result"></span><em class="property">class </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceDetectorResult</code><a class="headerlink" href="#_CPPv4N5oneML4face18FaceDetectorResultE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The result object for oneML <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_detector"><span class="std std-ref">FaceDetector</span></a> API. </p>
+<p>Helper class to access all the results from an API call. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face18FaceDetectorResult10get_scoresERNSt6vectorIfEE">
+<span id="_CPPv3N5oneML4face18FaceDetectorResult10get_scoresERNSt6vectorIfEE"></span><span id="_CPPv2N5oneML4face18FaceDetectorResult10get_scoresERNSt6vectorIfEE"></span><span id="oneML::face::FaceDetectorResult::get_scores__std::vector:float:R"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector_result_1ad8ac61317c8387bd2c02e90e475f5248"></span>void <code class="sig-name descname">get_scores</code><span class="sig-paren">(</span>std::vector&lt;float&gt; &amp;<em>scores</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face18FaceDetectorResult10get_scoresERNSt6vectorIfEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get result score </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">scores</span></code>: vector of scores </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face18FaceDetectorResult10get_bboxesERNSt6vectorIN5oneML4face4BBoxEEE">
+<span id="_CPPv3N5oneML4face18FaceDetectorResult10get_bboxesERNSt6vectorIN5oneML4face4BBoxEEE"></span><span id="_CPPv2N5oneML4face18FaceDetectorResult10get_bboxesERNSt6vectorIN5oneML4face4BBoxEEE"></span><span id="oneML::face::FaceDetectorResult::get_bboxes__std::vector:oneML::face::BBox:R"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector_result_1a4a2e95b27653f8bda84e5eae6c0226d9"></span>void <code class="sig-name descname">get_bboxes</code><span class="sig-paren">(</span>std::vector&lt;oneML::face::<a class="reference internal" href="../common/face_struct.html#_CPPv4N5oneML4face4BBoxE" title="oneML::face::BBox">BBox</a>&gt; &amp;<em>bboxes</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face18FaceDetectorResult10get_bboxesERNSt6vectorIN5oneML4face4BBoxEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get result bounding box </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">bboxes</span></code>: vector of bounding boxes </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face18FaceDetectorResult13get_landmarksERNSt6vectorIN5oneML4face12FaceLandmarkIXL5EEEEEE">
+<span id="_CPPv3N5oneML4face18FaceDetectorResult13get_landmarksERNSt6vectorIN5oneML4face12FaceLandmarkIXL5EEEEEE"></span><span id="_CPPv2N5oneML4face18FaceDetectorResult13get_landmarksERNSt6vectorIN5oneML4face12FaceLandmarkIX5EEEEE"></span><span id="oneML::face::FaceDetectorResult::get_landmarks__std::vector:oneML::face::FaceLandmark:5::R"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector_result_1a041d1e27fc6d0c938824cdee0634a180"></span>void <code class="sig-name descname">get_landmarks</code><span class="sig-paren">(</span>std::vector&lt;oneML::face::<a class="reference internal" href="../common/face_struct.html#_CPPv4I_iEN5oneML4face12FaceLandmarkE" title="oneML::face::FaceLandmark">FaceLandmark</a>&lt;5&gt;&gt; &amp;<em>landmarks</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face18FaceDetectorResult13get_landmarksERNSt6vectorIN5oneML4face12FaceLandmarkIXL5EEEEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get result landmarks </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">landmarks</span></code>: vector of landmarks </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face18FaceDetectorResult9get_posesERNSt6vectorIN5oneML4face4PoseEEE">
+<span id="_CPPv3N5oneML4face18FaceDetectorResult9get_posesERNSt6vectorIN5oneML4face4PoseEEE"></span><span id="_CPPv2N5oneML4face18FaceDetectorResult9get_posesERNSt6vectorIN5oneML4face4PoseEEE"></span><span id="oneML::face::FaceDetectorResult::get_poses__std::vector:oneML::face::Pose:R"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector_result_1a3af1cb008a9b0352b99143bc1caac6b1"></span>void <code class="sig-name descname">get_poses</code><span class="sig-paren">(</span>std::vector&lt;oneML::face::<a class="reference internal" href="../common/face_struct.html#_CPPv4N5oneML4face4PoseE" title="oneML::face::Pose">Pose</a>&gt; &amp;<em>poses</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face18FaceDetectorResult9get_posesERNSt6vectorIN5oneML4face4PoseEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get result pose </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">poses</span></code>: vector of poses </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face18FaceDetectorResult8get_sizeEv">
+<span id="_CPPv3N5oneML4face18FaceDetectorResult8get_sizeEv"></span><span id="_CPPv2N5oneML4face18FaceDetectorResult8get_sizeEv"></span><span id="oneML::face::FaceDetectorResult::get_size"></span><span class="target" id="classone_m_l_1_1face_1_1_face_detector_result_1aacc73e263dccf834a30229a9954c932e"></span>int <code class="sig-name descname">get_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face18FaceDetectorResult8get_sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get number of faces detected </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>int: number of faces detected </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="face_landmark.html" class="btn btn-neutral float-right" title="C++ Face Landmark API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="C++ APIs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+.. _python_public_vehicle_detector:
+
+Python Vehicle Detector
+=======================
+
+oneML model to detect vehicles in images, returning their confident scores, and bounding boxes.
+
+.. doxygenclass:: oneML::alprAPI::VehicleDetector
+.. doxygenclass:: oneML::alprAPI::VehicleDetectorResult
+.. doxygenclass:: oneML::alprAPI::VehicleDetectorResultVector
+.. code-block::
+
+   List of VehicleDetectorResult objects.

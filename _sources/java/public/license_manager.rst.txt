@@ -1,0 +1,20 @@
+.. _java_public_license_manager:
+
+Java License Manager API
+========================
+
+oneML class that manages licensing of all oneML APIs.
+
+.. only:: face_detect or face_embed or face_id or face_pad
+
+   .. doxygenclass:: org::sertiscorp::oneml::face::LicenseManager
+
+   .. doxygenfile:: face/oneml/LicenseStatus.java
+      :sections: innernamespace innerclass public-attrib
+
+.. only:: vehicle_detect
+
+   .. doxygenclass:: org::sertiscorp::oneml::alpr::LicenseManager
+
+   .. doxygenfile:: alpr/oneml/LicenseStatus.java
+      :sections: innernamespace innerclass public-attrib

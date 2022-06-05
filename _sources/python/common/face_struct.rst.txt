@@ -1,0 +1,45 @@
+.. _python_common_face_struct:
+
+Python Face Structures
+======================
+
+.. doxygenclass:: oneML::faceAPI::BBox
+.. code-block::
+
+    Attributes:
+        - top: top coordinate
+        - bottom: bottom coordinate
+        - left: left coordinate
+        - right: right coordinate
+
+.. doxygenclass:: oneML::faceAPI::BBoxVector
+.. code-block::
+
+   List of BBox objects.
+
+.. doxygenclass:: oneML::faceAPI::Landmark5
+.. code-block::
+
+   Struct of landmarks containing an array of 5 x points and an array of 5 y points
+
+.. doxygenclass:: oneML::faceAPI::Landmark106
+.. code-block::
+
+   Struct of landmarks containing an array of 106 x points and an array of 106 y points
+
+.. doxygenclass:: oneML::faceAPI::Landmarks5Vector
+.. code-block::
+
+   List of Landmark5 objects.
+
+.. doxygenclass:: oneML::faceAPI::IntVector
+.. code-block::
+
+   List of int values.
+
+.. doxygenvariable:: oneML::faceAPI::Pose_Undefined
+.. doxygenvariable:: oneML::faceAPI::Pose_Front
+.. doxygenvariable:: oneML::faceAPI::Pose_Left
+.. doxygenvariable:: oneML::faceAPI::Pose_Right
+.. doxygenvariable:: oneML::faceAPI::Pose_Up
+.. doxygenvariable:: oneML::faceAPI::Pose_Down

@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Java Face Detector API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Java Face Landmark API" href="face_landmark.html" />
+    <link rel="prev" title="Java APIs" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                oneml-version
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Java APIs</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Java Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">Java Face Embedder API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">Java Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">Java Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Java Utils API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#java-examples">Java Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Java APIs</a> &raquo;</li>
+        
+      <li>Java Face Detector API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/java/public/face_detector.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="java-face-detector-api">
+<span id="java-public-face-detector"></span><h1>Java Face Detector API<a class="headerlink" href="#java-face-detector-api" title="Permalink to this headline">¶</a></h1>
+<p>oneML model to detect faces in images, returning their confident score, bounding box, face landmarks and poses.</p>
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetectorE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetectorE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetectorE"></span><span id="org::sertiscorp::oneml::face::FaceDetector"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceDetector</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetectorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::FaceDetector::FaceDetector__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1af1d9350238696d2280ba88330c24a25a"></span><code class="sig-name descname">FaceDetector</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a FaceDetector object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager instance. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch"></span><span id="org::sertiscorp::oneml::face::FaceDetector::detect__ImageBatch"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a4e41b21a9b2dce16d67fc76eb20d4b05"></span>FaceDetectorResultList <code class="sig-name descname">detect</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Detect faces in images. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceDetectorResultList</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">imgs</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image"></span><span id="org::sertiscorp::oneml::face::FaceDetector::detect__Image"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a83828f95f0af0fac6bfaca648a1bf16a"></span><a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResultE" title="org::sertiscorp::oneml::face::FaceDetectorResult">FaceDetectorResult</a> <code class="sig-name descname">detect</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Detect faces in an image. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceDetectorResult</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResultE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResultE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResultE"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceDetectorResult</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResultE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getSize"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1ae2ce9c20d5fd3946122ad950735148dc"></span>int <code class="sig-name descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get number of detections. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an integer. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getBBoxes"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a1ffb5bf6d3884e05ce28959160e79f4d"></span>BBoxList <code class="sig-name descname">getBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get result Bounding Boxes. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>BBoxList</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getScores"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a03460d8bc57da6cfd57980deab6958de"></span>ScoreList <code class="sig-name descname">getScores</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get result scores. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>ScoreList</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getLandmarks"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a4aabd39ab2785f6eecf3ee61d729df06"></span>Landmark5List <code class="sig-name descname">getLandmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get result landmarks. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>Landmark5List</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getPoses"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1ac9d2635c9bcc08971a9253055e410376"></span>FacePoseList <code class="sig-name descname">getPoses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get result face poses. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FacePostList</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_list"></span><code class="sig-name descname">org::sertiscorp::oneml::face::FaceDetectorResultList : public java::util::AbstractList&lt; FaceDetectorResult &gt; , public java.util.RandomAccess</code></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="face_landmark.html" class="btn btn-neutral float-right" title="Java Face Landmark API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Java APIs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

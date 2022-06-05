@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>C++ Face Structures &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C++ ALPR Structures" href="alpr_struct.html" />
+    <link rel="prev" title="C++ License Manager API" href="../public/license_manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                oneml-version
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">C++ APIs</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#c-data-structures">C++ Data Structures</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C++ Face Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpr_struct.html">C++ ALPR Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">C++ APIs</a> &raquo;</li>
+        
+      <li>C++ Face Structures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/cpp/common/face_struct.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="c-face-structures">
+<span id="cpp-common-face-struct"></span><h1>C++ Face Structures<a class="headerlink" href="#c-face-structures" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp struct">
+<dt id="_CPPv4N5oneML5ImageE">
+<span id="_CPPv3N5oneML5ImageE"></span><span id="_CPPv2N5oneML5ImageE"></span><span id="oneML::Image"></span><span class="target" id="structone_m_l_1_1_image"></span><em class="property">struct </em><code class="sig-prename descclassname">oneML<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Image</code><br /></dt>
+<dd><p>Struct representing a single image. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML5Image5ImageEv">
+<span id="_CPPv3N5oneML5Image5ImageEv"></span><span id="_CPPv2N5oneML5Image5ImageEv"></span><span id="oneML::Image::Image"></span><span class="target" id="structone_m_l_1_1_image_1a73336a88e7053dba037155a9c25f1fb1"></span><code class="sig-name descname">Image</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = default<br /></dt>
+<dd><p>Construct an <a class="reference internal" href="#structone_m_l_1_1_image"><span class="std std-ref">Image</span></a> object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML5Image5ImageE8uint16_t8uint16_t7uint8_tRNSt10shared_ptrI7uint8_tEE">
+<span id="_CPPv3N5oneML5Image5ImageE8uint16_t8uint16_t7uint8_tRNSt10shared_ptrI7uint8_tEE"></span><span id="_CPPv2N5oneML5Image5ImageE8uint16_t8uint16_t7uint8_tRNSt10shared_ptrI7uint8_tEE"></span><span id="oneML::Image::Image__uint16_t.uint16_t.uint8_t.std::shared_ptr:uint8_t:R"></span><span class="target" id="structone_m_l_1_1_image_1a370810408ee229587a62b36d45a9375a"></span><code class="sig-name descname">Image</code><span class="sig-paren">(</span>uint16_t <em>width</em>, uint16_t <em>height</em>, uint8_t <em>depth</em>, std::shared_ptr&lt;uint8_t&gt; &amp;<em>data</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>Construct an <a class="reference internal" href="#structone_m_l_1_1_image"><span class="std std-ref">Image</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">width</span></code>: image width </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">height</span></code>: image height </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">depth</span></code>: image depth </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">data</span></code>: pointer to image data </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML5Image4sizeEv">
+<span id="_CPPv3NK5oneML5Image4sizeEv"></span><span id="_CPPv2NK5oneML5Image4sizeEv"></span><span id="oneML::Image::sizeC"></span><span class="target" id="structone_m_l_1_1_image_1ace321986f09ff3d9ea6e851e574f4729"></span>size_t <code class="sig-name descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
+<dd><p>This function returns the size of the image data. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>size_t size of image in bytes </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML5Image9set_widthE8uint16_t">
+<span id="_CPPv3N5oneML5Image9set_widthE8uint16_t"></span><span id="_CPPv2N5oneML5Image9set_widthE8uint16_t"></span><span id="oneML::Image::set_width__uint16_t"></span><span class="target" id="structone_m_l_1_1_image_1a6f788daca348bf1331376f064785f71d"></span>void <code class="sig-name descname">set_width</code><span class="sig-paren">(</span>uint16_t <em>value</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>This function sets image width. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">value</span></code>: width value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML5Image10set_heightE8uint16_t">
+<span id="_CPPv3N5oneML5Image10set_heightE8uint16_t"></span><span id="_CPPv2N5oneML5Image10set_heightE8uint16_t"></span><span id="oneML::Image::set_height__uint16_t"></span><span class="target" id="structone_m_l_1_1_image_1ae951b920c08eede3644e700bbf4b588c"></span>void <code class="sig-name descname">set_height</code><span class="sig-paren">(</span>uint16_t <em>value</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>This function sets image height. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">value</span></code>: height value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML5Image9set_depthE8uint16_t">
+<span id="_CPPv3N5oneML5Image9set_depthE8uint16_t"></span><span id="_CPPv2N5oneML5Image9set_depthE8uint16_t"></span><span id="oneML::Image::set_depth__uint16_t"></span><span class="target" id="structone_m_l_1_1_image_1a6467e7a86671e9444803ee4e51f8bd33"></span>void <code class="sig-name descname">set_depth</code><span class="sig-paren">(</span>uint16_t <em>value</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>This function sets image depth. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">value</span></code>: depth value </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML5Image8set_dataEP7uint8_t">
+<span id="_CPPv3N5oneML5Image8set_dataEP7uint8_t"></span><span id="_CPPv2N5oneML5Image8set_dataEP7uint8_t"></span><span id="oneML::Image::set_data__uint8_tP"></span><span class="target" id="structone_m_l_1_1_image_1adc10642db2c3fab41df01362bd591dfd"></span>void <code class="sig-name descname">set_data</code><span class="sig-paren">(</span>uint8_t *<em>value</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>This function sets image data. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">value</span></code>: data pointer </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML5Image9get_widthEv">
+<span id="_CPPv3NK5oneML5Image9get_widthEv"></span><span id="_CPPv2NK5oneML5Image9get_widthEv"></span><span id="oneML::Image::get_widthC"></span><span class="target" id="structone_m_l_1_1_image_1a129934deb4ae8cd6fca73002c43b20a2"></span>uint16_t <code class="sig-name descname">get_width</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
+<dd><p>This function gets image width. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>uint16_t image width </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML5Image10get_heightEv">
+<span id="_CPPv3NK5oneML5Image10get_heightEv"></span><span id="_CPPv2NK5oneML5Image10get_heightEv"></span><span id="oneML::Image::get_heightC"></span><span class="target" id="structone_m_l_1_1_image_1aefadb9b352971de0e3ebab458a0c0aba"></span>uint16_t <code class="sig-name descname">get_height</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
+<dd><p>This function gets image height. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>uint16_t image height </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML5Image9get_depthEv">
+<span id="_CPPv3NK5oneML5Image9get_depthEv"></span><span id="_CPPv2NK5oneML5Image9get_depthEv"></span><span id="oneML::Image::get_depthC"></span><span class="target" id="structone_m_l_1_1_image_1a82a18a79796335228ccf710e7d6d738a"></span>uint16_t <code class="sig-name descname">get_depth</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
+<dd><p>This function gets image depth. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>uint16_t image depth </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML5Image8get_dataEv">
+<span id="_CPPv3NK5oneML5Image8get_dataEv"></span><span id="_CPPv2NK5oneML5Image8get_dataEv"></span><span id="oneML::Image::get_dataC"></span><span class="target" id="structone_m_l_1_1_image_1af0f4c6220b2c86efbb1c59a01222f4e6"></span>std::shared_ptr&lt;uint8_t&gt; <code class="sig-name descname">get_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
+<dd><p>This function gets image data pointer. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>std::shared_ptr&lt;uint8_t&gt; pointer to image data </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5oneML10MultiImageE">
+<span id="_CPPv3N5oneML10MultiImageE"></span><span id="_CPPv2N5oneML10MultiImageE"></span><span class="target" id="oneml__structs_8h_1ac53b1ffd2701d479c9e00e90d0856dfa"></span><em class="property">using </em><code class="sig-prename descclassname">oneML<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">MultiImage</code> = std::vector&lt;<a class="reference internal" href="alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a>&gt;<br /></dt>
+<dd><p>Data structure representing a set images. </p>
+<p>The set of faces passed to the template extraction process. </p>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt id="_CPPv4N5oneML12ReturnStatusE">
+<span id="_CPPv3N5oneML12ReturnStatusE"></span><span id="_CPPv2N5oneML12ReturnStatusE"></span><span id="oneML::ReturnStatus"></span><span class="target" id="structone_m_l_1_1_return_status"></span><em class="property">struct </em><code class="sig-prename descclassname">oneML<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">ReturnStatus</code><br /></dt>
+<dd><p>A structure to contain information about a failure by the software under test. </p>
+<p>An object of this class allows the software to return some information from a function call. The string within this object can be optionally set to provide more information for debugging etc. The status code will be set by the function to Success on success, or one of the other codes on failure. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML12ReturnStatus12ReturnStatusEK10ReturnCodeNSt6stringE">
+<span id="_CPPv3N5oneML12ReturnStatus12ReturnStatusEK10ReturnCodeNSt6stringE"></span><span id="_CPPv2N5oneML12ReturnStatus12ReturnStatusEK10ReturnCodeNSt6stringE"></span><span id="oneML::ReturnStatus::ReturnStatus__ReturnCodeC.ss"></span><span class="target" id="structone_m_l_1_1_return_status_1affa99760fe6ad375c9ee4f9b764f6402"></span><code class="sig-name descname">ReturnStatus</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="alpr_struct.html#_CPPv4N5oneML10ReturnCodeE" title="oneML::ReturnCode">ReturnCode</a> <em>code</em>, std::string <em>info</em> = &quot;&quot;<span class="sig-paren">)</span><br /></dt>
+<dd><p>Create a <a class="reference internal" href="#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">code</span></code>: ReturnCode enum </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">info</span></code>: optional information string </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML12ReturnStatus8set_codeE10ReturnCode">
+<span id="_CPPv3N5oneML12ReturnStatus8set_codeE10ReturnCode"></span><span id="_CPPv2N5oneML12ReturnStatus8set_codeE10ReturnCode"></span><span id="oneML::ReturnStatus::set_code__ReturnCode"></span><span class="target" id="structone_m_l_1_1_return_status_1ae1d31600dbf801233152a34cfe87668c"></span>void <code class="sig-name descname">set_code</code><span class="sig-paren">(</span><a class="reference internal" href="alpr_struct.html#_CPPv4N5oneML10ReturnCodeE" title="oneML::ReturnCode">ReturnCode</a> <em>value</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>This function sets return code. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">value</span></code>: ReturnCode enum </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML12ReturnStatus8set_infoENSt6stringE">
+<span id="_CPPv3N5oneML12ReturnStatus8set_infoENSt6stringE"></span><span id="_CPPv2N5oneML12ReturnStatus8set_infoENSt6stringE"></span><span id="oneML::ReturnStatus::set_info__ss"></span><span class="target" id="structone_m_l_1_1_return_status_1a4e3796314b10f42c68c1f8263b802d9f"></span>void <code class="sig-name descname">set_info</code><span class="sig-paren">(</span>std::string <em>value</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>This function sets return info. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">value</span></code>: information string </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML12ReturnStatus8get_codeEv">
+<span id="_CPPv3NK5oneML12ReturnStatus8get_codeEv"></span><span id="_CPPv2NK5oneML12ReturnStatus8get_codeEv"></span><span id="oneML::ReturnStatus::get_codeC"></span><span class="target" id="structone_m_l_1_1_return_status_1a82e325ae899e08c06e0a153733578eea"></span><a class="reference internal" href="alpr_struct.html#_CPPv4N5oneML10ReturnCodeE" title="oneML::ReturnCode">ReturnCode</a> <code class="sig-name descname">get_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
+<dd><p>This function gets return code. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ReturnCode return code </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML12ReturnStatus8get_infoEv">
+<span id="_CPPv3NK5oneML12ReturnStatus8get_infoEv"></span><span id="_CPPv2NK5oneML12ReturnStatus8get_infoEv"></span><span id="oneML::ReturnStatus::get_infoC"></span><span class="target" id="structone_m_l_1_1_return_status_1aab705b339fd789e3137c0be83101fdfa"></span>std::string <code class="sig-name descname">get_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
+<dd><p>This function gets return info. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>std::string information string </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp enum">
+<dt id="_CPPv4N5oneML10ReturnCodeE">
+<span id="_CPPv3N5oneML10ReturnCodeE"></span><span id="_CPPv2N5oneML10ReturnCodeE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1"></span><em class="property">enum </em><code class="sig-prename descclassname">oneML<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">ReturnCode</code><br /></dt>
+<dd><p>Return codes for functions specified in this API. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode7SuccessE">
+<span id="_CPPv3N5oneML10ReturnCode7SuccessE"></span><span id="_CPPv2N5oneML10ReturnCode7SuccessE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1a505a83f220c02df2f85c3810cd9ceb38"></span><em class="property">enumerator </em><code class="sig-name descname">Success</code><br /></dt>
+<dd><p>Success. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode12UnknownErrorE">
+<span id="_CPPv3N5oneML10ReturnCode12UnknownErrorE"></span><span id="_CPPv2N5oneML10ReturnCode12UnknownErrorE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1abfaef30f1c8011c5cefa38ae470fb7aa"></span><em class="property">enumerator </em><code class="sig-name descname">UnknownError</code><br /></dt>
+<dd><p>Catch-all failure. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode11ConfigErrorE">
+<span id="_CPPv3N5oneML10ReturnCode11ConfigErrorE"></span><span id="_CPPv2N5oneML10ReturnCode11ConfigErrorE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1a1053efdc7a34708782767df3ed95cded"></span><em class="property">enumerator </em><code class="sig-name descname">ConfigError</code><br /></dt>
+<dd><p>Error reading configuration files. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode11RefuseInputE">
+<span id="_CPPv3N5oneML10ReturnCode11RefuseInputE"></span><span id="_CPPv2N5oneML10ReturnCode11RefuseInputE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1ae14358f7eac47d906cc359c54696ee59"></span><em class="property">enumerator </em><code class="sig-name descname">RefuseInput</code><br /></dt>
+<dd><p>Elective refusal to process the input. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode12ExtractErrorE">
+<span id="_CPPv3N5oneML10ReturnCode12ExtractErrorE"></span><span id="_CPPv2N5oneML10ReturnCode12ExtractErrorE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1af9b0cde9ae7bee37c2f5e3e3ec5802a4"></span><em class="property">enumerator </em><code class="sig-name descname">ExtractError</code><br /></dt>
+<dd><p>Involuntary failure to process the image. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode10ParseErrorE">
+<span id="_CPPv3N5oneML10ReturnCode10ParseErrorE"></span><span id="_CPPv2N5oneML10ReturnCode10ParseErrorE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1ae41199faa7290c167f70f314c5e6c165"></span><em class="property">enumerator </em><code class="sig-name descname">ParseError</code><br /></dt>
+<dd><p>Cannot parse the input data. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode11MemoryErrorE">
+<span id="_CPPv3N5oneML10ReturnCode11MemoryErrorE"></span><span id="_CPPv2N5oneML10ReturnCode11MemoryErrorE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1acedcbd07d779d35295f55a5b5de1e855"></span><em class="property">enumerator </em><code class="sig-name descname">MemoryError</code><br /></dt>
+<dd><p>Memory allocation failed (e.g. </p>
+<p>out of memory) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode12RuntimeErrorE">
+<span id="_CPPv3N5oneML10ReturnCode12RuntimeErrorE"></span><span id="_CPPv2N5oneML10ReturnCode12RuntimeErrorE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1aa334b8fdd25f8fb3e632228494604ee1"></span><em class="property">enumerator </em><code class="sig-name descname">RuntimeError</code><br /></dt>
+<dd><p>Error while processing the input. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode15LicenseKeyErrorE">
+<span id="_CPPv3N5oneML10ReturnCode15LicenseKeyErrorE"></span><span id="_CPPv2N5oneML10ReturnCode15LicenseKeyErrorE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1a206092b46638ce545f7cb6972bda6dd9"></span><em class="property">enumerator </em><code class="sig-name descname">LicenseKeyError</code><br /></dt>
+<dd><p>License key is not valid. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML10ReturnCode14NotImplementedE">
+<span id="_CPPv3N5oneML10ReturnCode14NotImplementedE"></span><span id="_CPPv2N5oneML10ReturnCode14NotImplementedE"></span><span class="target" id="oneml__structs_8h_1ab3c7084bf7faaa3b0a4a2e4f3b3ce2b1a997ca4ce119685f40f03a9a8a6c5346e"></span><em class="property">enumerator </em><code class="sig-name descname">NotImplemented</code><br /></dt>
+<dd><p>Failure to generate a quality score on the input image. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp struct">
+<dt id="_CPPv4N5oneML4BBoxE">
+<span id="_CPPv3N5oneML4BBoxE"></span><span id="_CPPv2N5oneML4BBoxE"></span><span id="oneML::BBox"></span><span class="target" id="structone_m_l_1_1_b_box"></span><em class="property">struct </em><code class="sig-prename descclassname">oneML<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">BBox</code><br /></dt>
+<dd><p>Struct for Bounding Box. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt id="_CPPv4N5oneML4BBox3topE">
+<span id="_CPPv3N5oneML4BBox3topE"></span><span id="_CPPv2N5oneML4BBox3topE"></span><span id="oneML::BBox::top__float"></span><span class="target" id="structone_m_l_1_1_b_box_1a89ddbc505cbf06afc5411697fb753d29"></span>float <code class="sig-name descname">top</code><br /></dt>
+<dd><p><a class="reference internal" href="#structone_m_l_1_1_b_box"><span class="std std-ref">BBox</span></a> top coordinate. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N5oneML4BBox4leftE">
+<span id="_CPPv3N5oneML4BBox4leftE"></span><span id="_CPPv2N5oneML4BBox4leftE"></span><span id="oneML::BBox::left__float"></span><span class="target" id="structone_m_l_1_1_b_box_1a69adebc3705195df19019136582ff5d6"></span>float <code class="sig-name descname">left</code><br /></dt>
+<dd><p><a class="reference internal" href="#structone_m_l_1_1_b_box"><span class="std std-ref">BBox</span></a> left coordinate. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N5oneML4BBox6bottomE">
+<span id="_CPPv3N5oneML4BBox6bottomE"></span><span id="_CPPv2N5oneML4BBox6bottomE"></span><span id="oneML::BBox::bottom__float"></span><span class="target" id="structone_m_l_1_1_b_box_1a531f555d765d198a929ca1564f53dc8a"></span>float <code class="sig-name descname">bottom</code><br /></dt>
+<dd><p><a class="reference internal" href="#structone_m_l_1_1_b_box"><span class="std std-ref">BBox</span></a> bottom coordinate. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N5oneML4BBox5rightE">
+<span id="_CPPv3N5oneML4BBox5rightE"></span><span id="_CPPv2N5oneML4BBox5rightE"></span><span id="oneML::BBox::right__float"></span><span class="target" id="structone_m_l_1_1_b_box_1a367be3a53ff8dce953c57b4ddd50750a"></span>float <code class="sig-name descname">right</code><br /></dt>
+<dd><p><a class="reference internal" href="#structone_m_l_1_1_b_box"><span class="std std-ref">BBox</span></a> right coordinate. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt id="_CPPv4I_iEN5oneML4face12FaceLandmarkE">
+<span id="_CPPv3I_iEN5oneML4face12FaceLandmarkE"></span><span id="_CPPv2I_iEN5oneML4face12FaceLandmarkE"></span>template&lt;int <code class="sig-name descname">N</code>&gt;<br /><span class="target" id="structone_m_l_1_1face_1_1_face_landmark"></span><em class="property">struct </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceLandmark</code><a class="headerlink" href="#_CPPv4I_iEN5oneML4face12FaceLandmarkE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Struct for landmark in face. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt id="_CPPv4N5oneML4face12FaceLandmark1xE">
+<span id="_CPPv3N5oneML4face12FaceLandmark1xE"></span><span id="_CPPv2N5oneML4face12FaceLandmark1xE"></span><span id="oneML::face::FaceLandmark::x__std::array:float.N:"></span><span class="target" id="structone_m_l_1_1face_1_1_face_landmark_1a4dc67093893a1704373f7ba4e47d06f9"></span>std::array&lt;float, <a class="reference internal" href="#_CPPv4I_iEN5oneML4face12FaceLandmarkE" title="oneML::face::FaceLandmark::N">N</a>&gt; <code class="sig-name descname">x</code><a class="headerlink" href="#_CPPv4N5oneML4face12FaceLandmark1xE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Array for x coordinates. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N5oneML4face12FaceLandmark1yE">
+<span id="_CPPv3N5oneML4face12FaceLandmark1yE"></span><span id="_CPPv2N5oneML4face12FaceLandmark1yE"></span><span id="oneML::face::FaceLandmark::y__std::array:float.N:"></span><span class="target" id="structone_m_l_1_1face_1_1_face_landmark_1a5e7ba5575eae5487e1be960c18567192"></span>std::array&lt;float, <a class="reference internal" href="#_CPPv4I_iEN5oneML4face12FaceLandmarkE" title="oneML::face::FaceLandmark::N">N</a>&gt; <code class="sig-name descname">y</code><a class="headerlink" href="#_CPPv4N5oneML4face12FaceLandmark1yE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Array for y coordinates. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N5oneML4face4BBoxE">
+<span id="_CPPv3N5oneML4face4BBoxE"></span><span id="_CPPv2N5oneML4face4BBoxE"></span><span class="target" id="oneml__face__structs_8h_1aab813f0405e7a9bd50a8760494ce16d4"></span><em class="property">using </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">BBox</code> = oneML::<a class="reference internal" href="alpr_struct.html#_CPPv4N5oneML4BBoxE" title="oneML::BBox">BBox</a><a class="headerlink" href="#_CPPv4N5oneML4face4BBoxE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enum">
+<dt id="_CPPv4N5oneML4face4PoseE">
+<span id="_CPPv3N5oneML4face4PoseE"></span><span id="_CPPv2N5oneML4face4PoseE"></span><span class="target" id="oneml__face__structs_8h_1a6a1a9c736095c366efd8a1964a102f5a"></span><em class="property">enum </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Pose</code><a class="headerlink" href="#_CPPv4N5oneML4face4PoseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return pose for detected face. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face4Pose5FrontE">
+<span id="_CPPv3N5oneML4face4Pose5FrontE"></span><span id="_CPPv2N5oneML4face4Pose5FrontE"></span><span class="target" id="oneml__face__structs_8h_1a6a1a9c736095c366efd8a1964a102f5aa5835bab1ade0060909e31a06af2e2cde"></span><em class="property">enumerator </em><code class="sig-name descname">Front</code><a class="headerlink" href="#_CPPv4N5oneML4face4Pose5FrontE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face4Pose4LeftE">
+<span id="_CPPv3N5oneML4face4Pose4LeftE"></span><span id="_CPPv2N5oneML4face4Pose4LeftE"></span><span class="target" id="oneml__face__structs_8h_1a6a1a9c736095c366efd8a1964a102f5aa945d5e233cf7d6240f6b783b36a374ff"></span><em class="property">enumerator </em><code class="sig-name descname">Left</code><a class="headerlink" href="#_CPPv4N5oneML4face4Pose4LeftE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face4Pose5RightE">
+<span id="_CPPv3N5oneML4face4Pose5RightE"></span><span id="_CPPv2N5oneML4face4Pose5RightE"></span><span class="target" id="oneml__face__structs_8h_1a6a1a9c736095c366efd8a1964a102f5aa92b09c7c48c520c3c55e497875da437c"></span><em class="property">enumerator </em><code class="sig-name descname">Right</code><a class="headerlink" href="#_CPPv4N5oneML4face4Pose5RightE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face4Pose2UpE">
+<span id="_CPPv3N5oneML4face4Pose2UpE"></span><span id="_CPPv2N5oneML4face4Pose2UpE"></span><span class="target" id="oneml__face__structs_8h_1a6a1a9c736095c366efd8a1964a102f5aa258f49887ef8d14ac268c92b02503aaa"></span><em class="property">enumerator </em><code class="sig-name descname">Up</code><a class="headerlink" href="#_CPPv4N5oneML4face4Pose2UpE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face4Pose4DownE">
+<span id="_CPPv3N5oneML4face4Pose4DownE"></span><span id="_CPPv2N5oneML4face4Pose4DownE"></span><span class="target" id="oneml__face__structs_8h_1a6a1a9c736095c366efd8a1964a102f5aa08a38277b0309070706f6652eeae9a53"></span><em class="property">enumerator </em><code class="sig-name descname">Down</code><a class="headerlink" href="#_CPPv4N5oneML4face4Pose4DownE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face4Pose9UndefinedE">
+<span id="_CPPv3N5oneML4face4Pose9UndefinedE"></span><span id="_CPPv2N5oneML4face4Pose9UndefinedE"></span><span class="target" id="oneml__face__structs_8h_1a6a1a9c736095c366efd8a1964a102f5aaec0fc0100c4fc1ce4eea230c3dc10360"></span><em class="property">enumerator </em><code class="sig-name descname">Undefined</code><a class="headerlink" href="#_CPPv4N5oneML4face4Pose9UndefinedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="alpr_struct.html" class="btn btn-neutral float-right" title="C++ ALPR Structures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../public/license_manager.html" class="btn btn-neutral float-left" title="C++ License Manager API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+.. _cpp_pubic_face_pad:
+
+C++ Face Pad API
+================
+
+oneML model for Presentation Attack Detection (PAD)
+
+.. doxygenclass:: oneML::face::FacePad
+.. doxygenclass:: oneML::face::FacePadResult
+.. doxygenclass:: oneML::face::FacePadStatus
+.. doxygenenum:: oneML::face::PadType

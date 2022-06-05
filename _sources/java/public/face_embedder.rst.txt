@@ -1,0 +1,10 @@
+.. _java_public_face_embedder:
+
+Java Face Embedder API
+======================
+
+oneML model to embed faces in images, returning faces as vectors.
+
+.. doxygenclass:: org::sertiscorp::oneml::face::FaceEmbedder
+.. doxygenclass:: org::sertiscorp::oneml::face::FaceEmbedderResult
+.. doxygenclass:: org::sertiscorp::oneml::face::FaceEmbedderResultList

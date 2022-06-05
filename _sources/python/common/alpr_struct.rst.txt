@@ -1,0 +1,18 @@
+.. _python_common_alpr_struct:
+
+Python Alpr Structures
+======================
+
+.. doxygenclass:: oneML::alprAPI::BBox
+.. code-block::
+
+    Attributes:
+        - top: top coordinate
+        - bottom: bottom coordinate
+        - left: left coordinate
+        - right: right coordinate
+
+.. doxygenclass:: oneML::alprAPI::BBoxVector
+.. code-block::
+
+   List of BBox objects.

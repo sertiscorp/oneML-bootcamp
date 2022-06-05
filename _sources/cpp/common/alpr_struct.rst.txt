@@ -1,0 +1,11 @@
+.. _cpp_common_alpr_struct:
+
+C++ ALPR Structures
+===================
+
+.. doxygenstruct:: oneML::Image
+.. doxygentypedef:: oneML::MultiImage
+.. doxygenstruct:: oneML::ReturnStatus
+.. doxygenenum:: oneML::ReturnCode
+.. doxygenstruct:: oneML::BBox
+.. doxygentypedef:: oneML::alpr::BBox

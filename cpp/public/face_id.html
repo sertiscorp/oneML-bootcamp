@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>C++ Face ID API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C++ Face Pad API" href="face_pad.html" />
+    <link rel="prev" title="C++ Face Embedder API" href="face_embedder.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                oneml-version
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C++ APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">C++ Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">C++ Face Embedder API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C++ Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C++ Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">C++ Utils API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">C++ APIs</a> &raquo;</li>
+        
+      <li>C++ Face ID API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/cpp/public/face_id.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="c-face-id-api">
+<span id="cpp-public-face-id"></span><h1>C++ Face ID API<a class="headerlink" href="#c-face-id-api" title="Permalink to this headline">¶</a></h1>
+<p>oneML model for face verification and face identification.</p>
+<dl class="cpp class">
+<dt id="_CPPv4N5oneML4face6FaceIdE">
+<span id="_CPPv3N5oneML4face6FaceIdE"></span><span id="_CPPv2N5oneML4face6FaceIdE"></span><span id="oneML::face::FaceId"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id"></span><em class="property">class </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceId</code><a class="headerlink" href="#_CPPv4N5oneML4face6FaceIdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The oneML <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_id"><span class="std std-ref">FaceId</span></a> API object. </p>
+<p>Class to create and use oneML face id model. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId6FaceIdERN5oneML14LicenseManagerE">
+<span id="_CPPv3N5oneML4face6FaceId6FaceIdERN5oneML14LicenseManagerE"></span><span id="_CPPv2N5oneML4face6FaceId6FaceIdERN5oneML14LicenseManagerE"></span><span id="oneML::face::FaceId::FaceId__oneML::LicenseManagerR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1add046caa127613d523a4696bfd886996"></span><code class="sig-name descname">FaceId</code><span class="sig-paren">(</span>oneML::<a class="reference internal" href="license_manager.html#_CPPv4N5oneML14LicenseManagerE" title="oneML::LicenseManager">LicenseManager</a> &amp;<em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId6FaceIdERN5oneML14LicenseManagerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_id"><span class="std std-ref">FaceId</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: Licensemanager instance </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId6FaceIdER12FaceEmbedderRN5oneML14LicenseManagerE">
+<span id="_CPPv3N5oneML4face6FaceId6FaceIdER12FaceEmbedderRN5oneML14LicenseManagerE"></span><span id="_CPPv2N5oneML4face6FaceId6FaceIdER12FaceEmbedderRN5oneML14LicenseManagerE"></span><span id="oneML::face::FaceId::FaceId__FaceEmbedderR.oneML::LicenseManagerR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1aca6b65c0c4ef0d7163e146477bd3163b"></span><code class="sig-name descname">FaceId</code><span class="sig-paren">(</span><a class="reference internal" href="face_embedder.html#_CPPv4N5oneML4face12FaceEmbedderE" title="oneML::face::FaceEmbedder">FaceEmbedder</a> &amp;<em>embedder</em>, oneML::<a class="reference internal" href="license_manager.html#_CPPv4N5oneML14LicenseManagerE" title="oneML::LicenseManager">LicenseManager</a> &amp;<em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId6FaceIdER12FaceEmbedderRN5oneML14LicenseManagerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_id"><span class="std std-ref">FaceId</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">embedder</span></code>: <a class="reference internal" href="face_embedder.html#classone_m_l_1_1face_1_1_face_embedder"><span class="std std-ref">FaceEmbedder</span></a> instance </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: Licensemanager instance </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId7predictERK10MultiImageRNSt6vectorI12FaceIdResultEE">
+<span id="_CPPv3N5oneML4face6FaceId7predictERK10MultiImageRNSt6vectorI12FaceIdResultEE"></span><span id="_CPPv2N5oneML4face6FaceId7predictERK10MultiImageRNSt6vectorI12FaceIdResultEE"></span><span id="oneML::face::FaceId::predict__MultiImageCR.std::vector:FaceIdResult:R"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1ab97f263aab857039394049217e2572fd"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML10MultiImageE" title="oneML::MultiImage">MultiImage</a> &amp;<em>imgs</em>, std::vector&lt;<a class="reference internal" href="#_CPPv4N5oneML4face12FaceIdResultE" title="oneML::face::FaceIdResult">FaceIdResult</a>&gt; &amp;<em>results</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId7predictERK10MultiImageRNSt6vectorI12FaceIdResultEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>predict images to registered ids </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">imgs</span></code>: vector of raw images </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">results</span></code>: vector of result objects </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId7predictERK5ImageR12FaceIdResult">
+<span id="_CPPv3N5oneML4face6FaceId7predictERK5ImageR12FaceIdResult"></span><span id="_CPPv2N5oneML4face6FaceId7predictERK5ImageR12FaceIdResult"></span><span id="oneML::face::FaceId::predict__ImageCR.FaceIdResultR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1a8c63d96287887b03129053b65507887f"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>img</em>, <a class="reference internal" href="#_CPPv4N5oneML4face12FaceIdResultE" title="oneML::face::FaceIdResult">FaceIdResult</a> &amp;<em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId7predictERK5ImageR12FaceIdResult" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>predict an image to registered ids </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">img</span></code>: raw image </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">result</span></code>: result object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId18is_the_same_personERK5ImageRK5Image">
+<span id="_CPPv3N5oneML4face6FaceId18is_the_same_personERK5ImageRK5Image"></span><span id="_CPPv2N5oneML4face6FaceId18is_the_same_personERK5ImageRK5Image"></span><span id="oneML::face::FaceId::is_the_same_person__ImageCR.ImageCR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1a2c5fb2308a7dea738c1a42303c3ec2a6"></span>std::pair&lt;<a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a>, bool&gt; <code class="sig-name descname">is_the_same_person</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>face_img1</em>, <em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>face_img2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId18is_the_same_personERK5ImageRK5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Verify if 2 face images are the same. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a pair of <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a> and bool, true if 2 faces are from the same person, false otherwise </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">face_img1</span></code>: image of first person </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">face_img2</span></code>: image of second person </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId18is_the_same_personERKNSt5arrayIf8EMB_SIZEEERK5ImageRNSt5arrayIf8EMB_SIZEEE">
+<span id="_CPPv3N5oneML4face6FaceId18is_the_same_personERKNSt5arrayIf8EMB_SIZEEERK5ImageRNSt5arrayIf8EMB_SIZEEE"></span><span id="_CPPv2N5oneML4face6FaceId18is_the_same_personERKNSt5arrayIf8EMB_SIZEEERK5ImageRNSt5arrayIf8EMB_SIZEEE"></span><span id="oneML::face::FaceId::is_the_same_person__std::array:float.EMB_SIZE:CR.ImageCR.std::array:float.EMB_SIZE:R"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1aee99b6816c3edf39712347578f0101c8"></span>std::pair&lt;<a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a>, bool&gt; <code class="sig-name descname">is_the_same_person</code><span class="sig-paren">(</span><em class="property">const</em> std::array&lt;float, EMB_SIZE&gt; &amp;<em>face_emb</em>, <em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>face_img</em>, std::array&lt;float, EMB_SIZE&gt; &amp;<em>img_emb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId18is_the_same_personERKNSt5arrayIf8EMB_SIZEEERK5ImageRNSt5arrayIf8EMB_SIZEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Verify if a face images is the same as a face embedding. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a pair of <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a> and bool: true if the same person, false otherwise </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">face_emb</span></code>: embedding of first person </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">face_img</span></code>: image of second person </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">img_emb</span></code>: embedding of second person </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId15register_id_embERKNSt6stringERKNSt5arrayIf8EMB_SIZEEE">
+<span id="_CPPv3N5oneML4face6FaceId15register_id_embERKNSt6stringERKNSt5arrayIf8EMB_SIZEEE"></span><span id="_CPPv2N5oneML4face6FaceId15register_id_embERKNSt6stringERKNSt5arrayIf8EMB_SIZEEE"></span><span id="oneML::face::FaceId::register_id_emb__ssCR.std::array:float.EMB_SIZE:CR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1a7c3ac58e66855591747ba8479a674191"></span>std::pair&lt;<a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a>, int&gt; <code class="sig-name descname">register_id_emb</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>id</em>, <em class="property">const</em> std::array&lt;float, EMB_SIZE&gt; &amp;<em>emb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId15register_id_embERKNSt6stringERKNSt5arrayIf8EMB_SIZEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a new ID with embedding vectors. </p>
+<p>If an ID exists, its embedding vectors will be replaced by new one and the classifier will be rebuilt.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a pair of <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a> and the embedding size </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">id</span></code>: string id </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">emb</span></code>: embedding array size EMB_SIZE </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId18register_id_imagesERKNSt6stringERK10MultiImageRKb">
+<span id="_CPPv3N5oneML4face6FaceId18register_id_imagesERKNSt6stringERK10MultiImageRKb"></span><span id="_CPPv2N5oneML4face6FaceId18register_id_imagesERKNSt6stringERK10MultiImageRKb"></span><span id="oneML::face::FaceId::register_id_images__ssCR.MultiImageCR.bCR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1a8a62a5b819882e1b7c476bd7d7d8404f"></span>std::pair&lt;<a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a>, std::array&lt;float, EMB_SIZE&gt;&gt; <code class="sig-name descname">register_id_images</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>id</em>, <em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML10MultiImageE" title="oneML::MultiImage">MultiImage</a> &amp;<em>images</em>, <em class="property">const</em> bool &amp;<em>avg_emb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId18register_id_imagesERKNSt6stringERK10MultiImageRKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a new ID with images. </p>
+<p>if avg_emb is true, we will register with average embedding vector, else we will register embedding from first image.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a pair of <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a> and a float array </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">id</span></code>: string id </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">images</span></code>: MultiImage </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">avg_emb</span></code>: boolean to average embedding images or not </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId18register_id_imagesERKNSt6stringERK5Image">
+<span id="_CPPv3N5oneML4face6FaceId18register_id_imagesERKNSt6stringERK5Image"></span><span id="_CPPv2N5oneML4face6FaceId18register_id_imagesERKNSt6stringERK5Image"></span><span id="oneML::face::FaceId::register_id_images__ssCR.ImageCR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1ad31728dabcdd414681d7e2427235349f"></span>std::pair&lt;<a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a>, std::array&lt;float, EMB_SIZE&gt;&gt; <code class="sig-name descname">register_id_images</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>id</em>, <em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId18register_id_imagesERKNSt6stringERK5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a new ID with an image. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a pair of <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a> and a float array </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">id</span></code>: string id </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">image</span></code>: <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_image"><span class="std std-ref">Image</span></a> </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId28update_embedding_dynamicallyERKNSt6stringERK5ImageRKNSt5arrayIf8EMB_SIZEEE">
+<span id="_CPPv3N5oneML4face6FaceId28update_embedding_dynamicallyERKNSt6stringERK5ImageRKNSt5arrayIf8EMB_SIZEEE"></span><span id="_CPPv2N5oneML4face6FaceId28update_embedding_dynamicallyERKNSt6stringERK5ImageRKNSt5arrayIf8EMB_SIZEEE"></span><span id="oneML::face::FaceId::update_embedding_dynamically__ssCR.ImageCR.std::array:float.EMB_SIZE:CR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1a16061cad4b00f19d7802198ac615b8cf"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">update_embedding_dynamically</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>id</em>, <em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>img</em>, <em class="property">const</em> std::array&lt;float, EMB_SIZE&gt; &amp;<em>ori_emb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId28update_embedding_dynamicallyERKNSt6stringERK5ImageRKNSt5arrayIf8EMB_SIZEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Dynamically update data inside a gallery_matrix classier by a face image and original embedding array. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">id</span></code>: string id </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">img</span></code>: cropped and aligned face image </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">ori_emb</span></code>: an original embedding vector used when the ID is registered </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId28update_embedding_dynamicallyERKNSt6stringERKNSt5arrayIf8EMB_SIZEEERKNSt5arrayIf8EMB_SIZEEE">
+<span id="_CPPv3N5oneML4face6FaceId28update_embedding_dynamicallyERKNSt6stringERKNSt5arrayIf8EMB_SIZEEERKNSt5arrayIf8EMB_SIZEEE"></span><span id="_CPPv2N5oneML4face6FaceId28update_embedding_dynamicallyERKNSt6stringERKNSt5arrayIf8EMB_SIZEEERKNSt5arrayIf8EMB_SIZEEE"></span><span id="oneML::face::FaceId::update_embedding_dynamically__ssCR.std::array:float.EMB_SIZE:CR.std::array:float.EMB_SIZE:CR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1ab6c9143a53acd7dcdbca650d084d7702"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">update_embedding_dynamically</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>id</em>, <em class="property">const</em> std::array&lt;float, EMB_SIZE&gt; &amp;<em>probe_emb</em>, <em class="property">const</em> std::array&lt;float, EMB_SIZE&gt; &amp;<em>ori_emb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId28update_embedding_dynamicallyERKNSt6stringERKNSt5arrayIf8EMB_SIZEEERKNSt5arrayIf8EMB_SIZEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Dynamically update data inside a gallery_matrix classier by a probe embedding and original embedding array. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">id</span></code>: string id </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">probe_emb</span></code>: An embedding array got from embedding a probe image </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">ori_emb</span></code>: an original embedding vector used when the ID is registered </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId16update_embeddingERKNSt6stringERKNSt5arrayIf8EMB_SIZEEE">
+<span id="_CPPv3N5oneML4face6FaceId16update_embeddingERKNSt6stringERKNSt5arrayIf8EMB_SIZEEE"></span><span id="_CPPv2N5oneML4face6FaceId16update_embeddingERKNSt6stringERKNSt5arrayIf8EMB_SIZEEE"></span><span id="oneML::face::FaceId::update_embedding__ssCR.std::array:float.EMB_SIZE:CR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1a1f8125bc284eb27b6a79ab66727cfb7d"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">update_embedding</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>id</em>, <em class="property">const</em> std::array&lt;float, EMB_SIZE&gt; &amp;<em>emb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId16update_embeddingERKNSt6stringERKNSt5arrayIf8EMB_SIZEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Directly update an embedding vector inside a gallery_matrix classifier. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">id</span></code>: string id </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">emb</span></code>: embedding array </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId9remove_idERKNSt6stringE">
+<span id="_CPPv3N5oneML4face6FaceId9remove_idERKNSt6stringE"></span><span id="_CPPv2N5oneML4face6FaceId9remove_idERKNSt6stringE"></span><span id="oneML::face::FaceId::remove_id__ssCR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1a3918da3a85dc4e66518b29ce2c48d5b8"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">remove_id</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId9remove_idERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>remove id from store and array </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">id</span></code>: string id </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face6FaceId7get_idsERNSt6vectorINSt6stringEEE">
+<span id="_CPPv3N5oneML4face6FaceId7get_idsERNSt6vectorINSt6stringEEE"></span><span id="_CPPv2N5oneML4face6FaceId7get_idsERNSt6vectorINSt6stringEEE"></span><span id="oneML::face::FaceId::get_ids__std::vector:ss:R"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_1adaf278bda58810739b69adc29032e5f3"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">get_ids</code><span class="sig-paren">(</span>std::vector&lt;std::string&gt; &amp;<em>ids</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face6FaceId7get_idsERNSt6vectorINSt6stringEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get set of all id </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">ids</span></code>: vector of string IDs </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N5oneML4face12FaceIdResultE">
+<span id="_CPPv3N5oneML4face12FaceIdResultE"></span><span id="_CPPv2N5oneML4face12FaceIdResultE"></span><span id="oneML::face::FaceIdResult"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_result"></span><em class="property">class </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceIdResult</code><a class="headerlink" href="#_CPPv4N5oneML4face12FaceIdResultE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The result object for oneML <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_id"><span class="std std-ref">FaceId</span></a> API. </p>
+<p>Helper class to access all the results from an API call. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face12FaceIdResult6get_idEv">
+<span id="_CPPv3N5oneML4face12FaceIdResult6get_idEv"></span><span id="_CPPv2N5oneML4face12FaceIdResult6get_idEv"></span><span id="oneML::face::FaceIdResult::get_id"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_result_1aa6e1eff7647dc935409866f2e6343b2b"></span>std::string <code class="sig-name descname">get_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face12FaceIdResult6get_idEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get id </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string: identified ID </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face12FaceIdResult25get_nearest_node_distanceEv">
+<span id="_CPPv3N5oneML4face12FaceIdResult25get_nearest_node_distanceEv"></span><span id="_CPPv2N5oneML4face12FaceIdResult25get_nearest_node_distanceEv"></span><span id="oneML::face::FaceIdResult::get_nearest_node_distance"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_result_1ac7563d89406a5a86c815d3437ffd7aab"></span>float <code class="sig-name descname">get_nearest_node_distance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face12FaceIdResult25get_nearest_node_distanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get nearest node distance </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>float: distance to nearest ID </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face12FaceIdResult21get_combined_distanceEv">
+<span id="_CPPv3N5oneML4face12FaceIdResult21get_combined_distanceEv"></span><span id="_CPPv2N5oneML4face12FaceIdResult21get_combined_distanceEv"></span><span id="oneML::face::FaceIdResult::get_combined_distance"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_result_1a80bc5870bd05fcc52484431ce2805740"></span>float <code class="sig-name descname">get_combined_distance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face12FaceIdResult21get_combined_distanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get combined distance </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>float: combined distance to first two candidate IDs </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face12FaceIdResult15is_identifiableEv">
+<span id="_CPPv3N5oneML4face12FaceIdResult15is_identifiableEv"></span><span id="_CPPv2N5oneML4face12FaceIdResult15is_identifiableEv"></span><span id="oneML::face::FaceIdResult::is_identifiable"></span><span class="target" id="classone_m_l_1_1face_1_1_face_id_result_1a63234acc917be3eeb5bd47894274cf06"></span>bool <code class="sig-name descname">is_identifiable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face12FaceIdResult15is_identifiableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>check if distance result is above the threshold for detecting unknown ID </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool: True if the result is valid or False for unknown ID </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="face_pad.html" class="btn btn-neutral float-right" title="C++ Face Pad API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="face_embedder.html" class="btn btn-neutral float-left" title="C++ Face Embedder API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

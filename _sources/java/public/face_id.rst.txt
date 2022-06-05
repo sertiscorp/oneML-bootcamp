@@ -1,0 +1,10 @@
+.. _java_public_face_id:
+
+Java Face ID API
+================
+
+oneML model for face verification and face identification.
+
+.. doxygenclass:: org::sertiscorp::oneml::face::FaceId
+.. doxygenclass:: org::sertiscorp::oneml::face::FaceIdResult
+.. doxygenclass:: org::sertiscorp::oneml::face::FaceIdResultList

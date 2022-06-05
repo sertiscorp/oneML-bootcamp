@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Java Face ID API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Java Face Pad API" href="face_pad.html" />
+    <link rel="prev" title="Java Face Embedder API" href="face_embedder.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                oneml-version
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Java APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">Java Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">Java Face Embedder API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Java Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">Java Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Java Utils API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#java-examples">Java Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Java APIs</a> &raquo;</li>
+        
+      <li>Java Face ID API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/java/public/face_id.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="java-face-id-api">
+<span id="java-public-face-id"></span><h1>Java Face ID API<a class="headerlink" href="#java-face-id-api" title="Permalink to this headline">¶</a></h1>
+<p>oneML model for face verification and face identification.</p>
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face6FaceIdE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face6FaceIdE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face6FaceIdE"></span><span id="org::sertiscorp::oneml::face::FaceId"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceId</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face6FaceIdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face6FaceId6FaceIdE14LicenseManager">
+<span id="_CPPv3N3org10sertiscorp5oneml4face6FaceId6FaceIdE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face6FaceId6FaceIdE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::FaceId::FaceId__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1ac016dd574d91a54a9262e8132c1a85dc"></span><code class="sig-name descname">FaceId</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face6FaceId6FaceIdE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a FaceId object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager instance. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face6FaceId6FaceIdE12FaceEmbedder14LicenseManager">
+<span id="_CPPv3N3org10sertiscorp5oneml4face6FaceId6FaceIdE12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face6FaceId6FaceIdE12FaceEmbedder14LicenseManager"></span><span id="org::sertiscorp::oneml::face::FaceId::FaceId__FaceEmbedder.LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1abe64c50c9f5f5a033f04dbe4f3cb531b"></span><code class="sig-name descname">FaceId</code><span class="sig-paren">(</span><a class="reference internal" href="face_embedder.html#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedderE" title="org::sertiscorp::oneml::face::FaceEmbedder">FaceEmbedder</a> <em>embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face6FaceId6FaceIdE12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a FaceId object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">embedder</span></code>: FaceEmbedder instance. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager instance. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face6FaceId7predictE10ImageBatch">
+<span id="_CPPv3N3org10sertiscorp5oneml4face6FaceId7predictE10ImageBatch"></span><span id="_CPPv2N3org10sertiscorp5oneml4face6FaceId7predictE10ImageBatch"></span><span id="org::sertiscorp::oneml::face::FaceId::predict__ImageBatch"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1a1bade8309af46eefeb52a919ea29d1fe"></span>FaceIdResultList <code class="sig-name descname">predict</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face6FaceId7predictE10ImageBatch" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>makes a prediction. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceIdResultList</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">imgs</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face6FaceId7predictE5Image">
+<span id="_CPPv3N3org10sertiscorp5oneml4face6FaceId7predictE5Image"></span><span id="_CPPv2N3org10sertiscorp5oneml4face6FaceId7predictE5Image"></span><span id="org::sertiscorp::oneml::face::FaceId::predict__Image"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1a68f2893d008093a75977114f6f691c2e"></span><a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceIdResultE" title="org::sertiscorp::oneml::face::FaceIdResult">FaceIdResult</a> <code class="sig-name descname">predict</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face6FaceId7predictE5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>makes a prediction. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceIdResult</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face6FaceId15isTheSamePersonE5Image5Image">
+<span id="_CPPv3N3org10sertiscorp5oneml4face6FaceId15isTheSamePersonE5Image5Image"></span><span id="_CPPv2N3org10sertiscorp5oneml4face6FaceId15isTheSamePersonE5Image5Image"></span><span id="org::sertiscorp::oneml::face::FaceId::isTheSamePerson__Image.Image"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1a03d75b811938248dc8a50db72a757443"></span>boolean <code class="sig-name descname">isTheSamePerson</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img1</em>, <a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face6FaceId15isTheSamePersonE5Image5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>checks whether the two <a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a>’s are of the same person. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">img1</span></code>: <a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a> of the first person to compare. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">img2</span></code>: <a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a> of the second person to compare. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1a90bb201b56da33c18618b84056e9fa65"></span><code class="sig-name descname">SamePersonResult isTheSamePerson (float[] face_emb, Image img)</code></dt>
+<dd><p>checks whether the given embedding <code class="docutils literal notranslate"><span class="pre">face_emb</span></code> is the same person as the one in <code class="docutils literal notranslate"><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref"><span class="pre">Image</span></span></a></code>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>SamePersonResult</strong>.. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">face_emb</span></code>: an embedding representing the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: <a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a> of the second person to compare. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1a4038b20a5172e99be43bc4bfe0508c9f"></span><code class="sig-name descname">int registerId (String id, float[] face_emb)</code></dt>
+<dd><p>registers an <code class="docutils literal notranslate"><span class="pre">id</span></code> with embedding <code class="docutils literal notranslate"><span class="pre">face_emb</span></code>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an embedding size. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: string id of the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">face_emb</span></code>: an embedding representing the registered user. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face6FaceId10registerIdE6String10ImageBatch7boolean">
+<span id="_CPPv3N3org10sertiscorp5oneml4face6FaceId10registerIdE6String10ImageBatch7boolean"></span><span id="_CPPv2N3org10sertiscorp5oneml4face6FaceId10registerIdE6String10ImageBatch7boolean"></span><span id="org::sertiscorp::oneml::face::FaceId::registerId__String.ImageBatch.boolean"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1ad57a9b97ff7c3e76bc7ae224c49d3b99"></span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face9EmbeddingE" title="org::sertiscorp::oneml::face::Embedding">Embedding</a> <code class="sig-name descname">registerId</code><span class="sig-paren">(</span>String <em>id</em>, ImageBatch <em>imgs</em>, boolean <em>avg_emb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face6FaceId10registerIdE6String10ImageBatch7boolean" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>registers an <code class="docutils literal notranslate"><span class="pre">id</span></code> with an <a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>EmbeddingList</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: string id of the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imgs</span></code>: a batch of images representing the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">avg_emb</span></code>: a boolean whether to average all images in <code class="docutils literal notranslate"><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref"><span class="pre">ImageBatch</span></span></a></code> as face embedding. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face6FaceId10registerIdE6String5Image">
+<span id="_CPPv3N3org10sertiscorp5oneml4face6FaceId10registerIdE6String5Image"></span><span id="_CPPv2N3org10sertiscorp5oneml4face6FaceId10registerIdE6String5Image"></span><span id="org::sertiscorp::oneml::face::FaceId::registerId__String.Image"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1abe7ad08ff0dcc68699a14593fc623411"></span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face9EmbeddingE" title="org::sertiscorp::oneml::face::Embedding">Embedding</a> <code class="sig-name descname">registerId</code><span class="sig-paren">(</span>String <em>id</em>, <a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face6FaceId10registerIdE6String5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>registers an <code class="docutils literal notranslate"><span class="pre">id</span></code> with an <a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>Embedding</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: string id of the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: an image representing the registered user. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face6FaceId6getIdsEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face6FaceId6getIdsEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face6FaceId6getIdsEv"></span><span id="org::sertiscorp::oneml::face::FaceId::getIds"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_1a7626d24373d89b5f75caebd5e88510e6"></span>IdList <code class="sig-name descname">getIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face6FaceId6getIdsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>gets all user ids in the gallery. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>IdList</strong> representing all user ids in the gallery. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceIdResultE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceIdResultE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceIdResultE"></span><span id="org::sertiscorp::oneml::face::FaceIdResult"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_result"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceIdResult</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceIdResultE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceIdResult5getIdEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceIdResult5getIdEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceIdResult5getIdEv"></span><span id="org::sertiscorp::oneml::face::FaceIdResult::getId"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_result_1a40db9420848ce952e81c2b3a31820373"></span>String <code class="sig-name descname">getId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceIdResult5getIdEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns an id of the <code class="docutils literal notranslate"><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref"><span class="pre">Image</span></span></a></code>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a string id. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceIdResult22getNearestNodeDistanceEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceIdResult22getNearestNodeDistanceEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceIdResult22getNearestNodeDistanceEv"></span><span id="org::sertiscorp::oneml::face::FaceIdResult::getNearestNodeDistance"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_result_1a9f1011b29fedee42df7fb756281db0ac"></span>float <code class="sig-name descname">getNearestNodeDistance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceIdResult22getNearestNodeDistanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns a nearest distance to the nearest registered face embedding. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a floating point. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceIdResult19getCombinedDistanceEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceIdResult19getCombinedDistanceEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceIdResult19getCombinedDistanceEv"></span><span id="org::sertiscorp::oneml::face::FaceIdResult::getCombinedDistance"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_result_1a34483dda5b70b4e2cd39e5043663d1ed"></span>float <code class="sig-name descname">getCombinedDistance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceIdResult19getCombinedDistanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns a combined distance. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a floating point. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceIdResult14isIdentifiableEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceIdResult14isIdentifiableEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceIdResult14isIdentifiableEv"></span><span id="org::sertiscorp::oneml::face::FaceIdResult::isIdentifiable"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_result_1a5e7a2d9b47f2d64635d8d0061167ec08"></span>boolean <code class="sig-name descname">isIdentifiable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceIdResult14isIdentifiableEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns whether an <code class="docutils literal notranslate"><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref"><span class="pre">Image</span></span></a></code> matches one of the registered faces in the gallery. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a boolean. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_id_result_list"></span><code class="sig-name descname">org::sertiscorp::oneml::face::FaceIdResultList : public java::util::AbstractList&lt; FaceIdResult &gt; , public java.util.RandomAccess</code></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="face_pad.html" class="btn btn-neutral float-right" title="Java Face Pad API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="face_embedder.html" class="btn btn-neutral float-left" title="Java Face Embedder API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+.. _java_face_id_example:    
+
+Java Face Id Example
+^^^^^^^^^^^^^^^^^^^^
+
+Initialize faceID model
+
+.. code-block:: java
+
+    import org.sertiscorp.oneml.face.*;
+
+    FaceEmbedder embedder = new FaceEmbedder();
+    FaceId faceId = new FaceId(embedder);
+
+Initialize faceID model with licensing
+
+.. code-block:: java
+
+    import org.sertiscorp.oneml.face.*;
+    LicenseManager license_manager = new LicenseManager();
+    license_manager.set_key("LICENSE_KEY_VALUE_HERE");
+    license_manager.activate_key();
+    FaceEmbedder embedder = new FaceEmbedder(license_manager);
+    FaceId faceId = new FaceId(embedder, license_manager);
+
+Initialize oneML's Utils
+
+.. code-block:: java
+
+    Utils utils = new Utils();
+
+Initialize oneML's Utils with licensing
+
+.. code-block:: java
+
+    Utils utils = new Utils(license_manager);
+    
+Read input as BufferedImage
+
+.. code-block:: java
+
+    BufferedImage img1 = getImage(path1);
+    BufferedImage img2 = getImage(path2);
+
+Read input as oneML's Image
+
+.. code-block:: java
+    
+    Image img1 = utils.readImageCV(path1);
+    Image img2 = utils.readImageCV(path2);
+
+Run the model
+
+.. code-block:: java
+
+    boolean same1 = faceId.isTheSamePerson(img1, img2);

@@ -1,0 +1,118 @@
+.. _java_index:
+
+Java APIs
+^^^^^^^^^
+.. only:: face_detect
+
+    .. toctree::
+
+        public/face_detector.rst
+
+.. only:: face_landmark
+
+    .. toctree::
+
+        public/face_landmark.rst
+
+.. only:: face_embed
+
+    .. toctree::
+
+        public/face_embedder.rst
+
+.. only:: face_id
+
+    .. toctree::
+
+        public/face_id.rst
+
+.. only:: face_pad
+
+    .. toctree::
+
+        public/face_pad.rst
+
+.. only:: vehicle_detect
+
+    .. toctree::
+
+        public/vehicle_detector.rst
+
+.. only:: challenge_response
+
+    .. toctree::
+
+        public/challenge_response.rst
+
+.. only:: utils
+
+    .. toctree::
+
+        public/utils.rst
+
+.. only:: license
+
+    .. toctree::
+
+        public/license_manager.rst
+
+Java Data Structures
+^^^^^^^^^^^^^^^^^^^^
+.. only:: face_detect or face_landmark or face_embed or face_id or face_pad
+
+    .. toctree::
+
+        common/face_struct.rst
+
+.. only:: vehicle_detect
+
+    .. toctree::
+    
+        common/alpr_struct.rst
+
+Java Examples
+^^^^^^^^^^^^^
+.. only:: face_detect
+
+    .. toctree::
+
+        example/face_detector.rst
+
+.. only:: face_landmark
+
+    .. toctree::
+
+        example/face_landmark.rst
+
+.. only:: face_embed
+
+    .. toctree::
+
+        example/face_embedder.rst
+
+.. only:: face_id
+
+    .. toctree::
+
+        example/face_id.rst
+
+.. only:: face_pad
+
+    .. toctree::
+
+        example/face_pad.rst
+
+.. only:: vehicle_detect
+
+    .. toctree::
+
+        example/vehicle_detector.rst
+
+.. only:: challenge_response
+
+    .. toctree::
+
+        example/challenge_response.rst
+
+.. .. autodoxygenindex::
+..     :project: oneML

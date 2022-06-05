@@ -1,0 +1,10 @@
+.. _cpp_public_challenge_response:
+
+C++ Challenge Response API
+==========================
+
+oneML module to detect eye blink from videos or stream of images.
+
+.. doxygenclass:: oneML::face::ChallengeResponse
+.. doxygenclass:: oneML::face::ChallengeResponseResult
+.. doxygenclass:: oneML::face::ChallengeResponseStatus

@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Python Vehicle Detector &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python Utils API" href="utils.html" />
+    <link rel="prev" title="Python Challenge Response API" href="challenge_response.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                oneml-version
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Python APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">Python Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">Python Face Embedder API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">Python Face ID API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python Vehicle Detector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Python Utils API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Python APIs</a> &raquo;</li>
+        
+      <li>Python Vehicle Detector</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/python/public/vehicle_detector.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="python-vehicle-detector">
+<span id="python-public-vehicle-detector"></span><h1>Python Vehicle Detector<a class="headerlink" href="#python-vehicle-detector" title="Permalink to this headline">¶</a></h1>
+<p>oneML model to detect vehicles in images, returning their confident scores, and bounding boxes.</p>
+<dl class="py class">
+<dt>
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector"></span><code class="sig-name descname">oneML.alprAPI.VehicleDetector : public object</code></dt>
+<dd><p>The oneML <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector"><span class="std std-ref">VehicleDetector</span></a> API object. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="n">to</span> <span class="n">create</span> <span class="ow">and</span> <span class="n">use</span> <span class="n">oneML</span> <span class="n">vehicle</span> <span class="n">detector</span> <span class="n">model</span><span class="o">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="init__">
+<span id="__init__"></span><span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_1a11c65eb9d746f5c028f6d16a9a6d8e26"></span><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">manager</span></em><span class="sig-paren">)</span><a class="headerlink" href="#init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector"><span class="std std-ref">VehicleDetector</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: <a class="reference internal" href="license_manager.html#classone_m_l_1_1alpr_a_p_i_1_1_license_manager"><span class="std std-ref">LicenseManager</span></a> instance. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="detect_batch">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_1ab84b30e4dd25dfda71494dd7c40a72a9"></span><code class="sig-name descname">detect_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em><span class="sig-paren">)</span><a class="headerlink" href="#detect_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect vehicles in images. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>VehicleDetectorResultVector: list of <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_result"><span class="std std-ref">VehicleDetectorResult</span></a> objects </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">imgvec_</span></code>: numpy array with shape (batch, height, width, channel) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="detect">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_1ab36b5ad32c355d1f6f2639680017c126"></span><code class="sig-name descname">detect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em><span class="sig-paren">)</span><a class="headerlink" href="#detect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect vehicles in an image. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_result"><span class="std std-ref">VehicleDetectorResult</span></a>: <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_result"><span class="std std-ref">VehicleDetectorResult</span></a> object </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">imgvec_</span></code>: numpy array with shape (height, width, channel) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_result"></span><code class="sig-name descname">oneML.alprAPI.VehicleDetectorResult : public object</code></dt>
+<dd><p>The result object for oneML <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector"><span class="std std-ref">VehicleDetector</span></a> API. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Helper</span> <span class="k">class</span> <span class="nc">to</span> <span class="n">access</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">results</span> <span class="kn">from</span>
+<span class="nn">an</span> <span class="n">API</span> <span class="n">call</span><span class="o">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="get_scores">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_result_1a7b97bed2762fba7c008462334eb06d0a"></span><code class="sig-name descname">get_scores</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get result scores. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>FloatVector: list of float scores </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_bboxes">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_result_1aee16ad2baabb2286c5aa6bc4cfd52d23"></span><code class="sig-name descname">get_bboxes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_bboxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get result bounding box. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>BBoxVector: list of <a class="reference internal" href="../common/alpr_struct.html#classone_m_l_1_1alpr_a_p_i_1_1_b_box"><span class="std std-ref">BBox</span></a> objects </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_size">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_result_1abf25feba21a85a36ece8f8e2345a7dbe"></span><code class="sig-name descname">get_size</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of vehicles detected. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>int: number of vehicles detected </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_vehicle_detector_result_vector"></span><code class="sig-name descname">oneML.alprAPI.VehicleDetectorResultVector : public object</code></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">VehicleDetectorResult</span> <span class="n">objects</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="utils.html" class="btn btn-neutral float-right" title="Python Utils API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="challenge_response.html" class="btn btn-neutral float-left" title="Python Challenge Response API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

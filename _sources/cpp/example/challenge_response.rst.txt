@@ -1,0 +1,88 @@
+.. _cpp_challenge_response_example:
+
+C++ Challenge Response Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Initialize Challenge Response module
+
+.. code-block:: c++
+
+    oneML::face::ChallengeResponse challenge;
+
+Initialize Challenge Response module from existing FaceDetector and FaceLandmarkDetector
+
+.. code-block:: c++
+
+    oneML::face::FaceDetector face_detector;
+    oneML::face::FaceLandmarkDetector face_landmark;
+    oneML::face::ChallengeResponse challenge(face_detector, face_landmark);
+
+Initialize Challenge Response module with licensing
+
+.. code-block:: c++
+
+    oneML::LicenseManager license_manager;
+    license_manager.set_key("LICENSE_KEY_VALUE_HERE");
+    license_manager.activate_key();
+    oneML::face::ChallengeResponse challenge(license_manager);
+
+Initialize Challenge Response module with licensing from existing FaceDetector and FaceLandmarkDetector
+
+.. code-block:: c++
+
+    oneML::LicenseManager license_manager;
+    license_manager.set_key("LICENSE_KEY_VALUE_HERE");
+    license_manager.activate_key();
+
+    oneML::face::FaceDetector face_detector(license_manager);
+    oneML::face::FaceLandmarkDetector face_landmark(license_manager);
+    oneML::face::ChallengeResponse challenge(face_detector, face_landmark, license_manager);
+
+Run the module from videos
+
+.. code-block:: c++
+
+    std::string video_path = "path/to/video.mp4";
+    oneML::face::ChallengeResponseResult result;
+    challenge.run(video_path, result);
+
+Run the module from stream of images (can be used with opencv VideoCapture)
+
+.. code-block:: c++
+
+    // if we can still read frame from image stream
+    while (can_read_frame) {
+        // use any function to get each frame from image stream
+        oneML::Image frame = get_one_frame();
+
+        oneML::face::ChallengeResponseResult result;
+        challenge.run(frame, result);
+    }
+    challenge.reset();
+
+Run the module with MultiImage
+
+.. code-block:: c++
+    
+    // create MultiImages
+    oneML::Utils utils;
+
+    std::string video_path = "path/to/video.mp4";
+    oneML::MultiImage images;
+    utils.video_to_images(video_path, images);
+
+    // run ChallengeResponse with MultiImage
+    oneML::face::ChallengeResponseResult result;
+    challenge.run(images, result);
+
+Get result
+
+.. code-block:: c++
+
+    std::cout << "status: " << result.get_return_status() << std::endl;
+    std::cout << "is_blink: " << result.is_blink() << std::endl;
+    std::cout << "number of blinks: " << result.get_num_blinks() << std::endl;
+    std::cout << "liveness score: " << result.get_liveness_score() << std::endl;
+
+    oneML::Image best_frame;
+    result.get_best_frame(best_frame);

@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Java License Manager API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Java Face Structures" href="../common/face_struct.html" />
+    <link rel="prev" title="Java Utils API" href="utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                oneml-version
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#java-examples">Java Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Java APIs</a> &raquo;</li>
+        
+      <li>Java License Manager API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/java/public/license_manager.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="java-license-manager-api">
+<span id="java-public-license-manager"></span><h1>Java License Manager API<a class="headerlink" href="#java-license-manager-api" title="Permalink to this headline">¶</a></h1>
+<p>oneML class that manages licensing of all oneML APIs.</p>
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManagerE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManagerE"></span><span id="org::sertiscorp::oneml::face::LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">LicenseManager</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a88831e14e580e89daaec4cca7dfdb08a"></span><code class="sig-name descname">LicenseManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a LicenseManager object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String"></span><span id="org::sertiscorp::oneml::face::LicenseManager::setKey__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a9f5bf8781ace0c1994b2bb8d57b6d371"></span>void <code class="sig-name descname">setKey</code><span class="sig-paren">(</span>String <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the oneML product key. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code>: a string of product key. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14setMachineCodeE6String">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager14setMachineCodeE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager14setMachineCodeE6String"></span><span id="org::sertiscorp::oneml::face::LicenseManager::setMachineCode__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1aa61bfb28b525b6ba298cce28021c95dc"></span>void <code class="sig-name descname">setMachineCode</code><span class="sig-paren">(</span>String <em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14setMachineCodeE6String" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the oneML machine code. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: a string of machine code. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a1e94ea1587a07cd3895881aeae51f076"></span>String <code class="sig-name descname">getKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the product key. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string of product key. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::activateKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1aaf0c2c3becd3056761098d56c8bd5b80"></span>LicenseStatus <code class="sig-name descname">activateKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Activate product key, requires to set a key first. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus::Ok if activate success, LicenseStatus::Error otherwise. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getMachineCode"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a16fe792e2144bfcb30370891874d3e4d"></span>String <code class="sig-name descname">getMachineCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a machine code used as a machine unique identifier. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string of a machine code. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::isTrial"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a66fbb29ea1bf82a0894bbfe06131a48d"></span>boolean <code class="sig-name descname">isTrial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if product key is trial or not, requires to actvate a key first. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if product key is trial key, false otherwise. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17isValidActivationEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager17isValidActivationEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager17isValidActivationEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::isValidActivation"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a5b08c2b305c443eeb7b71ccfe56620b8"></span>boolean <code class="sig-name descname">isValidActivation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17isValidActivationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if product key is valid or not (not expired), requires to activate a key first. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if product key is trial key, false otherwise. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getActivationType"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a5883888a4e0c1d055145a23030e179df"></span>LicenseActivationType <code class="sig-name descname">getActivationType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the type of the current activation. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseActivationType: an enum of activation type<ul class="simple">
+<li><p>NotFound: If a license is not activated or not found</p></li>
+<li><p>KeyOnline: If an activation is done by a license key and an online service</p></li>
+<li><p>TrialOnline: If a trial activation is done by an online service </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a364cc1f5211fb6ab18e9292c42d93420"></span><code class="sig-name descname">java.math.BigInteger getActivationExpiryDate ()</code></dt>
+<dd><p>Get the key expiry date. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>uint64_t unix time (also, LOG info of expiry time in Y-M-D). </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N3org10sertiscorp5oneml4faceE">
+<span id="_CPPv3N3org10sertiscorp5oneml4faceE"></span><span id="_CPPv2N3org10sertiscorp5oneml4faceE"></span><span id="org::sertiscorp::oneml::face"></span><span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><br /></dt>
+<dd><dl class="cpp enum">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face13LicenseStatusE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face13LicenseStatusE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face13LicenseStatusE"></span><span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_status"></span><em class="property">enum </em><code class="sig-name descname">LicenseStatus</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face13LicenseStatusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_status_1aa0ea67fec47130a849856c640845e44b"></span><code class="sig-name descname">Ok</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_status_1ab294321cbb47af88c73d947be23e78cf"></span><code class="sig-name descname">Error</code></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManagerE">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManagerE"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManagerE"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::alpr<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">LicenseManager</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManagerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a63b39d166f2c0bf27e107021e5b009d2"></span><code class="sig-name descname">LicenseManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a LicenseManager object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::setKey__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a9fc8c4775915151e6c6d734c4f97eac9"></span>void <code class="sig-name descname">setKey</code><span class="sig-paren">(</span>String <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the oneML product key. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code>: a string of product key. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14setMachineCodeE6String">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager14setMachineCodeE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager14setMachineCodeE6String"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::setMachineCode__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a24d85afaa60df2f604e2e0c427710c6e"></span>void <code class="sig-name descname">setMachineCode</code><span class="sig-paren">(</span>String <em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14setMachineCodeE6String" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the oneML machine code. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: a string of machine code. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1af2486b3845c7f906b795c85e3b8dd500"></span>String <code class="sig-name descname">getKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the product key. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string of product key. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::activateKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a250d37ee742fef52249cb0f730105daf"></span>LicenseStatus <code class="sig-name descname">activateKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Activate product key, requires to set a key first. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus::Ok if activate success, LicenseStatus::Error otherwise. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getMachineCode"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a76af77f740e245c05adeb3e19a8886d6"></span>String <code class="sig-name descname">getMachineCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a machine code used as a machine unique identifier. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string of a machine code. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::isTrial"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1aec08018553a54233aa0cf569be071d87"></span>boolean <code class="sig-name descname">isTrial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if product key is trial or not, requires to actvate a key first. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if product key is trial key, false otherwise. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17isValidActivationEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager17isValidActivationEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager17isValidActivationEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::isValidActivation"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1ac6135276dbee5522c6979e57cc85242c"></span>boolean <code class="sig-name descname">isValidActivation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17isValidActivationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if product key is valid or not (not expired), requires to activate a key first. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if product key is trial key, false otherwise. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getActivationType"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a9dca659e6468d4f89fcdef041799a9c5"></span>LicenseActivationType <code class="sig-name descname">getActivationType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the type of the current activation. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>LicenseActivationType: an enum of activation type<ul class="simple">
+<li><p>NotFound: If a license is not activated or not found</p></li>
+<li><p>KeyOnline: If an activation is done by a license key and an online service</p></li>
+<li><p>TrialOnline: If a trial activation is done by an online service </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1afafe37ba4bbf7c88bbd947294a4b162c"></span><code class="sig-name descname">java.math.BigInteger getActivationExpiryDate ()</code></dt>
+<dd><p>Get the key expiry date. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>uint64_t unix time (also, LOG info of expiry time in Y-M-D). </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alprE">
+<span id="_CPPv3N3org10sertiscorp5oneml4alprE"></span><span id="_CPPv2N3org10sertiscorp5oneml4alprE"></span><span id="org::sertiscorp::oneml::alpr"></span><span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1alpr"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">alpr</code><br /></dt>
+<dd><dl class="cpp enum">
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr3org10sertiscorp5oneml4alpr13LicenseStatusE">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr3org10sertiscorp5oneml4alpr13LicenseStatusE"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr3org10sertiscorp5oneml4alpr13LicenseStatusE"></span><span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_status"></span><em class="property">enum </em><code class="sig-name descname">LicenseStatus</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr3org10sertiscorp5oneml4alpr13LicenseStatusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_status_1af449d203b3ba30c457f2a5aa4292e80c"></span><code class="sig-name descname">Ok</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_status_1a62f1b7470b820ed596e351c83839e9c7"></span><code class="sig-name descname">Error</code></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../common/face_struct.html" class="btn btn-neutral float-right" title="Java Face Structures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="utils.html" class="btn btn-neutral float-left" title="Java Utils API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

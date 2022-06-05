@@ -1,0 +1,13 @@
+.. _python_public_face_id:
+
+Python Face ID API
+==================
+
+oneML model for face verification and face identification.
+
+.. doxygenclass:: oneML::faceAPI::FaceId
+.. doxygenclass:: oneML::faceAPI::FaceIdResult
+.. doxygenclass:: oneML::faceAPI::FaceIdResultVector
+.. code-block::
+
+   List of FaceIdResult objects.

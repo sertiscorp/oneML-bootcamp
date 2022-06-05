@@ -1,0 +1,9 @@
+.. _cpp_public_face_detector:
+
+C++ Face Detector API
+=====================
+
+oneML model to detect faces in images, returning their confidence score, bounding box, face landmarks and poses.
+
+.. doxygenclass:: oneML::face::FaceDetector
+.. doxygenclass:: oneML::face::FaceDetectorResult

@@ -1,0 +1,181 @@
+.. _java_face_pad_example:    
+
+Java Face Pad Example
+^^^^^^^^^^^^^^^^^^^^^
+
+.. only:: face_pad_rgb
+
+    Java PadRGB Example
+    """""""""""""""""""
+
+    Initialize pad RGB model
+
+    .. code-block:: java
+
+        import org.sertiscorp.oneml.face.*;
+        FacePad padRgb = new FacePad(PadType.Rgb);
+
+    Initialize face detector model with licensing
+
+    .. code-block:: java
+
+        import org.sertiscorp.oneml.face.*;
+        LicenseManager license_manager = new LicenseManager();
+        license_manager.set_key("LICENSE_KEY_VALUE_HERE");
+        license_manager.activate_key();
+        FacePad padRgb = new FacePad(PadType.Rgb, license_manager);
+
+    Initialize oneML's Utils
+
+    .. code-block:: java
+    
+        Utils utils = new Utils();
+    
+    Initialize oneML's Utils with licensing
+    
+    .. code-block:: java
+    
+        Utils utils = new Utils(license_manager);
+        
+    Read input as BufferedImage
+
+    .. code-block:: java
+
+        BufferedImage img1 = ImageIO.read(image_path);
+        ImageBatch batch1 = new ImageBatch().add(img1).add(img1);
+
+    Read input as oneML's Image
+
+    .. code-block:: java
+            
+        Image img1 = utils.readImageCV(file_path1);
+
+    Run the model
+
+    .. code-block:: java
+
+        FacePadResultList rgbResults = padRgb.classify(batch1);
+
+    or
+
+    .. code-block:: java
+
+        FacePadResult rgbResult = padRgb.classify(img1);
+
+.. only:: face_pad_paper
+
+    Java PadPaper Example
+    """""""""""""""""""""
+
+    Initialize pad paper model
+
+    .. code-block:: java
+
+        import org.sertiscorp.oneml.face.*;
+        FacePad padPaper = new FacePad(PadType.Paper);
+
+    Initialize pad paper model with licensing
+
+    .. code-block:: java
+
+        import org.sertiscorp.oneml.face.*;
+        LicenseManager license_manager = new LicenseManager();
+        license_manager.set_key("LICENSE_KEY_VALUE_HERE");
+        license_manager.activate_key();
+        FacePad padRgb = new FacePad(PadType.Paper, license_manager);
+
+    Initialize oneML's Utils
+
+    .. code-block:: java
+    
+        Utils utils = new Utils();
+    
+    Initialize oneML's Utils with licensing
+    
+    .. code-block:: java
+    
+        Utils utils = new Utils(license_manager);
+        
+    Read input as BufferedImage
+
+    .. code-block:: java
+
+        BufferedImage img2 = ImageIO.read(image_path);
+        ImageBatch batch2 = new ImageBatch().add(img2);
+
+    Read input as oneML's Image
+
+    .. code-block:: java
+
+        Image img2 = utils.readImageCV(file_path2);
+
+    Run the model
+
+    .. code-block:: java
+
+        FacePadResultList paperResults = padPaper.classify(batch2);
+
+    or
+
+    .. code-block:: java
+
+        FacePadResult paperResult = padPaper.classify(img2);
+
+.. only:: face_pad_ir
+
+    Java PadIr Example
+    """"""""""""""""""
+
+    Initialize pad IR model
+
+    .. code-block:: java
+
+        import org.sertiscorp.oneml.face.*;
+        FacePad padIr = new FacePad(PadType.Ir);
+
+    Initialize pad IR model with licensing
+
+    .. code-block:: java
+
+        import org.sertiscorp.oneml.face.*;
+        LicenseManager license_manager = new LicenseManager();
+        license_manager.set_key("LICENSE_KEY_VALUE_HERE");
+        license_manager.activate_key();
+        FacePad padRgb = new FacePad(PadType.Ir, license_manager);
+
+    Initialize oneML's Utils
+
+    .. code-block:: java
+    
+        Utils utils = new Utils();
+    
+    Initialize oneML's Utils with licensing
+    
+    .. code-block:: java
+    
+        Utils utils = new Utils(license_manager);
+        
+    Read input as BufferedImage
+
+    .. code-block:: java
+
+        BufferedImage img3 = ImageIO.read(image_path);
+        ImageBatch batch3 = new ImageBatch().add(img3);
+
+    Read input as oneML's Image
+
+    .. code-block:: java
+            
+        Image img3 = utils.readImageCV(file_path3);
+        
+    Run the model
+
+    .. code-block:: java
+
+        FacePadResultList irResults = padIr.classify(batch3);
+
+    or
+
+    .. code-block:: java
+
+        FacePadResult irResult = padIr.classify(img3);

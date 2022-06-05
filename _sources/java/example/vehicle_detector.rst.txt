@@ -1,0 +1,59 @@
+.. _java_vehicle_detector_example:    
+
+Java Vehicle Detector Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Initialize vehicle detector model
+
+.. code-block:: java
+
+    import org.sertiscorp.oneml.alpr.*;
+    VehicleDetector detector = new VehicleDetector();
+
+Initialize vehicle detector model with licensing
+
+.. code-block:: java
+
+    import org.sertiscorp.oneml.alpr.*;
+    LicenseManager license_manager = new LicenseManager();
+    license_manager.set_key("LICENSE_KEY_VALUE_HERE");
+    license_manager.activate_key();
+    VehicleDetector detector = new VehicleDetector(license_manager);
+
+Initialize oneML's Utils
+
+.. code-block:: java
+
+    Utils utils = new Utils();
+
+Initialize oneML's Utils with licensing
+
+.. code-block:: java
+
+    Utils utils = new Utils(license_manager);
+    
+Read input as BufferedImage
+
+.. code-block:: java
+
+    BufferedImage img = ImageIO.read(file);
+    List<BufferedImage> imgs = Arrays.asList(img);
+    ImageBatch batch = new ImageBatch().add(imgs);
+
+Read input as oneML's Image
+
+.. code-block:: java
+
+    Image img = utils.readImageCV(file_path);
+
+Run the model
+
+.. code-block:: java
+
+    VehicleDetectorResultList results = detector.detect(batch);
+
+or
+
+.. code-block:: java
+
+    VehicleDetectorResult result = detector.detect(img);

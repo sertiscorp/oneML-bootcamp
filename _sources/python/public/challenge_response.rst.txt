@@ -1,0 +1,10 @@
+.. _python_public_challenge_response:
+
+Python Challenge Response API
+=============================
+
+oneML module to detect eye blink from videos or stream of images.
+
+.. doxygenclass:: oneML::faceAPI::ChallengeResponse
+.. doxygenclass:: oneML::faceAPI::ChallengeResponseResult
+.. doxygenclass:: oneML::faceAPI::ChallengeResponseStatus

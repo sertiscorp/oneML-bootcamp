@@ -1,0 +1,9 @@
+.. _cpp_public_face_embedder:
+
+C++ Face Embedder API
+=====================
+
+oneML model to embed faces in images, returning faces as vectors.
+
+.. doxygenclass:: oneML::face::FaceEmbedder
+.. doxygenclass:: oneML::face::FaceEmbedderResult
