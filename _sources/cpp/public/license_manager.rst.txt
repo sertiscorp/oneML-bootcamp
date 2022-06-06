@@ -1,9 +1,0 @@
-.. _cpp_public_license_manager:
-
-C++ License Manager API
-=======================
-
-oneML class that manages licensing of all oneML APIs.
-
-.. doxygenclass:: oneML::LicenseManager
-.. doxygenenum:: oneML::LicenseStatus

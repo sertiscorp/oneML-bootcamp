@@ -1,8 +1,0 @@
-.. _cpp_public_utils:
-
-C++ Utils API
-=============
-
-Utilities for using oneML.
-
-.. doxygenclass:: oneML::Utils
