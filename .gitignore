@@ -46,3 +46,6 @@
 
 # VScode
 /.vscode/
+
+# Source folder
+_sources/*
