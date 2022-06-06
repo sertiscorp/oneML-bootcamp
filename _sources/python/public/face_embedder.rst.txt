@@ -11,3 +11,7 @@ oneML model to embed faces in images, returning faces as vectors.
 .. code-block::
 
    List of FaceEmbedderResult objects.
+
+.. doxygenvariable:: oneML::faceAPI::FaceEmbedderStatus_Empty
+.. doxygenvariable:: oneML::faceAPI::FaceEmbedderStatus_Success
+.. doxygenvariable:: oneML::faceAPI::FaceEmbedderStatus_Fail

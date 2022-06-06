@@ -10,4 +10,7 @@ C++ Face Structures
 .. doxygenstruct:: oneML::BBox
 .. doxygenstruct:: oneML::face::FaceLandmark
 .. doxygentypedef:: oneML::face::BBox
+.. doxygentypedef:: oneML::face::Embedding
+.. doxygentypedef:: oneML::face::FaceLandmark5
+.. doxygentypedef:: oneML::face::FaceLandmark106
 .. doxygenenum:: oneML::face::Pose

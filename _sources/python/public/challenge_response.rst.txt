@@ -7,4 +7,10 @@ oneML module to detect eye blink from videos or stream of images.
 
 .. doxygenclass:: oneML::faceAPI::ChallengeResponse
 .. doxygenclass:: oneML::faceAPI::ChallengeResponseResult
-.. doxygenclass:: oneML::faceAPI::ChallengeResponseStatus
+.. doxygenvariable:: oneML::faceAPI::ChallengeResponseStatus_Empty
+.. doxygenvariable:: oneML::faceAPI::ChallengeResponseStatus_Success
+.. doxygenvariable:: oneML::faceAPI::ChallengeResponseStatus_FaceDetectFail
+.. doxygenvariable:: oneML::faceAPI::ChallengeResponseStatus_BlurFail
+.. doxygenvariable:: oneML::faceAPI::ChallengeResponseStatus_PoseFail
+.. doxygenvariable:: oneML::faceAPI::ChallengeResponseStatus_BlurPoseFail
+.. doxygenvariable:: oneML::faceAPI::ChallengeResponseStatus_BlinkFail

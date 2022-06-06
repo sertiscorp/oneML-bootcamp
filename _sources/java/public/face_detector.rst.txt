@@ -8,3 +8,5 @@ oneML model to detect faces in images, returning their confident score, bounding
 .. doxygenclass:: org::sertiscorp::oneml::face::FaceDetector
 .. doxygenclass:: org::sertiscorp::oneml::face::FaceDetectorResult
 .. doxygenclass:: org::sertiscorp::oneml::face::FaceDetectorResultList
+.. doxygenfile:: face/oneml/FaceDetectorStatus.java
+   :sections: innernamespace innerclass public-attrib

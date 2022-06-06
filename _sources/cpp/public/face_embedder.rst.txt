@@ -7,3 +7,4 @@ oneML model to embed faces in images, returning faces as vectors.
 
 .. doxygenclass:: oneML::face::FaceEmbedder
 .. doxygenclass:: oneML::face::FaceEmbedderResult
+.. doxygenenum:: oneML::face::FaceEmbedderStatus

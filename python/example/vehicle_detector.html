@@ -209,6 +209,13 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">detector</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>And get the output</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_scores</span><span class="p">()</span>
+<span class="n">bboxes</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_bboxes</span><span class="p">()</span>
+<span class="n">size</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span>
+<span class="n">statuses</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_return_status</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 
 

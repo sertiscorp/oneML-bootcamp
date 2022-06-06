@@ -38,3 +38,16 @@ or
 .. code-block:: python
 
     result = embedder.embed(img)
+
+To enable flipped image embedding, run
+
+.. code-block:: python
+
+    results = embedder.embed(imgs, True)
+
+And get the output
+
+.. code-block:: python
+
+    embedding = result.get_embedding()
+    status = result.get_return_status()

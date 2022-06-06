@@ -62,6 +62,14 @@ C++ Face Pad Example
     
         pad_rgb.classify(img, output);
 
+    And get the output
+
+    .. code-block:: c++
+
+        float spoof_prob = output.get_spoof_prob();
+        bool is_spoof = output.is_spoof();
+        int status = output.get_return_status();
+
 .. only:: face_pad_paper
 
     C++ PadPaper Example
@@ -120,6 +128,14 @@ C++ Face Pad Example
     .. code-block:: c++
     
         pad_paper.classify(img, output);
+
+    And get the output
+
+    .. code-block:: c++
+
+        float spoof_prob = output.get_spoof_prob();
+        bool is_spoof = output.is_spoof();
+        int status = output.get_return_status();
 
 .. only:: face_pad_ir
 
@@ -180,3 +196,11 @@ C++ Face Pad Example
     .. code-block:: c++
     
         pad_ir.classify(img, output);
+
+    And get the output
+
+    .. code-block:: c++
+
+        float spoof_prob = output.get_spoof_prob();
+        bool is_spoof = output.is_spoof();
+        int status = output.get_return_status();

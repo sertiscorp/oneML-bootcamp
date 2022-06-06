@@ -57,3 +57,14 @@ or
 .. code-block:: java
 
     FaceDetectorResult result = detector.detect(img);
+
+And get the output
+
+.. code-block:: java
+
+    ScoreList scores = output.get_scores();
+    BBoxList bboxes = output.get_bboxes();
+    Landmark5List landmarks = output.get_landmarks();
+    FacePoseList poses = output.get_poses();
+    int size = output.get_size();
+    StatusCodeList statuses = output.get_return_status();

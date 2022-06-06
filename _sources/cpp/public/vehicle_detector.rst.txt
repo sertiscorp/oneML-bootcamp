@@ -7,3 +7,4 @@ oneML model to detect vehicles in images, returning their confidence score, and 
 
 .. doxygenclass:: oneML::alpr::VehicleDetector
 .. doxygenclass:: oneML::alpr::VehicleDetectorResult
+.. doxygenenum:: oneML::alpr::VehicleDetectorStatus

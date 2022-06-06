@@ -221,6 +221,20 @@
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">detector</span><span class="p">.</span><span class="n">detect</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
+<p>And get the output</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scores</span><span class="p">{};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">BBox</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bboxes</span><span class="p">{};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceLandmark5</span><span class="o">&gt;</span><span class="w"> </span><span class="n">landmarks</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">Pose</span><span class="o">&gt;</span><span class="w"> </span><span class="n">poses</span><span class="p">{};</span><span class="w"></span>
+
+<span class="n">output</span><span class="p">.</span><span class="n">get_scores</span><span class="p">(</span><span class="n">scores</span><span class="p">);</span><span class="w"></span>
+<span class="n">output</span><span class="p">.</span><span class="n">get_bboxes</span><span class="p">(</span><span class="n">bboxes</span><span class="p">);</span><span class="w"></span>
+<span class="n">output</span><span class="p">.</span><span class="n">get_landmarks</span><span class="p">(</span><span class="n">landmarks</span><span class="p">);</span><span class="w"></span>
+<span class="n">output</span><span class="p">.</span><span class="n">get_poses</span><span class="p">(</span><span class="n">poses</span><span class="p">);</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">get_size</span><span class="p">();</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">statuses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">get_return_status</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
 </section>
 
 

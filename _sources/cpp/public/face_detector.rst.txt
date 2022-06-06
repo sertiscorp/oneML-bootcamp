@@ -7,3 +7,4 @@ oneML model to detect faces in images, returning their confidence score, boundin
 
 .. doxygenclass:: oneML::face::FaceDetector
 .. doxygenclass:: oneML::face::FaceDetectorResult
+.. doxygenenum:: oneML::face::FaceDetectorStatus

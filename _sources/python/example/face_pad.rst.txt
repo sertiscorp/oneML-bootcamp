@@ -44,6 +44,14 @@ Python Face Pad Example
 
         result = pad.classify(img)
 
+    And get the output
+
+    .. code-block:: python
+
+        spoof_prob = result.get_spoof_prob()
+        is_spoof = result.is_spoof()
+        status = result.get_return_status()
+
 .. only:: face_pad_paper
 
     Python PadPaper Example
@@ -85,6 +93,14 @@ Python Face Pad Example
 
         result = pad.classify(img)
 
+    And get the output
+
+    .. code-block:: python
+
+        spoof_prob = result.get_spoof_prob()
+        is_spoof = result.is_spoof()
+        status = result.get_return_status()
+
 .. only:: face_pad_ir
 
     Python PadIr Example
@@ -125,3 +141,11 @@ Python Face Pad Example
     .. code-block:: python
 
         result = pad.classify(img)
+
+    And get the output
+
+    .. code-block:: python
+
+        spoof_prob = result.get_spoof_prob()
+        is_spoof = result.is_spoof()
+        status = result.get_return_status()

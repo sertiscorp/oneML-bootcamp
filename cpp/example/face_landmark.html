@@ -215,6 +215,13 @@
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">landmark_detector</span><span class="p">.</span><span class="n">detect</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
+<p>And get the output</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">FaceLandmark106</span><span class="w"> </span><span class="n">landmarks</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">output</span><span class="p">.</span><span class="n">get_landmarks</span><span class="p">(</span><span class="n">landmarks</span><span class="p">);</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">get_return_status</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
 </section>
 
 

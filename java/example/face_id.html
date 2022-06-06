@@ -217,8 +217,20 @@
 <span class="n">Image</span> <span class="n">img2</span> <span class="o">=</span> <span class="n">utils</span><span class="p">.</span><span class="na">readImageCV</span><span class="p">(</span><span class="n">path2</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Run the model</p>
+<p>Run the model for verification</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">same1</span> <span class="o">=</span> <span class="n">faceId</span><span class="p">.</span><span class="na">isTheSamePerson</span><span class="p">(</span><span class="n">img1</span><span class="p">,</span> <span class="n">img2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Run the model for identification</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FaceIdResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">faceId</span><span class="p">.</span><span class="na">predict</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">();</span>
+<span class="kt">boolean</span> <span class="n">isIdentifiable</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="na">isIdentifiable</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">id</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="na">getId</span><span class="p">();</span>
+<span class="kt">float</span> <span class="n">nearestDistance</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="na">getNearestNodeDistance</span><span class="p">();</span>
+<span class="kt">float</span> <span class="n">combinedDistance</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="na">getCombinedDistance</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>

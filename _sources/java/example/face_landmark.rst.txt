@@ -59,3 +59,10 @@ or
 
     // landmark is Landmark5, we can get landmark from FaceDetectorResult
     FaceLandmarkResult result = detector.detect(img, landmark, true);
+
+And get the output
+
+.. code-block:: java
+
+    Landmark106 landmarks = output.get_landmarks();
+    int status = output.get_return_status();

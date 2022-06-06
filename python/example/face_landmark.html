@@ -203,6 +203,11 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">landmark_detector</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="c1"># for 3 dimension numpy array (H, W, C)</span>
 </pre></div>
 </div>
+<p>And get the output</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">landmarks</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_landmarks</span><span class="p">()</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">get_return_status</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 
 

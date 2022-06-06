@@ -11,3 +11,7 @@ oneML model to detect vehicles in images, returning their confident scores, and 
 .. code-block::
 
    List of VehicleDetectorResult objects.
+
+.. doxygenvariable:: oneML::alprAPI::VehicleDetectorStatus_Empty
+.. doxygenvariable:: oneML::alprAPI::VehicleDetectorStatus_Success
+.. doxygenvariable:: oneML::alprAPI::VehicleDetectorStatus_Fail

@@ -38,3 +38,12 @@ or
 .. code-block:: python
 
     result = detector.detect(img)
+
+And get the output
+
+.. code-block:: python
+
+    scores = result.get_scores()
+    bboxes = result.get_bboxes()
+    size = result.get_size()
+    statuses = result.get_return_status()

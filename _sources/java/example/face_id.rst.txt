@@ -49,8 +49,24 @@ Read input as oneML's Image
     Image img1 = utils.readImageCV(path1);
     Image img2 = utils.readImageCV(path2);
 
-Run the model
+Run the model for verification
 
 .. code-block:: java
 
     boolean same1 = faceId.isTheSamePerson(img1, img2);
+
+Run the model for identification
+
+.. code-block:: java
+
+    FaceIdResult result = faceId.predict(img);
+
+And get the output
+
+.. code-block:: java
+
+    int status = result.getReturnStatus();
+    boolean isIdentifiable = result.isIdentifiable();
+    String id = result.getId();
+    float nearestDistance = result.getNearestNodeDistance();
+    float combinedDistance = result.getCombinedDistance();

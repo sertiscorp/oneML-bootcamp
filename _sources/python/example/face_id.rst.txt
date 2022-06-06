@@ -35,8 +35,24 @@ Read input as numpy array
     imgs2 = np.expand_dims(img2, axis=0)
 
 
-Run the model
+Run the model for verification
 
 .. code-block:: python
 
     is_same = face_id.is_the_same_person_img(img1, img2)
+
+Run the model for identification
+
+.. code-block:: python
+
+    result = face_id.predict(img)
+
+And get the output
+
+.. code-block:: python
+
+    status = result.get_return_status()
+    is_identifiable = result.is_identifiable()
+    id = result.get_id()
+    nearestDistance = result.get_nearest_node_distance()
+    combinedDistance = result.get_combined_distance()

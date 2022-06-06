@@ -57,3 +57,15 @@ or
 .. code-block:: java
 
     VehicleDetectorResult result = detector.detect(img);
+
+And get the output
+
+.. code-block:: java
+
+    std::vector<float> scores{};
+    std::vector<oneML::alpr::BBox> bboxes{};
+
+    ScoreList scores = output.get_scores();
+    BBoxList bboxes = output.get_bboxes();
+    int size = output.get_size();
+    StatusCodeList statuses = output.get_return_status();

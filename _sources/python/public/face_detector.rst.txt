@@ -11,3 +11,7 @@ oneML model to detect faces in images, returning their confident score, bounding
 .. code-block::
 
    List of FaceDetectorResult objects.
+
+.. doxygenvariable:: oneML::faceAPI::FaceDetectorStatus_Empty
+.. doxygenvariable:: oneML::faceAPI::FaceDetectorStatus_Success
+.. doxygenvariable:: oneML::faceAPI::FaceDetectorStatus_Fail

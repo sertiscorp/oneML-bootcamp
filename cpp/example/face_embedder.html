@@ -221,6 +221,16 @@
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">embedder</span><span class="p">.</span><span class="n">embed</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
+<p>To enable flipped image embedding, run</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">embedder</span><span class="p">.</span><span class="n">embed</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">:</span><span class="n">Embedding</span><span class="w"> </span><span class="n">emb</span><span class="p">{};</span><span class="w"></span>
+<span class="n">output</span><span class="p">.</span><span class="n">get_embedding</span><span class="p">(</span><span class="n">emb</span><span class="p">);</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">get_return_status</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
 </section>
 
 

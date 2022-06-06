@@ -60,4 +60,17 @@ or
 
 .. code-block:: java
 
-    FaceEmbedderResul result = embedder.embed(img);
+    FaceEmbedderResult result = embedder.embed(img);
+
+To enable flipped image embedding, run
+
+.. code-block:: java
+
+    FaceEmbedderResult result = embedder.embed(img, true);
+
+And get the output
+
+.. code-block:: java
+
+    float[] emb = result.getEmbedding();
+    int status = result.getReturnStatus();

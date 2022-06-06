@@ -225,7 +225,16 @@
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FaceEmbedderResul</span> <span class="n">result</span> <span class="o">=</span> <span class="n">embedder</span><span class="p">.</span><span class="na">embed</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FaceEmbedderResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">embedder</span><span class="p">.</span><span class="na">embed</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To enable flipped image embedding, run</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FaceEmbedderResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">embedder</span><span class="p">.</span><span class="na">embed</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="o">[]</span> <span class="n">emb</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="na">getEmbedding</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>

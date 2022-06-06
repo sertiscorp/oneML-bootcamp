@@ -11,3 +11,7 @@ oneML model for face verification and face identification.
 .. code-block::
 
    List of FaceIdResult objects.
+
+.. doxygenvariable:: oneML::faceAPI::FaceIdStatus_Empty
+.. doxygenvariable:: oneML::faceAPI::FaceIdStatus_Success
+.. doxygenvariable:: oneML::faceAPI::FaceIdStatus_Fail

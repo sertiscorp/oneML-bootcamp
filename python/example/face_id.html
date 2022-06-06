@@ -207,8 +207,20 @@
 <span class="n">imgs2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">img2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Run the model</p>
+<p>Run the model for verification</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">is_same</span> <span class="o">=</span> <span class="n">face_id</span><span class="o">.</span><span class="n">is_the_same_person_img</span><span class="p">(</span><span class="n">img1</span><span class="p">,</span> <span class="n">img2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Run the model for identification</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">face_id</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">status</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_return_status</span><span class="p">()</span>
+<span class="n">is_identifiable</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">is_identifiable</span><span class="p">()</span>
+<span class="nb">id</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span>
+<span class="n">nearestDistance</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_nearest_node_distance</span><span class="p">()</span>
+<span class="n">combinedDistance</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_combined_distance</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>

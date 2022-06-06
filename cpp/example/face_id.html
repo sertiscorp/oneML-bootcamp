@@ -212,8 +212,21 @@
 <span class="n">utils</span><span class="p">.</span><span class="n">read_image_cv</span><span class="p">(</span><span class="n">path2</span><span class="p">,</span><span class="w"> </span><span class="n">img2</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Run the model</p>
+<p>Run the model for verification</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">oneML</span><span class="o">::</span><span class="n">ReturnStatus</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">face_id</span><span class="p">.</span><span class="n">is_the_same_person</span><span class="p">(</span><span class="n">img1</span><span class="p">,</span><span class="w"> </span><span class="n">img2</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Run the model for identification</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceIdResult</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="n">face_id</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_return_status</span><span class="p">();</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">is_identifiable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">is_identifiable</span><span class="p">();</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_id</span><span class="p">();</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">nearest_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_nearest_node_distance</span><span class="p">();</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">combined_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_combined_distance</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

@@ -38,3 +38,10 @@ or
 .. code-block:: python
 
     result = landmark_detector.detect(img) # for 3 dimension numpy array (H, W, C)
+
+And get the output
+
+.. code-block:: python
+
+    landmarks = result.get_landmarks()
+    status = output.get_return_status()

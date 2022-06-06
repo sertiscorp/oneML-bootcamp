@@ -204,6 +204,22 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__ImageBatch.boolean"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1a2a99663716bb9ce25de5aacf7127e8e8"></span>FaceEmbedderResultList <code class="sig-name descname">embed</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em>, boolean <em>flip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create embedding vector. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceEmbedderResultList</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">imgs</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flip</span></code>: flag to enable flipped image embedding. If true, returns the average between the original and flipped image embeddings. Default to false. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch">
 <span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__ImageBatch"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1adf5bc1ea4d8a23edf699d0ece4cf3198"></span>FaceEmbedderResultList <code class="sig-name descname">embed</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create embedding vector. </p>
@@ -212,6 +228,22 @@
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">imgs</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__Image.boolean"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1abca6c8398f597ff5c44f625a0da70807"></span><a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResultE" title="org::sertiscorp::oneml::face::FaceEmbedderResult">FaceEmbedderResult</a> <code class="sig-name descname">embed</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em>, boolean <em>flip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create embedding vector. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceEmbedderResult</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flip</span></code>: flag to enable flipped image embedding. If true, returns the average between the original and flipped image embeddings. Default to false. </p></li>
 </ul>
 </dd>
 </dl>
@@ -252,6 +284,17 @@
 </p>
 </dd></dl>
 
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv"></span><span id="org::sertiscorp::oneml::face::FaceEmbedderResult::getReturnStatus"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_1aeb82e958bc900e76e83ef7b423130e06"></span>int <code class="sig-name descname">getReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns return status. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an int return status. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
 </div>
 </dd></dl>
 
@@ -259,6 +302,34 @@
 <dt>
 <span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_list"></span><code class="sig-name descname">org::sertiscorp::oneml::face::FaceEmbedderResultList : public java::util::AbstractList&lt; FaceEmbedderResult &gt; , public java.util.RandomAccess</code></dt>
 <dd></dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N3org10sertiscorp5oneml4faceE">
+<span id="_CPPv3N3org10sertiscorp5oneml4faceE"></span><span id="_CPPv2N3org10sertiscorp5oneml4faceE"></span><span id="org::sertiscorp::oneml::face"></span><span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><br /></dt>
+<dd><dl class="cpp enum">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face18FaceEmbedderStatusE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face18FaceEmbedderStatusE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face18FaceEmbedderStatusE"></span><span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_status"></span><em class="property">enum </em><code class="sig-name descname">FaceEmbedderStatus</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face18FaceEmbedderStatusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_status_1a49fb3c258c3c37b792e372f3be621800"></span><code class="sig-name descname">Empty   =(FaceJNI.FaceEmbedderStatus_Empty_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_status_1a39b7563240dbc84475f663c705afb8fc"></span><code class="sig-name descname">Success   =(FaceJNI.FaceEmbedderStatus_Success_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_status_1a37ad954234deeb76ae048c197f23a5b3"></span><code class="sig-name descname">Fail   =(FaceJNI.FaceEmbedderStatus_Fail_get())</code></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
 
 </section>
 

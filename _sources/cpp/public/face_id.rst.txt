@@ -7,3 +7,4 @@ oneML model for face verification and face identification.
 
 .. doxygenclass:: oneML::face::FaceId
 .. doxygenclass:: oneML::face::FaceIdResult
+.. doxygenenum:: oneML::face::FaceIdStatus

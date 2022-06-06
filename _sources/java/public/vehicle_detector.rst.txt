@@ -8,3 +8,5 @@ oneML model to detect vehicles in images, returning their confident score and bo
 .. doxygenclass:: org::sertiscorp::oneml::alpr::VehicleDetector
 .. doxygenclass:: org::sertiscorp::oneml::alpr::VehicleDetectorResult
 .. doxygenclass:: org::sertiscorp::oneml::alpr::VehicleDetectorResultList
+.. doxygenfile:: alpr/oneml/VehicleDetectorStatus.java
+   :sections: innernamespace innerclass public-attrib

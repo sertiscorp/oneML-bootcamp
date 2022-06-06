@@ -218,6 +218,11 @@
 <span class="n">FaceLandmarkResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">landmark</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
 </pre></div>
 </div>
+<p>And get the output</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Landmark106</span> <span class="n">landmarks</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_landmarks</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_return_status</span><span class="p">();</span>
+</pre></div>
+</div>
 </section>
 
 

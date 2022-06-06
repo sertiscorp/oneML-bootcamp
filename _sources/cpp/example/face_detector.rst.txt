@@ -56,3 +56,19 @@ or
 .. code-block:: c++
 
     detector.detect(img, output);
+
+And get the output
+
+.. code-block:: c++
+
+    std::vector<float> scores{};
+    std::vector<oneML::face::BBox> bboxes{};
+    std::vector<oneML::face::FaceLandmark5> landmarks;
+    std::vector<oneML::face::Pose> poses{};
+
+    output.get_scores(scores);
+    output.get_bboxes(bboxes);
+    output.get_landmarks(landmarks);
+    output.get_poses(poses);
+    int size = output.get_size();
+    std::vector<int> statuses = output.get_return_status();

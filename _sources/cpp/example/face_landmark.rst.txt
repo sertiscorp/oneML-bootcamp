@@ -56,3 +56,12 @@ or
 .. code-block:: c++
 
     landmark_detector.detect(img, output);
+
+And get the output
+
+.. code-block:: c++
+
+    FaceLandmark106 landmarks;
+
+    output.get_landmarks(landmarks);
+    int status = output.get_return_status();

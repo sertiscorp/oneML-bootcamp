@@ -7,3 +7,4 @@ oneML model to detect 106 landmarks from face images, returning their 106 landma
 
 .. doxygenclass:: oneML::face::FaceLandmarkDetector
 .. doxygenclass:: oneML::face::FaceLandmarkResult
+.. doxygenenum:: oneML::face::FaceLandmarkStatus

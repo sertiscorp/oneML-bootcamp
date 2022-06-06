@@ -11,3 +11,7 @@ oneML model to detect 106 landmarks from face images, returning their 106 landma
 .. code-block::
 
    List of FaceLandmarkResult objects.
+
+.. doxygenvariable:: oneML::faceAPI::FaceLandmarkStatus_Empty
+.. doxygenvariable:: oneML::faceAPI::FaceLandmarkStatus_Success
+.. doxygenvariable:: oneML::faceAPI::FaceLandmarkStatus_Fail

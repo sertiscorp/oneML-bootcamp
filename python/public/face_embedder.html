@@ -210,13 +210,14 @@
 
 <dl class="py function">
 <dt id="embed_batch">
-<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_embedder_1ada024c5ad2928aed2c5d4b478696490b"></span><code class="sig-name descname">embed_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em><span class="sig-paren">)</span><a class="headerlink" href="#embed_batch" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_embedder_1a7b7dc87a086f2f39b14ed432ac449ea6"></span><code class="sig-name descname">embed_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em>, <em class="sig-param"><span class="n">flip</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#embed_batch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create embedding vector. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>FaceEmbedderResultVector: list of <a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_face_embedder_result"><span class="std std-ref">FaceEmbedderResult</span></a> objects </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">imgvec_</span></code>: numpy array with shape (batch, height, width, channel) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flip</span></code>: flag to enable flipped image embedding. If true, returns the average between the original and flipped image embeddings. Default to false. </p></li>
 </ul>
 </dd>
 </dl>
@@ -225,13 +226,14 @@
 
 <dl class="py function">
 <dt id="embed">
-<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_embedder_1a328e13647840fa1081f8be07a74c8046"></span><code class="sig-name descname">embed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em><span class="sig-paren">)</span><a class="headerlink" href="#embed" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_embedder_1aacfa851715bc4c907eadc0a7c51dfca3"></span><code class="sig-name descname">embed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em>, <em class="sig-param"><span class="n">flip</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#embed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create embedding vector. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_face_embedder_result"><span class="std std-ref">FaceEmbedderResult</span></a>: result object </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">imgvec_</span></code>: numpy array with shape (height, width, channel) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flip</span></code>: flag to enable flipped image embedding. If true, returns the average between the original and flipped image embeddings. Default to false. </p></li>
 </ul>
 </dd>
 </dl>
@@ -264,6 +266,17 @@
 </dd></dl>
 
 <dl class="py function">
+<dt id="get_return_status">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_embedder_result_1adece952898fbd9f18afad1c50a1e173d"></span><code class="sig-name descname">get_return_status</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_return_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get return status. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>int: return status </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
 <dt id="get_embedding">
 <span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_embedder_result_1adf1bff812fb21586a3e34d7409c6b53d"></span><code class="sig-name descname">get_embedding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_embedding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get embedding vector. </p>
@@ -285,6 +298,21 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">FaceEmbedderResult</span> <span class="n">objects</span><span class="o">.</span>
 </pre></div>
 </div>
+<dl class="py attribute">
+<dt id="oneML.faceAPI.FaceEmbedderStatus_Empty">
+<span class="target" id="face_a_p_i_8py_1aa7fcf03f51e3ed9dc1b6fcf187dd55d5"></span><code class="sig-prename descclassname">oneML.faceAPI.</code><code class="sig-name descname">FaceEmbedderStatus_Empty</code><em class="property"> = _oneMLfacePython.FaceEmbedderStatus_Empty</em><a class="headerlink" href="#oneML.faceAPI.FaceEmbedderStatus_Empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="oneML.faceAPI.FaceEmbedderStatus_Success">
+<span class="target" id="face_a_p_i_8py_1a150697eef826745c01ce1d6e119a62b3"></span><code class="sig-prename descclassname">oneML.faceAPI.</code><code class="sig-name descname">FaceEmbedderStatus_Success</code><em class="property"> = _oneMLfacePython.FaceEmbedderStatus_Success</em><a class="headerlink" href="#oneML.faceAPI.FaceEmbedderStatus_Success" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="oneML.faceAPI.FaceEmbedderStatus_Fail">
+<span class="target" id="face_a_p_i_8py_1a2fa8a6982b5e678ef0750a7aa0d23633"></span><code class="sig-prename descclassname">oneML.faceAPI.</code><code class="sig-name descname">FaceEmbedderStatus_Fail</code><em class="property"> = _oneMLfacePython.FaceEmbedderStatus_Fail</em><a class="headerlink" href="#oneML.faceAPI.FaceEmbedderStatus_Fail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </section>
 
 

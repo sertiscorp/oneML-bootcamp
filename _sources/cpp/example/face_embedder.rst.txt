@@ -56,3 +56,17 @@ or
 .. code-block:: c++
 
     embedder.embed(img, output);
+
+To enable flipped image embedding, run
+
+.. code-block:: c++
+
+    embedder.embed(img, output, true);
+
+And get the output
+
+.. code-block:: c++
+
+    oneML::face:Embedding emb{};
+    output.get_embedding(emb);
+    int status = output.get_return_status();

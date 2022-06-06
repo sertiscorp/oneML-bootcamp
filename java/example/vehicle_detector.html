@@ -222,6 +222,16 @@
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">VehicleDetectorResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
 </pre></div>
 </div>
+<p>And get the output</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">scores</span><span class="p">{};</span>
+<span class="nl">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">oneML</span><span class="p">::</span><span class="n">alpr</span><span class="p">::</span><span class="n">BBox</span><span class="o">&gt;</span> <span class="n">bboxes</span><span class="p">{};</span>
+
+<span class="n">ScoreList</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_scores</span><span class="p">();</span>
+<span class="n">BBoxList</span> <span class="n">bboxes</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_bboxes</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_size</span><span class="p">();</span>
+<span class="n">StatusCodeList</span> <span class="n">statuses</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_return_status</span><span class="p">();</span>
+</pre></div>
+</div>
 </section>
 
 

@@ -42,8 +42,25 @@ Create oneML's Image input object
     utils.read_image_cv(path1, img1);
     utils.read_image_cv(path2, img2);
 
-Run the model
+Run the model for verification
 
 .. code-block:: c++
 
     std::pair<oneML::ReturnStatus, bool> result =  face_id.is_the_same_person(img1, img2);
+
+Run the model for identification
+
+.. code-block:: c++
+
+    oneML::face::FaceIdResult result;
+    face_id.predict(img, result);
+
+And get the output
+
+.. code-block:: c++
+
+    int status = result.get_return_status();
+    bool is_identifiable = result.is_identifiable();
+    std::string id = result.get_id();
+    float nearest_distance = result.get_nearest_node_distance();
+    float combined_distance = result.get_combined_distance();
