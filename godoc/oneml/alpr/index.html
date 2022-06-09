@@ -1,0 +1,3062 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>alpr - oneML\ Go\ Bindings\ Documentation</title>
+
+
+
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="../../lib/style.css"/></head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../">oneML\ Go\ Bindings\ Documentation</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../">oneML\ Go\ Bindings\ Documentation</a></div>
+<!--<a href="#" id="menu-button"><span id="menu-button-arrow">▽</span></a>-->
+<div id="menu">
+<a href="../../" style="margin-right: 10px;">Package Index</a>
+</div>
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package alpr
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;oneml/alpr&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="#DeleteBBox">func DeleteBBox(arg1 BBox)</a></dd>
+			
+				
+				<dd><a href="#DeleteBBoxVector">func DeleteBBoxVector(arg1 BBoxVector)</a></dd>
+			
+				
+				<dd><a href="#DeleteFloatVector">func DeleteFloatVector(arg1 FloatVector)</a></dd>
+			
+				
+				<dd><a href="#DeleteImage">func DeleteImage(arg1 Image)</a></dd>
+			
+				
+				<dd><a href="#DeleteIntVector">func DeleteIntVector(arg1 IntVector)</a></dd>
+			
+				
+				<dd><a href="#DeleteLicenseManager">func DeleteLicenseManager(arg1 LicenseManager)</a></dd>
+			
+				
+				<dd><a href="#DeleteMultiImage">func DeleteMultiImage(arg1 MultiImage)</a></dd>
+			
+				
+				<dd><a href="#DeleteUtils">func DeleteUtils(arg1 Utils)</a></dd>
+			
+				
+				<dd><a href="#DeleteVehicleDetector">func DeleteVehicleDetector(arg1 VehicleDetector)</a></dd>
+			
+				
+				<dd><a href="#DeleteVehicleDetectorResult">func DeleteVehicleDetectorResult(arg1 VehicleDetectorResult)</a></dd>
+			
+				
+				<dd><a href="#DeleteVehicleDetectorResultVector">func DeleteVehicleDetectorResultVector(arg1 VehicleDetectorResultVector)</a></dd>
+			
+				
+				<dd><a href="#Swig_free">func Swig_free(arg1 uintptr)</a></dd>
+			
+				
+				<dd><a href="#Swig_malloc">func Swig_malloc(arg1 int) (_swig_ret uintptr)</a></dd>
+			
+			
+				
+				<dd><a href="#BBox">type BBox</a></dd>
+				
+					
+					<dd>    <a href="#NewBBox">func NewBBox() (_swig_ret BBox)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#BBoxVector">type BBoxVector</a></dd>
+				
+					
+					<dd>    <a href="#NewBBoxVector">func NewBBoxVector(a ...interface{}) BBoxVector</a></dd>
+				
+					
+					<dd>    <a href="#NewBBoxVector__SWIG_0">func NewBBoxVector__SWIG_0() (_swig_ret BBoxVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewBBoxVector__SWIG_1">func NewBBoxVector__SWIG_1(arg1 int64) (_swig_ret BBoxVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewBBoxVector__SWIG_2">func NewBBoxVector__SWIG_2(arg1 BBoxVector) (_swig_ret BBoxVector)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#FloatVector">type FloatVector</a></dd>
+				
+					
+					<dd>    <a href="#NewFloatVector">func NewFloatVector(a ...interface{}) FloatVector</a></dd>
+				
+					
+					<dd>    <a href="#NewFloatVector__SWIG_0">func NewFloatVector__SWIG_0() (_swig_ret FloatVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewFloatVector__SWIG_1">func NewFloatVector__SWIG_1(arg1 int64) (_swig_ret FloatVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewFloatVector__SWIG_2">func NewFloatVector__SWIG_2(arg1 FloatVector) (_swig_ret FloatVector)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#Image">type Image</a></dd>
+				
+					
+					<dd>    <a href="#NewImage">func NewImage(a ...interface{}) Image</a></dd>
+				
+					
+					<dd>    <a href="#NewImage__SWIG_0">func NewImage__SWIG_0() (_swig_ret Image)</a></dd>
+				
+					
+					<dd>    <a href="#NewImage__SWIG_1">func NewImage__SWIG_1(arg1 int, arg2 int, arg3 int, arg4 []byte) (_swig_ret Image)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IntVector">type IntVector</a></dd>
+				
+					
+					<dd>    <a href="#NewIntVector">func NewIntVector(a ...interface{}) IntVector</a></dd>
+				
+					
+					<dd>    <a href="#NewIntVector__SWIG_0">func NewIntVector__SWIG_0() (_swig_ret IntVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewIntVector__SWIG_1">func NewIntVector__SWIG_1(arg1 int64) (_swig_ret IntVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewIntVector__SWIG_2">func NewIntVector__SWIG_2(arg1 IntVector) (_swig_ret IntVector)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#LicenseManager">type LicenseManager</a></dd>
+				
+					
+					<dd>    <a href="#NewLicenseManager">func NewLicenseManager(a ...interface{}) LicenseManager</a></dd>
+				
+					
+					<dd>    <a href="#NewLicenseManager__SWIG_0">func NewLicenseManager__SWIG_0() (_swig_ret LicenseManager)</a></dd>
+				
+					
+					<dd>    <a href="#NewLicenseManager__SWIG_1">func NewLicenseManager__SWIG_1(arg1 LicenseManager) (_swig_ret LicenseManager)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#MultiImage">type MultiImage</a></dd>
+				
+					
+					<dd>    <a href="#NewMultiImage">func NewMultiImage(a ...interface{}) MultiImage</a></dd>
+				
+					
+					<dd>    <a href="#NewMultiImage__SWIG_0">func NewMultiImage__SWIG_0() (_swig_ret MultiImage)</a></dd>
+				
+					
+					<dd>    <a href="#NewMultiImage__SWIG_1">func NewMultiImage__SWIG_1(arg1 int64) (_swig_ret MultiImage)</a></dd>
+				
+					
+					<dd>    <a href="#NewMultiImage__SWIG_2">func NewMultiImage__SWIG_2(arg1 MultiImage) (_swig_ret MultiImage)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#OneMLAlprVehicleDetectorStatus">type OneMLAlprVehicleDetectorStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="#OneMLLicenseActivationType">type OneMLLicenseActivationType</a></dd>
+				
+				
+			
+				
+				<dd><a href="#OneMLLicenseStatus">type OneMLLicenseStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="#SwigcptrBBox">type SwigcptrBBox</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrBBox.GetBottom">func (arg1 SwigcptrBBox) GetBottom() (_swig_ret float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBox.GetLeft">func (arg1 SwigcptrBBox) GetLeft() (_swig_ret float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBox.GetRight">func (arg1 SwigcptrBBox) GetRight() (_swig_ret float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBox.GetTop">func (arg1 SwigcptrBBox) GetTop() (_swig_ret float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBox.SetBottom">func (arg1 SwigcptrBBox) SetBottom(arg2 float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBox.SetLeft">func (arg1 SwigcptrBBox) SetLeft(arg2 float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBox.SetRight">func (arg1 SwigcptrBBox) SetRight(arg2 float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBox.SetTop">func (arg1 SwigcptrBBox) SetTop(arg2 float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBox.SwigIsBBox">func (p SwigcptrBBox) SwigIsBBox()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBox.Swigcptr">func (p SwigcptrBBox) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrBBoxVector">type SwigcptrBBoxVector</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.Add">func (arg1 SwigcptrBBoxVector) Add(arg2 BBox)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.Capacity">func (arg1 SwigcptrBBoxVector) Capacity() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.Clear">func (arg1 SwigcptrBBoxVector) Clear()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.Get">func (arg1 SwigcptrBBoxVector) Get(arg2 int) (_swig_ret BBox)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.IsEmpty">func (arg1 SwigcptrBBoxVector) IsEmpty() (_swig_ret bool)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.Reserve">func (arg1 SwigcptrBBoxVector) Reserve(arg2 int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.Set">func (arg1 SwigcptrBBoxVector) Set(arg2 int, arg3 BBox)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.Size">func (arg1 SwigcptrBBoxVector) Size() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.SwigIsBBoxVector">func (p SwigcptrBBoxVector) SwigIsBBoxVector()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrBBoxVector.Swigcptr">func (p SwigcptrBBoxVector) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrFloatVector">type SwigcptrFloatVector</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.Add">func (arg1 SwigcptrFloatVector) Add(arg2 float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.Capacity">func (arg1 SwigcptrFloatVector) Capacity() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.Clear">func (arg1 SwigcptrFloatVector) Clear()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.Get">func (arg1 SwigcptrFloatVector) Get(arg2 int) (_swig_ret float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.IsEmpty">func (arg1 SwigcptrFloatVector) IsEmpty() (_swig_ret bool)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.Reserve">func (arg1 SwigcptrFloatVector) Reserve(arg2 int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.Set">func (arg1 SwigcptrFloatVector) Set(arg2 int, arg3 float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.Size">func (arg1 SwigcptrFloatVector) Size() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.SwigIsFloatVector">func (p SwigcptrFloatVector) SwigIsFloatVector()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFloatVector.Swigcptr">func (p SwigcptrFloatVector) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrImage">type SwigcptrImage</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrImage.GetData">func (arg1 SwigcptrImage) GetData() (_swig_ret *byte)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.GetDepth">func (arg1 SwigcptrImage) GetDepth() (_swig_ret uint16)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.GetHeight">func (arg1 SwigcptrImage) GetHeight() (_swig_ret uint16)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.GetWidth">func (arg1 SwigcptrImage) GetWidth() (_swig_ret uint16)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.SetData">func (arg1 SwigcptrImage) SetData(arg2 []byte)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.SetDepth">func (arg1 SwigcptrImage) SetDepth(arg2 uint16)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.SetHeight">func (arg1 SwigcptrImage) SetHeight(arg2 uint16)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.SetWidth">func (arg1 SwigcptrImage) SetWidth(arg2 uint16)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.Size">func (arg1 SwigcptrImage) Size() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.SwigIsImage">func (p SwigcptrImage) SwigIsImage()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrImage.Swigcptr">func (p SwigcptrImage) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrIntVector">type SwigcptrIntVector</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.Add">func (arg1 SwigcptrIntVector) Add(arg2 int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.Capacity">func (arg1 SwigcptrIntVector) Capacity() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.Clear">func (arg1 SwigcptrIntVector) Clear()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.Get">func (arg1 SwigcptrIntVector) Get(arg2 int) (_swig_ret int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.IsEmpty">func (arg1 SwigcptrIntVector) IsEmpty() (_swig_ret bool)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.Reserve">func (arg1 SwigcptrIntVector) Reserve(arg2 int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.Set">func (arg1 SwigcptrIntVector) Set(arg2 int, arg3 int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.Size">func (arg1 SwigcptrIntVector) Size() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.SwigIsIntVector">func (p SwigcptrIntVector) SwigIsIntVector()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrIntVector.Swigcptr">func (p SwigcptrIntVector) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrLicenseManager">type SwigcptrLicenseManager</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.ActivateKey">func (arg1 SwigcptrLicenseManager) ActivateKey() (_swig_ret OneMLLicenseStatus)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.ActivateTrial">func (arg1 SwigcptrLicenseManager) ActivateTrial() (_swig_ret OneMLLicenseStatus)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.GetActivationExpiryDate">func (arg1 SwigcptrLicenseManager) GetActivationExpiryDate() (_swig_ret uint64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.GetActivationType">func (arg1 SwigcptrLicenseManager) GetActivationType() (_swig_ret OneMLLicenseActivationType)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.GetKey">func (arg1 SwigcptrLicenseManager) GetKey() (_swig_ret string)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.GetMachineCode">func (arg1 SwigcptrLicenseManager) GetMachineCode() (_swig_ret string)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.IsTrial">func (arg1 SwigcptrLicenseManager) IsTrial() (_swig_ret bool)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.IsValidActivation">func (arg1 SwigcptrLicenseManager) IsValidActivation() (_swig_ret bool)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.SetKey">func (arg1 SwigcptrLicenseManager) SetKey(arg2 string)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.SetMachineCode">func (arg1 SwigcptrLicenseManager) SetMachineCode(arg2 string)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.SwigIsLicenseManager">func (p SwigcptrLicenseManager) SwigIsLicenseManager()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.Swigcptr">func (p SwigcptrLicenseManager) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrMultiImage">type SwigcptrMultiImage</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.Add">func (arg1 SwigcptrMultiImage) Add(arg2 Image)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.Capacity">func (arg1 SwigcptrMultiImage) Capacity() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.Clear">func (arg1 SwigcptrMultiImage) Clear()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.Get">func (arg1 SwigcptrMultiImage) Get(arg2 int) (_swig_ret Image)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.IsEmpty">func (arg1 SwigcptrMultiImage) IsEmpty() (_swig_ret bool)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.Reserve">func (arg1 SwigcptrMultiImage) Reserve(arg2 int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.Set">func (arg1 SwigcptrMultiImage) Set(arg2 int, arg3 Image)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.Size">func (arg1 SwigcptrMultiImage) Size() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.SwigIsMultiImage">func (p SwigcptrMultiImage) SwigIsMultiImage()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrMultiImage.Swigcptr">func (p SwigcptrMultiImage) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrUtils">type SwigcptrUtils</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrUtils.ReadImageCV">func (arg1 SwigcptrUtils) ReadImageCV(arg2 string) (_swig_ret Image)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUtils.SwigIsUtils">func (p SwigcptrUtils) SwigIsUtils()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUtils.Swigcptr">func (p SwigcptrUtils) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrVehicleDetector">type SwigcptrVehicleDetector</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetector.Detect">func (arg1 SwigcptrVehicleDetector) Detect(arg2 Image) (_swig_ret VehicleDetectorResult)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetector.DetectBatch">func (arg1 SwigcptrVehicleDetector) DetectBatch(arg2 MultiImage) (_swig_ret VehicleDetectorResultVector)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetector.SwigIsVehicleDetector">func (p SwigcptrVehicleDetector) SwigIsVehicleDetector()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetector.Swigcptr">func (p SwigcptrVehicleDetector) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrVehicleDetectorResult">type SwigcptrVehicleDetectorResult</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResult.GetBboxes">func (arg1 SwigcptrVehicleDetectorResult) GetBboxes() (_swig_ret BBoxVector)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResult.GetReturnStatus">func (arg1 SwigcptrVehicleDetectorResult) GetReturnStatus() (_swig_ret IntVector)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResult.GetScores">func (arg1 SwigcptrVehicleDetectorResult) GetScores() (_swig_ret FloatVector)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResult.GetSize">func (arg1 SwigcptrVehicleDetectorResult) GetSize() (_swig_ret int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResult.SwigIsVehicleDetectorResult">func (p SwigcptrVehicleDetectorResult) SwigIsVehicleDetectorResult()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResult.Swigcptr">func (p SwigcptrVehicleDetectorResult) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrVehicleDetectorResultVector">type SwigcptrVehicleDetectorResultVector</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.Add">func (arg1 SwigcptrVehicleDetectorResultVector) Add(arg2 VehicleDetectorResult)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.Capacity">func (arg1 SwigcptrVehicleDetectorResultVector) Capacity() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.Clear">func (arg1 SwigcptrVehicleDetectorResultVector) Clear()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.Get">func (arg1 SwigcptrVehicleDetectorResultVector) Get(arg2 int) (_swig_ret VehicleDetectorResult)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.IsEmpty">func (arg1 SwigcptrVehicleDetectorResultVector) IsEmpty() (_swig_ret bool)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.Reserve">func (arg1 SwigcptrVehicleDetectorResultVector) Reserve(arg2 int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.Set">func (arg1 SwigcptrVehicleDetectorResultVector) Set(arg2 int, arg3 VehicleDetectorResult)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.Size">func (arg1 SwigcptrVehicleDetectorResultVector) Size() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.SwigIsVehicleDetectorResultVector">func (p SwigcptrVehicleDetectorResultVector) SwigIsVehicleDetectorResultVector()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrVehicleDetectorResultVector.Swigcptr">func (p SwigcptrVehicleDetectorResultVector) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#Utils">type Utils</a></dd>
+				
+					
+					<dd>    <a href="#NewUtils">func NewUtils(arg1 LicenseManager) (_swig_ret Utils)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#VehicleDetector">type VehicleDetector</a></dd>
+				
+					
+					<dd>    <a href="#NewVehicleDetector">func NewVehicleDetector(arg1 LicenseManager) (_swig_ret VehicleDetector)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#VehicleDetectorResult">type VehicleDetectorResult</a></dd>
+				
+					
+					<dd>    <a href="#NewVehicleDetectorResult">func NewVehicleDetectorResult(a ...interface{}) VehicleDetectorResult</a></dd>
+				
+					
+					<dd>    <a href="#NewVehicleDetectorResult__SWIG_0">func NewVehicleDetectorResult__SWIG_0() (_swig_ret VehicleDetectorResult)</a></dd>
+				
+					
+					<dd>    <a href="#NewVehicleDetectorResult__SWIG_1">func NewVehicleDetectorResult__SWIG_1(arg1 VehicleDetectorResult) (_swig_ret VehicleDetectorResult)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#VehicleDetectorResultVector">type VehicleDetectorResultVector</a></dd>
+				
+					
+					<dd>    <a href="#NewVehicleDetectorResultVector">func NewVehicleDetectorResultVector(a ...interface{}) VehicleDetectorResultVector</a></dd>
+				
+					
+					<dd>    <a href="#NewVehicleDetectorResultVector__SWIG_0">func NewVehicleDetectorResultVector__SWIG_0() (_swig_ret VehicleDetectorResultVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewVehicleDetectorResultVector__SWIG_1">func NewVehicleDetectorResultVector__SWIG_1(arg1 int64) (_swig_ret VehicleDetectorResultVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewVehicleDetectorResultVector__SWIG_2">func NewVehicleDetectorResultVector__SWIG_2(arg1 VehicleDetectorResultVector) (_swig_ret VehicleDetectorResultVector)</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="../../src/oneml/alpr/alprAPI.go.html">alprAPI.go</a>
+			
+				<a href="../../src/oneml/alpr/lib.go.html">lib.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var <span id="Swig_escape_always_false">Swig_escape_always_false</span> <a href="../../builtin/#bool">bool</a></pre>
+			
+				
+				<pre>var <span id="Swig_escape_val">Swig_escape_val</span> interface{}</pre>
+			
+		
+		
+			
+			
+			<h2 id="DeleteBBox">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=21209:21235#L518">DeleteBBox</a>
+				<a class="permalink" href="#DeleteBBox">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteBBox(arg1 <a href="#BBox">BBox</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteBBoxVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=31000:31038#L872">DeleteBBoxVector</a>
+				<a class="permalink" href="#DeleteBBoxVector">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteBBoxVector(arg1 <a href="#BBoxVector">BBoxVector</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteFloatVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=24510:24550#L636">DeleteFloatVector</a>
+				<a class="permalink" href="#DeleteFloatVector">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteFloatVector(arg1 <a href="#FloatVector">FloatVector</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=18963:18991#L432">DeleteImage</a>
+				<a class="permalink" href="#DeleteImage">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteImage(arg1 <a href="#Image">Image</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteIntVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=27724:27760#L754">DeleteIntVector</a>
+				<a class="permalink" href="#DeleteIntVector">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteIntVector(arg1 <a href="#IntVector">IntVector</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteLicenseManager">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=43972:44018#L1239">DeleteLicenseManager</a>
+				<a class="permalink" href="#DeleteLicenseManager">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteLicenseManager(arg1 <a href="#LicenseManager">LicenseManager</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteMultiImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=15731:15769#L313">DeleteMultiImage</a>
+				<a class="permalink" href="#DeleteMultiImage">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteMultiImage(arg1 <a href="#MultiImage">MultiImage</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteUtils">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=41299:41327#L1165">DeleteUtils</a>
+				<a class="permalink" href="#DeleteUtils">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteUtils(arg1 <a href="#Utils">Utils</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteVehicleDetector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=39818:39866#L1121">DeleteVehicleDetector</a>
+				<a class="permalink" href="#DeleteVehicleDetector">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteVehicleDetector(arg1 <a href="#VehicleDetector">VehicleDetector</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteVehicleDetectorResult">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=37273:37333#L1045">DeleteVehicleDetectorResult</a>
+				<a class="permalink" href="#DeleteVehicleDetectorResult">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteVehicleDetectorResult(arg1 <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteVehicleDetectorResultVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=35151:35223#L990">DeleteVehicleDetectorResultVector</a>
+				<a class="permalink" href="#DeleteVehicleDetectorResultVector">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteVehicleDetectorResultVector(arg1 <a href="#VehicleDetectorResultVector">VehicleDetectorResultVector</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="Swig_free">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=12537:12565#L201">Swig_free</a>
+				<a class="permalink" href="#Swig_free">¶</a>
+				
+				
+			</h2>
+			<pre>func Swig_free(arg1 <a href="../../builtin/#uintptr">uintptr</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="Swig_malloc">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=12655:12701#L206">Swig_malloc</a>
+				<a class="permalink" href="#Swig_malloc">¶</a>
+				
+				
+			</h2>
+			<pre>func Swig_malloc(arg1 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="../../builtin/#uintptr">uintptr</a>)</pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="BBox">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=21338:21615#L523">BBox</a>
+				<a class="permalink" href="#BBox">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type BBox interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsBBox()
+    SetTop(arg2 <a href="../../builtin/#float32">float32</a>)
+    GetTop() (_swig_ret <a href="../../builtin/#float32">float32</a>)
+    SetLeft(arg2 <a href="../../builtin/#float32">float32</a>)
+    GetLeft() (_swig_ret <a href="../../builtin/#float32">float32</a>)
+    SetBottom(arg2 <a href="../../builtin/#float32">float32</a>)
+    GetBottom() (_swig_ret <a href="../../builtin/#float32">float32</a>)
+    SetRight(arg2 <a href="../../builtin/#float32">float32</a>)
+    GetRight() (_swig_ret <a href="../../builtin/#float32">float32</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBBox">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=21067:21098#L512">NewBBox</a>
+					<a class="permalink" href="#NewBBox">¶</a>
+					
+					
+				</h3>
+				<pre>func NewBBox() (_swig_ret <a href="#BBox">BBox</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="BBoxVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=31147:31404#L877">BBoxVector</a>
+				<a class="permalink" href="#BBoxVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type BBoxVector interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsBBoxVector()
+    Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Reserve(arg2 <a href="../../builtin/#int64">int64</a>)
+    IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    Clear()
+    Add(arg2 <a href="#BBox">BBox</a>)
+    Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="#BBox">BBox</a>)
+    Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="#BBox">BBox</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBBoxVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28983:29030#L801">NewBBoxVector</a>
+					<a class="permalink" href="#NewBBoxVector">¶</a>
+					
+					
+				</h3>
+				<pre>func NewBBoxVector(a ...interface{}) <a href="#BBoxVector">BBoxVector</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewBBoxVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28280:28331#L781">NewBBoxVector__SWIG_0</a>
+					<a class="permalink" href="#NewBBoxVector__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewBBoxVector__SWIG_0() (_swig_ret <a href="#BBoxVector">BBoxVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewBBoxVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28474:28535#L787">NewBBoxVector__SWIG_1</a>
+					<a class="permalink" href="#NewBBoxVector__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewBBoxVector__SWIG_1(arg1 <a href="../../builtin/#int64">int64</a>) (_swig_ret <a href="#BBoxVector">BBoxVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewBBoxVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28722:28788#L794">NewBBoxVector__SWIG_2</a>
+					<a class="permalink" href="#NewBBoxVector__SWIG_2">¶</a>
+					
+					
+				</h3>
+				<pre>func NewBBoxVector__SWIG_2(arg1 <a href="#BBoxVector">BBoxVector</a>) (_swig_ret <a href="#BBoxVector">BBoxVector</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="FloatVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=24660:24928#L641">FloatVector</a>
+				<a class="permalink" href="#FloatVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type FloatVector interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsFloatVector()
+    Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Reserve(arg2 <a href="../../builtin/#int64">int64</a>)
+    IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    Clear()
+    Add(arg2 <a href="../../builtin/#float32">float32</a>)
+    Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="../../builtin/#float32">float32</a>)
+    Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="../../builtin/#float32">float32</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewFloatVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=22500:22549#L565">NewFloatVector</a>
+					<a class="permalink" href="#NewFloatVector">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFloatVector(a ...interface{}) <a href="#FloatVector">FloatVector</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFloatVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=21779:21832#L545">NewFloatVector__SWIG_0</a>
+					<a class="permalink" href="#NewFloatVector__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFloatVector__SWIG_0() (_swig_ret <a href="#FloatVector">FloatVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFloatVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=21979:22042#L551">NewFloatVector__SWIG_1</a>
+					<a class="permalink" href="#NewFloatVector__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFloatVector__SWIG_1(arg1 <a href="../../builtin/#int64">int64</a>) (_swig_ret <a href="#FloatVector">FloatVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFloatVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=22232:22301#L558">NewFloatVector__SWIG_2</a>
+					<a class="permalink" href="#NewFloatVector__SWIG_2">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFloatVector__SWIG_2(arg1 <a href="#FloatVector">FloatVector</a>) (_swig_ret <a href="#FloatVector">FloatVector</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Image">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=19095:19395#L437">Image</a>
+				<a class="permalink" href="#Image">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type Image interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsImage()
+    Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    SetWidth(arg2 <a href="../../builtin/#uint16">uint16</a>)
+    SetHeight(arg2 <a href="../../builtin/#uint16">uint16</a>)
+    SetDepth(arg2 <a href="../../builtin/#uint16">uint16</a>)
+    GetWidth() (_swig_ret <a href="../../builtin/#uint16">uint16</a>)
+    GetHeight() (_swig_ret <a href="../../builtin/#uint16">uint16</a>)
+    GetDepth() (_swig_ret <a href="../../builtin/#uint16">uint16</a>)
+    SetData(arg2 []<a href="../../builtin/#byte">byte</a>)
+    GetData() (_swig_ret *<a href="../../builtin/#byte">byte</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=18250:18287#L405">NewImage</a>
+					<a class="permalink" href="#NewImage">¶</a>
+					
+					
+				</h3>
+				<pre>func NewImage(a ...interface{}) <a href="#Image">Image</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewImage__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=16278:16319#L340">NewImage__SWIG_0</a>
+					<a class="permalink" href="#NewImage__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewImage__SWIG_0() (_swig_ret <a href="#Image">Image</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewImage__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=17790:17872#L392">NewImage__SWIG_1</a>
+					<a class="permalink" href="#NewImage__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewImage__SWIG_1(arg1 <a href="../../builtin/#int">int</a>, arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="../../builtin/#int">int</a>, arg4 []<a href="../../builtin/#byte">byte</a>) (_swig_ret <a href="#Image">Image</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="IntVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=27868:28120#L759">IntVector</a>
+				<a class="permalink" href="#IntVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type IntVector interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsIntVector()
+    Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Reserve(arg2 <a href="../../builtin/#int64">int64</a>)
+    IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    Clear()
+    Add(arg2 <a href="../../builtin/#int">int</a>)
+    Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="../../builtin/#int">int</a>)
+    Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="../../builtin/#int">int</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewIntVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=25768:25813#L683">NewIntVector</a>
+					<a class="permalink" href="#NewIntVector">¶</a>
+					
+					
+				</h3>
+				<pre>func NewIntVector(a ...interface{}) <a href="#IntVector">IntVector</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewIntVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=25084:25133#L663">NewIntVector__SWIG_0</a>
+					<a class="permalink" href="#NewIntVector__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewIntVector__SWIG_0() (_swig_ret <a href="#IntVector">IntVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewIntVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=25272:25331#L669">NewIntVector__SWIG_1</a>
+					<a class="permalink" href="#NewIntVector__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewIntVector__SWIG_1(arg1 <a href="../../builtin/#int64">int64</a>) (_swig_ret <a href="#IntVector">IntVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewIntVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=25514:25577#L676">NewIntVector__SWIG_2</a>
+					<a class="permalink" href="#NewIntVector__SWIG_2">¶</a>
+					
+					
+				</h3>
+				<pre>func NewIntVector__SWIG_2(arg1 <a href="#IntVector">IntVector</a>) (_swig_ret <a href="#IntVector">IntVector</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="LicenseManager">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=47434:47893#L1342">LicenseManager</a>
+				<a class="permalink" href="#LicenseManager">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type LicenseManager interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsLicenseManager()
+    SetKey(arg2 <a href="../../builtin/#string">string</a>)
+    SetMachineCode(arg2 <a href="../../builtin/#string">string</a>)
+    GetKey() (_swig_ret <a href="../../builtin/#string">string</a>)
+    ActivateKey() (_swig_ret <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a>)
+    ActivateTrial() (_swig_ret <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a>)
+    GetMachineCode() (_swig_ret <a href="../../builtin/#string">string</a>)
+    IsTrial() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    IsValidActivation() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    GetActivationType() (_swig_ret <a href="#OneMLLicenseActivationType">OneMLLicenseActivationType</a>)
+    GetActivationExpiryDate() (_swig_ret <a href="../../builtin/#uint64">uint64</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLicenseManager">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=44420:44475#L1251">NewLicenseManager</a>
+					<a class="permalink" href="#NewLicenseManager">¶</a>
+					
+					
+				</h3>
+				<pre>func NewLicenseManager(a ...interface{}) <a href="#LicenseManager">LicenseManager</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewLicenseManager__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=43754:43813#L1233">NewLicenseManager__SWIG_0</a>
+					<a class="permalink" href="#NewLicenseManager__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewLicenseManager__SWIG_0() (_swig_ret <a href="#LicenseManager">LicenseManager</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewLicenseManager__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=44131:44209#L1244">NewLicenseManager__SWIG_1</a>
+					<a class="permalink" href="#NewLicenseManager__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewLicenseManager__SWIG_1(arg1 <a href="#LicenseManager">LicenseManager</a>) (_swig_ret <a href="#LicenseManager">LicenseManager</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="MultiImage">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=15878:16138#L318">MultiImage</a>
+				<a class="permalink" href="#MultiImage">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type MultiImage interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsMultiImage()
+    Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Reserve(arg2 <a href="../../builtin/#int64">int64</a>)
+    IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    Clear()
+    Add(arg2 <a href="#Image">Image</a>)
+    Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="#Image">Image</a>)
+    Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="#Image">Image</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMultiImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=13709:13756#L242">NewMultiImage</a>
+					<a class="permalink" href="#NewMultiImage">¶</a>
+					
+					
+				</h3>
+				<pre>func NewMultiImage(a ...interface{}) <a href="#MultiImage">MultiImage</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewMultiImage__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=13007:13058#L222">NewMultiImage__SWIG_0</a>
+					<a class="permalink" href="#NewMultiImage__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewMultiImage__SWIG_0() (_swig_ret <a href="#MultiImage">MultiImage</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewMultiImage__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=13201:13262#L228">NewMultiImage__SWIG_1</a>
+					<a class="permalink" href="#NewMultiImage__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewMultiImage__SWIG_1(arg1 <a href="../../builtin/#int64">int64</a>) (_swig_ret <a href="#MultiImage">MultiImage</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewMultiImage__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=13448:13514#L235">NewMultiImage__SWIG_2</a>
+					<a class="permalink" href="#NewMultiImage__SWIG_2">¶</a>
+					
+					
+				</h3>
+				<pre>func NewMultiImage__SWIG_2(arg1 <a href="#MultiImage">MultiImage</a>) (_swig_ret <a href="#MultiImage">MultiImage</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="OneMLAlprVehicleDetectorStatus">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=35693:35732#L1008">OneMLAlprVehicleDetectorStatus</a>
+				<a class="permalink" href="#OneMLAlprVehicleDetectorStatus">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type OneMLAlprVehicleDetectorStatus <a href="../../builtin/#int">int</a></pre>
+
+			
+
+			
+				
+				<pre>var <span id="VehicleDetectorStatus_Empty">VehicleDetectorStatus_Empty</span> <a href="#OneMLAlprVehicleDetectorStatus">OneMLAlprVehicleDetectorStatus</a> = _swig_getVehicleDetectorStatus_Empty()</pre>
+			
+				
+				<pre>var <span id="VehicleDetectorStatus_Fail">VehicleDetectorStatus_Fail</span> <a href="#OneMLAlprVehicleDetectorStatus">OneMLAlprVehicleDetectorStatus</a> = _swig_getVehicleDetectorStatus_Fail()</pre>
+			
+				
+				<pre>var <span id="VehicleDetectorStatus_Success">VehicleDetectorStatus_Success</span> <a href="#OneMLAlprVehicleDetectorStatus">OneMLAlprVehicleDetectorStatus</a> = _swig_getVehicleDetectorStatus_Success()</pre>
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="OneMLLicenseActivationType">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=41894:41929#L1187">OneMLLicenseActivationType</a>
+				<a class="permalink" href="#OneMLLicenseActivationType">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type OneMLLicenseActivationType <a href="../../builtin/#int">int</a></pre>
+
+			
+
+			
+				
+				<pre>var <span id="LicenseActivationType_KeyOnline">LicenseActivationType_KeyOnline</span> <a href="#OneMLLicenseActivationType">OneMLLicenseActivationType</a> = _swig_getLicenseActivationType_KeyOnline()</pre>
+			
+				
+				<pre>var <span id="LicenseActivationType_NotFound">LicenseActivationType_NotFound</span> <a href="#OneMLLicenseActivationType">OneMLLicenseActivationType</a> = _swig_getLicenseActivationType_NotFound()</pre>
+			
+				
+				<pre>var <span id="LicenseActivationType_TrialOnline">LicenseActivationType_TrialOnline</span> <a href="#OneMLLicenseActivationType">OneMLLicenseActivationType</a> = _swig_getLicenseActivationType_TrialOnline()</pre>
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="OneMLLicenseStatus">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=43008:43035#L1209">OneMLLicenseStatus</a>
+				<a class="permalink" href="#OneMLLicenseStatus">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type OneMLLicenseStatus <a href="../../builtin/#int">int</a></pre>
+
+			
+
+			
+				
+				<pre>var <span id="LicenseStatus_Error">LicenseStatus_Error</span> <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a> = _swig_getLicenseStatus_Error()</pre>
+			
+				
+				<pre>var <span id="LicenseStatus_Ok">LicenseStatus_Ok</span> <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a> = _swig_getLicenseStatus_Ok()</pre>
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SwigcptrBBox">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=19397:19422#L451">SwigcptrBBox</a>
+				<a class="permalink" href="#SwigcptrBBox">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrBBox <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrBBox.GetBottom">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20474:20530#L492">GetBottom</a>
+					<a class="permalink" href="#SwigcptrBBox.GetBottom">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBox">SwigcptrBBox</a>) GetBottom() (_swig_ret <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBox.GetLeft">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20088:20142#L479">GetLeft</a>
+					<a class="permalink" href="#SwigcptrBBox.GetLeft">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBox">SwigcptrBBox</a>) GetLeft() (_swig_ret <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBox.GetRight">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20862:20917#L505">GetRight</a>
+					<a class="permalink" href="#SwigcptrBBox.GetRight">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBox">SwigcptrBBox</a>) GetRight() (_swig_ret <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBox.GetTop">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19708:19761#L466">GetTop</a>
+					<a class="permalink" href="#SwigcptrBBox.GetTop">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBox">SwigcptrBBox</a>) GetTop() (_swig_ret <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBox.SetBottom">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20291:20339#L486">SetBottom</a>
+					<a class="permalink" href="#SwigcptrBBox.SetBottom">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBox">SwigcptrBBox</a>) SetBottom(arg2 <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBox.SetLeft">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19909:19955#L473">SetLeft</a>
+					<a class="permalink" href="#SwigcptrBBox.SetLeft">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBox">SwigcptrBBox</a>) SetLeft(arg2 <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBox.SetRight">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20681:20728#L499">SetRight</a>
+					<a class="permalink" href="#SwigcptrBBox.SetRight">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBox">SwigcptrBBox</a>) SetRight(arg2 <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBox.SetTop">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19531:19576#L460">SetTop</a>
+					<a class="permalink" href="#SwigcptrBBox.SetTop">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBox">SwigcptrBBox</a>) SetTop(arg2 <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBox.SwigIsBBox">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19491:19525#L457">SwigIsBBox</a>
+					<a class="permalink" href="#SwigcptrBBox.SwigIsBBox">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrBBox">SwigcptrBBox</a>) SwigIsBBox()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBox.Swigcptr">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19424:19464#L453">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrBBox.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrBBox">SwigcptrBBox</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrBBoxVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=28122:28153#L772">SwigcptrBBoxVector</a>
+				<a class="permalink" href="#SwigcptrBBoxVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrBBoxVector <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrBBoxVector.Add">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30295:30340#L851">Add</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.Add">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) Add(arg2 <a href="#BBox">BBox</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBoxVector.Capacity">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29550:29609#L826">Capacity</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.Capacity">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBoxVector.Clear">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30160:30198#L846">Clear</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.Clear">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) Clear()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBoxVector.Get">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30489:30550#L857">Get</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.Get">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="#BBox">BBox</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBoxVector.IsEmpty">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29955:30012#L839">IsEmpty</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.IsEmpty">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBoxVector.Reserve">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29760:29810#L833">Reserve</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.Reserve">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) Reserve(arg2 <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBoxVector.Set">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30752:30807#L865">Set</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.Set">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="#BBox">BBox</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBoxVector.Size">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29348:29403#L819">Size</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.Size">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBoxVector.SwigIsBBoxVector">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=28228:28274#L778">SwigIsBBoxVector</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.SwigIsBBoxVector">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) SwigIsBBoxVector()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrBBoxVector.Swigcptr">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=28155:28201#L774">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrBBoxVector.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrBBoxVector">SwigcptrBBoxVector</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrFloatVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=21617:21649#L536">SwigcptrFloatVector</a>
+				<a class="permalink" href="#SwigcptrFloatVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrFloatVector <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrFloatVector.Add">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23828:23877#L615">Add</a>
+					<a class="permalink" href="#SwigcptrFloatVector.Add">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) Add(arg2 <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFloatVector.Capacity">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23075:23135#L590">Capacity</a>
+					<a class="permalink" href="#SwigcptrFloatVector.Capacity">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFloatVector.Clear">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23691:23730#L610">Clear</a>
+					<a class="permalink" href="#SwigcptrFloatVector.Clear">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) Clear()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFloatVector.Get">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24012:24077#L621">Get</a>
+					<a class="permalink" href="#SwigcptrFloatVector.Get">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFloatVector.IsEmpty">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23484:23542#L603">IsEmpty</a>
+					<a class="permalink" href="#SwigcptrFloatVector.IsEmpty">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFloatVector.Reserve">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23287:23338#L597">Reserve</a>
+					<a class="permalink" href="#SwigcptrFloatVector.Reserve">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) Reserve(arg2 <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFloatVector.Set">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24272:24331#L629">Set</a>
+					<a class="permalink" href="#SwigcptrFloatVector.Set">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFloatVector.Size">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=22871:22927#L583">Size</a>
+					<a class="permalink" href="#SwigcptrFloatVector.Size">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFloatVector.SwigIsFloatVector">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=21725:21773#L542">SwigIsFloatVector</a>
+					<a class="permalink" href="#SwigcptrFloatVector.SwigIsFloatVector">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) SwigIsFloatVector()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFloatVector.Swigcptr">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=21651:21698#L538">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrFloatVector.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrFloatVector">SwigcptrFloatVector</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrImage">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=16140:16166#L331">SwigcptrImage</a>
+				<a class="permalink" href="#SwigcptrImage">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrImage <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrImage.GetData">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18765:18818#L425">GetData</a>
+					<a class="permalink" href="#SwigcptrImage.GetData">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrImage">SwigcptrImage</a>) GetData() (_swig_ret *<a href="../../builtin/#byte">byte</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.GetDepth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=17587:17642#L385">GetDepth</a>
+					<a class="permalink" href="#SwigcptrImage.GetDepth">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrImage">SwigcptrImage</a>) GetDepth() (_swig_ret <a href="../../builtin/#uint16">uint16</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.GetHeight">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=17382:17438#L378">GetHeight</a>
+					<a class="permalink" href="#SwigcptrImage.GetHeight">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrImage">SwigcptrImage</a>) GetHeight() (_swig_ret <a href="../../builtin/#uint16">uint16</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.GetWidth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=17179:17234#L371">GetWidth</a>
+					<a class="permalink" href="#SwigcptrImage.GetWidth">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrImage">SwigcptrImage</a>) GetWidth() (_swig_ret <a href="../../builtin/#uint16">uint16</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.SetData">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18500:18546#L416">SetData</a>
+					<a class="permalink" href="#SwigcptrImage.SetData">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrImage">SwigcptrImage</a>) SetData(arg2 []<a href="../../builtin/#byte">byte</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.SetDepth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16998:17045#L365">SetDepth</a>
+					<a class="permalink" href="#SwigcptrImage.SetDepth">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrImage">SwigcptrImage</a>) SetDepth(arg2 <a href="../../builtin/#uint16">uint16</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.SetHeight">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16815:16863#L359">SetHeight</a>
+					<a class="permalink" href="#SwigcptrImage.SetHeight">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrImage">SwigcptrImage</a>) SetHeight(arg2 <a href="../../builtin/#uint16">uint16</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.SetWidth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16634:16681#L353">SetWidth</a>
+					<a class="permalink" href="#SwigcptrImage.SetWidth">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrImage">SwigcptrImage</a>) SetWidth(arg2 <a href="../../builtin/#uint16">uint16</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.Size">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16442:16492#L346">Size</a>
+					<a class="permalink" href="#SwigcptrImage.Size">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrImage">SwigcptrImage</a>) Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.SwigIsImage">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16236:16272#L337">SwigIsImage</a>
+					<a class="permalink" href="#SwigcptrImage.SwigIsImage">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrImage">SwigcptrImage</a>) SwigIsImage()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrImage.Swigcptr">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16168:16209#L333">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrImage.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrImage">SwigcptrImage</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrIntVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=24930:24960#L654">SwigcptrIntVector</a>
+				<a class="permalink" href="#SwigcptrIntVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrIntVector <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrIntVector.Add">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=27064:27107#L733">Add</a>
+					<a class="permalink" href="#SwigcptrIntVector.Add">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) Add(arg2 <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrIntVector.Capacity">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26327:26385#L708">Capacity</a>
+					<a class="permalink" href="#SwigcptrIntVector.Capacity">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrIntVector.Clear">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26931:26968#L728">Clear</a>
+					<a class="permalink" href="#SwigcptrIntVector.Clear">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) Clear()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrIntVector.Get">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=27245:27304#L739">Get</a>
+					<a class="permalink" href="#SwigcptrIntVector.Get">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrIntVector.IsEmpty">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26728:26784#L721">IsEmpty</a>
+					<a class="permalink" href="#SwigcptrIntVector.IsEmpty">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrIntVector.Reserve">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26535:26584#L715">Reserve</a>
+					<a class="permalink" href="#SwigcptrIntVector.Reserve">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) Reserve(arg2 <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrIntVector.Set">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=27489:27542#L747">Set</a>
+					<a class="permalink" href="#SwigcptrIntVector.Set">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrIntVector.Size">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26127:26181#L701">Size</a>
+					<a class="permalink" href="#SwigcptrIntVector.Size">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrIntVector.SwigIsIntVector">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=25034:25078#L660">SwigIsIntVector</a>
+					<a class="permalink" href="#SwigcptrIntVector.SwigIsIntVector">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) SwigIsIntVector()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrIntVector.Swigcptr">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24962:25007#L656">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrIntVector.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrIntVector">SwigcptrIntVector</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrLicenseManager">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=43580:43615#L1224">SwigcptrLicenseManager</a>
+				<a class="permalink" href="#SwigcptrLicenseManager">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrLicenseManager <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrLicenseManager.ActivateKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=45575:45654#L1290">ActivateKey</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.ActivateKey">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) ActivateKey() (_swig_ret <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.ActivateTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=45838:45919#L1297">ActivateTrial</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.ActivateTrial">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) ActivateTrial() (_swig_ret <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.GetActivationExpiryDate">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=47183:47262#L1335">GetActivationExpiryDate</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.GetActivationExpiryDate">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) GetActivationExpiryDate() (_swig_ret <a href="../../builtin/#uint64">uint64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.GetActivationType">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=46884:46977#L1328">GetActivationType</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.GetActivationType">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) GetActivationType() (_swig_ret <a href="#OneMLLicenseActivationType">OneMLLicenseActivationType</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.GetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=45258:45320#L1280">GetKey</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.GetKey">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) GetKey() (_swig_ret <a href="../../builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.GetMachineCode">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=46105:46175#L1304">GetMachineCode</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.GetMachineCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) GetMachineCode() (_swig_ret <a href="../../builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.IsTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=46438:46499#L1314">IsTrial</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.IsTrial">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) IsTrial() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.IsValidActivation">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=46651:46722#L1321">IsValidActivation</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.IsValidActivation">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) IsValidActivation() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.SetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=44678:44732#L1262">SetKey</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.SetKey">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) SetKey(arg2 <a href="../../builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.SetMachineCode">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=44960:45022#L1271">SetMachineCode</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.SetMachineCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) SetMachineCode(arg2 <a href="../../builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.SwigIsLicenseManager">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=43694:43748#L1230">SwigIsLicenseManager</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.SwigIsLicenseManager">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) SwigIsLicenseManager()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.Swigcptr">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=43617:43667#L1226">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrMultiImage">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=12849:12880#L213">SwigcptrMultiImage</a>
+				<a class="permalink" href="#SwigcptrMultiImage">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrMultiImage <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrMultiImage.Add">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=15020:15066#L292">Add</a>
+					<a class="permalink" href="#SwigcptrMultiImage.Add">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) Add(arg2 <a href="#Image">Image</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrMultiImage.Capacity">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14276:14335#L267">Capacity</a>
+					<a class="permalink" href="#SwigcptrMultiImage.Capacity">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrMultiImage.Clear">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14885:14923#L287">Clear</a>
+					<a class="permalink" href="#SwigcptrMultiImage.Clear">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) Clear()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrMultiImage.Get">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=15215:15277#L298">Get</a>
+					<a class="permalink" href="#SwigcptrMultiImage.Get">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="#Image">Image</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrMultiImage.IsEmpty">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14680:14737#L280">IsEmpty</a>
+					<a class="permalink" href="#SwigcptrMultiImage.IsEmpty">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrMultiImage.Reserve">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14486:14536#L274">Reserve</a>
+					<a class="permalink" href="#SwigcptrMultiImage.Reserve">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) Reserve(arg2 <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrMultiImage.Set">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=15482:15538#L306">Set</a>
+					<a class="permalink" href="#SwigcptrMultiImage.Set">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="#Image">Image</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrMultiImage.Size">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14074:14129#L260">Size</a>
+					<a class="permalink" href="#SwigcptrMultiImage.Size">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrMultiImage.SwigIsMultiImage">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=12955:13001#L219">SwigIsMultiImage</a>
+					<a class="permalink" href="#SwigcptrMultiImage.SwigIsMultiImage">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) SwigIsMultiImage()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrMultiImage.Swigcptr">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=12882:12928#L215">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrMultiImage.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrMultiImage">SwigcptrMultiImage</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrUtils">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=40942:40968#L1149">SwigcptrUtils</a>
+				<a class="permalink" href="#SwigcptrUtils">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrUtils <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrUtils.ReadImageCV">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=41431:41499#L1170">ReadImageCV</a>
+					<a class="permalink" href="#SwigcptrUtils.ReadImageCV">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUtils">SwigcptrUtils</a>) ReadImageCV(arg2 <a href="../../builtin/#string">string</a>) (_swig_ret <a href="#Image">Image</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUtils.SwigIsUtils">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=41038:41074#L1155">SwigIsUtils</a>
+					<a class="permalink" href="#SwigcptrUtils.SwigIsUtils">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrUtils">SwigcptrUtils</a>) SwigIsUtils()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUtils.Swigcptr">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=40970:41011#L1151">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrUtils.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrUtils">SwigcptrUtils</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrVehicleDetector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=39361:39397#L1105">SwigcptrVehicleDetector</a>
+				<a class="permalink" href="#SwigcptrVehicleDetector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrVehicleDetector <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrVehicleDetector.Detect">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=39980:40068#L1126">Detect</a>
+					<a class="permalink" href="#SwigcptrVehicleDetector.Detect">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetector">SwigcptrVehicleDetector</a>) Detect(arg2 <a href="#Image">Image</a>) (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetector.DetectBatch">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=40339:40443#L1134">DetectBatch</a>
+					<a class="permalink" href="#SwigcptrVehicleDetector.DetectBatch">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetector">SwigcptrVehicleDetector</a>) DetectBatch(arg2 <a href="#MultiImage">MultiImage</a>) (_swig_ret <a href="#VehicleDetectorResultVector">VehicleDetectorResultVector</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetector.SwigIsVehicleDetector">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=39477:39533#L1111">SwigIsVehicleDetector</a>
+					<a class="permalink" href="#SwigcptrVehicleDetector.SwigIsVehicleDetector">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrVehicleDetector">SwigcptrVehicleDetector</a>) SwigIsVehicleDetector()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetector.Swigcptr">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=39399:39450#L1107">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrVehicleDetector.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrVehicleDetector">SwigcptrVehicleDetector</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrVehicleDetectorResult">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=36811:36853#L1030">SwigcptrVehicleDetectorResult</a>
+				<a class="permalink" href="#SwigcptrVehicleDetectorResult">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrVehicleDetectorResult <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResult.GetBboxes">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=38581:38657#L1082">GetBboxes</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResult.GetBboxes">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResult">SwigcptrVehicleDetectorResult</a>) GetBboxes() (_swig_ret <a href="#BBoxVector">BBoxVector</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResult.GetReturnStatus">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=38850:38931#L1089">GetReturnStatus</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResult.GetReturnStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResult">SwigcptrVehicleDetectorResult</a>) GetReturnStatus() (_swig_ret <a href="#IntVector">IntVector</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResult.GetScores">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=38308:38385#L1075">GetScores</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResult.GetScores">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResult">SwigcptrVehicleDetectorResult</a>) GetScores() (_swig_ret <a href="#FloatVector">FloatVector</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResult.GetSize">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=38084:38151#L1068">GetSize</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResult.GetSize">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResult">SwigcptrVehicleDetectorResult</a>) GetSize() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResult.SwigIsVehicleDetectorResult">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36939:37007#L1036">SwigIsVehicleDetectorResult</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResult.SwigIsVehicleDetectorResult">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrVehicleDetectorResult">SwigcptrVehicleDetectorResult</a>) SwigIsVehicleDetectorResult()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResult.Swigcptr">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36855:36912#L1032">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResult.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrVehicleDetectorResult">SwigcptrVehicleDetectorResult</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrVehicleDetectorResultVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=31406:31454#L890">SwigcptrVehicleDetectorResultVector</a>
+				<a class="permalink" href="#SwigcptrVehicleDetectorResultVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrVehicleDetectorResultVector <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.Add">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34242:34321#L969">Add</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Add">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) Add(arg2 <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.Capacity">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33361:33437#L944">Capacity</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Capacity">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.Clear">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34073:34128#L964">Clear</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Clear">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) Clear()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.Get">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34487:34582#L975">Get</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Get">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.IsEmpty">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33834:33908#L957">IsEmpty</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.IsEmpty">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.Reserve">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33605:33672#L951">Reserve</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Reserve">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) Reserve(arg2 <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.Set">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34852:34941#L983">Set</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Set">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.Size">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33125:33197#L937">Size</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Size">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.SwigIsVehicleDetectorResultVector">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=31546:31626#L896">SwigIsVehicleDetectorResultVector</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.SwigIsVehicleDetectorResultVector">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) SwigIsVehicleDetectorResultVector()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrVehicleDetectorResultVector.Swigcptr">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=31456:31519#L892">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrVehicleDetectorResultVector">SwigcptrVehicleDetectorResultVector</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Utils">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=41789:41892#L1181">Utils</a>
+				<a class="permalink" href="#Utils">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type Utils interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsUtils()
+    ReadImageCV(arg2 <a href="../../builtin/#string">string</a>) (_swig_ret <a href="#Image">Image</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewUtils">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=41080:41132#L1158">NewUtils</a>
+					<a class="permalink" href="#NewUtils">¶</a>
+					
+					
+				</h3>
+				<pre>func NewUtils(arg1 <a href="#LicenseManager">LicenseManager</a>) (_swig_ret <a href="#Utils">Utils</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="VehicleDetector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=40737:40940#L1142">VehicleDetector</a>
+				<a class="permalink" href="#VehicleDetector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type VehicleDetector interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsVehicleDetector()
+    Detect(arg2 <a href="#Image">Image</a>) (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)
+    DetectBatch(arg2 <a href="#MultiImage">MultiImage</a>) (_swig_ret <a href="#VehicleDetectorResultVector">VehicleDetectorResultVector</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewVehicleDetector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=39539:39611#L1114">NewVehicleDetector</a>
+					<a class="permalink" href="#NewVehicleDetector">¶</a>
+					
+					
+				</h3>
+				<pre>func NewVehicleDetector(arg1 <a href="#LicenseManager">LicenseManager</a>) (_swig_ret <a href="#VehicleDetector">VehicleDetector</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="VehicleDetectorResult">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=39127:39359#L1096">VehicleDetectorResult</a>
+				<a class="permalink" href="#VehicleDetectorResult">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type VehicleDetectorResult interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsVehicleDetectorResult()
+    GetSize() (_swig_ret <a href="../../builtin/#int">int</a>)
+    GetScores() (_swig_ret <a href="#FloatVector">FloatVector</a>)
+    GetBboxes() (_swig_ret <a href="#BBoxVector">BBoxVector</a>)
+    GetReturnStatus() (_swig_ret <a href="#IntVector">IntVector</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewVehicleDetectorResult">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=37791:37860#L1057">NewVehicleDetectorResult</a>
+					<a class="permalink" href="#NewVehicleDetectorResult">¶</a>
+					
+					
+				</h3>
+				<pre>func NewVehicleDetectorResult(a ...interface{}) <a href="#VehicleDetectorResult">VehicleDetectorResult</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewVehicleDetectorResult__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=37013:37086#L1039">NewVehicleDetectorResult__SWIG_0</a>
+					<a class="permalink" href="#NewVehicleDetectorResult__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewVehicleDetectorResult__SWIG_0() (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewVehicleDetectorResult__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=37453:37552#L1050">NewVehicleDetectorResult__SWIG_1</a>
+					<a class="permalink" href="#NewVehicleDetectorResult__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewVehicleDetectorResult__SWIG_1(arg1 <a href="#VehicleDetectorResult">VehicleDetectorResult</a>) (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="VehicleDetectorResultVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=35349:35691#L995">VehicleDetectorResultVector</a>
+				<a class="permalink" href="#VehicleDetectorResultVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type VehicleDetectorResultVector interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsVehicleDetectorResultVector()
+    Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Reserve(arg2 <a href="../../builtin/#int64">int64</a>)
+    IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    Clear()
+    Add(arg2 <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)
+    Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)
+    Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewVehicleDetectorResultVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=32658:32739#L919">NewVehicleDetectorResultVector</a>
+					<a class="permalink" href="#NewVehicleDetectorResultVector">¶</a>
+					
+					
+				</h3>
+				<pre>func NewVehicleDetectorResultVector(a ...interface{}) <a href="#VehicleDetectorResultVector">VehicleDetectorResultVector</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewVehicleDetectorResultVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=31632:31717#L899">NewVehicleDetectorResultVector__SWIG_0</a>
+					<a class="permalink" href="#NewVehicleDetectorResultVector__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewVehicleDetectorResultVector__SWIG_0() (_swig_ret <a href="#VehicleDetectorResultVector">VehicleDetectorResultVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewVehicleDetectorResultVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=31928:32023#L905">NewVehicleDetectorResultVector__SWIG_1</a>
+					<a class="permalink" href="#NewVehicleDetectorResultVector__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewVehicleDetectorResultVector__SWIG_1(arg1 <a href="../../builtin/#int64">int64</a>) (_swig_ret <a href="#VehicleDetectorResultVector">VehicleDetectorResultVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewVehicleDetectorResultVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=32278:32395#L912">NewVehicleDetectorResultVector__SWIG_2</a>
+					<a class="permalink" href="#NewVehicleDetectorResultVector__SWIG_2">¶</a>
+					
+					
+				</h3>
+				<pre>func NewVehicleDetectorResultVector__SWIG_2(arg1 <a href="#VehicleDetectorResultVector">VehicleDetectorResultVector</a>) (_swig_ret <a href="#VehicleDetectorResultVector">VehicleDetectorResultVector</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer"><a href="../../docs.zip">Download docs.zip</a> to browse offline - Generated by <a href="https://godoc.org/golang.org/x/tools/godoc" target="_blank">godoc</a> + <a href="https://code.rocketnine.space/tslocum/godoc-static" target="_blank">godoc-static</a></div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>
