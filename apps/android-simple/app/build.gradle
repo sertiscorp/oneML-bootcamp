@@ -27,8 +27,8 @@ android {
         applicationId "com.sertiscorp.oneml.onemlsimpleapp"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 5
-        versionName "0.6.0"
+        versionCode 6
+        versionName "v0.7.0-rc.0"
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

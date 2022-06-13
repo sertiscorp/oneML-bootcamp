@@ -8,6 +8,7 @@ stages:
   - docker
   - env-check
   - build
+  - release
 
 #-------------- Scripts --------------
 
@@ -99,6 +100,13 @@ stages:
   needs:
     - gpu-env-check
     - mirror-pull
+
+.base_release: # Base CI for release stage
+  stage: release
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: on_success
+    - when: never
 
 #-------------- Jobs --------------
 
@@ -313,3 +321,40 @@ build-golang:
   extends: .base_build
   script:
     - ./build.sh -t x86_64 -go --clean
+
+update-github-pages:
+  # NOTE: We publish the API doc to GitHub Pages by mirroring `gh-pages` branch from GitLab to GitHub.
+  extends: .base_release
+  variables:
+    TARGET_ARCH: x86_64
+  script:
+    - *git_auth
+    - export BINARY_PATH=${PWD}/assets/binaries/${TARGET_ARCH}
+    - export BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/${CI_COMMIT_TAG}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
+    - apk add --update curl perl && rm -rf /var/cache/apk/*
+    - curl -L ${BASE_URL} > ${BINARY_PATH}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
+    - tar xzf ${BINARY_PATH}/oneml-bootcamp-${TARGET_ARCH}.tar.gz -C ${BINARY_PATH}/ --strip-components=1
+    # Update `gh-pages` branch
+    # Due to the fact that the `gh-pages` branch has its own root parent
+    # different from the main branch, we better check out the `gh-pages` branch
+    # by cloning a new repo for less complicated steps.
+    - git clone -b gh-pages ${CI_REPOSITORY_URL} oneML-bootcamp-gh
+    - cd oneML-bootcamp-gh
+    - cp -r ${BINARY_PATH}/share/doc/oneML/sphinx/* .
+    - cp -r ${BINARY_PATH}/share/doc/oneML/godoc .
+    - COUNT=`git diff | wc -l`
+    # Need some preprocessing before use it as a remote url
+    - export CI_PUSH_REPO=`echo $CI_REPOSITORY_URL | perl -pe 's#.*@(.+?(\:\d+)?)/#git@\1:#'`
+    # Make sure to include .nojekyll for bypassing Jekyll processing on GitHub Pages.
+    # Otherwise, our `_static` folder cannot be served.
+    - touch .nojekyll
+    - >
+      if [ ${COUNT} -ne 0 ]; then
+        echo "Found changes in API docs";
+        git add *;
+        git commit -m "Update GitHub Pages";
+        git remote set-url --push origin "${CI_PUSH_REPO}"
+        git push origin gh-pages;
+      else
+        echo "Not found any changes API in docs. Skipped";
+      fi
