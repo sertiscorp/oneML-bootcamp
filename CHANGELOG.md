@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0] - 2022-06-14
+### Added
+- API reference on Github pages -> [22f7fb22](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/22f7fb223a36215c074f3fe559b4378cdb4608d3)
+
+### Fixed
+- missing dependecies in GPU docker image -> [d960b954](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/d960b954f189295d1f7331d5646de43fa8b093e9)
+
 ## [0.6.0] - 2022-05-31
 ### Added
 - add GPU models -> [4d1dc0a0](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/4d1dc0a01a7c47fa3c27fe51146fe92f5bf10d3c)
