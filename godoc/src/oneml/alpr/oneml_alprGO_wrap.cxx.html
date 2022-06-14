@@ -3001,7 +3001,7 @@
 <span id="L2945" class="ln">  2945</span>  {
 <span id="L2946" class="ln">  2946</span>    try
 <span id="L2947" class="ln">  2947</span>    {
-<span id="L2948" class="ln">  2948</span>      result = (int)(arg1)-&gt;get_size();
+<span id="L2948" class="ln">  2948</span>      result = (int)((oneML::alpr::VehicleDetectorResult const *)arg1)-&gt;get_size();
 <span id="L2949" class="ln">  2949</span>    }
 <span id="L2950" class="ln">  2950</span>    catch (const std::invalid_argument&amp; e)
 <span id="L2951" class="ln">  2951</span>    {
@@ -3628,7 +3628,7 @@
 <span id="L3572" class="ln">  3572</span>  {
 <span id="L3573" class="ln">  3573</span>    try
 <span id="L3574" class="ln">  3574</span>    {
-<span id="L3575" class="ln">  3575</span>      result = (arg1)-&gt;get_key();
+<span id="L3575" class="ln">  3575</span>      result = ((oneML::LicenseManager const *)arg1)-&gt;get_key();
 <span id="L3576" class="ln">  3576</span>    }
 <span id="L3577" class="ln">  3577</span>    catch (const std::invalid_argument&amp; e)
 <span id="L3578" class="ln">  3578</span>    {
@@ -3718,7 +3718,7 @@
 <span id="L3662" class="ln">  3662</span>  {
 <span id="L3663" class="ln">  3663</span>    try
 <span id="L3664" class="ln">  3664</span>    {
-<span id="L3665" class="ln">  3665</span>      result = (arg1)-&gt;get_machine_code();
+<span id="L3665" class="ln">  3665</span>      result = ((oneML::LicenseManager const *)arg1)-&gt;get_machine_code();
 <span id="L3666" class="ln">  3666</span>    }
 <span id="L3667" class="ln">  3667</span>    catch (const std::invalid_argument&amp; e)
 <span id="L3668" class="ln">  3668</span>    {
@@ -3748,7 +3748,7 @@
 <span id="L3692" class="ln">  3692</span>  {
 <span id="L3693" class="ln">  3693</span>    try
 <span id="L3694" class="ln">  3694</span>    {
-<span id="L3695" class="ln">  3695</span>      result = (bool)(arg1)-&gt;is_trial();
+<span id="L3695" class="ln">  3695</span>      result = (bool)((oneML::LicenseManager const *)arg1)-&gt;is_trial();
 <span id="L3696" class="ln">  3696</span>    }
 <span id="L3697" class="ln">  3697</span>    catch (const std::invalid_argument&amp; e)
 <span id="L3698" class="ln">  3698</span>    {
@@ -3778,7 +3778,7 @@
 <span id="L3722" class="ln">  3722</span>  {
 <span id="L3723" class="ln">  3723</span>    try
 <span id="L3724" class="ln">  3724</span>    {
-<span id="L3725" class="ln">  3725</span>      result = (bool)(arg1)-&gt;is_valid_activation();
+<span id="L3725" class="ln">  3725</span>      result = (bool)((oneML::LicenseManager const *)arg1)-&gt;is_valid_activation();
 <span id="L3726" class="ln">  3726</span>    }
 <span id="L3727" class="ln">  3727</span>    catch (const std::invalid_argument&amp; e)
 <span id="L3728" class="ln">  3728</span>    {
@@ -3808,7 +3808,7 @@
 <span id="L3752" class="ln">  3752</span>  {
 <span id="L3753" class="ln">  3753</span>    try
 <span id="L3754" class="ln">  3754</span>    {
-<span id="L3755" class="ln">  3755</span>      result = (oneML::LicenseActivationType)(arg1)-&gt;get_activation_type();
+<span id="L3755" class="ln">  3755</span>      result = (oneML::LicenseActivationType)((oneML::LicenseManager const *)arg1)-&gt;get_activation_type();
 <span id="L3756" class="ln">  3756</span>    }
 <span id="L3757" class="ln">  3757</span>    catch (const std::invalid_argument&amp; e)
 <span id="L3758" class="ln">  3758</span>    {
@@ -3838,7 +3838,7 @@
 <span id="L3782" class="ln">  3782</span>  {
 <span id="L3783" class="ln">  3783</span>    try
 <span id="L3784" class="ln">  3784</span>    {
-<span id="L3785" class="ln">  3785</span>      result = (uint64_t)(arg1)-&gt;get_activation_expiry_date();
+<span id="L3785" class="ln">  3785</span>      result = (uint64_t)((oneML::LicenseManager const *)arg1)-&gt;get_activation_expiry_date();
 <span id="L3786" class="ln">  3786</span>    }
 <span id="L3787" class="ln">  3787</span>    catch (const std::invalid_argument&amp; e)
 <span id="L3788" class="ln">  3788</span>    {

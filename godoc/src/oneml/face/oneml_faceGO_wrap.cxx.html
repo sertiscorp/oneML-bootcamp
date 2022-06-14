@@ -4108,7 +4108,7 @@
 <span id="L4052" class="ln">  4052</span>  {
 <span id="L4053" class="ln">  4053</span>    try
 <span id="L4054" class="ln">  4054</span>    {
-<span id="L4055" class="ln">  4055</span>      result = (int)(arg1)-&gt;get_size();
+<span id="L4055" class="ln">  4055</span>      result = (int)((oneML::face::FaceDetectorResult const *)arg1)-&gt;get_size();
 <span id="L4056" class="ln">  4056</span>    }
 <span id="L4057" class="ln">  4057</span>    catch (const std::invalid_argument&amp; e)
 <span id="L4058" class="ln">  4058</span>    {
@@ -5187,7 +5187,7 @@
 <span id="L5131" class="ln">  5131</span>  {
 <span id="L5132" class="ln">  5132</span>    try
 <span id="L5133" class="ln">  5133</span>    {
-<span id="L5134" class="ln">  5134</span>      result = (int)(arg1)-&gt;get_size();
+<span id="L5134" class="ln">  5134</span>      result = (int)((oneML::face::FaceEmbedderResult const *)arg1)-&gt;get_size();
 <span id="L5135" class="ln">  5135</span>    }
 <span id="L5136" class="ln">  5136</span>    catch (const std::invalid_argument&amp; e)
 <span id="L5137" class="ln">  5137</span>    {
@@ -5217,7 +5217,7 @@
 <span id="L5161" class="ln">  5161</span>  {
 <span id="L5162" class="ln">  5162</span>    try
 <span id="L5163" class="ln">  5163</span>    {
-<span id="L5164" class="ln">  5164</span>      result = (oneML::face::FaceEmbedderStatus)(arg1)-&gt;get_return_status();
+<span id="L5164" class="ln">  5164</span>      result = (oneML::face::FaceEmbedderStatus)((oneML::face::FaceEmbedderResult const *)arg1)-&gt;get_return_status();
 <span id="L5165" class="ln">  5165</span>    }
 <span id="L5166" class="ln">  5166</span>    catch (const std::invalid_argument&amp; e)
 <span id="L5167" class="ln">  5167</span>    {
@@ -6901,7 +6901,7 @@
 <span id="L6845" class="ln">  6845</span>  {
 <span id="L6846" class="ln">  6846</span>    try
 <span id="L6847" class="ln">  6847</span>    {
-<span id="L6848" class="ln">  6848</span>      result = (arg1)-&gt;get_id();
+<span id="L6848" class="ln">  6848</span>      result = ((oneML::face::FaceIdResult const *)arg1)-&gt;get_id();
 <span id="L6849" class="ln">  6849</span>    }
 <span id="L6850" class="ln">  6850</span>    catch (const std::invalid_argument&amp; e)
 <span id="L6851" class="ln">  6851</span>    {
@@ -6931,7 +6931,7 @@
 <span id="L6875" class="ln">  6875</span>  {
 <span id="L6876" class="ln">  6876</span>    try
 <span id="L6877" class="ln">  6877</span>    {
-<span id="L6878" class="ln">  6878</span>      result = (float)(arg1)-&gt;get_nearest_node_distance();
+<span id="L6878" class="ln">  6878</span>      result = (float)((oneML::face::FaceIdResult const *)arg1)-&gt;get_nearest_node_distance();
 <span id="L6879" class="ln">  6879</span>    }
 <span id="L6880" class="ln">  6880</span>    catch (const std::invalid_argument&amp; e)
 <span id="L6881" class="ln">  6881</span>    {
@@ -6961,7 +6961,7 @@
 <span id="L6905" class="ln">  6905</span>  {
 <span id="L6906" class="ln">  6906</span>    try
 <span id="L6907" class="ln">  6907</span>    {
-<span id="L6908" class="ln">  6908</span>      result = (float)(arg1)-&gt;get_combined_distance();
+<span id="L6908" class="ln">  6908</span>      result = (float)((oneML::face::FaceIdResult const *)arg1)-&gt;get_combined_distance();
 <span id="L6909" class="ln">  6909</span>    }
 <span id="L6910" class="ln">  6910</span>    catch (const std::invalid_argument&amp; e)
 <span id="L6911" class="ln">  6911</span>    {
@@ -6991,7 +6991,7 @@
 <span id="L6935" class="ln">  6935</span>  {
 <span id="L6936" class="ln">  6936</span>    try
 <span id="L6937" class="ln">  6937</span>    {
-<span id="L6938" class="ln">  6938</span>      result = (bool)(arg1)-&gt;is_identifiable();
+<span id="L6938" class="ln">  6938</span>      result = (bool)((oneML::face::FaceIdResult const *)arg1)-&gt;is_identifiable();
 <span id="L6939" class="ln">  6939</span>    }
 <span id="L6940" class="ln">  6940</span>    catch (const std::invalid_argument&amp; e)
 <span id="L6941" class="ln">  6941</span>    {
@@ -7021,7 +7021,7 @@
 <span id="L6965" class="ln">  6965</span>  {
 <span id="L6966" class="ln">  6966</span>    try
 <span id="L6967" class="ln">  6967</span>    {
-<span id="L6968" class="ln">  6968</span>      result = (oneML::face::FaceIdStatus)(arg1)-&gt;get_return_status();
+<span id="L6968" class="ln">  6968</span>      result = (oneML::face::FaceIdStatus)((oneML::face::FaceIdResult const *)arg1)-&gt;get_return_status();
 <span id="L6969" class="ln">  6969</span>    }
 <span id="L6970" class="ln">  6970</span>    catch (const std::invalid_argument&amp; e)
 <span id="L6971" class="ln">  6971</span>    {
@@ -7973,7 +7973,7 @@
 <span id="L7917" class="ln">  7917</span>  {
 <span id="L7918" class="ln">  7918</span>    try
 <span id="L7919" class="ln">  7919</span>    {
-<span id="L7920" class="ln">  7920</span>      result = (arg1)-&gt;get_key();
+<span id="L7920" class="ln">  7920</span>      result = ((oneML::LicenseManager const *)arg1)-&gt;get_key();
 <span id="L7921" class="ln">  7921</span>    }
 <span id="L7922" class="ln">  7922</span>    catch (const std::invalid_argument&amp; e)
 <span id="L7923" class="ln">  7923</span>    {
@@ -8063,7 +8063,7 @@
 <span id="L8007" class="ln">  8007</span>  {
 <span id="L8008" class="ln">  8008</span>    try
 <span id="L8009" class="ln">  8009</span>    {
-<span id="L8010" class="ln">  8010</span>      result = (arg1)-&gt;get_machine_code();
+<span id="L8010" class="ln">  8010</span>      result = ((oneML::LicenseManager const *)arg1)-&gt;get_machine_code();
 <span id="L8011" class="ln">  8011</span>    }
 <span id="L8012" class="ln">  8012</span>    catch (const std::invalid_argument&amp; e)
 <span id="L8013" class="ln">  8013</span>    {
@@ -8093,7 +8093,7 @@
 <span id="L8037" class="ln">  8037</span>  {
 <span id="L8038" class="ln">  8038</span>    try
 <span id="L8039" class="ln">  8039</span>    {
-<span id="L8040" class="ln">  8040</span>      result = (bool)(arg1)-&gt;is_trial();
+<span id="L8040" class="ln">  8040</span>      result = (bool)((oneML::LicenseManager const *)arg1)-&gt;is_trial();
 <span id="L8041" class="ln">  8041</span>    }
 <span id="L8042" class="ln">  8042</span>    catch (const std::invalid_argument&amp; e)
 <span id="L8043" class="ln">  8043</span>    {
@@ -8123,7 +8123,7 @@
 <span id="L8067" class="ln">  8067</span>  {
 <span id="L8068" class="ln">  8068</span>    try
 <span id="L8069" class="ln">  8069</span>    {
-<span id="L8070" class="ln">  8070</span>      result = (bool)(arg1)-&gt;is_valid_activation();
+<span id="L8070" class="ln">  8070</span>      result = (bool)((oneML::LicenseManager const *)arg1)-&gt;is_valid_activation();
 <span id="L8071" class="ln">  8071</span>    }
 <span id="L8072" class="ln">  8072</span>    catch (const std::invalid_argument&amp; e)
 <span id="L8073" class="ln">  8073</span>    {
@@ -8153,7 +8153,7 @@
 <span id="L8097" class="ln">  8097</span>  {
 <span id="L8098" class="ln">  8098</span>    try
 <span id="L8099" class="ln">  8099</span>    {
-<span id="L8100" class="ln">  8100</span>      result = (oneML::LicenseActivationType)(arg1)-&gt;get_activation_type();
+<span id="L8100" class="ln">  8100</span>      result = (oneML::LicenseActivationType)((oneML::LicenseManager const *)arg1)-&gt;get_activation_type();
 <span id="L8101" class="ln">  8101</span>    }
 <span id="L8102" class="ln">  8102</span>    catch (const std::invalid_argument&amp; e)
 <span id="L8103" class="ln">  8103</span>    {
@@ -8183,7 +8183,7 @@
 <span id="L8127" class="ln">  8127</span>  {
 <span id="L8128" class="ln">  8128</span>    try
 <span id="L8129" class="ln">  8129</span>    {
-<span id="L8130" class="ln">  8130</span>      result = (uint64_t)(arg1)-&gt;get_activation_expiry_date();
+<span id="L8130" class="ln">  8130</span>      result = (uint64_t)((oneML::LicenseManager const *)arg1)-&gt;get_activation_expiry_date();
 <span id="L8131" class="ln">  8131</span>    }
 <span id="L8132" class="ln">  8132</span>    catch (const std::invalid_argument&amp; e)
 <span id="L8133" class="ln">  8133</span>    {
