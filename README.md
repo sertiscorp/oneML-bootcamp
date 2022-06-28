@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="assets/oneML-Logo-01.png" width="400">
+</div>
+
 # oneML-bootcamp
 
 Introduction and sample apps to showcase `oneML` functionalities and possible use cases.
