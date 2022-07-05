@@ -17,6 +17,9 @@ IF "%~1"=="-cc" (
 IF "%~1"=="-py" (
   SET PYTHON_BUILD=true
 )
+IF "%~1"=="-cs" (
+  SET CSHARP_BUILD=true
+)
 IF "%~1"=="-jni" (
   SET JAVA_BUILD=true
 )
@@ -66,7 +69,7 @@ IF NOT "%CLEAN%"=="" (
 )
 
 :: artifacts
-SET TAG=v0.7.1
+SET TAG=v0.8.0-rc.0
 SET ARCHIVE_NAME=oneml-bootcamp-%TARGET_ARCH%.tar.gz
 SET BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/%TAG%/%ARCHIVE_NAME%
 IF NOT EXIST "%BINARY_PATH%\%ARCHIVE_NAME%" (
@@ -133,6 +136,44 @@ CD %BINARY_PATH%\bindings\python
 POWERSHELL -command "& .\install_oneml.ps1"
 
 :end_python_build
+
+IF NOT "%CSHARP_BUILD%"=="" (
+  IF NOT "%CLEAN%"=="" (
+    GOTO csharp_build
+  )
+  IF NOT EXIST "%BINARY_PATH%\bindings\csharp\face\build" (
+    GOTO java_build
+  )
+  IF NOT EXIST "%BINARY_PATH%\bindings\csharp\alpr\build" (
+    GOTO java_build
+  )
+  
+  ECHO Using existing C# binaries. Use --clean to rebuild.
+  GOTO end_csharp_build
+) ELSE (
+  GOTO end_csharp_build
+)
+
+:csharp_build
+:: Build Java application
+CD %BINARY_PATH%\bindings\csharp\face
+POWERSHELL -command "& .\build.ps1"
+CD ..\alpr
+POWERSHELL -command "& .\build.ps1"
+CD ..\..\..\..\..\..\apps\csharp
+
+SET APPS=FaceEmbedderApp FaceIdApp FaceDetectorApp FaceVerificationApp VehicleDetectorApp
+FOR %%A IN (%APPS%) DO (
+  dotnet new console -o %%A
+  CD %%A
+  dotnet build
+  CD ..
+)
+
+COPY %BINARY_PATH%\bin\oneml.dll .
+COPY %BINARY_PATH%\bindings\csharp\face\build\Release\oneMLfaceCSharp.dll .
+COPY %BINARY_PATH%\bindings\csharp\alpr\build\Release\oneMLalprCSharp.dll .
+:end_csharp_build
 
 IF NOT "%JAVA_BUILD%"=="" (
   IF NOT "%CLEAN%"=="" (
@@ -209,6 +250,7 @@ ECHO Usage: build.bat
 ECHO         -t target_arch
 ECHO         [-cc cpp_apps]
 ECHO         [-py python_apps]
+ECHO         [-cs csharp_apps]
 ECHO         [-jni java_apps]
 ECHO         [-go go_apps]
 ECHO         [--clean clean_build]
@@ -217,6 +259,7 @@ ECHO Example: build.bat
 ECHO           -t x86_64
 ECHO           [-cc]
 ECHO           [-py]
+ECHO           [-cs]
 ECHO           [-jni]
 ECHO           [-go]
 ECHO           [--clean]

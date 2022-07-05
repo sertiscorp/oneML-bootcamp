@@ -41,3 +41,12 @@ RUN curl -o go-linux-amd64.tar.gz -Lq https://golang.org/dl/go1.15.12.linux-amd6
 ENV GOROOT=/usr/local/go
 ENV GOBIN=$GOROOT/bin
 ENV PATH=$PATH:$GOBIN
+
+# Install dotnet
+RUN curl https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb > packages-microsoft-prod.deb  && \
+    dpkg -i packages-microsoft-prod.deb && \
+    rm packages-microsoft-prod.deb && \
+    apt-get update && \
+    apt-get install -y \
+        dotnet-sdk-6.0 \
+        dotnet-runtime-6.0
