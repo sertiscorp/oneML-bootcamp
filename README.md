@@ -51,10 +51,10 @@ Introduction and sample apps to showcase `oneML` functionalities and possible us
 | Coming soon      | `iOS`                                                                                                                  |
 
 ### What is `oneML`?
-`oneML` is a fully-fledged C++ SDK providing APIs for a number of different AI/ML applications. It can be deployed on any target (CPU, GPU, CUDA) and platform (Android, iOS, embedded Linux, Linux, Windows). Morveover, `oneML` library provides API bindings in other programming languages such as Java, Python, and Golang.
+`oneML` is a fully-fledged C++ SDK providing APIs for a number of different AI/ML applications. Potentially, it can be deployed on any target (CPU, GPU, CUDA) and platform (Android, iOS, embedded Linux, Linux, Windows). Morveover, `oneML` library provides API bindings in other programming languages such as Java, Python, C# and Golang.
 
 ### What can you do with this repository?
-This repository provides `oneML` library (community edition) and its example applications in 4 programming languages: C++, Java, Python, and Golang (for Linux only). In case of Android development, you can use `oneML`'s Java bindings.
+This repository provides `oneML` library (community edition) and its example applications in 4 programming languages: C++, Java, Python, C# and Golang (for Linux only). In case of Android development, you can use `oneML`'s Java bindings.
 Please feel free to open an issue on GitHub if you found any issue.
 
 ## Features
@@ -322,6 +322,11 @@ To build `Python` apps for `aarch64-linux-gnu` target:
 ./build.sh -t aarch64-linux-gnu -py --clean
 ```
 
+To build `C#` apps for `x86_64` target:
+```bash
+./build.sh -t x86_64 -cs --clean
+```
+
 To build `Java` apps for `x86_64` target:
 ```bash
 ./build.sh -t x86_64 -jni --clean
@@ -358,6 +363,7 @@ successfully:
 - `tar` to unpack some archives
 - CMake 3.17 or newer (for `C++` build only)
 - Python 3.6 or newer and `pip` (for `Python` build only)
+- `.NET6` (for `C#` build only)
 - JDK 1.8 (for `Java` build only)
 - Android Studio xxx (for `Android` build only)
 - Golang 1.15 (for `Golang` build only)
@@ -382,6 +388,11 @@ To build `Python` apps for `msvc-x64` target:
 build.bat -t msvc-x64 -py --clean
 ```
 
+To build `C#` apps for `msvc-x64` target:
+```batch
+build.bat -t msvc-x64 -cs --clean
+```
+
 To build `Java` apps for `msvc-x64` target:
 ```batch
 build.bat -t msvc-x64 -jni --clean
@@ -402,7 +413,7 @@ Currently `x86-64-cuda` target supports only Cuda 11.x runtime on Linux only. We
 For compute capabilities later than `7.5`, it might not work.
 
 ## API Reference
-- [C++/Java/Python APIs](https://sertiscorp.github.io/oneML-bootcamp)
+- [C++/Java/Python/C# APIs](https://sertiscorp.github.io/oneML-bootcamp)
 - [Golang APIs](https://sertiscorp.github.io/oneML-bootcamp/godoc)
 
 ## Usage
@@ -410,6 +421,7 @@ It is possible to find more details about the usage in each programming language
 specific folder in `apps` folder. You can click on the following links:
 - [C++ apps](https://github.com/sertiscorp/oneML-bootcamp/tree/develop/apps/cpp)
 - [Python apps](https://github.com/sertiscorp/oneML-bootcamp/tree/develop/apps/python)
+- [C# apps](https://github.com/sertiscorp/oneML-bootcamp/tree/develop/apps/csharp)
 - [Java apps](https://github.com/sertiscorp/oneML-bootcamp/tree/develop/apps/java)
 - [Golang apps](https://github.com/sertiscorp/oneML-bootcamp/tree/develop/apps/golang)
 
