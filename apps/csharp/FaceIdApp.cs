@@ -1,4 +1,4 @@
-using OneML;
+using OneML.Face;
 
 class FaceIdApp {
     static void Print(FaceIdResult result) {

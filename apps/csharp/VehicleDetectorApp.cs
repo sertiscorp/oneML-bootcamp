@@ -1,4 +1,4 @@
-using OneML;
+using OneML.Alpr;
 
 class VehicleDetectorApp {
     static void Main(string[] args) {
