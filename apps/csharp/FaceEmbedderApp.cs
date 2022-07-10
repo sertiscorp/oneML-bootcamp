@@ -1,4 +1,4 @@
-using OneML;
+using OneML.Face;
 
 class FaceEmbedderApp {
     static void PrintEmbedding(FaceEmbedderResult result) {

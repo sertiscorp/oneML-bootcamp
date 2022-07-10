@@ -1,4 +1,4 @@
-using OneML;
+using OneML.Face;
 
 class FaceDetectorApp {
     static void Main(string[] args) {
