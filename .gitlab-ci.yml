@@ -317,10 +317,25 @@ build-java-arm-linux-android:
     - android-env-check
     - mirror-pull
 
-build-golang:
+build-golang-x86_64:
   extends: .base_build
   script:
     - ./build.sh -t x86_64 -go --clean
+
+build-golang-x86_64-cuda:
+  extends: .base_build_gpu
+  script:
+    - ./build.sh -t x86_64-cuda -go --clean
+
+build-csharp-x86_64:
+  extends: .base_build
+  script:
+    - ./build.sh -t x86_64 -cs --clean
+
+build-csharp-x86_64-cuda:
+  extends: .base_build_gpu
+  script:
+    - ./build.sh -t x86_64-cuda -cs --clean
 
 update-github-pages:
   # NOTE: We publish the API doc to GitHub Pages by mirroring `gh-pages` branch from GitLab to GitHub.

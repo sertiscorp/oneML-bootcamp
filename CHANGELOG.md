@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] - 2022-07-12
+### Added
+- support for C#/.NET -> [05bda49c](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/05bda49c69d4df098bc69aa035a3bf6d1d0a9fb1)
+
+### Changed
+- align namespace convention for C# apps -> [3e14941c](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/3e14941ce791dd77b7f29a20e759ba1fc219bb65)
+
 ## [0.7.1] - 2022-06-28
 ### Changed
 - restructure README -> [dc0851cc](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/dc0851ccbad21a2deedca969f04a1bf97f017ccd)

@@ -10,6 +10,7 @@ print_usage() {
   echo "        -t target_arch \\"
   echo "        [-cc cpp_apps] \\"
   echo "        [-py python_apps] \\"
+  echo "        [-cs csharp] \\"
   echo "        [-jni java_apps] \\"
   echo "        [-go go_apps] \\"
   echo "        [--clean clean_build] \\"
@@ -18,6 +19,7 @@ print_usage() {
   echo "          -t x86_64 \\"
   echo "          [-cc] \\"
   echo "          [-py] \\"
+  echo "          [-cs] \\"
   echo "          [-jni] \\"
   echo "          [-go] \\"
   echo "          [--clean] \\"
@@ -49,6 +51,10 @@ do
       ;;
     -py)
       PYTHON_BUILD=true
+      shift # past argument
+      ;;
+    -cs)
+      CSHARP_BUILD=true
       shift # past argument
       ;;
     -jni)
@@ -102,7 +108,7 @@ then
 fi
 
 # artifacts
-TAG=v0.7.1
+TAG=v0.8.0
 BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/${TAG}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
 if [ ! -f "$BINARY_PATH/oneml-bootcamp-${TARGET_ARCH}.tar.gz" ];
 then
@@ -150,6 +156,27 @@ then
   else
     echo "Using existing oneML installation. Use --clean to reinstall."
   fi
+fi
+
+if [[ -v CSHARP_BUILD ]];
+then
+  cd ${BINARY_PATH}/bindings/csharp/face && ./build.sh
+  cd ${BINARY_PATH}/bindings/csharp/alpr && ./build.sh
+  if [[ -v LD_LIBRARY_PATH ]];
+  then
+    export LD_LIBRARY_PATH=${BINARY_PATH}/bindings/csharp/face/build:${BINARY_PATH}/bindings/csharp/alpr/build:$LD_LIBRARY_PATH
+  else
+    export LD_LIBRARY_PATH=${BINARY_PATH}/bindings/csharp/face/build:${BINARY_PATH}/bindings/csharp/alpr/build
+  fi
+
+  APPS=FaceDetectorApp
+  for APP in ${APPS//,/ };
+  do
+    dotnet new console -o ${APP}
+    cd ${APP}
+    dotnet build
+    cd ..
+  done
 fi
 
 if [[ -v JAVA_BUILD && ! -v ANDROID_BUILD ]];
