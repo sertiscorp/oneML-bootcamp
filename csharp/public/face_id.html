@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>C# Face ID API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C# Face Pad API" href="face_pad.html" />
+    <link rel="prev" title="C# Face Embedder API" href="face_embedder.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
+</ul>
+<p><span class="caption-text">C# Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C# APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">C# Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">C# Face Embedder API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C# Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C# Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">C# Utils API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">C# License Manager API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C# Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C# Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">C# APIs</a> &raquo;</li>
+        
+      <li>C# Face ID API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/csharp/public/face_id.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="c-face-id-api">
+<span id="cs-public-face-id"></span><h1>C# Face ID API<a class="headerlink" href="#c-face-id-api" title="Permalink to this headline">¶</a></h1>
+<p>OneML model for face verification and face identification.</p>
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_id"></span><code class="sig-name descname">OneML.Face.FaceId : public global.SystemIDisposable</code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError6FaceIdE14LicenseManager">
+<span id="_CPPv3N19PhonyNameDueToError6FaceIdE14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError6FaceIdE14LicenseManager"></span><span id="PhonyNameDueToError::FaceId__LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1a582585b8ad1a3b82dd7631df6b1574a3"></span><code class="sig-name descname">FaceId</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError6FaceIdE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a FaceId object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager instance. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError6FaceIdE12FaceEmbedder14LicenseManager">
+<span id="_CPPv3N19PhonyNameDueToError6FaceIdE12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError6FaceIdE12FaceEmbedder14LicenseManager"></span><span id="PhonyNameDueToError::FaceId__FaceEmbedder.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1ae5b4769f40075ba291f53b125ddc1068"></span><code class="sig-name descname">FaceId</code><span class="sig-paren">(</span><a class="reference internal" href="face_embedder.html#_CPPv4N19PhonyNameDueToError12FaceEmbedderE14LicenseManager" title="PhonyNameDueToError::FaceEmbedder">FaceEmbedder</a> <em>embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError6FaceIdE12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a FaceId object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">embedder</span></code>: FaceEmbedder instance. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager instance. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError7PredictE10ImageBatch">
+<span id="_CPPv3N19PhonyNameDueToError7PredictE10ImageBatch"></span><span id="_CPPv2N19PhonyNameDueToError7PredictE10ImageBatch"></span><span id="PhonyNameDueToError::Predict__ImageBatch"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1a325e9148317275035321b22671f6b71e"></span>FaceIdResultList <code class="sig-name descname">Predict</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7PredictE10ImageBatch" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>makes a prediction. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceIdResultList</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">imgs</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError7PredictE5Image">
+<span id="_CPPv3N19PhonyNameDueToError7PredictE5Image"></span><span id="_CPPv2N19PhonyNameDueToError7PredictE5Image"></span><span id="PhonyNameDueToError::Predict__Image"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1a908c563b4c16ab8c8a4d1aa7cfddf088"></span>FaceIdResult <code class="sig-name descname">Predict</code><span class="sig-paren">(</span>Image <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7PredictE5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>makes a prediction. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceIdResult</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError15IsTheSamePersonE5Image5Image">
+<span id="_CPPv3N19PhonyNameDueToError15IsTheSamePersonE5Image5Image"></span><span id="_CPPv2N19PhonyNameDueToError15IsTheSamePersonE5Image5Image"></span><span id="PhonyNameDueToError::IsTheSamePerson__Image.Image"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1ab1b914720a49562be1493a1250f57570"></span>bool <code class="sig-name descname">IsTheSamePerson</code><span class="sig-paren">(</span>Image <em>img1</em>, Image <em>img2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError15IsTheSamePersonE5Image5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>checks whether the two <a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a>’s are of the same person. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">img1</span></code>: <a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a> of the first person to compare. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">img2</span></code>: <a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a> of the second person to compare. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError15IsTheSamePersonE9Embedding5Image">
+<span id="_CPPv3N19PhonyNameDueToError15IsTheSamePersonE9Embedding5Image"></span><span id="_CPPv2N19PhonyNameDueToError15IsTheSamePersonE9Embedding5Image"></span><span id="PhonyNameDueToError::IsTheSamePerson__Embedding.Image"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1a60b8b68cd4c0885d69d228ab993142b0"></span>SamePersonResult <code class="sig-name descname">IsTheSamePerson</code><span class="sig-paren">(</span>Embedding <em>face_emb</em>, Image <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError15IsTheSamePersonE9Embedding5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>checks whether the given embedding <code class="docutils literal notranslate"><span class="pre">face_emb</span></code> is the same person as the one in <code class="docutils literal notranslate"><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref"><span class="pre">Image</span></span></a></code>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>SamePersonResult</strong>.. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">face_emb</span></code>: an embedding representing the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: <a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a> of the second person to compare. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError10RegisterIdE6string9Embedding">
+<span id="_CPPv3N19PhonyNameDueToError10RegisterIdE6string9Embedding"></span><span id="_CPPv2N19PhonyNameDueToError10RegisterIdE6string9Embedding"></span><span id="PhonyNameDueToError::RegisterId__string.Embedding"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1a6e4bb1f19cd6ebfd5759f844609d2f8d"></span>int <code class="sig-name descname">RegisterId</code><span class="sig-paren">(</span>string <em>id</em>, Embedding <em>face_emb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError10RegisterIdE6string9Embedding" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>registers an <code class="docutils literal notranslate"><span class="pre">id</span></code> with embedding <code class="docutils literal notranslate"><span class="pre">face_emb</span></code>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an embedding size. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: string id of the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">face_emb</span></code>: an embedding representing the registered user. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError10RegisterIdE6string10ImageBatchb">
+<span id="_CPPv3N19PhonyNameDueToError10RegisterIdE6string10ImageBatchb"></span><span id="_CPPv2N19PhonyNameDueToError10RegisterIdE6string10ImageBatchb"></span><span id="PhonyNameDueToError::RegisterId__string.ImageBatch.b"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1afbc1f6bf57496157f0d4f8ea23b0acaa"></span>Embedding <code class="sig-name descname">RegisterId</code><span class="sig-paren">(</span>string <em>id</em>, ImageBatch <em>imgs</em>, bool <em>avg_emb</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError10RegisterIdE6string10ImageBatchb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>registers an <code class="docutils literal notranslate"><span class="pre">id</span></code> with an <a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>EmbeddingList</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: string id of the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imgs</span></code>: a batch of images representing the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">avg_emb</span></code>: a boolean whether to average all images in <code class="docutils literal notranslate"><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image_batch"><span class="std std-ref"><span class="pre">ImageBatch</span></span></a></code> as face embedding. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError10RegisterIdE6string5Image">
+<span id="_CPPv3N19PhonyNameDueToError10RegisterIdE6string5Image"></span><span id="_CPPv2N19PhonyNameDueToError10RegisterIdE6string5Image"></span><span id="PhonyNameDueToError::RegisterId__string.Image"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1a3fd7cd53b82f28eeae540fe87c9dbe46"></span>Embedding <code class="sig-name descname">RegisterId</code><span class="sig-paren">(</span>string <em>id</em>, Image <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError10RegisterIdE6string5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>registers an <code class="docutils literal notranslate"><span class="pre">id</span></code> with an <a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>Embedding</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: string id of the registered user. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: an image representing the registered user. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError6GetIdsEv">
+<span id="_CPPv3N19PhonyNameDueToError6GetIdsEv"></span><span id="_CPPv2N19PhonyNameDueToError6GetIdsEv"></span><span id="PhonyNameDueToError::GetIds"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_1ade640049808c264a5e7dd680c18d67ec"></span>IdList <code class="sig-name descname">GetIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError6GetIdsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>gets all user ids in the gallery. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>IdList</strong> representing all user ids in the gallery. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_id_result"></span><code class="sig-name descname">OneML.Face.FaceIdResult : public global.SystemIDisposable</code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">
+<span id="_CPPv3N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="_CPPv2N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="PhonyNameDueToError::GetReturnStatus"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_id_result_1aeb1580a477e08f861ec72909fd3ee9e5"></span>int <code class="sig-name descname">GetReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>returns return status. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an int return status. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_id_result_list"></span><code class="sig-name descname">OneML.Face.FaceIdResultList : public global.SystemIDisposable , public global.SystemCollections.IEnumerable , public global::SystemCollections::Generic::IEnumerable&lt; FaceIdResult &gt;</code></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_id_result_list_1_1_face_id_result_list_enumerator"></span><code class="sig-name descname">FaceIdResultListEnumerator : public global.SystemCollections.IEnumerator , public global::SystemCollections::Generic::IEnumerator&lt; FaceIdResult &gt;</code></dt>
+<dd><p>Note that the IEnumerator documentation requires an InvalidOperationException to be thrown whenever the collection is modified. </p>
+<p>This has been done for changes in the size of the collection but not when one of the elements of the collection is modified as it is a bit tricky to detect unmanaged code that modifies the collection under our feet. </p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="cpp enum">
+<dt id="_CPPv412FaceIdStatus">
+<span id="_CPPv312FaceIdStatus"></span><span id="_CPPv212FaceIdStatus"></span><span class="target" id="namespace_one_m_l_1_1_face_1a60b8d738be3e8740fabac6740eef2de5"></span><em class="property">enum </em><code class="sig-name descname">FaceIdStatus</code><a class="headerlink" href="#_CPPv412FaceIdStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N12FaceIdStatus5EmptyE">
+<span id="_CPPv3N12FaceIdStatus5EmptyE"></span><span id="_CPPv2N12FaceIdStatus5EmptyE"></span><span class="target" id="namespace_one_m_l_1_1_face_1a60b8d738be3e8740fabac6740eef2de5ace2c8aed9c2fa0cfbed56cbda4d8bf07"></span><em class="property">enumerator </em><code class="sig-name descname">Empty</code><a class="headerlink" href="#_CPPv4N12FaceIdStatus5EmptyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N12FaceIdStatus7SuccessE">
+<span id="_CPPv3N12FaceIdStatus7SuccessE"></span><span id="_CPPv2N12FaceIdStatus7SuccessE"></span><span class="target" id="namespace_one_m_l_1_1_face_1a60b8d738be3e8740fabac6740eef2de5a505a83f220c02df2f85c3810cd9ceb38"></span><em class="property">enumerator </em><code class="sig-name descname">Success</code><a class="headerlink" href="#_CPPv4N12FaceIdStatus7SuccessE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N12FaceIdStatus4FailE">
+<span id="_CPPv3N12FaceIdStatus4FailE"></span><span id="_CPPv2N12FaceIdStatus4FailE"></span><span class="target" id="namespace_one_m_l_1_1_face_1a60b8d738be3e8740fabac6740eef2de5aceaa0734f0b3c738120c67344d8f3ec1"></span><em class="property">enumerator </em><code class="sig-name descname">Fail</code><a class="headerlink" href="#_CPPv4N12FaceIdStatus4FailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="face_pad.html" class="btn btn-neutral float-right" title="C# Face Pad API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="face_embedder.html" class="btn btn-neutral float-left" title="C# Face Embedder API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

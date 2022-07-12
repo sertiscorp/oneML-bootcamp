@@ -63,10 +63,6 @@
           
             
             
-              <div class="version">
-                v3.5.1
-              </div>
-            
           
 
           
@@ -112,6 +108,12 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Java Vehicle Detector Example</a></li>
 </ul>
 </li>
+</ul>
+<p><span class="caption-text">C# Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html">C# APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-data-structures">C# Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-examples">C# Examples</a></li>
 </ul>
 
             
@@ -184,52 +186,49 @@
   <section id="java-vehicle-detector-example-1">
 <span id="java-vehicle-detector-example"></span><h1>Java Vehicle Detector Example<a class="headerlink" href="#java-vehicle-detector-example-1" title="Permalink to this headline">¶</a></h1>
 <p>Initialize vehicle detector model</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.sertiscorp.oneml.alpr.*</span><span class="p">;</span>
-<span class="n">VehicleDetector</span> <span class="n">detector</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VehicleDetector</span><span class="p">();</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.alpr.*</span><span class="p">;</span><span class="w"></span>
+<span class="n">VehicleDetector</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VehicleDetector</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Initialize vehicle detector model with licensing</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.sertiscorp.oneml.alpr.*</span><span class="p">;</span>
-<span class="n">LicenseManager</span> <span class="n">license_manager</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LicenseManager</span><span class="p">();</span>
-<span class="n">license_manager</span><span class="p">.</span><span class="na">set_key</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span>
-<span class="n">license_manager</span><span class="p">.</span><span class="na">activate_key</span><span class="p">();</span>
-<span class="n">VehicleDetector</span> <span class="n">detector</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VehicleDetector</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.alpr.*</span><span class="p">;</span><span class="w"></span>
+<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span><span class="w"></span>
+<span class="n">VehicleDetector</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VehicleDetector</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span> <span class="n">utils</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Utils</span><span class="p">();</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils with licensing</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span> <span class="n">utils</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Utils</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Read input as BufferedImage</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">BufferedImage</span><span class="o">&gt;</span> <span class="n">imgs</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
-<span class="n">ImageBatch</span> <span class="n">batch</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ImageBatch</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="n">imgs</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">file</span><span class="p">);</span><span class="w"></span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">BufferedImage</span><span class="o">&gt;</span><span class="w"> </span><span class="n">imgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">img</span><span class="p">);</span><span class="w"></span>
+<span class="n">ImageBatch</span><span class="w"> </span><span class="n">batch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ImageBatch</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="n">imgs</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Read input as oneML’s Image</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span> <span class="n">img</span> <span class="o">=</span> <span class="n">utils</span><span class="p">.</span><span class="na">readImageCV</span><span class="p">(</span><span class="n">file_path</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="na">readImageCV</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Run the model</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">VehicleDetectorResultList</span> <span class="n">results</span> <span class="o">=</span> <span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">batch</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">VehicleDetectorResultList</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">batch</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">VehicleDetectorResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">VehicleDetectorResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">img</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>And get the output</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">scores</span><span class="p">{};</span>
-<span class="nl">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">oneML</span><span class="p">::</span><span class="n">alpr</span><span class="p">::</span><span class="n">BBox</span><span class="o">&gt;</span> <span class="n">bboxes</span><span class="p">{};</span>
-
-<span class="n">ScoreList</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_scores</span><span class="p">();</span>
-<span class="n">BBoxList</span> <span class="n">bboxes</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_bboxes</span><span class="p">();</span>
-<span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_size</span><span class="p">();</span>
-<span class="n">StatusCodeList</span> <span class="n">statuses</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">get_return_status</span><span class="p">();</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ScoreList</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getScores</span><span class="p">();</span><span class="w"></span>
+<span class="n">BBoxList</span><span class="w"> </span><span class="n">bboxes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getBBoxes</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getSize</span><span class="p">();</span><span class="w"></span>
+<span class="n">StatusCodeList</span><span class="w"> </span><span class="n">statuses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

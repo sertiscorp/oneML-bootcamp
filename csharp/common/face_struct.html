@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>C# Face Structures &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C# Alpr Structures" href="alpr_struct.html" />
+    <link rel="prev" title="C# License Manager API" href="../public/license_manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
+</ul>
+<p><span class="caption-text">C# Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">C# APIs</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#c-data-structures">C# Data Structures</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C# Face Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpr_struct.html">C# Alpr Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C# Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">C# APIs</a> &raquo;</li>
+        
+      <li>C# Face Structures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/csharp/common/face_struct.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="c-face-structures">
+<span id="cs-common-face-struct"></span><h1>C# Face Structures<a class="headerlink" href="#c-face-structures" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_image"></span><code class="sig-name descname">OneML.Face.Image : public global.SystemIDisposable</code></dt>
+<dd><p>The <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> class is used as a representation of an input image. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError8SetWidthE6ushort">
+<span id="_CPPv3N19PhonyNameDueToError8SetWidthE6ushort"></span><span id="_CPPv2N19PhonyNameDueToError8SetWidthE6ushort"></span><span id="PhonyNameDueToError::SetWidth__ushort"></span><span class="target" id="class_one_m_l_1_1_face_1_1_image_1ad1e40de8a62db0056bf0cb88936bff12"></span>void <code class="sig-name descname">SetWidth</code><span class="sig-paren">(</span>ushort <em>value</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>Set <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> width. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: an integer value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError9SetHeightE6ushort">
+<span id="_CPPv3N19PhonyNameDueToError9SetHeightE6ushort"></span><span id="_CPPv2N19PhonyNameDueToError9SetHeightE6ushort"></span><span id="PhonyNameDueToError::SetHeight__ushort"></span><span class="target" id="class_one_m_l_1_1_face_1_1_image_1a424922b5cc0ed56574c5fa38d1fccbee"></span>void <code class="sig-name descname">SetHeight</code><span class="sig-paren">(</span>ushort <em>value</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>Set <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> height. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: an integer value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError8SetDepthE6ushort">
+<span id="_CPPv3N19PhonyNameDueToError8SetDepthE6ushort"></span><span id="_CPPv2N19PhonyNameDueToError8SetDepthE6ushort"></span><span id="PhonyNameDueToError::SetDepth__ushort"></span><span class="target" id="class_one_m_l_1_1_face_1_1_image_1aa7d5b8b6e1255e67c16ecedabde9882a"></span>void <code class="sig-name descname">SetDepth</code><span class="sig-paren">(</span>ushort <em>value</em><span class="sig-paren">)</span><br /></dt>
+<dd><p>Set <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> depth. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: an integer value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError8GetWidthEv">
+<span id="_CPPv3N19PhonyNameDueToError8GetWidthEv"></span><span id="_CPPv2N19PhonyNameDueToError8GetWidthEv"></span><span id="PhonyNameDueToError::GetWidth"></span><span class="target" id="class_one_m_l_1_1_face_1_1_image_1abadde86ebeae03c64c5c038059ddda22"></span>ushort <code class="sig-name descname">GetWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> width. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an integer value. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError9GetHeightEv">
+<span id="_CPPv3N19PhonyNameDueToError9GetHeightEv"></span><span id="_CPPv2N19PhonyNameDueToError9GetHeightEv"></span><span id="PhonyNameDueToError::GetHeight"></span><span class="target" id="class_one_m_l_1_1_face_1_1_image_1a1e49c3034ce3f45e42c634ca5a9984e3"></span>ushort <code class="sig-name descname">GetHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> height. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an integer value. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError8GetDepthEv">
+<span id="_CPPv3N19PhonyNameDueToError8GetDepthEv"></span><span id="_CPPv2N19PhonyNameDueToError8GetDepthEv"></span><span id="PhonyNameDueToError::GetDepth"></span><span class="target" id="class_one_m_l_1_1_face_1_1_image_1a15c9def8944b234e2260386183c030cf"></span>ushort <code class="sig-name descname">GetDepth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> depth. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a short value. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_image_1af93cb3de4ed8117f6e6d74945c444afd"></span><code class="sig-name descname">void SetBuffer (byte[] data_in)</code></dt>
+<dd><p>Set <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> data as a buffer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data_in</span></code>: a byte array. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_image_1ad446cc8b1daab1eedb3c4dcd7ccfb0d1"></span><code class="sig-name descname">Image (int w, int h, short d, byte[] data_in)</code></dt>
+<dd><p>Create an <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> instance from a byte array. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code>: image width. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code>: image height. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code>: image depth. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_in</span></code>: pointer to image data. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_image_1af66d51dff4589e22dd4507f96e625ea0"></span><code class="sig-name descname">byte[] GetBuffer ()</code></dt>
+<dd><p>Get <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> data as a byte array. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a byte array. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_image_1a5e43484ca4dbeaa5037238411b0b8c66"></span><code class="sig-name descname">byte[] GetArray ()</code></dt>
+<dd><p>Get <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> data as a byte array. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a byte array. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_image_batch"></span><code class="sig-name descname">OneML.Face.ImageBatch : public global.SystemIDisposable , public global.SystemCollections.IEnumerable , public global::SystemCollections::Generic::IEnumerable&lt; Image &gt;</code></dt>
+<dd><p>The <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong> class is used as a container for <strong><a class="reference internal" href="#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong> class. </p>
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_image_batch_1_1_image_batch_enumerator"></span><code class="sig-name descname">ImageBatchEnumerator : public global.SystemCollections.IEnumerator , public global::SystemCollections::Generic::IEnumerator&lt; Image &gt;</code></dt>
+<dd><p>Note that the IEnumerator documentation requires an InvalidOperationException to be thrown whenever the collection is modified. </p>
+<p>This has been done for changes in the size of the collection but not when one of the elements of the collection is modified as it is a bit tricky to detect unmanaged code that modifies the collection under our feet. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv45OneML">
+<span id="_CPPv35OneML"></span><span id="_CPPv25OneML"></span><span id="OneML"></span><span class="target" id="namespace_one_m_l"></span><em class="property">namespace </em><code class="sig-name descname">OneML</code><br /></dt>
+<dd><dl class="cpp type">
+<dt id="_CPPv4N5OneML4FaceE">
+<span id="_CPPv3N5OneML4FaceE"></span><span id="_CPPv2N5OneML4FaceE"></span><span id="OneML::Face"></span><span class="target" id="namespace_one_m_l_1_1_face"></span><em class="property">namespace </em><code class="sig-name descname">Face</code><a class="headerlink" href="#_CPPv4N5OneML4FaceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_b_box"></span><code class="sig-name descname">BBox : public global.SystemIDisposable</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">top</span><span class="p">:</span> <span class="n">y</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">top</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span>
+<span class="n">left</span><span class="p">:</span> <span class="n">x</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">left</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span>
+<span class="n">bottom</span><span class="p">:</span> <span class="n">y</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bottom</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span>
+<span class="n">right</span><span class="p">:</span> <span class="n">x</span> <span class="n">coordinate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">right</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span>
+</pre></div>
+</div>
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_b_box_list"></span><code class="sig-name descname">OneML.Face.BBoxList : public global.SystemIDisposable , public global.SystemCollections.IEnumerable , public global::SystemCollections::Generic::IEnumerable&lt; BBox &gt;</code></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_b_box_list_1_1_b_box_list_enumerator"></span><code class="sig-name descname">BBoxListEnumerator : public global.SystemCollections.IEnumerator , public global::SystemCollections::Generic::IEnumerator&lt; BBox &gt;</code></dt>
+<dd><p>Note that the IEnumerator documentation requires an InvalidOperationException to be thrown whenever the collection is modified. </p>
+<p>This has been done for changes in the size of the collection but not when one of the elements of the collection is modified as it is a bit tricky to detect unmanaged code that modifies the collection under our feet. </p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">BBox</span> <span class="n">objects</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l"></span><em class="property">namespace </em><code class="sig-name descname">OneML</code><br /></dt>
+<dd><dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l_1_1_face"></span><em class="property">namespace </em><code class="sig-name descname">Face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_landmark5_array"></span><code class="sig-name descname">Landmark5Array : public global.SystemIDisposable , public global.SystemCollections.IEnumerable , public global::SystemCollections::Generic::IEnumerable&lt; float &gt;</code></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_landmark5_array_1_1_landmark5_array_enumerator"></span><code class="sig-name descname">Landmark5ArrayEnumerator : public global.SystemCollections.IEnumerator , public global::SystemCollections::Generic::IEnumerator&lt; float &gt;</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Array</span> <span class="n">containing</span> <span class="mi">5</span> <span class="n">floating</span> <span class="n">point</span> <span class="n">numbers</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l"></span><em class="property">namespace </em><code class="sig-name descname">OneML</code><br /></dt>
+<dd><dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l_1_1_face"></span><em class="property">namespace </em><code class="sig-name descname">Face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_landmark5"></span><code class="sig-name descname">Landmark5 : public global.SystemIDisposable</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Struct</span> <span class="n">of</span> <span class="n">landmarks</span> <span class="n">containing</span> <span class="n">a</span> <span class="n">Landmark5Array</span> <span class="n">of</span> <span class="mi">5</span> <span class="n">x</span> <span class="n">points</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">Landmark5Array</span> <span class="n">of</span> <span class="mi">5</span> <span class="n">y</span> <span class="n">points</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l"></span><em class="property">namespace </em><code class="sig-name descname">OneML</code><br /></dt>
+<dd><dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l_1_1_face"></span><em class="property">namespace </em><code class="sig-name descname">Face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_landmark5_list"></span><code class="sig-name descname">Landmark5List : public global.SystemIDisposable , public global.SystemCollections.IEnumerable , public global::SystemCollections::Generic::IEnumerable&lt; Landmark5 &gt;</code></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_landmark5_list_1_1_landmark5_list_enumerator"></span><code class="sig-name descname">Landmark5ListEnumerator : public global.SystemCollections.IEnumerator , public global::SystemCollections::Generic::IEnumerator&lt; Landmark5 &gt;</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">Landmark5</span> <span class="n">objects</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfile: Cannot find file “face/oneml/Landmark106Array.cs </p>
+</aside>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Array</span> <span class="n">containing</span> <span class="mi">106</span> <span class="n">floating</span> <span class="n">point</span> <span class="n">numbers</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfile: Cannot find file “face/oneml/Landmark106.cs </p>
+</aside>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Struct</span> <span class="n">of</span> <span class="n">landmarks</span> <span class="n">containing</span> <span class="n">a</span> <span class="n">Landmark106Array</span> <span class="n">of</span> <span class="mi">106</span> <span class="n">x</span> <span class="n">points</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">Landmark106Array</span> <span class="n">of</span> <span class="mi">106</span> <span class="n">y</span> <span class="n">points</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l"></span><em class="property">namespace </em><code class="sig-name descname">OneML</code><br /></dt>
+<dd><dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l_1_1_face"></span><em class="property">namespace </em><code class="sig-name descname">Face</code><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l"></span><em class="property">namespace </em><code class="sig-name descname">OneML</code><br /></dt>
+<dd><dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l_1_1_face"></span><em class="property">namespace </em><code class="sig-name descname">Face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_pose_list"></span><code class="sig-name descname">FacePoseList : public global.SystemIDisposable , public global.SystemCollections.IEnumerable , public global::SystemCollections::Generic::IEnumerable&lt; FacePose &gt;</code></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_pose_list_1_1_face_pose_list_enumerator"></span><code class="sig-name descname">FacePoseListEnumerator : public global.SystemCollections.IEnumerator , public global::SystemCollections::Generic::IEnumerator&lt; FacePose &gt;</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="n">FacePose</span> <span class="n">objects</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_embedding"></span><code class="sig-name descname">OneML.Face.Embedding : public global.SystemIDisposable , public global.SystemCollections.IEnumerable , public global::SystemCollections::Generic::IEnumerable&lt; float &gt;</code></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_embedding_1_1_embedding_enumerator"></span><code class="sig-name descname">EmbeddingEnumerator : public global.SystemCollections.IEnumerator , public global::SystemCollections::Generic::IEnumerator&lt; float &gt;</code></dt>
+<dd><p>Note that the IEnumerator documentation requires an InvalidOperationException to be thrown whenever the collection is modified. </p>
+<p>This has been done for changes in the size of the collection but not when one of the elements of the collection is modified as it is a bit tricky to detect unmanaged code that modifies the collection under our feet. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l"></span><em class="property">namespace </em><code class="sig-name descname">OneML</code><br /></dt>
+<dd><dl class="cpp type">
+<dt>
+<span class="target" id="namespace_one_m_l_1_1_face"></span><em class="property">namespace </em><code class="sig-name descname">Face</code><br /></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_score_list"></span><code class="sig-name descname">ScoreList : public global.SystemIDisposable , public global.SystemCollections.IEnumerable , public global::SystemCollections::Generic::IList&lt; float &gt;</code></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_score_list_1_1_score_list_enumerator"></span><code class="sig-name descname">ScoreListEnumerator : public global.SystemCollections.IEnumerator , public global::SystemCollections::Generic::IEnumerator&lt; float &gt;</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">List</span> <span class="n">of</span> <span class="nb">float</span> <span class="k">as</span> <span class="n">detection</span> <span class="n">scores</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="alpr_struct.html" class="btn btn-neutral float-right" title="C# Alpr Structures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../public/license_manager.html" class="btn btn-neutral float-left" title="C# License Manager API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
