@@ -32,6 +32,7 @@ public class VehicleDetectorApp {
             System.out.println(out);
         }
 
-
+        UsageReport report = detector.getUsage();
+        report.toLog();
     }
 }

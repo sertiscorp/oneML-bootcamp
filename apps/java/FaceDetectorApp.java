@@ -39,5 +39,8 @@ public class FaceDetectorApp {
                 System.out.println(String.format("Landmark %d: (%.6f, %.6f)", j, landmark.getX().get(j), landmark.getY().get(j)));
             }
         }
+
+        UsageReport report = detector.getUsage();
+        report.toLog();
     }
 }

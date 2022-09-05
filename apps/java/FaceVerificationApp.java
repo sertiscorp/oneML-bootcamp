@@ -68,5 +68,11 @@ public class FaceVerificationApp {
 
         boolean same2 = faceId.isTheSamePerson(img3, img4);
         System.out.println("Is the same person (george_robertson): " + booleanToInt(same2));
+
+        UsageReport report = detector.getUsage();
+        report.toLog();
+
+        report = faceId.getUsage();
+        report.toLog();
     }
 }

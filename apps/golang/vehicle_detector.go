@@ -31,4 +31,7 @@ func main() {
 		fmt.Printf("Score: %.6f\n", scores.Get(i))
 		fmt.Printf("BBox[top=%.6f,left=%.6f,bottom=%.6f,right=%.6f]\n", bboxes.Get(i).GetTop(), bboxes.Get(i).GetLeft(), bboxes.Get(i).GetBottom(), bboxes.Get(i).GetRight())
 	}
+
+	report := vehicleDetector.GetUsage()
+	report.ToLog()
 }

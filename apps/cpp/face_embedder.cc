@@ -35,4 +35,7 @@ int main(int argc, char** argv) {
             << std::endl;
   std::cout << "Embedding sum: " << std::fixed << std::setprecision(5)
             << std::accumulate(emb.begin(), emb.end(), decltype(emb)::value_type(0)) << std::endl;
+
+  oneML::UsageReport report = embedder.get_usage();
+  report.to_log();
 }

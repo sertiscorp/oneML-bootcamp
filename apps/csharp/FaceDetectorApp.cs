@@ -36,5 +36,8 @@ class FaceDetectorApp {
                 Console.WriteLine("Landmark " + j + ": (" + landmark.x[j].ToString(precision) + ", " + landmark.y[j].ToString(precision) + ")");
             }
         }
+
+        UsageReport report = detector.GetUsage();
+        report.ToLog();
     }
 }
