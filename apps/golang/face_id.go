@@ -91,4 +91,7 @@ func main() {
 	// GetIds
 	ids := faceId.GetIds()
 	fmt.Println("Gallery size:", ids.Size())
+
+	report := faceId.GetUsage()
+	report.ToLog()
 }

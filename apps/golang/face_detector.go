@@ -20,7 +20,6 @@ func main() {
 
 	// load Image
 	filePath := path.Join(testAssetPath, "face-detect-set/face/0.jpg")
-	fmt.Println(filePath)
 	input := oneMLUtils.ReadImageCV(filePath)
 
 	result := faceDetector.Detect(input)
@@ -39,4 +38,7 @@ func main() {
 			fmt.Printf("Landmark %d: (%.6f, %.6f)\n", j, landmarks.GetX().Get(j), landmarks.GetY().Get(j))
 		}
 	}
+
+	report := faceDetector.GetUsage()
+	report.ToLog()
 }

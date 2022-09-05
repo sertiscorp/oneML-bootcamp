@@ -102,5 +102,8 @@ public class FaceIdApp {
         // getIds
         IdList idList = faceId.getIds();
         System.out.println("Gallery size: " + idList.size());
+
+        UsageReport report = faceId.getUsage();
+        report.toLog();
     }
 }

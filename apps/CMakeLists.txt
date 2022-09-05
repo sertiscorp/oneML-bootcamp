@@ -32,3 +32,11 @@ target_link_libraries(vehicle_detector PRIVATE oneml)
 # face_verification executable
 add_executable(face_verification ${CMAKE_CURRENT_SOURCE_DIR}/cpp/face_verification.cc)
 target_link_libraries(face_verification PRIVATE oneml)
+
+# ekyc executable
+add_executable(ekyc ${CMAKE_CURRENT_SOURCE_DIR}/cpp/ekyc.cc)
+target_link_libraries(ekyc PRIVATE oneml)
+
+# face_pad executable
+add_executable(face_pad ${CMAKE_CURRENT_SOURCE_DIR}/cpp/face_pad.cc)
+target_link_libraries(face_pad PRIVATE oneml)

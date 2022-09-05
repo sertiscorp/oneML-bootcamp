@@ -33,6 +33,8 @@ func main() {
 	for i := 0; i < int(embed.Size()); i++ {
 		sum += embed.Get(i)
 	}
-	
 	fmt.Printf("Embedding sum: %.5f\n", sum)
+
+	report := faceEmbedder.GetUsage()
+	report.ToLog()
 }
