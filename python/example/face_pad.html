@@ -63,6 +63,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -92,10 +96,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
 </ul>
 <p><span class="caption-text">Python Documentation</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Python APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#python-data-structures">Python Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#python-examples">Python Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#python-examples">Python Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">Python Face Detector Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">Python Face Embedder Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">Python Face Id Example</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python Face Pad Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-padrgb-example">Python PadRGB Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-padpaper-example">Python PadPaper Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">Python Vehicle Detector Example</a></li>
+</ul>
+</li>
 </ul>
 <p><span class="caption-text">Java Documentation</span></p>
 <ul>
@@ -179,6 +194,76 @@
             
   <section id="python-face-pad-example-1">
 <span id="python-face-pad-example"></span><h1>Python Face Pad Example<a class="headerlink" href="#python-face-pad-example-1" title="Permalink to this headline">¶</a></h1>
+<section id="python-padrgb-example">
+<h2>Python PadRGB Example<a class="headerlink" href="#python-padrgb-example" title="Permalink to this headline">¶</a></h2>
+<p>Initialize pad RGB model</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">oneML</span> <span class="kn">import</span> <span class="n">faceAPI</span> <span class="k">as</span> <span class="n">api</span>
+<span class="n">pad</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">FacePad</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">PadType_Rgb</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Initialize pad RGB model with licensing</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">oneML</span> <span class="kn">import</span> <span class="n">faceAPI</span> <span class="k">as</span> <span class="n">api</span>
+<span class="n">license_manager</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">LicenseManager</span><span class="p">()</span>
+<span class="n">license_manager</span><span class="o">.</span><span class="n">set_key</span><span class="p">(</span><span class="s2">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">)</span>
+<span class="n">license_manager</span><span class="o">.</span><span class="n">activate_key</span><span class="p">()</span>
+<span class="n">pad</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">FacePad</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">PadType_Rgb</span><span class="p">,</span> <span class="n">license_manager</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Read input as numpy array</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_path</span><span class="p">),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="n">imgs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Run the model</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">pad</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">imgs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">pad</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">spoof_prob</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_spoof_prob</span><span class="p">()</span>
+<span class="n">is_spoof</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">is_spoof</span><span class="p">()</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_return_status</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="python-padpaper-example">
+<h2>Python PadPaper Example<a class="headerlink" href="#python-padpaper-example" title="Permalink to this headline">¶</a></h2>
+<p>Initialize pad paper model</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">oneML</span> <span class="kn">import</span> <span class="n">faceAPI</span> <span class="k">as</span> <span class="n">api</span>
+<span class="n">pad</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">FacePad</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">PadType_Paper</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Initialize pad paper model with licensing</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">oneML</span> <span class="kn">import</span> <span class="n">faceAPI</span> <span class="k">as</span> <span class="n">api</span>
+<span class="n">license_manager</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">LicenseManager</span><span class="p">()</span>
+<span class="n">license_manager</span><span class="o">.</span><span class="n">set_key</span><span class="p">(</span><span class="s2">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">)</span>
+<span class="n">license_manager</span><span class="o">.</span><span class="n">activate_key</span><span class="p">()</span>
+<span class="n">pad</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">FacePad</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">PadType_Paper</span><span class="p">,</span> <span class="n">license_manager</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Read input as numpy array</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_path</span><span class="p">),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="n">imgs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Run the model</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">pad</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">imgs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">pad</span><span class="o">.</span><span class="n">classify</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">spoof_prob</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_spoof_prob</span><span class="p">()</span>
+<span class="n">is_spoof</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">is_spoof</span><span class="p">()</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_return_status</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 

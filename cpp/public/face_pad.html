@@ -63,6 +63,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -86,8 +90,18 @@
             
             
               <p><span class="caption-text">C++ Documentation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">C++ APIs</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C++ APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">C++ Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">C++ Face Embedder API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">C++ Face ID API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C++ Face Pad API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ekyc.html">C++ EKYC API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C++ Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">C++ Utils API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">C++ License Manager API</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C++ Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C++ Examples</a></li>
 </ul>
@@ -180,22 +194,165 @@
   <section id="c-face-pad-api">
 <span id="cpp-pubic-face-pad"></span><h1>C++ Face Pad API<a class="headerlink" href="#c-face-pad-api" title="Permalink to this headline">¶</a></h1>
 <p>oneML model for Presentation Attack Detection (PAD)</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find class “oneML::face::FacePad” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
-</aside>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find class “oneML::face::FacePadResult” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
-</aside>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenenum: Cannot find enum “oneML::face::FacePadStatus” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
-</aside>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenenum: Cannot find enum “oneML::face::PadType” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
-</aside>
+<dl class="cpp class">
+<dt id="_CPPv4N5oneML4face7FacePadE">
+<span id="_CPPv3N5oneML4face7FacePadE"></span><span id="_CPPv2N5oneML4face7FacePadE"></span><span id="oneML::face::FacePad"></span><span class="target" id="classone_m_l_1_1face_1_1_face_pad"></span><em class="property">class </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FacePad</code><a class="headerlink" href="#_CPPv4N5oneML4face7FacePadE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The oneML <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_pad"><span class="std std-ref">FacePad</span></a> API object. </p>
+<p>Class to create and use oneML face pad model. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face7FacePad7FacePadE7PadTypeRN5oneML14LicenseManagerE">
+<span id="_CPPv3N5oneML4face7FacePad7FacePadE7PadTypeRN5oneML14LicenseManagerE"></span><span id="_CPPv2N5oneML4face7FacePad7FacePadE7PadTypeRN5oneML14LicenseManagerE"></span><span id="oneML::face::FacePad::FacePad__PadType.oneML::LicenseManagerR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_pad_1a81eed0768cf7861062760c625005bde0"></span><code class="sig-name descname">FacePad</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5oneML4face7PadTypeE" title="oneML::face::PadType">PadType</a> <em>type</em>, oneML::<a class="reference internal" href="license_manager.html#_CPPv4N5oneML14LicenseManagerE" title="oneML::LicenseManager">LicenseManager</a> &amp;<em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face7FacePad7FacePadE7PadTypeRN5oneML14LicenseManagerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_pad"><span class="std std-ref">FacePad</span></a> object of type PadType. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: type PadType enum </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: <a class="reference internal" href="license_manager.html#classone_m_l_1_1_license_manager"><span class="std std-ref">LicenseManager</span></a> instance </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face7FacePad8classifyERK10MultiImageRNSt6vectorI13FacePadResultEE">
+<span id="_CPPv3N5oneML4face7FacePad8classifyERK10MultiImageRNSt6vectorI13FacePadResultEE"></span><span id="_CPPv2N5oneML4face7FacePad8classifyERK10MultiImageRNSt6vectorI13FacePadResultEE"></span><span id="oneML::face::FacePad::classify__MultiImageCR.std::vector:FacePadResult:R"></span><span class="target" id="classone_m_l_1_1face_1_1_face_pad_1a8542f46810f6b3cfbb492bb75e8f2790"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">classify</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML10MultiImageE" title="oneML::MultiImage">MultiImage</a> &amp;<em>imgs</em>, std::vector&lt;<a class="reference internal" href="#_CPPv4N5oneML4face13FacePadResultE" title="oneML::face::FacePadResult">FacePadResult</a>&gt; &amp;<em>results</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face7FacePad8classifyERK10MultiImageRNSt6vectorI13FacePadResultEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>classify images as spoof or not spoof </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">imgs</span></code>: vector of raw images </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">results</span></code>: vector of result objects </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N5oneML4face7FacePad8classifyERK5ImageR13FacePadResult">
+<span id="_CPPv3N5oneML4face7FacePad8classifyERK5ImageR13FacePadResult"></span><span id="_CPPv2N5oneML4face7FacePad8classifyERK5ImageR13FacePadResult"></span><span id="oneML::face::FacePad::classify__ImageCR.FacePadResultR"></span><span class="target" id="classone_m_l_1_1face_1_1_face_pad_1a2c7a03469a5f0b181bbdd085fad43f95"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">classify</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>img</em>, <a class="reference internal" href="#_CPPv4N5oneML4face13FacePadResultE" title="oneML::face::FacePadResult">FacePadResult</a> &amp;<em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face7FacePad8classifyERK5ImageR13FacePadResult" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>classify an image as spoof or not spoof </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">img</span></code>: raw image </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">result</span></code>: result object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML4face7FacePad9get_usageEv">
+<span id="_CPPv3NK5oneML4face7FacePad9get_usageEv"></span><span id="_CPPv2NK5oneML4face7FacePad9get_usageEv"></span><span id="oneML::face::FacePad::get_usageC"></span><span class="target" id="classone_m_l_1_1face_1_1_face_pad_1a20733f84444b021f49d6e1e8c9439695"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML11UsageReportE" title="oneML::UsageReport">UsageReport</a> <code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML4face7FacePad9get_usageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> object. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N5oneML4face13FacePadResultE">
+<span id="_CPPv3N5oneML4face13FacePadResultE"></span><span id="_CPPv2N5oneML4face13FacePadResultE"></span><span id="oneML::face::FacePadResult"></span><span class="target" id="classone_m_l_1_1face_1_1_face_pad_result"></span><em class="property">class </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FacePadResult</code><a class="headerlink" href="#_CPPv4N5oneML4face13FacePadResultE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The result object for oneML <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_pad"><span class="std std-ref">FacePad</span></a> API. </p>
+<p>Helper class to access all the results from an API call. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML4face13FacePadResult14get_spoof_probEv">
+<span id="_CPPv3NK5oneML4face13FacePadResult14get_spoof_probEv"></span><span id="_CPPv2NK5oneML4face13FacePadResult14get_spoof_probEv"></span><span id="oneML::face::FacePadResult::get_spoof_probC"></span><span class="target" id="classone_m_l_1_1face_1_1_face_pad_result_1a2a301bddd7e053be6c1dab7b941d4663"></span>float <code class="sig-name descname">get_spoof_prob</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML4face13FacePadResult14get_spoof_probEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get spoof probability </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>float: spoof probability </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML4face13FacePadResult8is_spoofEv">
+<span id="_CPPv3NK5oneML4face13FacePadResult8is_spoofEv"></span><span id="_CPPv2NK5oneML4face13FacePadResult8is_spoofEv"></span><span id="oneML::face::FacePadResult::is_spoofC"></span><span class="target" id="classone_m_l_1_1face_1_1_face_pad_result_1aeb5a418dd29c29a5abd22280baa0081e"></span>bool <code class="sig-name descname">is_spoof</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML4face13FacePadResult8is_spoofEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>check if result is spoof or not </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool: true if image is spoof or false if image is not spoof </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML4face13FacePadResult17get_return_statusEv">
+<span id="_CPPv3NK5oneML4face13FacePadResult17get_return_statusEv"></span><span id="_CPPv2NK5oneML4face13FacePadResult17get_return_statusEv"></span><span id="oneML::face::FacePadResult::get_return_statusC"></span><span class="target" id="classone_m_l_1_1face_1_1_face_pad_result_1adfcac002060d1049ff2486c1499d2c83"></span>oneML::face::<a class="reference internal" href="#_CPPv4N5oneML4face13FacePadStatusE" title="oneML::face::FacePadStatus">FacePadStatus</a> <code class="sig-name descname">get_return_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML4face13FacePadResult17get_return_statusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get return status </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>return status </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp enum">
+<dt id="_CPPv4N5oneML4face13FacePadStatusE">
+<span id="_CPPv3N5oneML4face13FacePadStatusE"></span><span id="_CPPv2N5oneML4face13FacePadStatusE"></span><span class="target" id="oneml__face__pad___a_p_i_8h_1ac600b1f528d5bb35352369da98899ff0"></span><em class="property">enum </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FacePadStatus</code><a class="headerlink" href="#_CPPv4N5oneML4face13FacePadStatusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A FacePadStatus enum to use as return status. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face13FacePadStatus5EmptyE">
+<span id="_CPPv3N5oneML4face13FacePadStatus5EmptyE"></span><span id="_CPPv2N5oneML4face13FacePadStatus5EmptyE"></span><span class="target" id="oneml__face__pad___a_p_i_8h_1ac600b1f528d5bb35352369da98899ff0ace2c8aed9c2fa0cfbed56cbda4d8bf07"></span><em class="property">enumerator </em><code class="sig-name descname">Empty</code><a class="headerlink" href="#_CPPv4N5oneML4face13FacePadStatus5EmptyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default return status. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face13FacePadStatus7SuccessE">
+<span id="_CPPv3N5oneML4face13FacePadStatus7SuccessE"></span><span id="_CPPv2N5oneML4face13FacePadStatus7SuccessE"></span><span class="target" id="oneml__face__pad___a_p_i_8h_1ac600b1f528d5bb35352369da98899ff0a505a83f220c02df2f85c3810cd9ceb38"></span><em class="property">enumerator </em><code class="sig-name descname">Success</code><a class="headerlink" href="#_CPPv4N5oneML4face13FacePadStatus7SuccessE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Success. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face13FacePadStatus14DigitalPadFailE">
+<span id="_CPPv3N5oneML4face13FacePadStatus14DigitalPadFailE"></span><span id="_CPPv2N5oneML4face13FacePadStatus14DigitalPadFailE"></span><span class="target" id="oneml__face__pad___a_p_i_8h_1ac600b1f528d5bb35352369da98899ff0a098092ad693d29acdc6c59f8f32c5056"></span><em class="property">enumerator </em><code class="sig-name descname">DigitalPadFail</code><a class="headerlink" href="#_CPPv4N5oneML4face13FacePadStatus14DigitalPadFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Detect digital PAD spoof. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face13FacePadStatus12PaperPadFailE">
+<span id="_CPPv3N5oneML4face13FacePadStatus12PaperPadFailE"></span><span id="_CPPv2N5oneML4face13FacePadStatus12PaperPadFailE"></span><span class="target" id="oneml__face__pad___a_p_i_8h_1ac600b1f528d5bb35352369da98899ff0a1c78ada9d242aadde3966852443c5c02"></span><em class="property">enumerator </em><code class="sig-name descname">PaperPadFail</code><a class="headerlink" href="#_CPPv4N5oneML4face13FacePadStatus12PaperPadFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Detect paper PAD spoof. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt id="_CPPv4N5oneML4face7PadTypeE">
+<span id="_CPPv3N5oneML4face7PadTypeE"></span><span id="_CPPv2N5oneML4face7PadTypeE"></span><span class="target" id="oneml__face__pad___a_p_i_8h_1ae4812ebb809ed30e666d2a6079a12bc9"></span><em class="property">enum </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">PadType</code><a class="headerlink" href="#_CPPv4N5oneML4face7PadTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The model type for Pad API. </p>
+<p>Enum listing available options. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face7PadType3RgbE">
+<span id="_CPPv3N5oneML4face7PadType3RgbE"></span><span id="_CPPv2N5oneML4face7PadType3RgbE"></span><span class="target" id="oneml__face__pad___a_p_i_8h_1ae4812ebb809ed30e666d2a6079a12bc9aabe0e112dd5f40f1de00eccbf99798a3"></span><em class="property">enumerator </em><code class="sig-name descname">Rgb</code><a class="headerlink" href="#_CPPv4N5oneML4face7PadType3RgbE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face7PadType5PaperE">
+<span id="_CPPv3N5oneML4face7PadType5PaperE"></span><span id="_CPPv2N5oneML4face7PadType5PaperE"></span><span class="target" id="oneml__face__pad___a_p_i_8h_1ae4812ebb809ed30e666d2a6079a12bc9ad0a662a5235ecde30739fe50cf0de830"></span><em class="property">enumerator </em><code class="sig-name descname">Paper</code><a class="headerlink" href="#_CPPv4N5oneML4face7PadType5PaperE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
 

@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="C++ Utils API" href="utils.html" />
-    <link rel="prev" title="C++ Challenge Response API" href="challenge_response.html" /> 
+    <link rel="prev" title="C++ EKYC API" href="ekyc.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -62,6 +62,10 @@
 
           
             
+            
+              <div class="version">
+                v3.7.0
+              </div>
             
           
 
@@ -91,6 +95,8 @@
 <li class="toctree-l2"><a class="reference internal" href="face_detector.html">C++ Face Detector API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_embedder.html">C++ Face Embedder API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_id.html">C++ Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_pad.html">C++ Face Pad API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ekyc.html">C++ EKYC API</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">C++ Vehicle Detector API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">C++ Utils API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="license_manager.html">C++ License Manager API</a></li>
@@ -201,7 +207,7 @@
 <dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1alpr_1_1_vehicle_detector"><span class="std std-ref">VehicleDetector</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: Licensemanager instance </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: <a class="reference internal" href="license_manager.html#classone_m_l_1_1_license_manager"><span class="std std-ref">LicenseManager</span></a> instance </p></li>
 </ul>
 </dd>
 </dl>
@@ -213,7 +219,7 @@
 <span id="_CPPv3N5oneML4alpr15VehicleDetector6detectERK10MultiImageRNSt6vectorI21VehicleDetectorResultEE"></span><span id="_CPPv2N5oneML4alpr15VehicleDetector6detectERK10MultiImageRNSt6vectorI21VehicleDetectorResultEE"></span><span id="oneML::alpr::VehicleDetector::detect__MultiImageCR.std::vector:VehicleDetectorResult:R"></span><span class="target" id="classone_m_l_1_1alpr_1_1_vehicle_detector_1a644353dc246befb6e139f303c3a0ece7"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">detect</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML10MultiImageE" title="oneML::MultiImage">MultiImage</a> &amp;<em>imgs</em>, std::vector&lt;<a class="reference internal" href="#_CPPv4N5oneML4alpr21VehicleDetectorResultE" title="oneML::alpr::VehicleDetectorResult">VehicleDetectorResult</a>&gt; &amp;<em>results</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4alpr15VehicleDetector6detectERK10MultiImageRNSt6vectorI21VehicleDetectorResultEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>detect vehicles in images </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">imgs</span></code>: vector of raw images </p></li>
@@ -229,12 +235,23 @@
 <span id="_CPPv3N5oneML4alpr15VehicleDetector6detectERK5ImageR21VehicleDetectorResult"></span><span id="_CPPv2N5oneML4alpr15VehicleDetector6detectERK5ImageR21VehicleDetectorResult"></span><span id="oneML::alpr::VehicleDetector::detect__ImageCR.VehicleDetectorResultR"></span><span class="target" id="classone_m_l_1_1alpr_1_1_vehicle_detector_1a403426a600c3bfec85d8ab71c6014416"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">detect</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>img</em>, <a class="reference internal" href="#_CPPv4N5oneML4alpr21VehicleDetectorResultE" title="oneML::alpr::VehicleDetectorResult">VehicleDetectorResult</a> &amp;<em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4alpr15VehicleDetector6detectERK5ImageR21VehicleDetectorResult" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>detect vehicles in an image </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">img</span></code>: an instance of <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_image"><span class="std std-ref">Image</span></a> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">img</span></code>: an instance of <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_image"><span class="std std-ref">Image</span></a> </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">result</span></code>: an instance of Result </p></li>
 </ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML4alpr15VehicleDetector9get_usageEv">
+<span id="_CPPv3NK5oneML4alpr15VehicleDetector9get_usageEv"></span><span id="_CPPv2NK5oneML4alpr15VehicleDetector9get_usageEv"></span><span id="oneML::alpr::VehicleDetector::get_usageC"></span><span class="target" id="classone_m_l_1_1alpr_1_1_vehicle_detector_1ab36fd41e43e8c79c3b1894cdca678b67"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML11UsageReportE" title="oneML::UsageReport">UsageReport</a> <code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML4alpr15VehicleDetector9get_usageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> object. </p>
 </dd>
 </dl>
 </p>
@@ -335,7 +352,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="utils.html" class="btn btn-neutral float-right" title="C++ Utils API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="challenge_response.html" class="btn btn-neutral float-left" title="C++ Challenge Response API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ekyc.html" class="btn btn-neutral float-left" title="C++ EKYC API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

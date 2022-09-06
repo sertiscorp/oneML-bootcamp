@@ -63,6 +63,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -104,8 +108,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
 </ul>
 <p><span class="caption-text">C# Documentation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">C# APIs</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C# APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">C# Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">C# Face Embedder API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">C# Face ID API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C# Face Pad API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C# Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">C# Utils API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">C# License Manager API</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C# Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C# Examples</a></li>
 </ul>
@@ -180,26 +193,148 @@
   <section id="c-face-pad-api">
 <span id="cs-public-face-pad"></span><h1>C# Face Pad API<a class="headerlink" href="#c-face-pad-api" title="Permalink to this headline">¶</a></h1>
 <p>OneML model for Presentation Attack Detection (PAD)</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find class “OneML::Face::FacePad” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
-</aside>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find class “OneML::Face::FacePadResult” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
-</aside>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find class “OneML::Face::FacePadResultList” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
-</aside>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenfile: Cannot find file “face/oneml/FacePadStatus.cs </p>
-</aside>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenfile: Cannot find file “face/oneml/PadType.cs </p>
-</aside>
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_pad"></span><code class="sig-name descname">OneML.Face.FacePad : public global.SystemIDisposable</code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError7FacePadE7PadType14LicenseManager">
+<span id="_CPPv3N19PhonyNameDueToError7FacePadE7PadType14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError7FacePadE7PadType14LicenseManager"></span><span id="PhonyNameDueToError::FacePad__PadType.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_pad_1a45220579a7a775032dd4c245b007463b"></span><code class="sig-name descname">FacePad</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv47PadType" title="PadType">PadType</a> <em>type</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7FacePadE7PadType14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a FacePad object of type PadType. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: PadType enum. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager instance. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError8GetUsageEv">
+<span id="_CPPv3N19PhonyNameDueToError8GetUsageEv"></span><span id="_CPPv2N19PhonyNameDueToError8GetUsageEv"></span><span id="PhonyNameDueToError::GetUsage"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_pad_1a25552e422755c33fa2b1e9bbfaad85da"></span>UsageReport <code class="sig-name descname">GetUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get a report of the usage. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError8ClassifyE10ImageBatch">
+<span id="_CPPv3N19PhonyNameDueToError8ClassifyE10ImageBatch"></span><span id="_CPPv2N19PhonyNameDueToError8ClassifyE10ImageBatch"></span><span id="PhonyNameDueToError::Classify__ImageBatch"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_pad_1a4f0cee3b13a983916d77592e435fed11"></span>FacePadResultList <code class="sig-name descname">Classify</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError8ClassifyE10ImageBatch" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Classify images as spoof or not spoof. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FacePadResultList</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">imgs</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError8ClassifyE5Image">
+<span id="_CPPv3N19PhonyNameDueToError8ClassifyE5Image"></span><span id="_CPPv2N19PhonyNameDueToError8ClassifyE5Image"></span><span id="PhonyNameDueToError::Classify__Image"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_pad_1a3df8c573a5697b91ad01f21701a0945c"></span>FacePadResult <code class="sig-name descname">Classify</code><span class="sig-paren">(</span>Image <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError8ClassifyE5Image" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Classify an image as spoof or not spoof. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FacePadResult</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_pad_result"></span><code class="sig-name descname">OneML.Face.FacePadResult : public global.SystemIDisposable</code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">
+<span id="_CPPv3N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="_CPPv2N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="PhonyNameDueToError::GetReturnStatus"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_pad_result_1aa3c8999e5c9ba0ba30e3292af719f031"></span>int <code class="sig-name descname">GetReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>returns return status. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an int return status. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_pad_result_list"></span><code class="sig-name descname">OneML.Face.FacePadResultList : public global.SystemIDisposable , public global.SystemCollections.IEnumerable , public global::SystemCollections::Generic::IEnumerable&lt; FacePadResult &gt;</code></dt>
+<dd><dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_face_pad_result_list_1_1_face_pad_result_list_enumerator"></span><code class="sig-name descname">FacePadResultListEnumerator : public global.SystemCollections.IEnumerator , public global::SystemCollections::Generic::IEnumerator&lt; FacePadResult &gt;</code></dt>
+<dd><p>Note that the IEnumerator documentation requires an InvalidOperationException to be thrown whenever the collection is modified. </p>
+<p>This has been done for changes in the size of the collection but not when one of the elements of the collection is modified as it is a bit tricky to detect unmanaged code that modifies the collection under our feet. </p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="cpp enum">
+<dt id="_CPPv413FacePadStatus">
+<span id="_CPPv313FacePadStatus"></span><span id="_CPPv213FacePadStatus"></span><span class="target" id="namespace_one_m_l_1_1_face_1a7e9e3c5a2b7e3f5c2d0e8a8fc5c33247"></span><em class="property">enum </em><code class="sig-name descname">FacePadStatus</code><a class="headerlink" href="#_CPPv413FacePadStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N13FacePadStatus5EmptyE">
+<span id="_CPPv3N13FacePadStatus5EmptyE"></span><span id="_CPPv2N13FacePadStatus5EmptyE"></span><span class="target" id="namespace_one_m_l_1_1_face_1a7e9e3c5a2b7e3f5c2d0e8a8fc5c33247ace2c8aed9c2fa0cfbed56cbda4d8bf07"></span><em class="property">enumerator </em><code class="sig-name descname">Empty</code><a class="headerlink" href="#_CPPv4N13FacePadStatus5EmptyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N13FacePadStatus7SuccessE">
+<span id="_CPPv3N13FacePadStatus7SuccessE"></span><span id="_CPPv2N13FacePadStatus7SuccessE"></span><span class="target" id="namespace_one_m_l_1_1_face_1a7e9e3c5a2b7e3f5c2d0e8a8fc5c33247a505a83f220c02df2f85c3810cd9ceb38"></span><em class="property">enumerator </em><code class="sig-name descname">Success</code><a class="headerlink" href="#_CPPv4N13FacePadStatus7SuccessE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N13FacePadStatus14DigitalPadFailE">
+<span id="_CPPv3N13FacePadStatus14DigitalPadFailE"></span><span id="_CPPv2N13FacePadStatus14DigitalPadFailE"></span><span class="target" id="namespace_one_m_l_1_1_face_1a7e9e3c5a2b7e3f5c2d0e8a8fc5c33247a098092ad693d29acdc6c59f8f32c5056"></span><em class="property">enumerator </em><code class="sig-name descname">DigitalPadFail</code><a class="headerlink" href="#_CPPv4N13FacePadStatus14DigitalPadFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N13FacePadStatus12PaperPadFailE">
+<span id="_CPPv3N13FacePadStatus12PaperPadFailE"></span><span id="_CPPv2N13FacePadStatus12PaperPadFailE"></span><span class="target" id="namespace_one_m_l_1_1_face_1a7e9e3c5a2b7e3f5c2d0e8a8fc5c33247a1c78ada9d242aadde3966852443c5c02"></span><em class="property">enumerator </em><code class="sig-name descname">PaperPadFail</code><a class="headerlink" href="#_CPPv4N13FacePadStatus12PaperPadFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="cpp enum">
+<dt id="_CPPv47PadType">
+<span id="_CPPv37PadType"></span><span id="_CPPv27PadType"></span><span class="target" id="namespace_one_m_l_1_1_face_1a6d0d68bf667e8af531c6ecd3682b1905"></span><em class="property">enum </em><code class="sig-name descname">PadType</code><a class="headerlink" href="#_CPPv47PadType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N7PadType3RgbE">
+<span id="_CPPv3N7PadType3RgbE"></span><span id="_CPPv2N7PadType3RgbE"></span><span class="target" id="namespace_one_m_l_1_1_face_1a6d0d68bf667e8af531c6ecd3682b1905aabe0e112dd5f40f1de00eccbf99798a3"></span><em class="property">enumerator </em><code class="sig-name descname">Rgb</code><a class="headerlink" href="#_CPPv4N7PadType3RgbE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N7PadType5PaperE">
+<span id="_CPPv3N7PadType5PaperE"></span><span id="_CPPv2N7PadType5PaperE"></span><span class="target" id="namespace_one_m_l_1_1_face_1a6d0d68bf667e8af531c6ecd3682b1905ad0a662a5235ecde30739fe50cf0de830"></span><em class="property">enumerator </em><code class="sig-name descname">Paper</code><a class="headerlink" href="#_CPPv4N7PadType5PaperE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
 </section>
 
 

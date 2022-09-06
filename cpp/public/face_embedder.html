@@ -63,6 +63,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -91,6 +95,8 @@
 <li class="toctree-l2"><a class="reference internal" href="face_detector.html">C++ Face Detector API</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">C++ Face Embedder API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_id.html">C++ Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_pad.html">C++ Face Pad API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ekyc.html">C++ EKYC API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C++ Vehicle Detector API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">C++ Utils API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="license_manager.html">C++ License Manager API</a></li>
@@ -201,7 +207,7 @@
 <dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1face_1_1_face_embedder"><span class="std std-ref">FaceEmbedder</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: Licensemanager instance </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: <a class="reference internal" href="license_manager.html#classone_m_l_1_1_license_manager"><span class="std std-ref">LicenseManager</span></a> instance </p></li>
 </ul>
 </dd>
 </dl>
@@ -213,7 +219,7 @@
 <span id="_CPPv3N5oneML4face12FaceEmbedder5embedERK10MultiImageRNSt6vectorI18FaceEmbedderResultEEb"></span><span id="_CPPv2N5oneML4face12FaceEmbedder5embedERK10MultiImageRNSt6vectorI18FaceEmbedderResultEEb"></span><span id="oneML::face::FaceEmbedder::embed__MultiImageCR.std::vector:FaceEmbedderResult:R.b"></span><span class="target" id="classone_m_l_1_1face_1_1_face_embedder_1a4c956bba55e01c1e28044cc2fba0ee83"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">embed</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML10MultiImageE" title="oneML::MultiImage">MultiImage</a> &amp;<em>imgs</em>, std::vector&lt;<a class="reference internal" href="#_CPPv4N5oneML4face18FaceEmbedderResultE" title="oneML::face::FaceEmbedderResult">FaceEmbedderResult</a>&gt; &amp;<em>results</em>, bool <em>flip</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face12FaceEmbedder5embedERK10MultiImageRNSt6vectorI18FaceEmbedderResultEEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>create embedding vector </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">imgs</span></code>: vector of raw images </p></li>
@@ -230,13 +236,24 @@
 <span id="_CPPv3N5oneML4face12FaceEmbedder5embedERK5ImageR18FaceEmbedderResultb"></span><span id="_CPPv2N5oneML4face12FaceEmbedder5embedERK5ImageR18FaceEmbedderResultb"></span><span id="oneML::face::FaceEmbedder::embed__ImageCR.FaceEmbedderResultR.b"></span><span class="target" id="classone_m_l_1_1face_1_1_face_embedder_1a7870d5c4280661eaad9ca5e7566406b5"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">embed</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>img</em>, <a class="reference internal" href="#_CPPv4N5oneML4face18FaceEmbedderResultE" title="oneML::face::FaceEmbedderResult">FaceEmbedderResult</a> &amp;<em>result</em>, bool <em>flip</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML4face12FaceEmbedder5embedERK5ImageR18FaceEmbedderResultb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>create embedding vector </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: status of operation </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">img</span></code>: raw image </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">result</span></code>: result object </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">flip</span></code>: flag to enable flipped image embedding. If true, returns the average between the original and flipped image embeddings. Default to false. </p></li>
 </ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML4face12FaceEmbedder9get_usageEv">
+<span id="_CPPv3NK5oneML4face12FaceEmbedder9get_usageEv"></span><span id="_CPPv2NK5oneML4face12FaceEmbedder9get_usageEv"></span><span id="oneML::face::FaceEmbedder::get_usageC"></span><span class="target" id="classone_m_l_1_1face_1_1_face_embedder_1a6d38a715fb622aae235df184f251e154"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML11UsageReportE" title="oneML::UsageReport">UsageReport</a> <code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML4face12FaceEmbedder9get_usageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> object. </p>
 </dd>
 </dl>
 </p>

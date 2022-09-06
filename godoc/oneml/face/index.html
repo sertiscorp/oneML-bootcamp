@@ -144,6 +144,15 @@
 				<dd><a href="#DeleteFaceIdResultVector">func DeleteFaceIdResultVector(arg1 FaceIdResultVector)</a></dd>
 			
 				
+				<dd><a href="#DeleteFacePad">func DeleteFacePad(arg1 FacePad)</a></dd>
+			
+				
+				<dd><a href="#DeleteFacePadResult">func DeleteFacePadResult(arg1 FacePadResult)</a></dd>
+			
+				
+				<dd><a href="#DeleteFacePadResultVector">func DeleteFacePadResultVector(arg1 FacePadResultVector)</a></dd>
+			
+				
 				<dd><a href="#DeleteFloatArray">func DeleteFloatArray(arg1 FloatArray)</a></dd>
 			
 				
@@ -172,6 +181,9 @@
 			
 				
 				<dd><a href="#DeleteStringVector">func DeleteStringVector(arg1 StringVector)</a></dd>
+			
+				
+				<dd><a href="#DeleteUsageReport">func DeleteUsageReport(arg1 UsageReport)</a></dd>
 			
 				
 				<dd><a href="#DeleteUtils">func DeleteUtils(arg1 Utils)</a></dd>
@@ -375,6 +387,45 @@
 				
 			
 				
+				<dd><a href="#FacePad">type FacePad</a></dd>
+				
+					
+					<dd>    <a href="#NewFacePad">func NewFacePad(arg1 OneMLFacePadType, arg2 LicenseManager) (_swig_ret FacePad)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#FacePadResult">type FacePadResult</a></dd>
+				
+					
+					<dd>    <a href="#NewFacePadResult">func NewFacePadResult(a ...interface{}) FacePadResult</a></dd>
+				
+					
+					<dd>    <a href="#NewFacePadResult__SWIG_0">func NewFacePadResult__SWIG_0() (_swig_ret FacePadResult)</a></dd>
+				
+					
+					<dd>    <a href="#NewFacePadResult__SWIG_1">func NewFacePadResult__SWIG_1(arg1 FacePadResult) (_swig_ret FacePadResult)</a></dd>
+				
+				
+			
+				
+				<dd><a href="#FacePadResultVector">type FacePadResultVector</a></dd>
+				
+					
+					<dd>    <a href="#NewFacePadResultVector">func NewFacePadResultVector(a ...interface{}) FacePadResultVector</a></dd>
+				
+					
+					<dd>    <a href="#NewFacePadResultVector__SWIG_0">func NewFacePadResultVector__SWIG_0() (_swig_ret FacePadResultVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewFacePadResultVector__SWIG_1">func NewFacePadResultVector__SWIG_1(arg1 int64) (_swig_ret FacePadResultVector)</a></dd>
+				
+					
+					<dd>    <a href="#NewFacePadResultVector__SWIG_2">func NewFacePadResultVector__SWIG_2(arg1 FacePadResultVector) (_swig_ret FacePadResultVector)</a></dd>
+				
+				
+			
+				
 				<dd><a href="#FloatArray">type FloatArray</a></dd>
 				
 					
@@ -504,6 +555,16 @@
 			
 				
 				<dd><a href="#OneMLFaceFaceIdStatus">type OneMLFaceFaceIdStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="#OneMLFaceFacePadStatus">type OneMLFaceFacePadStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="#OneMLFacePadType">type OneMLFacePadType</a></dd>
 				
 				
 			
@@ -698,6 +759,9 @@
 					<dd>    <a href="#SwigcptrFaceDetector.DetectBatch">func (arg1 SwigcptrFaceDetector) DetectBatch(arg2 MultiImage) (_swig_ret FaceDetectorResultVector)</a></dd>
 				
 					
+					<dd>    <a href="#SwigcptrFaceDetector.GetUsage">func (arg1 SwigcptrFaceDetector) GetUsage() (_swig_ret UsageReport)</a></dd>
+				
+					
 					<dd>    <a href="#SwigcptrFaceDetector.SwigIsFaceDetector">func (p SwigcptrFaceDetector) SwigIsFaceDetector()</a></dd>
 				
 					
@@ -791,6 +855,9 @@
 					<dd>    <a href="#SwigcptrFaceEmbedder.Embed__SWIG_1">func (arg1 SwigcptrFaceEmbedder) Embed__SWIG_1(arg2 Image) (_swig_ret FaceEmbedderResult)</a></dd>
 				
 					
+					<dd>    <a href="#SwigcptrFaceEmbedder.GetUsage">func (arg1 SwigcptrFaceEmbedder) GetUsage() (_swig_ret UsageReport)</a></dd>
+				
+					
 					<dd>    <a href="#SwigcptrFaceEmbedder.SwigIsFaceEmbedder">func (p SwigcptrFaceEmbedder) SwigIsFaceEmbedder()</a></dd>
 				
 					
@@ -858,6 +925,9 @@
 				
 					
 					<dd>    <a href="#SwigcptrFaceId.GetIds">func (arg1 SwigcptrFaceId) GetIds() (_swig_ret StringVector)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFaceId.GetUsage">func (arg1 SwigcptrFaceId) GetUsage() (_swig_ret UsageReport)</a></dd>
 				
 					
 					<dd>    <a href="#SwigcptrFaceId.IsTheSamePersonEmb">func (arg1 SwigcptrFaceId) IsTheSamePersonEmb(arg2 EmbeddingArray, arg3 Image) (_swig_ret SamePersonResult)</a></dd>
@@ -958,6 +1028,81 @@
 				
 					
 					<dd>    <a href="#SwigcptrFaceIdResultVector.Swigcptr">func (p SwigcptrFaceIdResultVector) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrFacePad">type SwigcptrFacePad</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrFacePad.Classify">func (arg1 SwigcptrFacePad) Classify(arg2 Image) (_swig_ret FacePadResult)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePad.ClassifyBatch">func (arg1 SwigcptrFacePad) ClassifyBatch(arg2 MultiImage) (_swig_ret FacePadResultVector)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePad.GetUsage">func (arg1 SwigcptrFacePad) GetUsage() (_swig_ret UsageReport)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePad.SwigIsFacePad">func (p SwigcptrFacePad) SwigIsFacePad()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePad.Swigcptr">func (p SwigcptrFacePad) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrFacePadResult">type SwigcptrFacePadResult</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResult.GetReturnStatus">func (arg1 SwigcptrFacePadResult) GetReturnStatus() (_swig_ret OneMLFaceFacePadStatus)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResult.GetSpoofProb">func (arg1 SwigcptrFacePadResult) GetSpoofProb() (_swig_ret float32)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResult.IsSpoof">func (arg1 SwigcptrFacePadResult) IsSpoof() (_swig_ret bool)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResult.SwigIsFacePadResult">func (p SwigcptrFacePadResult) SwigIsFacePadResult()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResult.Swigcptr">func (p SwigcptrFacePadResult) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#SwigcptrFacePadResultVector">type SwigcptrFacePadResultVector</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.Add">func (arg1 SwigcptrFacePadResultVector) Add(arg2 FacePadResult)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.Capacity">func (arg1 SwigcptrFacePadResultVector) Capacity() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.Clear">func (arg1 SwigcptrFacePadResultVector) Clear()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.Get">func (arg1 SwigcptrFacePadResultVector) Get(arg2 int) (_swig_ret FacePadResult)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.IsEmpty">func (arg1 SwigcptrFacePadResultVector) IsEmpty() (_swig_ret bool)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.Reserve">func (arg1 SwigcptrFacePadResultVector) Reserve(arg2 int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.Set">func (arg1 SwigcptrFacePadResultVector) Set(arg2 int, arg3 FacePadResult)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.Size">func (arg1 SwigcptrFacePadResultVector) Size() (_swig_ret int64)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.SwigIsFacePadResultVector">func (p SwigcptrFacePadResultVector) SwigIsFacePadResultVector()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrFacePadResultVector.Swigcptr">func (p SwigcptrFacePadResultVector) Swigcptr() uintptr</a></dd>
 				
 			
 				
@@ -1175,6 +1320,9 @@
 					<dd>    <a href="#SwigcptrLicenseManager.GetMachineCode">func (arg1 SwigcptrLicenseManager) GetMachineCode() (_swig_ret string)</a></dd>
 				
 					
+					<dd>    <a href="#SwigcptrLicenseManager.GetUsage">func (arg1 SwigcptrLicenseManager) GetUsage() (_swig_ret UsageReport)</a></dd>
+				
+					
 					<dd>    <a href="#SwigcptrLicenseManager.IsTrial">func (arg1 SwigcptrLicenseManager) IsTrial() (_swig_ret bool)</a></dd>
 				
 					
@@ -1287,11 +1435,70 @@
 				
 			
 				
+				<dd><a href="#SwigcptrUsageReport">type SwigcptrUsageReport</a></dd>
+				
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.GetApi">func (arg1 SwigcptrUsageReport) GetApi() (_swig_ret string)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.GetApi_calls">func (arg1 SwigcptrUsageReport) GetApi_calls() (_swig_ret int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.GetFail_count">func (arg1 SwigcptrUsageReport) GetFail_count() (_swig_ret int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.GetFirst_updated">func (arg1 SwigcptrUsageReport) GetFirst_updated() (_swig_ret int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.GetLast_updated">func (arg1 SwigcptrUsageReport) GetLast_updated() (_swig_ret int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.GetModel_runs">func (arg1 SwigcptrUsageReport) GetModel_runs() (_swig_ret int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.GetSuccess_count">func (arg1 SwigcptrUsageReport) GetSuccess_count() (_swig_ret int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.SetApi_calls">func (arg1 SwigcptrUsageReport) SetApi_calls(arg2 int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.SetFail_count">func (arg1 SwigcptrUsageReport) SetFail_count(arg2 int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.SetFirst_updated">func (arg1 SwigcptrUsageReport) SetFirst_updated(arg2 int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.SetLast_updated">func (arg1 SwigcptrUsageReport) SetLast_updated(arg2 int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.SetModel_runs">func (arg1 SwigcptrUsageReport) SetModel_runs(arg2 int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.SetSuccess_count">func (arg1 SwigcptrUsageReport) SetSuccess_count(arg2 int)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.SwigIsUsageReport">func (p SwigcptrUsageReport) SwigIsUsageReport()</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.Swigcptr">func (p SwigcptrUsageReport) Swigcptr() uintptr</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.ToFile">func (arg1 SwigcptrUsageReport) ToFile(arg2 string)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUsageReport.ToLog">func (arg1 SwigcptrUsageReport) ToLog()</a></dd>
+				
+			
+				
 				<dd><a href="#SwigcptrUtils">type SwigcptrUtils</a></dd>
 				
 				
 					
 					<dd>    <a href="#SwigcptrUtils.CropAlignFaceLandmark">func (arg1 SwigcptrUtils) CropAlignFaceLandmark(arg2 Image, arg3 Landmark5) (_swig_ret Image)</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrUtils.GetUsage">func (arg1 SwigcptrUtils) GetUsage() (_swig_ret UsageReport)</a></dd>
 				
 					
 					<dd>    <a href="#SwigcptrUtils.ReadImageCV">func (arg1 SwigcptrUtils) ReadImageCV(arg2 string) (_swig_ret Image)</a></dd>
@@ -1301,6 +1508,14 @@
 				
 					
 					<dd>    <a href="#SwigcptrUtils.Swigcptr">func (p SwigcptrUtils) Swigcptr() uintptr</a></dd>
+				
+			
+				
+				<dd><a href="#UsageReport">type UsageReport</a></dd>
+				
+					
+					<dd>    <a href="#NewUsageReport">func NewUsageReport(arg1 string) (_swig_ret UsageReport)</a></dd>
+				
 				
 			
 				
@@ -1348,7 +1563,7 @@
 		
 			
 			
-			<h2 id="DeleteBBox">func <a href="../../src/oneml/face/faceAPI.go.html?s=35130:35156#L694">DeleteBBox</a>
+			<h2 id="DeleteBBox">func <a href="../../src/oneml/face/faceAPI.go.html?s=39848:39874#L752">DeleteBBox</a>
 				<a class="permalink" href="#DeleteBBox">¶</a>
 				
 				
@@ -1361,7 +1576,7 @@
 		
 			
 			
-			<h2 id="DeleteBBoxVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=46272:46310#L1091">DeleteBBoxVector</a>
+			<h2 id="DeleteBBoxVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=55404:55442#L1295">DeleteBBoxVector</a>
 				<a class="permalink" href="#DeleteBBoxVector">¶</a>
 				
 				
@@ -1374,7 +1589,7 @@
 		
 			
 			
-			<h2 id="DeleteEmbeddingArray">func <a href="../../src/oneml/face/faceAPI.go.html?s=66681:66727#L1746">DeleteEmbeddingArray</a>
+			<h2 id="DeleteEmbeddingArray">func <a href="../../src/oneml/face/faceAPI.go.html?s=76102:76148#L1958">DeleteEmbeddingArray</a>
 				<a class="permalink" href="#DeleteEmbeddingArray">¶</a>
 				
 				
@@ -1387,7 +1602,7 @@
 		
 			
 			
-			<h2 id="DeleteEmbeddingsVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=87952:88002#L2397">DeleteEmbeddingsVector</a>
+			<h2 id="DeleteEmbeddingsVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=97662:97712#L2617">DeleteEmbeddingsVector</a>
 				<a class="permalink" href="#DeleteEmbeddingsVector">¶</a>
 				
 				
@@ -1400,7 +1615,7 @@
 		
 			
 			
-			<h2 id="DeleteFaceDetector">func <a href="../../src/oneml/face/faceAPI.go.html?s=63550:63592#L1650">DeleteFaceDetector</a>
+			<h2 id="DeleteFaceDetector">func <a href="../../src/oneml/face/faceAPI.go.html?s=72682:72724#L1854">DeleteFaceDetector</a>
 				<a class="permalink" href="#DeleteFaceDetector">¶</a>
 				
 				
@@ -1413,7 +1628,7 @@
 		
 			
 			
-			<h2 id="DeleteFaceDetectorResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=60481:60535#L1558">DeleteFaceDetectorResult</a>
+			<h2 id="DeleteFaceDetectorResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=69613:69667#L1762">DeleteFaceDetectorResult</a>
 				<a class="permalink" href="#DeleteFaceDetectorResult">¶</a>
 				
 				
@@ -1426,7 +1641,7 @@
 		
 			
 			
-			<h2 id="DeleteFaceDetectorResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=57712:57778#L1465">DeleteFaceDetectorResultVector</a>
+			<h2 id="DeleteFaceDetectorResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=66844:66910#L1669">DeleteFaceDetectorResultVector</a>
 				<a class="permalink" href="#DeleteFaceDetectorResultVector">¶</a>
 				
 				
@@ -1439,7 +1654,7 @@
 		
 			
 			
-			<h2 id="DeleteFaceEmbedder">func <a href="../../src/oneml/face/faceAPI.go.html?s=74860:74902#L1984">DeleteFaceEmbedder</a>
+			<h2 id="DeleteFaceEmbedder">func <a href="../../src/oneml/face/faceAPI.go.html?s=84281:84323#L2196">DeleteFaceEmbedder</a>
 				<a class="permalink" href="#DeleteFaceEmbedder">¶</a>
 				
 				
@@ -1452,7 +1667,7 @@
 		
 			
 			
-			<h2 id="DeleteFaceEmbedderResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=72642:72696#L1916">DeleteFaceEmbedderResult</a>
+			<h2 id="DeleteFaceEmbedderResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=82063:82117#L2128">DeleteFaceEmbedderResult</a>
 				<a class="permalink" href="#DeleteFaceEmbedderResult">¶</a>
 				
 				
@@ -1465,7 +1680,7 @@
 		
 			
 			
-			<h2 id="DeleteFaceEmbedderResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=70649:70715#L1861">DeleteFaceEmbedderResultVector</a>
+			<h2 id="DeleteFaceEmbedderResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=80070:80136#L2073">DeleteFaceEmbedderResultVector</a>
 				<a class="permalink" href="#DeleteFaceEmbedderResultVector">¶</a>
 				
 				
@@ -1478,7 +1693,7 @@
 		
 			
 			
-			<h2 id="DeleteFaceId">func <a href="../../src/oneml/face/faceAPI.go.html?s=95627:95657#L2642">DeleteFaceId</a>
+			<h2 id="DeleteFaceId">func <a href="../../src/oneml/face/faceAPI.go.html?s=105337:105367#L2862">DeleteFaceId</a>
 				<a class="permalink" href="#DeleteFaceId">¶</a>
 				
 				
@@ -1491,7 +1706,7 @@
 		
 			
 			
-			<h2 id="DeleteFaceIdResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=92406:92448#L2536">DeleteFaceIdResult</a>
+			<h2 id="DeleteFaceIdResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=102116:102158#L2756">DeleteFaceIdResult</a>
 				<a class="permalink" href="#DeleteFaceIdResult">¶</a>
 				
 				
@@ -1504,7 +1719,7 @@
 		
 			
 			
-			<h2 id="DeleteFaceIdResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=80644:80698#L2152">DeleteFaceIdResultVector</a>
+			<h2 id="DeleteFaceIdResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=90354:90408#L2372">DeleteFaceIdResultVector</a>
 				<a class="permalink" href="#DeleteFaceIdResultVector">¶</a>
 				
 				
@@ -1517,7 +1732,46 @@
 		
 			
 			
-			<h2 id="DeleteFloatArray">func <a href="../../src/oneml/face/faceAPI.go.html?s=48614:48652#L1177">DeleteFloatArray</a>
+			<h2 id="DeleteFacePad">func <a href="../../src/oneml/face/faceAPI.go.html?s=119216:119248#L3257">DeleteFacePad</a>
+				<a class="permalink" href="#DeleteFacePad">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteFacePad(arg1 <a href="#FacePad">FacePad</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteFacePadResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=117164:117208#L3188">DeleteFacePadResult</a>
+				<a class="permalink" href="#DeleteFacePadResult">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteFacePadResult(arg1 <a href="#FacePadResult">FacePadResult</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteFacePadResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=114514:114570#L3111">DeleteFacePadResultVector</a>
+				<a class="permalink" href="#DeleteFacePadResultVector">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteFacePadResultVector(arg1 <a href="#FacePadResultVector">FacePadResultVector</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteFloatArray">func <a href="../../src/oneml/face/faceAPI.go.html?s=57746:57784#L1381">DeleteFloatArray</a>
 				<a class="permalink" href="#DeleteFloatArray">¶</a>
 				
 				
@@ -1530,7 +1784,7 @@
 		
 			
 			
-			<h2 id="DeleteFloatVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=39782:39822#L855">DeleteFloatVector</a>
+			<h2 id="DeleteFloatVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=48914:48954#L1059">DeleteFloatVector</a>
 				<a class="permalink" href="#DeleteFloatVector">¶</a>
 				
 				
@@ -1543,7 +1797,7 @@
 		
 			
 			
-			<h2 id="DeleteImage">func <a href="../../src/oneml/face/faceAPI.go.html?s=32884:32912#L608">DeleteImage</a>
+			<h2 id="DeleteImage">func <a href="../../src/oneml/face/faceAPI.go.html?s=37602:37630#L666">DeleteImage</a>
 				<a class="permalink" href="#DeleteImage">¶</a>
 				
 				
@@ -1556,7 +1810,7 @@
 		
 			
 			
-			<h2 id="DeleteIntVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=42996:43032#L973">DeleteIntVector</a>
+			<h2 id="DeleteIntVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=52128:52164#L1177">DeleteIntVector</a>
 				<a class="permalink" href="#DeleteIntVector">¶</a>
 				
 				
@@ -1569,7 +1823,7 @@
 		
 			
 			
-			<h2 id="DeleteLandmark5">func <a href="../../src/oneml/face/faceAPI.go.html?s=50170:50206#L1233">DeleteLandmark5</a>
+			<h2 id="DeleteLandmark5">func <a href="../../src/oneml/face/faceAPI.go.html?s=59302:59338#L1437">DeleteLandmark5</a>
 				<a class="permalink" href="#DeleteLandmark5">¶</a>
 				
 				
@@ -1582,7 +1836,7 @@
 		
 			
 			
-			<h2 id="DeleteLandmarks5Vector">func <a href="../../src/oneml/face/faceAPI.go.html?s=53669:53719#L1347">DeleteLandmarks5Vector</a>
+			<h2 id="DeleteLandmarks5Vector">func <a href="../../src/oneml/face/faceAPI.go.html?s=62801:62851#L1551">DeleteLandmarks5Vector</a>
 				<a class="permalink" href="#DeleteLandmarks5Vector">¶</a>
 				
 				
@@ -1595,7 +1849,7 @@
 		
 			
 			
-			<h2 id="DeleteLicenseManager">func <a href="../../src/oneml/face/faceAPI.go.html?s=104664:104710#L2883">DeleteLicenseManager</a>
+			<h2 id="DeleteLicenseManager">func <a href="../../src/oneml/face/faceAPI.go.html?s=124228:124274#L3401">DeleteLicenseManager</a>
 				<a class="permalink" href="#DeleteLicenseManager">¶</a>
 				
 				
@@ -1608,7 +1862,7 @@
 		
 			
 			
-			<h2 id="DeleteMultiImage">func <a href="../../src/oneml/face/faceAPI.go.html?s=29652:29690#L489">DeleteMultiImage</a>
+			<h2 id="DeleteMultiImage">func <a href="../../src/oneml/face/faceAPI.go.html?s=34370:34408#L547">DeleteMultiImage</a>
 				<a class="permalink" href="#DeleteMultiImage">¶</a>
 				
 				
@@ -1621,7 +1875,7 @@
 		
 			
 			
-			<h2 id="DeleteSamePersonResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=90771:90821#L2485">DeleteSamePersonResult</a>
+			<h2 id="DeleteSamePersonResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=100481:100531#L2705">DeleteSamePersonResult</a>
 				<a class="permalink" href="#DeleteSamePersonResult">¶</a>
 				
 				
@@ -1634,7 +1888,7 @@
 		
 			
 			
-			<h2 id="DeleteStringVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=84322:84364#L2279">DeleteStringVector</a>
+			<h2 id="DeleteStringVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=94032:94074#L2499">DeleteStringVector</a>
 				<a class="permalink" href="#DeleteStringVector">¶</a>
 				
 				
@@ -1647,7 +1901,20 @@
 		
 			
 			
-			<h2 id="DeleteUtils">func <a href="../../src/oneml/face/faceAPI.go.html?s=101547:101575#L2799">DeleteUtils</a>
+			<h2 id="DeleteUsageReport">func <a href="../../src/oneml/face/faceAPI.go.html?s=44025:44065#L891">DeleteUsageReport</a>
+				<a class="permalink" href="#DeleteUsageReport">¶</a>
+				
+				
+			</h2>
+			<pre>func DeleteUsageReport(arg1 <a href="#UsageReport">UsageReport</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteUtils">func <a href="../../src/oneml/face/faceAPI.go.html?s=120836:120864#L3309">DeleteUtils</a>
 				<a class="permalink" href="#DeleteUtils">¶</a>
 				
 				
@@ -1660,7 +1927,7 @@
 		
 			
 			
-			<h2 id="GetEMB_SIZE">func <a href="../../src/oneml/face/faceAPI.go.html?s=58587:58621#L1503">GetEMB_SIZE</a>
+			<h2 id="GetEMB_SIZE">func <a href="../../src/oneml/face/faceAPI.go.html?s=67719:67753#L1707">GetEMB_SIZE</a>
 				<a class="permalink" href="#GetEMB_SIZE">¶</a>
 				
 				
@@ -1673,7 +1940,7 @@
 		
 			
 			
-			<h2 id="GetN_LANDMARKS">func <a href="../../src/oneml/face/faceAPI.go.html?s=58720:58757#L1509">GetN_LANDMARKS</a>
+			<h2 id="GetN_LANDMARKS">func <a href="../../src/oneml/face/faceAPI.go.html?s=67852:67889#L1713">GetN_LANDMARKS</a>
 				<a class="permalink" href="#GetN_LANDMARKS">¶</a>
 				
 				
@@ -1686,7 +1953,7 @@
 		
 			
 			
-			<h2 id="GetN_LANDMARKS_106">func <a href="../../src/oneml/face/faceAPI.go.html?s=58859:58900#L1515">GetN_LANDMARKS_106</a>
+			<h2 id="GetN_LANDMARKS_106">func <a href="../../src/oneml/face/faceAPI.go.html?s=67991:68032#L1719">GetN_LANDMARKS_106</a>
 				<a class="permalink" href="#GetN_LANDMARKS_106">¶</a>
 				
 				
@@ -1699,7 +1966,7 @@
 		
 			
 			
-			<h2 id="PoseToText">func <a href="../../src/oneml/face/faceAPI.go.html?s=58233:58262#L1484">PoseToText</a>
+			<h2 id="PoseToText">func <a href="../../src/oneml/face/faceAPI.go.html?s=67365:67394#L1688">PoseToText</a>
 				<a class="permalink" href="#PoseToText">¶</a>
 				
 				
@@ -1712,7 +1979,7 @@
 		
 			
 			
-			<h2 id="Swig_free">func <a href="../../src/oneml/face/faceAPI.go.html?s=26458:26486#L377">Swig_free</a>
+			<h2 id="Swig_free">func <a href="../../src/oneml/face/faceAPI.go.html?s=31176:31204#L435">Swig_free</a>
 				<a class="permalink" href="#Swig_free">¶</a>
 				
 				
@@ -1725,7 +1992,7 @@
 		
 			
 			
-			<h2 id="Swig_malloc">func <a href="../../src/oneml/face/faceAPI.go.html?s=26576:26622#L382">Swig_malloc</a>
+			<h2 id="Swig_malloc">func <a href="../../src/oneml/face/faceAPI.go.html?s=31294:31340#L440">Swig_malloc</a>
 				<a class="permalink" href="#Swig_malloc">¶</a>
 				
 				
@@ -1739,7 +2006,7 @@
 		
 			
 			
-			<h2 id="BBox">type <a href="../../src/oneml/face/faceAPI.go.html?s=35259:35536#L699">BBox</a>
+			<h2 id="BBox">type <a href="../../src/oneml/face/faceAPI.go.html?s=39977:40254#L757">BBox</a>
 				<a class="permalink" href="#BBox">¶</a>
 				
 				
@@ -1768,7 +2035,7 @@
 
 			
 				
-				<h3 id="NewBBox">func <a href="../../src/oneml/face/faceAPI.go.html?s=34988:35019#L688">NewBBox</a>
+				<h3 id="NewBBox">func <a href="../../src/oneml/face/faceAPI.go.html?s=39706:39737#L746">NewBBox</a>
 					<a class="permalink" href="#NewBBox">¶</a>
 					
 					
@@ -1783,7 +2050,7 @@
 		
 			
 			
-			<h2 id="BBoxVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=46419:46676#L1096">BBoxVector</a>
+			<h2 id="BBoxVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=55551:55808#L1300">BBoxVector</a>
 				<a class="permalink" href="#BBoxVector">¶</a>
 				
 				
@@ -1812,7 +2079,7 @@
 
 			
 				
-				<h3 id="NewBBoxVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=44255:44302#L1020">NewBBoxVector</a>
+				<h3 id="NewBBoxVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=53387:53434#L1224">NewBBoxVector</a>
 					<a class="permalink" href="#NewBBoxVector">¶</a>
 					
 					
@@ -1823,7 +2090,7 @@
 				
 			
 				
-				<h3 id="NewBBoxVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=43552:43603#L1000">NewBBoxVector__SWIG_0</a>
+				<h3 id="NewBBoxVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=52684:52735#L1204">NewBBoxVector__SWIG_0</a>
 					<a class="permalink" href="#NewBBoxVector__SWIG_0">¶</a>
 					
 					
@@ -1834,7 +2101,7 @@
 				
 			
 				
-				<h3 id="NewBBoxVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=43746:43807#L1006">NewBBoxVector__SWIG_1</a>
+				<h3 id="NewBBoxVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=52878:52939#L1210">NewBBoxVector__SWIG_1</a>
 					<a class="permalink" href="#NewBBoxVector__SWIG_1">¶</a>
 					
 					
@@ -1845,7 +2112,7 @@
 				
 			
 				
-				<h3 id="NewBBoxVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=43994:44060#L1013">NewBBoxVector__SWIG_2</a>
+				<h3 id="NewBBoxVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=53126:53192#L1217">NewBBoxVector__SWIG_2</a>
 					<a class="permalink" href="#NewBBoxVector__SWIG_2">¶</a>
 					
 					
@@ -1860,7 +2127,7 @@
 		
 			
 			
-			<h2 id="EmbeddingArray">type <a href="../../src/oneml/face/faceAPI.go.html?s=66840:67055#L1751">EmbeddingArray</a>
+			<h2 id="EmbeddingArray">type <a href="../../src/oneml/face/faceAPI.go.html?s=76261:76476#L1963">EmbeddingArray</a>
 				<a class="permalink" href="#EmbeddingArray">¶</a>
 				
 				
@@ -1886,7 +2153,7 @@
 
 			
 				
-				<h3 id="NewEmbeddingArray">func <a href="../../src/oneml/face/faceAPI.go.html?s=65298:65353#L1700">NewEmbeddingArray</a>
+				<h3 id="NewEmbeddingArray">func <a href="../../src/oneml/face/faceAPI.go.html?s=74719:74774#L1912">NewEmbeddingArray</a>
 					<a class="permalink" href="#NewEmbeddingArray">¶</a>
 					
 					
@@ -1897,7 +2164,7 @@
 				
 			
 				
-				<h3 id="NewEmbeddingArray__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=64791:64850#L1687">NewEmbeddingArray__SWIG_0</a>
+				<h3 id="NewEmbeddingArray__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=74212:74271#L1899">NewEmbeddingArray__SWIG_0</a>
 					<a class="permalink" href="#NewEmbeddingArray__SWIG_0">¶</a>
 					
 					
@@ -1908,7 +2175,7 @@
 				
 			
 				
-				<h3 id="NewEmbeddingArray__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=65009:65087#L1693">NewEmbeddingArray__SWIG_1</a>
+				<h3 id="NewEmbeddingArray__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=74430:74508#L1905">NewEmbeddingArray__SWIG_1</a>
 					<a class="permalink" href="#NewEmbeddingArray__SWIG_1">¶</a>
 					
 					
@@ -1923,7 +2190,7 @@
 		
 			
 			
-			<h2 id="EmbeddingsVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=88117:88416#L2402">EmbeddingsVector</a>
+			<h2 id="EmbeddingsVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=97827:98126#L2622">EmbeddingsVector</a>
 				<a class="permalink" href="#EmbeddingsVector">¶</a>
 				
 				
@@ -1952,7 +2219,7 @@
 
 			
 				
-				<h3 id="NewEmbeddingsVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=85743:85802#L2326">NewEmbeddingsVector</a>
+				<h3 id="NewEmbeddingsVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=95453:95512#L2546">NewEmbeddingsVector</a>
 					<a class="permalink" href="#NewEmbeddingsVector">¶</a>
 					
 					
@@ -1963,7 +2230,7 @@
 				
 			
 				
-				<h3 id="NewEmbeddingsVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=84926:84989#L2306">NewEmbeddingsVector__SWIG_0</a>
+				<h3 id="NewEmbeddingsVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=94636:94699#L2526">NewEmbeddingsVector__SWIG_0</a>
 					<a class="permalink" href="#NewEmbeddingsVector__SWIG_0">¶</a>
 					
 					
@@ -1974,7 +2241,7 @@
 				
 			
 				
-				<h3 id="NewEmbeddingsVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=85156:85229#L2312">NewEmbeddingsVector__SWIG_1</a>
+				<h3 id="NewEmbeddingsVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=94866:94939#L2532">NewEmbeddingsVector__SWIG_1</a>
 					<a class="permalink" href="#NewEmbeddingsVector__SWIG_1">¶</a>
 					
 					
@@ -1985,7 +2252,7 @@
 				
 			
 				
-				<h3 id="NewEmbeddingsVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=85440:85524#L2319">NewEmbeddingsVector__SWIG_2</a>
+				<h3 id="NewEmbeddingsVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=95150:95234#L2539">NewEmbeddingsVector__SWIG_2</a>
 					<a class="permalink" href="#NewEmbeddingsVector__SWIG_2">¶</a>
 					
 					
@@ -2000,7 +2267,7 @@
 		
 			
 			
-			<h2 id="FaceDetector">type <a href="../../src/oneml/face/faceAPI.go.html?s=64424:64615#L1671">FaceDetector</a>
+			<h2 id="FaceDetector">type <a href="../../src/oneml/face/faceAPI.go.html?s=73809:74036#L1882">FaceDetector</a>
 				<a class="permalink" href="#FaceDetector">¶</a>
 				
 				
@@ -2009,6 +2276,7 @@
 			<pre>type FaceDetector interface {
     Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
     SwigIsFaceDetector()
+    GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)
     DetectBatch(arg2 <a href="#MultiImage">MultiImage</a>) (_swig_ret <a href="#FaceDetectorResultVector">FaceDetectorResultVector</a>)
     Detect(arg2 <a href="#Image">Image</a>) (_swig_ret <a href="#FaceDetectorResult">FaceDetectorResult</a>)
 }</pre>
@@ -2023,7 +2291,7 @@
 
 			
 				
-				<h3 id="NewFaceDetector">func <a href="../../src/oneml/face/faceAPI.go.html?s=63289:63355#L1643">NewFaceDetector</a>
+				<h3 id="NewFaceDetector">func <a href="../../src/oneml/face/faceAPI.go.html?s=72421:72487#L1847">NewFaceDetector</a>
 					<a class="permalink" href="#NewFaceDetector">¶</a>
 					
 					
@@ -2038,7 +2306,7 @@
 		
 			
 			
-			<h2 id="FaceDetectorResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=62816:63121#L1623">FaceDetectorResult</a>
+			<h2 id="FaceDetectorResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=71948:72253#L1827">FaceDetectorResult</a>
 				<a class="permalink" href="#FaceDetectorResult">¶</a>
 				
 				
@@ -2065,7 +2333,7 @@
 
 			
 				
-				<h3 id="NewFaceDetectorResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=60969:61032#L1570">NewFaceDetectorResult</a>
+				<h3 id="NewFaceDetectorResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=70101:70164#L1774">NewFaceDetectorResult</a>
 					<a class="permalink" href="#NewFaceDetectorResult">¶</a>
 					
 					
@@ -2076,7 +2344,7 @@
 				
 			
 				
-				<h3 id="NewFaceDetectorResult__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=60239:60306#L1552">NewFaceDetectorResult__SWIG_0</a>
+				<h3 id="NewFaceDetectorResult__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=69371:69438#L1756">NewFaceDetectorResult__SWIG_0</a>
 					<a class="permalink" href="#NewFaceDetectorResult__SWIG_0">¶</a>
 					
 					
@@ -2087,7 +2355,7 @@
 				
 			
 				
-				<h3 id="NewFaceDetectorResult__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=60652:60742#L1563">NewFaceDetectorResult__SWIG_1</a>
+				<h3 id="NewFaceDetectorResult__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=69784:69874#L1767">NewFaceDetectorResult__SWIG_1</a>
 					<a class="permalink" href="#NewFaceDetectorResult__SWIG_1">¶</a>
 					
 					
@@ -2102,7 +2370,7 @@
 		
 			
 			
-			<h2 id="FaceDetectorResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=57901:58228#L1470">FaceDetectorResultVector</a>
+			<h2 id="FaceDetectorResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=67033:67360#L1674">FaceDetectorResultVector</a>
 				<a class="permalink" href="#FaceDetectorResultVector">¶</a>
 				
 				
@@ -2131,7 +2399,7 @@
 
 			
 				
-				<h3 id="NewFaceDetectorResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=55303:55378#L1394">NewFaceDetectorResultVector</a>
+				<h3 id="NewFaceDetectorResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=64435:64510#L1598">NewFaceDetectorResultVector</a>
 					<a class="permalink" href="#NewFaceDetectorResultVector">¶</a>
 					
 					
@@ -2142,7 +2410,7 @@
 				
 			
 				
-				<h3 id="NewFaceDetectorResultVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=54334:54413#L1374">NewFaceDetectorResultVector__SWIG_0</a>
+				<h3 id="NewFaceDetectorResultVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=63466:63545#L1578">NewFaceDetectorResultVector__SWIG_0</a>
 					<a class="permalink" href="#NewFaceDetectorResultVector__SWIG_0">¶</a>
 					
 					
@@ -2153,7 +2421,7 @@
 				
 			
 				
-				<h3 id="NewFaceDetectorResultVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=54612:54701#L1380">NewFaceDetectorResultVector__SWIG_1</a>
+				<h3 id="NewFaceDetectorResultVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=63744:63833#L1584">NewFaceDetectorResultVector__SWIG_1</a>
 					<a class="permalink" href="#NewFaceDetectorResultVector__SWIG_1">¶</a>
 					
 					
@@ -2164,7 +2432,7 @@
 				
 			
 				
-				<h3 id="NewFaceDetectorResultVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=54944:55052#L1387">NewFaceDetectorResultVector__SWIG_2</a>
+				<h3 id="NewFaceDetectorResultVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=64076:64184#L1591">NewFaceDetectorResultVector__SWIG_2</a>
 					<a class="permalink" href="#NewFaceDetectorResultVector__SWIG_2">¶</a>
 					
 					
@@ -2179,7 +2447,7 @@
 		
 			
 			
-			<h2 id="FaceEmbedder">type <a href="../../src/oneml/face/faceAPI.go.html?s=77184:77356#L2045">FaceEmbedder</a>
+			<h2 id="FaceEmbedder">type <a href="../../src/oneml/face/faceAPI.go.html?s=86858:87066#L2264">FaceEmbedder</a>
 				<a class="permalink" href="#FaceEmbedder">¶</a>
 				
 				
@@ -2188,6 +2456,7 @@
 			<pre>type FaceEmbedder interface {
     Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
     SwigIsFaceEmbedder()
+    GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)
     Embed(a ...interface{}) <a href="#FaceEmbedderResult">FaceEmbedderResult</a>
     EmbedBatch(a ...interface{}) <a href="#FaceEmbedderResultVector">FaceEmbedderResultVector</a>
 }</pre>
@@ -2202,7 +2471,7 @@
 
 			
 				
-				<h3 id="NewFaceEmbedder">func <a href="../../src/oneml/face/faceAPI.go.html?s=74599:74665#L1977">NewFaceEmbedder</a>
+				<h3 id="NewFaceEmbedder">func <a href="../../src/oneml/face/faceAPI.go.html?s=84020:84086#L2189">NewFaceEmbedder</a>
 					<a class="permalink" href="#NewFaceEmbedder">¶</a>
 					
 					
@@ -2217,7 +2486,7 @@
 		
 			
 			
-			<h2 id="FaceEmbedderResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=74217:74431#L1960">FaceEmbedderResult</a>
+			<h2 id="FaceEmbedderResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=83638:83852#L2172">FaceEmbedderResult</a>
 				<a class="permalink" href="#FaceEmbedderResult">¶</a>
 				
 				
@@ -2241,7 +2510,7 @@
 
 			
 				
-				<h3 id="NewFaceEmbedderResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=73130:73193#L1928">NewFaceEmbedderResult</a>
+				<h3 id="NewFaceEmbedderResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=82551:82614#L2140">NewFaceEmbedderResult</a>
 					<a class="permalink" href="#NewFaceEmbedderResult">¶</a>
 					
 					
@@ -2252,7 +2521,7 @@
 				
 			
 				
-				<h3 id="NewFaceEmbedderResult__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=72400:72467#L1910">NewFaceEmbedderResult__SWIG_0</a>
+				<h3 id="NewFaceEmbedderResult__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=81821:81888#L2122">NewFaceEmbedderResult__SWIG_0</a>
 					<a class="permalink" href="#NewFaceEmbedderResult__SWIG_0">¶</a>
 					
 					
@@ -2263,7 +2532,7 @@
 				
 			
 				
-				<h3 id="NewFaceEmbedderResult__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=72813:72903#L1921">NewFaceEmbedderResult__SWIG_1</a>
+				<h3 id="NewFaceEmbedderResult__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=82234:82324#L2133">NewFaceEmbedderResult__SWIG_1</a>
 					<a class="permalink" href="#NewFaceEmbedderResult__SWIG_1">¶</a>
 					
 					
@@ -2278,7 +2547,7 @@
 		
 			
 			
-			<h2 id="FaceEmbedderResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=70838:71165#L1866">FaceEmbedderResultVector</a>
+			<h2 id="FaceEmbedderResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=80259:80586#L2078">FaceEmbedderResultVector</a>
 				<a class="permalink" href="#FaceEmbedderResultVector">¶</a>
 				
 				
@@ -2307,7 +2576,7 @@
 
 			
 				
-				<h3 id="NewFaceEmbedderResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=68240:68315#L1790">NewFaceEmbedderResultVector</a>
+				<h3 id="NewFaceEmbedderResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=77661:77736#L2002">NewFaceEmbedderResultVector</a>
 					<a class="permalink" href="#NewFaceEmbedderResultVector">¶</a>
 					
 					
@@ -2318,7 +2587,7 @@
 				
 			
 				
-				<h3 id="NewFaceEmbedderResultVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=67271:67350#L1770">NewFaceEmbedderResultVector__SWIG_0</a>
+				<h3 id="NewFaceEmbedderResultVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=76692:76771#L1982">NewFaceEmbedderResultVector__SWIG_0</a>
 					<a class="permalink" href="#NewFaceEmbedderResultVector__SWIG_0">¶</a>
 					
 					
@@ -2329,7 +2598,7 @@
 				
 			
 				
-				<h3 id="NewFaceEmbedderResultVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=67549:67638#L1776">NewFaceEmbedderResultVector__SWIG_1</a>
+				<h3 id="NewFaceEmbedderResultVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=76970:77059#L1988">NewFaceEmbedderResultVector__SWIG_1</a>
 					<a class="permalink" href="#NewFaceEmbedderResultVector__SWIG_1">¶</a>
 					
 					
@@ -2340,7 +2609,7 @@
 				
 			
 				
-				<h3 id="NewFaceEmbedderResultVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=67881:67989#L1783">NewFaceEmbedderResultVector__SWIG_2</a>
+				<h3 id="NewFaceEmbedderResultVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=77302:77410#L1995">NewFaceEmbedderResultVector__SWIG_2</a>
 					<a class="permalink" href="#NewFaceEmbedderResultVector__SWIG_2">¶</a>
 					
 					
@@ -2355,7 +2624,7 @@
 		
 			
 			
-			<h2 id="FaceId">type <a href="../../src/oneml/face/faceAPI.go.html?s=100384:101188#L2766">FaceId</a>
+			<h2 id="FaceId">type <a href="../../src/oneml/face/faceAPI.go.html?s=110335:111175#L2993">FaceId</a>
 				<a class="permalink" href="#FaceId">¶</a>
 				
 				
@@ -2364,6 +2633,7 @@
 			<pre>type FaceId interface {
     Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
     SwigIsFaceId()
+    GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)
     Predict(arg2 <a href="#Image">Image</a>) (_swig_ret <a href="#FaceIdResult">FaceIdResult</a>)
     PredictBatch(arg2 <a href="#MultiImage">MultiImage</a>) (_swig_ret <a href="#FaceIdResultVector">FaceIdResultVector</a>)
     IsTheSamePersonImg(arg2 <a href="#Image">Image</a>, arg3 <a href="#Image">Image</a>) (_swig_ret <a href="../../builtin/#bool">bool</a>)
@@ -2388,7 +2658,7 @@
 
 			
 				
-				<h3 id="NewFaceId">func <a href="../../src/oneml/face/faceAPI.go.html?s=95359:95398#L2631">NewFaceId</a>
+				<h3 id="NewFaceId">func <a href="../../src/oneml/face/faceAPI.go.html?s=105069:105108#L2851">NewFaceId</a>
 					<a class="permalink" href="#NewFaceId">¶</a>
 					
 					
@@ -2399,7 +2669,7 @@
 				
 			
 				
-				<h3 id="NewFaceId__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=94804:94866#L2616">NewFaceId__SWIG_0</a>
+				<h3 id="NewFaceId__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=104514:104576#L2836">NewFaceId__SWIG_0</a>
 					<a class="permalink" href="#NewFaceId__SWIG_0">¶</a>
 					
 					
@@ -2410,7 +2680,7 @@
 				
 			
 				
-				<h3 id="NewFaceId__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=95045:95126#L2623">NewFaceId__SWIG_1</a>
+				<h3 id="NewFaceId__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=104755:104836#L2843">NewFaceId__SWIG_1</a>
 					<a class="permalink" href="#NewFaceId__SWIG_1">¶</a>
 					
 					
@@ -2425,7 +2695,7 @@
 		
 			
 			
-			<h2 id="FaceIdResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=94382:94660#L2597">FaceIdResult</a>
+			<h2 id="FaceIdResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=104092:104370#L2817">FaceIdResult</a>
 				<a class="permalink" href="#FaceIdResult">¶</a>
 				
 				
@@ -2451,7 +2721,7 @@
 
 			
 				
-				<h3 id="NewFaceIdResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=92834:92885#L2548">NewFaceIdResult</a>
+				<h3 id="NewFaceIdResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=102544:102595#L2768">NewFaceIdResult</a>
 					<a class="permalink" href="#NewFaceIdResult">¶</a>
 					
 					
@@ -2462,7 +2732,7 @@
 				
 			
 				
-				<h3 id="NewFaceIdResult__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=92200:92255#L2530">NewFaceIdResult__SWIG_0</a>
+				<h3 id="NewFaceIdResult__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=101910:101965#L2750">NewFaceIdResult__SWIG_0</a>
 					<a class="permalink" href="#NewFaceIdResult__SWIG_0">¶</a>
 					
 					
@@ -2473,7 +2743,7 @@
 				
 			
 				
-				<h3 id="NewFaceIdResult__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=92559:92631#L2541">NewFaceIdResult__SWIG_1</a>
+				<h3 id="NewFaceIdResult__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=102269:102341#L2761">NewFaceIdResult__SWIG_1</a>
 					<a class="permalink" href="#NewFaceIdResult__SWIG_1">¶</a>
 					
 					
@@ -2488,7 +2758,7 @@
 		
 			
 			
-			<h2 id="FaceIdResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=80815:81112#L2157">FaceIdResultVector</a>
+			<h2 id="FaceIdResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=90525:90822#L2377">FaceIdResultVector</a>
 				<a class="permalink" href="#FaceIdResultVector">¶</a>
 				
 				
@@ -2517,7 +2787,7 @@
 
 			
 				
-				<h3 id="NewFaceIdResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=78403:78466#L2081">NewFaceIdResultVector</a>
+				<h3 id="NewFaceIdResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=88113:88176#L2301">NewFaceIdResultVector</a>
 					<a class="permalink" href="#NewFaceIdResultVector">¶</a>
 					
 					
@@ -2528,7 +2798,7 @@
 				
 			
 				
-				<h3 id="NewFaceIdResultVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=77548:77615#L2061">NewFaceIdResultVector__SWIG_0</a>
+				<h3 id="NewFaceIdResultVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=87258:87325#L2281">NewFaceIdResultVector__SWIG_0</a>
 					<a class="permalink" href="#NewFaceIdResultVector__SWIG_0">¶</a>
 					
 					
@@ -2539,7 +2809,7 @@
 				
 			
 				
-				<h3 id="NewFaceIdResultVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=77790:77867#L2067">NewFaceIdResultVector__SWIG_1</a>
+				<h3 id="NewFaceIdResultVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=87500:87577#L2287">NewFaceIdResultVector__SWIG_1</a>
 					<a class="permalink" href="#NewFaceIdResultVector__SWIG_1">¶</a>
 					
 					
@@ -2550,7 +2820,7 @@
 				
 			
 				
-				<h3 id="NewFaceIdResultVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=78086:78176#L2074">NewFaceIdResultVector__SWIG_2</a>
+				<h3 id="NewFaceIdResultVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=87796:87886#L2294">NewFaceIdResultVector__SWIG_2</a>
 					<a class="permalink" href="#NewFaceIdResultVector__SWIG_2">¶</a>
 					
 					
@@ -2565,7 +2835,184 @@
 		
 			
 			
-			<h2 id="FloatArray">type <a href="../../src/oneml/face/faceAPI.go.html?s=48761:48968#L1182">FloatArray</a>
+			<h2 id="FacePad">type <a href="../../src/oneml/face/faceAPI.go.html?s=120266:120477#L3285">FacePad</a>
+				<a class="permalink" href="#FacePad">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type FacePad interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsFacePad()
+    GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)
+    ClassifyBatch(arg2 <a href="#MultiImage">MultiImage</a>) (_swig_ret <a href="#FacePadResultVector">FacePadResultVector</a>)
+    Classify(arg2 <a href="#Image">Image</a>) (_swig_ret <a href="#FacePadResult">FacePadResult</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewFacePad">func <a href="../../src/oneml/face/faceAPI.go.html?s=118918:118997#L3249">NewFacePad</a>
+					<a class="permalink" href="#NewFacePad">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFacePad(arg1 <a href="#OneMLFacePadType">OneMLFacePadType</a>, arg2 <a href="#LicenseManager">LicenseManager</a>) (_swig_ret <a href="#FacePad">FacePad</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="FacePadResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=118577:118770#L3232">FacePadResult</a>
+				<a class="permalink" href="#FacePadResult">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type FacePadResult interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsFacePadResult()
+    GetSpoofProb() (_swig_ret <a href="../../builtin/#float32">float32</a>)
+    IsSpoof() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    GetReturnStatus() (_swig_ret <a href="#OneMLFaceFacePadStatus">OneMLFaceFacePadStatus</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewFacePadResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=117602:117655#L3200">NewFacePadResult</a>
+					<a class="permalink" href="#NewFacePadResult">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFacePadResult(a ...interface{}) <a href="#FacePadResult">FacePadResult</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFacePadResult__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=116952:117009#L3182">NewFacePadResult__SWIG_0</a>
+					<a class="permalink" href="#NewFacePadResult__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFacePadResult__SWIG_0() (_swig_ret <a href="#FacePadResult">FacePadResult</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFacePadResult__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=117320:117395#L3193">NewFacePadResult__SWIG_1</a>
+					<a class="permalink" href="#NewFacePadResult__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFacePadResult__SWIG_1(arg1 <a href="#FacePadResult">FacePadResult</a>) (_swig_ret <a href="#FacePadResult">FacePadResult</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="FacePadResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=114688:114990#L3116">FacePadResultVector</a>
+				<a class="permalink" href="#FacePadResultVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type FacePadResultVector interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsFacePadResultVector()
+    Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)
+    Reserve(arg2 <a href="../../builtin/#int64">int64</a>)
+    IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    Clear()
+    Add(arg2 <a href="#FacePadResult">FacePadResult</a>)
+    Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="#FacePadResult">FacePadResult</a>)
+    Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="#FacePadResult">FacePadResult</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewFacePadResultVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=112245:112310#L3040">NewFacePadResultVector</a>
+					<a class="permalink" href="#NewFacePadResultVector">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFacePadResultVector(a ...interface{}) <a href="#FacePadResultVector">FacePadResultVector</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFacePadResultVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=111371:111440#L3020">NewFacePadResultVector__SWIG_0</a>
+					<a class="permalink" href="#NewFacePadResultVector__SWIG_0">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFacePadResultVector__SWIG_0() (_swig_ret <a href="#FacePadResultVector">FacePadResultVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFacePadResultVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=111619:111698#L3026">NewFacePadResultVector__SWIG_1</a>
+					<a class="permalink" href="#NewFacePadResultVector__SWIG_1">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFacePadResultVector__SWIG_1(arg1 <a href="../../builtin/#int64">int64</a>) (_swig_ret <a href="#FacePadResultVector">FacePadResultVector</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFacePadResultVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=111921:112014#L3033">NewFacePadResultVector__SWIG_2</a>
+					<a class="permalink" href="#NewFacePadResultVector__SWIG_2">¶</a>
+					
+					
+				</h3>
+				<pre>func NewFacePadResultVector__SWIG_2(arg1 <a href="#FacePadResultVector">FacePadResultVector</a>) (_swig_ret <a href="#FacePadResultVector">FacePadResultVector</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="FloatArray">type <a href="../../src/oneml/face/faceAPI.go.html?s=57893:58100#L1386">FloatArray</a>
 				<a class="permalink" href="#FloatArray">¶</a>
 				
 				
@@ -2591,7 +3038,7 @@
 
 			
 				
-				<h3 id="NewFloatArray">func <a href="../../src/oneml/face/faceAPI.go.html?s=47291:47338#L1131">NewFloatArray</a>
+				<h3 id="NewFloatArray">func <a href="../../src/oneml/face/faceAPI.go.html?s=56423:56470#L1335">NewFloatArray</a>
 					<a class="permalink" href="#NewFloatArray">¶</a>
 					
 					
@@ -2602,7 +3049,7 @@
 				
 			
 				
-				<h3 id="NewFloatArray__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=46836:46887#L1118">NewFloatArray__SWIG_0</a>
+				<h3 id="NewFloatArray__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=55968:56019#L1322">NewFloatArray__SWIG_0</a>
 					<a class="permalink" href="#NewFloatArray__SWIG_0">¶</a>
 					
 					
@@ -2613,7 +3060,7 @@
 				
 			
 				
-				<h3 id="NewFloatArray__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=47030:47096#L1124">NewFloatArray__SWIG_1</a>
+				<h3 id="NewFloatArray__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=56162:56228#L1328">NewFloatArray__SWIG_1</a>
 					<a class="permalink" href="#NewFloatArray__SWIG_1">¶</a>
 					
 					
@@ -2628,7 +3075,7 @@
 		
 			
 			
-			<h2 id="FloatVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=39932:40200#L860">FloatVector</a>
+			<h2 id="FloatVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=49064:49332#L1064">FloatVector</a>
 				<a class="permalink" href="#FloatVector">¶</a>
 				
 				
@@ -2657,7 +3104,7 @@
 
 			
 				
-				<h3 id="NewFloatVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=37772:37821#L784">NewFloatVector</a>
+				<h3 id="NewFloatVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=46904:46953#L988">NewFloatVector</a>
 					<a class="permalink" href="#NewFloatVector">¶</a>
 					
 					
@@ -2668,7 +3115,7 @@
 				
 			
 				
-				<h3 id="NewFloatVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=37051:37104#L764">NewFloatVector__SWIG_0</a>
+				<h3 id="NewFloatVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=46182:46235#L968">NewFloatVector__SWIG_0</a>
 					<a class="permalink" href="#NewFloatVector__SWIG_0">¶</a>
 					
 					
@@ -2679,7 +3126,7 @@
 				
 			
 				
-				<h3 id="NewFloatVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=37251:37314#L770">NewFloatVector__SWIG_1</a>
+				<h3 id="NewFloatVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=46382:46445#L974">NewFloatVector__SWIG_1</a>
 					<a class="permalink" href="#NewFloatVector__SWIG_1">¶</a>
 					
 					
@@ -2690,7 +3137,7 @@
 				
 			
 				
-				<h3 id="NewFloatVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=37504:37573#L777">NewFloatVector__SWIG_2</a>
+				<h3 id="NewFloatVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=46636:46705#L981">NewFloatVector__SWIG_2</a>
 					<a class="permalink" href="#NewFloatVector__SWIG_2">¶</a>
 					
 					
@@ -2705,7 +3152,7 @@
 		
 			
 			
-			<h2 id="Image">type <a href="../../src/oneml/face/faceAPI.go.html?s=33016:33316#L613">Image</a>
+			<h2 id="Image">type <a href="../../src/oneml/face/faceAPI.go.html?s=37734:38034#L671">Image</a>
 				<a class="permalink" href="#Image">¶</a>
 				
 				
@@ -2735,7 +3182,7 @@
 
 			
 				
-				<h3 id="NewImage">func <a href="../../src/oneml/face/faceAPI.go.html?s=32171:32208#L581">NewImage</a>
+				<h3 id="NewImage">func <a href="../../src/oneml/face/faceAPI.go.html?s=36889:36926#L639">NewImage</a>
 					<a class="permalink" href="#NewImage">¶</a>
 					
 					
@@ -2746,7 +3193,7 @@
 				
 			
 				
-				<h3 id="NewImage__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=30199:30240#L516">NewImage__SWIG_0</a>
+				<h3 id="NewImage__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=34917:34958#L574">NewImage__SWIG_0</a>
 					<a class="permalink" href="#NewImage__SWIG_0">¶</a>
 					
 					
@@ -2757,7 +3204,7 @@
 				
 			
 				
-				<h3 id="NewImage__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=31711:31793#L568">NewImage__SWIG_1</a>
+				<h3 id="NewImage__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=36429:36511#L626">NewImage__SWIG_1</a>
 					<a class="permalink" href="#NewImage__SWIG_1">¶</a>
 					
 					
@@ -2772,7 +3219,7 @@
 		
 			
 			
-			<h2 id="IntVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=43140:43392#L978">IntVector</a>
+			<h2 id="IntVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=52272:52524#L1182">IntVector</a>
 				<a class="permalink" href="#IntVector">¶</a>
 				
 				
@@ -2801,7 +3248,7 @@
 
 			
 				
-				<h3 id="NewIntVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=41040:41085#L902">NewIntVector</a>
+				<h3 id="NewIntVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=50172:50217#L1106">NewIntVector</a>
 					<a class="permalink" href="#NewIntVector">¶</a>
 					
 					
@@ -2812,7 +3259,7 @@
 				
 			
 				
-				<h3 id="NewIntVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=40356:40405#L882">NewIntVector__SWIG_0</a>
+				<h3 id="NewIntVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=49488:49537#L1086">NewIntVector__SWIG_0</a>
 					<a class="permalink" href="#NewIntVector__SWIG_0">¶</a>
 					
 					
@@ -2823,7 +3270,7 @@
 				
 			
 				
-				<h3 id="NewIntVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=40544:40603#L888">NewIntVector__SWIG_1</a>
+				<h3 id="NewIntVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=49676:49735#L1092">NewIntVector__SWIG_1</a>
 					<a class="permalink" href="#NewIntVector__SWIG_1">¶</a>
 					
 					
@@ -2834,7 +3281,7 @@
 				
 			
 				
-				<h3 id="NewIntVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=40786:40849#L895">NewIntVector__SWIG_2</a>
+				<h3 id="NewIntVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=49918:49981#L1099">NewIntVector__SWIG_2</a>
 					<a class="permalink" href="#NewIntVector__SWIG_2">¶</a>
 					
 					
@@ -2849,7 +3296,7 @@
 		
 			
 			
-			<h2 id="Landmark5">type <a href="../../src/oneml/face/faceAPI.go.html?s=50314:50489#L1238">Landmark5</a>
+			<h2 id="Landmark5">type <a href="../../src/oneml/face/faceAPI.go.html?s=59446:59621#L1442">Landmark5</a>
 				<a class="permalink" href="#Landmark5">¶</a>
 				
 				
@@ -2874,7 +3321,7 @@
 
 			
 				
-				<h3 id="NewLandmark5">func <a href="../../src/oneml/face/faceAPI.go.html?s=49998:50039#L1227">NewLandmark5</a>
+				<h3 id="NewLandmark5">func <a href="../../src/oneml/face/faceAPI.go.html?s=59130:59171#L1431">NewLandmark5</a>
 					<a class="permalink" href="#NewLandmark5">¶</a>
 					
 					
@@ -2889,7 +3336,7 @@
 		
 			
 			
-			<h2 id="Landmarks5Vector">type <a href="../../src/oneml/face/faceAPI.go.html?s=53834:54118#L1352">Landmarks5Vector</a>
+			<h2 id="Landmarks5Vector">type <a href="../../src/oneml/face/faceAPI.go.html?s=62966:63250#L1556">Landmarks5Vector</a>
 				<a class="permalink" href="#Landmarks5Vector">¶</a>
 				
 				
@@ -2918,7 +3365,7 @@
 
 			
 				
-				<h3 id="NewLandmarks5Vector">func <a href="../../src/oneml/face/faceAPI.go.html?s=51490:51549#L1276">NewLandmarks5Vector</a>
+				<h3 id="NewLandmarks5Vector">func <a href="../../src/oneml/face/faceAPI.go.html?s=60622:60681#L1480">NewLandmarks5Vector</a>
 					<a class="permalink" href="#NewLandmarks5Vector">¶</a>
 					
 					
@@ -2929,7 +3376,7 @@
 				
 			
 				
-				<h3 id="NewLandmarks5Vector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=50673:50736#L1256">NewLandmarks5Vector__SWIG_0</a>
+				<h3 id="NewLandmarks5Vector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=59805:59868#L1460">NewLandmarks5Vector__SWIG_0</a>
 					<a class="permalink" href="#NewLandmarks5Vector__SWIG_0">¶</a>
 					
 					
@@ -2940,7 +3387,7 @@
 				
 			
 				
-				<h3 id="NewLandmarks5Vector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=50903:50976#L1262">NewLandmarks5Vector__SWIG_1</a>
+				<h3 id="NewLandmarks5Vector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=60035:60108#L1466">NewLandmarks5Vector__SWIG_1</a>
 					<a class="permalink" href="#NewLandmarks5Vector__SWIG_1">¶</a>
 					
 					
@@ -2951,7 +3398,7 @@
 				
 			
 				
-				<h3 id="NewLandmarks5Vector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=51187:51271#L1269">NewLandmarks5Vector__SWIG_2</a>
+				<h3 id="NewLandmarks5Vector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=60319:60403#L1473">NewLandmarks5Vector__SWIG_2</a>
 					<a class="permalink" href="#NewLandmarks5Vector__SWIG_2">¶</a>
 					
 					
@@ -2966,7 +3413,7 @@
 		
 			
 			
-			<h2 id="LicenseManager">type <a href="../../src/oneml/face/faceAPI.go.html?s=108126:108585#L2986">LicenseManager</a>
+			<h2 id="LicenseManager">type <a href="../../src/oneml/face/faceAPI.go.html?s=127947:128442#L3511">LicenseManager</a>
 				<a class="permalink" href="#LicenseManager">¶</a>
 				
 				
@@ -2985,6 +3432,7 @@
     IsValidActivation() (_swig_ret <a href="../../builtin/#bool">bool</a>)
     GetActivationType() (_swig_ret <a href="#OneMLLicenseActivationType">OneMLLicenseActivationType</a>)
     GetActivationExpiryDate() (_swig_ret <a href="../../builtin/#uint64">uint64</a>)
+    GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)
 }</pre>
 
 			
@@ -2997,7 +3445,7 @@
 
 			
 				
-				<h3 id="NewLicenseManager">func <a href="../../src/oneml/face/faceAPI.go.html?s=105112:105167#L2895">NewLicenseManager</a>
+				<h3 id="NewLicenseManager">func <a href="../../src/oneml/face/faceAPI.go.html?s=124676:124731#L3413">NewLicenseManager</a>
 					<a class="permalink" href="#NewLicenseManager">¶</a>
 					
 					
@@ -3008,7 +3456,7 @@
 				
 			
 				
-				<h3 id="NewLicenseManager__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=104446:104505#L2877">NewLicenseManager__SWIG_0</a>
+				<h3 id="NewLicenseManager__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=124010:124069#L3395">NewLicenseManager__SWIG_0</a>
 					<a class="permalink" href="#NewLicenseManager__SWIG_0">¶</a>
 					
 					
@@ -3019,7 +3467,7 @@
 				
 			
 				
-				<h3 id="NewLicenseManager__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=104823:104901#L2888">NewLicenseManager__SWIG_1</a>
+				<h3 id="NewLicenseManager__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=124387:124465#L3406">NewLicenseManager__SWIG_1</a>
 					<a class="permalink" href="#NewLicenseManager__SWIG_1">¶</a>
 					
 					
@@ -3034,7 +3482,7 @@
 		
 			
 			
-			<h2 id="MultiImage">type <a href="../../src/oneml/face/faceAPI.go.html?s=29799:30059#L494">MultiImage</a>
+			<h2 id="MultiImage">type <a href="../../src/oneml/face/faceAPI.go.html?s=34517:34777#L552">MultiImage</a>
 				<a class="permalink" href="#MultiImage">¶</a>
 				
 				
@@ -3063,7 +3511,7 @@
 
 			
 				
-				<h3 id="NewMultiImage">func <a href="../../src/oneml/face/faceAPI.go.html?s=27630:27677#L418">NewMultiImage</a>
+				<h3 id="NewMultiImage">func <a href="../../src/oneml/face/faceAPI.go.html?s=32348:32395#L476">NewMultiImage</a>
 					<a class="permalink" href="#NewMultiImage">¶</a>
 					
 					
@@ -3074,7 +3522,7 @@
 				
 			
 				
-				<h3 id="NewMultiImage__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=26928:26979#L398">NewMultiImage__SWIG_0</a>
+				<h3 id="NewMultiImage__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=31646:31697#L456">NewMultiImage__SWIG_0</a>
 					<a class="permalink" href="#NewMultiImage__SWIG_0">¶</a>
 					
 					
@@ -3085,7 +3533,7 @@
 				
 			
 				
-				<h3 id="NewMultiImage__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=27122:27183#L404">NewMultiImage__SWIG_1</a>
+				<h3 id="NewMultiImage__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=31840:31901#L462">NewMultiImage__SWIG_1</a>
 					<a class="permalink" href="#NewMultiImage__SWIG_1">¶</a>
 					
 					
@@ -3096,7 +3544,7 @@
 				
 			
 				
-				<h3 id="NewMultiImage__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=27369:27435#L411">NewMultiImage__SWIG_2</a>
+				<h3 id="NewMultiImage__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=32087:32153#L469">NewMultiImage__SWIG_2</a>
 					<a class="permalink" href="#NewMultiImage__SWIG_2">¶</a>
 					
 					
@@ -3111,7 +3559,7 @@
 		
 			
 			
-			<h2 id="OneMLFaceFaceDetectorStatus">type <a href="../../src/oneml/face/faceAPI.go.html?s=59006:59042#L1521">OneMLFaceFaceDetectorStatus</a>
+			<h2 id="OneMLFaceFaceDetectorStatus">type <a href="../../src/oneml/face/faceAPI.go.html?s=68138:68174#L1725">OneMLFaceFaceDetectorStatus</a>
 				<a class="permalink" href="#OneMLFaceFaceDetectorStatus">¶</a>
 				
 				
@@ -3142,7 +3590,7 @@
 		
 			
 			
-			<h2 id="OneMLFaceFaceEmbedderStatus">type <a href="../../src/oneml/face/faceAPI.go.html?s=71167:71203#L1879">OneMLFaceFaceEmbedderStatus</a>
+			<h2 id="OneMLFaceFaceEmbedderStatus">type <a href="../../src/oneml/face/faceAPI.go.html?s=80588:80624#L2091">OneMLFaceFaceEmbedderStatus</a>
 				<a class="permalink" href="#OneMLFaceFaceEmbedderStatus">¶</a>
 				
 				
@@ -3173,7 +3621,7 @@
 		
 			
 			
-			<h2 id="OneMLFaceFaceIdStatus">type <a href="../../src/oneml/face/faceAPI.go.html?s=91141:91171#L2499">OneMLFaceFaceIdStatus</a>
+			<h2 id="OneMLFaceFaceIdStatus">type <a href="../../src/oneml/face/faceAPI.go.html?s=100851:100881#L2719">OneMLFaceFaceIdStatus</a>
 				<a class="permalink" href="#OneMLFaceFaceIdStatus">¶</a>
 				
 				
@@ -3204,7 +3652,69 @@
 		
 			
 			
-			<h2 id="OneMLFacePose">type <a href="../../src/oneml/face/faceAPI.go.html?s=35538:35560#L712">OneMLFacePose</a>
+			<h2 id="OneMLFaceFacePadStatus">type <a href="../../src/oneml/face/faceAPI.go.html?s=114992:115023#L3129">OneMLFaceFacePadStatus</a>
+				<a class="permalink" href="#OneMLFaceFacePadStatus">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type OneMLFaceFacePadStatus <a href="../../builtin/#int">int</a></pre>
+
+			
+
+			
+				
+				<pre>var <span id="FacePadStatus_DigitalPadFail">FacePadStatus_DigitalPadFail</span> <a href="#OneMLFaceFacePadStatus">OneMLFaceFacePadStatus</a> = _swig_getFacePadStatus_DigitalPadFail()</pre>
+			
+				
+				<pre>var <span id="FacePadStatus_Empty">FacePadStatus_Empty</span> <a href="#OneMLFaceFacePadStatus">OneMLFaceFacePadStatus</a> = _swig_getFacePadStatus_Empty()</pre>
+			
+				
+				<pre>var <span id="FacePadStatus_PaperPadFail">FacePadStatus_PaperPadFail</span> <a href="#OneMLFaceFacePadStatus">OneMLFaceFacePadStatus</a> = _swig_getFacePadStatus_PaperPadFail()</pre>
+			
+				
+				<pre>var <span id="FacePadStatus_Success">FacePadStatus_Success</span> <a href="#OneMLFaceFacePadStatus">OneMLFaceFacePadStatus</a> = _swig_getFacePadStatus_Success()</pre>
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="OneMLFacePadType">type <a href="../../src/oneml/face/faceAPI.go.html?s=116272:116297#L3158">OneMLFacePadType</a>
+				<a class="permalink" href="#OneMLFacePadType">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type OneMLFacePadType <a href="../../builtin/#int">int</a></pre>
+
+			
+
+			
+				
+				<pre>var <span id="PadType_Paper">PadType_Paper</span> <a href="#OneMLFacePadType">OneMLFacePadType</a> = _swig_getPadType_Paper()</pre>
+			
+				
+				<pre>var <span id="PadType_Rgb">PadType_Rgb</span> <a href="#OneMLFacePadType">OneMLFacePadType</a> = _swig_getPadType_Rgb()</pre>
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="OneMLFacePose">type <a href="../../src/oneml/face/faceAPI.go.html?s=44669:44691#L916">OneMLFacePose</a>
 				<a class="permalink" href="#OneMLFacePose">¶</a>
 				
 				
@@ -3244,7 +3754,7 @@
 		
 			
 			
-			<h2 id="OneMLLicenseActivationType">type <a href="../../src/oneml/face/faceAPI.go.html?s=102586:102621#L2831">OneMLLicenseActivationType</a>
+			<h2 id="OneMLLicenseActivationType">type <a href="../../src/oneml/face/faceAPI.go.html?s=122150:122185#L3349">OneMLLicenseActivationType</a>
 				<a class="permalink" href="#OneMLLicenseActivationType">¶</a>
 				
 				
@@ -3275,7 +3785,7 @@
 		
 			
 			
-			<h2 id="OneMLLicenseStatus">type <a href="../../src/oneml/face/faceAPI.go.html?s=103700:103727#L2853">OneMLLicenseStatus</a>
+			<h2 id="OneMLLicenseStatus">type <a href="../../src/oneml/face/faceAPI.go.html?s=123264:123291#L3371">OneMLLicenseStatus</a>
 				<a class="permalink" href="#OneMLLicenseStatus">¶</a>
 				
 				
@@ -3303,7 +3813,7 @@
 		
 			
 			
-			<h2 id="SamePersonResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=90936:91139#L2490">SamePersonResult</a>
+			<h2 id="SamePersonResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=100646:100849#L2710">SamePersonResult</a>
 				<a class="permalink" href="#SamePersonResult">¶</a>
 				
 				
@@ -3328,7 +3838,7 @@
 
 			
 				
-				<h3 id="NewSamePersonResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=89484:89543#L2445">NewSamePersonResult</a>
+				<h3 id="NewSamePersonResult">func <a href="../../src/oneml/face/faceAPI.go.html?s=99194:99253#L2665">NewSamePersonResult</a>
 					<a class="permalink" href="#NewSamePersonResult">¶</a>
 					
 					
@@ -3339,7 +3849,7 @@
 				
 			
 				
-				<h3 id="NewSamePersonResult__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=88600:88663#L2424">NewSamePersonResult__SWIG_0</a>
+				<h3 id="NewSamePersonResult__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=98310:98373#L2644">NewSamePersonResult__SWIG_0</a>
 					<a class="permalink" href="#NewSamePersonResult__SWIG_0">¶</a>
 					
 					
@@ -3350,7 +3860,7 @@
 				
 			
 				
-				<h3 id="NewSamePersonResult__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=88830:88923#L2430">NewSamePersonResult__SWIG_1</a>
+				<h3 id="NewSamePersonResult__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=98540:98633#L2650">NewSamePersonResult__SWIG_1</a>
 					<a class="permalink" href="#NewSamePersonResult__SWIG_1">¶</a>
 					
 					
@@ -3361,7 +3871,7 @@
 				
 			
 				
-				<h3 id="NewSamePersonResult__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=89181:89265#L2438">NewSamePersonResult__SWIG_2</a>
+				<h3 id="NewSamePersonResult__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=98891:98975#L2658">NewSamePersonResult__SWIG_2</a>
 					<a class="permalink" href="#NewSamePersonResult__SWIG_2">¶</a>
 					
 					
@@ -3376,7 +3886,7 @@
 		
 			
 			
-			<h2 id="StringVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=84475:84742#L2284">StringVector</a>
+			<h2 id="StringVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=94185:94452#L2504">StringVector</a>
 				<a class="permalink" href="#StringVector">¶</a>
 				
 				
@@ -3405,7 +3915,7 @@
 
 			
 				
-				<h3 id="NewStringVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=82021:82072#L2199">NewStringVector</a>
+				<h3 id="NewStringVector">func <a href="../../src/oneml/face/faceAPI.go.html?s=91731:91782#L2419">NewStringVector</a>
 					<a class="permalink" href="#NewStringVector">¶</a>
 					
 					
@@ -3416,7 +3926,7 @@
 				
 			
 				
-				<h3 id="NewStringVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=81280:81335#L2179">NewStringVector__SWIG_0</a>
+				<h3 id="NewStringVector__SWIG_0">func <a href="../../src/oneml/face/faceAPI.go.html?s=90990:91045#L2399">NewStringVector__SWIG_0</a>
 					<a class="permalink" href="#NewStringVector__SWIG_0">¶</a>
 					
 					
@@ -3427,7 +3937,7 @@
 				
 			
 				
-				<h3 id="NewStringVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=81486:81551#L2185">NewStringVector__SWIG_1</a>
+				<h3 id="NewStringVector__SWIG_1">func <a href="../../src/oneml/face/faceAPI.go.html?s=91196:91261#L2405">NewStringVector__SWIG_1</a>
 					<a class="permalink" href="#NewStringVector__SWIG_1">¶</a>
 					
 					
@@ -3438,7 +3948,7 @@
 				
 			
 				
-				<h3 id="NewStringVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=81746:81818#L2192">NewStringVector__SWIG_2</a>
+				<h3 id="NewStringVector__SWIG_2">func <a href="../../src/oneml/face/faceAPI.go.html?s=91456:91528#L2412">NewStringVector__SWIG_2</a>
 					<a class="permalink" href="#NewStringVector__SWIG_2">¶</a>
 					
 					
@@ -3453,7 +3963,7 @@
 		
 			
 			
-			<h2 id="SwigcptrBBox">type <a href="../../src/oneml/face/faceAPI.go.html?s=33318:33343#L627">SwigcptrBBox</a>
+			<h2 id="SwigcptrBBox">type <a href="../../src/oneml/face/faceAPI.go.html?s=38036:38061#L685">SwigcptrBBox</a>
 				<a class="permalink" href="#SwigcptrBBox">¶</a>
 				
 				
@@ -3473,7 +3983,7 @@
 
 			
 				
-				<h3 id="SwigcptrBBox.GetBottom">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=34395:34451#L668">GetBottom</a>
+				<h3 id="SwigcptrBBox.GetBottom">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=39113:39169#L726">GetBottom</a>
 					<a class="permalink" href="#SwigcptrBBox.GetBottom">¶</a>
 					
 					
@@ -3485,7 +3995,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.GetLeft">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=34009:34063#L655">GetLeft</a>
+				<h3 id="SwigcptrBBox.GetLeft">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=38727:38781#L713">GetLeft</a>
 					<a class="permalink" href="#SwigcptrBBox.GetLeft">¶</a>
 					
 					
@@ -3497,7 +4007,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.GetRight">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=34783:34838#L681">GetRight</a>
+				<h3 id="SwigcptrBBox.GetRight">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=39501:39556#L739">GetRight</a>
 					<a class="permalink" href="#SwigcptrBBox.GetRight">¶</a>
 					
 					
@@ -3509,7 +4019,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.GetTop">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=33629:33682#L642">GetTop</a>
+				<h3 id="SwigcptrBBox.GetTop">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=38347:38400#L700">GetTop</a>
 					<a class="permalink" href="#SwigcptrBBox.GetTop">¶</a>
 					
 					
@@ -3521,7 +4031,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SetBottom">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=34212:34260#L662">SetBottom</a>
+				<h3 id="SwigcptrBBox.SetBottom">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=38930:38978#L720">SetBottom</a>
 					<a class="permalink" href="#SwigcptrBBox.SetBottom">¶</a>
 					
 					
@@ -3533,7 +4043,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SetLeft">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=33830:33876#L649">SetLeft</a>
+				<h3 id="SwigcptrBBox.SetLeft">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=38548:38594#L707">SetLeft</a>
 					<a class="permalink" href="#SwigcptrBBox.SetLeft">¶</a>
 					
 					
@@ -3545,7 +4055,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SetRight">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=34602:34649#L675">SetRight</a>
+				<h3 id="SwigcptrBBox.SetRight">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=39320:39367#L733">SetRight</a>
 					<a class="permalink" href="#SwigcptrBBox.SetRight">¶</a>
 					
 					
@@ -3557,7 +4067,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SetTop">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=33452:33497#L636">SetTop</a>
+				<h3 id="SwigcptrBBox.SetTop">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=38170:38215#L694">SetTop</a>
 					<a class="permalink" href="#SwigcptrBBox.SetTop">¶</a>
 					
 					
@@ -3569,7 +4079,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SwigIsBBox">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=33412:33446#L633">SwigIsBBox</a>
+				<h3 id="SwigcptrBBox.SwigIsBBox">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=38130:38164#L691">SwigIsBBox</a>
 					<a class="permalink" href="#SwigcptrBBox.SwigIsBBox">¶</a>
 					
 					
@@ -3581,7 +4091,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.Swigcptr">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=33345:33385#L629">Swigcptr</a>
+				<h3 id="SwigcptrBBox.Swigcptr">func (SwigcptrBBox) <a href="../../src/oneml/face/faceAPI.go.html?s=38063:38103#L687">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrBBox.Swigcptr">¶</a>
 					
 					
@@ -3595,7 +4105,7 @@
 		
 			
 			
-			<h2 id="SwigcptrBBoxVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=43394:43425#L991">SwigcptrBBoxVector</a>
+			<h2 id="SwigcptrBBoxVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=52526:52557#L1195">SwigcptrBBoxVector</a>
 				<a class="permalink" href="#SwigcptrBBoxVector">¶</a>
 				
 				
@@ -3615,7 +4125,7 @@
 
 			
 				
-				<h3 id="SwigcptrBBoxVector.Add">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=45567:45612#L1070">Add</a>
+				<h3 id="SwigcptrBBoxVector.Add">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=54699:54744#L1274">Add</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Add">¶</a>
 					
 					
@@ -3627,7 +4137,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Capacity">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=44822:44881#L1045">Capacity</a>
+				<h3 id="SwigcptrBBoxVector.Capacity">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=53954:54013#L1249">Capacity</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Capacity">¶</a>
 					
 					
@@ -3639,7 +4149,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Clear">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=45432:45470#L1065">Clear</a>
+				<h3 id="SwigcptrBBoxVector.Clear">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=54564:54602#L1269">Clear</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Clear">¶</a>
 					
 					
@@ -3651,7 +4161,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Get">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=45761:45822#L1076">Get</a>
+				<h3 id="SwigcptrBBoxVector.Get">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=54893:54954#L1280">Get</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Get">¶</a>
 					
 					
@@ -3663,7 +4173,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.IsEmpty">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=45227:45284#L1058">IsEmpty</a>
+				<h3 id="SwigcptrBBoxVector.IsEmpty">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=54359:54416#L1262">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.IsEmpty">¶</a>
 					
 					
@@ -3675,7 +4185,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Reserve">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=45032:45082#L1052">Reserve</a>
+				<h3 id="SwigcptrBBoxVector.Reserve">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=54164:54214#L1256">Reserve</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Reserve">¶</a>
 					
 					
@@ -3687,7 +4197,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Set">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=46024:46079#L1084">Set</a>
+				<h3 id="SwigcptrBBoxVector.Set">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=55156:55211#L1288">Set</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Set">¶</a>
 					
 					
@@ -3699,7 +4209,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Size">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=44620:44675#L1038">Size</a>
+				<h3 id="SwigcptrBBoxVector.Size">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=53752:53807#L1242">Size</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Size">¶</a>
 					
 					
@@ -3711,7 +4221,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.SwigIsBBoxVector">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=43500:43546#L997">SwigIsBBoxVector</a>
+				<h3 id="SwigcptrBBoxVector.SwigIsBBoxVector">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=52632:52678#L1201">SwigIsBBoxVector</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.SwigIsBBoxVector">¶</a>
 					
 					
@@ -3723,7 +4233,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Swigcptr">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=43427:43473#L993">Swigcptr</a>
+				<h3 id="SwigcptrBBoxVector.Swigcptr">func (SwigcptrBBoxVector) <a href="../../src/oneml/face/faceAPI.go.html?s=52559:52605#L1197">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Swigcptr">¶</a>
 					
 					
@@ -3737,7 +4247,7 @@
 		
 			
 			
-			<h2 id="SwigcptrEmbeddingArray">type <a href="../../src/oneml/face/faceAPI.go.html?s=64617:64652#L1678">SwigcptrEmbeddingArray</a>
+			<h2 id="SwigcptrEmbeddingArray">type <a href="../../src/oneml/face/faceAPI.go.html?s=74038:74073#L1890">SwigcptrEmbeddingArray</a>
 				<a class="permalink" href="#SwigcptrEmbeddingArray">¶</a>
 				
 				
@@ -3757,7 +4267,7 @@
 
 			
 				
-				<h3 id="SwigcptrEmbeddingArray.Fill">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=65979:66032#L1725">Fill</a>
+				<h3 id="SwigcptrEmbeddingArray.Fill">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=75400:75453#L1937">Fill</a>
 					<a class="permalink" href="#SwigcptrEmbeddingArray.Fill">¶</a>
 					
 					
@@ -3769,7 +4279,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingArray.Get">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=66171:66239#L1731">Get</a>
+				<h3 id="SwigcptrEmbeddingArray.Get">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=75592:75660#L1943">Get</a>
 					<a class="permalink" href="#SwigcptrEmbeddingArray.Get">¶</a>
 					
 					
@@ -3781,7 +4291,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingArray.IsEmpty">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=65766:65827#L1718">IsEmpty</a>
+				<h3 id="SwigcptrEmbeddingArray.IsEmpty">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=75187:75248#L1930">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrEmbeddingArray.IsEmpty">¶</a>
 					
 					
@@ -3793,7 +4303,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingArray.Set">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=66437:66499#L1739">Set</a>
+				<h3 id="SwigcptrEmbeddingArray.Set">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=75858:75920#L1951">Set</a>
 					<a class="permalink" href="#SwigcptrEmbeddingArray.Set">¶</a>
 					
 					
@@ -3805,7 +4315,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingArray.Size">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=65556:65615#L1711">Size</a>
+				<h3 id="SwigcptrEmbeddingArray.Size">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=74977:75036#L1923">Size</a>
 					<a class="permalink" href="#SwigcptrEmbeddingArray.Size">¶</a>
 					
 					
@@ -3817,7 +4327,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingArray.SwigIsEmbeddingArray">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=64731:64785#L1684">SwigIsEmbeddingArray</a>
+				<h3 id="SwigcptrEmbeddingArray.SwigIsEmbeddingArray">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=74152:74206#L1896">SwigIsEmbeddingArray</a>
 					<a class="permalink" href="#SwigcptrEmbeddingArray.SwigIsEmbeddingArray">¶</a>
 					
 					
@@ -3829,7 +4339,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingArray.Swigcptr">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=64654:64704#L1680">Swigcptr</a>
+				<h3 id="SwigcptrEmbeddingArray.Swigcptr">func (SwigcptrEmbeddingArray) <a href="../../src/oneml/face/faceAPI.go.html?s=74075:74125#L1892">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrEmbeddingArray.Swigcptr">¶</a>
 					
 					
@@ -3843,7 +4353,7 @@
 		
 			
 			
-			<h2 id="SwigcptrEmbeddingsVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=84744:84781#L2297">SwigcptrEmbeddingsVector</a>
+			<h2 id="SwigcptrEmbeddingsVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=94454:94491#L2517">SwigcptrEmbeddingsVector</a>
 				<a class="permalink" href="#SwigcptrEmbeddingsVector">¶</a>
 				
 				
@@ -3863,7 +4373,7 @@
 
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.Add">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=87151:87212#L2376">Add</a>
+				<h3 id="SwigcptrEmbeddingsVector.Add">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=96861:96922#L2596">Add</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.Add">¶</a>
 					
 					
@@ -3875,7 +4385,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.Capacity">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=86358:86423#L2351">Capacity</a>
+				<h3 id="SwigcptrEmbeddingsVector.Capacity">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=96068:96133#L2571">Capacity</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.Capacity">¶</a>
 					
 					
@@ -3887,7 +4397,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.Clear">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=87004:87048#L2371">Clear</a>
+				<h3 id="SwigcptrEmbeddingsVector.Clear">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=96714:96758#L2591">Clear</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.Clear">¶</a>
 					
 					
@@ -3899,7 +4409,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.Get">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=87367:87444#L2382">Get</a>
+				<h3 id="SwigcptrEmbeddingsVector.Get">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=97077:97154#L2602">Get</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.Get">¶</a>
 					
 					
@@ -3911,7 +4421,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.IsEmpty">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=86787:86850#L2364">IsEmpty</a>
+				<h3 id="SwigcptrEmbeddingsVector.IsEmpty">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=96497:96560#L2584">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.IsEmpty">¶</a>
 					
 					
@@ -3923,7 +4433,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.Reserve">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=86580:86636#L2358">Reserve</a>
+				<h3 id="SwigcptrEmbeddingsVector.Reserve">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=96290:96346#L2578">Reserve</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.Reserve">¶</a>
 					
 					
@@ -3935,7 +4445,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.Set">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=87682:87753#L2390">Set</a>
+				<h3 id="SwigcptrEmbeddingsVector.Set">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=97392:97463#L2610">Set</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.Set">¶</a>
 					
 					
@@ -3947,7 +4457,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.Size">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=86144:86205#L2344">Size</a>
+				<h3 id="SwigcptrEmbeddingsVector.Size">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=95854:95915#L2564">Size</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.Size">¶</a>
 					
 					
@@ -3959,7 +4469,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.SwigIsEmbeddingsVector">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=84862:84920#L2303">SwigIsEmbeddingsVector</a>
+				<h3 id="SwigcptrEmbeddingsVector.SwigIsEmbeddingsVector">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=94572:94630#L2523">SwigIsEmbeddingsVector</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.SwigIsEmbeddingsVector">¶</a>
 					
 					
@@ -3971,7 +4481,7 @@
 				
 			
 				
-				<h3 id="SwigcptrEmbeddingsVector.Swigcptr">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=84783:84835#L2299">Swigcptr</a>
+				<h3 id="SwigcptrEmbeddingsVector.Swigcptr">func (SwigcptrEmbeddingsVector) <a href="../../src/oneml/face/faceAPI.go.html?s=94493:94545#L2519">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrEmbeddingsVector.Swigcptr">¶</a>
 					
 					
@@ -3985,7 +4495,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFaceDetector">type <a href="../../src/oneml/face/faceAPI.go.html?s=63123:63156#L1634">SwigcptrFaceDetector</a>
+			<h2 id="SwigcptrFaceDetector">type <a href="../../src/oneml/face/faceAPI.go.html?s=72255:72288#L1838">SwigcptrFaceDetector</a>
 				<a class="permalink" href="#SwigcptrFaceDetector">¶</a>
 				
 				
@@ -4005,7 +4515,7 @@
 
 			
 				
-				<h3 id="SwigcptrFaceDetector.Detect">func (SwigcptrFaceDetector) <a href="../../src/oneml/face/faceAPI.go.html?s=64083:64165#L1663">Detect</a>
+				<h3 id="SwigcptrFaceDetector.Detect">func (SwigcptrFaceDetector) <a href="../../src/oneml/face/faceAPI.go.html?s=73468:73550#L1874">Detect</a>
 					<a class="permalink" href="#SwigcptrFaceDetector.Detect">¶</a>
 					
 					
@@ -4017,7 +4527,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetector.DetectBatch">func (SwigcptrFaceDetector) <a href="../../src/oneml/face/faceAPI.go.html?s=63703:63801#L1655">DetectBatch</a>
+				<h3 id="SwigcptrFaceDetector.DetectBatch">func (SwigcptrFaceDetector) <a href="../../src/oneml/face/faceAPI.go.html?s=73088:73186#L1866">DetectBatch</a>
 					<a class="permalink" href="#SwigcptrFaceDetector.DetectBatch">¶</a>
 					
 					
@@ -4029,7 +4539,19 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetector.SwigIsFaceDetector">func (SwigcptrFaceDetector) <a href="../../src/oneml/face/faceAPI.go.html?s=63233:63283#L1640">SwigIsFaceDetector</a>
+				<h3 id="SwigcptrFaceDetector.GetUsage">func (SwigcptrFaceDetector) <a href="../../src/oneml/face/faceAPI.go.html?s=72835:72902#L1859">GetUsage</a>
+					<a class="permalink" href="#SwigcptrFaceDetector.GetUsage">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFaceDetector">SwigcptrFaceDetector</a>) GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFaceDetector.SwigIsFaceDetector">func (SwigcptrFaceDetector) <a href="../../src/oneml/face/faceAPI.go.html?s=72365:72415#L1844">SwigIsFaceDetector</a>
 					<a class="permalink" href="#SwigcptrFaceDetector.SwigIsFaceDetector">¶</a>
 					
 					
@@ -4041,7 +4563,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetector.Swigcptr">func (SwigcptrFaceDetector) <a href="../../src/oneml/face/faceAPI.go.html?s=63158:63206#L1636">Swigcptr</a>
+				<h3 id="SwigcptrFaceDetector.Swigcptr">func (SwigcptrFaceDetector) <a href="../../src/oneml/face/faceAPI.go.html?s=72290:72338#L1840">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFaceDetector.Swigcptr">¶</a>
 					
 					
@@ -4055,7 +4577,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFaceDetectorResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=60049:60088#L1543">SwigcptrFaceDetectorResult</a>
+			<h2 id="SwigcptrFaceDetectorResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=69181:69220#L1747">SwigcptrFaceDetectorResult</a>
 				<a class="permalink" href="#SwigcptrFaceDetectorResult">¶</a>
 				
 				
@@ -4075,7 +4597,7 @@
 
 			
 				
-				<h3 id="SwigcptrFaceDetectorResult.GetBboxes">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=61732:61805#L1595">GetBboxes</a>
+				<h3 id="SwigcptrFaceDetectorResult.GetBboxes">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=70864:70937#L1799">GetBboxes</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResult.GetBboxes">¶</a>
 					
 					
@@ -4087,7 +4609,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResult.GetLandmarks">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=61995:62077#L1602">GetLandmarks</a>
+				<h3 id="SwigcptrFaceDetectorResult.GetLandmarks">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=71127:71209#L1806">GetLandmarks</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResult.GetLandmarks">¶</a>
 					
 					
@@ -4099,7 +4621,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResult.GetPoses">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=62288:62359#L1609">GetPoses</a>
+				<h3 id="SwigcptrFaceDetectorResult.GetPoses">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=71420:71491#L1813">GetPoses</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResult.GetPoses">¶</a>
 					
 					
@@ -4111,7 +4633,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResult.GetReturnStatus">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=62545:62623#L1616">GetReturnStatus</a>
+				<h3 id="SwigcptrFaceDetectorResult.GetReturnStatus">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=71677:71755#L1820">GetReturnStatus</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResult.GetReturnStatus">¶</a>
 					
 					
@@ -4123,7 +4645,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResult.GetScores">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=61465:61539#L1588">GetScores</a>
+				<h3 id="SwigcptrFaceDetectorResult.GetScores">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=70597:70671#L1792">GetScores</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResult.GetScores">¶</a>
 					
 					
@@ -4135,7 +4657,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResult.GetSize">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=61247:61311#L1581">GetSize</a>
+				<h3 id="SwigcptrFaceDetectorResult.GetSize">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=70379:70443#L1785">GetSize</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResult.GetSize">¶</a>
 					
 					
@@ -4147,7 +4669,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResult.SwigIsFaceDetectorResult">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=60171:60233#L1549">SwigIsFaceDetectorResult</a>
+				<h3 id="SwigcptrFaceDetectorResult.SwigIsFaceDetectorResult">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=69303:69365#L1753">SwigIsFaceDetectorResult</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResult.SwigIsFaceDetectorResult">¶</a>
 					
 					
@@ -4159,7 +4681,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResult.Swigcptr">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=60090:60144#L1545">Swigcptr</a>
+				<h3 id="SwigcptrFaceDetectorResult.Swigcptr">func (SwigcptrFaceDetectorResult) <a href="../../src/oneml/face/faceAPI.go.html?s=69222:69276#L1749">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResult.Swigcptr">¶</a>
 					
 					
@@ -4173,7 +4695,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFaceDetectorResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=54120:54165#L1365">SwigcptrFaceDetectorResultVector</a>
+			<h2 id="SwigcptrFaceDetectorResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=63252:63297#L1569">SwigcptrFaceDetectorResultVector</a>
 				<a class="permalink" href="#SwigcptrFaceDetectorResultVector">¶</a>
 				
 				
@@ -4193,7 +4715,7 @@
 
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.Add">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=56839:56912#L1444">Add</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.Add">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=65971:66044#L1648">Add</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.Add">¶</a>
 					
 					
@@ -4205,7 +4727,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.Capacity">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=55982:56055#L1419">Capacity</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.Capacity">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=65114:65187#L1623">Capacity</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.Capacity">¶</a>
 					
 					
@@ -4217,7 +4739,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.Clear">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=56676:56728#L1439">Clear</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.Clear">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=65808:65860#L1643">Clear</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.Clear">¶</a>
 					
 					
@@ -4229,7 +4751,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.Get">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=57075:57164#L1450">Get</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.Get">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=66207:66296#L1654">Get</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.Get">¶</a>
 					
 					
@@ -4241,7 +4763,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.IsEmpty">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=56443:56514#L1432">IsEmpty</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.IsEmpty">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=65575:65646#L1636">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.IsEmpty">¶</a>
 					
 					
@@ -4253,7 +4775,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.Reserve">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=56220:56284#L1426">Reserve</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.Reserve">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=65352:65416#L1630">Reserve</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.Reserve">¶</a>
 					
 					
@@ -4265,7 +4787,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.Set">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=57422:57505#L1458">Set</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.Set">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=66554:66637#L1662">Set</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.Set">¶</a>
 					
 					
@@ -4277,7 +4799,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.Size">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=55752:55821#L1412">Size</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.Size">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=64884:64953#L1616">Size</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.Size">¶</a>
 					
 					
@@ -4289,7 +4811,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.SwigIsFaceDetectorResultVector">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=54254:54328#L1371">SwigIsFaceDetectorResultVector</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.SwigIsFaceDetectorResultVector">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=63386:63460#L1575">SwigIsFaceDetectorResultVector</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.SwigIsFaceDetectorResultVector">¶</a>
 					
 					
@@ -4301,7 +4823,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceDetectorResultVector.Swigcptr">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=54167:54227#L1367">Swigcptr</a>
+				<h3 id="SwigcptrFaceDetectorResultVector.Swigcptr">func (SwigcptrFaceDetectorResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=63299:63359#L1571">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFaceDetectorResultVector.Swigcptr">¶</a>
 					
 					
@@ -4315,7 +4837,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFaceEmbedder">type <a href="../../src/oneml/face/faceAPI.go.html?s=74433:74466#L1968">SwigcptrFaceEmbedder</a>
+			<h2 id="SwigcptrFaceEmbedder">type <a href="../../src/oneml/face/faceAPI.go.html?s=83854:83887#L2180">SwigcptrFaceEmbedder</a>
 				<a class="permalink" href="#SwigcptrFaceEmbedder">¶</a>
 				
 				
@@ -4335,7 +4857,7 @@
 
 			
 				
-				<h3 id="SwigcptrFaceEmbedder.Embed">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=75773:75845#L2006">Embed</a>
+				<h3 id="SwigcptrFaceEmbedder.Embed">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=85447:85519#L2225">Embed</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedder.Embed">¶</a>
 					
 					
@@ -4347,7 +4869,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedder.EmbedBatch">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=76882:76965#L2034">EmbedBatch</a>
+				<h3 id="SwigcptrFaceEmbedder.EmbedBatch">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=86556:86639#L2253">EmbedBatch</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedder.EmbedBatch">¶</a>
 					
 					
@@ -4359,7 +4881,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedder.EmbedBatch__SWIG_0">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=76044:76160#L2017">EmbedBatch__SWIG_0</a>
+				<h3 id="SwigcptrFaceEmbedder.EmbedBatch__SWIG_0">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=85718:85834#L2236">EmbedBatch__SWIG_0</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedder.EmbedBatch__SWIG_0">¶</a>
 					
 					
@@ -4371,7 +4893,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedder.EmbedBatch__SWIG_1">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=76488:76593#L2026">EmbedBatch__SWIG_1</a>
+				<h3 id="SwigcptrFaceEmbedder.EmbedBatch__SWIG_1">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=86162:86267#L2245">EmbedBatch__SWIG_1</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedder.EmbedBatch__SWIG_1">¶</a>
 					
 					
@@ -4383,7 +4905,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedder.Embed__SWIG_0">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=75013:75113#L1989">Embed__SWIG_0</a>
+				<h3 id="SwigcptrFaceEmbedder.Embed__SWIG_0">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=84687:84787#L2208">Embed__SWIG_0</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedder.Embed__SWIG_0">¶</a>
 					
 					
@@ -4395,7 +4917,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedder.Embed__SWIG_1">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=75418:75507#L1998">Embed__SWIG_1</a>
+				<h3 id="SwigcptrFaceEmbedder.Embed__SWIG_1">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=85092:85181#L2217">Embed__SWIG_1</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedder.Embed__SWIG_1">¶</a>
 					
 					
@@ -4407,7 +4929,19 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedder.SwigIsFaceEmbedder">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=74543:74593#L1974">SwigIsFaceEmbedder</a>
+				<h3 id="SwigcptrFaceEmbedder.GetUsage">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=84434:84501#L2201">GetUsage</a>
+					<a class="permalink" href="#SwigcptrFaceEmbedder.GetUsage">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFaceEmbedder">SwigcptrFaceEmbedder</a>) GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFaceEmbedder.SwigIsFaceEmbedder">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=83964:84014#L2186">SwigIsFaceEmbedder</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedder.SwigIsFaceEmbedder">¶</a>
 					
 					
@@ -4419,7 +4953,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedder.Swigcptr">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=74468:74516#L1970">Swigcptr</a>
+				<h3 id="SwigcptrFaceEmbedder.Swigcptr">func (SwigcptrFaceEmbedder) <a href="../../src/oneml/face/faceAPI.go.html?s=83889:83937#L2182">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedder.Swigcptr">¶</a>
 					
 					
@@ -4433,7 +4967,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFaceEmbedderResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=72210:72249#L1901">SwigcptrFaceEmbedderResult</a>
+			<h2 id="SwigcptrFaceEmbedderResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=81631:81670#L2113">SwigcptrFaceEmbedderResult</a>
 				<a class="permalink" href="#SwigcptrFaceEmbedderResult">¶</a>
 				
 				
@@ -4453,7 +4987,7 @@
 
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResult.GetEmbedding">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=73932:74012#L1953">GetEmbedding</a>
+				<h3 id="SwigcptrFaceEmbedderResult.GetEmbedding">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=83353:83433#L2165">GetEmbedding</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResult.GetEmbedding">¶</a>
 					
 					
@@ -4465,7 +4999,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResult.GetReturnStatus">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=73626:73722#L1946">GetReturnStatus</a>
+				<h3 id="SwigcptrFaceEmbedderResult.GetReturnStatus">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=83047:83143#L2158">GetReturnStatus</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResult.GetReturnStatus">¶</a>
 					
 					
@@ -4477,7 +5011,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResult.GetSize">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=73408:73472#L1939">GetSize</a>
+				<h3 id="SwigcptrFaceEmbedderResult.GetSize">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=82829:82893#L2151">GetSize</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResult.GetSize">¶</a>
 					
 					
@@ -4489,7 +5023,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResult.SwigIsFaceEmbedderResult">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=72332:72394#L1907">SwigIsFaceEmbedderResult</a>
+				<h3 id="SwigcptrFaceEmbedderResult.SwigIsFaceEmbedderResult">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=81753:81815#L2119">SwigIsFaceEmbedderResult</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResult.SwigIsFaceEmbedderResult">¶</a>
 					
 					
@@ -4501,7 +5035,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResult.Swigcptr">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=72251:72305#L1903">Swigcptr</a>
+				<h3 id="SwigcptrFaceEmbedderResult.Swigcptr">func (SwigcptrFaceEmbedderResult) <a href="../../src/oneml/face/faceAPI.go.html?s=81672:81726#L2115">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResult.Swigcptr">¶</a>
 					
 					
@@ -4515,7 +5049,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFaceEmbedderResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=67057:67102#L1761">SwigcptrFaceEmbedderResultVector</a>
+			<h2 id="SwigcptrFaceEmbedderResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=76478:76523#L1973">SwigcptrFaceEmbedderResultVector</a>
 				<a class="permalink" href="#SwigcptrFaceEmbedderResultVector">¶</a>
 				
 				
@@ -4535,7 +5069,7 @@
 
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.Add">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=69776:69849#L1840">Add</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.Add">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=79197:79270#L2052">Add</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.Add">¶</a>
 					
 					
@@ -4547,7 +5081,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.Capacity">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=68919:68992#L1815">Capacity</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.Capacity">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=78340:78413#L2027">Capacity</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.Capacity">¶</a>
 					
 					
@@ -4559,7 +5093,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.Clear">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=69613:69665#L1835">Clear</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.Clear">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=79034:79086#L2047">Clear</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.Clear">¶</a>
 					
 					
@@ -4571,7 +5105,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.Get">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=70012:70101#L1846">Get</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.Get">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=79433:79522#L2058">Get</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.Get">¶</a>
 					
 					
@@ -4583,7 +5117,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.IsEmpty">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=69380:69451#L1828">IsEmpty</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.IsEmpty">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=78801:78872#L2040">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.IsEmpty">¶</a>
 					
 					
@@ -4595,7 +5129,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.Reserve">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=69157:69221#L1822">Reserve</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.Reserve">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=78578:78642#L2034">Reserve</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.Reserve">¶</a>
 					
 					
@@ -4607,7 +5141,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.Set">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=70359:70442#L1854">Set</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.Set">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=79780:79863#L2066">Set</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.Set">¶</a>
 					
 					
@@ -4619,7 +5153,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.Size">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=68689:68758#L1808">Size</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.Size">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=78110:78179#L2020">Size</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.Size">¶</a>
 					
 					
@@ -4631,7 +5165,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.SwigIsFaceEmbedderResultVector">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=67191:67265#L1767">SwigIsFaceEmbedderResultVector</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.SwigIsFaceEmbedderResultVector">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=76612:76686#L1979">SwigIsFaceEmbedderResultVector</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.SwigIsFaceEmbedderResultVector">¶</a>
 					
 					
@@ -4643,7 +5177,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceEmbedderResultVector.Swigcptr">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=67104:67164#L1763">Swigcptr</a>
+				<h3 id="SwigcptrFaceEmbedderResultVector.Swigcptr">func (SwigcptrFaceEmbedderResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=76525:76585#L1975">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFaceEmbedderResultVector.Swigcptr">¶</a>
 					
 					
@@ -4657,7 +5191,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFaceId">type <a href="../../src/oneml/face/faceAPI.go.html?s=94662:94689#L2607">SwigcptrFaceId</a>
+			<h2 id="SwigcptrFaceId">type <a href="../../src/oneml/face/faceAPI.go.html?s=104372:104399#L2827">SwigcptrFaceId</a>
 				<a class="permalink" href="#SwigcptrFaceId">¶</a>
 				
 				
@@ -4677,7 +5211,7 @@
 
 			
 				
-				<h3 id="SwigcptrFaceId.GetIds">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=100143:100203#L2759">GetIds</a>
+				<h3 id="SwigcptrFaceId.GetIds">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=110094:110154#L2986">GetIds</a>
 					<a class="permalink" href="#SwigcptrFaceId.GetIds">¶</a>
 					
 					
@@ -4689,7 +5223,19 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.IsTheSamePersonEmb">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=96764:96871#L2672">IsTheSamePersonEmb</a>
+				<h3 id="SwigcptrFaceId.GetUsage">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=105472:105533#L2867">GetUsage</a>
+					<a class="permalink" href="#SwigcptrFaceId.GetUsage">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFaceId">SwigcptrFaceId</a>) GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFaceId.IsTheSamePersonEmb">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=106715:106822#L2899">IsTheSamePersonEmb</a>
 					<a class="permalink" href="#SwigcptrFaceId.IsTheSamePersonEmb">¶</a>
 					
 					
@@ -4701,7 +5247,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.IsTheSamePersonImg">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=96415:96501#L2663">IsTheSamePersonImg</a>
+				<h3 id="SwigcptrFaceId.IsTheSamePersonImg">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=106366:106452#L2890">IsTheSamePersonImg</a>
 					<a class="permalink" href="#SwigcptrFaceId.IsTheSamePersonImg">¶</a>
 					
 					
@@ -4713,7 +5259,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.Predict">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=95762:95833#L2647">Predict</a>
+				<h3 id="SwigcptrFaceId.Predict">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=105713:105784#L2874">Predict</a>
 					<a class="permalink" href="#SwigcptrFaceId.Predict">¶</a>
 					
 					
@@ -4725,7 +5271,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.PredictBatch">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=96069:96156#L2655">PredictBatch</a>
+				<h3 id="SwigcptrFaceId.PredictBatch">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=106020:106107#L2882">PredictBatch</a>
 					<a class="permalink" href="#SwigcptrFaceId.PredictBatch">¶</a>
 					
 					
@@ -4737,7 +5283,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.RegisterIdEmb">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=97184:97274#L2681">RegisterIdEmb</a>
+				<h3 id="SwigcptrFaceId.RegisterIdEmb">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=107135:107225#L2908">RegisterIdEmb</a>
 					<a class="permalink" href="#SwigcptrFaceId.RegisterIdEmb">¶</a>
 					
 					
@@ -4749,7 +5295,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.RegisterIdImage">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=98129:98223#L2706">RegisterIdImage</a>
+				<h3 id="SwigcptrFaceId.RegisterIdImage">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=108080:108174#L2933">RegisterIdImage</a>
 					<a class="permalink" href="#SwigcptrFaceId.RegisterIdImage">¶</a>
 					
 					
@@ -4761,7 +5307,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.RegisterIdImages">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=97602:97713#L2693">RegisterIdImages</a>
+				<h3 id="SwigcptrFaceId.RegisterIdImages">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=107553:107664#L2920">RegisterIdImages</a>
 					<a class="permalink" href="#SwigcptrFaceId.RegisterIdImages">¶</a>
 					
 					
@@ -4773,7 +5319,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.RemoveId">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=99873:99921#L2750">RemoveId</a>
+				<h3 id="SwigcptrFaceId.RemoveId">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=109824:109872#L2977">RemoveId</a>
 					<a class="permalink" href="#SwigcptrFaceId.RemoveId">¶</a>
 					
 					
@@ -4785,7 +5331,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.SwigIsFaceId">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=94760:94798#L2613">SwigIsFaceId</a>
+				<h3 id="SwigcptrFaceId.SwigIsFaceId">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=104470:104508#L2833">SwigIsFaceId</a>
 					<a class="permalink" href="#SwigcptrFaceId.SwigIsFaceId">¶</a>
 					
 					
@@ -4797,7 +5343,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.Swigcptr">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=94691:94733#L2609">Swigcptr</a>
+				<h3 id="SwigcptrFaceId.Swigcptr">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=104401:104443#L2829">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFaceId.Swigcptr">¶</a>
 					
 					
@@ -4809,7 +5355,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.UpdateEmbedding">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=99514:99590#L2740">UpdateEmbedding</a>
+				<h3 id="SwigcptrFaceId.UpdateEmbedding">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=109465:109541#L2967">UpdateEmbedding</a>
 					<a class="permalink" href="#SwigcptrFaceId.UpdateEmbedding">¶</a>
 					
 					
@@ -4821,7 +5367,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.UpdateEmbeddingDynamicallyEmb">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=99052:99163#L2729">UpdateEmbeddingDynamicallyEmb</a>
+				<h3 id="SwigcptrFaceId.UpdateEmbeddingDynamicallyEmb">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=109003:109114#L2956">UpdateEmbeddingDynamicallyEmb</a>
 					<a class="permalink" href="#SwigcptrFaceId.UpdateEmbeddingDynamicallyEmb">¶</a>
 					
 					
@@ -4833,7 +5379,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceId.UpdateEmbeddingDynamicallyImg">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=98599:98701#L2718">UpdateEmbeddingDynamicallyImg</a>
+				<h3 id="SwigcptrFaceId.UpdateEmbeddingDynamicallyImg">func (SwigcptrFaceId) <a href="../../src/oneml/face/faceAPI.go.html?s=108550:108652#L2945">UpdateEmbeddingDynamicallyImg</a>
 					<a class="permalink" href="#SwigcptrFaceId.UpdateEmbeddingDynamicallyImg">¶</a>
 					
 					
@@ -4847,7 +5393,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFaceIdResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=92034:92067#L2521">SwigcptrFaceIdResult</a>
+			<h2 id="SwigcptrFaceIdResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=101744:101777#L2741">SwigcptrFaceIdResult</a>
 				<a class="permalink" href="#SwigcptrFaceIdResult">¶</a>
 				
 				
@@ -4867,7 +5413,7 @@
 
 			
 				
-				<h3 id="SwigcptrFaceIdResult.GetCombinedDistance">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=93641:93715#L2576">GetCombinedDistance</a>
+				<h3 id="SwigcptrFaceIdResult.GetCombinedDistance">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=103351:103425#L2796">GetCombinedDistance</a>
 					<a class="permalink" href="#SwigcptrFaceIdResult.GetCombinedDistance">¶</a>
 					
 					
@@ -4879,7 +5425,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResult.GetId">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=93082:93141#L2559">GetId</a>
+				<h3 id="SwigcptrFaceIdResult.GetId">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=102792:102851#L2779">GetId</a>
 					<a class="permalink" href="#SwigcptrFaceIdResult.GetId">¶</a>
 					
 					
@@ -4891,7 +5437,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResult.GetNearestNodeDistance">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=93393:93470#L2569">GetNearestNodeDistance</a>
+				<h3 id="SwigcptrFaceIdResult.GetNearestNodeDistance">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=103103:103180#L2789">GetNearestNodeDistance</a>
 					<a class="permalink" href="#SwigcptrFaceIdResult.GetNearestNodeDistance">¶</a>
 					
 					
@@ -4903,7 +5449,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResult.GetReturnStatus">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=94106:94190#L2590">GetReturnStatus</a>
+				<h3 id="SwigcptrFaceIdResult.GetReturnStatus">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=103816:103900#L2810">GetReturnStatus</a>
 					<a class="permalink" href="#SwigcptrFaceIdResult.GetReturnStatus">¶</a>
 					
 					
@@ -4915,7 +5461,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResult.IsIdentifiable">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=93883:93949#L2583">IsIdentifiable</a>
+				<h3 id="SwigcptrFaceIdResult.IsIdentifiable">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=103593:103659#L2803">IsIdentifiable</a>
 					<a class="permalink" href="#SwigcptrFaceIdResult.IsIdentifiable">¶</a>
 					
 					
@@ -4927,7 +5473,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResult.SwigIsFaceIdResult">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=92144:92194#L2527">SwigIsFaceIdResult</a>
+				<h3 id="SwigcptrFaceIdResult.SwigIsFaceIdResult">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=101854:101904#L2747">SwigIsFaceIdResult</a>
 					<a class="permalink" href="#SwigcptrFaceIdResult.SwigIsFaceIdResult">¶</a>
 					
 					
@@ -4939,7 +5485,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResult.Swigcptr">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=92069:92117#L2523">Swigcptr</a>
+				<h3 id="SwigcptrFaceIdResult.Swigcptr">func (SwigcptrFaceIdResult) <a href="../../src/oneml/face/faceAPI.go.html?s=101779:101827#L2743">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFaceIdResult.Swigcptr">¶</a>
 					
 					
@@ -4953,7 +5499,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFaceIdResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=77358:77397#L2052">SwigcptrFaceIdResultVector</a>
+			<h2 id="SwigcptrFaceIdResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=87068:87107#L2272">SwigcptrFaceIdResultVector</a>
 				<a class="permalink" href="#SwigcptrFaceIdResultVector">¶</a>
 				
 				
@@ -4973,7 +5519,7 @@
 
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.Add">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=79843:79904#L2131">Add</a>
+				<h3 id="SwigcptrFaceIdResultVector.Add">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=89553:89614#L2351">Add</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.Add">¶</a>
 					
 					
@@ -4985,7 +5531,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.Capacity">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=79034:79101#L2106">Capacity</a>
+				<h3 id="SwigcptrFaceIdResultVector.Capacity">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=88744:88811#L2326">Capacity</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.Capacity">¶</a>
 					
 					
@@ -4997,7 +5543,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.Clear">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=79692:79738#L2126">Clear</a>
+				<h3 id="SwigcptrFaceIdResultVector.Clear">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=89402:89448#L2346">Clear</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.Clear">¶</a>
 					
 					
@@ -5009,7 +5555,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.Get">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=80061:80138#L2137">Get</a>
+				<h3 id="SwigcptrFaceIdResultVector.Get">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=89771:89848#L2357">Get</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.Get">¶</a>
 					
 					
@@ -5021,7 +5567,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.IsEmpty">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=79471:79536#L2119">IsEmpty</a>
+				<h3 id="SwigcptrFaceIdResultVector.IsEmpty">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=89181:89246#L2339">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.IsEmpty">¶</a>
 					
 					
@@ -5033,7 +5579,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.Reserve">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=79260:79318#L2113">Reserve</a>
+				<h3 id="SwigcptrFaceIdResultVector.Reserve">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=88970:89028#L2333">Reserve</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.Reserve">¶</a>
 					
 					
@@ -5045,7 +5591,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.Set">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=80372:80443#L2145">Set</a>
+				<h3 id="SwigcptrFaceIdResultVector.Set">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=90082:90153#L2365">Set</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.Set">¶</a>
 					
 					
@@ -5057,7 +5603,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.Size">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=78816:78879#L2099">Size</a>
+				<h3 id="SwigcptrFaceIdResultVector.Size">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=88526:88589#L2319">Size</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.Size">¶</a>
 					
 					
@@ -5069,7 +5615,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.SwigIsFaceIdResultVector">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=77480:77542#L2058">SwigIsFaceIdResultVector</a>
+				<h3 id="SwigcptrFaceIdResultVector.SwigIsFaceIdResultVector">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=87190:87252#L2278">SwigIsFaceIdResultVector</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.SwigIsFaceIdResultVector">¶</a>
 					
 					
@@ -5081,7 +5627,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFaceIdResultVector.Swigcptr">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=77399:77453#L2054">Swigcptr</a>
+				<h3 id="SwigcptrFaceIdResultVector.Swigcptr">func (SwigcptrFaceIdResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=87109:87163#L2274">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFaceIdResultVector.Swigcptr">¶</a>
 					
 					
@@ -5095,7 +5641,313 @@
 		
 			
 			
-			<h2 id="SwigcptrFloatArray">type <a href="../../src/oneml/face/faceAPI.go.html?s=46678:46709#L1109">SwigcptrFloatArray</a>
+			<h2 id="SwigcptrFacePad">type <a href="../../src/oneml/face/faceAPI.go.html?s=118772:118800#L3240">SwigcptrFacePad</a>
+				<a class="permalink" href="#SwigcptrFacePad">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrFacePad <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrFacePad.Classify">func (SwigcptrFacePad) <a href="../../src/oneml/face/faceAPI.go.html?s=119951:120025#L3277">Classify</a>
+					<a class="permalink" href="#SwigcptrFacePad.Classify">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePad">SwigcptrFacePad</a>) Classify(arg2 <a href="#Image">Image</a>) (_swig_ret <a href="#FacePadResult">FacePadResult</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePad.ClassifyBatch">func (SwigcptrFacePad) <a href="../../src/oneml/face/faceAPI.go.html?s=119597:119687#L3269">ClassifyBatch</a>
+					<a class="permalink" href="#SwigcptrFacePad.ClassifyBatch">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePad">SwigcptrFacePad</a>) ClassifyBatch(arg2 <a href="#MultiImage">MultiImage</a>) (_swig_ret <a href="#FacePadResultVector">FacePadResultVector</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePad.GetUsage">func (SwigcptrFacePad) <a href="../../src/oneml/face/faceAPI.go.html?s=119354:119416#L3262">GetUsage</a>
+					<a class="permalink" href="#SwigcptrFacePad.GetUsage">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePad">SwigcptrFacePad</a>) GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePad.SwigIsFacePad">func (SwigcptrFacePad) <a href="../../src/oneml/face/faceAPI.go.html?s=118872:118912#L3246">SwigIsFacePad</a>
+					<a class="permalink" href="#SwigcptrFacePad.SwigIsFacePad">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrFacePad">SwigcptrFacePad</a>) SwigIsFacePad()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePad.Swigcptr">func (SwigcptrFacePad) <a href="../../src/oneml/face/faceAPI.go.html?s=118802:118845#L3242">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrFacePad.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrFacePad">SwigcptrFacePad</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrFacePadResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=116782:116816#L3173">SwigcptrFacePadResult</a>
+				<a class="permalink" href="#SwigcptrFacePadResult">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrFacePadResult <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrFacePadResult.GetReturnStatus">func (SwigcptrFacePadResult) <a href="../../src/oneml/face/faceAPI.go.html?s=118296:118382#L3225">GetReturnStatus</a>
+					<a class="permalink" href="#SwigcptrFacePadResult.GetReturnStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResult">SwigcptrFacePadResult</a>) GetReturnStatus() (_swig_ret <a href="#OneMLFaceFacePadStatus">OneMLFaceFacePadStatus</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResult.GetSpoofProb">func (SwigcptrFacePadResult) <a href="../../src/oneml/face/faceAPI.go.html?s=117855:117923#L3211">GetSpoofProb</a>
+					<a class="permalink" href="#SwigcptrFacePadResult.GetSpoofProb">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResult">SwigcptrFacePadResult</a>) GetSpoofProb() (_swig_ret <a href="../../builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResult.IsSpoof">func (SwigcptrFacePadResult) <a href="../../src/oneml/face/faceAPI.go.html?s=118085:118145#L3218">IsSpoof</a>
+					<a class="permalink" href="#SwigcptrFacePadResult.IsSpoof">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResult">SwigcptrFacePadResult</a>) IsSpoof() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResult.SwigIsFacePadResult">func (SwigcptrFacePadResult) <a href="../../src/oneml/face/faceAPI.go.html?s=116894:116946#L3179">SwigIsFacePadResult</a>
+					<a class="permalink" href="#SwigcptrFacePadResult.SwigIsFacePadResult">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrFacePadResult">SwigcptrFacePadResult</a>) SwigIsFacePadResult()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResult.Swigcptr">func (SwigcptrFacePadResult) <a href="../../src/oneml/face/faceAPI.go.html?s=116818:116867#L3175">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrFacePadResult.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrFacePadResult">SwigcptrFacePadResult</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrFacePadResultVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=111177:111217#L3011">SwigcptrFacePadResultVector</a>
+				<a class="permalink" href="#SwigcptrFacePadResultVector">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrFacePadResultVector <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.Add">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=113701:113764#L3090">Add</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.Add">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) Add(arg2 <a href="#FacePadResult">FacePadResult</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.Capacity">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=112884:112952#L3065">Capacity</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.Capacity">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) Capacity() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.Clear">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=113548:113595#L3085">Clear</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.Clear">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) Clear()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.Get">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=113922:114001#L3096">Get</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.Get">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) Get(arg2 <a href="../../builtin/#int">int</a>) (_swig_ret <a href="#FacePadResult">FacePadResult</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.IsEmpty">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=113325:113391#L3078">IsEmpty</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.IsEmpty">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) IsEmpty() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.Reserve">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=113112:113171#L3072">Reserve</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.Reserve">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) Reserve(arg2 <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.Set">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=114239:114312#L3104">Set</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.Set">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) Set(arg2 <a href="../../builtin/#int">int</a>, arg3 <a href="#FacePadResult">FacePadResult</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.Size">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=112664:112728#L3058">Size</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.Size">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) Size() (_swig_ret <a href="../../builtin/#int64">int64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.SwigIsFacePadResultVector">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=111301:111365#L3017">SwigIsFacePadResultVector</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.SwigIsFacePadResultVector">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) SwigIsFacePadResultVector()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrFacePadResultVector.Swigcptr">func (SwigcptrFacePadResultVector) <a href="../../src/oneml/face/faceAPI.go.html?s=111219:111274#L3013">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrFacePadResultVector.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrFacePadResultVector">SwigcptrFacePadResultVector</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrFloatArray">type <a href="../../src/oneml/face/faceAPI.go.html?s=55810:55841#L1313">SwigcptrFloatArray</a>
 				<a class="permalink" href="#SwigcptrFloatArray">¶</a>
 				
 				
@@ -5115,7 +5967,7 @@
 
 			
 				
-				<h3 id="SwigcptrFloatArray.Fill">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=47936:47985#L1156">Fill</a>
+				<h3 id="SwigcptrFloatArray.Fill">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=57068:57117#L1360">Fill</a>
 					<a class="permalink" href="#SwigcptrFloatArray.Fill">¶</a>
 					
 					
@@ -5127,7 +5979,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatArray.Get">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=48120:48184#L1162">Get</a>
+				<h3 id="SwigcptrFloatArray.Get">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=57252:57316#L1366">Get</a>
 					<a class="permalink" href="#SwigcptrFloatArray.Get">¶</a>
 					
 					
@@ -5139,7 +5991,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatArray.IsEmpty">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=47731:47788#L1149">IsEmpty</a>
+				<h3 id="SwigcptrFloatArray.IsEmpty">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=56863:56920#L1353">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrFloatArray.IsEmpty">¶</a>
 					
 					
@@ -5151,7 +6003,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatArray.Set">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=48378:48436#L1170">Set</a>
+				<h3 id="SwigcptrFloatArray.Set">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=57510:57568#L1374">Set</a>
 					<a class="permalink" href="#SwigcptrFloatArray.Set">¶</a>
 					
 					
@@ -5163,7 +6015,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatArray.Size">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=47529:47584#L1142">Size</a>
+				<h3 id="SwigcptrFloatArray.Size">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=56661:56716#L1346">Size</a>
 					<a class="permalink" href="#SwigcptrFloatArray.Size">¶</a>
 					
 					
@@ -5175,7 +6027,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatArray.SwigIsFloatArray">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=46784:46830#L1115">SwigIsFloatArray</a>
+				<h3 id="SwigcptrFloatArray.SwigIsFloatArray">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=55916:55962#L1319">SwigIsFloatArray</a>
 					<a class="permalink" href="#SwigcptrFloatArray.SwigIsFloatArray">¶</a>
 					
 					
@@ -5187,7 +6039,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatArray.Swigcptr">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=46711:46757#L1111">Swigcptr</a>
+				<h3 id="SwigcptrFloatArray.Swigcptr">func (SwigcptrFloatArray) <a href="../../src/oneml/face/faceAPI.go.html?s=55843:55889#L1315">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFloatArray.Swigcptr">¶</a>
 					
 					
@@ -5201,7 +6053,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFloatVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=36889:36921#L755">SwigcptrFloatVector</a>
+			<h2 id="SwigcptrFloatVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=46020:46052#L959">SwigcptrFloatVector</a>
 				<a class="permalink" href="#SwigcptrFloatVector">¶</a>
 				
 				
@@ -5221,7 +6073,7 @@
 
 			
 				
-				<h3 id="SwigcptrFloatVector.Add">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=39100:39149#L834">Add</a>
+				<h3 id="SwigcptrFloatVector.Add">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=48232:48281#L1038">Add</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Add">¶</a>
 					
 					
@@ -5233,7 +6085,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Capacity">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=38347:38407#L809">Capacity</a>
+				<h3 id="SwigcptrFloatVector.Capacity">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=47479:47539#L1013">Capacity</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Capacity">¶</a>
 					
 					
@@ -5245,7 +6097,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Clear">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=38963:39002#L829">Clear</a>
+				<h3 id="SwigcptrFloatVector.Clear">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=48095:48134#L1033">Clear</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Clear">¶</a>
 					
 					
@@ -5257,7 +6109,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Get">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=39284:39349#L840">Get</a>
+				<h3 id="SwigcptrFloatVector.Get">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=48416:48481#L1044">Get</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Get">¶</a>
 					
 					
@@ -5269,7 +6121,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.IsEmpty">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=38756:38814#L822">IsEmpty</a>
+				<h3 id="SwigcptrFloatVector.IsEmpty">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=47888:47946#L1026">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrFloatVector.IsEmpty">¶</a>
 					
 					
@@ -5281,7 +6133,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Reserve">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=38559:38610#L816">Reserve</a>
+				<h3 id="SwigcptrFloatVector.Reserve">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=47691:47742#L1020">Reserve</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Reserve">¶</a>
 					
 					
@@ -5293,7 +6145,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Set">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=39544:39603#L848">Set</a>
+				<h3 id="SwigcptrFloatVector.Set">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=48676:48735#L1052">Set</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Set">¶</a>
 					
 					
@@ -5305,7 +6157,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Size">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=38143:38199#L802">Size</a>
+				<h3 id="SwigcptrFloatVector.Size">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=47275:47331#L1006">Size</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Size">¶</a>
 					
 					
@@ -5317,7 +6169,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.SwigIsFloatVector">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=36997:37045#L761">SwigIsFloatVector</a>
+				<h3 id="SwigcptrFloatVector.SwigIsFloatVector">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=46128:46176#L965">SwigIsFloatVector</a>
 					<a class="permalink" href="#SwigcptrFloatVector.SwigIsFloatVector">¶</a>
 					
 					
@@ -5329,7 +6181,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Swigcptr">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=36923:36970#L757">Swigcptr</a>
+				<h3 id="SwigcptrFloatVector.Swigcptr">func (SwigcptrFloatVector) <a href="../../src/oneml/face/faceAPI.go.html?s=46054:46101#L961">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Swigcptr">¶</a>
 					
 					
@@ -5343,7 +6195,7 @@
 		
 			
 			
-			<h2 id="SwigcptrImage">type <a href="../../src/oneml/face/faceAPI.go.html?s=30061:30087#L507">SwigcptrImage</a>
+			<h2 id="SwigcptrImage">type <a href="../../src/oneml/face/faceAPI.go.html?s=34779:34805#L565">SwigcptrImage</a>
 				<a class="permalink" href="#SwigcptrImage">¶</a>
 				
 				
@@ -5363,7 +6215,7 @@
 
 			
 				
-				<h3 id="SwigcptrImage.GetData">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=32686:32739#L601">GetData</a>
+				<h3 id="SwigcptrImage.GetData">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=37404:37457#L659">GetData</a>
 					<a class="permalink" href="#SwigcptrImage.GetData">¶</a>
 					
 					
@@ -5375,7 +6227,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.GetDepth">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=31508:31563#L561">GetDepth</a>
+				<h3 id="SwigcptrImage.GetDepth">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=36226:36281#L619">GetDepth</a>
 					<a class="permalink" href="#SwigcptrImage.GetDepth">¶</a>
 					
 					
@@ -5387,7 +6239,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.GetHeight">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=31303:31359#L554">GetHeight</a>
+				<h3 id="SwigcptrImage.GetHeight">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=36021:36077#L612">GetHeight</a>
 					<a class="permalink" href="#SwigcptrImage.GetHeight">¶</a>
 					
 					
@@ -5399,7 +6251,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.GetWidth">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=31100:31155#L547">GetWidth</a>
+				<h3 id="SwigcptrImage.GetWidth">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=35818:35873#L605">GetWidth</a>
 					<a class="permalink" href="#SwigcptrImage.GetWidth">¶</a>
 					
 					
@@ -5411,7 +6263,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SetData">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=32421:32467#L592">SetData</a>
+				<h3 id="SwigcptrImage.SetData">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=37139:37185#L650">SetData</a>
 					<a class="permalink" href="#SwigcptrImage.SetData">¶</a>
 					
 					
@@ -5423,7 +6275,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SetDepth">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=30919:30966#L541">SetDepth</a>
+				<h3 id="SwigcptrImage.SetDepth">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=35637:35684#L599">SetDepth</a>
 					<a class="permalink" href="#SwigcptrImage.SetDepth">¶</a>
 					
 					
@@ -5435,7 +6287,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SetHeight">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=30736:30784#L535">SetHeight</a>
+				<h3 id="SwigcptrImage.SetHeight">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=35454:35502#L593">SetHeight</a>
 					<a class="permalink" href="#SwigcptrImage.SetHeight">¶</a>
 					
 					
@@ -5447,7 +6299,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SetWidth">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=30555:30602#L529">SetWidth</a>
+				<h3 id="SwigcptrImage.SetWidth">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=35273:35320#L587">SetWidth</a>
 					<a class="permalink" href="#SwigcptrImage.SetWidth">¶</a>
 					
 					
@@ -5459,7 +6311,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.Size">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=30363:30413#L522">Size</a>
+				<h3 id="SwigcptrImage.Size">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=35081:35131#L580">Size</a>
 					<a class="permalink" href="#SwigcptrImage.Size">¶</a>
 					
 					
@@ -5471,7 +6323,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SwigIsImage">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=30157:30193#L513">SwigIsImage</a>
+				<h3 id="SwigcptrImage.SwigIsImage">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=34875:34911#L571">SwigIsImage</a>
 					<a class="permalink" href="#SwigcptrImage.SwigIsImage">¶</a>
 					
 					
@@ -5483,7 +6335,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.Swigcptr">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=30089:30130#L509">Swigcptr</a>
+				<h3 id="SwigcptrImage.Swigcptr">func (SwigcptrImage) <a href="../../src/oneml/face/faceAPI.go.html?s=34807:34848#L567">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrImage.Swigcptr">¶</a>
 					
 					
@@ -5497,7 +6349,7 @@
 		
 			
 			
-			<h2 id="SwigcptrIntVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=40202:40232#L873">SwigcptrIntVector</a>
+			<h2 id="SwigcptrIntVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=49334:49364#L1077">SwigcptrIntVector</a>
 				<a class="permalink" href="#SwigcptrIntVector">¶</a>
 				
 				
@@ -5517,7 +6369,7 @@
 
 			
 				
-				<h3 id="SwigcptrIntVector.Add">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=42336:42379#L952">Add</a>
+				<h3 id="SwigcptrIntVector.Add">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=51468:51511#L1156">Add</a>
 					<a class="permalink" href="#SwigcptrIntVector.Add">¶</a>
 					
 					
@@ -5529,7 +6381,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Capacity">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=41599:41657#L927">Capacity</a>
+				<h3 id="SwigcptrIntVector.Capacity">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=50731:50789#L1131">Capacity</a>
 					<a class="permalink" href="#SwigcptrIntVector.Capacity">¶</a>
 					
 					
@@ -5541,7 +6393,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Clear">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=42203:42240#L947">Clear</a>
+				<h3 id="SwigcptrIntVector.Clear">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=51335:51372#L1151">Clear</a>
 					<a class="permalink" href="#SwigcptrIntVector.Clear">¶</a>
 					
 					
@@ -5553,7 +6405,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Get">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=42517:42576#L958">Get</a>
+				<h3 id="SwigcptrIntVector.Get">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=51649:51708#L1162">Get</a>
 					<a class="permalink" href="#SwigcptrIntVector.Get">¶</a>
 					
 					
@@ -5565,7 +6417,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.IsEmpty">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=42000:42056#L940">IsEmpty</a>
+				<h3 id="SwigcptrIntVector.IsEmpty">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=51132:51188#L1144">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrIntVector.IsEmpty">¶</a>
 					
 					
@@ -5577,7 +6429,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Reserve">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=41807:41856#L934">Reserve</a>
+				<h3 id="SwigcptrIntVector.Reserve">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=50939:50988#L1138">Reserve</a>
 					<a class="permalink" href="#SwigcptrIntVector.Reserve">¶</a>
 					
 					
@@ -5589,7 +6441,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Set">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=42761:42814#L966">Set</a>
+				<h3 id="SwigcptrIntVector.Set">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=51893:51946#L1170">Set</a>
 					<a class="permalink" href="#SwigcptrIntVector.Set">¶</a>
 					
 					
@@ -5601,7 +6453,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Size">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=41399:41453#L920">Size</a>
+				<h3 id="SwigcptrIntVector.Size">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=50531:50585#L1124">Size</a>
 					<a class="permalink" href="#SwigcptrIntVector.Size">¶</a>
 					
 					
@@ -5613,7 +6465,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.SwigIsIntVector">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=40306:40350#L879">SwigIsIntVector</a>
+				<h3 id="SwigcptrIntVector.SwigIsIntVector">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=49438:49482#L1083">SwigIsIntVector</a>
 					<a class="permalink" href="#SwigcptrIntVector.SwigIsIntVector">¶</a>
 					
 					
@@ -5625,7 +6477,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Swigcptr">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=40234:40279#L875">Swigcptr</a>
+				<h3 id="SwigcptrIntVector.Swigcptr">func (SwigcptrIntVector) <a href="../../src/oneml/face/faceAPI.go.html?s=49366:49411#L1079">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrIntVector.Swigcptr">¶</a>
 					
 					
@@ -5639,7 +6491,7 @@
 		
 			
 			
-			<h2 id="SwigcptrLandmark5">type <a href="../../src/oneml/face/faceAPI.go.html?s=48970:49000#L1192">SwigcptrLandmark5</a>
+			<h2 id="SwigcptrLandmark5">type <a href="../../src/oneml/face/faceAPI.go.html?s=58102:58132#L1396">SwigcptrLandmark5</a>
 				<a class="permalink" href="#SwigcptrLandmark5">¶</a>
 				
 				
@@ -5659,7 +6511,7 @@
 
 			
 				
-				<h3 id="SwigcptrLandmark5.GetX">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=49325:49384#L1207">GetX</a>
+				<h3 id="SwigcptrLandmark5.GetX">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=58457:58516#L1411">GetX</a>
 					<a class="permalink" href="#SwigcptrLandmark5.GetX">¶</a>
 					
 					
@@ -5671,7 +6523,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmark5.GetY">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=49762:49821#L1220">GetY</a>
+				<h3 id="SwigcptrLandmark5.GetY">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=58894:58953#L1424">GetY</a>
 					<a class="permalink" href="#SwigcptrLandmark5.GetY">¶</a>
 					
 					
@@ -5683,7 +6535,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmark5.SetX">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=49124:49175#L1201">SetX</a>
+				<h3 id="SwigcptrLandmark5.SetX">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=58256:58307#L1405">SetX</a>
 					<a class="permalink" href="#SwigcptrLandmark5.SetX">¶</a>
 					
 					
@@ -5695,7 +6547,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmark5.SetY">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=49561:49612#L1214">SetY</a>
+				<h3 id="SwigcptrLandmark5.SetY">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=58693:58744#L1418">SetY</a>
 					<a class="permalink" href="#SwigcptrLandmark5.SetY">¶</a>
 					
 					
@@ -5707,7 +6559,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmark5.SwigIsLandmark5">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=49074:49118#L1198">SwigIsLandmark5</a>
+				<h3 id="SwigcptrLandmark5.SwigIsLandmark5">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=58206:58250#L1402">SwigIsLandmark5</a>
 					<a class="permalink" href="#SwigcptrLandmark5.SwigIsLandmark5">¶</a>
 					
 					
@@ -5719,7 +6571,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmark5.Swigcptr">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=49002:49047#L1194">Swigcptr</a>
+				<h3 id="SwigcptrLandmark5.Swigcptr">func (SwigcptrLandmark5) <a href="../../src/oneml/face/faceAPI.go.html?s=58134:58179#L1398">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrLandmark5.Swigcptr">¶</a>
 					
 					
@@ -5733,7 +6585,7 @@
 		
 			
 			
-			<h2 id="SwigcptrLandmarks5Vector">type <a href="../../src/oneml/face/faceAPI.go.html?s=50491:50528#L1247">SwigcptrLandmarks5Vector</a>
+			<h2 id="SwigcptrLandmarks5Vector">type <a href="../../src/oneml/face/faceAPI.go.html?s=59623:59660#L1451">SwigcptrLandmarks5Vector</a>
 				<a class="permalink" href="#SwigcptrLandmarks5Vector">¶</a>
 				
 				
@@ -5753,7 +6605,7 @@
 
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.Add">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=52898:52954#L1326">Add</a>
+				<h3 id="SwigcptrLandmarks5Vector.Add">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=62030:62086#L1530">Add</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.Add">¶</a>
 					
 					
@@ -5765,7 +6617,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.Capacity">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=52105:52170#L1301">Capacity</a>
+				<h3 id="SwigcptrLandmarks5Vector.Capacity">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=61237:61302#L1505">Capacity</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.Capacity">¶</a>
 					
 					
@@ -5777,7 +6629,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.Clear">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=52751:52795#L1321">Clear</a>
+				<h3 id="SwigcptrLandmarks5Vector.Clear">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=61883:61927#L1525">Clear</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.Clear">¶</a>
 					
 					
@@ -5789,7 +6641,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.Get">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=53109:53181#L1332">Get</a>
+				<h3 id="SwigcptrLandmarks5Vector.Get">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=62241:62313#L1536">Get</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.Get">¶</a>
 					
 					
@@ -5801,7 +6653,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.IsEmpty">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=52534:52597#L1314">IsEmpty</a>
+				<h3 id="SwigcptrLandmarks5Vector.IsEmpty">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=61666:61729#L1518">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.IsEmpty">¶</a>
 					
 					
@@ -5813,7 +6665,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.Reserve">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=52327:52383#L1308">Reserve</a>
+				<h3 id="SwigcptrLandmarks5Vector.Reserve">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=61459:61515#L1512">Reserve</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.Reserve">¶</a>
 					
 					
@@ -5825,7 +6677,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.Set">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=53404:53470#L1340">Set</a>
+				<h3 id="SwigcptrLandmarks5Vector.Set">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=62536:62602#L1544">Set</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.Set">¶</a>
 					
 					
@@ -5837,7 +6689,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.Size">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=51891:51952#L1294">Size</a>
+				<h3 id="SwigcptrLandmarks5Vector.Size">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=61023:61084#L1498">Size</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.Size">¶</a>
 					
 					
@@ -5849,7 +6701,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.SwigIsLandmarks5Vector">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=50609:50667#L1253">SwigIsLandmarks5Vector</a>
+				<h3 id="SwigcptrLandmarks5Vector.SwigIsLandmarks5Vector">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=59741:59799#L1457">SwigIsLandmarks5Vector</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.SwigIsLandmarks5Vector">¶</a>
 					
 					
@@ -5861,7 +6713,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLandmarks5Vector.Swigcptr">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=50530:50582#L1249">Swigcptr</a>
+				<h3 id="SwigcptrLandmarks5Vector.Swigcptr">func (SwigcptrLandmarks5Vector) <a href="../../src/oneml/face/faceAPI.go.html?s=59662:59714#L1453">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrLandmarks5Vector.Swigcptr">¶</a>
 					
 					
@@ -5875,7 +6727,7 @@
 		
 			
 			
-			<h2 id="SwigcptrLicenseManager">type <a href="../../src/oneml/face/faceAPI.go.html?s=104272:104307#L2868">SwigcptrLicenseManager</a>
+			<h2 id="SwigcptrLicenseManager">type <a href="../../src/oneml/face/faceAPI.go.html?s=123836:123871#L3386">SwigcptrLicenseManager</a>
 				<a class="permalink" href="#SwigcptrLicenseManager">¶</a>
 				
 				
@@ -5895,7 +6747,7 @@
 
 			
 				
-				<h3 id="SwigcptrLicenseManager.ActivateKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=106267:106346#L2934">ActivateKey</a>
+				<h3 id="SwigcptrLicenseManager.ActivateKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=125831:125910#L3452">ActivateKey</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.ActivateKey">¶</a>
 					
 					
@@ -5907,7 +6759,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.ActivateTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=106530:106611#L2941">ActivateTrial</a>
+				<h3 id="SwigcptrLicenseManager.ActivateTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=126094:126175#L3459">ActivateTrial</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.ActivateTrial">¶</a>
 					
 					
@@ -5919,7 +6771,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.GetActivationExpiryDate">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=107875:107954#L2979">GetActivationExpiryDate</a>
+				<h3 id="SwigcptrLicenseManager.GetActivationExpiryDate">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=127439:127518#L3497">GetActivationExpiryDate</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.GetActivationExpiryDate">¶</a>
 					
 					
@@ -5931,7 +6783,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.GetActivationType">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=107576:107669#L2972">GetActivationType</a>
+				<h3 id="SwigcptrLicenseManager.GetActivationType">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=127140:127233#L3490">GetActivationType</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.GetActivationType">¶</a>
 					
 					
@@ -5943,7 +6795,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.GetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=105950:106012#L2924">GetKey</a>
+				<h3 id="SwigcptrLicenseManager.GetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=125514:125576#L3442">GetKey</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.GetKey">¶</a>
 					
 					
@@ -5955,7 +6807,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.GetMachineCode">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=106797:106867#L2948">GetMachineCode</a>
+				<h3 id="SwigcptrLicenseManager.GetMachineCode">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=126361:126431#L3466">GetMachineCode</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.GetMachineCode">¶</a>
 					
 					
@@ -5967,7 +6819,19 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.IsTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=107130:107191#L2958">IsTrial</a>
+				<h3 id="SwigcptrLicenseManager.GetUsage">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=127690:127759#L3504">GetUsage</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.GetUsage">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.IsTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=126694:126755#L3476">IsTrial</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.IsTrial">¶</a>
 					
 					
@@ -5979,7 +6843,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.IsValidActivation">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=107343:107414#L2965">IsValidActivation</a>
+				<h3 id="SwigcptrLicenseManager.IsValidActivation">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=126907:126978#L3483">IsValidActivation</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.IsValidActivation">¶</a>
 					
 					
@@ -5991,7 +6855,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.SetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=105370:105424#L2906">SetKey</a>
+				<h3 id="SwigcptrLicenseManager.SetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=124934:124988#L3424">SetKey</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.SetKey">¶</a>
 					
 					
@@ -6003,7 +6867,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.SetMachineCode">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=105652:105714#L2915">SetMachineCode</a>
+				<h3 id="SwigcptrLicenseManager.SetMachineCode">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=125216:125278#L3433">SetMachineCode</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.SetMachineCode">¶</a>
 					
 					
@@ -6015,7 +6879,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.SwigIsLicenseManager">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=104386:104440#L2874">SwigIsLicenseManager</a>
+				<h3 id="SwigcptrLicenseManager.SwigIsLicenseManager">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=123950:124004#L3392">SwigIsLicenseManager</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.SwigIsLicenseManager">¶</a>
 					
 					
@@ -6027,7 +6891,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.Swigcptr">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=104309:104359#L2870">Swigcptr</a>
+				<h3 id="SwigcptrLicenseManager.Swigcptr">func (SwigcptrLicenseManager) <a href="../../src/oneml/face/faceAPI.go.html?s=123873:123923#L3388">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.Swigcptr">¶</a>
 					
 					
@@ -6041,7 +6905,7 @@
 		
 			
 			
-			<h2 id="SwigcptrMultiImage">type <a href="../../src/oneml/face/faceAPI.go.html?s=26770:26801#L389">SwigcptrMultiImage</a>
+			<h2 id="SwigcptrMultiImage">type <a href="../../src/oneml/face/faceAPI.go.html?s=31488:31519#L447">SwigcptrMultiImage</a>
 				<a class="permalink" href="#SwigcptrMultiImage">¶</a>
 				
 				
@@ -6061,7 +6925,7 @@
 
 			
 				
-				<h3 id="SwigcptrMultiImage.Add">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=28941:28987#L468">Add</a>
+				<h3 id="SwigcptrMultiImage.Add">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=33659:33705#L526">Add</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Add">¶</a>
 					
 					
@@ -6073,7 +6937,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Capacity">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=28197:28256#L443">Capacity</a>
+				<h3 id="SwigcptrMultiImage.Capacity">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=32915:32974#L501">Capacity</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Capacity">¶</a>
 					
 					
@@ -6085,7 +6949,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Clear">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=28806:28844#L463">Clear</a>
+				<h3 id="SwigcptrMultiImage.Clear">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=33524:33562#L521">Clear</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Clear">¶</a>
 					
 					
@@ -6097,7 +6961,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Get">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=29136:29198#L474">Get</a>
+				<h3 id="SwigcptrMultiImage.Get">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=33854:33916#L532">Get</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Get">¶</a>
 					
 					
@@ -6109,7 +6973,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.IsEmpty">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=28601:28658#L456">IsEmpty</a>
+				<h3 id="SwigcptrMultiImage.IsEmpty">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=33319:33376#L514">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrMultiImage.IsEmpty">¶</a>
 					
 					
@@ -6121,7 +6985,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Reserve">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=28407:28457#L450">Reserve</a>
+				<h3 id="SwigcptrMultiImage.Reserve">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=33125:33175#L508">Reserve</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Reserve">¶</a>
 					
 					
@@ -6133,7 +6997,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Set">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=29403:29459#L482">Set</a>
+				<h3 id="SwigcptrMultiImage.Set">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=34121:34177#L540">Set</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Set">¶</a>
 					
 					
@@ -6145,7 +7009,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Size">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=27995:28050#L436">Size</a>
+				<h3 id="SwigcptrMultiImage.Size">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=32713:32768#L494">Size</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Size">¶</a>
 					
 					
@@ -6157,7 +7021,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.SwigIsMultiImage">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=26876:26922#L395">SwigIsMultiImage</a>
+				<h3 id="SwigcptrMultiImage.SwigIsMultiImage">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=31594:31640#L453">SwigIsMultiImage</a>
 					<a class="permalink" href="#SwigcptrMultiImage.SwigIsMultiImage">¶</a>
 					
 					
@@ -6169,7 +7033,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Swigcptr">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=26803:26849#L391">Swigcptr</a>
+				<h3 id="SwigcptrMultiImage.Swigcptr">func (SwigcptrMultiImage) <a href="../../src/oneml/face/faceAPI.go.html?s=31521:31567#L449">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Swigcptr">¶</a>
 					
 					
@@ -6183,7 +7047,7 @@
 		
 			
 			
-			<h2 id="SwigcptrSamePersonResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=88418:88455#L2415">SwigcptrSamePersonResult</a>
+			<h2 id="SwigcptrSamePersonResult">type <a href="../../src/oneml/face/faceAPI.go.html?s=98128:98165#L2635">SwigcptrSamePersonResult</a>
 				<a class="permalink" href="#SwigcptrSamePersonResult">¶</a>
 				
 				
@@ -6203,7 +7067,7 @@
 
 			
 				
-				<h3 id="SwigcptrSamePersonResult.GetFirst">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=90046:90110#L2465">GetFirst</a>
+				<h3 id="SwigcptrSamePersonResult.GetFirst">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=99756:99820#L2685">GetFirst</a>
 					<a class="permalink" href="#SwigcptrSamePersonResult.GetFirst">¶</a>
 					
 					
@@ -6215,7 +7079,7 @@
 				
 			
 				
-				<h3 id="SwigcptrSamePersonResult.GetSecond">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=90495:90570#L2478">GetSecond</a>
+				<h3 id="SwigcptrSamePersonResult.GetSecond">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=100205:100280#L2698">GetSecond</a>
 					<a class="permalink" href="#SwigcptrSamePersonResult.GetSecond">¶</a>
 					
 					
@@ -6227,7 +7091,7 @@
 				
 			
 				
-				<h3 id="SwigcptrSamePersonResult.SetFirst">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=89844:89900#L2459">SetFirst</a>
+				<h3 id="SwigcptrSamePersonResult.SetFirst">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=99554:99610#L2679">SetFirst</a>
 					<a class="permalink" href="#SwigcptrSamePersonResult.SetFirst">¶</a>
 					
 					
@@ -6239,7 +7103,7 @@
 				
 			
 				
-				<h3 id="SwigcptrSamePersonResult.SetSecond">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=90266:90333#L2472">SetSecond</a>
+				<h3 id="SwigcptrSamePersonResult.SetSecond">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=99976:100043#L2692">SetSecond</a>
 					<a class="permalink" href="#SwigcptrSamePersonResult.SetSecond">¶</a>
 					
 					
@@ -6251,7 +7115,7 @@
 				
 			
 				
-				<h3 id="SwigcptrSamePersonResult.SwigIsSamePersonResult">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=88536:88594#L2421">SwigIsSamePersonResult</a>
+				<h3 id="SwigcptrSamePersonResult.SwigIsSamePersonResult">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=98246:98304#L2641">SwigIsSamePersonResult</a>
 					<a class="permalink" href="#SwigcptrSamePersonResult.SwigIsSamePersonResult">¶</a>
 					
 					
@@ -6263,7 +7127,7 @@
 				
 			
 				
-				<h3 id="SwigcptrSamePersonResult.Swigcptr">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=88457:88509#L2417">Swigcptr</a>
+				<h3 id="SwigcptrSamePersonResult.Swigcptr">func (SwigcptrSamePersonResult) <a href="../../src/oneml/face/faceAPI.go.html?s=98167:98219#L2637">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrSamePersonResult.Swigcptr">¶</a>
 					
 					
@@ -6277,7 +7141,7 @@
 		
 			
 			
-			<h2 id="SwigcptrStringVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=81114:81147#L2170">SwigcptrStringVector</a>
+			<h2 id="SwigcptrStringVector">type <a href="../../src/oneml/face/faceAPI.go.html?s=90824:90857#L2390">SwigcptrStringVector</a>
 				<a class="permalink" href="#SwigcptrStringVector">¶</a>
 				
 				
@@ -6297,7 +7161,7 @@
 
 			
 				
-				<h3 id="SwigcptrStringVector.Add">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=83365:83414#L2249">Add</a>
+				<h3 id="SwigcptrStringVector.Add">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=93075:93124#L2469">Add</a>
 					<a class="permalink" href="#SwigcptrStringVector.Add">¶</a>
 					
 					
@@ -6309,7 +7173,7 @@
 				
 			
 				
-				<h3 id="SwigcptrStringVector.Capacity">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=82604:82665#L2224">Capacity</a>
+				<h3 id="SwigcptrStringVector.Capacity">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=92314:92375#L2444">Capacity</a>
 					<a class="permalink" href="#SwigcptrStringVector.Capacity">¶</a>
 					
 					
@@ -6321,7 +7185,7 @@
 				
 			
 				
-				<h3 id="SwigcptrStringVector.Clear">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=83226:83266#L2244">Clear</a>
+				<h3 id="SwigcptrStringVector.Clear">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=92936:92976#L2464">Clear</a>
 					<a class="permalink" href="#SwigcptrStringVector.Clear">¶</a>
 					
 					
@@ -6333,7 +7197,7 @@
 				
 			
 				
-				<h3 id="SwigcptrStringVector.Get">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=83637:83702#L2258">Get</a>
+				<h3 id="SwigcptrStringVector.Get">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=93347:93412#L2478">Get</a>
 					<a class="permalink" href="#SwigcptrStringVector.Get">¶</a>
 					
 					
@@ -6345,7 +7209,7 @@
 				
 			
 				
-				<h3 id="SwigcptrStringVector.IsEmpty">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=83017:83076#L2237">IsEmpty</a>
+				<h3 id="SwigcptrStringVector.IsEmpty">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=92727:92786#L2457">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrStringVector.IsEmpty">¶</a>
 					
 					
@@ -6357,7 +7221,7 @@
 				
 			
 				
-				<h3 id="SwigcptrStringVector.Reserve">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=82818:82870#L2231">Reserve</a>
+				<h3 id="SwigcptrStringVector.Reserve">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=92528:92580#L2451">Reserve</a>
 					<a class="permalink" href="#SwigcptrStringVector.Reserve">¶</a>
 					
 					
@@ -6369,7 +7233,7 @@
 				
 			
 				
-				<h3 id="SwigcptrStringVector.Set">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=83996:84055#L2269">Set</a>
+				<h3 id="SwigcptrStringVector.Set">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=93706:93765#L2489">Set</a>
 					<a class="permalink" href="#SwigcptrStringVector.Set">¶</a>
 					
 					
@@ -6381,7 +7245,7 @@
 				
 			
 				
-				<h3 id="SwigcptrStringVector.Size">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=82398:82455#L2217">Size</a>
+				<h3 id="SwigcptrStringVector.Size">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=92108:92165#L2437">Size</a>
 					<a class="permalink" href="#SwigcptrStringVector.Size">¶</a>
 					
 					
@@ -6393,7 +7257,7 @@
 				
 			
 				
-				<h3 id="SwigcptrStringVector.SwigIsStringVector">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=81224:81274#L2176">SwigIsStringVector</a>
+				<h3 id="SwigcptrStringVector.SwigIsStringVector">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=90934:90984#L2396">SwigIsStringVector</a>
 					<a class="permalink" href="#SwigcptrStringVector.SwigIsStringVector">¶</a>
 					
 					
@@ -6405,7 +7269,7 @@
 				
 			
 				
-				<h3 id="SwigcptrStringVector.Swigcptr">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=81149:81197#L2172">Swigcptr</a>
+				<h3 id="SwigcptrStringVector.Swigcptr">func (SwigcptrStringVector) <a href="../../src/oneml/face/faceAPI.go.html?s=90859:90907#L2392">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrStringVector.Swigcptr">¶</a>
 					
 					
@@ -6419,7 +7283,233 @@
 		
 			
 			
-			<h2 id="SwigcptrUtils">type <a href="../../src/oneml/face/faceAPI.go.html?s=101190:101216#L2783">SwigcptrUtils</a>
+			<h2 id="SwigcptrUsageReport">type <a href="../../src/oneml/face/faceAPI.go.html?s=40256:40288#L770">SwigcptrUsageReport</a>
+				<a class="permalink" href="#SwigcptrUsageReport">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SwigcptrUsageReport <a href="../../builtin/#uintptr">uintptr</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SwigcptrUsageReport.GetApi">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=43714:43773#L881">GetApi</a>
+					<a class="permalink" href="#SwigcptrUsageReport.GetApi">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetApi() (_swig_ret <a href="../../builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.GetApi_calls">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=40940:41002#L795">GetApi_calls</a>
+					<a class="permalink" href="#SwigcptrUsageReport.GetApi_calls">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetApi_calls() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.GetFail_count">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=43085:43148#L860">GetFail_count</a>
+					<a class="permalink" href="#SwigcptrUsageReport.GetFail_count">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetFail_count() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.GetFirst_updated">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=41790:41856#L821">GetFirst_updated</a>
+					<a class="permalink" href="#SwigcptrUsageReport.GetFirst_updated">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetFirst_updated() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.GetLast_updated">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=42223:42288#L834">GetLast_updated</a>
+					<a class="permalink" href="#SwigcptrUsageReport.GetLast_updated">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetLast_updated() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.GetModel_runs">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=41361:41424#L808">GetModel_runs</a>
+					<a class="permalink" href="#SwigcptrUsageReport.GetModel_runs">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetModel_runs() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.GetSuccess_count">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=42656:42722#L847">GetSuccess_count</a>
+					<a class="permalink" href="#SwigcptrUsageReport.GetSuccess_count">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetSuccess_count() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.SetApi_calls">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=40736:40790#L789">SetApi_calls</a>
+					<a class="permalink" href="#SwigcptrUsageReport.SetApi_calls">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetApi_calls(arg2 <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.SetFail_count">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=42879:42934#L854">SetFail_count</a>
+					<a class="permalink" href="#SwigcptrUsageReport.SetFail_count">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetFail_count(arg2 <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.SetFirst_updated">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=41578:41636#L815">SetFirst_updated</a>
+					<a class="permalink" href="#SwigcptrUsageReport.SetFirst_updated">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetFirst_updated(arg2 <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.SetLast_updated">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=42013:42070#L828">SetLast_updated</a>
+					<a class="permalink" href="#SwigcptrUsageReport.SetLast_updated">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetLast_updated(arg2 <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.SetModel_runs">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=41155:41210#L802">SetModel_runs</a>
+					<a class="permalink" href="#SwigcptrUsageReport.SetModel_runs">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetModel_runs(arg2 <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.SetSuccess_count">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=42444:42502#L841">SetSuccess_count</a>
+					<a class="permalink" href="#SwigcptrUsageReport.SetSuccess_count">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetSuccess_count(arg2 <a href="../../builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.SwigIsUsageReport">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=40364:40412#L776">SwigIsUsageReport</a>
+					<a class="permalink" href="#SwigcptrUsageReport.SwigIsUsageReport">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SwigIsUsageReport()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.Swigcptr">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=40290:40337#L772">Swigcptr</a>
+					<a class="permalink" href="#SwigcptrUsageReport.Swigcptr">¶</a>
+					
+					
+				</h3>
+				<pre>func (p <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.ToFile">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=43439:43490#L872">ToFile</a>
+					<a class="permalink" href="#SwigcptrUsageReport.ToFile">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) ToFile(arg2 <a href="../../builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUsageReport.ToLog">func (SwigcptrUsageReport) <a href="../../src/oneml/face/faceAPI.go.html?s=43302:43341#L867">ToLog</a>
+					<a class="permalink" href="#SwigcptrUsageReport.ToLog">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) ToLog()</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SwigcptrUtils">type <a href="../../src/oneml/face/faceAPI.go.html?s=120479:120505#L3293">SwigcptrUtils</a>
 				<a class="permalink" href="#SwigcptrUtils">¶</a>
 				
 				
@@ -6439,7 +7529,7 @@
 
 			
 				
-				<h3 id="SwigcptrUtils.CropAlignFaceLandmark">func (SwigcptrUtils) <a href="../../src/oneml/face/faceAPI.go.html?s=101679:101772#L2804">CropAlignFaceLandmark</a>
+				<h3 id="SwigcptrUtils.CropAlignFaceLandmark">func (SwigcptrUtils) <a href="../../src/oneml/face/faceAPI.go.html?s=121207:121300#L3321">CropAlignFaceLandmark</a>
 					<a class="permalink" href="#SwigcptrUtils.CropAlignFaceLandmark">¶</a>
 					
 					
@@ -6451,7 +7541,19 @@
 				
 			
 				
-				<h3 id="SwigcptrUtils.ReadImageCV">func (SwigcptrUtils) <a href="../../src/oneml/face/faceAPI.go.html?s=102054:102122#L2813">ReadImageCV</a>
+				<h3 id="SwigcptrUtils.GetUsage">func (SwigcptrUtils) <a href="../../src/oneml/face/faceAPI.go.html?s=120968:121028#L3314">GetUsage</a>
+					<a class="permalink" href="#SwigcptrUtils.GetUsage">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrUtils">SwigcptrUtils</a>) GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrUtils.ReadImageCV">func (SwigcptrUtils) <a href="../../src/oneml/face/faceAPI.go.html?s=121582:121650#L3330">ReadImageCV</a>
 					<a class="permalink" href="#SwigcptrUtils.ReadImageCV">¶</a>
 					
 					
@@ -6463,7 +7565,7 @@
 				
 			
 				
-				<h3 id="SwigcptrUtils.SwigIsUtils">func (SwigcptrUtils) <a href="../../src/oneml/face/faceAPI.go.html?s=101286:101322#L2789">SwigIsUtils</a>
+				<h3 id="SwigcptrUtils.SwigIsUtils">func (SwigcptrUtils) <a href="../../src/oneml/face/faceAPI.go.html?s=120575:120611#L3299">SwigIsUtils</a>
 					<a class="permalink" href="#SwigcptrUtils.SwigIsUtils">¶</a>
 					
 					
@@ -6475,7 +7577,7 @@
 				
 			
 				
-				<h3 id="SwigcptrUtils.Swigcptr">func (SwigcptrUtils) <a href="../../src/oneml/face/faceAPI.go.html?s=101218:101259#L2785">Swigcptr</a>
+				<h3 id="SwigcptrUtils.Swigcptr">func (SwigcptrUtils) <a href="../../src/oneml/face/faceAPI.go.html?s=120507:120548#L3295">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrUtils.Swigcptr">¶</a>
 					
 					
@@ -6489,7 +7591,58 @@
 		
 			
 			
-			<h2 id="Utils">type <a href="../../src/oneml/face/faceAPI.go.html?s=102412:102584#L2824">Utils</a>
+			<h2 id="UsageReport">type <a href="../../src/oneml/face/faceAPI.go.html?s=44175:44667#L896">UsageReport</a>
+				<a class="permalink" href="#UsageReport">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type UsageReport interface {
+    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
+    SwigIsUsageReport()
+    SetApi_calls(arg2 <a href="../../builtin/#int">int</a>)
+    GetApi_calls() (_swig_ret <a href="../../builtin/#int">int</a>)
+    SetModel_runs(arg2 <a href="../../builtin/#int">int</a>)
+    GetModel_runs() (_swig_ret <a href="../../builtin/#int">int</a>)
+    SetFirst_updated(arg2 <a href="../../builtin/#int">int</a>)
+    GetFirst_updated() (_swig_ret <a href="../../builtin/#int">int</a>)
+    SetLast_updated(arg2 <a href="../../builtin/#int">int</a>)
+    GetLast_updated() (_swig_ret <a href="../../builtin/#int">int</a>)
+    SetSuccess_count(arg2 <a href="../../builtin/#int">int</a>)
+    GetSuccess_count() (_swig_ret <a href="../../builtin/#int">int</a>)
+    SetFail_count(arg2 <a href="../../builtin/#int">int</a>)
+    GetFail_count() (_swig_ret <a href="../../builtin/#int">int</a>)
+    ToLog()
+    ToFile(arg2 <a href="../../builtin/#string">string</a>)
+    GetApi() (_swig_ret <a href="../../builtin/#string">string</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewUsageReport">func <a href="../../src/oneml/face/faceAPI.go.html?s=40418:40474#L779">NewUsageReport</a>
+					<a class="permalink" href="#NewUsageReport">¶</a>
+					
+					
+				</h3>
+				<pre>func NewUsageReport(arg1 <a href="../../builtin/#string">string</a>) (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Utils">type <a href="../../src/oneml/face/faceAPI.go.html?s=121940:122148#L3341">Utils</a>
 				<a class="permalink" href="#Utils">¶</a>
 				
 				
@@ -6498,6 +7651,7 @@
 			<pre>type Utils interface {
     Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
     SwigIsUtils()
+    GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)
     CropAlignFaceLandmark(arg2 <a href="#Image">Image</a>, arg3 <a href="#Landmark5">Landmark5</a>) (_swig_ret <a href="#Image">Image</a>)
     ReadImageCV(arg2 <a href="../../builtin/#string">string</a>) (_swig_ret <a href="#Image">Image</a>)
 }</pre>
@@ -6512,7 +7666,7 @@
 
 			
 				
-				<h3 id="NewUtils">func <a href="../../src/oneml/face/faceAPI.go.html?s=101328:101380#L2792">NewUtils</a>
+				<h3 id="NewUtils">func <a href="../../src/oneml/face/faceAPI.go.html?s=120617:120669#L3302">NewUtils</a>
 					<a class="permalink" href="#NewUtils">¶</a>
 					
 					

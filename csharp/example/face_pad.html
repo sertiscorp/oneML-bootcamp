@@ -63,6 +63,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -104,10 +108,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
 </ul>
 <p><span class="caption-text">C# Documentation</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">C# APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C# Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C# Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#c-examples">C# Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">C# Face Detector Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">C# Face Embedder Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">C# Face Id Example</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C# Face Pad Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#c-padrgb-example">C# PadRGB Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-padpaper-example">C# PadPaper Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C# Vehicle Detector Example</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -179,6 +194,90 @@
             
   <section id="c-face-pad-example">
 <span id="cs-face-pad-example"></span><h1>C# Face Pad Example<a class="headerlink" href="#c-face-pad-example" title="Permalink to this headline">¶</a></h1>
+<section id="c-padrgb-example">
+<h2>C# PadRGB Example<a class="headerlink" href="#c-padrgb-example" title="Permalink to this headline">¶</a></h2>
+<p>Initialize pad RGB model</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">OneML.Face</span><span class="p">;</span><span class="w"></span>
+<span class="n">FacePad</span><span class="w"> </span><span class="n">padRgb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="n">Rgb</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize face detector model with licensing</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">OneML.Face</span><span class="p">;</span><span class="w"></span>
+<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="n">SetKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="n">ActivateKey</span><span class="p">();</span><span class="w"></span>
+<span class="n">FacePad</span><span class="w"> </span><span class="n">padRgb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="n">Rgb</span><span class="p">,</span><span class="w"> </span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize oneML’s Utils</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize oneML’s Utils with licensing</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Read input as oneML’s Image</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">img1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="n">ReadImageCV</span><span class="p">(</span><span class="n">filePath1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Run the model</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">FacePadResultList</span><span class="w"> </span><span class="n">rgbResults</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">padRgb</span><span class="p">.</span><span class="n">Classify</span><span class="p">(</span><span class="n">batch1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">FacePadResult</span><span class="w"> </span><span class="n">rgbResult</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">padRgb</span><span class="p">.</span><span class="n">Classify</span><span class="p">(</span><span class="n">img1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">spoofProb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">GetSpoofProb</span><span class="p">();</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isSpoof</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">IsSpoof</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">GetReturnStatus</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="c-padpaper-example">
+<h2>C# PadPaper Example<a class="headerlink" href="#c-padpaper-example" title="Permalink to this headline">¶</a></h2>
+<p>Initialize pad paper model</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">OneML.Face</span><span class="p">;</span><span class="w"></span>
+<span class="n">FacePad</span><span class="w"> </span><span class="n">padPaper</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="n">Paper</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize pad paper model with licensing</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">OneML.Face</span><span class="p">;</span><span class="w"></span>
+<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="n">SetKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="n">ActivateKey</span><span class="p">();</span><span class="w"></span>
+<span class="n">FacePad</span><span class="w"> </span><span class="n">padRgb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="n">Paper</span><span class="p">,</span><span class="w"> </span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize oneML’s Utils</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize oneML’s Utils with licensing</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Read input as oneML’s Image</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">img2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="n">ReadImageCV</span><span class="p">(</span><span class="n">filePath2</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Run the model</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">FacePadResultList</span><span class="w"> </span><span class="n">paperResults</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">padPaper</span><span class="p">.</span><span class="n">Classify</span><span class="p">(</span><span class="n">batch2</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">FacePadResult</span><span class="w"> </span><span class="n">paperResult</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">padPaper</span><span class="p">.</span><span class="n">Classify</span><span class="p">(</span><span class="n">img2</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">spoofProb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">GetSpoofProb</span><span class="p">();</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isSpoof</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">IsSpoof</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">GetReturnStatus</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
 </section>
 
 

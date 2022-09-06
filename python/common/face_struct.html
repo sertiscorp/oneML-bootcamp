@@ -63,6 +63,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -185,8 +189,75 @@
 <span id="python-common-face-struct"></span><h1>Python Face Structures<a class="headerlink" href="#python-face-structures" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt>
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_usage_report"></span><code class="sig-name descname">oneML.faceAPI.UsageReport : public object</code></dt>
+<dd><p>Class to store API usage statistics. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="init__">
+<span id="__init__"></span><span class="target" id="classone_m_l_1_1face_a_p_i_1_1_usage_report_1a00452d1ef4b6c5b61d86bd6e72ef203f"></span><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">api_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an <strong><a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a></strong> instance. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">api_name</span></code>: name of the API </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="to_log">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_usage_report_1a8ce5089be29cbd34e915486d73ff00f6"></span><code class="sig-name descname">to_log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#to_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print <a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> to log. </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="to_file">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_usage_report_1a425b6b1537907024f7e237176c3e84ed"></span><code class="sig-name descname">to_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">file_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dump <a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> to file. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">file_name</span></code>: name of the file </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_api">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_usage_report_1a12880b9b7c4d09dbbc8376f62cc15ea5"></span><code class="sig-name descname">get_api</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_api" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the API name of the <a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attributes</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">api_calls</span><span class="p">:</span> <span class="n">number</span> <span class="n">of</span> <span class="n">API</span> <span class="n">calls</span>
+    <span class="o">-</span> <span class="n">model_runs</span><span class="p">:</span> <span class="n">number</span> <span class="n">of</span> <span class="n">model</span> <span class="n">inferences</span>
+    <span class="o">-</span> <span class="n">first_updated</span><span class="p">:</span> <span class="n">time</span> <span class="n">of</span> <span class="n">initialization</span>
+    <span class="o">-</span> <span class="n">last_updated</span><span class="p">:</span> <span class="n">time</span> <span class="n">of</span> <span class="n">last</span> <span class="n">update</span>
+    <span class="o">-</span> <span class="n">success_count</span><span class="p">:</span> <span class="n">number</span> <span class="n">of</span> <span class="n">successfull</span> <span class="n">API</span> <span class="n">calls</span>
+    <span class="o">-</span> <span class="n">fail_count</span><span class="p">:</span> <span class="n">number</span> <span class="n">of</span> <span class="n">failed</span> <span class="n">API</span> <span class="n">calls</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt>
 <span class="target" id="classone_m_l_1_1face_a_p_i_1_1_b_box"></span><code class="sig-name descname">oneML.faceAPI.BBox : public object</code></dt>
-<dd><p>Struct for Bounding Box. </p>
+<dd><p>Class for Bounding Box. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="eq__">
+<span id="__eq__"></span><span class="target" id="classone_m_l_1_1face_a_p_i_1_1_b_box_1a170400c4d7a7c8fa29bfb804df7c380d"></span><code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">bbox</span></em><span class="sig-paren">)</span><a class="headerlink" href="#eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function compares two <a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_b_box"><span class="std std-ref">BBox</span></a> for equality. </p>
+<p>:type bbox: :py:class:<code class="docutils literal notranslate"><a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_b_box"><span class="std std-ref"><span class="pre">BBox</span></span></a></code>, in :param bbox:: <a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_b_box"><span class="std std-ref">BBox</span></a> to compare with</p>
+<p>:rtype: boolean :return: boolean, true if BBoxes are the same, false otherwise </p>
+</dd></dl>
+
+</div>
 </dd></dl>
 
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attributes</span><span class="p">:</span>
@@ -208,6 +279,16 @@
 <dt>
 <span class="target" id="classone_m_l_1_1face_a_p_i_1_1_landmark5"></span><code class="sig-name descname">oneML.faceAPI.Landmark5 : public object</code></dt>
 <dd><p>Struct for landmark in face. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="id0">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_landmark5_1a35aeac22a53608fc40f638cbb66b964b"></span><code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">lm</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>check whether the given FaceLandmark is equal to this instance </p>
+<p>:type lm: oneML::face::FaceLandmark&lt; 5 &gt; :param lm:: FaceLandmark to be compared :rtype: boolean :return: bool </p>
+</dd></dl>
+
+</div>
 </dd></dl>
 
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Struct</span> <span class="n">of</span> <span class="n">landmarks</span> <span class="n">containing</span> <span class="n">an</span> <span class="n">array</span> <span class="n">of</span> <span class="mi">5</span> <span class="n">x</span> <span class="n">points</span> <span class="ow">and</span> <span class="n">an</span> <span class="n">array</span> <span class="n">of</span> <span class="mi">5</span> <span class="n">y</span> <span class="n">points</span>

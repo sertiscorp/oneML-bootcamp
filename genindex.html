@@ -60,6 +60,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -188,6 +192,7 @@
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
  | <a href="#V"><strong>V</strong></a>
  
@@ -196,10 +201,19 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
+    __eq__()
+
+      <ul>
+        <li><a href="python/common/alpr_struct.html#eq__">built-in function</a>, <a href="python/common/face_struct.html#eq__">[1]</a>, <a href="python/common/face_struct.html#id0">[2]</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
     __init__()
 
       <ul>
-        <li><a href="python/public/face_detector.html#init__">built-in function</a>, <a href="python/public/face_embedder.html#init__">[1]</a>, <a href="python/public/face_id.html#init__">[2]</a>, <a href="python/public/license_manager.html#id0">[3]</a>, <a href="python/public/license_manager.html#init__">[4]</a>, <a href="python/public/utils.html#id0">[5]</a>, <a href="python/public/utils.html#init__">[6]</a>, <a href="python/public/vehicle_detector.html#init__">[7]</a>
+        <li><a href="python/common/alpr_struct.html#init__">built-in function</a>, <a href="python/common/face_struct.html#init__">[1]</a>, <a href="python/public/face_detector.html#init__">[2]</a>, <a href="python/public/face_embedder.html#init__">[3]</a>, <a href="python/public/face_id.html#init__">[4]</a>, <a href="python/public/face_pad.html#init__">[5]</a>, <a href="python/public/license_manager.html#id0">[6]</a>, <a href="python/public/license_manager.html#init__">[7]</a>, <a href="python/public/utils.html#id0">[8]</a>, <a href="python/public/utils.html#init__">[9]</a>, <a href="python/public/vehicle_detector.html#init__">[10]</a>
 </li>
       </ul></li>
   </ul></td>
@@ -234,11 +248,17 @@
     built-in function
 
       <ul>
-        <li><a href="python/public/face_detector.html#init__">__init__()</a>, <a href="python/public/face_embedder.html#init__">[1]</a>, <a href="python/public/face_id.html#init__">[2]</a>, <a href="python/public/license_manager.html#id0">[3]</a>, <a href="python/public/license_manager.html#init__">[4]</a>, <a href="python/public/utils.html#id0">[5]</a>, <a href="python/public/utils.html#init__">[6]</a>, <a href="python/public/vehicle_detector.html#init__">[7]</a>
+        <li><a href="python/common/alpr_struct.html#eq__">__eq__()</a>, <a href="python/common/face_struct.html#eq__">[1]</a>, <a href="python/common/face_struct.html#id0">[2]</a>
+</li>
+        <li><a href="python/common/alpr_struct.html#init__">__init__()</a>, <a href="python/common/face_struct.html#init__">[1]</a>, <a href="python/public/face_detector.html#init__">[2]</a>, <a href="python/public/face_embedder.html#init__">[3]</a>, <a href="python/public/face_id.html#init__">[4]</a>, <a href="python/public/face_pad.html#init__">[5]</a>, <a href="python/public/license_manager.html#id0">[6]</a>, <a href="python/public/license_manager.html#init__">[7]</a>, <a href="python/public/utils.html#id0">[8]</a>, <a href="python/public/utils.html#init__">[9]</a>, <a href="python/public/vehicle_detector.html#init__">[10]</a>
 </li>
         <li><a href="python/public/license_manager.html#activate_key">activate_key()</a>, <a href="python/public/license_manager.html#id4">[1]</a>
 </li>
         <li><a href="python/public/license_manager.html#activate_trial">activate_trial()</a>, <a href="python/public/license_manager.html#id5">[1]</a>
+</li>
+        <li><a href="python/public/face_pad.html#classify">classify()</a>
+</li>
+        <li><a href="python/public/face_pad.html#classify_batch">classify_batch()</a>
 </li>
         <li><a href="python/public/utils.html#crop_align_face_landmark">crop_align_face_landmark()</a>
 </li>
@@ -253,6 +273,8 @@
         <li><a href="python/public/license_manager.html#get_activation_expiry_date">get_activation_expiry_date()</a>, <a href="python/public/license_manager.html#id10">[1]</a>
 </li>
         <li><a href="python/public/license_manager.html#get_activation_type">get_activation_type()</a>, <a href="python/public/license_manager.html#id9">[1]</a>
+</li>
+        <li><a href="python/common/alpr_struct.html#get_api">get_api()</a>, <a href="python/common/face_struct.html#get_api">[1]</a>
 </li>
         <li><a href="python/public/face_detector.html#get_bboxes">get_bboxes()</a>, <a href="python/public/vehicle_detector.html#get_bboxes">[1]</a>
 </li>
@@ -274,13 +296,19 @@
 </li>
         <li><a href="python/public/face_detector.html#get_poses">get_poses()</a>
 </li>
-        <li><a href="python/public/face_detector.html#get_return_status">get_return_status()</a>, <a href="python/public/face_embedder.html#get_return_status">[1]</a>, <a href="python/public/face_id.html#get_return_status">[2]</a>, <a href="python/public/vehicle_detector.html#get_return_status">[3]</a>
+        <li><a href="python/public/face_detector.html#get_return_status">get_return_status()</a>, <a href="python/public/face_embedder.html#get_return_status">[1]</a>, <a href="python/public/face_id.html#get_return_status">[2]</a>, <a href="python/public/face_pad.html#get_return_status">[3]</a>, <a href="python/public/vehicle_detector.html#get_return_status">[4]</a>
 </li>
         <li><a href="python/public/face_detector.html#get_scores">get_scores()</a>, <a href="python/public/vehicle_detector.html#get_scores">[1]</a>
 </li>
         <li><a href="python/public/face_detector.html#get_size">get_size()</a>, <a href="python/public/face_embedder.html#get_size">[1]</a>, <a href="python/public/vehicle_detector.html#get_size">[2]</a>
 </li>
+        <li><a href="python/public/face_pad.html#get_spoof_prob">get_spoof_prob()</a>
+</li>
+        <li><a href="python/public/face_detector.html#get_usage">get_usage()</a>, <a href="python/public/face_embedder.html#get_usage">[1]</a>, <a href="python/public/face_id.html#get_usage">[2]</a>, <a href="python/public/face_pad.html#get_usage">[3]</a>, <a href="python/public/license_manager.html#get_usage">[4]</a>, <a href="python/public/license_manager.html#id11">[5]</a>, <a href="python/public/utils.html#get_usage">[6]</a>, <a href="python/public/utils.html#id1">[7]</a>, <a href="python/public/vehicle_detector.html#get_usage">[8]</a>
+</li>
         <li><a href="python/public/face_id.html#is_identifiable">is_identifiable()</a>
+</li>
+        <li><a href="python/public/face_pad.html#is_spoof">is_spoof()</a>
 </li>
         <li><a href="python/public/face_id.html#is_the_same_person_emb">is_the_same_person_emb()</a>
 </li>
@@ -294,7 +322,7 @@
 </li>
         <li><a href="python/public/face_id.html#predict_batch">predict_batch()</a>
 </li>
-        <li><a href="python/public/utils.html#id1">read_image_cv()</a>, <a href="python/public/utils.html#read_image_cv">[1]</a>
+        <li><a href="python/public/utils.html#id2">read_image_cv()</a>, <a href="python/public/utils.html#read_image_cv">[1]</a>
 </li>
         <li><a href="python/public/face_id.html#register_id_emb">register_id_emb()</a>
 </li>
@@ -308,6 +336,10 @@
 </li>
         <li><a href="python/public/license_manager.html#id2">set_machine_code()</a>, <a href="python/public/license_manager.html#set_machine_code">[1]</a>
 </li>
+        <li><a href="python/common/alpr_struct.html#to_file">to_file()</a>, <a href="python/common/face_struct.html#to_file">[1]</a>
+</li>
+        <li><a href="python/common/alpr_struct.html#to_log">to_log()</a>, <a href="python/common/face_struct.html#to_log">[1]</a>
+</li>
         <li><a href="python/public/face_id.html#update_embedding">update_embedding()</a>
 </li>
         <li><a href="python/public/face_id.html#update_embedding_dynamically_emb">update_embedding_dynamically_emb()</a>
@@ -320,6 +352,22 @@
 
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    classify()
+
+      <ul>
+        <li><a href="python/public/face_pad.html#classify">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    classify_batch()
+
+      <ul>
+        <li><a href="python/public/face_pad.html#classify_batch">built-in function</a>
+</li>
+      </ul></li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     crop_align_face_landmark()
@@ -398,8 +446,6 @@
 </li>
       <li><a href="csharp/public/face_embedder.html#_CPPv4N18FaceEmbedderStatus4FailE">FaceEmbedderStatus::Fail (C++ enumerator)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="csharp/public/face_embedder.html#_CPPv4N18FaceEmbedderStatus7SuccessE">FaceEmbedderStatus::Success (C++ enumerator)</a>
 </li>
       <li><a href="python/public/face_embedder.html#oneML.faceAPI.FaceEmbedderStatus_Empty">FaceEmbedderStatus_Empty (oneML.faceAPI attribute)</a>
@@ -410,6 +456,8 @@
 </li>
       <li><a href="csharp/public/face_id.html#_CPPv412FaceIdStatus">FaceIdStatus (C++ enum)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="csharp/public/face_id.html#_CPPv4N12FaceIdStatus5EmptyE">FaceIdStatus::Empty (C++ enumerator)</a>
 </li>
       <li><a href="csharp/public/face_id.html#_CPPv4N12FaceIdStatus4FailE">FaceIdStatus::Fail (C++ enumerator)</a>
@@ -421,6 +469,24 @@
       <li><a href="python/public/face_id.html#oneML.faceAPI.FaceIdStatus_Fail">FaceIdStatus_Fail (oneML.faceAPI attribute)</a>
 </li>
       <li><a href="python/public/face_id.html#oneML.faceAPI.FaceIdStatus_Success">FaceIdStatus_Success (oneML.faceAPI attribute)</a>
+</li>
+      <li><a href="csharp/public/face_pad.html#_CPPv413FacePadStatus">FacePadStatus (C++ enum)</a>
+</li>
+      <li><a href="csharp/public/face_pad.html#_CPPv4N13FacePadStatus14DigitalPadFailE">FacePadStatus::DigitalPadFail (C++ enumerator)</a>
+</li>
+      <li><a href="csharp/public/face_pad.html#_CPPv4N13FacePadStatus5EmptyE">FacePadStatus::Empty (C++ enumerator)</a>
+</li>
+      <li><a href="csharp/public/face_pad.html#_CPPv4N13FacePadStatus12PaperPadFailE">FacePadStatus::PaperPadFail (C++ enumerator)</a>
+</li>
+      <li><a href="csharp/public/face_pad.html#_CPPv4N13FacePadStatus7SuccessE">FacePadStatus::Success (C++ enumerator)</a>
+</li>
+      <li><a href="python/public/face_pad.html#oneML.faceAPI.FacePadStatus_DigitalPadFail">FacePadStatus_DigitalPadFail (oneML.faceAPI attribute)</a>
+</li>
+      <li><a href="python/public/face_pad.html#oneML.faceAPI.FacePadStatus_Empty">FacePadStatus_Empty (oneML.faceAPI attribute)</a>
+</li>
+      <li><a href="python/public/face_pad.html#oneML.faceAPI.FacePadStatus_PaperPadFail">FacePadStatus_PaperPadFail (oneML.faceAPI attribute)</a>
+</li>
+      <li><a href="python/public/face_pad.html#oneML.faceAPI.FacePadStatus_Success">FacePadStatus_Success (oneML.faceAPI attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -440,6 +506,13 @@
 
       <ul>
         <li><a href="python/public/license_manager.html#get_activation_type">built-in function</a>, <a href="python/public/license_manager.html#id9">[1]</a>
+</li>
+      </ul></li>
+      <li>
+    get_api()
+
+      <ul>
+        <li><a href="python/common/alpr_struct.html#get_api">built-in function</a>, <a href="python/common/face_struct.html#get_api">[1]</a>
 </li>
       </ul></li>
       <li>
@@ -518,7 +591,7 @@
     get_return_status()
 
       <ul>
-        <li><a href="python/public/face_detector.html#get_return_status">built-in function</a>, <a href="python/public/face_embedder.html#get_return_status">[1]</a>, <a href="python/public/face_id.html#get_return_status">[2]</a>, <a href="python/public/vehicle_detector.html#get_return_status">[3]</a>
+        <li><a href="python/public/face_detector.html#get_return_status">built-in function</a>, <a href="python/public/face_embedder.html#get_return_status">[1]</a>, <a href="python/public/face_id.html#get_return_status">[2]</a>, <a href="python/public/face_pad.html#get_return_status">[3]</a>, <a href="python/public/vehicle_detector.html#get_return_status">[4]</a>
 </li>
       </ul></li>
       <li>
@@ -535,6 +608,20 @@
         <li><a href="python/public/face_detector.html#get_size">built-in function</a>, <a href="python/public/face_embedder.html#get_size">[1]</a>, <a href="python/public/vehicle_detector.html#get_size">[2]</a>
 </li>
       </ul></li>
+      <li>
+    get_spoof_prob()
+
+      <ul>
+        <li><a href="python/public/face_pad.html#get_spoof_prob">built-in function</a>
+</li>
+      </ul></li>
+      <li>
+    get_usage()
+
+      <ul>
+        <li><a href="python/public/face_detector.html#get_usage">built-in function</a>, <a href="python/public/face_embedder.html#get_usage">[1]</a>, <a href="python/public/face_id.html#get_usage">[2]</a>, <a href="python/public/face_pad.html#get_usage">[3]</a>, <a href="python/public/license_manager.html#get_usage">[4]</a>, <a href="python/public/license_manager.html#id11">[5]</a>, <a href="python/public/utils.html#get_usage">[6]</a>, <a href="python/public/utils.html#id1">[7]</a>, <a href="python/public/vehicle_detector.html#get_usage">[8]</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -549,12 +636,21 @@
 </li>
       </ul></li>
       <li>
+    is_spoof()
+
+      <ul>
+        <li><a href="python/public/face_pad.html#is_spoof">built-in function</a>
+</li>
+      </ul></li>
+      <li>
     is_the_same_person_emb()
 
       <ul>
         <li><a href="python/public/face_id.html#is_the_same_person_emb">built-in function</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     is_the_same_person_img()
 
@@ -562,8 +658,6 @@
         <li><a href="python/public/face_id.html#is_the_same_person_img">built-in function</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     is_trial()
 
@@ -616,6 +710,8 @@
 </li>
       <li><a href="cpp/public/vehicle_detector.html#_CPPv4N5oneML4alpr15VehicleDetector6detectERK10MultiImageRNSt6vectorI21VehicleDetectorResultEE">oneML::alpr::VehicleDetector::detect (C++ function)</a>, <a href="cpp/public/vehicle_detector.html#_CPPv4N5oneML4alpr15VehicleDetector6detectERK5ImageR21VehicleDetectorResult">[1]</a>
 </li>
+      <li><a href="cpp/public/vehicle_detector.html#_CPPv4NK5oneML4alpr15VehicleDetector9get_usageEv">oneML::alpr::VehicleDetector::get_usage (C++ function)</a>
+</li>
       <li><a href="cpp/public/vehicle_detector.html#_CPPv4N5oneML4alpr15VehicleDetector15VehicleDetectorERN5oneML14LicenseManagerE">oneML::alpr::VehicleDetector::VehicleDetector (C++ function)</a>
 </li>
       <li><a href="cpp/public/vehicle_detector.html#_CPPv4N5oneML4alpr21VehicleDetectorResultE">oneML::alpr::VehicleDetectorResult (C++ class)</a>
@@ -636,11 +732,13 @@
 </li>
       <li><a href="cpp/public/vehicle_detector.html#_CPPv4N5oneML4alpr21VehicleDetectorStatus7SuccessE">oneML::alpr::VehicleDetectorStatus::Success (C++ enumerator)</a>
 </li>
-      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML4BBoxE">oneML::BBox (C++ struct)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML4BBoxE">[1]</a>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML4BBoxE">oneML::BBox (C++ class)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML4BBoxE">[1]</a>
 </li>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML4BBox6bottomE">oneML::BBox::bottom (C++ member)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML4BBox6bottomE">[1]</a>
 </li>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML4BBox4leftE">oneML::BBox::left (C++ member)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML4BBox4leftE">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4NK5oneML4BBoxeqERK4BBox">oneML::BBox::operator== (C++ function)</a>, <a href="cpp/common/face_struct.html#_CPPv4NK5oneML4BBoxeqERK4BBox">[1]</a>
 </li>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML4BBox5rightE">oneML::BBox::right (C++ member)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML4BBox5rightE">[1]</a>
 </li>
@@ -650,6 +748,50 @@
 </li>
       <li><a href="cpp/common/face_struct.html#_CPPv4N5oneML4face4BBoxE">oneML::face::BBox (C++ type)</a>
 </li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face4EKYCE">oneML::face::EKYC (C++ class)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face4EKYC4EKYCER12FaceDetectorR12FaceEmbedderRN5oneML14LicenseManagerE">oneML::face::EKYC::EKYC (C++ function)</a>, <a href="cpp/public/ekyc.html#_CPPv4N5oneML4face4EKYC4EKYCER12FaceDetectorRN5oneML14LicenseManagerE">[1]</a>, <a href="cpp/public/ekyc.html#_CPPv4N5oneML4face4EKYC4EKYCER12FaceEmbedderRN5oneML14LicenseManagerE">[2]</a>, <a href="cpp/public/ekyc.html#_CPPv4N5oneML4face4EKYC4EKYCERN5oneML14LicenseManagerE">[3]</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4NK5oneML4face4EKYC9get_usageEv">oneML::face::EKYC::get_usage (C++ function)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face4EKYC3runERN5oneML5ImageERN5oneML5ImageERK7EKYCOpsRK7EKYCOpsR10EKYCResult">oneML::face::EKYC::run (C++ function)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face7EKYCOpsE">oneML::face::EKYCOps (C++ struct)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face7EKYCOps10blur_checkE">oneML::face::EKYCOps::blur_check (C++ member)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face7EKYCOps9pad_checkE">oneML::face::EKYCOps::pad_check (C++ member)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face10EKYCResultE">oneML::face::EKYCResult (C++ class)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4NK5oneML4face10EKYCResult10get_bboxesER4BBoxR4BBox">oneML::face::EKYCResult::get_bboxes (C++ function)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4NK5oneML4face10EKYCResult12get_distanceEv">oneML::face::EKYCResult::get_distance (C++ function)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4NK5oneML4face10EKYCResult14get_face_posesER4PoseR4Pose">oneML::face::EKYCResult::get_face_poses (C++ function)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4NK5oneML4face10EKYCResult13get_landmarksER13FaceLandmark5R13FaceLandmark5">oneML::face::EKYCResult::get_landmarks (C++ function)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4NK5oneML4face10EKYCResult17get_return_statusEv">oneML::face::EKYCResult::get_return_status (C++ function)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4NK5oneML4face10EKYCResult14is_same_personEv">oneML::face::EKYCResult::is_same_person (C++ function)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face10EKYCStatusE">oneML::face::EKYCStatus (C++ enum)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face10EKYCStatus14DigitalPadFailE">oneML::face::EKYCStatus::DigitalPadFail (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face10EKYCStatus5EmptyE">oneML::face::EKYCStatus::Empty (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face10EKYCStatus17FaceBlurCheckFailE">oneML::face::EKYCStatus::FaceBlurCheckFail (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face10EKYCStatus18ImageBlurCheckFailE">oneML::face::EKYCStatus::ImageBlurCheckFail (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face10EKYCStatus11NoFaceFoundE">oneML::face::EKYCStatus::NoFaceFound (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face10EKYCStatus12PaperPadFailE">oneML::face::EKYCStatus::PaperPadFail (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/ekyc.html#_CPPv4N5oneML4face10EKYCStatus7SuccessE">oneML::face::EKYCStatus::Success (C++ enumerator)</a>
+</li>
       <li><a href="cpp/common/face_struct.html#_CPPv4N5oneML4face9EmbeddingE">oneML::face::Embedding (C++ type)</a>
 </li>
       <li><a href="cpp/public/face_detector.html#_CPPv4N5oneML4face12FaceDetectorE">oneML::face::FaceDetector (C++ class)</a>
@@ -657,6 +799,8 @@
       <li><a href="cpp/public/face_detector.html#_CPPv4N5oneML4face12FaceDetector6detectERK10MultiImageRNSt6vectorI18FaceDetectorResultEE">oneML::face::FaceDetector::detect (C++ function)</a>, <a href="cpp/public/face_detector.html#_CPPv4N5oneML4face12FaceDetector6detectERK5ImageR18FaceDetectorResult">[1]</a>
 </li>
       <li><a href="cpp/public/face_detector.html#_CPPv4N5oneML4face12FaceDetector12FaceDetectorERN5oneML14LicenseManagerE">oneML::face::FaceDetector::FaceDetector (C++ function)</a>
+</li>
+      <li><a href="cpp/public/face_detector.html#_CPPv4NK5oneML4face12FaceDetector9get_usageEv">oneML::face::FaceDetector::get_usage (C++ function)</a>
 </li>
       <li><a href="cpp/public/face_detector.html#_CPPv4N5oneML4face18FaceDetectorResultE">oneML::face::FaceDetectorResult (C++ class)</a>
 </li>
@@ -686,6 +830,8 @@
 </li>
       <li><a href="cpp/public/face_embedder.html#_CPPv4N5oneML4face12FaceEmbedder12FaceEmbedderERN5oneML14LicenseManagerE">oneML::face::FaceEmbedder::FaceEmbedder (C++ function)</a>
 </li>
+      <li><a href="cpp/public/face_embedder.html#_CPPv4NK5oneML4face12FaceEmbedder9get_usageEv">oneML::face::FaceEmbedder::get_usage (C++ function)</a>
+</li>
       <li><a href="cpp/public/face_embedder.html#_CPPv4N5oneML4face18FaceEmbedderResultE">oneML::face::FaceEmbedderResult (C++ class)</a>
 </li>
       <li><a href="cpp/public/face_embedder.html#_CPPv4NK5oneML4face18FaceEmbedderResult13get_embeddingER9Embedding">oneML::face::FaceEmbedderResult::get_embedding (C++ function)</a>
@@ -707,6 +853,8 @@
       <li><a href="cpp/public/face_id.html#_CPPv4N5oneML4face6FaceId6FaceIdER12FaceEmbedderRN5oneML14LicenseManagerE">oneML::face::FaceId::FaceId (C++ function)</a>, <a href="cpp/public/face_id.html#_CPPv4N5oneML4face6FaceId6FaceIdERN5oneML14LicenseManagerE">[1]</a>
 </li>
       <li><a href="cpp/public/face_id.html#_CPPv4NK5oneML4face6FaceId7get_idsERNSt6vectorINSt6stringEEE">oneML::face::FaceId::get_ids (C++ function)</a>
+</li>
+      <li><a href="cpp/public/face_id.html#_CPPv4NK5oneML4face6FaceId9get_usageEv">oneML::face::FaceId::get_usage (C++ function)</a>
 </li>
       <li><a href="cpp/public/face_id.html#_CPPv4N5oneML4face6FaceId18is_the_same_personERK5ImageRK5Image">oneML::face::FaceId::is_the_same_person (C++ function)</a>, <a href="cpp/public/face_id.html#_CPPv4N5oneML4face6FaceId18is_the_same_personERK9EmbeddingRK5ImageR9Embedding">[1]</a>
 </li>
@@ -748,9 +896,43 @@
 </li>
       <li><a href="cpp/common/face_struct.html#_CPPv4N5oneML4face13FaceLandmark5E">oneML::face::FaceLandmark5 (C++ type)</a>
 </li>
+      <li><a href="cpp/common/face_struct.html#_CPPv4NK5oneML4face12FaceLandmarkeqERK12FaceLandmarkI1NE">oneML::face::FaceLandmark::operator== (C++ function)</a>
+</li>
       <li><a href="cpp/common/face_struct.html#_CPPv4N5oneML4face12FaceLandmark1xE">oneML::face::FaceLandmark::x (C++ member)</a>
 </li>
       <li><a href="cpp/common/face_struct.html#_CPPv4N5oneML4face12FaceLandmark1yE">oneML::face::FaceLandmark::y (C++ member)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face7FacePadE">oneML::face::FacePad (C++ class)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face7FacePad8classifyERK10MultiImageRNSt6vectorI13FacePadResultEE">oneML::face::FacePad::classify (C++ function)</a>, <a href="cpp/public/face_pad.html#_CPPv4N5oneML4face7FacePad8classifyERK5ImageR13FacePadResult">[1]</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face7FacePad7FacePadE7PadTypeRN5oneML14LicenseManagerE">oneML::face::FacePad::FacePad (C++ function)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4NK5oneML4face7FacePad9get_usageEv">oneML::face::FacePad::get_usage (C++ function)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face13FacePadResultE">oneML::face::FacePadResult (C++ class)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4NK5oneML4face13FacePadResult17get_return_statusEv">oneML::face::FacePadResult::get_return_status (C++ function)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4NK5oneML4face13FacePadResult14get_spoof_probEv">oneML::face::FacePadResult::get_spoof_prob (C++ function)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4NK5oneML4face13FacePadResult8is_spoofEv">oneML::face::FacePadResult::is_spoof (C++ function)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face13FacePadStatusE">oneML::face::FacePadStatus (C++ enum)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face13FacePadStatus14DigitalPadFailE">oneML::face::FacePadStatus::DigitalPadFail (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face13FacePadStatus5EmptyE">oneML::face::FacePadStatus::Empty (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face13FacePadStatus12PaperPadFailE">oneML::face::FacePadStatus::PaperPadFail (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face13FacePadStatus7SuccessE">oneML::face::FacePadStatus::Success (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face7PadTypeE">oneML::face::PadType (C++ enum)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face7PadType5PaperE">oneML::face::PadType::Paper (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/public/face_pad.html#_CPPv4N5oneML4face7PadType3RgbE">oneML::face::PadType::Rgb (C++ enumerator)</a>
 </li>
       <li><a href="cpp/common/face_struct.html#_CPPv4N5oneML4face4PoseE">oneML::face::Pose (C++ enum)</a>
 </li>
@@ -766,7 +948,7 @@
 </li>
       <li><a href="cpp/common/face_struct.html#_CPPv4N5oneML4face4Pose2UpE">oneML::face::Pose::Up (C++ enumerator)</a>
 </li>
-      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML5ImageE">oneML::Image (C++ struct)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML5ImageE">[1]</a>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML5ImageE">oneML::Image (C++ class)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML5ImageE">[1]</a>
 </li>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4NK5oneML5Image8get_dataEv">oneML::Image::get_data (C++ function)</a>, <a href="cpp/common/face_struct.html#_CPPv4NK5oneML5Image8get_dataEv">[1]</a>
 </li>
@@ -802,6 +984,8 @@
 </li>
       <li><a href="cpp/public/license_manager.html#_CPPv4NK5oneML14LicenseManager16get_machine_codeEv">oneML::LicenseManager::get_machine_code (C++ function)</a>
 </li>
+      <li><a href="cpp/public/license_manager.html#_CPPv4NK5oneML14LicenseManager9get_usageEv">oneML::LicenseManager::get_usage (C++ function)</a>
+</li>
       <li><a href="cpp/public/license_manager.html#_CPPv4NK5oneML14LicenseManager8is_trialEv">oneML::LicenseManager::is_trial (C++ function)</a>
 </li>
       <li><a href="cpp/public/license_manager.html#_CPPv4NK5oneML14LicenseManager19is_valid_activationEv">oneML::LicenseManager::is_valid_activation (C++ function)</a>
@@ -834,17 +1018,17 @@
 </li>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML10ReturnCode10ParseErrorE">oneML::ReturnCode::ParseError (C++ enumerator)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML10ReturnCode10ParseErrorE">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML10ReturnCode11RefuseInputE">oneML::ReturnCode::RefuseInput (C++ enumerator)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML10ReturnCode11RefuseInputE">[1]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML10ReturnCode12RuntimeErrorE">oneML::ReturnCode::RuntimeError (C++ enumerator)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML10ReturnCode12RuntimeErrorE">[1]</a>
 </li>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML10ReturnCode7SuccessE">oneML::ReturnCode::Success (C++ enumerator)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML10ReturnCode7SuccessE">[1]</a>
 </li>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML10ReturnCode12UnknownErrorE">oneML::ReturnCode::UnknownError (C++ enumerator)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML10ReturnCode12UnknownErrorE">[1]</a>
 </li>
-      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE">oneML::ReturnStatus (C++ struct)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML12ReturnStatusE">[1]</a>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE">oneML::ReturnStatus (C++ class)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML12ReturnStatusE">[1]</a>
 </li>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4NK5oneML12ReturnStatus8get_codeEv">oneML::ReturnStatus::get_code (C++ function)</a>, <a href="cpp/common/face_struct.html#_CPPv4NK5oneML12ReturnStatus8get_codeEv">[1]</a>
 </li>
@@ -856,9 +1040,33 @@
 </li>
       <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML12ReturnStatus8set_infoENSt6stringE">oneML::ReturnStatus::set_info (C++ function)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML12ReturnStatus8set_infoENSt6stringE">[1]</a>
 </li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML11UsageReportE">oneML::UsageReport (C++ class)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML11UsageReportE">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML11UsageReport9api_callsE">oneML::UsageReport::api_calls (C++ member)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML11UsageReport9api_callsE">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML11UsageReport10fail_countE">oneML::UsageReport::fail_count (C++ member)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML11UsageReport10fail_countE">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML11UsageReport13first_updatedE">oneML::UsageReport::first_updated (C++ member)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML11UsageReport13first_updatedE">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4NK5oneML11UsageReport7get_apiEv">oneML::UsageReport::get_api (C++ function)</a>, <a href="cpp/common/face_struct.html#_CPPv4NK5oneML11UsageReport7get_apiEv">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML11UsageReport12last_updatedE">oneML::UsageReport::last_updated (C++ member)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML11UsageReport12last_updatedE">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML11UsageReport10model_runsE">oneML::UsageReport::model_runs (C++ member)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML11UsageReport10model_runsE">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML11UsageReport13success_countE">oneML::UsageReport::success_count (C++ member)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML11UsageReport13success_countE">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4NK5oneML11UsageReport7to_fileERKNSt6stringE">oneML::UsageReport::to_file (C++ function)</a>, <a href="cpp/common/face_struct.html#_CPPv4NK5oneML11UsageReport7to_fileERKNSt6stringE">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4NK5oneML11UsageReport6to_logEv">oneML::UsageReport::to_log (C++ function)</a>, <a href="cpp/common/face_struct.html#_CPPv4NK5oneML11UsageReport6to_logEv">[1]</a>
+</li>
+      <li><a href="cpp/common/alpr_struct.html#_CPPv4N5oneML11UsageReport11UsageReportERKNSt6stringE">oneML::UsageReport::UsageReport (C++ function)</a>, <a href="cpp/common/face_struct.html#_CPPv4N5oneML11UsageReport11UsageReportERKNSt6stringE">[1]</a>
+</li>
       <li><a href="cpp/public/utils.html#_CPPv4N5oneML5UtilsE">oneML::Utils (C++ class)</a>
 </li>
       <li><a href="cpp/public/utils.html#_CPPv4N5oneML5Utils24crop_align_face_landmarkER5ImageRN5oneML4face13FaceLandmark5ER5Image">oneML::Utils::crop_align_face_landmark (C++ function)</a>
+</li>
+      <li><a href="cpp/public/utils.html#_CPPv4NK5oneML5Utils9get_usageEv">oneML::Utils::get_usage (C++ function)</a>
 </li>
       <li><a href="cpp/public/utils.html#_CPPv4N5oneML5Utils13read_image_cvERKNSt6stringER5Image">oneML::Utils::read_image_cv (C++ function)</a>
 </li>
@@ -908,6 +1116,8 @@
 </li>
       <li><a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv">org::sertiscorp::oneml::alpr::LicenseManager::getMachineCode (C++ function)</a>
 </li>
+      <li><a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager8getUsageEv">org::sertiscorp::oneml::alpr::LicenseManager::getUsage (C++ function)</a>
+</li>
       <li><a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv">org::sertiscorp::oneml::alpr::LicenseManager::isTrial (C++ function)</a>
 </li>
       <li><a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17isValidActivationEv">org::sertiscorp::oneml::alpr::LicenseManager::isValidActivation (C++ function)</a>
@@ -922,7 +1132,41 @@
 </li>
       <li><a href="java/public/vehicle_detector.html#_CPPv4N3org10sertiscorp5oneml4alpr3org10sertiscorp5oneml4alpr21VehicleDetectorStatusE">org::sertiscorp::oneml::alpr::org::sertiscorp::oneml::alpr::VehicleDetectorStatus (C++ enum)</a>
 </li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReportE">org::sertiscorp::oneml::alpr::UsageReport (C++ class)</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport6getApiEv">org::sertiscorp::oneml::alpr::UsageReport::getApi (C++ function)</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport12getApi_callsEv">org::sertiscorp::oneml::alpr::UsageReport::getApi_calls (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport12getApi_callsEv">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport13getFail_countEv">org::sertiscorp::oneml::alpr::UsageReport::getFail_count (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport13getFail_countEv">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport16getFirst_updatedEv">org::sertiscorp::oneml::alpr::UsageReport::getFirst_updated (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport16getFirst_updatedEv">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport15getLast_updatedEv">org::sertiscorp::oneml::alpr::UsageReport::getLast_updated (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport15getLast_updatedEv">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport13getModel_runsEv">org::sertiscorp::oneml::alpr::UsageReport::getModel_runs (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport13getModel_runsEv">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport16getSuccess_countEv">org::sertiscorp::oneml::alpr::UsageReport::getSuccess_count (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport16getSuccess_countEv">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport12setApi_callsEi">org::sertiscorp::oneml::alpr::UsageReport::setApi_calls (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport12setApi_callsEi">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport13setFail_countEi">org::sertiscorp::oneml::alpr::UsageReport::setFail_count (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport13setFail_countEi">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport16setFirst_updatedEi">org::sertiscorp::oneml::alpr::UsageReport::setFirst_updated (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport16setFirst_updatedEi">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport15setLast_updatedEi">org::sertiscorp::oneml::alpr::UsageReport::setLast_updated (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport15setLast_updatedEi">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport13setModel_runsEi">org::sertiscorp::oneml::alpr::UsageReport::setModel_runs (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport13setModel_runsEi">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport16setSuccess_countEi">org::sertiscorp::oneml::alpr::UsageReport::setSuccess_count (C++ function)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport16setSuccess_countEi">[1]</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport6toFileE6String">org::sertiscorp::oneml::alpr::UsageReport::toFile (C++ function)</a>
+</li>
+      <li><a href="java/common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReport5toLogEv">org::sertiscorp::oneml::alpr::UsageReport::toLog (C++ function)</a>
+</li>
       <li><a href="java/public/utils.html#_CPPv4N3org10sertiscorp5oneml4alpr5UtilsE">org::sertiscorp::oneml::alpr::Utils (C++ class)</a>
+</li>
+      <li><a href="java/public/utils.html#_CPPv4N3org10sertiscorp5oneml4alpr5Utils8getUsageEv">org::sertiscorp::oneml::alpr::Utils::getUsage (C++ function)</a>
 </li>
       <li><a href="java/public/utils.html#_CPPv4N3org10sertiscorp5oneml4alpr5Utils11readImageCVE6String">org::sertiscorp::oneml::alpr::Utils::readImageCV (C++ function)</a>
 </li>
@@ -931,6 +1175,8 @@
       <li><a href="java/public/vehicle_detector.html#_CPPv4N3org10sertiscorp5oneml4alpr15VehicleDetectorE">org::sertiscorp::oneml::alpr::VehicleDetector (C++ class)</a>
 </li>
       <li><a href="java/public/vehicle_detector.html#_CPPv4N3org10sertiscorp5oneml4alpr15VehicleDetector6detectE10ImageBatch">org::sertiscorp::oneml::alpr::VehicleDetector::detect (C++ function)</a>, <a href="java/public/vehicle_detector.html#_CPPv4N3org10sertiscorp5oneml4alpr15VehicleDetector6detectE5Image">[1]</a>
+</li>
+      <li><a href="java/public/vehicle_detector.html#_CPPv4N3org10sertiscorp5oneml4alpr15VehicleDetector8getUsageEv">org::sertiscorp::oneml::alpr::VehicleDetector::getUsage (C++ function)</a>
 </li>
       <li><a href="java/public/vehicle_detector.html#_CPPv4N3org10sertiscorp5oneml4alpr15VehicleDetector15VehicleDetectorE14LicenseManager">org::sertiscorp::oneml::alpr::VehicleDetector::VehicleDetector (C++ function)</a>
 </li>
@@ -942,7 +1188,7 @@
 </li>
       <li><a href="java/public/vehicle_detector.html#_CPPv4N3org10sertiscorp5oneml4alpr21VehicleDetectorResult9getScoresEv">org::sertiscorp::oneml::alpr::VehicleDetectorResult::getScores (C++ function)</a>
 </li>
-      <li><a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">org::sertiscorp::oneml::face (C++ type)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[1]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[2]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[3]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[4]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[5]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[6]</a>, <a href="java/public/face_detector.html#_CPPv4N3org10sertiscorp5oneml4faceE">[7]</a>, <a href="java/public/face_embedder.html#_CPPv4N3org10sertiscorp5oneml4faceE">[8]</a>, <a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4faceE">[9]</a>, <a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4faceE">[10]</a>
+      <li><a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">org::sertiscorp::oneml::face (C++ type)</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[1]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[2]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[3]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[4]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[5]</a>, <a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4faceE">[6]</a>, <a href="java/public/face_detector.html#_CPPv4N3org10sertiscorp5oneml4faceE">[7]</a>, <a href="java/public/face_embedder.html#_CPPv4N3org10sertiscorp5oneml4faceE">[8]</a>, <a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4faceE">[9]</a>, <a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4faceE">[10]</a>, <a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4faceE">[11]</a>, <a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4faceE">[12]</a>
 </li>
       <li><a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face4BBoxE">org::sertiscorp::oneml::face::BBox (C++ class)</a>
 </li>
@@ -970,6 +1216,8 @@
 </li>
       <li><a href="java/public/face_detector.html#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager">org::sertiscorp::oneml::face::FaceDetector::FaceDetector (C++ function)</a>
 </li>
+      <li><a href="java/public/face_detector.html#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector8getUsageEv">org::sertiscorp::oneml::face::FaceDetector::getUsage (C++ function)</a>
+</li>
       <li><a href="java/public/face_detector.html#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResultE">org::sertiscorp::oneml::face::FaceDetectorResult (C++ class)</a>
 </li>
       <li><a href="java/public/face_detector.html#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv">org::sertiscorp::oneml::face::FaceDetectorResult::getBBoxes (C++ function)</a>
@@ -988,6 +1236,8 @@
 </li>
       <li><a href="java/public/face_embedder.html#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager">org::sertiscorp::oneml::face::FaceEmbedder::FaceEmbedder (C++ function)</a>
 </li>
+      <li><a href="java/public/face_embedder.html#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder8getUsageEv">org::sertiscorp::oneml::face::FaceEmbedder::getUsage (C++ function)</a>
+</li>
       <li><a href="java/public/face_embedder.html#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResultE">org::sertiscorp::oneml::face::FaceEmbedderResult (C++ class)</a>
 </li>
       <li><a href="java/public/face_embedder.html#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv">org::sertiscorp::oneml::face::FaceEmbedderResult::getReturnStatus (C++ function)</a>
@@ -998,6 +1248,8 @@
 </li>
       <li><a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4face6FaceId6getIdsEv">org::sertiscorp::oneml::face::FaceId::getIds (C++ function)</a>
 </li>
+      <li><a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4face6FaceId8getUsageEv">org::sertiscorp::oneml::face::FaceId::getUsage (C++ function)</a>
+</li>
       <li><a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4face6FaceId15isTheSamePersonE5Image5Image">org::sertiscorp::oneml::face::FaceId::isTheSamePerson (C++ function)</a>
 </li>
       <li><a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4face6FaceId7predictE10ImageBatch">org::sertiscorp::oneml::face::FaceId::predict (C++ function)</a>, <a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4face6FaceId7predictE5Image">[1]</a>
@@ -1007,6 +1259,18 @@
       <li><a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4face12FaceIdResultE">org::sertiscorp::oneml::face::FaceIdResult (C++ class)</a>
 </li>
       <li><a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4face12FaceIdResult15getReturnStatusEv">org::sertiscorp::oneml::face::FaceIdResult::getReturnStatus (C++ function)</a>
+</li>
+      <li><a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4face7FacePadE">org::sertiscorp::oneml::face::FacePad (C++ class)</a>
+</li>
+      <li><a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4face7FacePad8classifyE10ImageBatch">org::sertiscorp::oneml::face::FacePad::classify (C++ function)</a>, <a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4face7FacePad8classifyE5Image">[1]</a>
+</li>
+      <li><a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4face7FacePad7FacePadE7PadType14LicenseManager">org::sertiscorp::oneml::face::FacePad::FacePad (C++ function)</a>
+</li>
+      <li><a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4face7FacePad8getUsageEv">org::sertiscorp::oneml::face::FacePad::getUsage (C++ function)</a>
+</li>
+      <li><a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4face13FacePadResultE">org::sertiscorp::oneml::face::FacePadResult (C++ class)</a>
+</li>
+      <li><a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4face13FacePadResult15getReturnStatusEv">org::sertiscorp::oneml::face::FacePadResult::getReturnStatus (C++ function)</a>
 </li>
       <li><a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE">org::sertiscorp::oneml::face::Image (C++ class)</a>
 </li>
@@ -1036,6 +1300,8 @@
 </li>
       <li><a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv">org::sertiscorp::oneml::face::LicenseManager::getMachineCode (C++ function)</a>
 </li>
+      <li><a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager8getUsageEv">org::sertiscorp::oneml::face::LicenseManager::getUsage (C++ function)</a>
+</li>
       <li><a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv">org::sertiscorp::oneml::face::LicenseManager::isTrial (C++ function)</a>
 </li>
       <li><a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17isValidActivationEv">org::sertiscorp::oneml::face::LicenseManager::isValidActivation (C++ function)</a>
@@ -1052,13 +1318,27 @@
 </li>
       <li><a href="java/public/face_id.html#_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face12FaceIdStatusE">org::sertiscorp::oneml::face::org::sertiscorp::oneml::face::FaceIdStatus (C++ enum)</a>
 </li>
+      <li><a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face13FacePadStatusE">org::sertiscorp::oneml::face::org::sertiscorp::oneml::face::FacePadStatus (C++ enum)</a>
+</li>
       <li><a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face8FacePoseE">org::sertiscorp::oneml::face::org::sertiscorp::oneml::face::FacePose (C++ enum)</a>
 </li>
       <li><a href="java/public/license_manager.html#_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face13LicenseStatusE">org::sertiscorp::oneml::face::org::sertiscorp::oneml::face::LicenseStatus (C++ enum)</a>
 </li>
+      <li><a href="java/public/face_pad.html#_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face7PadTypeE">org::sertiscorp::oneml::face::org::sertiscorp::oneml::face::PadType (C++ enum)</a>
+</li>
+      <li><a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face11UsageReportE">org::sertiscorp::oneml::face::UsageReport (C++ class)</a>
+</li>
+      <li><a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face11UsageReport6getApiEv">org::sertiscorp::oneml::face::UsageReport::getApi (C++ function)</a>
+</li>
+      <li><a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face11UsageReport6toFileE6String">org::sertiscorp::oneml::face::UsageReport::toFile (C++ function)</a>
+</li>
+      <li><a href="java/common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face11UsageReport5toLogEv">org::sertiscorp::oneml::face::UsageReport::toLog (C++ function)</a>
+</li>
       <li><a href="java/public/utils.html#_CPPv4N3org10sertiscorp5oneml4face5UtilsE">org::sertiscorp::oneml::face::Utils (C++ class)</a>
 </li>
       <li><a href="java/public/utils.html#_CPPv4N3org10sertiscorp5oneml4face5Utils21cropAlignFaceLandmarkE5Image9Landmark5">org::sertiscorp::oneml::face::Utils::cropAlignFaceLandmark (C++ function)</a>
+</li>
+      <li><a href="java/public/utils.html#_CPPv4N3org10sertiscorp5oneml4face5Utils8getUsageEv">org::sertiscorp::oneml::face::Utils::getUsage (C++ function)</a>
 </li>
       <li><a href="java/public/utils.html#_CPPv4N3org10sertiscorp5oneml4face5Utils11readImageCVE6String">org::sertiscorp::oneml::face::Utils::readImageCV (C++ function)</a>
 </li>
@@ -1070,7 +1350,19 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="csharp/public/face_pad.html#_CPPv47PadType">PadType (C++ enum)</a>
+</li>
+      <li><a href="csharp/public/face_pad.html#_CPPv4N7PadType5PaperE">PadType::Paper (C++ enumerator)</a>
+</li>
+      <li><a href="csharp/public/face_pad.html#_CPPv4N7PadType3RgbE">PadType::Rgb (C++ enumerator)</a>
+</li>
+      <li><a href="python/public/face_pad.html#oneML.faceAPI.PadType_Paper">PadType_Paper (oneML.faceAPI attribute)</a>
+</li>
+      <li><a href="python/public/face_pad.html#oneML.faceAPI.PadType_Rgb">PadType_Rgb (oneML.faceAPI attribute)</a>
+</li>
       <li><a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError11ActivateKeyEv">PhonyNameDueToError::ActivateKey (C++ function)</a>, <a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError11ActivateKeyEv">[1]</a>
+</li>
+      <li><a href="csharp/public/face_pad.html#_CPPv4N19PhonyNameDueToError8ClassifyE10ImageBatch">PhonyNameDueToError::Classify (C++ function)</a>, <a href="csharp/public/face_pad.html#_CPPv4N19PhonyNameDueToError8ClassifyE5Image">[1]</a>
 </li>
       <li><a href="csharp/public/utils.html#_CPPv4N19PhonyNameDueToError21CropAlignFaceLandmarkE5Image9Landmark5">PhonyNameDueToError::CropAlignFaceLandmark (C++ function)</a>
 </li>
@@ -1084,9 +1376,13 @@
 </li>
       <li><a href="csharp/public/face_id.html#_CPPv4N19PhonyNameDueToError6FaceIdE12FaceEmbedder14LicenseManager">PhonyNameDueToError::FaceId (C++ function)</a>, <a href="csharp/public/face_id.html#_CPPv4N19PhonyNameDueToError6FaceIdE14LicenseManager">[1]</a>
 </li>
+      <li><a href="csharp/public/face_pad.html#_CPPv4N19PhonyNameDueToError7FacePadE7PadType14LicenseManager">PhonyNameDueToError::FacePad (C++ function)</a>
+</li>
       <li><a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError23GetActivationExpiryDateEv">PhonyNameDueToError::GetActivationExpiryDate (C++ function)</a>, <a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError23GetActivationExpiryDateEv">[1]</a>
 </li>
       <li><a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError17GetActivationTypeEv">PhonyNameDueToError::GetActivationType (C++ function)</a>, <a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError17GetActivationTypeEv">[1]</a>
+</li>
+      <li><a href="csharp/common/alpr_struct.html#_CPPv4N19PhonyNameDueToError6GetApiEv">PhonyNameDueToError::GetApi (C++ function)</a>, <a href="csharp/common/face_struct.html#_CPPv4N19PhonyNameDueToError6GetApiEv">[1]</a>
 </li>
       <li><a href="csharp/public/face_detector.html#_CPPv4N19PhonyNameDueToError9GetBBoxesEv">PhonyNameDueToError::GetBBoxes (C++ function)</a>, <a href="csharp/public/vehicle_detector.html#_CPPv4N19PhonyNameDueToError9GetBBoxesEv">[1]</a>
 </li>
@@ -1106,16 +1402,18 @@
 </li>
       <li><a href="csharp/public/face_detector.html#_CPPv4N19PhonyNameDueToError8GetPosesEv">PhonyNameDueToError::GetPoses (C++ function)</a>
 </li>
-      <li><a href="csharp/public/face_detector.html#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">PhonyNameDueToError::GetReturnStatus (C++ function)</a>, <a href="csharp/public/face_embedder.html#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">[1]</a>, <a href="csharp/public/face_id.html#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">[2]</a>, <a href="csharp/public/vehicle_detector.html#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">[3]</a>
+      <li><a href="csharp/public/face_detector.html#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">PhonyNameDueToError::GetReturnStatus (C++ function)</a>, <a href="csharp/public/face_embedder.html#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">[1]</a>, <a href="csharp/public/face_id.html#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">[2]</a>, <a href="csharp/public/face_pad.html#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">[3]</a>, <a href="csharp/public/vehicle_detector.html#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">[4]</a>
 </li>
       <li><a href="csharp/public/face_detector.html#_CPPv4N19PhonyNameDueToError9GetScoresEv">PhonyNameDueToError::GetScores (C++ function)</a>, <a href="csharp/public/vehicle_detector.html#_CPPv4N19PhonyNameDueToError9GetScoresEv">[1]</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="csharp/public/face_detector.html#_CPPv4N19PhonyNameDueToError8GetUsageEv">PhonyNameDueToError::GetUsage (C++ function)</a>, <a href="csharp/public/face_embedder.html#_CPPv4N19PhonyNameDueToError8GetUsageEv">[1]</a>, <a href="csharp/public/face_id.html#_CPPv4N19PhonyNameDueToError8GetUsageEv">[2]</a>, <a href="csharp/public/face_pad.html#_CPPv4N19PhonyNameDueToError8GetUsageEv">[3]</a>, <a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError8GetUsageEv">[4]</a>, <a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError8GetUsageEv">[5]</a>, <a href="csharp/public/utils.html#_CPPv4N19PhonyNameDueToError8GetUsageEv">[6]</a>, <a href="csharp/public/utils.html#_CPPv4N19PhonyNameDueToError8GetUsageEv">[7]</a>, <a href="csharp/public/vehicle_detector.html#_CPPv4N19PhonyNameDueToError8GetUsageEv">[8]</a>
 </li>
       <li><a href="csharp/common/alpr_struct.html#_CPPv4N19PhonyNameDueToError8GetWidthEv">PhonyNameDueToError::GetWidth (C++ function)</a>, <a href="csharp/common/face_struct.html#_CPPv4N19PhonyNameDueToError8GetWidthEv">[1]</a>
 </li>
       <li><a href="csharp/public/face_id.html#_CPPv4N19PhonyNameDueToError15IsTheSamePersonE5Image5Image">PhonyNameDueToError::IsTheSamePerson (C++ function)</a>, <a href="csharp/public/face_id.html#_CPPv4N19PhonyNameDueToError15IsTheSamePersonE9Embedding5Image">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError7IsTrialEv">PhonyNameDueToError::IsTrial (C++ function)</a>, <a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError7IsTrialEv">[1]</a>
 </li>
       <li><a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError17IsValidActivationEv">PhonyNameDueToError::IsValidActivation (C++ function)</a>, <a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError17IsValidActivationEv">[1]</a>
@@ -1137,6 +1435,10 @@
       <li><a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError14SetMachineCodeE6string">PhonyNameDueToError::SetMachineCode (C++ function)</a>, <a href="csharp/public/license_manager.html#_CPPv4N19PhonyNameDueToError14SetMachineCodeE6string">[1]</a>
 </li>
       <li><a href="csharp/common/alpr_struct.html#_CPPv4N19PhonyNameDueToError8SetWidthE6ushort">PhonyNameDueToError::SetWidth (C++ function)</a>, <a href="csharp/common/face_struct.html#_CPPv4N19PhonyNameDueToError8SetWidthE6ushort">[1]</a>
+</li>
+      <li><a href="csharp/common/alpr_struct.html#_CPPv4N19PhonyNameDueToError6ToFileE6string">PhonyNameDueToError::ToFile (C++ function)</a>, <a href="csharp/common/face_struct.html#_CPPv4N19PhonyNameDueToError6ToFileE6string">[1]</a>
+</li>
+      <li><a href="csharp/common/alpr_struct.html#_CPPv4N19PhonyNameDueToError5ToLogEv">PhonyNameDueToError::ToLog (C++ function)</a>, <a href="csharp/common/face_struct.html#_CPPv4N19PhonyNameDueToError5ToLogEv">[1]</a>
 </li>
       <li><a href="csharp/public/utils.html#_CPPv4N19PhonyNameDueToError5UtilsE14LicenseManager">PhonyNameDueToError::Utils (C++ function)</a>, <a href="csharp/public/utils.html#_CPPv4N19PhonyNameDueToError5UtilsE14LicenseManager">[1]</a>
 </li>
@@ -1178,7 +1480,7 @@
     read_image_cv()
 
       <ul>
-        <li><a href="python/public/utils.html#id1">built-in function</a>, <a href="python/public/utils.html#read_image_cv">[1]</a>
+        <li><a href="python/public/utils.html#id2">built-in function</a>, <a href="python/public/utils.html#read_image_cv">[1]</a>
 </li>
       </ul></li>
       <li>
@@ -1231,6 +1533,28 @@
 
       <ul>
         <li><a href="python/public/license_manager.html#id2">built-in function</a>, <a href="python/public/license_manager.html#set_machine_code">[1]</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    to_file()
+
+      <ul>
+        <li><a href="python/common/alpr_struct.html#to_file">built-in function</a>, <a href="python/common/face_struct.html#to_file">[1]</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    to_log()
+
+      <ul>
+        <li><a href="python/common/alpr_struct.html#to_log">built-in function</a>, <a href="python/common/face_struct.html#to_log">[1]</a>
 </li>
       </ul></li>
   </ul></td>

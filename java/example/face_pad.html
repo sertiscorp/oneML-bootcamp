@@ -63,6 +63,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -98,10 +102,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
 </ul>
 <p><span class="caption-text">Java Documentation</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Java APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#java-data-structures">Java Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#java-examples">Java Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#java-examples">Java Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">Java Face Detector Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">Java Face Embedder Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">Java Face Id Example</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Java Face Pad Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#java-padrgb-example">Java PadRGB Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#java-padpaper-example">Java PadPaper Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">Java Vehicle Detector Example</a></li>
+</ul>
+</li>
 </ul>
 <p><span class="caption-text">C# Documentation</span></p>
 <ul>
@@ -179,6 +194,100 @@
             
   <section id="java-face-pad-example-1">
 <span id="java-face-pad-example"></span><h1>Java Face Pad Example<a class="headerlink" href="#java-face-pad-example-1" title="Permalink to this headline">¶</a></h1>
+<section id="java-padrgb-example">
+<h2>Java PadRGB Example<a class="headerlink" href="#java-padrgb-example" title="Permalink to this headline">¶</a></h2>
+<p>Initialize pad RGB model</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
+<span class="n">FacePad</span><span class="w"> </span><span class="n">padRgb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="na">Rgb</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize face detector model with licensing</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
+<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span><span class="w"></span>
+<span class="n">FacePad</span><span class="w"> </span><span class="n">padRgb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="na">Rgb</span><span class="p">,</span><span class="w"> </span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize oneML’s Utils</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize oneML’s Utils with licensing</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Read input as BufferedImage</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">img1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">imagePath</span><span class="p">);</span><span class="w"></span>
+<span class="n">ImageBatch</span><span class="w"> </span><span class="n">batch1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ImageBatch</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="n">img1</span><span class="p">).</span><span class="na">add</span><span class="p">(</span><span class="n">img1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Read input as oneML’s Image</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">img1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="na">readImageCV</span><span class="p">(</span><span class="n">filePath1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Run the model</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FacePadResultList</span><span class="w"> </span><span class="n">rgbResults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">padRgb</span><span class="p">.</span><span class="na">classify</span><span class="p">(</span><span class="n">batch1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FacePadResult</span><span class="w"> </span><span class="n">rgbResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">padRgb</span><span class="p">.</span><span class="na">classify</span><span class="p">(</span><span class="n">img1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">spoofProb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getSpoofProb</span><span class="p">();</span><span class="w"></span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isSpoof</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">isSpoof</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="java-padpaper-example">
+<h2>Java PadPaper Example<a class="headerlink" href="#java-padpaper-example" title="Permalink to this headline">¶</a></h2>
+<p>Initialize pad paper model</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
+<span class="n">FacePad</span><span class="w"> </span><span class="n">padPaper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="na">Paper</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize pad paper model with licensing</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
+<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span><span class="w"></span>
+<span class="n">FacePad</span><span class="w"> </span><span class="n">padRgb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="na">Paper</span><span class="p">,</span><span class="w"> </span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize oneML’s Utils</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Initialize oneML’s Utils with licensing</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Read input as BufferedImage</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">img2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">imagePath</span><span class="p">);</span><span class="w"></span>
+<span class="n">ImageBatch</span><span class="w"> </span><span class="n">batch2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ImageBatch</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="n">img2</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Read input as oneML’s Image</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">img2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="na">readImageCV</span><span class="p">(</span><span class="n">filePath2</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Run the model</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FacePadResultList</span><span class="w"> </span><span class="n">paperResults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">padPaper</span><span class="p">.</span><span class="na">classify</span><span class="p">(</span><span class="n">batch2</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FacePadResult</span><span class="w"> </span><span class="n">paperResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">padPaper</span><span class="p">.</span><span class="na">classify</span><span class="p">(</span><span class="n">img2</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>And get the output</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">spoofProb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getSpoofProb</span><span class="p">();</span><span class="w"></span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">isSpoof</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">isSpoof</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
 </section>
 
 

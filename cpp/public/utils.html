@@ -63,6 +63,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -91,6 +95,8 @@
 <li class="toctree-l2"><a class="reference internal" href="face_detector.html">C++ Face Detector API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_embedder.html">C++ Face Embedder API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_id.html">C++ Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_pad.html">C++ Face Pad API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ekyc.html">C++ EKYC API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C++ Vehicle Detector API</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">C++ Utils API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="license_manager.html">C++ License Manager API</a></li>
@@ -201,7 +207,7 @@
 <dd><p>Construct a <a class="reference internal" href="#classone_m_l_1_1_utils"><span class="std std-ref">Utils</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: Licensemanager instance </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: <a class="reference internal" href="license_manager.html#classone_m_l_1_1_license_manager"><span class="std std-ref">LicenseManager</span></a> instance </p></li>
 </ul>
 </dd>
 </dl>
@@ -211,14 +217,25 @@
 <dl class="cpp function">
 <dt id="_CPPv4N5oneML5Utils13read_image_cvERKNSt6stringER5Image">
 <span id="_CPPv3N5oneML5Utils13read_image_cvERKNSt6stringER5Image"></span><span id="_CPPv2N5oneML5Utils13read_image_cvERKNSt6stringER5Image"></span><span id="oneML::Utils::read_image_cv__ssCR.ImageR"></span><span class="target" id="classone_m_l_1_1_utils_1ab7840595ec3206a2b8bb3d9d6f943afe"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML12ReturnStatusE" title="oneML::ReturnStatus">ReturnStatus</a> <code class="sig-name descname">read_image_cv</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>file</em>, <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML5ImageE" title="oneML::Image">Image</a> &amp;<em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML5Utils13read_image_cvERKNSt6stringER5Image" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Reads a file into an <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_image"><span class="std std-ref">Image</span></a> object using openCV. </p>
+<dd><p>Reads a file into an <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_image"><span class="std std-ref">Image</span></a> object using openCV. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: return ParseError if anything go worng </p>
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: return ParseError if anything go worng </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">file</span></code>: path of <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_image"><span class="std std-ref">Image</span></a> </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">image</span></code>: <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_image"><span class="std std-ref">Image</span></a> class </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">file</span></code>: path of <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_image"><span class="std std-ref">Image</span></a> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">image</span></code>: <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_image"><span class="std std-ref">Image</span></a> class </p></li>
 </ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK5oneML5Utils9get_usageEv">
+<span id="_CPPv3NK5oneML5Utils9get_usageEv"></span><span id="_CPPv2NK5oneML5Utils9get_usageEv"></span><span id="oneML::Utils::get_usageC"></span><span class="target" id="classone_m_l_1_1_utils_1a756bae3d4551024507db528fd9a9218c"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML11UsageReportE" title="oneML::UsageReport">UsageReport</a> <code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML5Utils9get_usageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> object. </p>
 </dd>
 </dl>
 </p>
@@ -237,10 +254,10 @@
 </ol>
 </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: return ParseError if anything go wrong </p>
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a>: return ParseError if anything go wrong </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code>: <a class="reference internal" href="../common/face_struct.html#structone_m_l_1_1_image"><span class="std std-ref">Image</span></a> object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code>: <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_image"><span class="std std-ref">Image</span></a> object </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">landmarks</span></code>: landmarks from face detector outputs </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">align_face</span></code>: Cropped and aligned face in 112x112 px (default size). </p></li>
 </ul>

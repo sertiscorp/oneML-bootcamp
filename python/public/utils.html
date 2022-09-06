@@ -63,6 +63,10 @@
           
             
             
+              <div class="version">
+                v3.7.0
+              </div>
+            
           
 
           
@@ -97,6 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="face_detector.html">Python Face Detector API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_embedder.html">Python Face Embedder API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_id.html">Python Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_pad.html">Python Face Pad API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">Python Vehicle Detector</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Python Utils API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="license_manager.html">Python License Manager API</a></li>
@@ -212,6 +217,17 @@
 </dd></dl>
 
 <dl class="py function">
+<dt id="get_usage">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_utils_1abf9fc729413d627b73a0f3b8ddadac42"></span><code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_usage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a report of the usage. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1face_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>: report object </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
 <dt id="crop_align_face_landmark">
 <span class="target" id="classone_m_l_1_1face_a_p_i_1_1_utils_1ae7e3a349c76450fd0b6561dff68a88b3"></span><code class="sig-name descname">crop_align_face_landmark</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em>, <em class="sig-param"><span class="n">landmark_in</span></em><span class="sig-paren">)</span><a class="headerlink" href="#crop_align_face_landmark" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create align image from original image and landmark. </p>
@@ -270,7 +286,18 @@
 
 <dl class="py function">
 <dt id="id1">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_utils_1a7cc59da2b2a4699ff16981af25258dfb"></span><code class="sig-name descname">read_image_cv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">img_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_utils_1acf947af0ec32fd40c76b4649e329b9fb"></span><code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a report of the usage. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/alpr_struct.html#classone_m_l_1_1alpr_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>: report object </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id2">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_utils_1a7cc59da2b2a4699ff16981af25258dfb"></span><code class="sig-name descname">read_image_cv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">img_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read image file with specific path. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>numpy array: image </p>
