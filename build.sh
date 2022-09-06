@@ -108,7 +108,7 @@ then
 fi
 
 # artifacts
-TAG=v0.8.0
+TAG=v0.9.0
 BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/${TAG}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
 if [ ! -f "$BINARY_PATH/oneml-bootcamp-${TARGET_ARCH}.tar.gz" ];
 then
@@ -193,7 +193,7 @@ then
   cd ${ROOT_DIR}
   mkdir -p apps/java/classes && cd apps/java
   CLASSPATH=${ROOT_DIR}/apps/java/classes:${BINARY_PATH}/bindings/java/face/oneml/oneml-face-api.jar:${BINARY_PATH}/bindings/java/alpr/oneml/oneml-alpr-api.jar:${ROOT_DIR}/apps/java
-  APPS=FaceEmbedderApp,FaceIdApp,FaceDetectorApp,FaceVerificationApp,VehicleDetectorApp
+  APPS=FaceEmbedderApp,FaceIdApp,FaceDetectorApp,FaceVerificationApp,FacePadApp,VehicleDetectorApp
   for APP in ${APPS//,/ };
   do
     javac -cp ${CLASSPATH} -d classes ${APP}.java
@@ -226,7 +226,7 @@ then
   # Build all apps
   cd ${ROOT_DIR}/apps/golang
   go mod edit -replace oneml=../../assets/binaries/${TARGET_ARCH}/bindings/go
-  APPS=face_detector,face_embedder,face_id,face_verification,vehicle_detector,utils_app
+  APPS=face_detector,face_embedder,face_id,face_verification,face_pad,vehicle_detector,utils_app
   for APP in ${APPS//,/ };
   do
     go build ${APP}.go

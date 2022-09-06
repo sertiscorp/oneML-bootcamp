@@ -41,4 +41,7 @@ int main() {
       std::cout << bboxes[i] << std::endl;
     }
   }
+
+  oneML::UsageReport report = detector.get_usage();
+  report.to_log();
 }

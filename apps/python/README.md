@@ -8,5 +8,5 @@ you can simply run these applications by:
 
 ```bash
 cd apps/python
-python <app_name>.py
+python3 <app_name>.py
 ```

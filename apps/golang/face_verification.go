@@ -65,4 +65,10 @@ func main() {
 
 	isSame = faceId.IsTheSamePersonImg(img3, img4)
 	fmt.Println("Is the same person (george_robertson):", utility.BoolToInt(isSame))
+
+	report := faceDetector.GetUsage()
+	report.ToLog()
+
+	report = faceId.GetUsage()
+	report.ToLog()
 }

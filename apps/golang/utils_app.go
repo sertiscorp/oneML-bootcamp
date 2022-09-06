@@ -33,4 +33,7 @@ func main() {
 		fmt.Printf("Cropped face: i=%d\n", i)
 		fmt.Printf("cropImage: %T\n", cropImage)
 	}
+
+	report := oneMLUtils.GetUsage()
+	report.ToLog()
 }

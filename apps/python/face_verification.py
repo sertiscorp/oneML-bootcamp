@@ -87,6 +87,12 @@ def main():
     is_same = face_id.is_the_same_person_img(img3, img4)
     print("Is the same person (george_robertson): " + str(int(is_same)))
 
+    report = detector.get_usage()
+    report.to_log()
+
+    report = face_id.get_usage()
+    report.to_log()
+
 
 if __name__ == "__main__":
     main()

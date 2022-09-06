@@ -38,5 +38,8 @@ class FaceEmbedderApp {
         FaceEmbedderResult result2 = embedder.Embed(img, true);
         Console.WriteLine("Flipped Image Embedding");
         PrintEmbedding(result2);
+
+        UsageReport report = embedder.GetUsage();
+        report.ToLog();
     }
 }
