@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.9.0] - 2022-09-06
 ### Added
-- support for C#/.NET -> [05bda49c](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/05bda49c69d4df098bc69aa035a3bf6d1d0a9fb1)
+- FacePad apps and EKYC app for C++ -> [dd6fbf68](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/dd6fbf686a6caf57316c5742f86c212bfbb3a778)
 
 ## [0.8.0] - 2022-07-12
 ### Added
