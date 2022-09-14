@@ -34,5 +34,8 @@ public class VehicleDetectorApp {
 
         UsageReport report = detector.getUsage();
         report.toLog();
+
+        detector.delete();
+        utils.delete();
     }
 }

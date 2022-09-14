@@ -96,6 +96,14 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
 
   @Override
+  protected void onDestroy() {
+      super.onDestroy();
+      faceDetector.delete();
+      faceId.delete();
+      utils.delete();
+  }
+  
+  @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 

@@ -25,21 +25,22 @@ class FaceEmbedderApp {
         LicenseManager manager = new LicenseManager();
         manager.ActivateTrial();
 
-        FaceEmbedder embedder = new FaceEmbedder(manager);
-        Utils utils = new Utils(manager);
+        using (FaceEmbedder embedder = new FaceEmbedder(manager))
+        using (Utils utils = new Utils(manager))
+        {
+            string basePath = @"../../assets/images/";
+            string path = basePath + @"register-set/Colin_Powell/colin_powell_0074.jpg";
+            Image img = utils.ReadImageCV(path);
+            FaceEmbedderResult result1 = embedder.Embed(img);
+            Console.WriteLine("Original Embedding");
+            PrintEmbedding(result1);
 
-        string basePath = @"../../assets/images/";
-        string path = basePath + @"register-set/Colin_Powell/colin_powell_0074.jpg";
-        Image img = utils.ReadImageCV(path);
-        FaceEmbedderResult result1 = embedder.Embed(img);
-        Console.WriteLine("Original Embedding");
-        PrintEmbedding(result1);
+            FaceEmbedderResult result2 = embedder.Embed(img, true);
+            Console.WriteLine("Flipped Image Embedding");
+            PrintEmbedding(result2);
 
-        FaceEmbedderResult result2 = embedder.Embed(img, true);
-        Console.WriteLine("Flipped Image Embedding");
-        PrintEmbedding(result2);
-
-        UsageReport report = embedder.GetUsage();
-        report.ToLog();
+            UsageReport report = embedder.GetUsage();
+            report.ToLog();
+        }
     }
 }

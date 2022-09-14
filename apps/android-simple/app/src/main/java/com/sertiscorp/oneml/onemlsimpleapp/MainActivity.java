@@ -45,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
     static final int PREDICT_IMAGE = 2;  // The request code
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        faceDetector.delete();
+        faceEmbedder.delete();
+        faceId.delete();
+        utils.delete();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

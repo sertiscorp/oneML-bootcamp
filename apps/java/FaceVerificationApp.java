@@ -74,5 +74,10 @@ public class FaceVerificationApp {
 
         report = faceId.getUsage();
         report.toLog();
+
+        detector.delete();
+        embedder.delete();
+        faceId.delete();
+        utils.delete();
     }
 }

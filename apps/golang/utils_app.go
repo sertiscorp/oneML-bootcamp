@@ -19,6 +19,7 @@ func main() {
 	licenseManager.ActivateTrial()
 
 	oneMLUtils := face.NewUtils(licenseManager)
+	defer face.DeleteUtils(oneMLUtils)
 	image := oneMLUtils.ReadImageCV(filePath)
 
 	// Remove these lines if CropAlignFaceLandmark is not available.
