@@ -27,7 +27,7 @@ android {
         applicationId "org.sertiscorp.oneml.onemlcamera"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 8
+        versionCode 9
         versionName "v0.9.0"
 
         ndk {

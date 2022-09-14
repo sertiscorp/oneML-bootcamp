@@ -18,6 +18,9 @@ func main() {
 	oneMLUtils := face.NewUtils(licenseManager)
 	padRgb := face.NewFacePad(face.PadType_Rgb, licenseManager)
 	padPaper := face.NewFacePad(face.PadType_Paper, licenseManager)
+	defer face.DeleteUtils(oneMLUtils)
+	defer face.DeleteFacePad(padPaper)
+	defer face.DeleteFacePad(padRgb)
 
 	// PAD RGB
 	// load Image

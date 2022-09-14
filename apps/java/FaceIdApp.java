@@ -105,5 +105,9 @@ public class FaceIdApp {
 
         UsageReport report = faceId.getUsage();
         report.toLog();
+
+        embedder.delete();
+        faceId.delete();
+        utils.delete();
     }
 }

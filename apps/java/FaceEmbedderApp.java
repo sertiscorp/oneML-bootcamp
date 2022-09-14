@@ -46,5 +46,8 @@ public class FaceEmbedderApp {
 
         UsageReport report = embedder.getUsage();
         report.toLog();
+
+        embedder.delete();
+        utils.delete();
     }
 }

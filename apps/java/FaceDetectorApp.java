@@ -42,5 +42,8 @@ public class FaceDetectorApp {
 
         UsageReport report = detector.getUsage();
         report.toLog();
+
+        detector.delete();
+        utils.delete();
     }
 }
