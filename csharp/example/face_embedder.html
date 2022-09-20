@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.7.0
+                v3.8.0
               </div>
             
           
@@ -119,6 +119,10 @@
 <li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C# Vehicle Detector Example</a></li>
 </ul>
 </li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
 </ul>
 
             
@@ -212,11 +216,9 @@
 </pre></div>
 </div>
 <p>Read input as oneML’s Image</p>
-<blockquote>
-<div><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="n">ReadImageCV</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="n">ReadImageCV</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</div></blockquote>
 <p>Run the model</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">FaceEmbedderResultList</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">embedder</span><span class="p">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">batch</span><span class="p">);</span><span class="w"></span>
 </pre></div>
@@ -232,6 +234,19 @@
 <p>And get the output</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Embedding</span><span class="w"> </span><span class="n">emb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">GetEmbedding</span><span class="p">();</span><span class="w"></span>
 <span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">GetReturnStatus</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Cleanup</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">embedder</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span><span class="w"></span>
+<span class="n">utils</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or wrap the application with</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">FaceEmbedder</span><span class="w"> </span><span class="n">embedder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceEmbedder</span><span class="p">())</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">())</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="c1">// use embedder, utils here</span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -250,7 +265,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
 
     </p>
   </div>

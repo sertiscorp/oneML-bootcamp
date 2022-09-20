@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.7.0
+                v3.8.0
               </div>
             
           
@@ -112,6 +112,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html">C# APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-data-structures">C# Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-examples">C# Examples</a></li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
 </ul>
 
             
@@ -192,10 +196,55 @@
 <p class="admonition-title">Warning</p>
 <p>doxygenclass: Cannot find class “oneML::face::ChallengeResponseResult” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
 </aside>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenenum: Cannot find enum “oneML::face::ChallengeResponseStatus” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
-</aside>
+<dl class="cpp enum">
+<dt id="_CPPv4N5oneML4face23ChallengeResponseStatusE">
+<span id="_CPPv3N5oneML4face23ChallengeResponseStatusE"></span><span id="_CPPv2N5oneML4face23ChallengeResponseStatusE"></span><span class="target" id="oneml__challenge__response__codes_8h_1ab592fa73d7caaf39e598cd87d8d5e593"></span><em class="property">enum </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">ChallengeResponseStatus</code><a class="headerlink" href="#_CPPv4N5oneML4face23ChallengeResponseStatusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A ChallengeResponseStatus enum to use as return status. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face23ChallengeResponseStatus5EmptyE">
+<span id="_CPPv3N5oneML4face23ChallengeResponseStatus5EmptyE"></span><span id="_CPPv2N5oneML4face23ChallengeResponseStatus5EmptyE"></span><span class="target" id="oneml__challenge__response__codes_8h_1ab592fa73d7caaf39e598cd87d8d5e593ace2c8aed9c2fa0cfbed56cbda4d8bf07"></span><em class="property">enumerator </em><code class="sig-name descname">Empty</code><a class="headerlink" href="#_CPPv4N5oneML4face23ChallengeResponseStatus5EmptyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default return status. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face23ChallengeResponseStatus7SuccessE">
+<span id="_CPPv3N5oneML4face23ChallengeResponseStatus7SuccessE"></span><span id="_CPPv2N5oneML4face23ChallengeResponseStatus7SuccessE"></span><span class="target" id="oneml__challenge__response__codes_8h_1ab592fa73d7caaf39e598cd87d8d5e593a505a83f220c02df2f85c3810cd9ceb38"></span><em class="property">enumerator </em><code class="sig-name descname">Success</code><a class="headerlink" href="#_CPPv4N5oneML4face23ChallengeResponseStatus7SuccessE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Success. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face23ChallengeResponseStatus14FaceDetectFailE">
+<span id="_CPPv3N5oneML4face23ChallengeResponseStatus14FaceDetectFailE"></span><span id="_CPPv2N5oneML4face23ChallengeResponseStatus14FaceDetectFailE"></span><span class="target" id="oneml__challenge__response__codes_8h_1ab592fa73d7caaf39e598cd87d8d5e593a8166f235adce199b1c4d188ef1e21c7d"></span><em class="property">enumerator </em><code class="sig-name descname">FaceDetectFail</code><a class="headerlink" href="#_CPPv4N5oneML4face23ChallengeResponseStatus14FaceDetectFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Cannot detect faces. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face23ChallengeResponseStatus8BlurFailE">
+<span id="_CPPv3N5oneML4face23ChallengeResponseStatus8BlurFailE"></span><span id="_CPPv2N5oneML4face23ChallengeResponseStatus8BlurFailE"></span><span class="target" id="oneml__challenge__response__codes_8h_1ab592fa73d7caaf39e598cd87d8d5e593a51d4b4e4b5159c6b60ac24669c626b3e"></span><em class="property">enumerator </em><code class="sig-name descname">BlurFail</code><a class="headerlink" href="#_CPPv4N5oneML4face23ChallengeResponseStatus8BlurFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Blur image and don’t have best frame. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face23ChallengeResponseStatus8PoseFailE">
+<span id="_CPPv3N5oneML4face23ChallengeResponseStatus8PoseFailE"></span><span id="_CPPv2N5oneML4face23ChallengeResponseStatus8PoseFailE"></span><span class="target" id="oneml__challenge__response__codes_8h_1ab592fa73d7caaf39e598cd87d8d5e593a07ab1e0f805b0a6d6ae65ecbc0e54187"></span><em class="property">enumerator </em><code class="sig-name descname">PoseFail</code><a class="headerlink" href="#_CPPv4N5oneML4face23ChallengeResponseStatus8PoseFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bad pose and don’t have best frame. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face23ChallengeResponseStatus12BlurPoseFailE">
+<span id="_CPPv3N5oneML4face23ChallengeResponseStatus12BlurPoseFailE"></span><span id="_CPPv2N5oneML4face23ChallengeResponseStatus12BlurPoseFailE"></span><span class="target" id="oneml__challenge__response__codes_8h_1ab592fa73d7caaf39e598cd87d8d5e593a2ac7878b5fe2a01ea8ff3380b0722ed4"></span><em class="property">enumerator </em><code class="sig-name descname">BlurPoseFail</code><a class="headerlink" href="#_CPPv4N5oneML4face23ChallengeResponseStatus12BlurPoseFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Blur image with bad pose and don’t have best frame. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face23ChallengeResponseStatus9BlinkFailE">
+<span id="_CPPv3N5oneML4face23ChallengeResponseStatus9BlinkFailE"></span><span id="_CPPv2N5oneML4face23ChallengeResponseStatus9BlinkFailE"></span><span class="target" id="oneml__challenge__response__codes_8h_1ab592fa73d7caaf39e598cd87d8d5e593a5c1b96c7d7995cc90ba3832abd577ee1"></span><em class="property">enumerator </em><code class="sig-name descname">BlinkFail</code><a class="headerlink" href="#_CPPv4N5oneML4face23ChallengeResponseStatus9BlinkFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Confidence value less than threshold. </p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
@@ -212,7 +261,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
 
     </p>
   </div>

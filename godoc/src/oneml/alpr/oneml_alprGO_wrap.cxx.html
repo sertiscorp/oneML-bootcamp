@@ -420,15 +420,15 @@
 <span id="L364" class="ln">   364</span>                    throw std::out_of_range(&#34;vector index out of range&#34;);
 <span id="L365" class="ln">   365</span>            }
 <span id="L366" class="ln">   366</span>SWIGINTERN std::vector&lt; float &gt; oneML_alpr_VehicleDetectorResult_go_get_scores(oneML::alpr::VehicleDetectorResult *self){
-<span id="L367" class="ln">   367</span>        std::vector&lt;float&gt; scores;
-<span id="L368" class="ln">   368</span>        self-&gt;get_scores(scores);
-<span id="L369" class="ln">   369</span>        return scores;
-<span id="L370" class="ln">   370</span>    }
+<span id="L367" class="ln">   367</span>    std::vector&lt;float&gt; scores;
+<span id="L368" class="ln">   368</span>    self-&gt;get_scores(scores);
+<span id="L369" class="ln">   369</span>    return scores;
+<span id="L370" class="ln">   370</span>  }
 <span id="L371" class="ln">   371</span>SWIGINTERN std::vector&lt; oneML::BBox &gt; oneML_alpr_VehicleDetectorResult_go_get_bboxes(oneML::alpr::VehicleDetectorResult *self){
-<span id="L372" class="ln">   372</span>        std::vector&lt;oneML::BBox&gt; bboxes;
-<span id="L373" class="ln">   373</span>        self-&gt;get_bboxes(bboxes);
-<span id="L374" class="ln">   374</span>        return bboxes;
-<span id="L375" class="ln">   375</span>    }
+<span id="L372" class="ln">   372</span>    std::vector&lt;oneML::BBox&gt; bboxes;
+<span id="L373" class="ln">   373</span>    self-&gt;get_bboxes(bboxes);
+<span id="L374" class="ln">   374</span>    return bboxes;
+<span id="L375" class="ln">   375</span>  }
 <span id="L376" class="ln">   376</span>SWIGINTERN std::vector&lt; int &gt; oneML_alpr_VehicleDetectorResult_go_get_return_status(oneML::alpr::VehicleDetectorResult *self){
 <span id="L377" class="ln">   377</span>    std::vector&lt;oneML::alpr::VehicleDetectorStatus&gt; v = self-&gt;get_return_status();
 <span id="L378" class="ln">   378</span>
@@ -440,15 +440,15 @@
 <span id="L384" class="ln">   384</span>    return statuses;
 <span id="L385" class="ln">   385</span>  }
 <span id="L386" class="ln">   386</span>SWIGINTERN oneML::alpr::VehicleDetectorResult oneML_alpr_VehicleDetector_go_detect(oneML::alpr::VehicleDetector *self,oneML::Image const &amp;img){
-<span id="L387" class="ln">   387</span>        oneML::alpr::VehicleDetectorResult result;
-<span id="L388" class="ln">   388</span>        self-&gt;detect(img, result);
-<span id="L389" class="ln">   389</span>        return result;
-<span id="L390" class="ln">   390</span>    }
+<span id="L387" class="ln">   387</span>    oneML::alpr::VehicleDetectorResult result;
+<span id="L388" class="ln">   388</span>    self-&gt;detect(img, result);
+<span id="L389" class="ln">   389</span>    return result;
+<span id="L390" class="ln">   390</span>  }
 <span id="L391" class="ln">   391</span>SWIGINTERN std::vector&lt; oneML::alpr::VehicleDetectorResult &gt; oneML_alpr_VehicleDetector_go_detect_batch(oneML::alpr::VehicleDetector *self,std::vector&lt; oneML::Image &gt; const &amp;imgs){
-<span id="L392" class="ln">   392</span>        std::vector&lt;oneML::alpr::VehicleDetectorResult&gt; results;
-<span id="L393" class="ln">   393</span>        self-&gt;detect(imgs, results);
-<span id="L394" class="ln">   394</span>        return results;
-<span id="L395" class="ln">   395</span>    }
+<span id="L392" class="ln">   392</span>    std::vector&lt;oneML::alpr::VehicleDetectorResult&gt; results;
+<span id="L393" class="ln">   393</span>    self-&gt;detect(imgs, results);
+<span id="L394" class="ln">   394</span>    return results;
+<span id="L395" class="ln">   395</span>  }
 <span id="L396" class="ln">   396</span>
 <span id="L397" class="ln">   397</span>#include &#34;oneml/public/oneml_utils_API.h&#34;
 <span id="L398" class="ln">   398</span>
@@ -3118,102 +3118,102 @@
 <span id="L3062" class="ln">  3062</span>}
 <span id="L3063" class="ln">  3063</span>
 <span id="L3064" class="ln">  3064</span>
-<span id="L3065" class="ln">  3065</span>intgo _wrap_VehicleDetectorStatus_Empty_alpr_7074c9342a7bdf4a() {
-<span id="L3066" class="ln">  3066</span>  oneML::alpr::VehicleDetectorStatus result;
-<span id="L3067" class="ln">  3067</span>  intgo _swig_go_result;
+<span id="L3065" class="ln">  3065</span>oneML::alpr::VehicleDetectorResult *_wrap_new_VehicleDetectorResult__SWIG_0_alpr_7074c9342a7bdf4a() {
+<span id="L3066" class="ln">  3066</span>  oneML::alpr::VehicleDetectorResult *result = 0 ;
+<span id="L3067" class="ln">  3067</span>  oneML::alpr::VehicleDetectorResult *_swig_go_result;
 <span id="L3068" class="ln">  3068</span>  
 <span id="L3069" class="ln">  3069</span>  
 <span id="L3070" class="ln">  3070</span>  {
 <span id="L3071" class="ln">  3071</span>    try
 <span id="L3072" class="ln">  3072</span>    {
-<span id="L3073" class="ln">  3073</span>      result = oneML::alpr::VehicleDetectorStatus::Empty;
-<span id="L3074" class="ln">  3074</span>      
-<span id="L3075" class="ln">  3075</span>    }
-<span id="L3076" class="ln">  3076</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3077" class="ln">  3077</span>    {
-<span id="L3078" class="ln">  3078</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3079" class="ln">  3079</span>    }
-<span id="L3080" class="ln">  3080</span>    catch (const std::out_of_range&amp; e)
-<span id="L3081" class="ln">  3081</span>    {
-<span id="L3082" class="ln">  3082</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3083" class="ln">  3083</span>    }
-<span id="L3084" class="ln">  3084</span>    catch(const std::exception&amp; e)
-<span id="L3085" class="ln">  3085</span>    {
-<span id="L3086" class="ln">  3086</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3087" class="ln">  3087</span>    }
-<span id="L3088" class="ln">  3088</span>  }
-<span id="L3089" class="ln">  3089</span>  _swig_go_result = (intgo)result; 
-<span id="L3090" class="ln">  3090</span>  return _swig_go_result;
-<span id="L3091" class="ln">  3091</span>}
+<span id="L3073" class="ln">  3073</span>      result = (oneML::alpr::VehicleDetectorResult *)new oneML::alpr::VehicleDetectorResult();
+<span id="L3074" class="ln">  3074</span>    }
+<span id="L3075" class="ln">  3075</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3076" class="ln">  3076</span>    {
+<span id="L3077" class="ln">  3077</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3078" class="ln">  3078</span>    }
+<span id="L3079" class="ln">  3079</span>    catch (const std::out_of_range&amp; e)
+<span id="L3080" class="ln">  3080</span>    {
+<span id="L3081" class="ln">  3081</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3082" class="ln">  3082</span>    }
+<span id="L3083" class="ln">  3083</span>    catch(const std::exception&amp; e)
+<span id="L3084" class="ln">  3084</span>    {
+<span id="L3085" class="ln">  3085</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3086" class="ln">  3086</span>    }
+<span id="L3087" class="ln">  3087</span>  }
+<span id="L3088" class="ln">  3088</span>  *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_result = (oneML::alpr::VehicleDetectorResult *)result; 
+<span id="L3089" class="ln">  3089</span>  return _swig_go_result;
+<span id="L3090" class="ln">  3090</span>}
+<span id="L3091" class="ln">  3091</span>
 <span id="L3092" class="ln">  3092</span>
-<span id="L3093" class="ln">  3093</span>
-<span id="L3094" class="ln">  3094</span>intgo _wrap_VehicleDetectorStatus_Success_alpr_7074c9342a7bdf4a() {
-<span id="L3095" class="ln">  3095</span>  oneML::alpr::VehicleDetectorStatus result;
-<span id="L3096" class="ln">  3096</span>  intgo _swig_go_result;
+<span id="L3093" class="ln">  3093</span>void _wrap_delete_VehicleDetectorResult_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
+<span id="L3094" class="ln">  3094</span>  oneML::alpr::VehicleDetectorResult *arg1 = (oneML::alpr::VehicleDetectorResult *) 0 ;
+<span id="L3095" class="ln">  3095</span>  
+<span id="L3096" class="ln">  3096</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
 <span id="L3097" class="ln">  3097</span>  
-<span id="L3098" class="ln">  3098</span>  
-<span id="L3099" class="ln">  3099</span>  {
-<span id="L3100" class="ln">  3100</span>    try
-<span id="L3101" class="ln">  3101</span>    {
-<span id="L3102" class="ln">  3102</span>      result = oneML::alpr::VehicleDetectorStatus::Success;
-<span id="L3103" class="ln">  3103</span>      
-<span id="L3104" class="ln">  3104</span>    }
-<span id="L3105" class="ln">  3105</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3106" class="ln">  3106</span>    {
-<span id="L3107" class="ln">  3107</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3108" class="ln">  3108</span>    }
-<span id="L3109" class="ln">  3109</span>    catch (const std::out_of_range&amp; e)
-<span id="L3110" class="ln">  3110</span>    {
-<span id="L3111" class="ln">  3111</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3112" class="ln">  3112</span>    }
-<span id="L3113" class="ln">  3113</span>    catch(const std::exception&amp; e)
-<span id="L3114" class="ln">  3114</span>    {
-<span id="L3115" class="ln">  3115</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3116" class="ln">  3116</span>    }
-<span id="L3117" class="ln">  3117</span>  }
-<span id="L3118" class="ln">  3118</span>  _swig_go_result = (intgo)result; 
-<span id="L3119" class="ln">  3119</span>  return _swig_go_result;
-<span id="L3120" class="ln">  3120</span>}
-<span id="L3121" class="ln">  3121</span>
-<span id="L3122" class="ln">  3122</span>
-<span id="L3123" class="ln">  3123</span>intgo _wrap_VehicleDetectorStatus_Fail_alpr_7074c9342a7bdf4a() {
-<span id="L3124" class="ln">  3124</span>  oneML::alpr::VehicleDetectorStatus result;
-<span id="L3125" class="ln">  3125</span>  intgo _swig_go_result;
+<span id="L3098" class="ln">  3098</span>  {
+<span id="L3099" class="ln">  3099</span>    try
+<span id="L3100" class="ln">  3100</span>    {
+<span id="L3101" class="ln">  3101</span>      delete arg1;
+<span id="L3102" class="ln">  3102</span>    }
+<span id="L3103" class="ln">  3103</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3104" class="ln">  3104</span>    {
+<span id="L3105" class="ln">  3105</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3106" class="ln">  3106</span>    }
+<span id="L3107" class="ln">  3107</span>    catch (const std::out_of_range&amp; e)
+<span id="L3108" class="ln">  3108</span>    {
+<span id="L3109" class="ln">  3109</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3110" class="ln">  3110</span>    }
+<span id="L3111" class="ln">  3111</span>    catch(const std::exception&amp; e)
+<span id="L3112" class="ln">  3112</span>    {
+<span id="L3113" class="ln">  3113</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3114" class="ln">  3114</span>    }
+<span id="L3115" class="ln">  3115</span>  }
+<span id="L3116" class="ln">  3116</span>  
+<span id="L3117" class="ln">  3117</span>}
+<span id="L3118" class="ln">  3118</span>
+<span id="L3119" class="ln">  3119</span>
+<span id="L3120" class="ln">  3120</span>oneML::alpr::VehicleDetectorResult *_wrap_new_VehicleDetectorResult__SWIG_1_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
+<span id="L3121" class="ln">  3121</span>  oneML::alpr::VehicleDetectorResult *arg1 = 0 ;
+<span id="L3122" class="ln">  3122</span>  oneML::alpr::VehicleDetectorResult *result = 0 ;
+<span id="L3123" class="ln">  3123</span>  oneML::alpr::VehicleDetectorResult *_swig_go_result;
+<span id="L3124" class="ln">  3124</span>  
+<span id="L3125" class="ln">  3125</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
 <span id="L3126" class="ln">  3126</span>  
-<span id="L3127" class="ln">  3127</span>  
-<span id="L3128" class="ln">  3128</span>  {
-<span id="L3129" class="ln">  3129</span>    try
-<span id="L3130" class="ln">  3130</span>    {
-<span id="L3131" class="ln">  3131</span>      result = oneML::alpr::VehicleDetectorStatus::Fail;
-<span id="L3132" class="ln">  3132</span>      
-<span id="L3133" class="ln">  3133</span>    }
-<span id="L3134" class="ln">  3134</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3135" class="ln">  3135</span>    {
-<span id="L3136" class="ln">  3136</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3137" class="ln">  3137</span>    }
-<span id="L3138" class="ln">  3138</span>    catch (const std::out_of_range&amp; e)
-<span id="L3139" class="ln">  3139</span>    {
-<span id="L3140" class="ln">  3140</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3141" class="ln">  3141</span>    }
-<span id="L3142" class="ln">  3142</span>    catch(const std::exception&amp; e)
-<span id="L3143" class="ln">  3143</span>    {
-<span id="L3144" class="ln">  3144</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3145" class="ln">  3145</span>    }
-<span id="L3146" class="ln">  3146</span>  }
-<span id="L3147" class="ln">  3147</span>  _swig_go_result = (intgo)result; 
-<span id="L3148" class="ln">  3148</span>  return _swig_go_result;
-<span id="L3149" class="ln">  3149</span>}
-<span id="L3150" class="ln">  3150</span>
-<span id="L3151" class="ln">  3151</span>
-<span id="L3152" class="ln">  3152</span>oneML::alpr::VehicleDetectorResult *_wrap_new_VehicleDetectorResult__SWIG_0_alpr_7074c9342a7bdf4a() {
-<span id="L3153" class="ln">  3153</span>  oneML::alpr::VehicleDetectorResult *result = 0 ;
-<span id="L3154" class="ln">  3154</span>  oneML::alpr::VehicleDetectorResult *_swig_go_result;
-<span id="L3155" class="ln">  3155</span>  
+<span id="L3127" class="ln">  3127</span>  {
+<span id="L3128" class="ln">  3128</span>    try
+<span id="L3129" class="ln">  3129</span>    {
+<span id="L3130" class="ln">  3130</span>      result = (oneML::alpr::VehicleDetectorResult *)new oneML::alpr::VehicleDetectorResult((oneML::alpr::VehicleDetectorResult const &amp;)*arg1);
+<span id="L3131" class="ln">  3131</span>    }
+<span id="L3132" class="ln">  3132</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3133" class="ln">  3133</span>    {
+<span id="L3134" class="ln">  3134</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3135" class="ln">  3135</span>    }
+<span id="L3136" class="ln">  3136</span>    catch (const std::out_of_range&amp; e)
+<span id="L3137" class="ln">  3137</span>    {
+<span id="L3138" class="ln">  3138</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3139" class="ln">  3139</span>    }
+<span id="L3140" class="ln">  3140</span>    catch(const std::exception&amp; e)
+<span id="L3141" class="ln">  3141</span>    {
+<span id="L3142" class="ln">  3142</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3143" class="ln">  3143</span>    }
+<span id="L3144" class="ln">  3144</span>  }
+<span id="L3145" class="ln">  3145</span>  *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_result = (oneML::alpr::VehicleDetectorResult *)result; 
+<span id="L3146" class="ln">  3146</span>  return _swig_go_result;
+<span id="L3147" class="ln">  3147</span>}
+<span id="L3148" class="ln">  3148</span>
+<span id="L3149" class="ln">  3149</span>
+<span id="L3150" class="ln">  3150</span>intgo _wrap_VehicleDetectorResult_GetSize_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
+<span id="L3151" class="ln">  3151</span>  oneML::alpr::VehicleDetectorResult *arg1 = (oneML::alpr::VehicleDetectorResult *) 0 ;
+<span id="L3152" class="ln">  3152</span>  int result;
+<span id="L3153" class="ln">  3153</span>  intgo _swig_go_result;
+<span id="L3154" class="ln">  3154</span>  
+<span id="L3155" class="ln">  3155</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
 <span id="L3156" class="ln">  3156</span>  
 <span id="L3157" class="ln">  3157</span>  {
 <span id="L3158" class="ln">  3158</span>    try
 <span id="L3159" class="ln">  3159</span>    {
-<span id="L3160" class="ln">  3160</span>      result = (oneML::alpr::VehicleDetectorResult *)new oneML::alpr::VehicleDetectorResult();
+<span id="L3160" class="ln">  3160</span>      result = (int)((oneML::alpr::VehicleDetectorResult const *)arg1)-&gt;get_size();
 <span id="L3161" class="ln">  3161</span>    }
 <span id="L3162" class="ln">  3162</span>    catch (const std::invalid_argument&amp; e)
 <span id="L3163" class="ln">  3163</span>    {
@@ -3228,169 +3228,169 @@
 <span id="L3172" class="ln">  3172</span>      SWIG_exception(SWIG_RuntimeError, e.what());
 <span id="L3173" class="ln">  3173</span>    }
 <span id="L3174" class="ln">  3174</span>  }
-<span id="L3175" class="ln">  3175</span>  *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_result = (oneML::alpr::VehicleDetectorResult *)result; 
+<span id="L3175" class="ln">  3175</span>  _swig_go_result = result; 
 <span id="L3176" class="ln">  3176</span>  return _swig_go_result;
 <span id="L3177" class="ln">  3177</span>}
 <span id="L3178" class="ln">  3178</span>
 <span id="L3179" class="ln">  3179</span>
-<span id="L3180" class="ln">  3180</span>void _wrap_delete_VehicleDetectorResult_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
+<span id="L3180" class="ln">  3180</span>std::vector&lt; float &gt; *_wrap_VehicleDetectorResult_GetScores_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
 <span id="L3181" class="ln">  3181</span>  oneML::alpr::VehicleDetectorResult *arg1 = (oneML::alpr::VehicleDetectorResult *) 0 ;
-<span id="L3182" class="ln">  3182</span>  
-<span id="L3183" class="ln">  3183</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
+<span id="L3182" class="ln">  3182</span>  std::vector&lt; float &gt; result;
+<span id="L3183" class="ln">  3183</span>  std::vector&lt; float &gt; *_swig_go_result;
 <span id="L3184" class="ln">  3184</span>  
-<span id="L3185" class="ln">  3185</span>  {
-<span id="L3186" class="ln">  3186</span>    try
-<span id="L3187" class="ln">  3187</span>    {
-<span id="L3188" class="ln">  3188</span>      delete arg1;
-<span id="L3189" class="ln">  3189</span>    }
-<span id="L3190" class="ln">  3190</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3191" class="ln">  3191</span>    {
-<span id="L3192" class="ln">  3192</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3193" class="ln">  3193</span>    }
-<span id="L3194" class="ln">  3194</span>    catch (const std::out_of_range&amp; e)
-<span id="L3195" class="ln">  3195</span>    {
-<span id="L3196" class="ln">  3196</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3197" class="ln">  3197</span>    }
-<span id="L3198" class="ln">  3198</span>    catch(const std::exception&amp; e)
-<span id="L3199" class="ln">  3199</span>    {
-<span id="L3200" class="ln">  3200</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3201" class="ln">  3201</span>    }
-<span id="L3202" class="ln">  3202</span>  }
-<span id="L3203" class="ln">  3203</span>  
-<span id="L3204" class="ln">  3204</span>}
-<span id="L3205" class="ln">  3205</span>
-<span id="L3206" class="ln">  3206</span>
-<span id="L3207" class="ln">  3207</span>oneML::alpr::VehicleDetectorResult *_wrap_new_VehicleDetectorResult__SWIG_1_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
-<span id="L3208" class="ln">  3208</span>  oneML::alpr::VehicleDetectorResult *arg1 = 0 ;
-<span id="L3209" class="ln">  3209</span>  oneML::alpr::VehicleDetectorResult *result = 0 ;
-<span id="L3210" class="ln">  3210</span>  oneML::alpr::VehicleDetectorResult *_swig_go_result;
-<span id="L3211" class="ln">  3211</span>  
-<span id="L3212" class="ln">  3212</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
-<span id="L3213" class="ln">  3213</span>  
-<span id="L3214" class="ln">  3214</span>  {
-<span id="L3215" class="ln">  3215</span>    try
-<span id="L3216" class="ln">  3216</span>    {
-<span id="L3217" class="ln">  3217</span>      result = (oneML::alpr::VehicleDetectorResult *)new oneML::alpr::VehicleDetectorResult((oneML::alpr::VehicleDetectorResult const &amp;)*arg1);
-<span id="L3218" class="ln">  3218</span>    }
-<span id="L3219" class="ln">  3219</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3220" class="ln">  3220</span>    {
-<span id="L3221" class="ln">  3221</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3222" class="ln">  3222</span>    }
-<span id="L3223" class="ln">  3223</span>    catch (const std::out_of_range&amp; e)
-<span id="L3224" class="ln">  3224</span>    {
-<span id="L3225" class="ln">  3225</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3226" class="ln">  3226</span>    }
-<span id="L3227" class="ln">  3227</span>    catch(const std::exception&amp; e)
-<span id="L3228" class="ln">  3228</span>    {
-<span id="L3229" class="ln">  3229</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3230" class="ln">  3230</span>    }
-<span id="L3231" class="ln">  3231</span>  }
-<span id="L3232" class="ln">  3232</span>  *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_result = (oneML::alpr::VehicleDetectorResult *)result; 
-<span id="L3233" class="ln">  3233</span>  return _swig_go_result;
-<span id="L3234" class="ln">  3234</span>}
-<span id="L3235" class="ln">  3235</span>
-<span id="L3236" class="ln">  3236</span>
-<span id="L3237" class="ln">  3237</span>intgo _wrap_VehicleDetectorResult_GetSize_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
-<span id="L3238" class="ln">  3238</span>  oneML::alpr::VehicleDetectorResult *arg1 = (oneML::alpr::VehicleDetectorResult *) 0 ;
-<span id="L3239" class="ln">  3239</span>  int result;
-<span id="L3240" class="ln">  3240</span>  intgo _swig_go_result;
-<span id="L3241" class="ln">  3241</span>  
-<span id="L3242" class="ln">  3242</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
-<span id="L3243" class="ln">  3243</span>  
-<span id="L3244" class="ln">  3244</span>  {
-<span id="L3245" class="ln">  3245</span>    try
-<span id="L3246" class="ln">  3246</span>    {
-<span id="L3247" class="ln">  3247</span>      result = (int)((oneML::alpr::VehicleDetectorResult const *)arg1)-&gt;get_size();
-<span id="L3248" class="ln">  3248</span>    }
-<span id="L3249" class="ln">  3249</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3250" class="ln">  3250</span>    {
-<span id="L3251" class="ln">  3251</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3252" class="ln">  3252</span>    }
-<span id="L3253" class="ln">  3253</span>    catch (const std::out_of_range&amp; e)
-<span id="L3254" class="ln">  3254</span>    {
-<span id="L3255" class="ln">  3255</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3256" class="ln">  3256</span>    }
-<span id="L3257" class="ln">  3257</span>    catch(const std::exception&amp; e)
-<span id="L3258" class="ln">  3258</span>    {
-<span id="L3259" class="ln">  3259</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3260" class="ln">  3260</span>    }
-<span id="L3261" class="ln">  3261</span>  }
-<span id="L3262" class="ln">  3262</span>  _swig_go_result = result; 
-<span id="L3263" class="ln">  3263</span>  return _swig_go_result;
-<span id="L3264" class="ln">  3264</span>}
-<span id="L3265" class="ln">  3265</span>
-<span id="L3266" class="ln">  3266</span>
-<span id="L3267" class="ln">  3267</span>std::vector&lt; float &gt; *_wrap_VehicleDetectorResult_GetScores_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
-<span id="L3268" class="ln">  3268</span>  oneML::alpr::VehicleDetectorResult *arg1 = (oneML::alpr::VehicleDetectorResult *) 0 ;
-<span id="L3269" class="ln">  3269</span>  std::vector&lt; float &gt; result;
-<span id="L3270" class="ln">  3270</span>  std::vector&lt; float &gt; *_swig_go_result;
-<span id="L3271" class="ln">  3271</span>  
-<span id="L3272" class="ln">  3272</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
-<span id="L3273" class="ln">  3273</span>  
-<span id="L3274" class="ln">  3274</span>  {
-<span id="L3275" class="ln">  3275</span>    try
-<span id="L3276" class="ln">  3276</span>    {
-<span id="L3277" class="ln">  3277</span>      result = oneML_alpr_VehicleDetectorResult_go_get_scores(arg1);
-<span id="L3278" class="ln">  3278</span>    }
-<span id="L3279" class="ln">  3279</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3280" class="ln">  3280</span>    {
-<span id="L3281" class="ln">  3281</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3282" class="ln">  3282</span>    }
-<span id="L3283" class="ln">  3283</span>    catch (const std::out_of_range&amp; e)
-<span id="L3284" class="ln">  3284</span>    {
-<span id="L3285" class="ln">  3285</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3286" class="ln">  3286</span>    }
-<span id="L3287" class="ln">  3287</span>    catch(const std::exception&amp; e)
-<span id="L3288" class="ln">  3288</span>    {
-<span id="L3289" class="ln">  3289</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3290" class="ln">  3290</span>    }
-<span id="L3291" class="ln">  3291</span>  }
-<span id="L3292" class="ln">  3292</span>  *(std::vector&lt; float &gt; **)&amp;_swig_go_result = new std::vector&lt; float &gt;(result); 
-<span id="L3293" class="ln">  3293</span>  return _swig_go_result;
-<span id="L3294" class="ln">  3294</span>}
-<span id="L3295" class="ln">  3295</span>
-<span id="L3296" class="ln">  3296</span>
-<span id="L3297" class="ln">  3297</span>std::vector&lt; oneML::BBox &gt; *_wrap_VehicleDetectorResult_GetBboxes_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
-<span id="L3298" class="ln">  3298</span>  oneML::alpr::VehicleDetectorResult *arg1 = (oneML::alpr::VehicleDetectorResult *) 0 ;
-<span id="L3299" class="ln">  3299</span>  std::vector&lt; oneML::BBox &gt; result;
-<span id="L3300" class="ln">  3300</span>  std::vector&lt; oneML::BBox &gt; *_swig_go_result;
-<span id="L3301" class="ln">  3301</span>  
-<span id="L3302" class="ln">  3302</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
-<span id="L3303" class="ln">  3303</span>  
-<span id="L3304" class="ln">  3304</span>  {
-<span id="L3305" class="ln">  3305</span>    try
-<span id="L3306" class="ln">  3306</span>    {
-<span id="L3307" class="ln">  3307</span>      result = oneML_alpr_VehicleDetectorResult_go_get_bboxes(arg1);
-<span id="L3308" class="ln">  3308</span>    }
-<span id="L3309" class="ln">  3309</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3310" class="ln">  3310</span>    {
-<span id="L3311" class="ln">  3311</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3312" class="ln">  3312</span>    }
-<span id="L3313" class="ln">  3313</span>    catch (const std::out_of_range&amp; e)
-<span id="L3314" class="ln">  3314</span>    {
-<span id="L3315" class="ln">  3315</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3316" class="ln">  3316</span>    }
-<span id="L3317" class="ln">  3317</span>    catch(const std::exception&amp; e)
-<span id="L3318" class="ln">  3318</span>    {
-<span id="L3319" class="ln">  3319</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3320" class="ln">  3320</span>    }
-<span id="L3321" class="ln">  3321</span>  }
-<span id="L3322" class="ln">  3322</span>  *(std::vector&lt; oneML::BBox &gt; **)&amp;_swig_go_result = new std::vector&lt; oneML::BBox &gt;(result); 
-<span id="L3323" class="ln">  3323</span>  return _swig_go_result;
+<span id="L3185" class="ln">  3185</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
+<span id="L3186" class="ln">  3186</span>  
+<span id="L3187" class="ln">  3187</span>  {
+<span id="L3188" class="ln">  3188</span>    try
+<span id="L3189" class="ln">  3189</span>    {
+<span id="L3190" class="ln">  3190</span>      result = oneML_alpr_VehicleDetectorResult_go_get_scores(arg1);
+<span id="L3191" class="ln">  3191</span>    }
+<span id="L3192" class="ln">  3192</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3193" class="ln">  3193</span>    {
+<span id="L3194" class="ln">  3194</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3195" class="ln">  3195</span>    }
+<span id="L3196" class="ln">  3196</span>    catch (const std::out_of_range&amp; e)
+<span id="L3197" class="ln">  3197</span>    {
+<span id="L3198" class="ln">  3198</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3199" class="ln">  3199</span>    }
+<span id="L3200" class="ln">  3200</span>    catch(const std::exception&amp; e)
+<span id="L3201" class="ln">  3201</span>    {
+<span id="L3202" class="ln">  3202</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3203" class="ln">  3203</span>    }
+<span id="L3204" class="ln">  3204</span>  }
+<span id="L3205" class="ln">  3205</span>  *(std::vector&lt; float &gt; **)&amp;_swig_go_result = new std::vector&lt; float &gt;(result); 
+<span id="L3206" class="ln">  3206</span>  return _swig_go_result;
+<span id="L3207" class="ln">  3207</span>}
+<span id="L3208" class="ln">  3208</span>
+<span id="L3209" class="ln">  3209</span>
+<span id="L3210" class="ln">  3210</span>std::vector&lt; oneML::BBox &gt; *_wrap_VehicleDetectorResult_GetBboxes_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
+<span id="L3211" class="ln">  3211</span>  oneML::alpr::VehicleDetectorResult *arg1 = (oneML::alpr::VehicleDetectorResult *) 0 ;
+<span id="L3212" class="ln">  3212</span>  std::vector&lt; oneML::BBox &gt; result;
+<span id="L3213" class="ln">  3213</span>  std::vector&lt; oneML::BBox &gt; *_swig_go_result;
+<span id="L3214" class="ln">  3214</span>  
+<span id="L3215" class="ln">  3215</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
+<span id="L3216" class="ln">  3216</span>  
+<span id="L3217" class="ln">  3217</span>  {
+<span id="L3218" class="ln">  3218</span>    try
+<span id="L3219" class="ln">  3219</span>    {
+<span id="L3220" class="ln">  3220</span>      result = oneML_alpr_VehicleDetectorResult_go_get_bboxes(arg1);
+<span id="L3221" class="ln">  3221</span>    }
+<span id="L3222" class="ln">  3222</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3223" class="ln">  3223</span>    {
+<span id="L3224" class="ln">  3224</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3225" class="ln">  3225</span>    }
+<span id="L3226" class="ln">  3226</span>    catch (const std::out_of_range&amp; e)
+<span id="L3227" class="ln">  3227</span>    {
+<span id="L3228" class="ln">  3228</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3229" class="ln">  3229</span>    }
+<span id="L3230" class="ln">  3230</span>    catch(const std::exception&amp; e)
+<span id="L3231" class="ln">  3231</span>    {
+<span id="L3232" class="ln">  3232</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3233" class="ln">  3233</span>    }
+<span id="L3234" class="ln">  3234</span>  }
+<span id="L3235" class="ln">  3235</span>  *(std::vector&lt; oneML::BBox &gt; **)&amp;_swig_go_result = new std::vector&lt; oneML::BBox &gt;(result); 
+<span id="L3236" class="ln">  3236</span>  return _swig_go_result;
+<span id="L3237" class="ln">  3237</span>}
+<span id="L3238" class="ln">  3238</span>
+<span id="L3239" class="ln">  3239</span>
+<span id="L3240" class="ln">  3240</span>std::vector&lt; int &gt; *_wrap_VehicleDetectorResult_GetReturnStatus_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
+<span id="L3241" class="ln">  3241</span>  oneML::alpr::VehicleDetectorResult *arg1 = (oneML::alpr::VehicleDetectorResult *) 0 ;
+<span id="L3242" class="ln">  3242</span>  std::vector&lt; int &gt; result;
+<span id="L3243" class="ln">  3243</span>  std::vector&lt; int &gt; *_swig_go_result;
+<span id="L3244" class="ln">  3244</span>  
+<span id="L3245" class="ln">  3245</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
+<span id="L3246" class="ln">  3246</span>  
+<span id="L3247" class="ln">  3247</span>  {
+<span id="L3248" class="ln">  3248</span>    try
+<span id="L3249" class="ln">  3249</span>    {
+<span id="L3250" class="ln">  3250</span>      result = oneML_alpr_VehicleDetectorResult_go_get_return_status(arg1);
+<span id="L3251" class="ln">  3251</span>    }
+<span id="L3252" class="ln">  3252</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3253" class="ln">  3253</span>    {
+<span id="L3254" class="ln">  3254</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3255" class="ln">  3255</span>    }
+<span id="L3256" class="ln">  3256</span>    catch (const std::out_of_range&amp; e)
+<span id="L3257" class="ln">  3257</span>    {
+<span id="L3258" class="ln">  3258</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3259" class="ln">  3259</span>    }
+<span id="L3260" class="ln">  3260</span>    catch(const std::exception&amp; e)
+<span id="L3261" class="ln">  3261</span>    {
+<span id="L3262" class="ln">  3262</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3263" class="ln">  3263</span>    }
+<span id="L3264" class="ln">  3264</span>  }
+<span id="L3265" class="ln">  3265</span>  *(std::vector&lt; int &gt; **)&amp;_swig_go_result = new std::vector&lt; int &gt;(result); 
+<span id="L3266" class="ln">  3266</span>  return _swig_go_result;
+<span id="L3267" class="ln">  3267</span>}
+<span id="L3268" class="ln">  3268</span>
+<span id="L3269" class="ln">  3269</span>
+<span id="L3270" class="ln">  3270</span>oneML::alpr::VehicleDetector *_wrap_new_VehicleDetector_alpr_7074c9342a7bdf4a(oneML::LicenseManager *_swig_go_0) {
+<span id="L3271" class="ln">  3271</span>  oneML::LicenseManager *arg1 = 0 ;
+<span id="L3272" class="ln">  3272</span>  oneML::alpr::VehicleDetector *result = 0 ;
+<span id="L3273" class="ln">  3273</span>  oneML::alpr::VehicleDetector *_swig_go_result;
+<span id="L3274" class="ln">  3274</span>  
+<span id="L3275" class="ln">  3275</span>  arg1 = *(oneML::LicenseManager **)&amp;_swig_go_0; 
+<span id="L3276" class="ln">  3276</span>  
+<span id="L3277" class="ln">  3277</span>  {
+<span id="L3278" class="ln">  3278</span>    try
+<span id="L3279" class="ln">  3279</span>    {
+<span id="L3280" class="ln">  3280</span>      result = (oneML::alpr::VehicleDetector *)new oneML::alpr::VehicleDetector(*arg1);
+<span id="L3281" class="ln">  3281</span>    }
+<span id="L3282" class="ln">  3282</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3283" class="ln">  3283</span>    {
+<span id="L3284" class="ln">  3284</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3285" class="ln">  3285</span>    }
+<span id="L3286" class="ln">  3286</span>    catch (const std::out_of_range&amp; e)
+<span id="L3287" class="ln">  3287</span>    {
+<span id="L3288" class="ln">  3288</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3289" class="ln">  3289</span>    }
+<span id="L3290" class="ln">  3290</span>    catch(const std::exception&amp; e)
+<span id="L3291" class="ln">  3291</span>    {
+<span id="L3292" class="ln">  3292</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3293" class="ln">  3293</span>    }
+<span id="L3294" class="ln">  3294</span>  }
+<span id="L3295" class="ln">  3295</span>  *(oneML::alpr::VehicleDetector **)&amp;_swig_go_result = (oneML::alpr::VehicleDetector *)result; 
+<span id="L3296" class="ln">  3296</span>  return _swig_go_result;
+<span id="L3297" class="ln">  3297</span>}
+<span id="L3298" class="ln">  3298</span>
+<span id="L3299" class="ln">  3299</span>
+<span id="L3300" class="ln">  3300</span>void _wrap_delete_VehicleDetector_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetector *_swig_go_0) {
+<span id="L3301" class="ln">  3301</span>  oneML::alpr::VehicleDetector *arg1 = (oneML::alpr::VehicleDetector *) 0 ;
+<span id="L3302" class="ln">  3302</span>  
+<span id="L3303" class="ln">  3303</span>  arg1 = *(oneML::alpr::VehicleDetector **)&amp;_swig_go_0; 
+<span id="L3304" class="ln">  3304</span>  
+<span id="L3305" class="ln">  3305</span>  {
+<span id="L3306" class="ln">  3306</span>    try
+<span id="L3307" class="ln">  3307</span>    {
+<span id="L3308" class="ln">  3308</span>      delete arg1;
+<span id="L3309" class="ln">  3309</span>    }
+<span id="L3310" class="ln">  3310</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3311" class="ln">  3311</span>    {
+<span id="L3312" class="ln">  3312</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3313" class="ln">  3313</span>    }
+<span id="L3314" class="ln">  3314</span>    catch (const std::out_of_range&amp; e)
+<span id="L3315" class="ln">  3315</span>    {
+<span id="L3316" class="ln">  3316</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3317" class="ln">  3317</span>    }
+<span id="L3318" class="ln">  3318</span>    catch(const std::exception&amp; e)
+<span id="L3319" class="ln">  3319</span>    {
+<span id="L3320" class="ln">  3320</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3321" class="ln">  3321</span>    }
+<span id="L3322" class="ln">  3322</span>  }
+<span id="L3323" class="ln">  3323</span>  
 <span id="L3324" class="ln">  3324</span>}
 <span id="L3325" class="ln">  3325</span>
 <span id="L3326" class="ln">  3326</span>
-<span id="L3327" class="ln">  3327</span>std::vector&lt; int &gt; *_wrap_VehicleDetectorResult_GetReturnStatus_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetectorResult *_swig_go_0) {
-<span id="L3328" class="ln">  3328</span>  oneML::alpr::VehicleDetectorResult *arg1 = (oneML::alpr::VehicleDetectorResult *) 0 ;
-<span id="L3329" class="ln">  3329</span>  std::vector&lt; int &gt; result;
-<span id="L3330" class="ln">  3330</span>  std::vector&lt; int &gt; *_swig_go_result;
+<span id="L3327" class="ln">  3327</span>oneML::UsageReport *_wrap_VehicleDetector_GetUsage_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetector *_swig_go_0) {
+<span id="L3328" class="ln">  3328</span>  oneML::alpr::VehicleDetector *arg1 = (oneML::alpr::VehicleDetector *) 0 ;
+<span id="L3329" class="ln">  3329</span>  SwigValueWrapper&lt; oneML::UsageReport &gt; result;
+<span id="L3330" class="ln">  3330</span>  oneML::UsageReport *_swig_go_result;
 <span id="L3331" class="ln">  3331</span>  
-<span id="L3332" class="ln">  3332</span>  arg1 = *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_0; 
+<span id="L3332" class="ln">  3332</span>  arg1 = *(oneML::alpr::VehicleDetector **)&amp;_swig_go_0; 
 <span id="L3333" class="ln">  3333</span>  
 <span id="L3334" class="ln">  3334</span>  {
 <span id="L3335" class="ln">  3335</span>    try
 <span id="L3336" class="ln">  3336</span>    {
-<span id="L3337" class="ln">  3337</span>      result = oneML_alpr_VehicleDetectorResult_go_get_return_status(arg1);
+<span id="L3337" class="ln">  3337</span>      result = ((oneML::alpr::VehicleDetector const *)arg1)-&gt;get_usage();
 <span id="L3338" class="ln">  3338</span>    }
 <span id="L3339" class="ln">  3339</span>    catch (const std::invalid_argument&amp; e)
 <span id="L3340" class="ln">  3340</span>    {
@@ -3405,143 +3405,143 @@
 <span id="L3349" class="ln">  3349</span>      SWIG_exception(SWIG_RuntimeError, e.what());
 <span id="L3350" class="ln">  3350</span>    }
 <span id="L3351" class="ln">  3351</span>  }
-<span id="L3352" class="ln">  3352</span>  *(std::vector&lt; int &gt; **)&amp;_swig_go_result = new std::vector&lt; int &gt;(result); 
+<span id="L3352" class="ln">  3352</span>  *(oneML::UsageReport **)&amp;_swig_go_result = new oneML::UsageReport(result); 
 <span id="L3353" class="ln">  3353</span>  return _swig_go_result;
 <span id="L3354" class="ln">  3354</span>}
 <span id="L3355" class="ln">  3355</span>
 <span id="L3356" class="ln">  3356</span>
-<span id="L3357" class="ln">  3357</span>oneML::alpr::VehicleDetector *_wrap_new_VehicleDetector_alpr_7074c9342a7bdf4a(oneML::LicenseManager *_swig_go_0) {
-<span id="L3358" class="ln">  3358</span>  oneML::LicenseManager *arg1 = 0 ;
-<span id="L3359" class="ln">  3359</span>  oneML::alpr::VehicleDetector *result = 0 ;
-<span id="L3360" class="ln">  3360</span>  oneML::alpr::VehicleDetector *_swig_go_result;
-<span id="L3361" class="ln">  3361</span>  
-<span id="L3362" class="ln">  3362</span>  arg1 = *(oneML::LicenseManager **)&amp;_swig_go_0; 
-<span id="L3363" class="ln">  3363</span>  
-<span id="L3364" class="ln">  3364</span>  {
-<span id="L3365" class="ln">  3365</span>    try
-<span id="L3366" class="ln">  3366</span>    {
-<span id="L3367" class="ln">  3367</span>      result = (oneML::alpr::VehicleDetector *)new oneML::alpr::VehicleDetector(*arg1);
-<span id="L3368" class="ln">  3368</span>    }
-<span id="L3369" class="ln">  3369</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3370" class="ln">  3370</span>    {
-<span id="L3371" class="ln">  3371</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3372" class="ln">  3372</span>    }
-<span id="L3373" class="ln">  3373</span>    catch (const std::out_of_range&amp; e)
-<span id="L3374" class="ln">  3374</span>    {
-<span id="L3375" class="ln">  3375</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3376" class="ln">  3376</span>    }
-<span id="L3377" class="ln">  3377</span>    catch(const std::exception&amp; e)
-<span id="L3378" class="ln">  3378</span>    {
-<span id="L3379" class="ln">  3379</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3380" class="ln">  3380</span>    }
-<span id="L3381" class="ln">  3381</span>  }
-<span id="L3382" class="ln">  3382</span>  *(oneML::alpr::VehicleDetector **)&amp;_swig_go_result = (oneML::alpr::VehicleDetector *)result; 
-<span id="L3383" class="ln">  3383</span>  return _swig_go_result;
-<span id="L3384" class="ln">  3384</span>}
-<span id="L3385" class="ln">  3385</span>
-<span id="L3386" class="ln">  3386</span>
-<span id="L3387" class="ln">  3387</span>void _wrap_delete_VehicleDetector_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetector *_swig_go_0) {
-<span id="L3388" class="ln">  3388</span>  oneML::alpr::VehicleDetector *arg1 = (oneML::alpr::VehicleDetector *) 0 ;
-<span id="L3389" class="ln">  3389</span>  
-<span id="L3390" class="ln">  3390</span>  arg1 = *(oneML::alpr::VehicleDetector **)&amp;_swig_go_0; 
-<span id="L3391" class="ln">  3391</span>  
-<span id="L3392" class="ln">  3392</span>  {
-<span id="L3393" class="ln">  3393</span>    try
-<span id="L3394" class="ln">  3394</span>    {
-<span id="L3395" class="ln">  3395</span>      delete arg1;
-<span id="L3396" class="ln">  3396</span>    }
-<span id="L3397" class="ln">  3397</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3398" class="ln">  3398</span>    {
-<span id="L3399" class="ln">  3399</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3400" class="ln">  3400</span>    }
-<span id="L3401" class="ln">  3401</span>    catch (const std::out_of_range&amp; e)
-<span id="L3402" class="ln">  3402</span>    {
-<span id="L3403" class="ln">  3403</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3404" class="ln">  3404</span>    }
-<span id="L3405" class="ln">  3405</span>    catch(const std::exception&amp; e)
-<span id="L3406" class="ln">  3406</span>    {
-<span id="L3407" class="ln">  3407</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3408" class="ln">  3408</span>    }
-<span id="L3409" class="ln">  3409</span>  }
-<span id="L3410" class="ln">  3410</span>  
-<span id="L3411" class="ln">  3411</span>}
-<span id="L3412" class="ln">  3412</span>
-<span id="L3413" class="ln">  3413</span>
-<span id="L3414" class="ln">  3414</span>oneML::UsageReport *_wrap_VehicleDetector_GetUsage_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetector *_swig_go_0) {
-<span id="L3415" class="ln">  3415</span>  oneML::alpr::VehicleDetector *arg1 = (oneML::alpr::VehicleDetector *) 0 ;
-<span id="L3416" class="ln">  3416</span>  SwigValueWrapper&lt; oneML::UsageReport &gt; result;
-<span id="L3417" class="ln">  3417</span>  oneML::UsageReport *_swig_go_result;
-<span id="L3418" class="ln">  3418</span>  
-<span id="L3419" class="ln">  3419</span>  arg1 = *(oneML::alpr::VehicleDetector **)&amp;_swig_go_0; 
-<span id="L3420" class="ln">  3420</span>  
-<span id="L3421" class="ln">  3421</span>  {
-<span id="L3422" class="ln">  3422</span>    try
-<span id="L3423" class="ln">  3423</span>    {
-<span id="L3424" class="ln">  3424</span>      result = ((oneML::alpr::VehicleDetector const *)arg1)-&gt;get_usage();
-<span id="L3425" class="ln">  3425</span>    }
-<span id="L3426" class="ln">  3426</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3427" class="ln">  3427</span>    {
-<span id="L3428" class="ln">  3428</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3429" class="ln">  3429</span>    }
-<span id="L3430" class="ln">  3430</span>    catch (const std::out_of_range&amp; e)
-<span id="L3431" class="ln">  3431</span>    {
-<span id="L3432" class="ln">  3432</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3433" class="ln">  3433</span>    }
-<span id="L3434" class="ln">  3434</span>    catch(const std::exception&amp; e)
-<span id="L3435" class="ln">  3435</span>    {
-<span id="L3436" class="ln">  3436</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3437" class="ln">  3437</span>    }
-<span id="L3438" class="ln">  3438</span>  }
-<span id="L3439" class="ln">  3439</span>  *(oneML::UsageReport **)&amp;_swig_go_result = new oneML::UsageReport(result); 
-<span id="L3440" class="ln">  3440</span>  return _swig_go_result;
-<span id="L3441" class="ln">  3441</span>}
-<span id="L3442" class="ln">  3442</span>
-<span id="L3443" class="ln">  3443</span>
-<span id="L3444" class="ln">  3444</span>oneML::alpr::VehicleDetectorResult *_wrap_VehicleDetector_Detect_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetector *_swig_go_0, oneML::Image *_swig_go_1) {
-<span id="L3445" class="ln">  3445</span>  oneML::alpr::VehicleDetector *arg1 = (oneML::alpr::VehicleDetector *) 0 ;
-<span id="L3446" class="ln">  3446</span>  oneML::Image *arg2 = 0 ;
-<span id="L3447" class="ln">  3447</span>  oneML::alpr::VehicleDetectorResult result;
-<span id="L3448" class="ln">  3448</span>  oneML::alpr::VehicleDetectorResult *_swig_go_result;
-<span id="L3449" class="ln">  3449</span>  
-<span id="L3450" class="ln">  3450</span>  arg1 = *(oneML::alpr::VehicleDetector **)&amp;_swig_go_0; 
-<span id="L3451" class="ln">  3451</span>  arg2 = *(oneML::Image **)&amp;_swig_go_1; 
-<span id="L3452" class="ln">  3452</span>  
-<span id="L3453" class="ln">  3453</span>  {
-<span id="L3454" class="ln">  3454</span>    try
-<span id="L3455" class="ln">  3455</span>    {
-<span id="L3456" class="ln">  3456</span>      result = oneML_alpr_VehicleDetector_go_detect(arg1,(oneML::Image const &amp;)*arg2);
-<span id="L3457" class="ln">  3457</span>    }
-<span id="L3458" class="ln">  3458</span>    catch (const std::invalid_argument&amp; e)
-<span id="L3459" class="ln">  3459</span>    {
-<span id="L3460" class="ln">  3460</span>      SWIG_exception(SWIG_ValueError, e.what());
-<span id="L3461" class="ln">  3461</span>    }
-<span id="L3462" class="ln">  3462</span>    catch (const std::out_of_range&amp; e)
-<span id="L3463" class="ln">  3463</span>    {
-<span id="L3464" class="ln">  3464</span>      SWIG_exception(SWIG_IndexError, e.what());
-<span id="L3465" class="ln">  3465</span>    }
-<span id="L3466" class="ln">  3466</span>    catch(const std::exception&amp; e)
-<span id="L3467" class="ln">  3467</span>    {
-<span id="L3468" class="ln">  3468</span>      SWIG_exception(SWIG_RuntimeError, e.what());
-<span id="L3469" class="ln">  3469</span>    }
-<span id="L3470" class="ln">  3470</span>  }
-<span id="L3471" class="ln">  3471</span>  *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_result = new oneML::alpr::VehicleDetectorResult(result); 
-<span id="L3472" class="ln">  3472</span>  return _swig_go_result;
-<span id="L3473" class="ln">  3473</span>}
-<span id="L3474" class="ln">  3474</span>
-<span id="L3475" class="ln">  3475</span>
-<span id="L3476" class="ln">  3476</span>std::vector&lt; oneML::alpr::VehicleDetectorResult &gt; *_wrap_VehicleDetector_DetectBatch_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetector *_swig_go_0, std::vector&lt; oneML::Image &gt; *_swig_go_1) {
-<span id="L3477" class="ln">  3477</span>  oneML::alpr::VehicleDetector *arg1 = (oneML::alpr::VehicleDetector *) 0 ;
-<span id="L3478" class="ln">  3478</span>  std::vector&lt; oneML::Image &gt; *arg2 = 0 ;
-<span id="L3479" class="ln">  3479</span>  std::vector&lt; oneML::alpr::VehicleDetectorResult &gt; result;
-<span id="L3480" class="ln">  3480</span>  std::vector&lt; oneML::alpr::VehicleDetectorResult &gt; *_swig_go_result;
-<span id="L3481" class="ln">  3481</span>  
-<span id="L3482" class="ln">  3482</span>  arg1 = *(oneML::alpr::VehicleDetector **)&amp;_swig_go_0; 
-<span id="L3483" class="ln">  3483</span>  arg2 = *(std::vector&lt; oneML::Image &gt; **)&amp;_swig_go_1; 
-<span id="L3484" class="ln">  3484</span>  
-<span id="L3485" class="ln">  3485</span>  {
-<span id="L3486" class="ln">  3486</span>    try
-<span id="L3487" class="ln">  3487</span>    {
-<span id="L3488" class="ln">  3488</span>      result = oneML_alpr_VehicleDetector_go_detect_batch(arg1,(std::vector&lt; oneML::Image &gt; const &amp;)*arg2);
+<span id="L3357" class="ln">  3357</span>oneML::alpr::VehicleDetectorResult *_wrap_VehicleDetector_Detect_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetector *_swig_go_0, oneML::Image *_swig_go_1) {
+<span id="L3358" class="ln">  3358</span>  oneML::alpr::VehicleDetector *arg1 = (oneML::alpr::VehicleDetector *) 0 ;
+<span id="L3359" class="ln">  3359</span>  oneML::Image *arg2 = 0 ;
+<span id="L3360" class="ln">  3360</span>  oneML::alpr::VehicleDetectorResult result;
+<span id="L3361" class="ln">  3361</span>  oneML::alpr::VehicleDetectorResult *_swig_go_result;
+<span id="L3362" class="ln">  3362</span>  
+<span id="L3363" class="ln">  3363</span>  arg1 = *(oneML::alpr::VehicleDetector **)&amp;_swig_go_0; 
+<span id="L3364" class="ln">  3364</span>  arg2 = *(oneML::Image **)&amp;_swig_go_1; 
+<span id="L3365" class="ln">  3365</span>  
+<span id="L3366" class="ln">  3366</span>  {
+<span id="L3367" class="ln">  3367</span>    try
+<span id="L3368" class="ln">  3368</span>    {
+<span id="L3369" class="ln">  3369</span>      result = oneML_alpr_VehicleDetector_go_detect(arg1,(oneML::Image const &amp;)*arg2);
+<span id="L3370" class="ln">  3370</span>    }
+<span id="L3371" class="ln">  3371</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3372" class="ln">  3372</span>    {
+<span id="L3373" class="ln">  3373</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3374" class="ln">  3374</span>    }
+<span id="L3375" class="ln">  3375</span>    catch (const std::out_of_range&amp; e)
+<span id="L3376" class="ln">  3376</span>    {
+<span id="L3377" class="ln">  3377</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3378" class="ln">  3378</span>    }
+<span id="L3379" class="ln">  3379</span>    catch(const std::exception&amp; e)
+<span id="L3380" class="ln">  3380</span>    {
+<span id="L3381" class="ln">  3381</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3382" class="ln">  3382</span>    }
+<span id="L3383" class="ln">  3383</span>  }
+<span id="L3384" class="ln">  3384</span>  *(oneML::alpr::VehicleDetectorResult **)&amp;_swig_go_result = new oneML::alpr::VehicleDetectorResult(result); 
+<span id="L3385" class="ln">  3385</span>  return _swig_go_result;
+<span id="L3386" class="ln">  3386</span>}
+<span id="L3387" class="ln">  3387</span>
+<span id="L3388" class="ln">  3388</span>
+<span id="L3389" class="ln">  3389</span>std::vector&lt; oneML::alpr::VehicleDetectorResult &gt; *_wrap_VehicleDetector_DetectBatch_alpr_7074c9342a7bdf4a(oneML::alpr::VehicleDetector *_swig_go_0, std::vector&lt; oneML::Image &gt; *_swig_go_1) {
+<span id="L3390" class="ln">  3390</span>  oneML::alpr::VehicleDetector *arg1 = (oneML::alpr::VehicleDetector *) 0 ;
+<span id="L3391" class="ln">  3391</span>  std::vector&lt; oneML::Image &gt; *arg2 = 0 ;
+<span id="L3392" class="ln">  3392</span>  std::vector&lt; oneML::alpr::VehicleDetectorResult &gt; result;
+<span id="L3393" class="ln">  3393</span>  std::vector&lt; oneML::alpr::VehicleDetectorResult &gt; *_swig_go_result;
+<span id="L3394" class="ln">  3394</span>  
+<span id="L3395" class="ln">  3395</span>  arg1 = *(oneML::alpr::VehicleDetector **)&amp;_swig_go_0; 
+<span id="L3396" class="ln">  3396</span>  arg2 = *(std::vector&lt; oneML::Image &gt; **)&amp;_swig_go_1; 
+<span id="L3397" class="ln">  3397</span>  
+<span id="L3398" class="ln">  3398</span>  {
+<span id="L3399" class="ln">  3399</span>    try
+<span id="L3400" class="ln">  3400</span>    {
+<span id="L3401" class="ln">  3401</span>      result = oneML_alpr_VehicleDetector_go_detect_batch(arg1,(std::vector&lt; oneML::Image &gt; const &amp;)*arg2);
+<span id="L3402" class="ln">  3402</span>    }
+<span id="L3403" class="ln">  3403</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3404" class="ln">  3404</span>    {
+<span id="L3405" class="ln">  3405</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3406" class="ln">  3406</span>    }
+<span id="L3407" class="ln">  3407</span>    catch (const std::out_of_range&amp; e)
+<span id="L3408" class="ln">  3408</span>    {
+<span id="L3409" class="ln">  3409</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3410" class="ln">  3410</span>    }
+<span id="L3411" class="ln">  3411</span>    catch(const std::exception&amp; e)
+<span id="L3412" class="ln">  3412</span>    {
+<span id="L3413" class="ln">  3413</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3414" class="ln">  3414</span>    }
+<span id="L3415" class="ln">  3415</span>  }
+<span id="L3416" class="ln">  3416</span>  *(std::vector&lt; oneML::alpr::VehicleDetectorResult &gt; **)&amp;_swig_go_result = new std::vector&lt; oneML::alpr::VehicleDetectorResult &gt;(result); 
+<span id="L3417" class="ln">  3417</span>  return _swig_go_result;
+<span id="L3418" class="ln">  3418</span>}
+<span id="L3419" class="ln">  3419</span>
+<span id="L3420" class="ln">  3420</span>
+<span id="L3421" class="ln">  3421</span>intgo _wrap_VehicleDetectorStatus_Empty_alpr_7074c9342a7bdf4a() {
+<span id="L3422" class="ln">  3422</span>  oneML::alpr::VehicleDetectorStatus result;
+<span id="L3423" class="ln">  3423</span>  intgo _swig_go_result;
+<span id="L3424" class="ln">  3424</span>  
+<span id="L3425" class="ln">  3425</span>  
+<span id="L3426" class="ln">  3426</span>  {
+<span id="L3427" class="ln">  3427</span>    try
+<span id="L3428" class="ln">  3428</span>    {
+<span id="L3429" class="ln">  3429</span>      result = oneML::alpr::VehicleDetectorStatus::Empty;
+<span id="L3430" class="ln">  3430</span>      
+<span id="L3431" class="ln">  3431</span>    }
+<span id="L3432" class="ln">  3432</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3433" class="ln">  3433</span>    {
+<span id="L3434" class="ln">  3434</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3435" class="ln">  3435</span>    }
+<span id="L3436" class="ln">  3436</span>    catch (const std::out_of_range&amp; e)
+<span id="L3437" class="ln">  3437</span>    {
+<span id="L3438" class="ln">  3438</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3439" class="ln">  3439</span>    }
+<span id="L3440" class="ln">  3440</span>    catch(const std::exception&amp; e)
+<span id="L3441" class="ln">  3441</span>    {
+<span id="L3442" class="ln">  3442</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3443" class="ln">  3443</span>    }
+<span id="L3444" class="ln">  3444</span>  }
+<span id="L3445" class="ln">  3445</span>  _swig_go_result = (intgo)result; 
+<span id="L3446" class="ln">  3446</span>  return _swig_go_result;
+<span id="L3447" class="ln">  3447</span>}
+<span id="L3448" class="ln">  3448</span>
+<span id="L3449" class="ln">  3449</span>
+<span id="L3450" class="ln">  3450</span>intgo _wrap_VehicleDetectorStatus_Success_alpr_7074c9342a7bdf4a() {
+<span id="L3451" class="ln">  3451</span>  oneML::alpr::VehicleDetectorStatus result;
+<span id="L3452" class="ln">  3452</span>  intgo _swig_go_result;
+<span id="L3453" class="ln">  3453</span>  
+<span id="L3454" class="ln">  3454</span>  
+<span id="L3455" class="ln">  3455</span>  {
+<span id="L3456" class="ln">  3456</span>    try
+<span id="L3457" class="ln">  3457</span>    {
+<span id="L3458" class="ln">  3458</span>      result = oneML::alpr::VehicleDetectorStatus::Success;
+<span id="L3459" class="ln">  3459</span>      
+<span id="L3460" class="ln">  3460</span>    }
+<span id="L3461" class="ln">  3461</span>    catch (const std::invalid_argument&amp; e)
+<span id="L3462" class="ln">  3462</span>    {
+<span id="L3463" class="ln">  3463</span>      SWIG_exception(SWIG_ValueError, e.what());
+<span id="L3464" class="ln">  3464</span>    }
+<span id="L3465" class="ln">  3465</span>    catch (const std::out_of_range&amp; e)
+<span id="L3466" class="ln">  3466</span>    {
+<span id="L3467" class="ln">  3467</span>      SWIG_exception(SWIG_IndexError, e.what());
+<span id="L3468" class="ln">  3468</span>    }
+<span id="L3469" class="ln">  3469</span>    catch(const std::exception&amp; e)
+<span id="L3470" class="ln">  3470</span>    {
+<span id="L3471" class="ln">  3471</span>      SWIG_exception(SWIG_RuntimeError, e.what());
+<span id="L3472" class="ln">  3472</span>    }
+<span id="L3473" class="ln">  3473</span>  }
+<span id="L3474" class="ln">  3474</span>  _swig_go_result = (intgo)result; 
+<span id="L3475" class="ln">  3475</span>  return _swig_go_result;
+<span id="L3476" class="ln">  3476</span>}
+<span id="L3477" class="ln">  3477</span>
+<span id="L3478" class="ln">  3478</span>
+<span id="L3479" class="ln">  3479</span>intgo _wrap_VehicleDetectorStatus_Fail_alpr_7074c9342a7bdf4a() {
+<span id="L3480" class="ln">  3480</span>  oneML::alpr::VehicleDetectorStatus result;
+<span id="L3481" class="ln">  3481</span>  intgo _swig_go_result;
+<span id="L3482" class="ln">  3482</span>  
+<span id="L3483" class="ln">  3483</span>  
+<span id="L3484" class="ln">  3484</span>  {
+<span id="L3485" class="ln">  3485</span>    try
+<span id="L3486" class="ln">  3486</span>    {
+<span id="L3487" class="ln">  3487</span>      result = oneML::alpr::VehicleDetectorStatus::Fail;
+<span id="L3488" class="ln">  3488</span>      
 <span id="L3489" class="ln">  3489</span>    }
 <span id="L3490" class="ln">  3490</span>    catch (const std::invalid_argument&amp; e)
 <span id="L3491" class="ln">  3491</span>    {
@@ -3556,7 +3556,7 @@
 <span id="L3500" class="ln">  3500</span>      SWIG_exception(SWIG_RuntimeError, e.what());
 <span id="L3501" class="ln">  3501</span>    }
 <span id="L3502" class="ln">  3502</span>  }
-<span id="L3503" class="ln">  3503</span>  *(std::vector&lt; oneML::alpr::VehicleDetectorResult &gt; **)&amp;_swig_go_result = new std::vector&lt; oneML::alpr::VehicleDetectorResult &gt;(result); 
+<span id="L3503" class="ln">  3503</span>  _swig_go_result = (intgo)result; 
 <span id="L3504" class="ln">  3504</span>  return _swig_go_result;
 <span id="L3505" class="ln">  3505</span>}
 <span id="L3506" class="ln">  3506</span>

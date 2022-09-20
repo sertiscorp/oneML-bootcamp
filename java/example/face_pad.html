@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.7.0
+                v3.8.0
               </div>
             
           
@@ -115,6 +115,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">Java Vehicle Detector Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ekyc.html">Java EKYC Example</a></li>
 </ul>
 </li>
 </ul>
@@ -123,6 +124,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html">C# APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-data-structures">C# Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-examples">C# Examples</a></li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
 </ul>
 
             
@@ -240,6 +245,11 @@
 <span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
+<p>Cleanup</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">padRgb</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span><span class="w"></span>
+<span class="n">utils</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
 </section>
 <section id="java-padpaper-example">
 <h2>Java PadPaper Example<a class="headerlink" href="#java-padpaper-example" title="Permalink to this headline">¶</a></h2>
@@ -253,7 +263,7 @@
 <span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span><span class="w"></span>
 <span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span><span class="w"></span>
-<span class="n">FacePad</span><span class="w"> </span><span class="n">padRgb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="na">Paper</span><span class="p">,</span><span class="w"> </span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+<span class="n">FacePad</span><span class="w"> </span><span class="n">padPaper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FacePad</span><span class="p">(</span><span class="n">PadType</span><span class="p">.</span><span class="na">Paper</span><span class="p">,</span><span class="w"> </span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils</p>
@@ -287,6 +297,11 @@
 <span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
+<p>Cleanup</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">padPaper</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span><span class="w"></span>
+<span class="n">utils</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -304,7 +319,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
 
     </p>
   </div>

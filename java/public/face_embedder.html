@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.7.0
+                v3.8.0
               </div>
             
           
@@ -109,6 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="face_id.html">Java Face ID API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_pad.html">Java Face Pad API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">Java Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ekyc.html">Java EKYC API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">Java Utils API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="license_manager.html">Java License Manager API</a></li>
 </ul>
@@ -121,6 +122,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html">C# APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-data-structures">C# Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-examples">C# Examples</a></li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
 </ul>
 
             
@@ -198,6 +203,12 @@
 <span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedderE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedderE"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FaceEmbedder</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedderE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1ac3c5a955907ef46b4aec2b50c93e9518"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager">
 <span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::FaceEmbedder__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1afa10f0a8e671a03ad3d21604fd378ecf"></span><code class="sig-name descname">FaceEmbedder</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
@@ -294,6 +305,12 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_1af1ee847f9c0a81f86d377b12f4ce11a3"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt>
 <span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_1a137179e6d161befecfa24061b5be1852"></span><code class="sig-name descname">float[] getEmbedding ()</code></dt>
 <dd><p>Get an embedding of size EMB_SIZE. </p>
 <p><dl class="simple">
@@ -320,7 +337,16 @@
 <dl class="cpp class">
 <dt>
 <span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_list"></span><code class="sig-name descname">org::sertiscorp::oneml::face::FaceEmbedderResultList : public java::util::AbstractList&lt; FaceEmbedderResult &gt; , public java.util.RandomAccess</code></dt>
-<dd></dd></dl>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_list_1a1ce8367ae2a3b05e5b38c260f8ed6d04"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
 
 <dl class="cpp type">
 <dt id="_CPPv4N3org10sertiscorp5oneml4faceE">
@@ -366,7 +392,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
 
     </p>
   </div>

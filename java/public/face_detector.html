@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.7.0
+                v3.8.0
               </div>
             
           
@@ -109,6 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="face_id.html">Java Face ID API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_pad.html">Java Face Pad API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">Java Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ekyc.html">Java EKYC API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">Java Utils API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="license_manager.html">Java License Manager API</a></li>
 </ul>
@@ -121,6 +122,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html">C# APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-data-structures">C# Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-examples">C# Examples</a></li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
 </ul>
 
             
@@ -199,6 +204,12 @@
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a32adfdfd24b6a75a2e4b1d57f6eb53fc"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager">
 <span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::FaceDetector::FaceDetector__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1af1d9350238696d2280ba88330c24a25a"></span><code class="sig-name descname">FaceDetector</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a FaceDetector object. </p>
@@ -261,6 +272,23 @@
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a8a8b4bfad6189515845bb1116aef4bc2"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getSize"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1ae2ce9c20d5fd3946122ad950735148dc"></span>int <code class="sig-name descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get number of detections. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an integer. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv">
 <span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getBBoxes"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a1ffb5bf6d3884e05ce28959160e79f4d"></span>BBoxList <code class="sig-name descname">getBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get result Bounding Boxes. </p>
@@ -321,7 +349,16 @@
 <dl class="cpp class">
 <dt>
 <span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_list"></span><code class="sig-name descname">org::sertiscorp::oneml::face::FaceDetectorResultList : public java::util::AbstractList&lt; FaceDetectorResult &gt; , public java.util.RandomAccess</code></dt>
-<dd></dd></dl>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_list_1aad62a6dfb50b3424ec146f7ed3fbf1ef"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
 
 <dl class="cpp type">
 <dt id="_CPPv4N3org10sertiscorp5oneml4faceE">
@@ -367,7 +404,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
 
     </p>
   </div>

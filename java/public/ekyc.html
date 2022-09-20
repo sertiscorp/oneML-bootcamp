@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Java EKYC API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Java Utils API" href="utils.html" />
+    <link rel="prev" title="Java Challenge Response API" href="challenge_response.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v3.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Java APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">Java Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">Java Face Embedder API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">Java Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_pad.html">Java Face Pad API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">Java Vehicle Detector API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Java EKYC API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Java Utils API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">Java License Manager API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#java-examples">Java Examples</a></li>
+</ul>
+<p><span class="caption-text">C# Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html">C# APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-data-structures">C# Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-examples">C# Examples</a></li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Java APIs</a> &raquo;</li>
+        
+      <li>Java EKYC API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/java/public/ekyc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="java-ekyc-api">
+<span id="java-public-ekyc"></span><h1>Java EKYC API<a class="headerlink" href="#java-ekyc-api" title="Permalink to this headline">¶</a></h1>
+<p>oneML module to run ekyc pipeline.</p>
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face7EKYCOpsE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face7EKYCOpsE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face7EKYCOpsE"></span><span id="org::sertiscorp::oneml::face::EKYCOps"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_ops"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">EKYCOps</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face7EKYCOpsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_ops_1a07e98131b45f464c60e1e139ada2f09b"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face7EKYCOps7EKYCOpsE7boolean7boolean">
+<span id="_CPPv3N3org10sertiscorp5oneml4face7EKYCOps7EKYCOpsE7boolean7boolean"></span><span id="_CPPv2N3org10sertiscorp5oneml4face7EKYCOps7EKYCOpsE7boolean7boolean"></span><span id="org::sertiscorp::oneml::face::EKYCOps::EKYCOps__boolean.boolean"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_ops_1a6b939c90437a40c20b04ef4fe0e8cd7f"></span><code class="sig-name descname">EKYCOps</code><span class="sig-paren">(</span>boolean <em>blur_check</em>, boolean <em>pad_check</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face7EKYCOps7EKYCOpsE7boolean7boolean" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYCOps object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">blur_check</span></code>: whether to run blur check. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pad_check</span></code>: whether to run digital and paper pad checks. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4EKYCE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4EKYCE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4EKYCE"></span><span id="org::sertiscorp::oneml::face::EKYC"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">EKYC</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4EKYCE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_1acf583705f05c1590d0ee990e76458d04"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4EKYC4EKYCE14LicenseManager">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4EKYC4EKYCE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4EKYC4EKYCE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::EKYC::EKYC__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_1af21a2e84afdde571130586effa6b0e48"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4EKYC4EKYCE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYC object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceDetector12FaceEmbedder14LicenseManager">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceDetector12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceDetector12FaceEmbedder14LicenseManager"></span><span id="org::sertiscorp::oneml::face::EKYC::EKYC__FaceDetector.FaceEmbedder.LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_1a5dd631508ac7909dc2a7f739b00a11c4"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_detector.html#_CPPv4N3org10sertiscorp5oneml4face12FaceDetectorE" title="org::sertiscorp::oneml::face::FaceDetector">FaceDetector</a> <em>face_detector</em>, <a class="reference internal" href="face_embedder.html#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedderE" title="org::sertiscorp::oneml::face::FaceEmbedder">FaceEmbedder</a> <em>face_embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceDetector12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYC object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">face_detector</span></code>: FaceDetector. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">face_embedder</span></code>: FaceEmbedder. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceEmbedder14LicenseManager">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceEmbedder14LicenseManager"></span><span id="org::sertiscorp::oneml::face::EKYC::EKYC__FaceEmbedder.LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_1a43aa28341a011521f954a3f0406992e6"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_embedder.html#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedderE" title="org::sertiscorp::oneml::face::FaceEmbedder">FaceEmbedder</a> <em>face_embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYC object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">face_embedder</span></code>: FaceEmbedder. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceDetector14LicenseManager">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceDetector14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceDetector14LicenseManager"></span><span id="org::sertiscorp::oneml::face::EKYC::EKYC__FaceDetector.LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_1a4c3ea2cbbc6ee12770e5368c761a47e2"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_detector.html#_CPPv4N3org10sertiscorp5oneml4face12FaceDetectorE" title="org::sertiscorp::oneml::face::FaceDetector">FaceDetector</a> <em>face_detector</em>, <a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4EKYC4EKYCE12FaceDetector14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYC object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">face_detector</span></code>: FaceDetector. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4EKYC8getUsageEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4EKYC8getUsageEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4EKYC8getUsageEv"></span><span id="org::sertiscorp::oneml::face::EKYC::getUsage"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_1a6170ffbeb61a3cce9cf37fd727a75012"></span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face11UsageReportE" title="org::sertiscorp::oneml::face::UsageReport">UsageReport</a> <code class="sig-name descname">getUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4EKYC8getUsageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get usage report. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face4EKYC3runE5Image5Image7EKYCOps7EKYCOps">
+<span id="_CPPv3N3org10sertiscorp5oneml4face4EKYC3runE5Image5Image7EKYCOps7EKYCOps"></span><span id="_CPPv2N3org10sertiscorp5oneml4face4EKYC3runE5Image5Image7EKYCOps7EKYCOps"></span><span id="org::sertiscorp::oneml::face::EKYC::run__Image.Image.EKYCOps.EKYCOps"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_1a5a20bb0cfaac8696ad6012b8a8f6762b"></span><a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face10EKYCResultE" title="org::sertiscorp::oneml::face::EKYCResult">EKYCResult</a> <code class="sig-name descname">run</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>image1</em>, <a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>image2</em>, <a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face7EKYCOpsE" title="org::sertiscorp::oneml::face::EKYCOps">EKYCOps</a> <em>image1_ops</em>, <a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face7EKYCOpsE" title="org::sertiscorp::oneml::face::EKYCOps">EKYCOps</a> <em>image2_ops</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face4EKYC3runE5Image5Image7EKYCOps7EKYCOps" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Run EKYC pipeline. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>EKYCResult</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">image1</span></code>: image1, an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image2</span></code>: image2, an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image1_ops</span></code>: EKYCOps for image1. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image2_ops</span></code>: EKYCOps for image2. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face10EKYCResultE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face10EKYCResultE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face10EKYCResultE"></span><span id="org::sertiscorp::oneml::face::EKYCResult"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_result"></span><em class="property">class </em><code class="sig-prename descclassname">org::sertiscorp::oneml::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">EKYCResult</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face10EKYCResultE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_result_1a25af8e1b5a8c6737ba43f23b4e66c955"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face10EKYCResult11getDistanceEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face10EKYCResult11getDistanceEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face10EKYCResult11getDistanceEv"></span><span id="org::sertiscorp::oneml::face::EKYCResult::getDistance"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_result_1ab61dfacd8ba6d4f3961de4332d3908e5"></span>float <code class="sig-name descname">getDistance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face10EKYCResult11getDistanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get distance between image1 and image2. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>float </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face10EKYCResult12isSamePersonEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face10EKYCResult12isSamePersonEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face10EKYCResult12isSamePersonEv"></span><span id="org::sertiscorp::oneml::face::EKYCResult::isSamePerson"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_result_1a59958438ffb640694f9fcded025a7ed8"></span>boolean <code class="sig-name descname">isSamePerson</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face10EKYCResult12isSamePersonEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return whether the two input images are the same person. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face10EKYCResult15getReturnStatusEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face10EKYCResult15getReturnStatusEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face10EKYCResult15getReturnStatusEv"></span><span id="org::sertiscorp::oneml::face::EKYCResult::getReturnStatus"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_result_1ab7c32baddc7232cee80eed47b9444569"></span>int <code class="sig-name descname">getReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face10EKYCResult15getReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get return status. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>int </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face10EKYCResult12getFacePosesEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face10EKYCResult12getFacePosesEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face10EKYCResult12getFacePosesEv"></span><span id="org::sertiscorp::oneml::face::EKYCResult::getFacePoses"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_result_1a3f397519ab684cbfa6067e7dfe3c19f3"></span>FacePoseList <code class="sig-name descname">getFacePoses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face10EKYCResult12getFacePosesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get result face poses. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FacePostList</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face10EKYCResult12getLandmarksEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face10EKYCResult12getLandmarksEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face10EKYCResult12getLandmarksEv"></span><span id="org::sertiscorp::oneml::face::EKYCResult::getLandmarks"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_result_1aa193f851cd07d57205f255e7df0a41ac"></span>Landmark5List <code class="sig-name descname">getLandmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face10EKYCResult12getLandmarksEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get result landmarks. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>Landmark5List</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face10EKYCResult9getBBoxesEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face10EKYCResult9getBBoxesEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face10EKYCResult9getBBoxesEv"></span><span id="org::sertiscorp::oneml::face::EKYCResult::getBBoxes"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_result_1adc39578c515cd9b271c059303637b8da"></span>BBoxList <code class="sig-name descname">getBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face10EKYCResult9getBBoxesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get result Bounding Boxes. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>BBoxList</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N3org10sertiscorp5oneml4faceE">
+<span id="_CPPv3N3org10sertiscorp5oneml4faceE"></span><span id="_CPPv2N3org10sertiscorp5oneml4faceE"></span><span id="org::sertiscorp::oneml::face"></span><span class="target" id="namespaceorg_1_1sertiscorp_1_1oneml_1_1face"></span><em class="property">namespace </em><code class="sig-prename descclassname">org::sertiscorp::oneml<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">face</code><br /></dt>
+<dd><dl class="cpp enum">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face10EKYCStatusE">
+<span id="_CPPv3N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face10EKYCStatusE"></span><span id="_CPPv2N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face10EKYCStatusE"></span><span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_status"></span><em class="property">enum </em><code class="sig-name descname">EKYCStatus</code><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face3org10sertiscorp5oneml4face10EKYCStatusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_status_1aef1996a174fe8296e30b9a68993c3554"></span><code class="sig-name descname">Empty   =(FaceJNI.EKYCStatus_Empty_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_status_1ad589540499e6300245019a3007780e2e"></span><code class="sig-name descname">Success   =(FaceJNI.EKYCStatus_Success_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_status_1a9ac6c22ae010b9372deb6e9a4cc18249"></span><code class="sig-name descname">ImageBlurCheckFail   =(FaceJNI.EKYCStatus_ImageBlurCheckFail_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_status_1a792f5763babef2f9f7d74ef1e527e2f1"></span><code class="sig-name descname">DigitalPadFail   =(FaceJNI.EKYCStatus_DigitalPadFail_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_status_1a679a07b301624bfe85b256de21b07c70"></span><code class="sig-name descname">PaperPadFail   =(FaceJNI.EKYCStatus_PaperPadFail_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_status_1a9562acaf05d3db971cbc964ab2992547"></span><code class="sig-name descname">NoFaceFound   =(FaceJNI.EKYCStatus_NoFaceFound_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_e_k_y_c_status_1a63ea9949e96db8bb49d3c60c99ca9b3d"></span><code class="sig-name descname">FaceBlurCheckFail   =(FaceJNI.EKYCStatus_FaceBlurCheckFail_get())</code></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="utils.html" class="btn btn-neutral float-right" title="Java Utils API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="challenge_response.html" class="btn btn-neutral float-left" title="Java Challenge Response API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

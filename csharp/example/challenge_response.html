@@ -39,6 +39,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Golang Examples" href="../../go/index.html" />
     <link rel="prev" title="C# Vehicle Detector Example" href="vehicle_detector.html" /> 
 </head>
 
@@ -63,7 +64,7 @@
             
             
               <div class="version">
-                v3.7.0
+                v3.8.0
               </div>
             
           
@@ -111,6 +112,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">C# APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C# Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C# Examples</a></li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
 </ul>
 
             
@@ -246,6 +251,21 @@ challenge.Reset()
 <span class="n">Image</span><span class="w"> </span><span class="n">bestFrame</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">GetBestFrame</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
+<p>Cleanup</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">faceDetector</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span><span class="w"></span>
+<span class="n">faceLandmark</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span><span class="w"></span>
+<span class="n">challenge</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or wrap the application with</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">FaceDetector</span><span class="w"> </span><span class="n">faceDetector</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceDetector</span><span class="p">())</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">FaceLandmarkDetector</span><span class="w"> </span><span class="n">faceLandmark</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceLandmarkDetector</span><span class="p">())</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">ChallengeResponse</span><span class="w"> </span><span class="n">challenge</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponse</span><span class="p">())</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="c1">// use faceDetector, faceLandmark, challenge here</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
 </section>
 
 
@@ -254,6 +274,7 @@ challenge.Reset()
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../../go/index.html" class="btn btn-neutral float-right" title="Golang Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="vehicle_detector.html" class="btn btn-neutral float-left" title="C# Vehicle Detector Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
@@ -261,7 +282,7 @@ challenge.Reset()
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, Sertis Corp Co., Ltd..
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
 
     </p>
   </div>
