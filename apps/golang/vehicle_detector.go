@@ -17,10 +17,12 @@ func main() {
 	// load Image
 	filePath := path.Join(testAssetPath, "vehicle-detect-set/vehicle/cars.jpg")
 	oneMLUtils := alpr.NewUtils(licenseManager)
+	defer alpr.DeleteUtils(oneMLUtils)
 	img := oneMLUtils.ReadImageCV(filePath)
 
 	// create vehicle detector
 	vehicleDetector := alpr.NewVehicleDetector(licenseManager)
+	defer alpr.DeleteVehicleDetector(vehicleDetector)
 	result := vehicleDetector.Detect(img)
 
 	fmt.Println("Vehicles:", result.GetSize())

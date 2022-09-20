@@ -273,12 +273,6 @@ public abstract class CameraActivity extends AppCompatActivity
     super.onStop();
   }
 
-  @Override
-  public synchronized void onDestroy() {
-    LOGGER.d("onDestroy " + this);
-    super.onDestroy();
-  }
-
   protected synchronized void runInBackground(final Runnable r) {
     if (handler != null) {
       handler.post(r);

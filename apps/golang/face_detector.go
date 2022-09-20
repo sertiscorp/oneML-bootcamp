@@ -17,6 +17,8 @@ func main() {
 
 	oneMLUtils := face.NewUtils(licenseManager)
 	faceDetector := face.NewFaceDetector(licenseManager)
+	defer face.DeleteUtils(oneMLUtils)
+	defer face.DeleteFaceDetector(faceDetector)
 
 	// load Image
 	filePath := path.Join(testAssetPath, "face-detect-set/face/0.jpg")

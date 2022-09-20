@@ -19,6 +19,9 @@ func main() {
 	faceEmbedder := face.NewFaceEmbedder(licenseManager)
 	faceId := face.NewFaceId(faceEmbedder, licenseManager)
 	oneMLUtils := face.NewUtils(licenseManager)
+	defer face.DeleteUtils(oneMLUtils)
+	defer face.DeleteFaceEmbedder(faceEmbedder)
+	defer face.DeleteFaceId(faceId)
 
 	// load Image
 	filePath1 := path.Join(testAssetPath, "register-set/Colin_Powell/colin_powell_0074.jpg")

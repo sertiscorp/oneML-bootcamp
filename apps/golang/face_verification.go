@@ -20,6 +20,10 @@ func main() {
 	faceEmbedder := face.NewFaceEmbedder(licenseManager)
 	faceId := face.NewFaceId(faceEmbedder, licenseManager)
 	utils := face.NewUtils(licenseManager)
+	defer face.DeleteUtils(utils)
+	defer face.DeleteFaceDetector(faceDetector)
+	defer face.DeleteFaceEmbedder(faceEmbedder)
+	defer face.DeleteFaceId(faceId)
 
 	// Load images
 	img1 := utils.ReadImageCV(path.Join(testAssetPath, "register-set/Colin_Powell/colin_powell_0074.jpg"))

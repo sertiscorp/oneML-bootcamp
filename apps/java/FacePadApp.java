@@ -38,5 +38,9 @@ public class FacePadApp {
 
         report = padPaper.getUsage();
         report.toLog();
+
+        padPaper.delete();
+        padRgb.delete();
+        utils.delete();
     }
 }
