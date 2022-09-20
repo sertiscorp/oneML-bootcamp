@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.1] - 2022-09-20
+### Changed
+- Improve memory management in all apps -> [04a6bfe4](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/04a6bfe4935eb2fdb869bf3a9409102a2a266656)
+
 ## [0.9.0] - 2022-09-06
 ### Added
 - FacePad apps and EKYC app for C++ -> [dd6fbf68](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/dd6fbf686a6caf57316c5742f86c212bfbb3a778)
