@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.8.0
+                v3.9.0
               </div>
             
           
@@ -115,6 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="face_id.html">C# Face ID API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="face_pad.html">C# Face Pad API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C# Vehicle Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ekyc.html">C# EKYC API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">C# Utils API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="license_manager.html">C# License Manager API</a></li>
 </ul>
@@ -223,7 +224,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError8GetUsageEv">
-<span id="_CPPv3N19PhonyNameDueToError8GetUsageEv"></span><span id="_CPPv2N19PhonyNameDueToError8GetUsageEv"></span><span id="PhonyNameDueToError::GetUsage"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_detector_1adecf891a7e0780d1aecd85c1a1b29946"></span>UsageReport <code class="sig-name descname">GetUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError8GetUsageEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError8GetUsageEv"></span><span id="_CPPv2N19PhonyNameDueToError8GetUsageEv"></span><span id="PhonyNameDueToError::GetUsage"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_detector_1adecf891a7e0780d1aecd85c1a1b29946"></span>UsageReport <code class="sig-name descname">GetUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get a report of the usage. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
@@ -277,8 +278,19 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError7GetSizeEv">
+<span id="_CPPv3N19PhonyNameDueToError7GetSizeEv"></span><span id="_CPPv2N19PhonyNameDueToError7GetSizeEv"></span><span id="PhonyNameDueToError::GetSize"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_detector_result_1ab4adacc5a244cec32527d9148a42be62"></span>int <code class="sig-name descname">GetSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7GetSizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get number of detections. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an integer. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError9GetBBoxesEv">
-<span id="_CPPv3N19PhonyNameDueToError9GetBBoxesEv"></span><span id="_CPPv2N19PhonyNameDueToError9GetBBoxesEv"></span><span id="PhonyNameDueToError::GetBBoxes"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_detector_result_1a7da871c6e0ae70ce77e4154233db154e"></span>BBoxList <code class="sig-name descname">GetBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9GetBBoxesEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError9GetBBoxesEv"></span><span id="_CPPv2N19PhonyNameDueToError9GetBBoxesEv"></span><span id="PhonyNameDueToError::GetBBoxes"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_detector_result_1a7da871c6e0ae70ce77e4154233db154e"></span>BBoxList <code class="sig-name descname">GetBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get result Bounding Boxes. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>BBoxList</strong>. </p>
@@ -300,7 +312,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError12GetLandmarksEv">
-<span id="_CPPv3N19PhonyNameDueToError12GetLandmarksEv"></span><span id="_CPPv2N19PhonyNameDueToError12GetLandmarksEv"></span><span id="PhonyNameDueToError::GetLandmarks"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_detector_result_1a04b210f0469c6e775ce667ad5bae26e2"></span>Landmark5List <code class="sig-name descname">GetLandmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12GetLandmarksEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError12GetLandmarksEv"></span><span id="_CPPv2N19PhonyNameDueToError12GetLandmarksEv"></span><span id="PhonyNameDueToError::GetLandmarks"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_detector_result_1a04b210f0469c6e775ce667ad5bae26e2"></span>Landmark5List <code class="sig-name descname">GetLandmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get result landmarks. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>Landmark5List</strong>. </p>
@@ -322,7 +334,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">
-<span id="_CPPv3N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="_CPPv2N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="PhonyNameDueToError::GetReturnStatus"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_detector_result_1a8c7a899415c1248fbdd327b0bf475371"></span>StatusCodeList <code class="sig-name descname">GetReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="_CPPv2N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="PhonyNameDueToError::GetReturnStatus"></span><span class="target" id="class_one_m_l_1_1_face_1_1_face_detector_result_1a8c7a899415c1248fbdd327b0bf475371"></span>StatusCodeList <code class="sig-name descname">GetReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get result status code. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>StatusCodeList</strong>. </p>

@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>C# EKYC API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C# Utils API" href="utils.html" />
+    <link rel="prev" title="C# Challenge Response API" href="challenge_response.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v3.9.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
+</ul>
+<p><span class="caption-text">C# Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">C# APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="face_detector.html">C# Face Detector API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_embedder.html">C# Face Embedder API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_id.html">C# Face ID API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face_pad.html">C# Face Pad API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vehicle_detector.html">C# Vehicle Detector API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C# EKYC API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">C# Utils API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">C# License Manager API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C# Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C# Examples</a></li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">C# APIs</a> &raquo;</li>
+        
+      <li>C# EKYC API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/csharp/public/ekyc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="c-ekyc-api">
+<span id="cs-public-ekyc"></span><h1>C# EKYC API<a class="headerlink" href="#c-ekyc-api" title="Permalink to this headline">¶</a></h1>
+<p>oneML module to run ekyc pipeline.</p>
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_ops"></span><code class="sig-name descname">OneML.Face.EKYCOps : public global.SystemIDisposable</code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError7DisposeEv">
+<span id="_CPPv3N19PhonyNameDueToError7DisposeEv"></span><span id="_CPPv2N19PhonyNameDueToError7DisposeEv"></span><span id="PhonyNameDueToError::Dispose"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_ops_1a0b4058663884c5b30eeb95776bc1aab5"></span>void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError7EKYCOpsEbb">
+<span id="_CPPv3N19PhonyNameDueToError7EKYCOpsEbb"></span><span id="_CPPv2N19PhonyNameDueToError7EKYCOpsEbb"></span><span id="PhonyNameDueToError::EKYCOps__b.b"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_ops_1a1892bbe67ab22938b3ebddb622b3214d"></span><code class="sig-name descname">EKYCOps</code><span class="sig-paren">(</span>bool <em>blur_check</em>, bool <em>pad_check</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYCOps object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">blur_check</span></code>: whether to run blur check. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pad_check</span></code>: whether to run digital and paper pad checks. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c"></span><code class="sig-name descname">OneML.Face.EKYC : public global.SystemIDisposable</code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1ab80b8277b91c23169cf56bc4b1fa353d"></span>void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError4EKYCE14LicenseManager">
+<span id="_CPPv3N19PhonyNameDueToError4EKYCE14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1aa5e588291ad619ee3dac246d7d764988"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYC object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager">
+<span id="_CPPv3N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__FaceDetector.FaceEmbedder.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1ac83130d512719e98514118f90a3db690"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_detector.html#_CPPv4N19PhonyNameDueToError12FaceDetectorE14LicenseManager" title="PhonyNameDueToError::FaceDetector">FaceDetector</a> <em>face_detector</em>, <a class="reference internal" href="face_embedder.html#_CPPv4N19PhonyNameDueToError12FaceEmbedderE14LicenseManager" title="PhonyNameDueToError::FaceEmbedder">FaceEmbedder</a> <em>face_embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYC object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">face_detector</span></code>: FaceDetector. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">face_embedder</span></code>: FaceEmbedder. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager">
+<span id="_CPPv3N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__FaceEmbedder.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1a93d43eb3ef126aa0fb746289aee6e191"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_embedder.html#_CPPv4N19PhonyNameDueToError12FaceEmbedderE14LicenseManager" title="PhonyNameDueToError::FaceEmbedder">FaceEmbedder</a> <em>face_embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYC object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">face_embedder</span></code>: FaceEmbedder. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager">
+<span id="_CPPv3N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__FaceDetector.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1abd3ce828fab056e02740f1f80e5ce729"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_detector.html#_CPPv4N19PhonyNameDueToError12FaceDetectorE14LicenseManager" title="PhonyNameDueToError::FaceDetector">FaceDetector</a> <em>face_detector</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct an EKYC object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">face_detector</span></code>: FaceDetector. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manager</span></code>: LicenseManager. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError8GetUsageEv">
+<span id="_CPPv3N19PhonyNameDueToError8GetUsageEv"></span><span id="_CPPv2N19PhonyNameDueToError8GetUsageEv"></span><span id="PhonyNameDueToError::GetUsage"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1a7ffaaa3e312262584baedc869d995448"></span>UsageReport <code class="sig-name descname">GetUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError8GetUsageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get usage report. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps">
+<span id="_CPPv3N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps"></span><span id="_CPPv2N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps"></span><span id="PhonyNameDueToError::Run__Image.Image.EKYCOps.EKYCOps"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1a8281df0684d5a7be3812fb95697336bd"></span>EKYCResult <code class="sig-name descname">Run</code><span class="sig-paren">(</span>Image <em>image1</em>, Image <em>image2</em>, <a class="reference internal" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbb" title="PhonyNameDueToError::EKYCOps">EKYCOps</a> <em>image1_ops</em>, <a class="reference internal" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbb" title="PhonyNameDueToError::EKYCOps">EKYCOps</a> <em>image2_ops</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Run EKYC pipeline. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>EKYCResult</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">image1</span></code>: image1, an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image2</span></code>: image2, an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image1_ops</span></code>: EKYCOps for image1. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image2_ops</span></code>: EKYCOps for image2. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result"></span><code class="sig-name descname">OneML.Face.EKYCResult : public global.SystemIDisposable</code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1addedfba6b0142eff490e2592df07c52f"></span>void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Gracefully destroy the object and free memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError11GetDistanceEv">
+<span id="_CPPv3N19PhonyNameDueToError11GetDistanceEv"></span><span id="_CPPv2N19PhonyNameDueToError11GetDistanceEv"></span><span id="PhonyNameDueToError::GetDistance"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a37650bfcd19ad0ab161b450caf98138f"></span>float <code class="sig-name descname">GetDistance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError11GetDistanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get distance between image1 and image2. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>float </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError12IsSamePersonEv">
+<span id="_CPPv3N19PhonyNameDueToError12IsSamePersonEv"></span><span id="_CPPv2N19PhonyNameDueToError12IsSamePersonEv"></span><span id="PhonyNameDueToError::IsSamePerson"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1aad2d54a3b0c1a7c2793d0c747dfd906d"></span>bool <code class="sig-name descname">IsSamePerson</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12IsSamePersonEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return whether the two input images are the same person. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>bool </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">
+<span id="_CPPv3N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="_CPPv2N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="PhonyNameDueToError::GetReturnStatus"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1abafa2aed1f3e8067c2b4720c8b6438e9"></span>int <code class="sig-name descname">GetReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get return status. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>int </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError9GetBBoxesEv">
+<span id="_CPPv3N19PhonyNameDueToError9GetBBoxesEv"></span><span id="_CPPv2N19PhonyNameDueToError9GetBBoxesEv"></span><span id="PhonyNameDueToError::GetBBoxes"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a834f7e6d2712d6e37dcfe9608e6b3d2b"></span>BBoxList <code class="sig-name descname">GetBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9GetBBoxesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the image1 and image2 cropped face BBox objects. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>BBoxList</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError12GetLandmarksEv">
+<span id="_CPPv3N19PhonyNameDueToError12GetLandmarksEv"></span><span id="_CPPv2N19PhonyNameDueToError12GetLandmarksEv"></span><span id="PhonyNameDueToError::GetLandmarks"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a4d0eecb5e73252c309c749bfa99fc566"></span>Landmark5List <code class="sig-name descname">GetLandmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12GetLandmarksEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the image1 and image2 cropped face FaceLandmark5 objects. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>Landmark5List</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError12GetFacePosesEv">
+<span id="_CPPv3N19PhonyNameDueToError12GetFacePosesEv"></span><span id="_CPPv2N19PhonyNameDueToError12GetFacePosesEv"></span><span id="PhonyNameDueToError::GetFacePoses"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1ad8c4a187e9d7ff40c9eb3ee5d35f7fdf"></span>FacePoseList <code class="sig-name descname">GetFacePoses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12GetFacePosesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the image1 and image2 cropped face Pose values. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FacePostList</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="cpp enum">
+<dt id="_CPPv410EKYCStatus">
+<span id="_CPPv310EKYCStatus"></span><span id="_CPPv210EKYCStatus"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8"></span><em class="property">enum </em><code class="sig-name descname">EKYCStatus</code><a class="headerlink" href="#_CPPv410EKYCStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10EKYCStatus5EmptyE">
+<span id="_CPPv3N10EKYCStatus5EmptyE"></span><span id="_CPPv2N10EKYCStatus5EmptyE"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8ace2c8aed9c2fa0cfbed56cbda4d8bf07"></span><em class="property">enumerator </em><code class="sig-name descname">Empty</code><a class="headerlink" href="#_CPPv4N10EKYCStatus5EmptyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10EKYCStatus7SuccessE">
+<span id="_CPPv3N10EKYCStatus7SuccessE"></span><span id="_CPPv2N10EKYCStatus7SuccessE"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8a505a83f220c02df2f85c3810cd9ceb38"></span><em class="property">enumerator </em><code class="sig-name descname">Success</code><a class="headerlink" href="#_CPPv4N10EKYCStatus7SuccessE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10EKYCStatus18ImageBlurCheckFailE">
+<span id="_CPPv3N10EKYCStatus18ImageBlurCheckFailE"></span><span id="_CPPv2N10EKYCStatus18ImageBlurCheckFailE"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8ae7393791f9088a750f12748ca5b74090"></span><em class="property">enumerator </em><code class="sig-name descname">ImageBlurCheckFail</code><a class="headerlink" href="#_CPPv4N10EKYCStatus18ImageBlurCheckFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10EKYCStatus14DigitalPadFailE">
+<span id="_CPPv3N10EKYCStatus14DigitalPadFailE"></span><span id="_CPPv2N10EKYCStatus14DigitalPadFailE"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8a098092ad693d29acdc6c59f8f32c5056"></span><em class="property">enumerator </em><code class="sig-name descname">DigitalPadFail</code><a class="headerlink" href="#_CPPv4N10EKYCStatus14DigitalPadFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10EKYCStatus12PaperPadFailE">
+<span id="_CPPv3N10EKYCStatus12PaperPadFailE"></span><span id="_CPPv2N10EKYCStatus12PaperPadFailE"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8a1c78ada9d242aadde3966852443c5c02"></span><em class="property">enumerator </em><code class="sig-name descname">PaperPadFail</code><a class="headerlink" href="#_CPPv4N10EKYCStatus12PaperPadFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10EKYCStatus11NoFaceFoundE">
+<span id="_CPPv3N10EKYCStatus11NoFaceFoundE"></span><span id="_CPPv2N10EKYCStatus11NoFaceFoundE"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8a1f9d6b144d2b6e2129ff53113d6c0116"></span><em class="property">enumerator </em><code class="sig-name descname">NoFaceFound</code><a class="headerlink" href="#_CPPv4N10EKYCStatus11NoFaceFoundE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10EKYCStatus17FaceBlurCheckFailE">
+<span id="_CPPv3N10EKYCStatus17FaceBlurCheckFailE"></span><span id="_CPPv2N10EKYCStatus17FaceBlurCheckFailE"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8ab3f70b868e7bb93979ef0795625e987d"></span><em class="property">enumerator </em><code class="sig-name descname">FaceBlurCheckFail</code><a class="headerlink" href="#_CPPv4N10EKYCStatus17FaceBlurCheckFailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="utils.html" class="btn btn-neutral float-right" title="C# Utils API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="challenge_response.html" class="btn btn-neutral float-left" title="C# Challenge Response API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
