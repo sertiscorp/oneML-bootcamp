@@ -33,7 +33,7 @@ Introduction and sample apps to showcase `oneML` functionalities and possible us
       - [Requirements](#requirements)
       - [Dependencies](#dependencies)
       - [Apps build](#apps-build-1)
-    - [Cuda](#cuda)
+    - [CUDA](#cuda)
   - [API Reference](#api-reference)
   - [Usage](#usage)
   - [Roadmap](#roadmap)
@@ -46,7 +46,7 @@ Introduction and sample apps to showcase `oneML` functionalities and possible us
 |                  | Supported                                                                                                              |
 |------------------|------------------------------------------------------------------------------------------------------------------------|
 | HW architectures | x86_64 <br> msvc-x64 <br> aarch64-linux-gnu <br> arm-linux-gnueabihf <br> aarch64-linux-android <br> arm-linux-android |
-| HW devices       | CPU <br> GPU, for `cuda` and `android` targets                                                                         |
+| HW devices       | CPU <br> GPU, for `CUDA` and `android` targets                                                                         |
 | OSes             | Ubuntu 20.04, 64 bit <br> Windows 10, 64 bit <br> Android, API level > 23                                              |
 | Coming soon      | `iOS`                                                                                                                  |
 
@@ -63,6 +63,7 @@ In this community edition, `oneML` library provides APIs for 2 main applications
 ### Face applications
 - Face detector
 - Face embedding
+- EKYC
 - Face 1-1 verification
 - Face identification
 
@@ -110,6 +111,7 @@ assets/binaries/x86_64
 The compiled C++ applications are in `bin` folder.
 ```
 bin
+├── ekyc
 ├── face_detector
 ├── face_embedder
 ├── face_id
@@ -198,6 +200,7 @@ assets\binaries\msvc-x64
 The compiled C++ applications are in `bin\Release` folder.
 ```
 bin\Release
+├── ekyc.exe
 ├── face_detector.exe
 ├── face_embedder.exe
 ├── face_id.exe
@@ -337,7 +340,7 @@ To build `Android` apps for `aarch64-linux-android` target:
 ./build.sh -t aarch64-linux-android -jni --clean
 ```
 
-On `x86_64`, Cuda-enabled GPU is also supported. To build `C++` apps for `x86-64-cuda` target:
+On `x86_64`, CUDA-capable GPU is also supported. To build `C++` apps for `x86-64-cuda` target:
 ```bash
 ./build.sh -t x86_64-cuda -cc --clean
 ```
@@ -401,8 +404,8 @@ build.bat -t msvc-x64 -jni --clean
 If `--clean` is not specified, the existing `oneML` artifacts will be used and
 the old build files will not be deleted.
 
-### Cuda
-Currently `x86-64-cuda` target supports only Cuda 11.x runtime on Linux only. We also plan to support Cuda 10.2 in the future. Moreover, it is built with backward compatibility in mind. `x86-64-cuda` supports the following Cuda compute capabilities 
+### CUDA
+Currently `x86-64-cuda` target supports only CUDA 11.x runtime on Linux only. We also plan to support CUDA 10.2 in the future. Moreover, it is built with backward compatibility in mind. `x86-64-cuda` supports the following CUDA compute capabilities 
   * 7.5
   * 7.0
   * 6.1
@@ -434,5 +437,5 @@ For all the applications, it is possible to set the LOG level of `oneML` by sett
 
 ## Roadmap
 - Support `iOS`
-- Support Cuda 10.2
+- Support CUDA 10.2
 - Support Golang on Windows

@@ -69,7 +69,7 @@ IF NOT "%CLEAN%"=="" (
 )
 
 :: artifacts
-SET TAG=v0.9.1
+SET TAG=v0.10.0-rc.0
 SET ARCHIVE_NAME=oneml-bootcamp-%TARGET_ARCH%.tar.gz
 SET BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/%TAG%/%ARCHIVE_NAME%
 IF NOT EXIST "%BINARY_PATH%\%ARCHIVE_NAME%" (
@@ -162,7 +162,7 @@ CD ..\alpr
 POWERSHELL -command "& .\build.ps1"
 CD ..\..\..\..\..\..\apps\csharp
 
-SET APPS=FaceEmbedderApp FaceIdApp FaceDetectorApp FaceVerificationApp FacePadApp VehicleDetectorApp
+SET APPS=FaceEmbedderApp FaceIdApp FaceDetectorApp FaceVerificationApp FacePadApp VehicleDetectorApp EKYCApp
 FOR %%A IN (%APPS%) DO (
   dotnet new console -o %%A
   CD %%A
@@ -227,7 +227,7 @@ IF NOT "%ANDROID_BUILD%"=="" (
   CD ..\..\..\..\..\..\apps\java
   IF NOT EXIST "classes" MKDIR classes
   SET CLASSPATH=classes;%BINARY_PATH%\bindings\java\face\oneml\oneml-face-api.jar;%BINARY_PATH%\bindings\java\alpr\oneml\oneml-alpr-api.jar;%CD%
-  SET APPS=FaceEmbedderApp FaceIdApp FaceDetectorApp FaceVerificationApp FacePadApp VehicleDetectorApp
+  SET APPS=FaceEmbedderApp FaceIdApp FaceDetectorApp FaceVerificationApp FacePadApp VehicleDetectorApp EKYCApp
   FOR %%A IN (%APPS%) DO (
     javac -cp %CLASSPATH% -d classes %%A.java
   )
