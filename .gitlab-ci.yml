@@ -2,13 +2,23 @@ image:
   name: alpine/git:v2.32.0
   entrypoint: ["/bin/sh", "-c"]
 
+variables:
+  ONEML_PATH: sertiscorp/mle/edge/oneml
+  ONEML_REF: v3.9.0  # a tag or branch name to get oneML artifacts from
+  ONEML_COMMIT_HASH: ""  # needed only if ONEML_REF is not a tag
+  BOOTCAMP_TAG: v0.10.0-rc.0  # set manually to the latest or new oneML-bootcamp tag
+  RELEASE_BODY: ""  # generated automatically
+  PRERELEASE: "true"  # set automatically
+  BOOTCAMP_REF: develop  # set automatically
+
 stages:
   - setup
+  - release
   - docker-base
   - docker
   - env-check
   - build
-  - release
+  - pages
 
 #-------------- Scripts --------------
 
@@ -50,9 +60,21 @@ stages:
 
 .base_ci: # Base CI
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_MESSAGE =~ /Creating release/'
       when: never
     - when: on_success
+
+.base_artifacts: # Base CI for pulling artifacts
+  stage: setup
+  rules:
+    - if: '($CI_COMMIT_TAG || $CI_COMMIT_MESSAGE =~ /Creating release/) && $CI_PIPELINE_SOURCE != "merge_request_event"'
+      when: always
+    - when: never
+  script:
+    - echo "Pulling from oneML..."
+  artifacts:
+    paths:
+      - build/
 
 .base_docker: # Base CI for docker stage
   stage: docker-base
@@ -61,7 +83,7 @@ stages:
     DOCKER_DRIVER: overlay2
     DOCKER_FILES: docker/Dockerfile
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_MESSAGE =~ /Creating release/'
       when: never
     - changes:
       - docker/Dockerfile
@@ -89,6 +111,10 @@ stages:
   extends: .base_ci
   stage: build
   image: $BUILD_IMAGE
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH =~ /^release\/+/ || $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_MESSAGE =~ /Creating release/'
+      when: never
+    - when: on_success
   tags:
     - build
   needs:
@@ -104,9 +130,11 @@ stages:
 .base_release: # Base CI for release stage
   stage: release
   rules:
-    - if: $CI_COMMIT_TAG
+    - if: '($CI_COMMIT_TAG || $CI_COMMIT_MESSAGE =~ /Creating release/) && $CI_PIPELINE_SOURCE != "merge_request_event"'
       when: on_success
     - when: never
+  tags:
+    - build
 
 #-------------- Jobs --------------
 
@@ -137,6 +165,104 @@ mirror-pull:
   tags:
     - build
 
+artifacts-pull-aarch64-linux-android:
+  extends: .base_artifacts
+  needs:
+    - project: $ONEML_PATH
+      job: build-bootcamp-aarch64-linux-android
+      ref: $ONEML_REF
+      artifacts: true
+
+artifacts-pull-arm-linux-android:
+  extends: .base_artifacts
+  needs:
+    - project: $ONEML_PATH
+      job: build-bootcamp-arm-linux-android
+      ref: $ONEML_REF
+      artifacts: true
+
+artifacts-pull-aarch64-linux-gnu:
+  extends: .base_artifacts
+  needs:
+    - project: $ONEML_PATH
+      job: build-bootcamp-aarch64-linux-gnu
+      ref: $ONEML_REF
+      artifacts: true
+
+artifacts-pull-arm-linux-gnueabihf:
+  extends: .base_artifacts
+  needs:
+    - project: $ONEML_PATH
+      job: build-bootcamp-arm-linux-gnueabihf
+      ref: $ONEML_REF
+      artifacts: true
+
+artifacts-pull-msvc-x64:
+  extends: .base_artifacts
+  needs:
+    - project: $ONEML_PATH
+      job: build-bootcamp-msvc-x64
+      ref: $ONEML_REF
+      artifacts: true
+
+artifacts-pull-x86_64:
+  extends: .base_artifacts
+  needs:
+    - project: $ONEML_PATH
+      job: build-bootcamp-x86_64
+      ref: $ONEML_REF
+      artifacts: true
+
+artifacts-pull-x86_64-cuda:
+  extends: .base_artifacts
+  needs:
+    - project: $ONEML_PATH
+      job: build-bootcamp-x86_64-cuda-tvm
+      ref: $ONEML_REF
+      artifacts: true
+
+create-release:
+  extends: .base_release
+  before_script:
+    - apk update && apk add curl jq
+  script:
+    - if [[ $ONEML_REF == v* ]]; then ONEML_POSTFIX=${ONEML_REF}; else ONEML_POSTFIX=${ONEML_COMMIT_HASH:0:7}; fi
+    - >
+      BINARIES="";
+      BINARIES="${BINARIES} oneml-bootcamp-x86_64-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp_tvm-x86_64-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-msvc-x64-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp_android-aarch64-linux-android-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp_android-arm-linux-android-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-aarch64-linux-gnu-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-arm-linux-gnueabihf-$ONEML_POSTFIX.tar.gz";
+      export BINARIES=${BINARIES};
+      LABELS="";
+      LABELS="${LABELS} oneml-bootcamp-x86_64.tar.gz";
+      LABELS="${LABELS} oneml-bootcamp-x86_64-cuda.tar.gz";
+      LABELS="${LABELS} oneml-bootcamp-msvc-x64.tar.gz";
+      LABELS="${LABELS} oneml-bootcamp-aarch64-linux-android.tar.gz";
+      LABELS="${LABELS} oneml-bootcamp-arm-linux-android.tar.gz";
+      LABELS="${LABELS} oneml-bootcamp-aarch64-linux-gnu.tar.gz";
+      LABELS="${LABELS} oneml-bootcamp-arm-linux-gnueabihf.tar.gz";
+      export LABELS=${LABELS};
+    - >
+      if [[ -n "$CI_COMMIT_TAG" ]]; then
+        export RELEASE_BODY="$(sed '1,6d' CHANGELOG.md | awk -v n=2 '/## \[/{n--}; n > 0' | sed '$ d' | awk '{printf "%s\\n", $0}')";
+        export PRERELEASE=false;
+        export BOOTCAMP_REF=main;
+        export BOOTCAMP_TAG=$CI_COMMIT_TAG;
+      fi
+    - sh .github/create_release.sh
+  needs:
+    - artifacts-pull-aarch64-linux-android
+    - artifacts-pull-arm-linux-android
+    - artifacts-pull-aarch64-linux-gnu
+    - artifacts-pull-arm-linux-gnueabihf
+    - artifacts-pull-msvc-x64
+    - artifacts-pull-x86_64
+    - artifacts-pull-x86_64-cuda
+
 docker-build-cpu-base:
   extends: .base_docker
   script:
@@ -155,7 +281,7 @@ docker-build-gpu-base:
     - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base -f docker/Dockerfile --build-arg base_image=nvidia/cuda:11.5.1-cudnn8-runtime-ubuntu20.04 .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_MESSAGE =~ /Creating release/'
       when: never
     - changes:
       - docker/Dockerfile
@@ -189,7 +315,7 @@ docker-build-gpu:
     IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-gpu-base
     DEVELOP_IMAGE: $CI_REGISTRY_IMAGE:develop-gpu-base
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_MESSAGE =~ /Creating release/'
       when: never
     - changes:
       - docker/Dockerfile.gpu
@@ -214,7 +340,7 @@ docker-build-android:
     IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-cpu-base
     DEVELOP_IMAGE: $CI_REGISTRY_IMAGE:develop-cpu-base
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_MESSAGE =~ /Creating release/'
       when: never
     - changes:
       - docker/Dockerfile.android
@@ -340,6 +466,7 @@ build-csharp-x86_64-cuda:
 update-github-pages:
   # NOTE: We publish the API doc to GitHub Pages by mirroring `gh-pages` branch from GitLab to GitHub.
   extends: .base_release
+  stage: pages
   variables:
     TARGET_ARCH: x86_64
   script:
@@ -373,3 +500,7 @@ update-github-pages:
       else
         echo "Not found any changes API in docs. Skipped";
       fi
+  rules:
+    - if: '$CI_COMMIT_TAG && $CI_PIPELINE_SOURCE != "merge_request_event"'
+      when: on_success
+    - when: never
