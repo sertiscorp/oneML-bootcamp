@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.0] - 2022-10-19
+### Added
+- EKYC Apps -> [96cfa10c](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/96cfa10c78723dc4e00e12fc9994e79fc85a1a4c)
+
+### Changed
+- Update CUDA and dependencies -> [062c8e3e](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/062c8e3ed33aaa0ec8c9b03d55d7c3c7562abaa6)
+- Update mirror pull -> [d423ec00](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/d423ec00125f2a74896a8ab1f862fa2b4a7ef6f1)
+- Automate release process -> [da5c4b63](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/da5c4b6356f9097fe5176b8dcc78a0a59bfbea75)
+
 ## [0.9.1] - 2022-09-20
 ### Changed
 - Improve memory management in all apps -> [04a6bfe4](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/04a6bfe4935eb2fdb869bf3a9409102a2a266656)

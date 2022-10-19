@@ -1,6 +1,8 @@
 ARG base_image
 FROM $base_image
 
-RUN curl -L https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/libcublas10_10.2.3.254-1_amd64.deb > cublas.deb && \
-    dpkg -i cublas.deb
-ENV LD_LIBRARY_PATH=/usr/local/cuda-10.2/targets/x86_64-linux/lib:${LD_LIBRARY_PATH}
+RUN curl -L https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/libcublas-11-4_11.6.5.2-1_amd64.deb > cublas.deb && \
+    dpkg -i cublas.deb && \
+    rm cublas.deb
+
+ENV LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
