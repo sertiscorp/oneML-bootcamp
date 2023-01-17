@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.1] - 2023-01-17
+### Fixed
+- Build artifact download URLs -> [1aee8f63](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/1aee8f631f465f43bc89beae35ee1e27f781f51a)
+
 ## [0.10.0] - 2022-10-19
 ### Added
 - EKYC Apps -> [96cfa10c](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/96cfa10c78723dc4e00e12fc9994e79fc85a1a4c)
