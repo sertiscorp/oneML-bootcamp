@@ -194,7 +194,7 @@ artifacts-pull-x86_64-cuda:
 create-release:
   extends: .base_release
   before_script:
-    - apk update && apk add curl jq
+    - apk update && apk add --upgrade --no-cache curl jq
   script:
     - if [[ $ONEML_REF == v* ]]; then ONEML_POSTFIX=${ONEML_REF}; else ONEML_POSTFIX=${ONEML_COMMIT_HASH:0:7}; fi
     - >
@@ -439,7 +439,7 @@ update-github-pages:
     - *git_auth
     - export BINARY_PATH=${PWD}/assets/binaries/${TARGET_ARCH}
     - export BASE_URL=https://github.com/sertiscorp/oneML-bootcamp/releases/download/${CI_COMMIT_TAG}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
-    - apk add --update curl perl && rm -rf /var/cache/apk/*
+    - apk add --upgrade --no-cache curl perl && rm -rf /var/cache/apk/*
     - curl -L ${BASE_URL} > ${BINARY_PATH}/oneml-bootcamp-${TARGET_ARCH}.tar.gz
     - tar xzf ${BINARY_PATH}/oneml-bootcamp-${TARGET_ARCH}.tar.gz -C ${BINARY_PATH}/ --strip-components=1
     # Update `gh-pages` branch
