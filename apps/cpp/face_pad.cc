@@ -32,9 +32,6 @@ int main(int argc, char** argv) {
             << output.get_spoof_prob() << std::endl;
   std::cout << "Spoof classification: " << output.is_spoof() << std::endl;
 
-  oneML::UsageReport report = pad_rgb.get_usage();
-  report.to_log();
-
   // PAD PAPER
   path = ASSETS_DIR_PATH "/pad-paper-set/spoof/1.jpg";
   utils.read_image_cv(path, img);
@@ -47,6 +44,4 @@ int main(int argc, char** argv) {
             << output.get_spoof_prob() << std::endl;
   std::cout << "Spoof classification: " << output.is_spoof() << std::endl;
 
-  report = pad_paper.get_usage();
-  report.to_log();
 }

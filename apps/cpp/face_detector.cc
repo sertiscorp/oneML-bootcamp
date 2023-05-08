@@ -50,6 +50,4 @@ int main(int argc, char** argv) {
     }
   }
 
-  oneML::UsageReport report = detector.get_usage();
-  report.to_log();
 }
