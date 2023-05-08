@@ -22,7 +22,7 @@ class EKYCApp {
         Image image1 = utils.ReadImageCV(path1);
         Image image2 = utils.ReadImageCV(path2);
 
-        EKYCOps ops = new EKYCOps(true, true);
+        EKYCOps ops = new EKYCOps(true);
         EKYCResult result = ekyc.Run(image1, image2, ops, ops);
 
         BBoxList boxes = result.GetBBoxes();
@@ -63,9 +63,6 @@ class EKYCApp {
         using (utils = new Utils(manager))
         {
             Run(path1, path2);
-
-            UsageReport report = ekyc.GetUsage();
-            report.ToLog();
         }
     }
 }

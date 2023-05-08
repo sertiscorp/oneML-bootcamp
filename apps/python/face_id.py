@@ -128,9 +128,6 @@ def main():
     ids = face_id.get_ids()
     print("Gallery size: " + str(len(ids)))
 
-    report = face_id.get_usage()
-    report.to_log()
-
 
 if __name__ == "__main__":
     main()

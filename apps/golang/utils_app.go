@@ -35,6 +35,4 @@ func main() {
 		fmt.Printf("cropImage: %T\n", cropImage)
 	}
 
-	report := oneMLUtils.GetUsage()
-	report.ToLog()
 }

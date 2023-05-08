@@ -20,9 +20,6 @@ class FacePadApp {
             Console.WriteLine("Spoof probability: " + result.GetSpoofProb().ToString(precision));
             Console.WriteLine("Spoof classification: " + result.IsSpoof());
 
-            UsageReport report = pad_rgb.GetUsage();
-            report.ToLog();
-
             // PAD PAPER
             path = basePath + @"pad-paper-set/spoof/1.jpg";
             image = utils.ReadImageCV(path);
@@ -32,8 +29,6 @@ class FacePadApp {
             Console.WriteLine("Spoof probability: " + result.GetSpoofProb().ToString(precision));
             Console.WriteLine("Spoof classification: " + result.IsSpoof());
 
-            report = pad_paper.GetUsage();
-            report.ToLog();
         }
     }
 }

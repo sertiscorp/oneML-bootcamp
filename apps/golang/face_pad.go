@@ -33,9 +33,6 @@ func main() {
 	fmt.Printf("Spoof probability: %.6f\n", result.GetSpoofProb())
 	fmt.Println("Spoof classification:", result.IsSpoof())
 
-	report := padRgb.GetUsage()
-	report.ToLog()
-
 	// PAD PAPER
 	// load Image
 	filePath = path.Join(testAssetPath, "pad-paper-set/spoof/1.jpg")
@@ -47,6 +44,4 @@ func main() {
 	fmt.Printf("Spoof probability: %.6f\n", result.GetSpoofProb())
 	fmt.Println("Spoof classification:", result.IsSpoof())
 
-	report = padPaper.GetUsage()
-	report.ToLog()
 }

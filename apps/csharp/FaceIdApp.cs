@@ -85,8 +85,6 @@ class FaceIdApp {
             IdList idList = faceId.GetIds();
             Console.WriteLine("Gallery size: " + idList.Count());
 
-            UsageReport report = faceId.GetUsage();
-            report.ToLog();
         }
     }
 }

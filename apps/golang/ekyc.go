@@ -34,7 +34,7 @@ func main() {
 	image1 := oneMLUtils.ReadImageCV(filePath1)
 	image2 := oneMLUtils.ReadImageCV(filePath2)
 
-	ops := face.NewEKYCOps(true, true)
+	ops := face.NewEKYCOps(true)
 
 	// run EKYC
 	result := ekyc.Run(image1, image2, ops, ops)
@@ -62,6 +62,4 @@ func main() {
 	lm2 := landmarks.Get(1)
 	PrintResult(bbox2, pose2, lm2)
 
-	report := ekyc.GetUsage()
-	report.ToLog()
 }
