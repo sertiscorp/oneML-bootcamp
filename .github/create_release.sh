@@ -4,7 +4,7 @@ repo=sertiscorp/oneML-bootcamp
 
 upload_url=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
      -d '{"tag_name": "'"$BOOTCAMP_TAG"'", "name":"'"$BOOTCAMP_TAG"'","body":"'"$RELEASE_BODY"'","prerelease":'"$PRERELEASE"', "target_commitish":"'"$BOOTCAMP_REF"'"}' \
-     "https://api.github.com/repos/$repo/releases" | jq -r '.upload_url')
+     "https://api.github.com/repos/$repo/releases")
 
 echo "before URL $upload_url"
 upload_url="${upload_url%\{*}"
