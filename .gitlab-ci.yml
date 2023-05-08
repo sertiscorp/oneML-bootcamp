@@ -6,7 +6,7 @@ variables:
   ONEML_PATH: sertiscorp/mle/edge/oneml
   ONEML_REF: v4.5.0  # a tag or branch name to get oneML artifacts from
   ONEML_COMMIT_HASH: ""  # needed only if ONEML_REF is not a tag
-  BOOTCAMP_TAG: v0.11.0-test2  # set manually to the latest or new oneML-bootcamp tag
+  BOOTCAMP_TAG: v0.11.0-test3  # set manually to the latest or new oneML-bootcamp tag
   RELEASE_BODY: ""  # generated automatically
   PRERELEASE: "true"  # set automatically
   BOOTCAMP_REF: develop  # set automatically
@@ -201,13 +201,13 @@ create-release:
       ls ;
       ls build/;
       BINARIES="";
-      BINARIES="${BINARIES} oneml-bootcamp-x86_64-$ONEML_POSTFIX.tar.gz";
-      BINARIES="${BINARIES} oneml-bootcamp_tvm-x86_64-$ONEML_POSTFIX.tar.gz";
-      BINARIES="${BINARIES} oneml-bootcamp-msvc-x64-$ONEML_POSTFIX.tar.gz";
-      BINARIES="${BINARIES} oneml-bootcamp_android-aarch64-linux-android-$ONEML_POSTFIX.tar.gz";
-      BINARIES="${BINARIES} oneml-bootcamp_android-arm-linux-android-$ONEML_POSTFIX.tar.gz";
-      BINARIES="${BINARIES} oneml-bootcamp-aarch64-linux-gnu-$ONEML_POSTFIX.tar.gz";
-      BINARIES="${BINARIES} oneml-bootcamp-arm-linux-gnueabihf-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-cpu-x86_64-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-cuda-x86_64-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-cpu-msvc-x64-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-android-aarch64-linux-android-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-android-arm-linux-android-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-cpu-aarch64-linux-gnu-$ONEML_POSTFIX.tar.gz";
+      BINARIES="${BINARIES} oneml-bootcamp-cpu-arm-linux-gnueabihf-$ONEML_POSTFIX.tar.gz";
       export BINARIES=${BINARIES};
       LABELS="";
       LABELS="${LABELS} oneml-bootcamp-x86_64.tar.gz";
