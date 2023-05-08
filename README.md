@@ -356,7 +356,14 @@ user has to rely on their own local environment and make sure all the dependenci
 before proceeding with the build process and run the applications.
 
 #### Requirements
-Only Windows 10 64 bit is currently supported.
+- Only Windows 10 64 bit is currently supported.
+- Windows users are required to set an environment variable to configure the trust store for SSL certificates. More [here](https://github.com/googleapis/google-cloud-cpp/tree/main/google/cloud/bigquery/quickstart#window).
+```
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command ^
+    (new-object System.Net.WebClient).Downloadfile( ^
+        'https://pki.google.com/roots.pem', 'roots.pem')
+set GRPC_DEFAULT_SSL_ROOTS_FILE_PATH=%cd%\roots.pem
+```
 
 #### Dependencies
 The following dependencies must be installed in order for the project to build and run

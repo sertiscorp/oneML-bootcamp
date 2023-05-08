@@ -6,7 +6,7 @@ variables:
   ONEML_PATH: sertiscorp/mle/edge/oneml
   ONEML_REF: v4.5.0  # a tag or branch name to get oneML artifacts from
   ONEML_COMMIT_HASH: ""  # needed only if ONEML_REF is not a tag
-  BOOTCAMP_TAG: v0.11.0  # set manually to the latest or new oneML-bootcamp tag
+  BOOTCAMP_TAG: v0.11.0-test  # set manually to the latest or new oneML-bootcamp tag
   RELEASE_BODY: ""  # generated automatically
   PRERELEASE: "true"  # set automatically
   BOOTCAMP_REF: develop  # set automatically
