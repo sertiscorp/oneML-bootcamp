@@ -198,8 +198,6 @@ create-release:
   script:
     - if [[ $ONEML_REF == v* ]]; then ONEML_POSTFIX=${ONEML_REF}; else ONEML_POSTFIX=${ONEML_COMMIT_HASH:0:7}; fi
     - >
-      ls ;
-      ls build/;
       BINARIES="";
       BINARIES="${BINARIES} oneml-bootcamp-cpu-x86_64-$ONEML_POSTFIX.tar.gz";
       BINARIES="${BINARIES} oneml-bootcamp-cuda-x86_64-$ONEML_POSTFIX.tar.gz";
