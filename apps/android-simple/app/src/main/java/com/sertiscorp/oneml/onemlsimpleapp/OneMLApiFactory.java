@@ -22,10 +22,11 @@ public class OneMLApiFactory {
         }else{
             manager.activateTrial();
         }
+        boolean valid = manager.validateActivation() == LicenseStatus.Ok;
         Log.d(TAG, "license: machine_code=" + manager.getMachineCode());
-        Log.d(TAG, "license: valid_activation=" + manager.validateActivation() == LicenseStatus.Ok);
+        Log.d(TAG, "license: valid_activation=" + valid);
         Log.d(TAG, "license: activation_type=" + manager.getActivationType());
-        if (manager.getActivationType() == LicenseStatus.Ok){
+        if (valid){
             Log.d(TAG, "license: expiry_date=" + manager.getActivationExpiryDate());
         }
         return manager;
