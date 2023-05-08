@@ -23,9 +23,9 @@ public class OneMLApiFactory {
             manager.activateTrial();
         }
         Log.d(TAG, "license: machine_code=" + manager.getMachineCode());
-        Log.d(TAG, "license: valid_activation=" + manager.isValidActivation());
+        Log.d(TAG, "license: valid_activation=" + manager.validateActivation() == LicenseStatus.Ok);
         Log.d(TAG, "license: activation_type=" + manager.getActivationType());
-        if (manager.isValidActivation()){
+        if (manager.getActivationType() == LicenseStatus.Ok){
             Log.d(TAG, "license: expiry_date=" + manager.getActivationExpiryDate());
         }
         return manager;
