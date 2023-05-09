@@ -8,6 +8,7 @@ upload_url=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
 
 upload_url="${upload_url%\{*}"
 
+echo "uploading asset to release to url : $upload_url"
 count=0
 for BINARY in ${BINARIES};
 do
