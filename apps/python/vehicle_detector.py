@@ -31,8 +31,6 @@ def main():
         bb = bboxes[i]
         print("BBox[top=%.6f,left=%.6f,bottom=%.6f,right=%.6f]" % (bb.top, bb.left, bb.bottom, bb.right))
 
-    report = detector.get_usage()
-    report.to_log()
 
 if __name__ == "__main__":
     main()

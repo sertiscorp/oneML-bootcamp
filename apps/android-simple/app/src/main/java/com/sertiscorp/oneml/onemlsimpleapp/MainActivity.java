@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                         FaceDetectorResult detectionResult = results.get(i);
                         if (detectionResult.getSize() > 0) {
                             BBoxList bboxes = detectionResult.getBBoxes();
-                            ScoreList scores = detectionResult.getScores();
+                            FloatList scores = detectionResult.getScores();
                             Landmark5List landmarks = detectionResult.getLandmarks();
 
                             Log.d(TAG, String.format("Found %d faces", bboxes.size()));
@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if (detectionResult.getBBoxes().size() > 0) {
                         BBoxList bboxes = detectionResult.getBBoxes();
-                        ScoreList scores = detectionResult.getScores();
+                        FloatList scores = detectionResult.getScores();
                         Landmark5List landmarks = detectionResult.getLandmarks();
 
                         Log.d(TAG, String.format("Found %d faces", bboxes.size()));

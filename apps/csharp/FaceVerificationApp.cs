@@ -64,11 +64,6 @@ class FaceVerificationApp {
             bool same2 = faceId.IsTheSamePerson(img3, img4);
             Console.WriteLine("Is the same person (george_robertson): " + BooleanToInt(same2));
 
-            UsageReport report = detector.GetUsage();
-            report.ToLog();
-
-            report = faceId.GetUsage();
-            report.ToLog();
         }
     }
 }

@@ -37,8 +37,6 @@ class FaceDetectorApp {
                 }
             }
 
-            UsageReport report = detector.GetUsage();
-            report.ToLog();
         }
     }
 }

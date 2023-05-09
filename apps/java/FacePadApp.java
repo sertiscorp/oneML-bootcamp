@@ -24,9 +24,6 @@ public class FacePadApp {
         System.out.println(String.format("Spoof probability: %.6f", result.getSpoofProb()));
         System.out.println("Spoof classification: " + result.isSpoof());
 
-        UsageReport report = padRgb.getUsage();
-        report.toLog();
-
         // PAD PAPER
         path = basePath + "/pad-paper-set/spoof/1.jpg";
         img = utils.readImageCV(path);
@@ -35,9 +32,6 @@ public class FacePadApp {
         System.out.println("Status: " + result.getReturnStatus());
         System.out.println(String.format("Spoof probability: %.6f", result.getSpoofProb()));
         System.out.println("Spoof classification: " + result.isSpoof());
-
-        report = padPaper.getUsage();
-        report.toLog();
 
         padPaper.delete();
         padRgb.delete();

@@ -44,9 +44,6 @@ public class FaceEmbedderApp {
         System.out.println("Embedding sample: " + joinAsString(sample));
         System.out.println(String.format("Embedding sum: %.5f", supplier.get().sum()));
 
-        UsageReport report = embedder.getUsage();
-        report.toLog();
-
         embedder.delete();
         utils.delete();
     }
