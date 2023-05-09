@@ -24,7 +24,7 @@
 <div id="topbar" class="wide"><div class="container">
 <div class="top-heading" id="heading-wide"><a href="../../">oneML\ Go\ Bindings\ Documentation</a></div>
 <div class="top-heading" id="heading-narrow"><a href="../../">oneML\ Go\ Bindings\ Documentation</a></div>
-<!--&lt;a href=&#34;#&#34; id=&#34;menu-button&#34;&gt;&lt;span id=&#34;menu-button-arrow&#34;&gt;▽&lt;/span&gt;&lt;/a&gt;-->
+<!--<a href="#" id="menu-button"><span id="menu-button-arrow">▽</span></a>-->
 <div id="menu">
 <a href="../../" style="margin-right: 10px;">Package Index</a>
 </div>
@@ -57,7 +57,7 @@
 -->
 <!--
 	Note: Static (i.e., not template-generated) href and id
-	attributes start with &#34;pkg-&#34; to make it impossible for
+	attributes start with "pkg-" to make it impossible for
 	them to conflict with generated attributes (some of which
 	correspond to Go identifiers).
 -->
@@ -77,7 +77,7 @@
 			
 			</dl>
 		</div>
-		<!-- The package&#39;s Name is printed as title by the top-level template -->
+		<!-- The package's Name is printed as title by the top-level template -->
 		<div id="pkg-overview" class="toggleVisible">
 			<div class="collapsed">
 				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
@@ -124,9 +124,6 @@
 			
 				
 				<dd><a href="#DeleteMultiImage">func DeleteMultiImage(arg1 MultiImage)</a></dd>
-			
-				
-				<dd><a href="#DeleteUsageReport">func DeleteUsageReport(arg1 UsageReport)</a></dd>
 			
 				
 				<dd><a href="#DeleteUtils">func DeleteUtils(arg1 Utils)</a></dd>
@@ -458,6 +455,9 @@
 					<dd>    <a href="#SwigcptrLicenseManager.GetActivationExpiryDate">func (arg1 SwigcptrLicenseManager) GetActivationExpiryDate() (_swig_ret uint64)</a></dd>
 				
 					
+					<dd>    <a href="#SwigcptrLicenseManager.GetActivationSuspendedDate">func (arg1 SwigcptrLicenseManager) GetActivationSuspendedDate() (_swig_ret uint64)</a></dd>
+				
+					
 					<dd>    <a href="#SwigcptrLicenseManager.GetActivationType">func (arg1 SwigcptrLicenseManager) GetActivationType() (_swig_ret OneMLLicenseActivationType)</a></dd>
 				
 					
@@ -467,25 +467,19 @@
 					<dd>    <a href="#SwigcptrLicenseManager.GetMachineCode">func (arg1 SwigcptrLicenseManager) GetMachineCode() (_swig_ret string)</a></dd>
 				
 					
-					<dd>    <a href="#SwigcptrLicenseManager.GetUsage">func (arg1 SwigcptrLicenseManager) GetUsage() (_swig_ret UsageReport)</a></dd>
-				
-					
 					<dd>    <a href="#SwigcptrLicenseManager.IsTrial">func (arg1 SwigcptrLicenseManager) IsTrial() (_swig_ret bool)</a></dd>
 				
 					
-					<dd>    <a href="#SwigcptrLicenseManager.IsValidActivation">func (arg1 SwigcptrLicenseManager) IsValidActivation() (_swig_ret bool)</a></dd>
-				
-					
 					<dd>    <a href="#SwigcptrLicenseManager.SetKey">func (arg1 SwigcptrLicenseManager) SetKey(arg2 string)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrLicenseManager.SetMachineCode">func (arg1 SwigcptrLicenseManager) SetMachineCode(arg2 string)</a></dd>
 				
 					
 					<dd>    <a href="#SwigcptrLicenseManager.SwigIsLicenseManager">func (p SwigcptrLicenseManager) SwigIsLicenseManager()</a></dd>
 				
 					
 					<dd>    <a href="#SwigcptrLicenseManager.Swigcptr">func (p SwigcptrLicenseManager) Swigcptr() uintptr</a></dd>
+				
+					
+					<dd>    <a href="#SwigcptrLicenseManager.ValidateActivation">func (arg1 SwigcptrLicenseManager) ValidateActivation() (_swig_ret OneMLLicenseStatus)</a></dd>
 				
 			
 				
@@ -524,67 +518,8 @@
 				
 			
 				
-				<dd><a href="#SwigcptrUsageReport">type SwigcptrUsageReport</a></dd>
-				
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.GetApi">func (arg1 SwigcptrUsageReport) GetApi() (_swig_ret string)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.GetApi_calls">func (arg1 SwigcptrUsageReport) GetApi_calls() (_swig_ret int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.GetFail_count">func (arg1 SwigcptrUsageReport) GetFail_count() (_swig_ret int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.GetFirst_updated">func (arg1 SwigcptrUsageReport) GetFirst_updated() (_swig_ret int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.GetLast_updated">func (arg1 SwigcptrUsageReport) GetLast_updated() (_swig_ret int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.GetModel_runs">func (arg1 SwigcptrUsageReport) GetModel_runs() (_swig_ret int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.GetSuccess_count">func (arg1 SwigcptrUsageReport) GetSuccess_count() (_swig_ret int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.SetApi_calls">func (arg1 SwigcptrUsageReport) SetApi_calls(arg2 int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.SetFail_count">func (arg1 SwigcptrUsageReport) SetFail_count(arg2 int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.SetFirst_updated">func (arg1 SwigcptrUsageReport) SetFirst_updated(arg2 int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.SetLast_updated">func (arg1 SwigcptrUsageReport) SetLast_updated(arg2 int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.SetModel_runs">func (arg1 SwigcptrUsageReport) SetModel_runs(arg2 int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.SetSuccess_count">func (arg1 SwigcptrUsageReport) SetSuccess_count(arg2 int)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.SwigIsUsageReport">func (p SwigcptrUsageReport) SwigIsUsageReport()</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.Swigcptr">func (p SwigcptrUsageReport) Swigcptr() uintptr</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.ToFile">func (arg1 SwigcptrUsageReport) ToFile(arg2 string)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrUsageReport.ToLog">func (arg1 SwigcptrUsageReport) ToLog()</a></dd>
-				
-			
-				
 				<dd><a href="#SwigcptrUtils">type SwigcptrUtils</a></dd>
 				
-				
-					
-					<dd>    <a href="#SwigcptrUtils.GetUsage">func (arg1 SwigcptrUtils) GetUsage() (_swig_ret UsageReport)</a></dd>
 				
 					
 					<dd>    <a href="#SwigcptrUtils.ReadImageCV">func (arg1 SwigcptrUtils) ReadImageCV(arg2 string) (_swig_ret Image)</a></dd>
@@ -605,9 +540,6 @@
 				
 					
 					<dd>    <a href="#SwigcptrVehicleDetector.DetectBatch">func (arg1 SwigcptrVehicleDetector) DetectBatch(arg2 MultiImage) (_swig_ret VehicleDetectorResultVector)</a></dd>
-				
-					
-					<dd>    <a href="#SwigcptrVehicleDetector.GetUsage">func (arg1 SwigcptrVehicleDetector) GetUsage() (_swig_ret UsageReport)</a></dd>
 				
 					
 					<dd>    <a href="#SwigcptrVehicleDetector.SwigIsVehicleDetector">func (p SwigcptrVehicleDetector) SwigIsVehicleDetector()</a></dd>
@@ -675,14 +607,6 @@
 				
 			
 				
-				<dd><a href="#UsageReport">type UsageReport</a></dd>
-				
-					
-					<dd>    <a href="#NewUsageReport">func NewUsageReport(arg1 string) (_swig_ret UsageReport)</a></dd>
-				
-				
-			
-				
 				<dd><a href="#Utils">type Utils</a></dd>
 				
 					
@@ -702,13 +626,7 @@
 				<dd><a href="#VehicleDetectorResult">type VehicleDetectorResult</a></dd>
 				
 					
-					<dd>    <a href="#NewVehicleDetectorResult">func NewVehicleDetectorResult(a ...interface{}) VehicleDetectorResult</a></dd>
-				
-					
-					<dd>    <a href="#NewVehicleDetectorResult__SWIG_0">func NewVehicleDetectorResult__SWIG_0() (_swig_ret VehicleDetectorResult)</a></dd>
-				
-					
-					<dd>    <a href="#NewVehicleDetectorResult__SWIG_1">func NewVehicleDetectorResult__SWIG_1(arg1 VehicleDetectorResult) (_swig_ret VehicleDetectorResult)</a></dd>
+					<dd>    <a href="#NewVehicleDetectorResult">func NewVehicleDetectorResult() (_swig_ret VehicleDetectorResult)</a></dd>
 				
 				
 			
@@ -766,7 +684,7 @@
 		
 			
 			
-			<h2 id="DeleteBBox">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=23129:23155#L541">DeleteBBox</a>
+			<h2 id="DeleteBBox">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=21263:21289#L519">DeleteBBox</a>
 				<a class="permalink" href="#DeleteBBox">¶</a>
 				
 				
@@ -779,7 +697,7 @@
 		
 			
 			
-			<h2 id="DeleteBBoxVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=37334:37372#L1041">DeleteBBoxVector</a>
+			<h2 id="DeleteBBoxVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=31054:31092#L873">DeleteBBoxVector</a>
 				<a class="permalink" href="#DeleteBBoxVector">¶</a>
 				
 				
@@ -792,7 +710,7 @@
 		
 			
 			
-			<h2 id="DeleteFloatVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=30844:30884#L805">DeleteFloatVector</a>
+			<h2 id="DeleteFloatVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=24564:24604#L637">DeleteFloatVector</a>
 				<a class="permalink" href="#DeleteFloatVector">¶</a>
 				
 				
@@ -805,7 +723,7 @@
 		
 			
 			
-			<h2 id="DeleteImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=20883:20911#L455">DeleteImage</a>
+			<h2 id="DeleteImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=19017:19045#L433">DeleteImage</a>
 				<a class="permalink" href="#DeleteImage">¶</a>
 				
 				
@@ -818,7 +736,7 @@
 		
 			
 			
-			<h2 id="DeleteIntVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=34058:34094#L923">DeleteIntVector</a>
+			<h2 id="DeleteIntVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=27778:27814#L755">DeleteIntVector</a>
 				<a class="permalink" href="#DeleteIntVector">¶</a>
 				
 				
@@ -831,7 +749,7 @@
 		
 			
 			
-			<h2 id="DeleteLicenseManager">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=50876:50922#L1424">DeleteLicenseManager</a>
+			<h2 id="DeleteLicenseManager">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=43959:44005#L1236">DeleteLicenseManager</a>
 				<a class="permalink" href="#DeleteLicenseManager">¶</a>
 				
 				
@@ -844,7 +762,7 @@
 		
 			
 			
-			<h2 id="DeleteMultiImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=17651:17689#L336">DeleteMultiImage</a>
+			<h2 id="DeleteMultiImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=15785:15823#L314">DeleteMultiImage</a>
 				<a class="permalink" href="#DeleteMultiImage">¶</a>
 				
 				
@@ -857,20 +775,7 @@
 		
 			
 			
-			<h2 id="DeleteUsageReport">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=27306:27346#L680">DeleteUsageReport</a>
-				<a class="permalink" href="#DeleteUsageReport">¶</a>
-				
-				
-			</h2>
-			<pre>func DeleteUsageReport(arg1 <a href="#UsageReport">UsageReport</a>)</pre>
-			
-			
-			
-
-		
-			
-			
-			<h2 id="DeleteUtils">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=47928:47956#L1342">DeleteUtils</a>
+			<h2 id="DeleteUtils">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=41064:41092#L1159">DeleteUtils</a>
 				<a class="permalink" href="#DeleteUtils">¶</a>
 				
 				
@@ -883,7 +788,7 @@
 		
 			
 			
-			<h2 id="DeleteVehicleDetector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=45034:45082#L1268">DeleteVehicleDetector</a>
+			<h2 id="DeleteVehicleDetector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=38864:38912#L1098">DeleteVehicleDetector</a>
 				<a class="permalink" href="#DeleteVehicleDetector">¶</a>
 				
 				
@@ -896,7 +801,7 @@
 		
 			
 			
-			<h2 id="DeleteVehicleDetectorResult">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=42489:42549#L1192">DeleteVehicleDetectorResult</a>
+			<h2 id="DeleteVehicleDetectorResult">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=37236:37296#L1052">DeleteVehicleDetectorResult</a>
 				<a class="permalink" href="#DeleteVehicleDetectorResult">¶</a>
 				
 				
@@ -909,7 +814,7 @@
 		
 			
 			
-			<h2 id="DeleteVehicleDetectorResultVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=41485:41557#L1159">DeleteVehicleDetectorResultVector</a>
+			<h2 id="DeleteVehicleDetectorResultVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=35205:35277#L991">DeleteVehicleDetectorResultVector</a>
 				<a class="permalink" href="#DeleteVehicleDetectorResultVector">¶</a>
 				
 				
@@ -922,7 +827,7 @@
 		
 			
 			
-			<h2 id="Swig_free">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=14457:14485#L224">Swig_free</a>
+			<h2 id="Swig_free">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=12591:12619#L202">Swig_free</a>
 				<a class="permalink" href="#Swig_free">¶</a>
 				
 				
@@ -935,7 +840,7 @@
 		
 			
 			
-			<h2 id="Swig_malloc">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=14575:14621#L229">Swig_malloc</a>
+			<h2 id="Swig_malloc">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=12709:12755#L207">Swig_malloc</a>
 				<a class="permalink" href="#Swig_malloc">¶</a>
 				
 				
@@ -949,7 +854,7 @@
 		
 			
 			
-			<h2 id="BBox">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=23258:23535#L546">BBox</a>
+			<h2 id="BBox">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=21392:21669#L524">BBox</a>
 				<a class="permalink" href="#BBox">¶</a>
 				
 				
@@ -978,7 +883,7 @@
 
 			
 				
-				<h3 id="NewBBox">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=22987:23018#L535">NewBBox</a>
+				<h3 id="NewBBox">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=21121:21152#L513">NewBBox</a>
 					<a class="permalink" href="#NewBBox">¶</a>
 					
 					
@@ -993,7 +898,7 @@
 		
 			
 			
-			<h2 id="BBoxVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=37481:37738#L1046">BBoxVector</a>
+			<h2 id="BBoxVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=31201:31458#L878">BBoxVector</a>
 				<a class="permalink" href="#BBoxVector">¶</a>
 				
 				
@@ -1022,7 +927,7 @@
 
 			
 				
-				<h3 id="NewBBoxVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=35317:35364#L970">NewBBoxVector</a>
+				<h3 id="NewBBoxVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=29037:29084#L802">NewBBoxVector</a>
 					<a class="permalink" href="#NewBBoxVector">¶</a>
 					
 					
@@ -1033,7 +938,7 @@
 				
 			
 				
-				<h3 id="NewBBoxVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=34614:34665#L950">NewBBoxVector__SWIG_0</a>
+				<h3 id="NewBBoxVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28334:28385#L782">NewBBoxVector__SWIG_0</a>
 					<a class="permalink" href="#NewBBoxVector__SWIG_0">¶</a>
 					
 					
@@ -1044,7 +949,7 @@
 				
 			
 				
-				<h3 id="NewBBoxVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=34808:34869#L956">NewBBoxVector__SWIG_1</a>
+				<h3 id="NewBBoxVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28528:28589#L788">NewBBoxVector__SWIG_1</a>
 					<a class="permalink" href="#NewBBoxVector__SWIG_1">¶</a>
 					
 					
@@ -1055,7 +960,7 @@
 				
 			
 				
-				<h3 id="NewBBoxVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=35056:35122#L963">NewBBoxVector__SWIG_2</a>
+				<h3 id="NewBBoxVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28776:28842#L795">NewBBoxVector__SWIG_2</a>
 					<a class="permalink" href="#NewBBoxVector__SWIG_2">¶</a>
 					
 					
@@ -1070,7 +975,7 @@
 		
 			
 			
-			<h2 id="FloatVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=30994:31262#L810">FloatVector</a>
+			<h2 id="FloatVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=24714:24982#L642">FloatVector</a>
 				<a class="permalink" href="#FloatVector">¶</a>
 				
 				
@@ -1099,7 +1004,7 @@
 
 			
 				
-				<h3 id="NewFloatVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28834:28883#L734">NewFloatVector</a>
+				<h3 id="NewFloatVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=22554:22603#L566">NewFloatVector</a>
 					<a class="permalink" href="#NewFloatVector">¶</a>
 					
 					
@@ -1110,7 +1015,7 @@
 				
 			
 				
-				<h3 id="NewFloatVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28112:28165#L714">NewFloatVector__SWIG_0</a>
+				<h3 id="NewFloatVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=21833:21886#L546">NewFloatVector__SWIG_0</a>
 					<a class="permalink" href="#NewFloatVector__SWIG_0">¶</a>
 					
 					
@@ -1121,7 +1026,7 @@
 				
 			
 				
-				<h3 id="NewFloatVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28312:28375#L720">NewFloatVector__SWIG_1</a>
+				<h3 id="NewFloatVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=22033:22096#L552">NewFloatVector__SWIG_1</a>
 					<a class="permalink" href="#NewFloatVector__SWIG_1">¶</a>
 					
 					
@@ -1132,7 +1037,7 @@
 				
 			
 				
-				<h3 id="NewFloatVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=28566:28635#L727">NewFloatVector__SWIG_2</a>
+				<h3 id="NewFloatVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=22286:22355#L559">NewFloatVector__SWIG_2</a>
 					<a class="permalink" href="#NewFloatVector__SWIG_2">¶</a>
 					
 					
@@ -1147,7 +1052,7 @@
 		
 			
 			
-			<h2 id="Image">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=21015:21315#L460">Image</a>
+			<h2 id="Image">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=19149:19449#L438">Image</a>
 				<a class="permalink" href="#Image">¶</a>
 				
 				
@@ -1177,7 +1082,7 @@
 
 			
 				
-				<h3 id="NewImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=20170:20207#L428">NewImage</a>
+				<h3 id="NewImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=18304:18341#L406">NewImage</a>
 					<a class="permalink" href="#NewImage">¶</a>
 					
 					
@@ -1188,7 +1093,7 @@
 				
 			
 				
-				<h3 id="NewImage__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=18198:18239#L363">NewImage__SWIG_0</a>
+				<h3 id="NewImage__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=16332:16373#L341">NewImage__SWIG_0</a>
 					<a class="permalink" href="#NewImage__SWIG_0">¶</a>
 					
 					
@@ -1199,7 +1104,7 @@
 				
 			
 				
-				<h3 id="NewImage__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=19710:19792#L415">NewImage__SWIG_1</a>
+				<h3 id="NewImage__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=17844:17926#L393">NewImage__SWIG_1</a>
 					<a class="permalink" href="#NewImage__SWIG_1">¶</a>
 					
 					
@@ -1214,7 +1119,7 @@
 		
 			
 			
-			<h2 id="IntVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=34202:34454#L928">IntVector</a>
+			<h2 id="IntVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=27922:28174#L760">IntVector</a>
 				<a class="permalink" href="#IntVector">¶</a>
 				
 				
@@ -1243,7 +1148,7 @@
 
 			
 				
-				<h3 id="NewIntVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=32102:32147#L852">NewIntVector</a>
+				<h3 id="NewIntVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=25822:25867#L684">NewIntVector</a>
 					<a class="permalink" href="#NewIntVector">¶</a>
 					
 					
@@ -1254,7 +1159,7 @@
 				
 			
 				
-				<h3 id="NewIntVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=31418:31467#L832">NewIntVector__SWIG_0</a>
+				<h3 id="NewIntVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=25138:25187#L664">NewIntVector__SWIG_0</a>
 					<a class="permalink" href="#NewIntVector__SWIG_0">¶</a>
 					
 					
@@ -1265,7 +1170,7 @@
 				
 			
 				
-				<h3 id="NewIntVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=31606:31665#L838">NewIntVector__SWIG_1</a>
+				<h3 id="NewIntVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=25326:25385#L670">NewIntVector__SWIG_1</a>
 					<a class="permalink" href="#NewIntVector__SWIG_1">¶</a>
 					
 					
@@ -1276,7 +1181,7 @@
 				
 			
 				
-				<h3 id="NewIntVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=31848:31911#L845">NewIntVector__SWIG_2</a>
+				<h3 id="NewIntVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=25568:25631#L677">NewIntVector__SWIG_2</a>
 					<a class="permalink" href="#NewIntVector__SWIG_2">¶</a>
 					
 					
@@ -1291,7 +1196,7 @@
 		
 			
 			
-			<h2 id="LicenseManager">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=54595:55090#L1534">LicenseManager</a>
+			<h2 id="LicenseManager">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=47424:47918#L1337">LicenseManager</a>
 				<a class="permalink" href="#LicenseManager">¶</a>
 				
 				
@@ -1301,16 +1206,15 @@
     Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
     SwigIsLicenseManager()
     SetKey(arg2 <a href="../../builtin/#string">string</a>)
-    SetMachineCode(arg2 <a href="../../builtin/#string">string</a>)
     GetKey() (_swig_ret <a href="../../builtin/#string">string</a>)
     ActivateKey() (_swig_ret <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a>)
     ActivateTrial() (_swig_ret <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a>)
     GetMachineCode() (_swig_ret <a href="../../builtin/#string">string</a>)
     IsTrial() (_swig_ret <a href="../../builtin/#bool">bool</a>)
-    IsValidActivation() (_swig_ret <a href="../../builtin/#bool">bool</a>)
+    ValidateActivation() (_swig_ret <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a>)
     GetActivationType() (_swig_ret <a href="#OneMLLicenseActivationType">OneMLLicenseActivationType</a>)
     GetActivationExpiryDate() (_swig_ret <a href="../../builtin/#uint64">uint64</a>)
-    GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)
+    GetActivationSuspendedDate() (_swig_ret <a href="../../builtin/#uint64">uint64</a>)
 }</pre>
 
 			
@@ -1323,7 +1227,7 @@
 
 			
 				
-				<h3 id="NewLicenseManager">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=51324:51379#L1436">NewLicenseManager</a>
+				<h3 id="NewLicenseManager">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=44407:44462#L1248">NewLicenseManager</a>
 					<a class="permalink" href="#NewLicenseManager">¶</a>
 					
 					
@@ -1334,7 +1238,7 @@
 				
 			
 				
-				<h3 id="NewLicenseManager__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=50658:50717#L1418">NewLicenseManager__SWIG_0</a>
+				<h3 id="NewLicenseManager__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=43741:43800#L1230">NewLicenseManager__SWIG_0</a>
 					<a class="permalink" href="#NewLicenseManager__SWIG_0">¶</a>
 					
 					
@@ -1345,7 +1249,7 @@
 				
 			
 				
-				<h3 id="NewLicenseManager__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=51035:51113#L1429">NewLicenseManager__SWIG_1</a>
+				<h3 id="NewLicenseManager__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=44118:44196#L1241">NewLicenseManager__SWIG_1</a>
 					<a class="permalink" href="#NewLicenseManager__SWIG_1">¶</a>
 					
 					
@@ -1360,7 +1264,7 @@
 		
 			
 			
-			<h2 id="MultiImage">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=17798:18058#L341">MultiImage</a>
+			<h2 id="MultiImage">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=15932:16192#L319">MultiImage</a>
 				<a class="permalink" href="#MultiImage">¶</a>
 				
 				
@@ -1389,7 +1293,7 @@
 
 			
 				
-				<h3 id="NewMultiImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=15629:15676#L265">NewMultiImage</a>
+				<h3 id="NewMultiImage">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=13763:13810#L243">NewMultiImage</a>
 					<a class="permalink" href="#NewMultiImage">¶</a>
 					
 					
@@ -1400,7 +1304,7 @@
 				
 			
 				
-				<h3 id="NewMultiImage__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=14927:14978#L245">NewMultiImage__SWIG_0</a>
+				<h3 id="NewMultiImage__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=13061:13112#L223">NewMultiImage__SWIG_0</a>
 					<a class="permalink" href="#NewMultiImage__SWIG_0">¶</a>
 					
 					
@@ -1411,7 +1315,7 @@
 				
 			
 				
-				<h3 id="NewMultiImage__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=15121:15182#L251">NewMultiImage__SWIG_1</a>
+				<h3 id="NewMultiImage__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=13255:13316#L229">NewMultiImage__SWIG_1</a>
 					<a class="permalink" href="#NewMultiImage__SWIG_1">¶</a>
 					
 					
@@ -1422,7 +1326,7 @@
 				
 			
 				
-				<h3 id="NewMultiImage__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=15368:15434#L258">NewMultiImage__SWIG_2</a>
+				<h3 id="NewMultiImage__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=13502:13568#L236">NewMultiImage__SWIG_2</a>
 					<a class="permalink" href="#NewMultiImage__SWIG_2">¶</a>
 					
 					
@@ -1437,7 +1341,7 @@
 		
 			
 			
-			<h2 id="OneMLAlprVehicleDetectorStatus">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=46453:46492#L1304">OneMLAlprVehicleDetectorStatus</a>
+			<h2 id="OneMLAlprVehicleDetectorStatus">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=39231:39270#L1110">OneMLAlprVehicleDetectorStatus</a>
 				<a class="permalink" href="#OneMLAlprVehicleDetectorStatus">¶</a>
 				
 				
@@ -1468,7 +1372,7 @@
 		
 			
 			
-			<h2 id="OneMLLicenseActivationType">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=48798:48833#L1372">OneMLLicenseActivationType</a>
+			<h2 id="OneMLLicenseActivationType">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=41301:41336#L1170">OneMLLicenseActivationType</a>
 				<a class="permalink" href="#OneMLLicenseActivationType">¶</a>
 				
 				
@@ -1499,7 +1403,7 @@
 		
 			
 			
-			<h2 id="OneMLLicenseStatus">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=49912:49939#L1394">OneMLLicenseStatus</a>
+			<h2 id="OneMLLicenseStatus">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=42415:42442#L1192">OneMLLicenseStatus</a>
 				<a class="permalink" href="#OneMLLicenseStatus">¶</a>
 				
 				
@@ -1514,7 +1418,13 @@
 				<pre>var <span id="LicenseStatus_Error">LicenseStatus_Error</span> <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a> = _swig_getLicenseStatus_Error()</pre>
 			
 				
+				<pre>var <span id="LicenseStatus_Expired">LicenseStatus_Expired</span> <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a> = _swig_getLicenseStatus_Expired()</pre>
+			
+				
 				<pre>var <span id="LicenseStatus_Ok">LicenseStatus_Ok</span> <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a> = _swig_getLicenseStatus_Ok()</pre>
+			
+				
+				<pre>var <span id="LicenseStatus_Suspended">LicenseStatus_Suspended</span> <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a> = _swig_getLicenseStatus_Suspended()</pre>
 			
 
 			
@@ -1527,7 +1437,7 @@
 		
 			
 			
-			<h2 id="SwigcptrBBox">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=21317:21342#L474">SwigcptrBBox</a>
+			<h2 id="SwigcptrBBox">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=19451:19476#L452">SwigcptrBBox</a>
 				<a class="permalink" href="#SwigcptrBBox">¶</a>
 				
 				
@@ -1547,7 +1457,7 @@
 
 			
 				
-				<h3 id="SwigcptrBBox.GetBottom">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=22394:22450#L515">GetBottom</a>
+				<h3 id="SwigcptrBBox.GetBottom">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20528:20584#L493">GetBottom</a>
 					<a class="permalink" href="#SwigcptrBBox.GetBottom">¶</a>
 					
 					
@@ -1559,7 +1469,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.GetLeft">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=22008:22062#L502">GetLeft</a>
+				<h3 id="SwigcptrBBox.GetLeft">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20142:20196#L480">GetLeft</a>
 					<a class="permalink" href="#SwigcptrBBox.GetLeft">¶</a>
 					
 					
@@ -1571,7 +1481,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.GetRight">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=22782:22837#L528">GetRight</a>
+				<h3 id="SwigcptrBBox.GetRight">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20916:20971#L506">GetRight</a>
 					<a class="permalink" href="#SwigcptrBBox.GetRight">¶</a>
 					
 					
@@ -1583,7 +1493,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.GetTop">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=21628:21681#L489">GetTop</a>
+				<h3 id="SwigcptrBBox.GetTop">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19762:19815#L467">GetTop</a>
 					<a class="permalink" href="#SwigcptrBBox.GetTop">¶</a>
 					
 					
@@ -1595,7 +1505,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SetBottom">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=22211:22259#L509">SetBottom</a>
+				<h3 id="SwigcptrBBox.SetBottom">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20345:20393#L487">SetBottom</a>
 					<a class="permalink" href="#SwigcptrBBox.SetBottom">¶</a>
 					
 					
@@ -1607,7 +1517,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SetLeft">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=21829:21875#L496">SetLeft</a>
+				<h3 id="SwigcptrBBox.SetLeft">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19963:20009#L474">SetLeft</a>
 					<a class="permalink" href="#SwigcptrBBox.SetLeft">¶</a>
 					
 					
@@ -1619,7 +1529,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SetRight">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=22601:22648#L522">SetRight</a>
+				<h3 id="SwigcptrBBox.SetRight">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20735:20782#L500">SetRight</a>
 					<a class="permalink" href="#SwigcptrBBox.SetRight">¶</a>
 					
 					
@@ -1631,7 +1541,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SetTop">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=21451:21496#L483">SetTop</a>
+				<h3 id="SwigcptrBBox.SetTop">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19585:19630#L461">SetTop</a>
 					<a class="permalink" href="#SwigcptrBBox.SetTop">¶</a>
 					
 					
@@ -1643,7 +1553,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.SwigIsBBox">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=21411:21445#L480">SwigIsBBox</a>
+				<h3 id="SwigcptrBBox.SwigIsBBox">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19545:19579#L458">SwigIsBBox</a>
 					<a class="permalink" href="#SwigcptrBBox.SwigIsBBox">¶</a>
 					
 					
@@ -1655,7 +1565,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBox.Swigcptr">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=21344:21384#L476">Swigcptr</a>
+				<h3 id="SwigcptrBBox.Swigcptr">func (SwigcptrBBox) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19478:19518#L454">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrBBox.Swigcptr">¶</a>
 					
 					
@@ -1669,7 +1579,7 @@
 		
 			
 			
-			<h2 id="SwigcptrBBoxVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=34456:34487#L941">SwigcptrBBoxVector</a>
+			<h2 id="SwigcptrBBoxVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=28176:28207#L773">SwigcptrBBoxVector</a>
 				<a class="permalink" href="#SwigcptrBBoxVector">¶</a>
 				
 				
@@ -1689,7 +1599,7 @@
 
 			
 				
-				<h3 id="SwigcptrBBoxVector.Add">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36629:36674#L1020">Add</a>
+				<h3 id="SwigcptrBBoxVector.Add">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30349:30394#L852">Add</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Add">¶</a>
 					
 					
@@ -1701,7 +1611,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Capacity">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=35884:35943#L995">Capacity</a>
+				<h3 id="SwigcptrBBoxVector.Capacity">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29604:29663#L827">Capacity</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Capacity">¶</a>
 					
 					
@@ -1713,7 +1623,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Clear">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36494:36532#L1015">Clear</a>
+				<h3 id="SwigcptrBBoxVector.Clear">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30214:30252#L847">Clear</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Clear">¶</a>
 					
 					
@@ -1725,7 +1635,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Get">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36823:36884#L1026">Get</a>
+				<h3 id="SwigcptrBBoxVector.Get">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30543:30604#L858">Get</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Get">¶</a>
 					
 					
@@ -1737,7 +1647,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.IsEmpty">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36289:36346#L1008">IsEmpty</a>
+				<h3 id="SwigcptrBBoxVector.IsEmpty">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30009:30066#L840">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.IsEmpty">¶</a>
 					
 					
@@ -1749,7 +1659,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Reserve">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36094:36144#L1002">Reserve</a>
+				<h3 id="SwigcptrBBoxVector.Reserve">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29814:29864#L834">Reserve</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Reserve">¶</a>
 					
 					
@@ -1761,7 +1671,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Set">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=37086:37141#L1034">Set</a>
+				<h3 id="SwigcptrBBoxVector.Set">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30806:30861#L866">Set</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Set">¶</a>
 					
 					
@@ -1773,7 +1683,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Size">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=35682:35737#L988">Size</a>
+				<h3 id="SwigcptrBBoxVector.Size">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29402:29457#L820">Size</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Size">¶</a>
 					
 					
@@ -1785,7 +1695,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.SwigIsBBoxVector">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34562:34608#L947">SwigIsBBoxVector</a>
+				<h3 id="SwigcptrBBoxVector.SwigIsBBoxVector">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=28282:28328#L779">SwigIsBBoxVector</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.SwigIsBBoxVector">¶</a>
 					
 					
@@ -1797,7 +1707,7 @@
 				
 			
 				
-				<h3 id="SwigcptrBBoxVector.Swigcptr">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34489:34535#L943">Swigcptr</a>
+				<h3 id="SwigcptrBBoxVector.Swigcptr">func (SwigcptrBBoxVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=28209:28255#L775">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrBBoxVector.Swigcptr">¶</a>
 					
 					
@@ -1811,7 +1721,7 @@
 		
 			
 			
-			<h2 id="SwigcptrFloatVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=27950:27982#L705">SwigcptrFloatVector</a>
+			<h2 id="SwigcptrFloatVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=21671:21703#L537">SwigcptrFloatVector</a>
 				<a class="permalink" href="#SwigcptrFloatVector">¶</a>
 				
 				
@@ -1831,7 +1741,7 @@
 
 			
 				
-				<h3 id="SwigcptrFloatVector.Add">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30162:30211#L784">Add</a>
+				<h3 id="SwigcptrFloatVector.Add">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23882:23931#L616">Add</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Add">¶</a>
 					
 					
@@ -1843,7 +1753,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Capacity">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29409:29469#L759">Capacity</a>
+				<h3 id="SwigcptrFloatVector.Capacity">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23129:23189#L591">Capacity</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Capacity">¶</a>
 					
 					
@@ -1855,7 +1765,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Clear">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30025:30064#L779">Clear</a>
+				<h3 id="SwigcptrFloatVector.Clear">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23745:23784#L611">Clear</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Clear">¶</a>
 					
 					
@@ -1867,7 +1777,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Get">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30346:30411#L790">Get</a>
+				<h3 id="SwigcptrFloatVector.Get">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24066:24131#L622">Get</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Get">¶</a>
 					
 					
@@ -1879,7 +1789,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.IsEmpty">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29818:29876#L772">IsEmpty</a>
+				<h3 id="SwigcptrFloatVector.IsEmpty">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23538:23596#L604">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrFloatVector.IsEmpty">¶</a>
 					
 					
@@ -1891,7 +1801,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Reserve">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29621:29672#L766">Reserve</a>
+				<h3 id="SwigcptrFloatVector.Reserve">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23341:23392#L598">Reserve</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Reserve">¶</a>
 					
 					
@@ -1903,7 +1813,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Set">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=30606:30665#L798">Set</a>
+				<h3 id="SwigcptrFloatVector.Set">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24326:24385#L630">Set</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Set">¶</a>
 					
 					
@@ -1915,7 +1825,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Size">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=29205:29261#L752">Size</a>
+				<h3 id="SwigcptrFloatVector.Size">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=22925:22981#L584">Size</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Size">¶</a>
 					
 					
@@ -1927,7 +1837,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.SwigIsFloatVector">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=28058:28106#L711">SwigIsFloatVector</a>
+				<h3 id="SwigcptrFloatVector.SwigIsFloatVector">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=21779:21827#L543">SwigIsFloatVector</a>
 					<a class="permalink" href="#SwigcptrFloatVector.SwigIsFloatVector">¶</a>
 					
 					
@@ -1939,7 +1849,7 @@
 				
 			
 				
-				<h3 id="SwigcptrFloatVector.Swigcptr">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=27984:28031#L707">Swigcptr</a>
+				<h3 id="SwigcptrFloatVector.Swigcptr">func (SwigcptrFloatVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=21705:21752#L539">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrFloatVector.Swigcptr">¶</a>
 					
 					
@@ -1953,7 +1863,7 @@
 		
 			
 			
-			<h2 id="SwigcptrImage">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=18060:18086#L354">SwigcptrImage</a>
+			<h2 id="SwigcptrImage">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=16194:16220#L332">SwigcptrImage</a>
 				<a class="permalink" href="#SwigcptrImage">¶</a>
 				
 				
@@ -1973,7 +1883,7 @@
 
 			
 				
-				<h3 id="SwigcptrImage.GetData">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20685:20738#L448">GetData</a>
+				<h3 id="SwigcptrImage.GetData">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18819:18872#L426">GetData</a>
 					<a class="permalink" href="#SwigcptrImage.GetData">¶</a>
 					
 					
@@ -1985,7 +1895,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.GetDepth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19507:19562#L408">GetDepth</a>
+				<h3 id="SwigcptrImage.GetDepth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=17641:17696#L386">GetDepth</a>
 					<a class="permalink" href="#SwigcptrImage.GetDepth">¶</a>
 					
 					
@@ -1997,7 +1907,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.GetHeight">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19302:19358#L401">GetHeight</a>
+				<h3 id="SwigcptrImage.GetHeight">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=17436:17492#L379">GetHeight</a>
 					<a class="permalink" href="#SwigcptrImage.GetHeight">¶</a>
 					
 					
@@ -2009,7 +1919,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.GetWidth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=19099:19154#L394">GetWidth</a>
+				<h3 id="SwigcptrImage.GetWidth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=17233:17288#L372">GetWidth</a>
 					<a class="permalink" href="#SwigcptrImage.GetWidth">¶</a>
 					
 					
@@ -2021,7 +1931,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SetData">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=20420:20466#L439">SetData</a>
+				<h3 id="SwigcptrImage.SetData">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18554:18600#L417">SetData</a>
 					<a class="permalink" href="#SwigcptrImage.SetData">¶</a>
 					
 					
@@ -2033,7 +1943,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SetDepth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18918:18965#L388">SetDepth</a>
+				<h3 id="SwigcptrImage.SetDepth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=17052:17099#L366">SetDepth</a>
 					<a class="permalink" href="#SwigcptrImage.SetDepth">¶</a>
 					
 					
@@ -2045,7 +1955,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SetHeight">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18735:18783#L382">SetHeight</a>
+				<h3 id="SwigcptrImage.SetHeight">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16869:16917#L360">SetHeight</a>
 					<a class="permalink" href="#SwigcptrImage.SetHeight">¶</a>
 					
 					
@@ -2057,7 +1967,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SetWidth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18554:18601#L376">SetWidth</a>
+				<h3 id="SwigcptrImage.SetWidth">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16688:16735#L354">SetWidth</a>
 					<a class="permalink" href="#SwigcptrImage.SetWidth">¶</a>
 					
 					
@@ -2069,7 +1979,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.Size">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18362:18412#L369">Size</a>
+				<h3 id="SwigcptrImage.Size">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16496:16546#L347">Size</a>
 					<a class="permalink" href="#SwigcptrImage.Size">¶</a>
 					
 					
@@ -2081,7 +1991,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.SwigIsImage">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18156:18192#L360">SwigIsImage</a>
+				<h3 id="SwigcptrImage.SwigIsImage">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16290:16326#L338">SwigIsImage</a>
 					<a class="permalink" href="#SwigcptrImage.SwigIsImage">¶</a>
 					
 					
@@ -2093,7 +2003,7 @@
 				
 			
 				
-				<h3 id="SwigcptrImage.Swigcptr">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=18088:18129#L356">Swigcptr</a>
+				<h3 id="SwigcptrImage.Swigcptr">func (SwigcptrImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16222:16263#L334">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrImage.Swigcptr">¶</a>
 					
 					
@@ -2107,7 +2017,7 @@
 		
 			
 			
-			<h2 id="SwigcptrIntVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=31264:31294#L823">SwigcptrIntVector</a>
+			<h2 id="SwigcptrIntVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=24984:25014#L655">SwigcptrIntVector</a>
 				<a class="permalink" href="#SwigcptrIntVector">¶</a>
 				
 				
@@ -2127,7 +2037,7 @@
 
 			
 				
-				<h3 id="SwigcptrIntVector.Add">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33398:33441#L902">Add</a>
+				<h3 id="SwigcptrIntVector.Add">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=27118:27161#L734">Add</a>
 					<a class="permalink" href="#SwigcptrIntVector.Add">¶</a>
 					
 					
@@ -2139,7 +2049,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Capacity">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=32661:32719#L877">Capacity</a>
+				<h3 id="SwigcptrIntVector.Capacity">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26381:26439#L709">Capacity</a>
 					<a class="permalink" href="#SwigcptrIntVector.Capacity">¶</a>
 					
 					
@@ -2151,7 +2061,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Clear">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33265:33302#L897">Clear</a>
+				<h3 id="SwigcptrIntVector.Clear">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26985:27022#L729">Clear</a>
 					<a class="permalink" href="#SwigcptrIntVector.Clear">¶</a>
 					
 					
@@ -2163,7 +2073,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Get">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33579:33638#L908">Get</a>
+				<h3 id="SwigcptrIntVector.Get">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=27299:27358#L740">Get</a>
 					<a class="permalink" href="#SwigcptrIntVector.Get">¶</a>
 					
 					
@@ -2175,7 +2085,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.IsEmpty">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33062:33118#L890">IsEmpty</a>
+				<h3 id="SwigcptrIntVector.IsEmpty">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26782:26838#L722">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrIntVector.IsEmpty">¶</a>
 					
 					
@@ -2187,7 +2097,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Reserve">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=32869:32918#L884">Reserve</a>
+				<h3 id="SwigcptrIntVector.Reserve">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26589:26638#L716">Reserve</a>
 					<a class="permalink" href="#SwigcptrIntVector.Reserve">¶</a>
 					
 					
@@ -2199,7 +2109,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Set">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33823:33876#L916">Set</a>
+				<h3 id="SwigcptrIntVector.Set">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=27543:27596#L748">Set</a>
 					<a class="permalink" href="#SwigcptrIntVector.Set">¶</a>
 					
 					
@@ -2211,7 +2121,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Size">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=32461:32515#L870">Size</a>
+				<h3 id="SwigcptrIntVector.Size">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26181:26235#L702">Size</a>
 					<a class="permalink" href="#SwigcptrIntVector.Size">¶</a>
 					
 					
@@ -2223,7 +2133,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.SwigIsIntVector">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=31368:31412#L829">SwigIsIntVector</a>
+				<h3 id="SwigcptrIntVector.SwigIsIntVector">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=25088:25132#L661">SwigIsIntVector</a>
 					<a class="permalink" href="#SwigcptrIntVector.SwigIsIntVector">¶</a>
 					
 					
@@ -2235,7 +2145,7 @@
 				
 			
 				
-				<h3 id="SwigcptrIntVector.Swigcptr">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=31296:31341#L825">Swigcptr</a>
+				<h3 id="SwigcptrIntVector.Swigcptr">func (SwigcptrIntVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=25016:25061#L657">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrIntVector.Swigcptr">¶</a>
 					
 					
@@ -2249,7 +2159,7 @@
 		
 			
 			
-			<h2 id="SwigcptrLicenseManager">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=50484:50519#L1409">SwigcptrLicenseManager</a>
+			<h2 id="SwigcptrLicenseManager">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=43567:43602#L1221">SwigcptrLicenseManager</a>
 				<a class="permalink" href="#SwigcptrLicenseManager">¶</a>
 				
 				
@@ -2269,7 +2179,7 @@
 
 			
 				
-				<h3 id="SwigcptrLicenseManager.ActivateKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=52479:52558#L1475">ActivateKey</a>
+				<h3 id="SwigcptrLicenseManager.ActivateKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=45264:45343#L1278">ActivateKey</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.ActivateKey">¶</a>
 					
 					
@@ -2281,7 +2191,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.ActivateTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=52742:52823#L1482">ActivateTrial</a>
+				<h3 id="SwigcptrLicenseManager.ActivateTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=45527:45608#L1285">ActivateTrial</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.ActivateTrial">¶</a>
 					
 					
@@ -2293,7 +2203,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.GetActivationExpiryDate">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=54087:54166#L1520">GetActivationExpiryDate</a>
+				<h3 id="SwigcptrLicenseManager.GetActivationExpiryDate">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=46916:46995#L1323">GetActivationExpiryDate</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.GetActivationExpiryDate">¶</a>
 					
 					
@@ -2305,7 +2215,19 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.GetActivationType">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=53788:53881#L1513">GetActivationType</a>
+				<h3 id="SwigcptrLicenseManager.GetActivationSuspendedDate">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=47167:47249#L1330">GetActivationSuspendedDate</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.GetActivationSuspendedDate">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) GetActivationSuspendedDate() (_swig_ret <a href="../../builtin/#uint64">uint64</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SwigcptrLicenseManager.GetActivationType">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=46617:46710#L1316">GetActivationType</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.GetActivationType">¶</a>
 					
 					
@@ -2317,7 +2239,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.GetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=52162:52224#L1465">GetKey</a>
+				<h3 id="SwigcptrLicenseManager.GetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=44947:45009#L1268">GetKey</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.GetKey">¶</a>
 					
 					
@@ -2329,7 +2251,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.GetMachineCode">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=53009:53079#L1489">GetMachineCode</a>
+				<h3 id="SwigcptrLicenseManager.GetMachineCode">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=45794:45864#L1292">GetMachineCode</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.GetMachineCode">¶</a>
 					
 					
@@ -2341,19 +2263,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.GetUsage">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=54338:54407#L1527">GetUsage</a>
-					<a class="permalink" href="#SwigcptrLicenseManager.GetUsage">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrLicenseManager.IsTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=53342:53403#L1499">IsTrial</a>
+				<h3 id="SwigcptrLicenseManager.IsTrial">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=46127:46188#L1302">IsTrial</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.IsTrial">¶</a>
 					
 					
@@ -2365,19 +2275,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.IsValidActivation">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=53555:53626#L1506">IsValidActivation</a>
-					<a class="permalink" href="#SwigcptrLicenseManager.IsValidActivation">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) IsValidActivation() (_swig_ret <a href="../../builtin/#bool">bool</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrLicenseManager.SetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=51582:51636#L1447">SetKey</a>
+				<h3 id="SwigcptrLicenseManager.SetKey">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=44665:44719#L1259">SetKey</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.SetKey">¶</a>
 					
 					
@@ -2389,19 +2287,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.SetMachineCode">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=51864:51926#L1456">SetMachineCode</a>
-					<a class="permalink" href="#SwigcptrLicenseManager.SetMachineCode">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) SetMachineCode(arg2 <a href="../../builtin/#string">string</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrLicenseManager.SwigIsLicenseManager">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=50598:50652#L1415">SwigIsLicenseManager</a>
+				<h3 id="SwigcptrLicenseManager.SwigIsLicenseManager">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=43681:43735#L1227">SwigIsLicenseManager</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.SwigIsLicenseManager">¶</a>
 					
 					
@@ -2413,7 +2299,7 @@
 				
 			
 				
-				<h3 id="SwigcptrLicenseManager.Swigcptr">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=50521:50571#L1411">Swigcptr</a>
+				<h3 id="SwigcptrLicenseManager.Swigcptr">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=43604:43654#L1223">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrLicenseManager.Swigcptr">¶</a>
 					
 					
@@ -2424,10 +2310,22 @@
 				
 				
 			
+				
+				<h3 id="SwigcptrLicenseManager.ValidateActivation">func (SwigcptrLicenseManager) <a href="../../src/oneml/alpr/alprAPI.go.html?s=46340:46426#L1309">ValidateActivation</a>
+					<a class="permalink" href="#SwigcptrLicenseManager.ValidateActivation">¶</a>
+					
+					
+				</h3>
+				<pre>func (arg1 <a href="#SwigcptrLicenseManager">SwigcptrLicenseManager</a>) ValidateActivation() (_swig_ret <a href="#OneMLLicenseStatus">OneMLLicenseStatus</a>)</pre>
+				
+				
+				
+				
+			
 		
 			
 			
-			<h2 id="SwigcptrMultiImage">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=14769:14800#L236">SwigcptrMultiImage</a>
+			<h2 id="SwigcptrMultiImage">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=12903:12934#L214">SwigcptrMultiImage</a>
 				<a class="permalink" href="#SwigcptrMultiImage">¶</a>
 				
 				
@@ -2447,7 +2345,7 @@
 
 			
 				
-				<h3 id="SwigcptrMultiImage.Add">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16940:16986#L315">Add</a>
+				<h3 id="SwigcptrMultiImage.Add">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=15074:15120#L293">Add</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Add">¶</a>
 					
 					
@@ -2459,7 +2357,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Capacity">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16196:16255#L290">Capacity</a>
+				<h3 id="SwigcptrMultiImage.Capacity">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14330:14389#L268">Capacity</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Capacity">¶</a>
 					
 					
@@ -2471,7 +2369,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Clear">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16805:16843#L310">Clear</a>
+				<h3 id="SwigcptrMultiImage.Clear">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14939:14977#L288">Clear</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Clear">¶</a>
 					
 					
@@ -2483,7 +2381,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Get">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=17135:17197#L321">Get</a>
+				<h3 id="SwigcptrMultiImage.Get">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=15269:15331#L299">Get</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Get">¶</a>
 					
 					
@@ -2495,7 +2393,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.IsEmpty">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16600:16657#L303">IsEmpty</a>
+				<h3 id="SwigcptrMultiImage.IsEmpty">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14734:14791#L281">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrMultiImage.IsEmpty">¶</a>
 					
 					
@@ -2507,7 +2405,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Reserve">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=16406:16456#L297">Reserve</a>
+				<h3 id="SwigcptrMultiImage.Reserve">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14540:14590#L275">Reserve</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Reserve">¶</a>
 					
 					
@@ -2519,7 +2417,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Set">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=17402:17458#L329">Set</a>
+				<h3 id="SwigcptrMultiImage.Set">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=15536:15592#L307">Set</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Set">¶</a>
 					
 					
@@ -2531,7 +2429,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Size">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=15994:16049#L283">Size</a>
+				<h3 id="SwigcptrMultiImage.Size">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14128:14183#L261">Size</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Size">¶</a>
 					
 					
@@ -2543,7 +2441,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.SwigIsMultiImage">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14875:14921#L242">SwigIsMultiImage</a>
+				<h3 id="SwigcptrMultiImage.SwigIsMultiImage">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=13009:13055#L220">SwigIsMultiImage</a>
 					<a class="permalink" href="#SwigcptrMultiImage.SwigIsMultiImage">¶</a>
 					
 					
@@ -2555,7 +2453,7 @@
 				
 			
 				
-				<h3 id="SwigcptrMultiImage.Swigcptr">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=14802:14848#L238">Swigcptr</a>
+				<h3 id="SwigcptrMultiImage.Swigcptr">func (SwigcptrMultiImage) <a href="../../src/oneml/alpr/alprAPI.go.html?s=12936:12982#L216">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrMultiImage.Swigcptr">¶</a>
 					
 					
@@ -2569,233 +2467,7 @@
 		
 			
 			
-			<h2 id="SwigcptrUsageReport">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=23537:23569#L559">SwigcptrUsageReport</a>
-				<a class="permalink" href="#SwigcptrUsageReport">¶</a>
-				
-				
-			</h2>
-			
-			<pre>type SwigcptrUsageReport <a href="../../builtin/#uintptr">uintptr</a></pre>
-
-			
-
-			
-
-			
-			
-			
-
-			
-
-			
-				
-				<h3 id="SwigcptrUsageReport.GetApi">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26995:27054#L670">GetApi</a>
-					<a class="permalink" href="#SwigcptrUsageReport.GetApi">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetApi() (_swig_ret <a href="../../builtin/#string">string</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.GetApi_calls">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24221:24283#L584">GetApi_calls</a>
-					<a class="permalink" href="#SwigcptrUsageReport.GetApi_calls">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetApi_calls() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.GetFail_count">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26366:26429#L649">GetFail_count</a>
-					<a class="permalink" href="#SwigcptrUsageReport.GetFail_count">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetFail_count() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.GetFirst_updated">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=25071:25137#L610">GetFirst_updated</a>
-					<a class="permalink" href="#SwigcptrUsageReport.GetFirst_updated">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetFirst_updated() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.GetLast_updated">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=25504:25569#L623">GetLast_updated</a>
-					<a class="permalink" href="#SwigcptrUsageReport.GetLast_updated">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetLast_updated() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.GetModel_runs">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24642:24705#L597">GetModel_runs</a>
-					<a class="permalink" href="#SwigcptrUsageReport.GetModel_runs">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetModel_runs() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.GetSuccess_count">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=25937:26003#L636">GetSuccess_count</a>
-					<a class="permalink" href="#SwigcptrUsageReport.GetSuccess_count">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) GetSuccess_count() (_swig_ret <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.SetApi_calls">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24017:24071#L578">SetApi_calls</a>
-					<a class="permalink" href="#SwigcptrUsageReport.SetApi_calls">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetApi_calls(arg2 <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.SetFail_count">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26160:26215#L643">SetFail_count</a>
-					<a class="permalink" href="#SwigcptrUsageReport.SetFail_count">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetFail_count(arg2 <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.SetFirst_updated">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24859:24917#L604">SetFirst_updated</a>
-					<a class="permalink" href="#SwigcptrUsageReport.SetFirst_updated">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetFirst_updated(arg2 <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.SetLast_updated">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=25294:25351#L617">SetLast_updated</a>
-					<a class="permalink" href="#SwigcptrUsageReport.SetLast_updated">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetLast_updated(arg2 <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.SetModel_runs">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=24436:24491#L591">SetModel_runs</a>
-					<a class="permalink" href="#SwigcptrUsageReport.SetModel_runs">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetModel_runs(arg2 <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.SetSuccess_count">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=25725:25783#L630">SetSuccess_count</a>
-					<a class="permalink" href="#SwigcptrUsageReport.SetSuccess_count">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SetSuccess_count(arg2 <a href="../../builtin/#int">int</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.SwigIsUsageReport">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23645:23693#L565">SwigIsUsageReport</a>
-					<a class="permalink" href="#SwigcptrUsageReport.SwigIsUsageReport">¶</a>
-					
-					
-				</h3>
-				<pre>func (p <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) SwigIsUsageReport()</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.Swigcptr">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=23571:23618#L561">Swigcptr</a>
-					<a class="permalink" href="#SwigcptrUsageReport.Swigcptr">¶</a>
-					
-					
-				</h3>
-				<pre>func (p <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) Swigcptr() <a href="../../builtin/#uintptr">uintptr</a></pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.ToFile">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26720:26771#L661">ToFile</a>
-					<a class="permalink" href="#SwigcptrUsageReport.ToFile">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) ToFile(arg2 <a href="../../builtin/#string">string</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUsageReport.ToLog">func (SwigcptrUsageReport) <a href="../../src/oneml/alpr/alprAPI.go.html?s=26583:26622#L656">ToLog</a>
-					<a class="permalink" href="#SwigcptrUsageReport.ToLog">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUsageReport">SwigcptrUsageReport</a>) ToLog()</pre>
-				
-				
-				
-				
-			
-		
-			
-			
-			<h2 id="SwigcptrUtils">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=47571:47597#L1326">SwigcptrUtils</a>
+			<h2 id="SwigcptrUtils">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=40349:40375#L1132">SwigcptrUtils</a>
 				<a class="permalink" href="#SwigcptrUtils">¶</a>
 				
 				
@@ -2815,19 +2487,7 @@
 
 			
 				
-				<h3 id="SwigcptrUtils.GetUsage">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=48060:48120#L1347">GetUsage</a>
-					<a class="permalink" href="#SwigcptrUtils.GetUsage">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrUtils">SwigcptrUtils</a>) GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrUtils.ReadImageCV">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=48299:48367#L1354">ReadImageCV</a>
+				<h3 id="SwigcptrUtils.ReadImageCV">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=40706:40774#L1148">ReadImageCV</a>
 					<a class="permalink" href="#SwigcptrUtils.ReadImageCV">¶</a>
 					
 					
@@ -2839,7 +2499,7 @@
 				
 			
 				
-				<h3 id="SwigcptrUtils.SwigIsUtils">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=47667:47703#L1332">SwigIsUtils</a>
+				<h3 id="SwigcptrUtils.SwigIsUtils">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=40445:40481#L1138">SwigIsUtils</a>
 					<a class="permalink" href="#SwigcptrUtils.SwigIsUtils">¶</a>
 					
 					
@@ -2851,7 +2511,7 @@
 				
 			
 				
-				<h3 id="SwigcptrUtils.Swigcptr">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=47599:47640#L1328">Swigcptr</a>
+				<h3 id="SwigcptrUtils.Swigcptr">func (SwigcptrUtils) <a href="../../src/oneml/alpr/alprAPI.go.html?s=40377:40418#L1134">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrUtils.Swigcptr">¶</a>
 					
 					
@@ -2865,7 +2525,7 @@
 		
 			
 			
-			<h2 id="SwigcptrVehicleDetector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=44577:44613#L1252">SwigcptrVehicleDetector</a>
+			<h2 id="SwigcptrVehicleDetector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=37650:37686#L1066">SwigcptrVehicleDetector</a>
 				<a class="permalink" href="#SwigcptrVehicleDetector">¶</a>
 				
 				
@@ -2885,7 +2545,7 @@
 
 			
 				
-				<h3 id="SwigcptrVehicleDetector.Detect">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=45455:45543#L1280">Detect</a>
+				<h3 id="SwigcptrVehicleDetector.Detect">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=38107:38195#L1082">Detect</a>
 					<a class="permalink" href="#SwigcptrVehicleDetector.Detect">¶</a>
 					
 					
@@ -2897,7 +2557,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetector.DetectBatch">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=45814:45918#L1288">DetectBatch</a>
+				<h3 id="SwigcptrVehicleDetector.DetectBatch">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=38466:38570#L1090">DetectBatch</a>
 					<a class="permalink" href="#SwigcptrVehicleDetector.DetectBatch">¶</a>
 					
 					
@@ -2909,19 +2569,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetector.GetUsage">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=45196:45266#L1273">GetUsage</a>
-					<a class="permalink" href="#SwigcptrVehicleDetector.GetUsage">¶</a>
-					
-					
-				</h3>
-				<pre>func (arg1 <a href="#SwigcptrVehicleDetector">SwigcptrVehicleDetector</a>) GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
-				
-				
-				
-				
-			
-				
-				<h3 id="SwigcptrVehicleDetector.SwigIsVehicleDetector">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=44693:44749#L1258">SwigIsVehicleDetector</a>
+				<h3 id="SwigcptrVehicleDetector.SwigIsVehicleDetector">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=37766:37822#L1072">SwigIsVehicleDetector</a>
 					<a class="permalink" href="#SwigcptrVehicleDetector.SwigIsVehicleDetector">¶</a>
 					
 					
@@ -2933,7 +2581,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetector.Swigcptr">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=44615:44666#L1254">Swigcptr</a>
+				<h3 id="SwigcptrVehicleDetector.Swigcptr">func (SwigcptrVehicleDetector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=37688:37739#L1068">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrVehicleDetector.Swigcptr">¶</a>
 					
 					
@@ -2947,7 +2595,7 @@
 		
 			
 			
-			<h2 id="SwigcptrVehicleDetectorResult">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=42027:42069#L1177">SwigcptrVehicleDetectorResult</a>
+			<h2 id="SwigcptrVehicleDetectorResult">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=35747:35789#L1009">SwigcptrVehicleDetectorResult</a>
 				<a class="permalink" href="#SwigcptrVehicleDetectorResult">¶</a>
 				
 				
@@ -2967,7 +2615,7 @@
 
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResult.GetBboxes">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=43797:43873#L1229">GetBboxes</a>
+				<h3 id="SwigcptrVehicleDetectorResult.GetBboxes">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36690:36766#L1038">GetBboxes</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResult.GetBboxes">¶</a>
 					
 					
@@ -2979,7 +2627,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResult.GetReturnStatus">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=44066:44147#L1236">GetReturnStatus</a>
+				<h3 id="SwigcptrVehicleDetectorResult.GetReturnStatus">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36959:37040#L1045">GetReturnStatus</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResult.GetReturnStatus">¶</a>
 					
 					
@@ -2991,7 +2639,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResult.GetScores">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=43524:43601#L1222">GetScores</a>
+				<h3 id="SwigcptrVehicleDetectorResult.GetScores">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36417:36494#L1031">GetScores</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResult.GetScores">¶</a>
 					
 					
@@ -3003,7 +2651,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResult.GetSize">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=43300:43367#L1215">GetSize</a>
+				<h3 id="SwigcptrVehicleDetectorResult.GetSize">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=36193:36260#L1024">GetSize</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResult.GetSize">¶</a>
 					
 					
@@ -3015,7 +2663,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResult.SwigIsVehicleDetectorResult">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=42155:42223#L1183">SwigIsVehicleDetectorResult</a>
+				<h3 id="SwigcptrVehicleDetectorResult.SwigIsVehicleDetectorResult">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=35875:35943#L1015">SwigIsVehicleDetectorResult</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResult.SwigIsVehicleDetectorResult">¶</a>
 					
 					
@@ -3027,7 +2675,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResult.Swigcptr">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=42071:42128#L1179">Swigcptr</a>
+				<h3 id="SwigcptrVehicleDetectorResult.Swigcptr">func (SwigcptrVehicleDetectorResult) <a href="../../src/oneml/alpr/alprAPI.go.html?s=35791:35848#L1011">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResult.Swigcptr">¶</a>
 					
 					
@@ -3041,7 +2689,7 @@
 		
 			
 			
-			<h2 id="SwigcptrVehicleDetectorResultVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=37740:37788#L1059">SwigcptrVehicleDetectorResultVector</a>
+			<h2 id="SwigcptrVehicleDetectorResultVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=31460:31508#L891">SwigcptrVehicleDetectorResultVector</a>
 				<a class="permalink" href="#SwigcptrVehicleDetectorResultVector">¶</a>
 				
 				
@@ -3061,7 +2709,7 @@
 
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.Add">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=40576:40655#L1138">Add</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.Add">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34296:34375#L970">Add</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Add">¶</a>
 					
 					
@@ -3073,7 +2721,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.Capacity">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=39695:39771#L1113">Capacity</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.Capacity">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33415:33491#L945">Capacity</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Capacity">¶</a>
 					
 					
@@ -3085,7 +2733,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.Clear">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=40407:40462#L1133">Clear</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.Clear">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34127:34182#L965">Clear</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Clear">¶</a>
 					
 					
@@ -3097,7 +2745,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.Get">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=40821:40916#L1144">Get</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.Get">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34541:34636#L976">Get</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Get">¶</a>
 					
 					
@@ -3109,7 +2757,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.IsEmpty">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=40168:40242#L1126">IsEmpty</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.IsEmpty">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33888:33962#L958">IsEmpty</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.IsEmpty">¶</a>
 					
 					
@@ -3121,7 +2769,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.Reserve">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=39939:40006#L1120">Reserve</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.Reserve">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33659:33726#L952">Reserve</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Reserve">¶</a>
 					
 					
@@ -3133,7 +2781,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.Set">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=41186:41275#L1152">Set</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.Set">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=34906:34995#L984">Set</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Set">¶</a>
 					
 					
@@ -3145,7 +2793,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.Size">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=39459:39531#L1106">Size</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.Size">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=33179:33251#L938">Size</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Size">¶</a>
 					
 					
@@ -3157,7 +2805,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.SwigIsVehicleDetectorResultVector">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=37880:37960#L1065">SwigIsVehicleDetectorResultVector</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.SwigIsVehicleDetectorResultVector">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=31600:31680#L897">SwigIsVehicleDetectorResultVector</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.SwigIsVehicleDetectorResultVector">¶</a>
 					
 					
@@ -3169,7 +2817,7 @@
 				
 			
 				
-				<h3 id="SwigcptrVehicleDetectorResultVector.Swigcptr">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=37790:37853#L1061">Swigcptr</a>
+				<h3 id="SwigcptrVehicleDetectorResultVector.Swigcptr">func (SwigcptrVehicleDetectorResultVector) <a href="../../src/oneml/alpr/alprAPI.go.html?s=31510:31573#L893">Swigcptr</a>
 					<a class="permalink" href="#SwigcptrVehicleDetectorResultVector.Swigcptr">¶</a>
 					
 					
@@ -3183,58 +2831,7 @@
 		
 			
 			
-			<h2 id="UsageReport">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=27456:27948#L685">UsageReport</a>
-				<a class="permalink" href="#UsageReport">¶</a>
-				
-				
-			</h2>
-			
-			<pre>type UsageReport interface {
-    Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
-    SwigIsUsageReport()
-    SetApi_calls(arg2 <a href="../../builtin/#int">int</a>)
-    GetApi_calls() (_swig_ret <a href="../../builtin/#int">int</a>)
-    SetModel_runs(arg2 <a href="../../builtin/#int">int</a>)
-    GetModel_runs() (_swig_ret <a href="../../builtin/#int">int</a>)
-    SetFirst_updated(arg2 <a href="../../builtin/#int">int</a>)
-    GetFirst_updated() (_swig_ret <a href="../../builtin/#int">int</a>)
-    SetLast_updated(arg2 <a href="../../builtin/#int">int</a>)
-    GetLast_updated() (_swig_ret <a href="../../builtin/#int">int</a>)
-    SetSuccess_count(arg2 <a href="../../builtin/#int">int</a>)
-    GetSuccess_count() (_swig_ret <a href="../../builtin/#int">int</a>)
-    SetFail_count(arg2 <a href="../../builtin/#int">int</a>)
-    GetFail_count() (_swig_ret <a href="../../builtin/#int">int</a>)
-    ToLog()
-    ToFile(arg2 <a href="../../builtin/#string">string</a>)
-    GetApi() (_swig_ret <a href="../../builtin/#string">string</a>)
-}</pre>
-
-			
-
-			
-
-			
-			
-			
-
-			
-				
-				<h3 id="NewUsageReport">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=23699:23755#L568">NewUsageReport</a>
-					<a class="permalink" href="#NewUsageReport">¶</a>
-					
-					
-				</h3>
-				<pre>func NewUsageReport(arg1 <a href="../../builtin/#string">string</a>) (_swig_ret <a href="#UsageReport">UsageReport</a>)</pre>
-				
-				
-				
-			
-
-			
-		
-			
-			
-			<h2 id="Utils">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=48657:48796#L1365">Utils</a>
+			<h2 id="Utils">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=41196:41299#L1164">Utils</a>
 				<a class="permalink" href="#Utils">¶</a>
 				
 				
@@ -3243,7 +2840,6 @@
 			<pre>type Utils interface {
     Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
     SwigIsUtils()
-    GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)
     ReadImageCV(arg2 <a href="../../builtin/#string">string</a>) (_swig_ret <a href="#Image">Image</a>)
 }</pre>
 
@@ -3257,7 +2853,7 @@
 
 			
 				
-				<h3 id="NewUtils">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=47709:47761#L1335">NewUtils</a>
+				<h3 id="NewUtils">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=40487:40539#L1141">NewUtils</a>
 					<a class="permalink" href="#NewUtils">¶</a>
 					
 					
@@ -3272,7 +2868,7 @@
 		
 			
 			
-			<h2 id="VehicleDetector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=46212:46451#L1296">VehicleDetector</a>
+			<h2 id="VehicleDetector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=39026:39229#L1103">VehicleDetector</a>
 				<a class="permalink" href="#VehicleDetector">¶</a>
 				
 				
@@ -3281,7 +2877,6 @@
 			<pre>type VehicleDetector interface {
     Swigcptr() <a href="../../builtin/#uintptr">uintptr</a>
     SwigIsVehicleDetector()
-    GetUsage() (_swig_ret <a href="#UsageReport">UsageReport</a>)
     Detect(arg2 <a href="#Image">Image</a>) (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)
     DetectBatch(arg2 <a href="#MultiImage">MultiImage</a>) (_swig_ret <a href="#VehicleDetectorResultVector">VehicleDetectorResultVector</a>)
 }</pre>
@@ -3296,7 +2891,7 @@
 
 			
 				
-				<h3 id="NewVehicleDetector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=44755:44827#L1261">NewVehicleDetector</a>
+				<h3 id="NewVehicleDetector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=37828:37900#L1075">NewVehicleDetector</a>
 					<a class="permalink" href="#NewVehicleDetector">¶</a>
 					
 					
@@ -3311,7 +2906,7 @@
 		
 			
 			
-			<h2 id="VehicleDetectorResult">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=44343:44575#L1243">VehicleDetectorResult</a>
+			<h2 id="VehicleDetectorResult">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=37416:37648#L1057">VehicleDetectorResult</a>
 				<a class="permalink" href="#VehicleDetectorResult">¶</a>
 				
 				
@@ -3336,34 +2931,12 @@
 
 			
 				
-				<h3 id="NewVehicleDetectorResult">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=43007:43076#L1204">NewVehicleDetectorResult</a>
+				<h3 id="NewVehicleDetectorResult">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=35949:36014#L1018">NewVehicleDetectorResult</a>
 					<a class="permalink" href="#NewVehicleDetectorResult">¶</a>
 					
 					
 				</h3>
-				<pre>func NewVehicleDetectorResult(a ...interface{}) <a href="#VehicleDetectorResult">VehicleDetectorResult</a></pre>
-				
-				
-				
-			
-				
-				<h3 id="NewVehicleDetectorResult__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=42229:42302#L1186">NewVehicleDetectorResult__SWIG_0</a>
-					<a class="permalink" href="#NewVehicleDetectorResult__SWIG_0">¶</a>
-					
-					
-				</h3>
-				<pre>func NewVehicleDetectorResult__SWIG_0() (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
-				
-				
-				
-			
-				
-				<h3 id="NewVehicleDetectorResult__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=42669:42768#L1197">NewVehicleDetectorResult__SWIG_1</a>
-					<a class="permalink" href="#NewVehicleDetectorResult__SWIG_1">¶</a>
-					
-					
-				</h3>
-				<pre>func NewVehicleDetectorResult__SWIG_1(arg1 <a href="#VehicleDetectorResult">VehicleDetectorResult</a>) (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
+				<pre>func NewVehicleDetectorResult() (_swig_ret <a href="#VehicleDetectorResult">VehicleDetectorResult</a>)</pre>
 				
 				
 				
@@ -3373,7 +2946,7 @@
 		
 			
 			
-			<h2 id="VehicleDetectorResultVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=41683:42025#L1164">VehicleDetectorResultVector</a>
+			<h2 id="VehicleDetectorResultVector">type <a href="../../src/oneml/alpr/alprAPI.go.html?s=35403:35745#L996">VehicleDetectorResultVector</a>
 				<a class="permalink" href="#VehicleDetectorResultVector">¶</a>
 				
 				
@@ -3402,7 +2975,7 @@
 
 			
 				
-				<h3 id="NewVehicleDetectorResultVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=38992:39073#L1088">NewVehicleDetectorResultVector</a>
+				<h3 id="NewVehicleDetectorResultVector">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=32712:32793#L920">NewVehicleDetectorResultVector</a>
 					<a class="permalink" href="#NewVehicleDetectorResultVector">¶</a>
 					
 					
@@ -3413,7 +2986,7 @@
 				
 			
 				
-				<h3 id="NewVehicleDetectorResultVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=37966:38051#L1068">NewVehicleDetectorResultVector__SWIG_0</a>
+				<h3 id="NewVehicleDetectorResultVector__SWIG_0">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=31686:31771#L900">NewVehicleDetectorResultVector__SWIG_0</a>
 					<a class="permalink" href="#NewVehicleDetectorResultVector__SWIG_0">¶</a>
 					
 					
@@ -3424,7 +2997,7 @@
 				
 			
 				
-				<h3 id="NewVehicleDetectorResultVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=38262:38357#L1074">NewVehicleDetectorResultVector__SWIG_1</a>
+				<h3 id="NewVehicleDetectorResultVector__SWIG_1">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=31982:32077#L906">NewVehicleDetectorResultVector__SWIG_1</a>
 					<a class="permalink" href="#NewVehicleDetectorResultVector__SWIG_1">¶</a>
 					
 					
@@ -3435,7 +3008,7 @@
 				
 			
 				
-				<h3 id="NewVehicleDetectorResultVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=38612:38729#L1081">NewVehicleDetectorResultVector__SWIG_2</a>
+				<h3 id="NewVehicleDetectorResultVector__SWIG_2">func <a href="../../src/oneml/alpr/alprAPI.go.html?s=32332:32449#L913">NewVehicleDetectorResultVector__SWIG_2</a>
 					<a class="permalink" href="#NewVehicleDetectorResultVector__SWIG_2">¶</a>
 					
 					
@@ -3458,7 +3031,7 @@
 
 
 
-<div id="footer"><a href="../../docs.zip">Download docs.zip</a> to browse offline - Generated by <a href="https://godoc.org/golang.org/x/tools/godoc" target="_blank">godoc</a> + <a href="https://code.rocketnine.space/tslocum/godoc-static" target="_blank">godoc-static</a></div>
+<div id="footer"><a href="../../docs.zip">Download docs.zip</a> to browse offline - Generated by <a href="https://godoc.org/golang.org/x/tools/godoc" target="_blank">godoc</a> + <a href="https://gitlab.com/tslocum/godoc-static" target="_blank">godoc-static</a></div>
 
 </div><!-- .container -->
 </div><!-- #page -->

@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -126,6 +132,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -205,13 +219,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a32adfdfd24b6a75a2e4b1d57f6eb53fc"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a32adfdfd24b6a75a2e4b1d57f6eb53fc"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::FaceDetector::FaceDetector__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1af1d9350238696d2280ba88330c24a25a"></span><code class="sig-name descname">FaceDetector</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::FaceDetector::FaceDetector__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1af1d9350238696d2280ba88330c24a25a"></span><em class="property">inline</em> <code class="sig-name descname">FaceDetector</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector12FaceDetectorE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a FaceDetector object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -223,19 +237,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector8getUsageEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector8getUsageEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector8getUsageEv"></span><span id="org::sertiscorp::oneml::face::FaceDetector::getUsage"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a113cca6a8ed2e15fffb7a34333eeced2"></span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face11UsageReportE" title="org::sertiscorp::oneml::face::UsageReport">UsageReport</a> <code class="sig-name descname">getUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector8getUsageEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a report of the usage. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch"></span><span id="org::sertiscorp::oneml::face::FaceDetector::detect__ImageBatch"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a4e41b21a9b2dce16d67fc76eb20d4b05"></span>FaceDetectorResultList <code class="sig-name descname">detect</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch"></span><span id="org::sertiscorp::oneml::face::FaceDetector::detect__ImageBatch"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a4e41b21a9b2dce16d67fc76eb20d4b05"></span><em class="property">inline</em> FaceDetectorResultList <code class="sig-name descname">detect</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatch" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Detect faces in images. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceDetectorResultList</strong>. </p>
@@ -249,14 +252,46 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatchf">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatchf"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatchf"></span><span id="org::sertiscorp::oneml::face::FaceDetector::detect__ImageBatch.float"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a045f126aa26d710557bb81080520aa58"></span><em class="property">inline</em> FaceDetectorResultList <code class="sig-name descname">detect</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em>, float <em>score_threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE10ImageBatchf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Detect faces in images. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceDetectorResultList</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">imgs</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image_batch"><span class="std std-ref">ImageBatch</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">score_threshold</span></code>: score threshold </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image"></span><span id="org::sertiscorp::oneml::face::FaceDetector::detect__Image"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a83828f95f0af0fac6bfaca648a1bf16a"></span><a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResultE" title="org::sertiscorp::oneml::face::FaceDetectorResult">FaceDetectorResult</a> <code class="sig-name descname">detect</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image"></span><span id="org::sertiscorp::oneml::face::FaceDetector::detect__Image"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1a83828f95f0af0fac6bfaca648a1bf16a"></span><em class="property">inline</em> <a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResultE" title="org::sertiscorp::oneml::face::FaceDetectorResult">FaceDetectorResult</a> <code class="sig-name descname">detect</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE5Image" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Detect faces in an image. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceDetectorResult</strong>. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE5Imagef">
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceDetector6detectE5Imagef"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceDetector6detectE5Imagef"></span><span id="org::sertiscorp::oneml::face::FaceDetector::detect__Image.float"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_1aac5465db9f96d8e0741612bc45dacdac"></span><em class="property">inline</em> <a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResultE" title="org::sertiscorp::oneml::face::FaceDetectorResult">FaceDetectorResult</a> <code class="sig-name descname">detect</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em>, float <em>score_threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceDetector6detectE5Imagef" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Detect faces in an image. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceDetectorResult</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">img</span></code>: an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">score_threshold</span></code>: score threshold </p></li>
 </ul>
 </dd>
 </dl>
@@ -273,13 +308,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a8a8b4bfad6189515845bb1116aef4bc2"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a8a8b4bfad6189515845bb1116aef4bc2"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getSize"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1ae2ce9c20d5fd3946122ad950735148dc"></span>int <code class="sig-name descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getSize"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1ae2ce9c20d5fd3946122ad950735148dc"></span><em class="property">inline</em> int <code class="sig-name descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult7getSizeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get number of detections. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an integer. </p>
@@ -290,7 +325,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getBBoxes"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a1ffb5bf6d3884e05ce28959160e79f4d"></span>BBoxList <code class="sig-name descname">getBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getBBoxes"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a1ffb5bf6d3884e05ce28959160e79f4d"></span><em class="property">inline</em> BBoxList <code class="sig-name descname">getBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getBBoxesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get result Bounding Boxes. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>BBoxList</strong>. </p>
@@ -301,10 +336,10 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getScores"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a03460d8bc57da6cfd57980deab6958de"></span>ScoreList <code class="sig-name descname">getScores</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getScores"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a42ec1ccd27cbfadd2e33fc6ff7faa0c0"></span><em class="property">inline</em> FloatList <code class="sig-name descname">getScores</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult9getScoresEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get result scores. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of <strong>ScoreList</strong>. </p>
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FloatList</strong>. </p>
 </dd>
 </dl>
 </p>
@@ -312,7 +347,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getLandmarks"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a4aabd39ab2785f6eecf3ee61d729df06"></span>Landmark5List <code class="sig-name descname">getLandmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getLandmarks"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a4aabd39ab2785f6eecf3ee61d729df06"></span><em class="property">inline</em> Landmark5List <code class="sig-name descname">getLandmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult12getLandmarksEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get result landmarks. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>Landmark5List</strong>. </p>
@@ -323,7 +358,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getPoses"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1ac9d2635c9bcc08971a9253055e410376"></span>FacePoseList <code class="sig-name descname">getPoses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getPoses"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1ac9d2635c9bcc08971a9253055e410376"></span><em class="property">inline</em> FacePoseList <code class="sig-name descname">getPoses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult8getPosesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get result face poses. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>FacePostList</strong>. </p>
@@ -334,7 +369,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult15getReturnStatusEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult15getReturnStatusEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult15getReturnStatusEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getReturnStatus"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a6b4ab02773779f4bb57cddfb56a7ba14"></span>StatusCodeList <code class="sig-name descname">getReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult15getReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceDetectorResult15getReturnStatusEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceDetectorResult15getReturnStatusEv"></span><span id="org::sertiscorp::oneml::face::FaceDetectorResult::getReturnStatus"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_1a6b4ab02773779f4bb57cddfb56a7ba14"></span><em class="property">inline</em> StatusCodeList <code class="sig-name descname">getReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceDetectorResult15getReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get result status code. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>StatusCodeList</strong>. </p>
@@ -353,7 +388,7 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_list_1aad62a6dfb50b3424ec146f7ed3fbf1ef"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_detector_result_list_1aad62a6dfb50b3424ec146f7ed3fbf1ef"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 

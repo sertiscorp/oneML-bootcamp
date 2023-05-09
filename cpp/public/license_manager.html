@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">C++ APIs</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="face_detector.html">C++ Face Detector API</a></li>
@@ -126,6 +132,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -225,20 +239,6 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N5oneML14LicenseManager16set_machine_codeERKNSt6stringE">
-<span id="_CPPv3N5oneML14LicenseManager16set_machine_codeERKNSt6stringE"></span><span id="_CPPv2N5oneML14LicenseManager16set_machine_codeERKNSt6stringE"></span><span id="oneML::LicenseManager::set_machine_code__ssCR"></span><span class="target" id="classone_m_l_1_1_license_manager_1a0cdc090b22b3f6ad5a128e96af289f3c"></span>void <code class="sig-name descname">set_machine_code</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5oneML14LicenseManager16set_machine_codeERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>set the oneML machine code </p>
-<p>This function can be called optionally to set a custom code. The code can be any alphanumerical sequency not longer than 100 characters and must not be empty. The code must be unique to guarantee correct licensing management. If this function is not called, oneML will automatically generate a unique code to assign to the machine.</p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: string of machine code </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4NK5oneML14LicenseManager7get_keyEv">
 <span id="_CPPv3NK5oneML14LicenseManager7get_keyEv"></span><span id="_CPPv2NK5oneML14LicenseManager7get_keyEv"></span><span id="oneML::LicenseManager::get_keyC"></span><span class="target" id="classone_m_l_1_1_license_manager_1aefc62df3e8091c501e70690f4c0c5754"></span>std::string <code class="sig-name descname">get_key</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML14LicenseManager7get_keyEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>get a product key </p>
@@ -294,12 +294,12 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4NK5oneML14LicenseManager19is_valid_activationEv">
-<span id="_CPPv3NK5oneML14LicenseManager19is_valid_activationEv"></span><span id="_CPPv2NK5oneML14LicenseManager19is_valid_activationEv"></span><span id="oneML::LicenseManager::is_valid_activationC"></span><span class="target" id="classone_m_l_1_1_license_manager_1a6b85d5e22f040d296deef2ce97505df9"></span>bool <code class="sig-name descname">is_valid_activation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML14LicenseManager19is_valid_activationEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>check if an activation whether by a key or trial is valid or not (not expired). </p>
-<p>Validate a current activation by a key or trial. It also update a type of the current activation. Call <code class="docutils literal notranslate"><span class="pre">get_activation_type</span></code> after caliing this function to get the type of the current activation.</p>
+<dt id="_CPPv4NK5oneML14LicenseManager19validate_activationEv">
+<span id="_CPPv3NK5oneML14LicenseManager19validate_activationEv"></span><span id="_CPPv2NK5oneML14LicenseManager19validate_activationEv"></span><span id="oneML::LicenseManager::validate_activationC"></span><span class="target" id="classone_m_l_1_1_license_manager_1a9672d8f427db3278c38ac4b83f6a606c"></span><a class="reference internal" href="#_CPPv4N5oneML13LicenseStatusE" title="oneML::LicenseStatus">LicenseStatus</a> <code class="sig-name descname">validate_activation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML14LicenseManager19validate_activationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>validate the license and return LicenseStatus. </p>
+<p>It also updates a type of the current activation. Call <code class="docutils literal notranslate"><span class="pre">get_activation_type</span></code> after caliing this function to get the type of the current activation.</p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>true if an activation is valid and not expired, false otherwise </p>
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus </p>
 </dd>
 </dl>
 </p>
@@ -326,18 +326,18 @@
 <span id="_CPPv3NK5oneML14LicenseManager26get_activation_expiry_dateEv"></span><span id="_CPPv2NK5oneML14LicenseManager26get_activation_expiry_dateEv"></span><span id="oneML::LicenseManager::get_activation_expiry_dateC"></span><span class="target" id="classone_m_l_1_1_license_manager_1ad2a53202248ae71815573a12088e6210"></span>uint64_t <code class="sig-name descname">get_activation_expiry_date</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML14LicenseManager26get_activation_expiry_dateEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>get the expiry date of the current activation </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>uint64_t unix time (also, LOG info of expiry time in Y-M-D) </p>
+<dt><strong>Return</strong></dt><dd><p>uint64_t unix time </p>
 </dd>
 </dl>
 </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4NK5oneML14LicenseManager9get_usageEv">
-<span id="_CPPv3NK5oneML14LicenseManager9get_usageEv"></span><span id="_CPPv2NK5oneML14LicenseManager9get_usageEv"></span><span id="oneML::LicenseManager::get_usageC"></span><span class="target" id="classone_m_l_1_1_license_manager_1a778e97cea06546c69a1ee78586e64e0d"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N5oneML11UsageReportE" title="oneML::UsageReport">UsageReport</a> <code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML14LicenseManager9get_usageEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get <a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>. </p>
+<dt id="_CPPv4NK5oneML14LicenseManager29get_activation_suspended_dateEv">
+<span id="_CPPv3NK5oneML14LicenseManager29get_activation_suspended_dateEv"></span><span id="_CPPv2NK5oneML14LicenseManager29get_activation_suspended_dateEv"></span><span id="oneML::LicenseManager::get_activation_suspended_dateC"></span><span class="target" id="classone_m_l_1_1_license_manager_1ad6641c7f437588567c114c3f4727cda0"></span>uint64_t <code class="sig-name descname">get_activation_suspended_date</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML14LicenseManager29get_activation_suspended_dateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get the suspended date of the current activation </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> object. </p>
+<dt><strong>Return</strong></dt><dd><p>uint64_t unix time </p>
 </dd>
 </dl>
 </p>
@@ -360,6 +360,16 @@
 <dl class="cpp enumerator">
 <dt id="_CPPv4N5oneML13LicenseStatus5ErrorE">
 <span id="_CPPv3N5oneML13LicenseStatus5ErrorE"></span><span id="_CPPv2N5oneML13LicenseStatus5ErrorE"></span><span class="target" id="oneml__license__manager_8h_1a56b0c8330a545d1c7ed5dbfc4d5c8168a902b0d55fddef6f8d651fe1035b7d4bd"></span><em class="property">enumerator </em><code class="sig-name descname">Error</code><a class="headerlink" href="#_CPPv4N5oneML13LicenseStatus5ErrorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML13LicenseStatus7ExpiredE">
+<span id="_CPPv3N5oneML13LicenseStatus7ExpiredE"></span><span id="_CPPv2N5oneML13LicenseStatus7ExpiredE"></span><span class="target" id="oneml__license__manager_8h_1a56b0c8330a545d1c7ed5dbfc4d5c8168a24fe48030f7d3097d5882535b04c3fa8"></span><em class="property">enumerator </em><code class="sig-name descname">Expired</code><a class="headerlink" href="#_CPPv4N5oneML13LicenseStatus7ExpiredE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML13LicenseStatus9SuspendedE">
+<span id="_CPPv3N5oneML13LicenseStatus9SuspendedE"></span><span id="_CPPv2N5oneML13LicenseStatus9SuspendedE"></span><span class="target" id="oneml__license__manager_8h_1a56b0c8330a545d1c7ed5dbfc4d5c8168a8bf906833cc7aea8084f552217ed9c1d"></span><em class="property">enumerator </em><code class="sig-name descname">Suspended</code><a class="headerlink" href="#_CPPv4N5oneML13LicenseStatus9SuspendedE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>

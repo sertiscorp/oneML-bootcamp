@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C++ Data Structures</a></li>
@@ -124,6 +130,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -196,49 +210,49 @@
   <section id="c-face-id-example">
 <span id="cpp-face-idexample"></span><h1>C++ Face Id Example<a class="headerlink" href="#c-face-id-example" title="Permalink to this headline">¶</a></h1>
 <p>Initialize faceID model</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceEmbedder</span><span class="w"> </span><span class="n">embedder</span><span class="p">;</span><span class="w"></span>
-<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceId</span><span class="w"> </span><span class="nf">face_id</span><span class="p">(</span><span class="n">embedder</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceEmbedder</span><span class="w"> </span><span class="n">embedder</span><span class="p">;</span>
+<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceId</span><span class="w"> </span><span class="nf">face_id</span><span class="p">(</span><span class="n">embedder</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Initialize faceID model with licensing</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">LicenseManager</span><span class="w"> </span><span class="n">license_manager</span><span class="p">;</span><span class="w"></span>
-<span class="n">license_manager</span><span class="p">.</span><span class="n">set_key</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">license_manager</span><span class="p">.</span><span class="n">activate_key</span><span class="p">();</span><span class="w"></span>
-<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceEmbedder</span><span class="w"> </span><span class="nf">embedder</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span><span class="w"></span>
-<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceId</span><span class="w"> </span><span class="nf">face_id</span><span class="p">(</span><span class="n">embedder</span><span class="p">,</span><span class="w"> </span><span class="n">license_manager</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">LicenseManager</span><span class="w"> </span><span class="n">license_manager</span><span class="p">;</span>
+<span class="n">license_manager</span><span class="p">.</span><span class="n">set_key</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span>
+<span class="n">license_manager</span><span class="p">.</span><span class="n">activate_key</span><span class="p">();</span>
+<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceEmbedder</span><span class="w"> </span><span class="nf">embedder</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span>
+<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceId</span><span class="w"> </span><span class="nf">face_id</span><span class="p">(</span><span class="n">embedder</span><span class="p">,</span><span class="w"> </span><span class="n">license_manager</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils with licensing</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Utils</span><span class="w"> </span><span class="nf">utils</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Utils</span><span class="w"> </span><span class="nf">utils</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Create oneML’s Image input object</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Image</span><span class="w"> </span><span class="n">img1</span><span class="p">;</span><span class="w"></span>
-<span class="n">oneML</span><span class="o">::</span><span class="n">Image</span><span class="w"> </span><span class="n">img2</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Image</span><span class="w"> </span><span class="n">img1</span><span class="p">;</span>
+<span class="n">oneML</span><span class="o">::</span><span class="n">Image</span><span class="w"> </span><span class="n">img2</span><span class="p">;</span>
 
-<span class="n">utils</span><span class="p">.</span><span class="n">read_image_cv</span><span class="p">(</span><span class="n">path1</span><span class="p">,</span><span class="w"> </span><span class="n">img1</span><span class="p">);</span><span class="w"></span>
-<span class="n">utils</span><span class="p">.</span><span class="n">read_image_cv</span><span class="p">(</span><span class="n">path2</span><span class="p">,</span><span class="w"> </span><span class="n">img2</span><span class="p">);</span><span class="w"></span>
+<span class="n">utils</span><span class="p">.</span><span class="n">read_image_cv</span><span class="p">(</span><span class="n">path1</span><span class="p">,</span><span class="w"> </span><span class="n">img1</span><span class="p">);</span>
+<span class="n">utils</span><span class="p">.</span><span class="n">read_image_cv</span><span class="p">(</span><span class="n">path2</span><span class="p">,</span><span class="w"> </span><span class="n">img2</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Run the model for verification</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">oneML</span><span class="o">::</span><span class="n">ReturnStatus</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">face_id</span><span class="p">.</span><span class="n">is_the_same_person</span><span class="p">(</span><span class="n">img1</span><span class="p">,</span><span class="w"> </span><span class="n">img2</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">oneML</span><span class="o">::</span><span class="n">ReturnStatus</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">face_id</span><span class="p">.</span><span class="n">is_the_same_person</span><span class="p">(</span><span class="n">img1</span><span class="p">,</span><span class="w"> </span><span class="n">img2</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Run the model for identification</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceIdResult</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
-<span class="n">face_id</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceIdResult</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="n">face_id</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>And get the output</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_return_status</span><span class="p">();</span><span class="w"></span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">is_identifiable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">is_identifiable</span><span class="p">();</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_id</span><span class="p">();</span><span class="w"></span>
-<span class="kt">float</span><span class="w"> </span><span class="n">nearest_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_nearest_node_distance</span><span class="p">();</span><span class="w"></span>
-<span class="kt">float</span><span class="w"> </span><span class="n">combined_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_combined_distance</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_return_status</span><span class="p">();</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">is_identifiable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">is_identifiable</span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_id</span><span class="p">();</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">nearest_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_nearest_node_distance</span><span class="p">();</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">combined_distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">get_combined_distance</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>

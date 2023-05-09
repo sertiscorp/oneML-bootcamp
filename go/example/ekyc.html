@@ -39,6 +39,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Golang Liveness PAD Example" href="liveness_pad.html" />
     <link rel="prev" title="Golang Challenge Response Example" href="challenge_response.html" /> 
 </head>
 
@@ -63,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -88,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -123,6 +130,14 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Golang EKYC Example</a></li>
 </ul>
 </li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -195,49 +210,50 @@
   <section id="golang-ekyc-example">
 <span id="go-ekyc-example"></span><h1>Golang EKYC Example<a class="headerlink" href="#golang-ekyc-example" title="Permalink to this headline">¶</a></h1>
 <p>Initialize EKYC module</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="nx">ekyc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">EKYC</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span>
+<span class="nx">ekyc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">EKYC</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Initialize EKYC module with licensing</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="nx">licenseManager</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewLicenseManager</span><span class="p">()</span><span class="w"></span>
-<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">SetKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">ActivateKey</span><span class="p">()</span><span class="w"></span>
-<span class="nx">ekyc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewEKYC</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span>
+<span class="nx">licenseManager</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewLicenseManager</span><span class="p">()</span>
+<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">SetKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">)</span>
+<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">ActivateKey</span><span class="p">()</span>
+<span class="nx">ekyc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewEKYC</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">Utils</span><span class="w"> </span><span class="nx">utils</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">Utils</span><span class="w"> </span><span class="nx">utils</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils with licensing</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">Utils</span><span class="w"> </span><span class="nx">utils</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">Utils</span><span class="w"> </span><span class="nx">utils</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Read input as oneML’s Image</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">image1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">oneMLUtils</span><span class="p">.</span><span class="nx">ReadImageCV</span><span class="p">(</span><span class="nx">filePath1</span><span class="p">)</span><span class="w"></span>
-<span class="nx">image2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">oneMLUtils</span><span class="p">.</span><span class="nx">ReadImageCV</span><span class="p">(</span><span class="nx">filePath2</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">image1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">oneMLUtils</span><span class="p">.</span><span class="nx">ReadImageCV</span><span class="p">(</span><span class="nx">filePath1</span><span class="p">)</span>
+<span class="nx">image2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">oneMLUtils</span><span class="p">.</span><span class="nx">ReadImageCV</span><span class="p">(</span><span class="nx">filePath2</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run the model</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="c1">// run both image blur check and face pad check</span><span class="w"></span>
-<span class="nx">ops</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewEKYCOps</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"></span>
-<span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ekyc</span><span class="p">.</span><span class="nx">Run</span><span class="p">(</span><span class="nx">image1</span><span class="p">,</span><span class="w"> </span><span class="nx">image2</span><span class="p">,</span><span class="w"> </span><span class="nx">ops</span><span class="p">,</span><span class="w"> </span><span class="nx">ops</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="c1">// run both image blur check and face pad check</span>
+<span class="nx">ops</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewEKYCOps</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+<span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ekyc</span><span class="p">.</span><span class="nx">Run</span><span class="p">(</span><span class="nx">image1</span><span class="p">,</span><span class="w"> </span><span class="nx">image2</span><span class="p">,</span><span class="w"> </span><span class="nx">ops</span><span class="p">,</span><span class="w"> </span><span class="nx">ops</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>And get the output</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">distance</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetDistance</span><span class="p">()</span><span class="w"></span>
-<span class="nx">isSamePerson</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">IsSamePerson</span><span class="p">()</span><span class="w"></span>
-<span class="nx">bboxes</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetBboxes</span><span class="p">()</span><span class="w"></span>
-<span class="nx">landmarks</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetLandmarks</span><span class="p">()</span><span class="w"></span>
-<span class="nx">poses</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetFacePoses</span><span class="p">()</span><span class="w"></span>
-<span class="nx">status</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetReturnStatus</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">distance</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetDistance</span><span class="p">()</span>
+<span class="nx">isSamePerson</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">IsSamePerson</span><span class="p">()</span>
+<span class="nx">bboxes</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetBboxes</span><span class="p">()</span>
+<span class="nx">scores</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetBboxScores</span><span class="p">()</span>
+<span class="nx">landmarks</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetLandmarks</span><span class="p">()</span>
+<span class="nx">poses</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetFacePoses</span><span class="p">()</span>
+<span class="nx">status</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetReturnStatus</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Cleanup</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteEKYC</span><span class="p">(</span><span class="nx">ekyc</span><span class="p">)</span><span class="w"></span>
-<span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteUtils</span><span class="p">(</span><span class="nx">oneMLUtils</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteEKYC</span><span class="p">(</span><span class="nx">ekyc</span><span class="p">)</span>
+<span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteUtils</span><span class="p">(</span><span class="nx">oneMLUtils</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -248,6 +264,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="liveness_pad.html" class="btn btn-neutral float-right" title="Golang Liveness PAD Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="challenge_response.html" class="btn btn-neutral float-left" title="Golang Challenge Response Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

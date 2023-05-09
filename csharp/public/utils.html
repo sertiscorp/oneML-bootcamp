@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="C# License Manager API" href="license_manager.html" />
-    <link rel="prev" title="C# EKYC API" href="ekyc.html" /> 
+    <link rel="prev" title="C# Liveness PAD API" href="liveness_pad.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -126,6 +132,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -205,13 +219,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError7DisposeEv">
-<span id="_CPPv3N19PhonyNameDueToError7DisposeEv"></span><span id="_CPPv2N19PhonyNameDueToError7DisposeEv"></span><span id="PhonyNameDueToError::Dispose"></span><span class="target" id="class_one_m_l_1_1_face_1_1_utils_1ab72c4ca0e6275e98b3a8467832bff21f"></span>void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError7DisposeEv"></span><span id="_CPPv2N19PhonyNameDueToError7DisposeEv"></span><span id="PhonyNameDueToError::Dispose"></span><span class="target" id="class_one_m_l_1_1_face_1_1_utils_1ab72c4ca0e6275e98b3a8467832bff21f"></span><em class="property">inline</em> void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError5UtilsE14LicenseManager">
-<span id="_CPPv3N19PhonyNameDueToError5UtilsE14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError5UtilsE14LicenseManager"></span><span id="PhonyNameDueToError::Utils__LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_utils_1a03d1a4746d357d6df0de42e492473569"></span><code class="sig-name descname">Utils</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError5UtilsE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError5UtilsE14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError5UtilsE14LicenseManager"></span><span id="PhonyNameDueToError::Utils__LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_utils_1a03d1a4746d357d6df0de42e492473569"></span><em class="property">inline</em> <code class="sig-name descname">Utils</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError5UtilsE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a Utils object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -223,19 +237,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N19PhonyNameDueToError8GetUsageEv">
-<span id="_CPPv3N19PhonyNameDueToError8GetUsageEv"></span><span id="_CPPv2N19PhonyNameDueToError8GetUsageEv"></span><span id="PhonyNameDueToError::GetUsage"></span><span class="target" id="class_one_m_l_1_1_face_1_1_utils_1a9812f90a136cee0805a0a54f2d73897e"></span>UsageReport <code class="sig-name descname">GetUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Get a report of the usage. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError21CropAlignFaceLandmarkE5Image9Landmark5">
-<span id="_CPPv3N19PhonyNameDueToError21CropAlignFaceLandmarkE5Image9Landmark5"></span><span id="_CPPv2N19PhonyNameDueToError21CropAlignFaceLandmarkE5Image9Landmark5"></span><span id="PhonyNameDueToError::CropAlignFaceLandmark__Image.Landmark5"></span><span class="target" id="class_one_m_l_1_1_face_1_1_utils_1a9b928d05cef916ac89c1e29a534d9735"></span>Image <code class="sig-name descname">CropAlignFaceLandmark</code><span class="sig-paren">(</span>Image <em>image</em>, Landmark5 <em>landmark_in</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError21CropAlignFaceLandmarkE5Image9Landmark5" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError21CropAlignFaceLandmarkE5Image9Landmark5"></span><span id="_CPPv2N19PhonyNameDueToError21CropAlignFaceLandmarkE5Image9Landmark5"></span><span id="PhonyNameDueToError::CropAlignFaceLandmark__Image.Landmark5"></span><span class="target" id="class_one_m_l_1_1_face_1_1_utils_1a9b928d05cef916ac89c1e29a534d9735"></span><em class="property">inline</em> Image <code class="sig-name descname">CropAlignFaceLandmark</code><span class="sig-paren">(</span>Image <em>image</em>, Landmark5 <em>landmark_in</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError21CropAlignFaceLandmarkE5Image9Landmark5" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create align image from original image and landmark. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
@@ -251,7 +254,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError11ReadImageCVE6string">
-<span id="_CPPv3N19PhonyNameDueToError11ReadImageCVE6string"></span><span id="_CPPv2N19PhonyNameDueToError11ReadImageCVE6string"></span><span id="PhonyNameDueToError::ReadImageCV__string"></span><span class="target" id="class_one_m_l_1_1_face_1_1_utils_1a8970f6fefa276ab36160e5cf7c54e96b"></span>Image <code class="sig-name descname">ReadImageCV</code><span class="sig-paren">(</span>string <em>img_path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError11ReadImageCVE6string" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError11ReadImageCVE6string"></span><span id="_CPPv2N19PhonyNameDueToError11ReadImageCVE6string"></span><span id="PhonyNameDueToError::ReadImageCV__string"></span><span class="target" id="class_one_m_l_1_1_face_1_1_utils_1a8970f6fefa276ab36160e5cf7c54e96b"></span><em class="property">inline</em> Image <code class="sig-name descname">ReadImageCV</code><span class="sig-paren">(</span>string <em>img_path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError11ReadImageCVE6string" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read image file with specific path. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
@@ -274,13 +277,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="class_one_m_l_1_1_alpr_1_1_utils_1aed352bb1304153d678b3402656e1121f"></span>void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<span class="target" id="class_one_m_l_1_1_alpr_1_1_utils_1aed352bb1304153d678b3402656e1121f"></span><em class="property">inline</em> void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt>
-<span class="target" id="class_one_m_l_1_1_alpr_1_1_utils_1ab8fd18bf7d24e9a923d409d83f240e29"></span><code class="sig-name descname">Utils</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><br /></dt>
+<span class="target" id="class_one_m_l_1_1_alpr_1_1_utils_1ab8fd18bf7d24e9a923d409d83f240e29"></span><em class="property">inline</em> <code class="sig-name descname">Utils</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><br /></dt>
 <dd><p>Construct a Utils object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -293,18 +296,7 @@
 
 <dl class="cpp function">
 <dt>
-<span class="target" id="class_one_m_l_1_1_alpr_1_1_utils_1a7617541b6cc359c541cb52f173f72b23"></span>UsageReport <code class="sig-name descname">GetUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Get a report of the usage. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt>
-<span class="target" id="class_one_m_l_1_1_alpr_1_1_utils_1a3d931e7b8af089a1288d247b49f8d37c"></span>Image <code class="sig-name descname">ReadImageCV</code><span class="sig-paren">(</span>string <em>img_path</em><span class="sig-paren">)</span><br /></dt>
+<span class="target" id="class_one_m_l_1_1_alpr_1_1_utils_1a3d931e7b8af089a1288d247b49f8d37c"></span><em class="property">inline</em> Image <code class="sig-name descname">ReadImageCV</code><span class="sig-paren">(</span>string <em>img_path</em><span class="sig-paren">)</span><br /></dt>
 <dd><p>Read image file with specific path. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="../common/alpr_struct.html#class_one_m_l_1_1_alpr_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
@@ -329,7 +321,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="license_manager.html" class="btn btn-neutral float-right" title="C# License Manager API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="ekyc.html" class="btn btn-neutral float-left" title="C# EKYC API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="liveness_pad.html" class="btn btn-neutral float-left" title="C# Liveness PAD API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

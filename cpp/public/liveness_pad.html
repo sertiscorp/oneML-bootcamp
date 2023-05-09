@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>C++ Liveness PAD API &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="C++ Vehicle Detector API" href="vehicle_detector.html" />
+    <link rel="prev" title="C++ EKYC API" href="ekyc.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v4.5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../java/index.html#java-examples">Java Examples</a></li>
+</ul>
+<p><span class="caption-text">C# Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html">C# APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-data-structures">C# Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csharp/index.html#c-examples">C# Examples</a></li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">C++ APIs</a> &raquo;</li>
+        
+      <li>C++ Liveness PAD API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/cpp/public/liveness_pad.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="c-liveness-pad-api">
+<span id="cpp-public-liveness-pad"></span><h1>C++ Liveness PAD API<a class="headerlink" href="#c-liveness-pad-api" title="Permalink to this headline">¶</a></h1>
+<p>oneML module to run liveness PAD pipeline.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenstruct: Cannot find class “oneML::face::LivenessPADOps” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
+</aside>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “oneML::face::LivenessPAD” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
+</aside>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “oneML::face::LivenessPADResult” in doxygen xml output for project “oneML” from directory: /builds/sertiscorp/mle/edge/oneml/build/docs/doxygen/xml</p>
+</aside>
+<dl class="cpp enum">
+<dt id="_CPPv4N5oneML4face10EKYCStatusE">
+<span id="_CPPv3N5oneML4face10EKYCStatusE"></span><span id="_CPPv2N5oneML4face10EKYCStatusE"></span><span class="target" id="oneml__ekyc__codes_8h_1ae5d99630cfda34c52ce2af28dc3f0c77"></span><em class="property">enum </em><code class="sig-prename descclassname">oneML::face<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">EKYCStatus</code><br /></dt>
+<dd><p>EKYCStatus enum to use as return status. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face10EKYCStatus5EmptyE">
+<span id="_CPPv3N5oneML4face10EKYCStatus5EmptyE"></span><span id="_CPPv2N5oneML4face10EKYCStatus5EmptyE"></span><span class="target" id="oneml__ekyc__codes_8h_1ae5d99630cfda34c52ce2af28dc3f0c77ace2c8aed9c2fa0cfbed56cbda4d8bf07"></span><em class="property">enumerator </em><code class="sig-name descname">Empty</code><br /></dt>
+<dd><p>Default return status. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face10EKYCStatus7SuccessE">
+<span id="_CPPv3N5oneML4face10EKYCStatus7SuccessE"></span><span id="_CPPv2N5oneML4face10EKYCStatus7SuccessE"></span><span class="target" id="oneml__ekyc__codes_8h_1ae5d99630cfda34c52ce2af28dc3f0c77a505a83f220c02df2f85c3810cd9ceb38"></span><em class="property">enumerator </em><code class="sig-name descname">Success</code><br /></dt>
+<dd><p>Success. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face10EKYCStatus18ImageBlurCheckFailE">
+<span id="_CPPv3N5oneML4face10EKYCStatus18ImageBlurCheckFailE"></span><span id="_CPPv2N5oneML4face10EKYCStatus18ImageBlurCheckFailE"></span><span class="target" id="oneml__ekyc__codes_8h_1ae5d99630cfda34c52ce2af28dc3f0c77ae7393791f9088a750f12748ca5b74090"></span><em class="property">enumerator </em><code class="sig-name descname">ImageBlurCheckFail</code><br /></dt>
+<dd><p>Blurry image check fail. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face10EKYCStatus14DigitalPadFailE">
+<span id="_CPPv3N5oneML4face10EKYCStatus14DigitalPadFailE"></span><span id="_CPPv2N5oneML4face10EKYCStatus14DigitalPadFailE"></span><span class="target" id="oneml__ekyc__codes_8h_1ae5d99630cfda34c52ce2af28dc3f0c77a098092ad693d29acdc6c59f8f32c5056"></span><em class="property">enumerator </em><code class="sig-name descname">DigitalPadFail</code><br /></dt>
+<dd><p>Digital pad spoof fail. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face10EKYCStatus12PaperPadFailE">
+<span id="_CPPv3N5oneML4face10EKYCStatus12PaperPadFailE"></span><span id="_CPPv2N5oneML4face10EKYCStatus12PaperPadFailE"></span><span class="target" id="oneml__ekyc__codes_8h_1ae5d99630cfda34c52ce2af28dc3f0c77a1c78ada9d242aadde3966852443c5c02"></span><em class="property">enumerator </em><code class="sig-name descname">PaperPadFail</code><br /></dt>
+<dd><p>Paper pad spoof fail. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face10EKYCStatus11NoFaceFoundE">
+<span id="_CPPv3N5oneML4face10EKYCStatus11NoFaceFoundE"></span><span id="_CPPv2N5oneML4face10EKYCStatus11NoFaceFoundE"></span><span class="target" id="oneml__ekyc__codes_8h_1ae5d99630cfda34c52ce2af28dc3f0c77a1f9d6b144d2b6e2129ff53113d6c0116"></span><em class="property">enumerator </em><code class="sig-name descname">NoFaceFound</code><br /></dt>
+<dd><p>No face detected. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face10EKYCStatus17FaceBlurCheckFailE">
+<span id="_CPPv3N5oneML4face10EKYCStatus17FaceBlurCheckFailE"></span><span id="_CPPv2N5oneML4face10EKYCStatus17FaceBlurCheckFailE"></span><span class="target" id="oneml__ekyc__codes_8h_1ae5d99630cfda34c52ce2af28dc3f0c77ab3f70b868e7bb93979ef0795625e987d"></span><em class="property">enumerator </em><code class="sig-name descname">FaceBlurCheckFail</code><br /></dt>
+<dd><p>Blurry detected face. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N5oneML4face10EKYCStatus14FaceNotFrontalE">
+<span id="_CPPv3N5oneML4face10EKYCStatus14FaceNotFrontalE"></span><span id="_CPPv2N5oneML4face10EKYCStatus14FaceNotFrontalE"></span><span class="target" id="oneml__ekyc__codes_8h_1ae5d99630cfda34c52ce2af28dc3f0c77a6e517f514364688c6c68439a2709747d"></span><em class="property">enumerator </em><code class="sig-name descname">FaceNotFrontal</code><br /></dt>
+<dd><p>Face is not frontal. </p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="vehicle_detector.html" class="btn btn-neutral float-right" title="C++ Vehicle Detector API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ekyc.html" class="btn btn-neutral float-left" title="C++ EKYC API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

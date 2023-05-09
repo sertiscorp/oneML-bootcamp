@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -124,6 +130,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -196,56 +210,56 @@
   <section id="java-face-detector-example-1">
 <span id="java-face-detector-example"></span><h1>Java Face Detector Example<a class="headerlink" href="#java-face-detector-example-1" title="Permalink to this headline">¶</a></h1>
 <p>Initialize face detector model</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
-<span class="n">FaceDetector</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceDetector</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span>
+<span class="n">FaceDetector</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceDetector</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Initialize face detector model with licensing</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
-<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span><span class="w"></span>
-<span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span><span class="w"></span>
-<span class="n">FaceDetector</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceDetector</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span>
+<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span>
+<span class="n">FaceDetector</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceDetector</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils with licensing</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Read input as BufferedImage</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">file</span><span class="p">);</span><span class="w"></span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">BufferedImage</span><span class="o">&gt;</span><span class="w"> </span><span class="n">imgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">img</span><span class="p">);</span><span class="w"></span>
-<span class="n">ImageBatch</span><span class="w"> </span><span class="n">batch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ImageBatch</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="n">imgs</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">BufferedImage</span><span class="o">&gt;</span><span class="w"> </span><span class="n">imgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+<span class="n">ImageBatch</span><span class="w"> </span><span class="n">batch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ImageBatch</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="n">imgs</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Read input as oneML’s Image</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="na">readImageCV</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="na">readImageCV</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Run the model</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FaceDetectorResultList</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">batch</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FaceDetectorResultList</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">batch</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FaceDetectorResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">img</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FaceDetectorResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">detector</span><span class="p">.</span><span class="na">detect</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>And get the output</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ScoreList</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getScores</span><span class="p">();</span><span class="w"></span>
-<span class="n">BBoxList</span><span class="w"> </span><span class="n">bboxes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getBBoxes</span><span class="p">();</span><span class="w"></span>
-<span class="n">Landmark5List</span><span class="w"> </span><span class="n">landmarks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getLandmarks</span><span class="p">();</span><span class="w"></span>
-<span class="n">FacePoseList</span><span class="w"> </span><span class="n">poses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getPoses</span><span class="p">();</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getSize</span><span class="p">();</span><span class="w"></span>
-<span class="n">StatusCodeList</span><span class="w"> </span><span class="n">statuses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">FloatList</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getScores</span><span class="p">();</span>
+<span class="n">BBoxList</span><span class="w"> </span><span class="n">bboxes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getBBoxes</span><span class="p">();</span>
+<span class="n">Landmark5List</span><span class="w"> </span><span class="n">landmarks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getLandmarks</span><span class="p">();</span>
+<span class="n">FacePoseList</span><span class="w"> </span><span class="n">poses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getPoses</span><span class="p">();</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getSize</span><span class="p">();</span>
+<span class="n">StatusCodeList</span><span class="w"> </span><span class="n">statuses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Cleanup</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">detector</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span><span class="w"></span>
-<span class="n">utils</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">detector</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span>
+<span class="n">utils</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>

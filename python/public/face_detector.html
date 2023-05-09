@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -126,6 +132,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -222,25 +236,15 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="get_usage">
-<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_detector_1ab483d7b7d216bfea15ad60268ad20d77"></span><code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_usage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a report of the usage. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1face_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>: report object </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="py function">
 <dt id="detect_batch">
-<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_detector_1af37c79e393edbb16aeefabe2cedd83fc"></span><code class="sig-name descname">detect_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em><span class="sig-paren">)</span><a class="headerlink" href="#detect_batch" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_detector_1a9a7c585a7d09a68621533f8c8dc88efd"></span><code class="sig-name descname">detect_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em>, <em class="sig-param"><span class="n">score_threshold</span><span class="o">=</span><span class="default_value">- 1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#detect_batch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Detect faces in images. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>FaceDetectorResultVector: list of <a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_face_detector_result"><span class="std std-ref">FaceDetectorResult</span></a> objects </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">imgvec_</span></code>: numpy array with shape (batch, height, width, channel) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">score_threshold</span></code>: score threshold, -1.0 means default threshould </p></li>
 </ul>
 </dd>
 </dl>
@@ -249,13 +253,14 @@
 
 <dl class="py function">
 <dt id="detect">
-<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_detector_1afa0409e75b2f8745ca995a6675c5b008"></span><code class="sig-name descname">detect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em><span class="sig-paren">)</span><a class="headerlink" href="#detect" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_face_detector_1a4a71b6fdd6198b72c768b763abf1e9c7"></span><code class="sig-name descname">detect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imgvec_</span></em>, <em class="sig-param"><span class="n">score_threshold</span><span class="o">=</span><span class="default_value">- 1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#detect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Detect faces in images. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classone_m_l_1_1face_a_p_i_1_1_face_detector_result"><span class="std std-ref">FaceDetectorResult</span></a>: result object </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">imgvec_</span></code>: numpy array with shape (height, width, channel) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">score_threshold</span></code>: score threshold, -1.0 means default threshould </p></li>
 </ul>
 </dd>
 </dl>

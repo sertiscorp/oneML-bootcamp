@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -120,6 +126,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -191,67 +205,6 @@
             
   <section id="python-alpr-structures">
 <span id="python-common-alpr-struct"></span><h1>Python Alpr Structures<a class="headerlink" href="#python-alpr-structures" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt>
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_usage_report"></span><code class="sig-name descname">oneML.alprAPI.UsageReport : public object</code></dt>
-<dd><p>Class to store API usage statistics. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="py function">
-<dt id="init__">
-<span id="__init__"></span><span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_usage_report_1ac31a4845729d33922d99f506f06360da"></span><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">api_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create an <strong><a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a></strong> instance. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">api_name</span></code>: name of the API </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="to_log">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_usage_report_1acf6e5021b6e82279add99ed8290c3b66"></span><code class="sig-name descname">to_log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#to_log" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> to log. </p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="to_file">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_usage_report_1af5598571d30e94305dfe63e7ef81c0d0"></span><code class="sig-name descname">to_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">file_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#to_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Dump <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> to file. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">file_name</span></code>: name of the file </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="get_api">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_usage_report_1a97cad890d29de1d7cd1f8fc7f0059f04"></span><code class="sig-name descname">get_api</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_api" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the API name of the <a class="reference internal" href="#classone_m_l_1_1alpr_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>string: name of the API </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-</div>
-</dd></dl>
-
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attributes</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">api_calls</span><span class="p">:</span> <span class="n">number</span> <span class="n">of</span> <span class="n">API</span> <span class="n">calls</span>
-    <span class="o">-</span> <span class="n">model_runs</span><span class="p">:</span> <span class="n">number</span> <span class="n">of</span> <span class="n">model</span> <span class="n">inferences</span>
-    <span class="o">-</span> <span class="n">first_updated</span><span class="p">:</span> <span class="n">time</span> <span class="n">of</span> <span class="n">initialization</span>
-    <span class="o">-</span> <span class="n">last_updated</span><span class="p">:</span> <span class="n">time</span> <span class="n">of</span> <span class="n">last</span> <span class="n">update</span>
-    <span class="o">-</span> <span class="n">success_count</span><span class="p">:</span> <span class="n">number</span> <span class="n">of</span> <span class="n">successfull</span> <span class="n">API</span> <span class="n">calls</span>
-    <span class="o">-</span> <span class="n">fail_count</span><span class="p">:</span> <span class="n">number</span> <span class="n">of</span> <span class="n">failed</span> <span class="n">API</span> <span class="n">calls</span>
-</pre></div>
-</div>
 <dl class="py class">
 <dt>
 <span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_b_box"></span><code class="sig-name descname">oneML.alprAPI.BBox : public object</code></dt>

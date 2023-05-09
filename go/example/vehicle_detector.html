@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -124,6 +130,14 @@
 <li class="toctree-l2"><a class="reference internal" href="ekyc.html">Golang EKYC Example</a></li>
 </ul>
 </li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -196,48 +210,48 @@
   <section id="golang-vehicle-detector-example">
 <span id="go-vehicle-detector-example"></span><h1>Golang Vehicle Detector Example<a class="headerlink" href="#golang-vehicle-detector-example" title="Permalink to this headline">¶</a></h1>
 <p>Initialize vehicle detector model</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="nx">detector</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewVehicleDetector</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span>
+<span class="nx">detector</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewVehicleDetector</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Initialize vehicle detector model with licensing</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="nx">licenseManager</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewLicenseManager</span><span class="p">()</span><span class="w"></span>
-<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">SetKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">ActivateKey</span><span class="p">()</span><span class="w"></span>
-<span class="nx">detector</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">VehicleDetector</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span>
+<span class="nx">licenseManager</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewLicenseManager</span><span class="p">()</span>
+<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">SetKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">)</span>
+<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">ActivateKey</span><span class="p">()</span>
+<span class="nx">detector</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">VehicleDetector</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">utils</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">utils</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils with licensing</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">utils</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">utils</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Read input as oneML’s Image</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">img</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">ReadImageCV</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">img</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">ReadImageCV</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run the model</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">results</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">detector</span><span class="p">.</span><span class="nx">Detect</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">results</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">detector</span><span class="p">.</span><span class="nx">Detect</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">detector</span><span class="p">.</span><span class="nx">Detect</span><span class="p">(</span><span class="nx">img</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">detector</span><span class="p">.</span><span class="nx">Detect</span><span class="p">(</span><span class="nx">img</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>And get the output</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">scores</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetScores</span><span class="p">()</span><span class="w"></span>
-<span class="nx">bboxes</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetBBoxes</span><span class="p">()</span><span class="w"></span>
-<span class="nx">size</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetSize</span><span class="p">()</span><span class="w"></span>
-<span class="nx">statuses</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetReturnStatus</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">scores</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetScores</span><span class="p">()</span>
+<span class="nx">bboxes</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetBBoxes</span><span class="p">()</span>
+<span class="nx">size</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetSize</span><span class="p">()</span>
+<span class="nx">statuses</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetReturnStatus</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Cleanup</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteVehicleDetector</span><span class="p">(</span><span class="nx">detector</span><span class="p">)</span><span class="w"></span>
-<span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteUtils</span><span class="p">(</span><span class="nx">utils</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteVehicleDetector</span><span class="p">(</span><span class="nx">detector</span><span class="p">)</span>
+<span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteUtils</span><span class="p">(</span><span class="nx">utils</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -116,6 +122,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -188,73 +202,76 @@
   <section id="java-challenge-response-example-1">
 <span id="java-challenge-response-example"></span><h1>Java Challenge Response Example<a class="headerlink" href="#java-challenge-response-example-1" title="Permalink to this headline">¶</a></h1>
 <p>Initialize Challenge Response module</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
-<span class="n">ChallengeResponse</span><span class="w"> </span><span class="n">challenge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponse</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span>
+<span class="n">ChallengeResponse</span><span class="w"> </span><span class="n">challenge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponse</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Initialize Challenge Response module from existing FaceDetector and FaceLandmarkDetector</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
-<span class="n">FaceDetector</span><span class="w"> </span><span class="n">faceDetector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceDetector</span><span class="p">();</span><span class="w"></span>
-<span class="n">FaceLandmarkDetector</span><span class="w"> </span><span class="n">faceLandmark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceLandmarkDetector</span><span class="p">();</span><span class="w"></span>
-<span class="n">ChallengeResponse</span><span class="w"> </span><span class="n">challenge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponse</span><span class="p">(</span><span class="n">faceDetector</span><span class="p">,</span><span class="w"> </span><span class="n">faceLandmark</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span>
+<span class="n">FaceDetector</span><span class="w"> </span><span class="n">faceDetector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceDetector</span><span class="p">();</span>
+<span class="n">FaceLandmarkDetector</span><span class="w"> </span><span class="n">faceLandmark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceLandmarkDetector</span><span class="p">();</span>
+<span class="n">ChallengeResponse</span><span class="w"> </span><span class="n">challenge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponse</span><span class="p">(</span><span class="n">faceDetector</span><span class="p">,</span><span class="w"> </span><span class="n">faceLandmark</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Initialize Challenge Response module with licensing</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
-<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span><span class="w"></span>
-<span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span><span class="w"></span>
-<span class="n">ChallengeResponse</span><span class="w"> </span><span class="n">challenge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponse</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span>
+<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span>
+<span class="n">ChallengeResponse</span><span class="w"> </span><span class="n">challenge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponse</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Initialize Challenge Response module with licensing from existing FaceDetector and FaceLandmarkDetector</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span><span class="w"></span>
-<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span><span class="w"></span>
-<span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.sertiscorp.oneml.face.*</span><span class="p">;</span>
+<span class="n">LicenseManager</span><span class="w"> </span><span class="n">licenseManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LicenseManager</span><span class="p">();</span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">setKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span>
+<span class="n">licenseManager</span><span class="p">.</span><span class="na">activateKey</span><span class="p">();</span>
 
-<span class="n">FaceDetector</span><span class="w"> </span><span class="n">faceDetector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceDetector</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
-<span class="n">FaceLandmarkDetector</span><span class="w"> </span><span class="n">faceLandmark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceLandmarkDetector</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
-<span class="n">ChallengeResponse</span><span class="w"> </span><span class="n">challenge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponse</span><span class="p">(</span><span class="n">faceDetector</span><span class="p">,</span><span class="w"> </span><span class="n">faceLandmark</span><span class="p">,</span><span class="w"> </span><span class="n">licenseManager</span><span class="p">);</span><span class="w"></span>
+<span class="n">FaceDetector</span><span class="w"> </span><span class="n">faceDetector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceDetector</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span>
+<span class="n">FaceLandmarkDetector</span><span class="w"> </span><span class="n">faceLandmark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FaceLandmarkDetector</span><span class="p">(</span><span class="n">licenseManager</span><span class="p">);</span>
+<span class="n">ChallengeResponse</span><span class="w"> </span><span class="n">challenge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponse</span><span class="p">(</span><span class="n">faceDetector</span><span class="p">,</span><span class="w"> </span><span class="n">faceLandmark</span><span class="p">,</span><span class="w"> </span><span class="n">licenseManager</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Run the module from videos</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">vidPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;path/to/video.mp4&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="n">ChallengeResponseResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">challenge</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">vidPath</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">vidPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;path/to/video.mp4&quot;</span><span class="p">;</span>
+<span class="n">ChallengeResponseOps</span><span class="w"> </span><span class="n">ops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponseOps</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="n">ChallengeResponseResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">challenge</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">vidPath</span><span class="p">,</span><span class="w"> </span><span class="n">ops</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Run the module from stream of images (can be used with opencv VideoCapture)</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span># if we can still read frame from image stream
+ChallengeResponseOps ops = new ChallengeResponseOps(true);
 while (can_read_frame):
     # use any function to get each frame from image stream
     Image frame = getOneFrame()
-    ChallengeResponseResult result = challenge.run(frame)
+    ChallengeResponseResult result = challenge.run(frame, ops)
 challenge.reset()
 </pre></div>
 </div>
 <p>Run the module with ImageBatch</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// create ImageBatch</span><span class="w"></span>
-<span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// create ImageBatch</span>
+<span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">vidPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;path/to/video.mp4&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="n">ImageBatch</span><span class="w"> </span><span class="n">images</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="na">videoToImages</span><span class="p">(</span><span class="n">vidPath</span><span class="p">);</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">vidPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;path/to/video.mp4&quot;</span><span class="p">;</span>
+<span class="n">ImageBatch</span><span class="w"> </span><span class="n">images</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="na">videoToImages</span><span class="p">(</span><span class="n">vidPath</span><span class="p">);</span>
+<span class="n">ChallengeResponseOps</span><span class="w"> </span><span class="n">ops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChallengeResponseOps</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
-<span class="c1">// run ChallengeResponse with ImageBatch</span><span class="w"></span>
-<span class="n">ChallengeResponseResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">challenge</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">images</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// run ChallengeResponse with ImageBatch</span>
+<span class="n">ChallengeResponseResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">challenge</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">images</span><span class="p">,</span><span class="w"> </span><span class="n">ops</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Get result</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;status: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">());</span><span class="w"></span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;is_blink: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">isBlink</span><span class="p">());</span><span class="w"></span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;number of blinks: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getNumBlinks</span><span class="p">());</span><span class="w"></span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;liveness_score: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getLivenessScore</span><span class="p">());</span><span class="w"></span>
-<span class="n">Image</span><span class="w"> </span><span class="n">bestFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getBestFrame</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;status: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getReturnStatus</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;is_blink: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">isBlink</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;number of blinks: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getNumBlinks</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;liveness_score: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getLivenessScore</span><span class="p">());</span>
+<span class="n">Image</span><span class="w"> </span><span class="n">bestFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getBestFrame</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Cleanup</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">faceDetector</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span><span class="w"></span>
-<span class="n">faceLandmark</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span><span class="w"></span>
-<span class="n">challenge</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">faceDetector</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span>
+<span class="n">faceLandmark</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span>
+<span class="n">challenge</span><span class="p">.</span><span class="na">delete</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>

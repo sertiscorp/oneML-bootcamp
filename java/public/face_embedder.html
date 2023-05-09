@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -126,6 +132,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -205,13 +219,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1ac3c5a955907ef46b4aec2b50c93e9518"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1ac3c5a955907ef46b4aec2b50c93e9518"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::FaceEmbedder__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1afa10f0a8e671a03ad3d21604fd378ecf"></span><code class="sig-name descname">FaceEmbedder</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::FaceEmbedder__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1afa10f0a8e671a03ad3d21604fd378ecf"></span><em class="property">inline</em> <code class="sig-name descname">FaceEmbedder</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder12FaceEmbedderE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a FaceEmbedder object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -223,19 +237,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder8getUsageEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder8getUsageEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder8getUsageEv"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::getUsage"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1a6d871bec8e9a205f4604e2637e54ae98"></span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face11UsageReportE" title="org::sertiscorp::oneml::face::UsageReport">UsageReport</a> <code class="sig-name descname">getUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder8getUsageEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a report of the usage. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__ImageBatch.boolean"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1a2a99663716bb9ce25de5aacf7127e8e8"></span>FaceEmbedderResultList <code class="sig-name descname">embed</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em>, boolean <em>flip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__ImageBatch.boolean"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1a2a99663716bb9ce25de5aacf7127e8e8"></span><em class="property">inline</em> FaceEmbedderResultList <code class="sig-name descname">embed</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em>, boolean <em>flip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch7boolean" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create embedding vector. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceEmbedderResultList</strong>. </p>
@@ -251,7 +254,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__ImageBatch"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1adf5bc1ea4d8a23edf699d0ece4cf3198"></span>FaceEmbedderResultList <code class="sig-name descname">embed</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__ImageBatch"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1adf5bc1ea4d8a23edf699d0ece4cf3198"></span><em class="property">inline</em> FaceEmbedderResultList <code class="sig-name descname">embed</code><span class="sig-paren">(</span>ImageBatch <em>imgs</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE10ImageBatch" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create embedding vector. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceEmbedderResultList</strong>. </p>
@@ -266,7 +269,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__Image.boolean"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1abca6c8398f597ff5c44f625a0da70807"></span><a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResultE" title="org::sertiscorp::oneml::face::FaceEmbedderResult">FaceEmbedderResult</a> <code class="sig-name descname">embed</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em>, boolean <em>flip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__Image.boolean"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1abca6c8398f597ff5c44f625a0da70807"></span><em class="property">inline</em> <a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResultE" title="org::sertiscorp::oneml::face::FaceEmbedderResult">FaceEmbedderResult</a> <code class="sig-name descname">embed</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em>, boolean <em>flip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image7boolean" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create embedding vector. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceEmbedderResult</strong>. </p>
@@ -282,7 +285,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image">
-<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__Image"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1a44d616ee227264cbfad30867c506ad93"></span><a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResultE" title="org::sertiscorp::oneml::face::FaceEmbedderResult">FaceEmbedderResult</a> <code class="sig-name descname">embed</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image"></span><span id="_CPPv2N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image"></span><span id="org::sertiscorp::oneml::face::FaceEmbedder::embed__Image"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_1a44d616ee227264cbfad30867c506ad93"></span><em class="property">inline</em> <a class="reference internal" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResultE" title="org::sertiscorp::oneml::face::FaceEmbedderResult">FaceEmbedderResult</a> <code class="sig-name descname">embed</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face12FaceEmbedder5embedE5Image" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create embedding vector. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>FaceEmbedderResult</strong>. </p>
@@ -305,13 +308,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_1af1ee847f9c0a81f86d377b12f4ce11a3"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_1af1ee847f9c0a81f86d377b12f4ce11a3"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_1a137179e6d161befecfa24061b5be1852"></span><code class="sig-name descname">float[] getEmbedding ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_1a137179e6d161befecfa24061b5be1852"></span><code class="sig-name descname">inline float[] getEmbedding ()</code></dt>
 <dd><p>Get an embedding of size EMB_SIZE. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an embedding of type float[EMB_SIZE] </p>
@@ -322,7 +325,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv"></span><span id="org::sertiscorp::oneml::face::FaceEmbedderResult::getReturnStatus"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_1aeb82e958bc900e76e83ef7b423130e06"></span>int <code class="sig-name descname">getReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv"></span><span id="org::sertiscorp::oneml::face::FaceEmbedderResult::getReturnStatus"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_1aeb82e958bc900e76e83ef7b423130e06"></span><em class="property">inline</em> int <code class="sig-name descname">getReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face18FaceEmbedderResult15getReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>returns return status. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an int return status. </p>
@@ -341,7 +344,7 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_list_1a1ce8367ae2a3b05e5b38c260f8ed6d04"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_face_embedder_result_list_1a1ce8367ae2a3b05e5b38c260f8ed6d04"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 

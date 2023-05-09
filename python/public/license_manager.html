@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -126,6 +132,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -242,21 +256,6 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="set_machine_code">
-<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a8defb9a1df264858cf5503a836ffefca"></span><code class="sig-name descname">set_machine_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">code</span></em><span class="sig-paren">)</span><a class="headerlink" href="#set_machine_code" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the oneML machine code. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p></p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: string of machine code </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="py function">
 <dt id="get_key">
 <span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1ae37ec6b28a846829b642ab6d4546b01a"></span><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get product key. </p>
@@ -312,11 +311,11 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="is_valid_activation">
-<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1aaf31f32480639eda566a77edc90350b6"></span><code class="sig-name descname">is_valid_activation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_valid_activation" title="Permalink to this definition">¶</a></dt>
+<dt id="validate_activation">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a3b10c3f9d8a4c3573370903246a5d873"></span><code class="sig-name descname">validate_activation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#validate_activation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if an activation whether by a key or trial is valid or not (not expired) </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>bool: true if an activation is valid and not expired, false otherwise </p>
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus value </p>
 </dd>
 </dl>
 </p>
@@ -343,18 +342,18 @@
 <span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a760e47c523f0c0245939623f4e5fd59f"></span><code class="sig-name descname">get_activation_expiry_date</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_activation_expiry_date" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the key expiry date. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>int: unix time (also, LOG info of expiry time in Y-M-D) </p>
+<dt><strong>Return</strong></dt><dd><p>int: unix time </p>
 </dd>
 </dl>
 </p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="get_usage">
-<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1aeeebb808351844ca2ebd266361988c02"></span><code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_usage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a report of the usage. </p>
+<dt id="get_activation_suspended_date">
+<span class="target" id="classone_m_l_1_1face_a_p_i_1_1_license_manager_1a7b3dfc6abd0cdacfe4de5671324bfe02"></span><code class="sig-name descname">get_activation_suspended_date</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_activation_suspended_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the key suspension date. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/face_struct.html#classone_m_l_1_1face_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>: report object </p>
+<dt><strong>Return</strong></dt><dd><p>int: unix time </p>
 </dd>
 </dl>
 </p>
@@ -408,22 +407,7 @@
 
 <dl class="py function">
 <dt id="id2">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a49ae61018808514732d02fd4edcb4eac"></span><code class="sig-name descname">set_machine_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">code</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the oneML machine code. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p></p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: string of machine code </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="id3">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a7865e1941b85bb6b025101f5163a2a24"></span><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a7865e1941b85bb6b025101f5163a2a24"></span><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get product key. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>string: product key </p>
@@ -433,8 +417,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="id4">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a5d80f5f43753342a098473f45c7ce155"></span><code class="sig-name descname">activate_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dt id="id3">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a5d80f5f43753342a098473f45c7ce155"></span><code class="sig-name descname">activate_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Activate a product key, requires a key to be set first. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>LicenseStatus: Ok if activation is successful, Error otherwise </p>
@@ -444,8 +428,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="id5">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a7e51938c3ddc04c0a537e10337bb6c55"></span><code class="sig-name descname">activate_trial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dt id="id4">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a7e51938c3ddc04c0a537e10337bb6c55"></span><code class="sig-name descname">activate_trial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
 <dd><p>Activate trial version. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>LicenseStatus: Ok if activation is successful, Error otherwise </p>
@@ -455,8 +439,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="id6">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1ac6c5b22721d7844c47047872e9b03fe6"></span><code class="sig-name descname">get_machine_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dt id="id5">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1ac6c5b22721d7844c47047872e9b03fe6"></span><code class="sig-name descname">get_machine_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get machine code used as a machine unique identifier. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>string: machine code </p>
@@ -466,8 +450,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="id7">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a349f6b5123597713d197106e74e1669e"></span><code class="sig-name descname">is_trial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
+<dt id="id6">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a349f6b5123597713d197106e74e1669e"></span><code class="sig-name descname">is_trial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the current activation is trial or not. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>bool: true if the activation is trial, false otherwise </p>
@@ -477,19 +461,19 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="id8">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a69f0e9c671ddc0c41b3f4552dad089b2"></span><code class="sig-name descname">is_valid_activation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dt id="id7">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1ae2bce81afe596f1668c96da29f6cb2c4"></span><code class="sig-name descname">validate_activation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if an activation whether by a key or trial is valid or not (not expired) </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>bool: true if an activation is valid and not expired, false otherwise </p>
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus value </p>
 </dd>
 </dl>
 </p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="id9">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a42aeeae3420de046f51bebc6fa8c42c4"></span><code class="sig-name descname">get_activation_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
+<dt id="id8">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a42aeeae3420de046f51bebc6fa8c42c4"></span><code class="sig-name descname">get_activation_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the type of the current activation. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>LicenseActivationType: an enum of activation type<ul class="simple">
@@ -504,22 +488,22 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="id10">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a2a873b457766f307edfbe912490100a9"></span><code class="sig-name descname">get_activation_expiry_date</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dt id="id9">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a2a873b457766f307edfbe912490100a9"></span><code class="sig-name descname">get_activation_expiry_date</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the key expiry date. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>int: unix time (also, LOG info of expiry time in Y-M-D) </p>
+<dt><strong>Return</strong></dt><dd><p>int: unix time </p>
 </dd>
 </dl>
 </p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="id11">
-<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1a65d2b57225154bf40a1be04be1712e6e"></span><code class="sig-name descname">get_usage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id11" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a report of the usage. </p>
+<dt id="id10">
+<span class="target" id="classone_m_l_1_1alpr_a_p_i_1_1_license_manager_1adfc76a8acca1c66cbf694d1af3dc98ce"></span><code class="sig-name descname">get_activation_suspended_date</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the key suspension date. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="../common/alpr_struct.html#classone_m_l_1_1alpr_a_p_i_1_1_usage_report"><span class="std std-ref">UsageReport</span></a>: report object </p>
+<dt><strong>Return</strong></dt><dd><p>int: unix time </p>
 </dd>
 </dl>
 </p>

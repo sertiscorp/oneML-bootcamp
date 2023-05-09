@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -126,6 +132,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -205,19 +219,19 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a9677e05ddff23c77c1b7385b7748567e"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a9677e05ddff23c77c1b7385b7748567e"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a88831e14e580e89daaec4cca7dfdb08a"></span><code class="sig-name descname">LicenseManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a88831e14e580e89daaec4cca7dfdb08a"></span><em class="property">inline</em> <code class="sig-name descname">LicenseManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14LicenseManagerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a LicenseManager object. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String"></span><span id="org::sertiscorp::oneml::face::LicenseManager::setKey__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a9f5bf8781ace0c1994b2bb8d57b6d371"></span>void <code class="sig-name descname">setKey</code><span class="sig-paren">(</span>String <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String"></span><span id="org::sertiscorp::oneml::face::LicenseManager::setKey__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a9f5bf8781ace0c1994b2bb8d57b6d371"></span><em class="property">inline</em> void <code class="sig-name descname">setKey</code><span class="sig-paren">(</span>String <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6setKeyE6String" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the oneML product key. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -229,21 +243,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14setMachineCodeE6String">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager14setMachineCodeE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager14setMachineCodeE6String"></span><span id="org::sertiscorp::oneml::face::LicenseManager::setMachineCode__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1aa61bfb28b525b6ba298cce28021c95dc"></span>void <code class="sig-name descname">setMachineCode</code><span class="sig-paren">(</span>String <em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14setMachineCodeE6String" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Set the oneML machine code. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: a string of machine code. </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a1e94ea1587a07cd3895881aeae51f076"></span>String <code class="sig-name descname">getKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a1e94ea1587a07cd3895881aeae51f076"></span><em class="property">inline</em> String <code class="sig-name descname">getKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager6getKeyEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the product key. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>string of product key. </p>
@@ -254,7 +255,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::activateKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1aaf0c2c3becd3056761098d56c8bd5b80"></span><a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv413LicenseStatus" title="LicenseStatus">LicenseStatus</a> <code class="sig-name descname">activateKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::activateKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1aaf0c2c3becd3056761098d56c8bd5b80"></span><em class="property">inline</em> <a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv413LicenseStatus" title="LicenseStatus">LicenseStatus</a> <code class="sig-name descname">activateKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager11activateKeyEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Activate product key, requires to set a key first. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>LicenseStatus::Ok if activate success, LicenseStatus::Error otherwise. </p>
@@ -265,7 +266,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getMachineCode"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a16fe792e2144bfcb30370891874d3e4d"></span>String <code class="sig-name descname">getMachineCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getMachineCode"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a16fe792e2144bfcb30370891874d3e4d"></span><em class="property">inline</em> String <code class="sig-name descname">getMachineCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager14getMachineCodeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a machine code used as a machine unique identifier. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>string of a machine code. </p>
@@ -276,7 +277,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::isTrial"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a66fbb29ea1bf82a0894bbfe06131a48d"></span>boolean <code class="sig-name descname">isTrial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::isTrial"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a66fbb29ea1bf82a0894bbfe06131a48d"></span><em class="property">inline</em> boolean <code class="sig-name descname">isTrial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager7isTrialEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Check if product key is trial or not, requires to actvate a key first. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>true if product key is trial key, false otherwise. </p>
@@ -286,11 +287,11 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17isValidActivationEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager17isValidActivationEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager17isValidActivationEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::isValidActivation"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a5b08c2b305c443eeb7b71ccfe56620b8"></span>boolean <code class="sig-name descname">isValidActivation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17isValidActivationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager18validateActivationEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager18validateActivationEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager18validateActivationEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::validateActivation"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1aff6ba06bd79f9d00ca55eb848fb5ffe8"></span><em class="property">inline</em> <a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv413LicenseStatus" title="LicenseStatus">LicenseStatus</a> <code class="sig-name descname">validateActivation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager18validateActivationEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Check if product key is valid or not (not expired), requires to activate a key first. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>true if product key is trial key, false otherwise. </p>
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus value. </p>
 </dd>
 </dl>
 </p>
@@ -298,7 +299,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getActivationType"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a5883888a4e0c1d055145a23030e179df"></span><a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv421LicenseActivationType" title="LicenseActivationType">LicenseActivationType</a> <code class="sig-name descname">getActivationType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getActivationType"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a5883888a4e0c1d055145a23030e179df"></span><em class="property">inline</em> <a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv421LicenseActivationType" title="LicenseActivationType">LicenseActivationType</a> <code class="sig-name descname">getActivationType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager17getActivationTypeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the type of the current activation. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>LicenseActivationType: an enum of activation type<ul class="simple">
@@ -314,21 +315,21 @@
 
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a364cc1f5211fb6ab18e9292c42d93420"></span><code class="sig-name descname">java.math.BigInteger getActivationExpiryDate ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a364cc1f5211fb6ab18e9292c42d93420"></span><code class="sig-name descname">inline java.math.BigInteger getActivationExpiryDate ()</code></dt>
 <dd><p>Get the key expiry date. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>uint64_t unix time (also, LOG info of expiry time in Y-M-D). </p>
+<dt><strong>Return</strong></dt><dd><p>uint64_t unix time. </p>
 </dd>
 </dl>
 </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4face14LicenseManager8getUsageEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face14LicenseManager8getUsageEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face14LicenseManager8getUsageEv"></span><span id="org::sertiscorp::oneml::face::LicenseManager::getUsage"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a24b2aec02931f091f3af03152135f97e"></span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face11UsageReportE" title="org::sertiscorp::oneml::face::UsageReport">UsageReport</a> <code class="sig-name descname">getUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face14LicenseManager8getUsageEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a report of the usage. </p>
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_manager_1a36a48c4cc7ca945bffc33cc67d795d21"></span><code class="sig-name descname">inline java.math.BigInteger getActivationSuspendedDate ()</code></dt>
+<dd><p>Get the key suspension date. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
+<dt><strong>Return</strong></dt><dd><p>uint64_t unix time. </p>
 </dd>
 </dl>
 </p>
@@ -355,6 +356,16 @@
 <span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_status_1ab294321cbb47af88c73d947be23e78cf"></span><code class="sig-name descname">Error   =(FaceJNI.LicenseStatus_Error_get())</code></dt>
 <dd></dd></dl>
 
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_status_1a13264aadfe37758106cfa086f3c10f02"></span><code class="sig-name descname">Expired   =(FaceJNI.LicenseStatus_Expired_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1face_1_1_license_status_1aae27dbabba65f66199e3ed84055bea39"></span><code class="sig-name descname">Suspended   =(FaceJNI.LicenseStatus_Suspended_get())</code></dt>
+<dd></dd></dl>
+
 </div>
 </dd></dl>
 
@@ -367,19 +378,19 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a5c6e7aa1ba4a571865a91f0ee8f77549"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a5c6e7aa1ba4a571865a91f0ee8f77549"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a63b39d166f2c0bf27e107021e5b009d2"></span><code class="sig-name descname">LicenseManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a63b39d166f2c0bf27e107021e5b009d2"></span><em class="property">inline</em> <code class="sig-name descname">LicenseManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14LicenseManagerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a LicenseManager object. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::setKey__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a9fc8c4775915151e6c6d734c4f97eac9"></span>void <code class="sig-name descname">setKey</code><span class="sig-paren">(</span>String <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::setKey__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a9fc8c4775915151e6c6d734c4f97eac9"></span><em class="property">inline</em> void <code class="sig-name descname">setKey</code><span class="sig-paren">(</span>String <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6setKeyE6String" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the oneML product key. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -391,21 +402,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14setMachineCodeE6String">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager14setMachineCodeE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager14setMachineCodeE6String"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::setMachineCode__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a24d85afaa60df2f604e2e0c427710c6e"></span>void <code class="sig-name descname">setMachineCode</code><span class="sig-paren">(</span>String <em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14setMachineCodeE6String" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Set the oneML machine code. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: a string of machine code. </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1af2486b3845c7f906b795c85e3b8dd500"></span>String <code class="sig-name descname">getKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1af2486b3845c7f906b795c85e3b8dd500"></span><em class="property">inline</em> String <code class="sig-name descname">getKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager6getKeyEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the product key. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>string of product key. </p>
@@ -416,7 +414,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::activateKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a250d37ee742fef52249cb0f730105daf"></span><a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv413LicenseStatus" title="LicenseStatus">LicenseStatus</a> <code class="sig-name descname">activateKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::activateKey"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a250d37ee742fef52249cb0f730105daf"></span><em class="property">inline</em> <a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv413LicenseStatus" title="LicenseStatus">LicenseStatus</a> <code class="sig-name descname">activateKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager11activateKeyEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Activate product key, requires to set a key first. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>LicenseStatus::Ok if activate success, LicenseStatus::Error otherwise. </p>
@@ -427,7 +425,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getMachineCode"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a76af77f740e245c05adeb3e19a8886d6"></span>String <code class="sig-name descname">getMachineCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getMachineCode"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a76af77f740e245c05adeb3e19a8886d6"></span><em class="property">inline</em> String <code class="sig-name descname">getMachineCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager14getMachineCodeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a machine code used as a machine unique identifier. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>string of a machine code. </p>
@@ -438,7 +436,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::isTrial"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1aec08018553a54233aa0cf569be071d87"></span>boolean <code class="sig-name descname">isTrial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::isTrial"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1aec08018553a54233aa0cf569be071d87"></span><em class="property">inline</em> boolean <code class="sig-name descname">isTrial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager7isTrialEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Check if product key is trial or not, requires to actvate a key first. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>true if product key is trial key, false otherwise. </p>
@@ -448,11 +446,11 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17isValidActivationEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager17isValidActivationEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager17isValidActivationEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::isValidActivation"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1ac6135276dbee5522c6979e57cc85242c"></span>boolean <code class="sig-name descname">isValidActivation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17isValidActivationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager18validateActivationEv">
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager18validateActivationEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager18validateActivationEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::validateActivation"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1ae33b3b2ac7b067507b91eef1b32b17de"></span><em class="property">inline</em> <a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv413LicenseStatus" title="LicenseStatus">LicenseStatus</a> <code class="sig-name descname">validateActivation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager18validateActivationEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Check if product key is valid or not (not expired), requires to activate a key first. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>true if product key is trial key, false otherwise. </p>
+<dt><strong>Return</strong></dt><dd><p>LicenseStatus value. </p>
 </dd>
 </dl>
 </p>
@@ -460,7 +458,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getActivationType"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a9dca659e6468d4f89fcdef041799a9c5"></span><a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv421LicenseActivationType" title="LicenseActivationType">LicenseActivationType</a> <code class="sig-name descname">getActivationType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getActivationType"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a9dca659e6468d4f89fcdef041799a9c5"></span><em class="property">inline</em> <a class="reference internal" href="../../csharp/public/license_manager.html#_CPPv421LicenseActivationType" title="LicenseActivationType">LicenseActivationType</a> <code class="sig-name descname">getActivationType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager17getActivationTypeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the type of the current activation. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>LicenseActivationType: an enum of activation type<ul class="simple">
@@ -476,21 +474,21 @@
 
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1afafe37ba4bbf7c88bbd947294a4b162c"></span><code class="sig-name descname">java.math.BigInteger getActivationExpiryDate ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1afafe37ba4bbf7c88bbd947294a4b162c"></span><code class="sig-name descname">inline java.math.BigInteger getActivationExpiryDate ()</code></dt>
 <dd><p>Get the key expiry date. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>uint64_t unix time (also, LOG info of expiry time in Y-M-D). </p>
+<dt><strong>Return</strong></dt><dd><p>uint64_t unix time. </p>
 </dd>
 </dl>
 </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager8getUsageEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr14LicenseManager8getUsageEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr14LicenseManager8getUsageEv"></span><span id="org::sertiscorp::oneml::alpr::LicenseManager::getUsage"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1a3c5c78b5df0790b38fe2a91a0c69c294"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReportE" title="org::sertiscorp::oneml::alpr::UsageReport">UsageReport</a> <code class="sig-name descname">getUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManager8getUsageEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a report of the usage. </p>
+<dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_manager_1acf78dc82f818d3c18de4ec71ce53d57a"></span><code class="sig-name descname">inline java.math.BigInteger getActivationSuspendedDate ()</code></dt>
+<dd><p>Get the key suspension date. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
+<dt><strong>Return</strong></dt><dd><p>uint64_t unix time. </p>
 </dd>
 </dl>
 </p>
@@ -515,6 +513,16 @@
 <dl class="cpp var">
 <dt>
 <span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_status_1a62f1b7470b820ed596e351c83839e9c7"></span><code class="sig-name descname">Error   =(AlprJNI.LicenseStatus_Error_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_status_1a90366376f21d654b3372afb7e54afb05"></span><code class="sig-name descname">Expired   =(AlprJNI.LicenseStatus_Expired_get())</code></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="enumorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_license_status_1a98612baec2d8e9c4e805231f90553fcb"></span><code class="sig-name descname">Suspended   =(AlprJNI.LicenseStatus_Suspended_get())</code></dt>
 <dd></dd></dl>
 
 </div>

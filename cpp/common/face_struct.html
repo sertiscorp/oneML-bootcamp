@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">C++ APIs</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html#c-data-structures">C++ Data Structures</a><ul class="current">
@@ -120,6 +126,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -205,7 +219,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N5oneML5Image5ImageE8uint16_t8uint16_t7uint8_tRNSt10shared_ptrI7uint8_tEE">
-<span id="_CPPv3N5oneML5Image5ImageE8uint16_t8uint16_t7uint8_tRNSt10shared_ptrI7uint8_tEE"></span><span id="_CPPv2N5oneML5Image5ImageE8uint16_t8uint16_t7uint8_tRNSt10shared_ptrI7uint8_tEE"></span><span id="oneML::Image::Image__uint16_t.uint16_t.uint8_t.std::shared_ptr:uint8_t:R"></span><span class="target" id="classone_m_l_1_1_image_1a370810408ee229587a62b36d45a9375a"></span><code class="sig-name descname">Image</code><span class="sig-paren">(</span>uint16_t <em>width</em>, uint16_t <em>height</em>, uint8_t <em>depth</em>, std::shared_ptr&lt;uint8_t&gt; &amp;<em>data</em><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N5oneML5Image5ImageE8uint16_t8uint16_t7uint8_tRNSt10shared_ptrI7uint8_tEE"></span><span id="_CPPv2N5oneML5Image5ImageE8uint16_t8uint16_t7uint8_tRNSt10shared_ptrI7uint8_tEE"></span><span id="oneML::Image::Image__uint16_t.uint16_t.uint8_t.std::shared_ptr:uint8_t:R"></span><span class="target" id="classone_m_l_1_1_image_1a370810408ee229587a62b36d45a9375a"></span><em class="property">inline</em> <code class="sig-name descname">Image</code><span class="sig-paren">(</span>uint16_t <em>width</em>, uint16_t <em>height</em>, uint8_t <em>depth</em>, std::shared_ptr&lt;uint8_t&gt; &amp;<em>data</em><span class="sig-paren">)</span><br /></dt>
 <dd><p>Construct an <a class="reference internal" href="#classone_m_l_1_1_image"><span class="std std-ref">Image</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -345,7 +359,7 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N5oneML12ReturnStatus12ReturnStatusEK10ReturnCodeNSt6stringE">
-<span id="_CPPv3N5oneML12ReturnStatus12ReturnStatusEK10ReturnCodeNSt6stringE"></span><span id="_CPPv2N5oneML12ReturnStatus12ReturnStatusEK10ReturnCodeNSt6stringE"></span><span id="oneML::ReturnStatus::ReturnStatus__ReturnCodeC.ss"></span><span class="target" id="classone_m_l_1_1_return_status_1affa99760fe6ad375c9ee4f9b764f6402"></span><code class="sig-name descname">ReturnStatus</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="alpr_struct.html#_CPPv4N5oneML10ReturnCodeE" title="oneML::ReturnCode">ReturnCode</a> <em>code</em>, std::string <em>info</em> = &quot;&quot;<span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N5oneML12ReturnStatus12ReturnStatusEK10ReturnCodeNSt6stringE"></span><span id="_CPPv2N5oneML12ReturnStatus12ReturnStatusEK10ReturnCodeNSt6stringE"></span><span id="oneML::ReturnStatus::ReturnStatus__ReturnCodeC.ss"></span><span class="target" id="classone_m_l_1_1_return_status_1affa99760fe6ad375c9ee4f9b764f6402"></span><em class="property">inline</em> <code class="sig-name descname">ReturnStatus</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="alpr_struct.html#_CPPv4N5oneML10ReturnCodeE" title="oneML::ReturnCode">ReturnCode</a> <em>code</em>, std::string <em>info</em> = &quot;&quot;<span class="sig-paren">)</span><br /></dt>
 <dd><p>Create a <a class="reference internal" href="#classone_m_l_1_1_return_status"><span class="std std-ref">ReturnStatus</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -477,97 +491,6 @@
 </dd></dl>
 
 <dl class="cpp class">
-<dt id="_CPPv4N5oneML11UsageReportE">
-<span id="_CPPv3N5oneML11UsageReportE"></span><span id="_CPPv2N5oneML11UsageReportE"></span><span id="oneML::UsageReport"></span><span class="target" id="classone_m_l_1_1_usage_report"></span><em class="property">class </em><code class="sig-prename descclassname">oneML<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">UsageReport</code><br /></dt>
-<dd><p>Class to store API usage statistics. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="cpp function">
-<dt id="_CPPv4N5oneML11UsageReport11UsageReportERKNSt6stringE">
-<span id="_CPPv3N5oneML11UsageReport11UsageReportERKNSt6stringE"></span><span id="_CPPv2N5oneML11UsageReport11UsageReportERKNSt6stringE"></span><span id="oneML::UsageReport::UsageReport__ssCR"></span><span class="target" id="classone_m_l_1_1_usage_report_1ad56f1949a8fbbe2cab915b0adee4410b"></span><code class="sig-name descname">UsageReport</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>api_name</em><span class="sig-paren">)</span><br /></dt>
-<dd><p>Create a <a class="reference internal" href="#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> object. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">api_name</span></code>: identifier of this <a class="reference internal" href="#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> instance </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4NK5oneML11UsageReport6to_logEv">
-<span id="_CPPv3NK5oneML11UsageReport6to_logEv"></span><span id="_CPPv2NK5oneML11UsageReport6to_logEv"></span><span id="oneML::UsageReport::to_logC"></span><span class="target" id="classone_m_l_1_1_usage_report_1a1afec94378dbaf4eca2c92bb464882a2"></span>void <code class="sig-name descname">to_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
-<dd><p>This function prints the usage report to logs. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4NK5oneML11UsageReport7to_fileERKNSt6stringE">
-<span id="_CPPv3NK5oneML11UsageReport7to_fileERKNSt6stringE"></span><span id="_CPPv2NK5oneML11UsageReport7to_fileERKNSt6stringE"></span><span id="oneML::UsageReport::to_file__ssCRC"></span><span class="target" id="classone_m_l_1_1_usage_report_1ab7536eb790655419acc430aa2aa29c82"></span>void <code class="sig-name descname">to_file</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>file_name</em><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
-<dd><p>This function dumps the usage report to file. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">file_name</span></code>: name of the output file </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4NK5oneML11UsageReport7get_apiEv">
-<span id="_CPPv3NK5oneML11UsageReport7get_apiEv"></span><span id="_CPPv2NK5oneML11UsageReport7get_apiEv"></span><span id="oneML::UsageReport::get_apiC"></span><span class="target" id="classone_m_l_1_1_usage_report_1a8bc6e6244a85f03fb0273b0f2105d64e"></span>std::string <code class="sig-name descname">get_api</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><br /></dt>
-<dd><p>This function gets the API name of which the data of the <a class="reference internal" href="#classone_m_l_1_1_usage_report"><span class="std std-ref">UsageReport</span></a> instance refers to. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>string, name of the API </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="cpp var">
-<dt id="_CPPv4N5oneML11UsageReport9api_callsE">
-<span id="_CPPv3N5oneML11UsageReport9api_callsE"></span><span id="_CPPv2N5oneML11UsageReport9api_callsE"></span><span id="oneML::UsageReport::api_calls__i"></span><span class="target" id="classone_m_l_1_1_usage_report_1a23b64b8cdd4ff134d171c58b2936798c"></span>int <code class="sig-name descname">api_calls</code> = 0<br /></dt>
-<dd><p>Total number of API call. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt id="_CPPv4N5oneML11UsageReport10model_runsE">
-<span id="_CPPv3N5oneML11UsageReport10model_runsE"></span><span id="_CPPv2N5oneML11UsageReport10model_runsE"></span><span id="oneML::UsageReport::model_runs__i"></span><span class="target" id="classone_m_l_1_1_usage_report_1a621c4beaa13b5af131c008590e72b1fb"></span>int <code class="sig-name descname">model_runs</code> = 0<br /></dt>
-<dd><p>Total number of model inferences. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt id="_CPPv4N5oneML11UsageReport13first_updatedE">
-<span id="_CPPv3N5oneML11UsageReport13first_updatedE"></span><span id="_CPPv2N5oneML11UsageReport13first_updatedE"></span><span id="oneML::UsageReport::first_updated__i"></span><span class="target" id="classone_m_l_1_1_usage_report_1aa877fc5d720769ccdb85c545333268ad"></span>int <code class="sig-name descname">first_updated</code> = -1<br /></dt>
-<dd><p>Timestamp of API initialization. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt id="_CPPv4N5oneML11UsageReport12last_updatedE">
-<span id="_CPPv3N5oneML11UsageReport12last_updatedE"></span><span id="_CPPv2N5oneML11UsageReport12last_updatedE"></span><span id="oneML::UsageReport::last_updated__i"></span><span class="target" id="classone_m_l_1_1_usage_report_1a684a812fb10477013ef04727936db971"></span>int <code class="sig-name descname">last_updated</code> = -1<br /></dt>
-<dd><p>Timestamp of last API call. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt id="_CPPv4N5oneML11UsageReport13success_countE">
-<span id="_CPPv3N5oneML11UsageReport13success_countE"></span><span id="_CPPv2N5oneML11UsageReport13success_countE"></span><span id="oneML::UsageReport::success_count__i"></span><span class="target" id="classone_m_l_1_1_usage_report_1ad4f998f51e31160ab9402a3f6b48e328"></span>int <code class="sig-name descname">success_count</code> = 0<br /></dt>
-<dd><p>Total number of successful API calls. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt id="_CPPv4N5oneML11UsageReport10fail_countE">
-<span id="_CPPv3N5oneML11UsageReport10fail_countE"></span><span id="_CPPv2N5oneML11UsageReport10fail_countE"></span><span id="oneML::UsageReport::fail_count__i"></span><span class="target" id="classone_m_l_1_1_usage_report_1ae5e771a37f893c69d22fdf9626730625"></span>int <code class="sig-name descname">fail_count</code> = 0<br /></dt>
-<dd><p>Total number of failed API calls. </p>
-</dd></dl>
-
-</div>
-</dd></dl>
-
-<dl class="cpp class">
 <dt id="_CPPv4N5oneML4BBoxE">
 <span id="_CPPv3N5oneML4BBoxE"></span><span id="_CPPv2N5oneML4BBoxE"></span><span id="oneML::BBox"></span><span class="target" id="classone_m_l_1_1_b_box"></span><em class="property">class </em><code class="sig-prename descclassname">oneML<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">BBox</code><br /></dt>
 <dd><p>Class for Bounding Box. </p>
@@ -626,7 +549,7 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4NK5oneML4face12FaceLandmarkeqERK12FaceLandmarkI1NE">
-<span id="_CPPv3NK5oneML4face12FaceLandmarkeqERK12FaceLandmarkI1NE"></span><span id="_CPPv2NK5oneML4face12FaceLandmarkeqERK12FaceLandmarkI1NE"></span><span id="oneML::face::FaceLandmark::eq-operator__FaceLandmark:N:CRC"></span><span class="target" id="structone_m_l_1_1face_1_1_face_landmark_1a1c5314181b516d4a55be8d1283690faa"></span>bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4I_iEN5oneML4face12FaceLandmarkE" title="oneML::face::FaceLandmark">FaceLandmark</a>&lt;<a class="reference internal" href="#_CPPv4I_iEN5oneML4face12FaceLandmarkE" title="oneML::face::FaceLandmark::N">N</a>&gt; &amp;<em>lm</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML4face12FaceLandmarkeqERK12FaceLandmarkI1NE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK5oneML4face12FaceLandmarkeqERK12FaceLandmarkI1NE"></span><span id="_CPPv2NK5oneML4face12FaceLandmarkeqERK12FaceLandmarkI1NE"></span><span id="oneML::face::FaceLandmark::eq-operator__FaceLandmark:N:CRC"></span><span class="target" id="structone_m_l_1_1face_1_1_face_landmark_1a1c5314181b516d4a55be8d1283690faa"></span><em class="property">inline</em> bool <code class="sig-name descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4I_iEN5oneML4face12FaceLandmarkE" title="oneML::face::FaceLandmark">FaceLandmark</a>&lt;<a class="reference internal" href="#_CPPv4I_iEN5oneML4face12FaceLandmarkE" title="oneML::face::FaceLandmark::N">N</a>&gt; &amp;<em>lm</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK5oneML4face12FaceLandmarkeqERK12FaceLandmarkI1NE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>check whether the given <a class="reference internal" href="#structone_m_l_1_1face_1_1_face_landmark"><span class="std std-ref">FaceLandmark</span></a> is equal to this instance </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>bool </p>

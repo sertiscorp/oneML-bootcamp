@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Java License Manager API" href="license_manager.html" />
-    <link rel="prev" title="Java EKYC API" href="ekyc.html" /> 
+    <link rel="prev" title="Java Liveness PAD API" href="liveness_pad.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -126,6 +132,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -205,13 +219,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_utils_1aadc81fbd723a2d31627b5643a5bf15b4"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_utils_1aadc81fbd723a2d31627b5643a5bf15b4"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face5Utils5UtilsE14LicenseManager">
-<span id="_CPPv3N3org10sertiscorp5oneml4face5Utils5UtilsE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Utils5UtilsE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::Utils::Utils__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_utils_1ad6eb803d176089e21415c145ac05ac6b"></span><code class="sig-name descname">Utils</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Utils5UtilsE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face5Utils5UtilsE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Utils5UtilsE14LicenseManager"></span><span id="org::sertiscorp::oneml::face::Utils::Utils__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_utils_1ad6eb803d176089e21415c145ac05ac6b"></span><em class="property">inline</em> <code class="sig-name descname">Utils</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4face14LicenseManagerE" title="org::sertiscorp::oneml::face::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Utils5UtilsE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a Utils object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -223,19 +237,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4face5Utils8getUsageEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4face5Utils8getUsageEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Utils8getUsageEv"></span><span id="org::sertiscorp::oneml::face::Utils::getUsage"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_utils_1a041638289f70077d1d38f86f833c6150"></span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face11UsageReportE" title="org::sertiscorp::oneml::face::UsageReport">UsageReport</a> <code class="sig-name descname">getUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Utils8getUsageEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a report of the usage. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face5Utils21cropAlignFaceLandmarkE5Image9Landmark5">
-<span id="_CPPv3N3org10sertiscorp5oneml4face5Utils21cropAlignFaceLandmarkE5Image9Landmark5"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Utils21cropAlignFaceLandmarkE5Image9Landmark5"></span><span id="org::sertiscorp::oneml::face::Utils::cropAlignFaceLandmark__Image.Landmark5"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_utils_1ae9b488c3a2887b57403ef0a46c8cf1f5"></span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <code class="sig-name descname">cropAlignFaceLandmark</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>image</em>, <a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face9Landmark5E" title="org::sertiscorp::oneml::face::Landmark5">Landmark5</a> <em>landmark_in</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Utils21cropAlignFaceLandmarkE5Image9Landmark5" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face5Utils21cropAlignFaceLandmarkE5Image9Landmark5"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Utils21cropAlignFaceLandmarkE5Image9Landmark5"></span><span id="org::sertiscorp::oneml::face::Utils::cropAlignFaceLandmark__Image.Landmark5"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_utils_1ae9b488c3a2887b57403ef0a46c8cf1f5"></span><em class="property">inline</em> <a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <code class="sig-name descname">cropAlignFaceLandmark</code><span class="sig-paren">(</span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <em>image</em>, <a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face9Landmark5E" title="org::sertiscorp::oneml::face::Landmark5">Landmark5</a> <em>landmark_in</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Utils21cropAlignFaceLandmarkE5Image9Landmark5" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create align image from original image and landmark. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
@@ -251,7 +254,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4face5Utils11readImageCVE6String">
-<span id="_CPPv3N3org10sertiscorp5oneml4face5Utils11readImageCVE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Utils11readImageCVE6String"></span><span id="org::sertiscorp::oneml::face::Utils::readImageCV__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_utils_1ade01ff88cb2824dfd14995ca5deefd82"></span><a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <code class="sig-name descname">readImageCV</code><span class="sig-paren">(</span>String <em>img_path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Utils11readImageCVE6String" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4face5Utils11readImageCVE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4face5Utils11readImageCVE6String"></span><span id="org::sertiscorp::oneml::face::Utils::readImageCV__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_utils_1ade01ff88cb2824dfd14995ca5deefd82"></span><em class="property">inline</em> <a class="reference internal" href="../common/face_struct.html#_CPPv4N3org10sertiscorp5oneml4face5ImageE" title="org::sertiscorp::oneml::face::Image">Image</a> <code class="sig-name descname">readImageCV</code><span class="sig-paren">(</span>String <em>img_path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4face5Utils11readImageCVE6String" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read image file with specific path. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="../common/face_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
@@ -274,13 +277,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_utils_1aff3ff25b136a30fe65222535e394b972"></span><code class="sig-name descname">synchronized void delete ()</code></dt>
+<span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_utils_1aff3ff25b136a30fe65222535e394b972"></span><code class="sig-name descname">inline synchronized void delete ()</code></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4alpr5Utils5UtilsE14LicenseManager">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr5Utils5UtilsE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr5Utils5UtilsE14LicenseManager"></span><span id="org::sertiscorp::oneml::alpr::Utils::Utils__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_utils_1a8865922fbc7a39988742fb1f08da3914"></span><code class="sig-name descname">Utils</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManagerE" title="org::sertiscorp::oneml::alpr::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr5Utils5UtilsE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr5Utils5UtilsE14LicenseManager"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr5Utils5UtilsE14LicenseManager"></span><span id="org::sertiscorp::oneml::alpr::Utils::Utils__LicenseManager"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_utils_1a8865922fbc7a39988742fb1f08da3914"></span><em class="property">inline</em> <code class="sig-name descname">Utils</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N3org10sertiscorp5oneml4alpr14LicenseManagerE" title="org::sertiscorp::oneml::alpr::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr5Utils5UtilsE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a Utils object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -292,19 +295,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3org10sertiscorp5oneml4alpr5Utils8getUsageEv">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr5Utils8getUsageEv"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr5Utils8getUsageEv"></span><span id="org::sertiscorp::oneml::alpr::Utils::getUsage"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_utils_1ad22127179880b238d90c58c65edaa40e"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr11UsageReportE" title="org::sertiscorp::oneml::alpr::UsageReport">UsageReport</a> <code class="sig-name descname">getUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr5Utils8getUsageEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a report of the usage. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N3org10sertiscorp5oneml4alpr5Utils11readImageCVE6String">
-<span id="_CPPv3N3org10sertiscorp5oneml4alpr5Utils11readImageCVE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr5Utils11readImageCVE6String"></span><span id="org::sertiscorp::oneml::alpr::Utils::readImageCV__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_utils_1ab73317c432b10f91cf0cd0b602ebaeb3"></span><a class="reference internal" href="../common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr5ImageE" title="org::sertiscorp::oneml::alpr::Image">Image</a> <code class="sig-name descname">readImageCV</code><span class="sig-paren">(</span>String <em>img_path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr5Utils11readImageCVE6String" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3org10sertiscorp5oneml4alpr5Utils11readImageCVE6String"></span><span id="_CPPv2N3org10sertiscorp5oneml4alpr5Utils11readImageCVE6String"></span><span id="org::sertiscorp::oneml::alpr::Utils::readImageCV__String"></span><span class="target" id="classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_utils_1ab73317c432b10f91cf0cd0b602ebaeb3"></span><em class="property">inline</em> <a class="reference internal" href="../common/alpr_struct.html#_CPPv4N3org10sertiscorp5oneml4alpr5ImageE" title="org::sertiscorp::oneml::alpr::Image">Image</a> <code class="sig-name descname">readImageCV</code><span class="sig-paren">(</span>String <em>img_path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3org10sertiscorp5oneml4alpr5Utils11readImageCVE6String" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read image file with specific path. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong><a class="reference internal" href="../common/alpr_struct.html#classorg_1_1sertiscorp_1_1oneml_1_1alpr_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p>
@@ -329,7 +321,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="license_manager.html" class="btn btn-neutral float-right" title="Java License Manager API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="ekyc.html" class="btn btn-neutral float-left" title="Java EKYC API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="liveness_pad.html" class="btn btn-neutral float-left" title="Java Liveness PAD API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

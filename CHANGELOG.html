@@ -1,0 +1,1885 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Changelog &mdash; oneML  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Coverage" href="coverage/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> oneML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v4.5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cpp/index.html">C++ APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpp/index.html#c-data-structures">C++ Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpp/index.html#c-examples">C++ Examples</a></li>
+</ul>
+<p><span class="caption-text">Python Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python/index.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/index.html#python-data-structures">Python Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/index.html#python-examples">Python Examples</a></li>
+</ul>
+<p><span class="caption-text">Java Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="java/index.html">Java APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/index.html#java-data-structures">Java Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/index.html#java-examples">Java Examples</a></li>
+</ul>
+<p><span class="caption-text">C# Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="csharp/index.html">C# APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csharp/index.html#c-data-structures">C# Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csharp/index.html#c-examples">C# Examples</a></li>
+</ul>
+<p><span class="caption-text">Golang Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#section-1">[4.5.0] - 2023-05-02</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-2">[4.4.0] - 2023-04-18</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-1">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-1">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-3">[4.3.0] - 2023-04-04</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-2">Added</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-4">[4.2.3] - 2023-03-22</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-2">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-5">[4.2.2] - 2023-03-22</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-3">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-6">[4.2.1] - 2023-03-21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-4">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-7">[4.2.0] - 2023-03-21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-3">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-5">Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-1">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-8">[4.1.2] - 2023-03-08</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-6">Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-2">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-9">[4.1.1] - 2023-03-07</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-7">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-10">[4.1.0] - 2023-03-07</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-4">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-3">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-11">[4.0.0] - 2023-02-21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-5">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-8">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-12">[3.13.0] - 2023-02-08</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-6">Added</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-13">[3.12.0] - 2023-01-24</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-7">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-4">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-14">[3.11.1] - 2023-01-10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-9">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-15">[3.11.0] - 2022-12-27</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-8">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-5">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-16">[3.10.0] - 2022-12-13</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-9">Added</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-17">[3.9.2] - 2022-11-01</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-10">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-18">[3.9.1] - 2022-10-19</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changed-6">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-19">[3.9.0] - 2022-10-04</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-10">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-7">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-20">[3.8.0] - 2022-09-20</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-11">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-8">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-11">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-21">[3.7.0] - 2022-09-06</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-12">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-9">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-12">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-22">[3.6.2] - 2022-08-23</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changed-10">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-23">[3.6.1] - 2022-07-26</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changed-11">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-13">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-24">[3.6.0] - 2022-07-12</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-13">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-12">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-14">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-25">[3.5.1] - 2022-06-28</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-15">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-26">[3.5.0] - 2022-06-14</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-14">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-13">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-16">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-27">[3.4.2] - 2022-05-31</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-15">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-14">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-17">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-28">[3.4.1] - 2022-05-17</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changed-15">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-18">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-29">[3.4.0] - 2022-05-03</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-16">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-19">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-30">[3.3.0] - 2022-04-19</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-17">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-16">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-20">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-31">[3.2.0] - 2022-04-05</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-18">Added</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-32">[3.1.0] - 2022-03-22</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-19">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-21">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-33">[3.0.0] - 2022-02-08</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-20">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-17">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-34">[2.6.0] - 2022-02-08</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changed-18">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-22">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-35">[2.5.2] - 2022-01-25</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-21">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-19">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-36">[2.5.1] - 2022-01-11</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changed-20">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-37">[2.5.0] - 2021-12-28</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-22">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-21">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-38">[2.4.0] - 2021-12-15</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-23">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fix">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-39">[2.3.1] - 2021-11-30</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changed-22">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fix-1">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-40">[2.3.0] - 2021-11-16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-24">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-23">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fix-2">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-41">[2.2.0] - 2021-11-02</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-25">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-24">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fix-3">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-42">[2.1.0] - 2021-10-19</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-26">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-25">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-43">[2.0.0] - 2021-10-05</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-27">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-26">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fix-4">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-44">[1.7.0] - 2021-09-21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-28">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-27">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fix-5">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-45">[1.6.0] - 2021-09-07</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-29">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-28">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fix-6">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-46">[1.5.1] - 2021-08-10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changed-29">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fix-7">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-47">[1.5.0] - 2021-07-28</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-30">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-30">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fix-8">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-48">[1.4.0] - 2021-07-13</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-31">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-31">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-49">[1.3.1] - 2021-06-30</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fix-9">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-50">[1.3.0] - 2021-06-29</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-32">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-32">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-51">[1.2.1] - 2021-06-15</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-33">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-33">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-23">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-52">[1.2.0] - 2021-06-01</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-34">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-34">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-24">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-53">[1.1.0] - 2021-05-18</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-35">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-35">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-25">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-54">[1.0.1] - 2021-04-30</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-26">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-55">[1.0.0] - 2021-04-30</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-36">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-27">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-56">[0.14.0] - 2021-04-20</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-37">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-28">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-57">[0.13.1] - 2021-04-07</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-29">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-58">[0.13.0] - 2021-04-06</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-38">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-36">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-30">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-59">[0.12.0] - 2021-03-24</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-39">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-37">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-31">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-60">[0.11.1] - 2021-03-09</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-32">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-61">[0.11.0] - 2021-03-09</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-40">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-38">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-33">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-62">[0.10.0] - 2021-02-23</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-41">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-39">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-34">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-63">[0.9.0] - 2021-02-10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-42">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-40">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-35">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-64">[0.8.0] - 2021-01-26</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-43">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-41">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-36">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-65">[0.7.0] - 2021-01-12</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-44">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-42">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-66">[0.6.1] - 2020-12-29</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changed-43">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-67">[0.6.0] - 2020-12-29</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-45">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-44">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-68">[0.5.0] - 2020-12-16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-46">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-45">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-69">[0.4.0] - 2020-12-01</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-47">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-46">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-70">[0.3.0] - 2020-11-17</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-48">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-47">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-71">[0.2.0] - 2020-11-03</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-49">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-48">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-72">[0.1.0] - 2020-10-21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-50">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-49">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#section-73">[0.0.1] - 2020-10-06</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#added-51">Added</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">oneML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Changelog</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/CHANGELOG.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a class="reference external" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<section id="section-1">
+<h2>[4.5.0] - 2023-05-02<a class="headerlink" href="#section-1" title="Permalink to this headline">¶</a></h2>
+<section id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>LicensePlateDetector API -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/d2e0b613e7b28935d2644b283993055d3d2085e3">d2e0b613</a></p></li>
+<li><p>Support for Windows in CI/CD -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ab9be11c6bd0da57612baf4e802b304c48027bcf">ab9be11c</a></p></li>
+</ul>
+</section>
+<section id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Deployment packages overwrite for different versions of the same OS -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/fbff6b8f198eb0f8cba60ceec80b30d0581cfc7b">fbff6b8f</a></p></li>
+<li><p>Usage Report push to BQ for Windows -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9ca867e8852965967c277238373df955680fcbf1">9ca867e8</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-2">
+<h2>[4.4.0] - 2023-04-18<a class="headerlink" href="#section-2" title="Permalink to this headline">¶</a></h2>
+<section id="added-1">
+<h3>Added<a class="headerlink" href="#added-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support for new GPUs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6b10d45e74314e850c67069c3e41c6f3d6b6eec9">6b10d45e</a></p></li>
+</ul>
+</section>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Updated openVINO -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/d1d6f660ce181f3256f0f23ffb723c335a42c0de">d1d6f660</a></p></li>
+<li><p>Migrated Cryptlex credentials -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/896352d76dec0cd7cc6e5416a5f90c395708d3b2">896352d7</a></p></li>
+<li><p>Migrated GCP project for release -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4f7e00620923d929270891ed219fa8569ede0050">4f7e0062</a></p></li>
+<li><p>customer_id for bootcamp config files -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a7bf49c7e0a6f79e145fbbcddab65028e703f6e0">a7bf49c7</a></p></li>
+</ul>
+</section>
+<section id="fixed-1">
+<h3>Fixed<a class="headerlink" href="#fixed-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Logic for delay_expired test cases -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c8c4d60d4831f44042f021dd2172d42a836a5e7d">c8c4d60d</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-3">
+<h2>[4.3.0] - 2023-04-04<a class="headerlink" href="#section-3" title="Permalink to this headline">¶</a></h2>
+<section id="added-2">
+<h3>Added<a class="headerlink" href="#added-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Model threshold parameters to public APIs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0596703c768499daddbbe9803fb86fafead7f6d4">0596703c</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-4">
+<h2>[4.2.3] - 2023-03-22<a class="headerlink" href="#section-4" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-2">
+<h3>Fixed<a class="headerlink" href="#fixed-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Incorrect variable used in blur check -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/220ba50efb90f53771e1232a6423f0f673b23240">220ba50e</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-5">
+<h2>[4.2.2] - 2023-03-22<a class="headerlink" href="#section-5" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-3">
+<h3>Fixed<a class="headerlink" href="#fixed-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Missing customer_id in config files -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a8a602dc6e4d0e0bb37cac1097260633f849552f">a8a602dc</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-6">
+<h2>[4.2.1] - 2023-03-21<a class="headerlink" href="#section-6" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-4">
+<h3>Fixed<a class="headerlink" href="#fixed-4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Cryptlex custom fingerprint not applied for custom json setting -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c51d02d39ac61adf6f1c8a6fac57b5aa3bd77c88">c51d02d3</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-7">
+<h2>[4.2.0] - 2023-03-21<a class="headerlink" href="#section-7" title="Permalink to this headline">¶</a></h2>
+<section id="added-3">
+<h3>Added<a class="headerlink" href="#added-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>PersonDetector API -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/1830438ca59f9595457aaa809d0a524f46a3c375">1830438c</a></p></li>
+<li><p>Cryptlex LicenseCallBack support -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/f7e770529273f23a31d15bd22238748c5423f9f4">f7e77052</a></p></li>
+<li><p>EKYC module support return face scores -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a7ca98d277717007a8cb00b3233e05d9ef5e581d">a7ca98d2</a></p></li>
+</ul>
+</section>
+<section id="fixed-5">
+<h3>Fixed<a class="headerlink" href="#fixed-5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Android protobuf integration -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/7db9560a6d2a14ac9aa6f863303408e06dd055e6">7db9560a</a></p></li>
+<li><p>Conan flags injection -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b3e92d6ea1d9121aa025af355a3bb8aa9d730631">b3e92d6e</a></p></li>
+</ul>
+</section>
+<section id="changed-1">
+<h3>Changed<a class="headerlink" href="#changed-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Improved pipelines granularity tests -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/04ae89d3ec512c2b8557d8b7ff03a706f082e877">04ae89d3</a></p></li>
+<li><p>Re-enabled MACE runtime build -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/84deb2e440df8f5b56f1951bf2dabfa08cc5a5a2">84deb2e4</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-8">
+<h2>[4.1.2] - 2023-03-08<a class="headerlink" href="#section-8" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-6">
+<h3>Fixed<a class="headerlink" href="#fixed-6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Package naming convention clash -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ccaa34393b6abd8dc368f28eb686df5a33781b06">ccaa3439</a></p></li>
+</ul>
+</section>
+<section id="changed-2">
+<h3>Changed<a class="headerlink" href="#changed-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Improved CI scripts management -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b1f735954116864703ede4783b4e2c4ed83c087e">b1f73595</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-9">
+<h2>[4.1.1] - 2023-03-07<a class="headerlink" href="#section-9" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-7">
+<h3>Fixed<a class="headerlink" href="#fixed-7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Override before_script in release job -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5ca794cbb970662815e8a6c60aaec6d175c47368">5ca794cb</a></p></li>
+<li><p>Remove prebuild references in CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ed4fe65c042e1e95590609d2f9f0964886a5f415">ed4fe65c</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-10">
+<h2>[4.1.0] - 2023-03-07<a class="headerlink" href="#section-10" title="Permalink to this headline">¶</a></h2>
+<section id="added-4">
+<h3>Added<a class="headerlink" href="#added-4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Pipeline granularity control for LivenessPAD and ChallengeResponse -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/98e3faa98665ed01d56e546919165fee21fe0703">98e3faa9</a></p></li>
+<li><p>Support for Conan package manager -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/02277d2e7b48aacc0947c0378005e0dfd5cfa70f">02277d2e</a></p></li>
+<li><p>CS-migration config files and CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/234fcc6a6855dd851d008b4f3f4f7ed16584af1b">234fcc6a</a></p></li>
+<li><p>Support suspended license -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e37ed8c36fef30e0af6e89c5279c838156d15990">e37ed8c3</a></p></li>
+</ul>
+</section>
+<section id="changed-3">
+<h3>Changed<a class="headerlink" href="#changed-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Improved BQ push loigc -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/114b0567e23ee5cc5d6075c243e3626d0eb138bc">114b0567</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-11">
+<h2>[4.0.0] - 2023-02-21<a class="headerlink" href="#section-11" title="Permalink to this headline">¶</a></h2>
+<section id="added-5">
+<h3>Added<a class="headerlink" href="#added-5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>GCP as main backend for UsageReport and reformat flow -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/17b15989176f6a4fc6ccabd5934350dfc33b9d18">17b15989</a></p></li>
+<li><p>Face pose check in EKYC pipeline -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/54ea36207b6c185e6e13985922524ccdf162f2c0">54ea3620</a></p></li>
+</ul>
+</section>
+<section id="fixed-8">
+<h3>Fixed<a class="headerlink" href="#fixed-8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Build without any runtime enabled -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/37db42a2013931dc1ebe597d1ee3faf6bab1efa4">37db42a2</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-12">
+<h2>[3.13.0] - 2023-02-08<a class="headerlink" href="#section-12" title="Permalink to this headline">¶</a></h2>
+<section id="added-6">
+<h3>Added<a class="headerlink" href="#added-6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>LivenessPAD Java, C# and Go bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/7873bd1b9cfc91e1a9e9d5df5669c8ceb4e0f8cb">7873bd1b</a></p></li>
+<li><p>Support Cryptlex custom fingerprint -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/7a60ddb54526b19385609defbd62ea9a3cfd082b">7a60ddb5</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-13">
+<h2>[3.12.0] - 2023-01-24<a class="headerlink" href="#section-13" title="Permalink to this headline">¶</a></h2>
+<section id="added-7">
+<h3>Added<a class="headerlink" href="#added-7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>LivenessPAD C++ API -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/cb4cb95f23e5c6797bd33803acbc9c2888bbccb4">cb4cb95f</a></p></li>
+<li><p>LivenessPAD python bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b41479c3aa288ec3a8533cbaacd664c70f5779d7">b41479c3</a></p></li>
+<li><p>Support for API delay when license is expired -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/87883fc8a9c0d7cb7ec3913c32c38f721dd904ec">87883fc8</a></p></li>
+</ul>
+</section>
+<section id="changed-4">
+<h3>Changed<a class="headerlink" href="#changed-4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Reformat API classes -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9d7dfb92f07091833e26f6355ca1af00fa8e383e">9d7dfb92</a></p></li>
+<li><p>Update TVM models for EKYC deployment -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/1105db4f7c16b7c153c4108c881e3e77d15638bd">1105db4f</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-14">
+<h2>[3.11.1] - 2023-01-10<a class="headerlink" href="#section-14" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-9">
+<h3>Fixed<a class="headerlink" href="#fixed-9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Missing deployment package for EKYC -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a827e42d6fa68180aed70588dc568329cd90b7f2">a827e42d</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-15">
+<h2>[3.11.0] - 2022-12-27<a class="headerlink" href="#section-15" title="Permalink to this headline">¶</a></h2>
+<section id="added-8">
+<h3>Added<a class="headerlink" href="#added-8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>EKYC package for EKYC API -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/143aac2f1ef1505c81d18de1d70f8830cc732540">143aac2f</a></p></li>
+<li><p>liveness utils -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9c4183eb047101cea9d793e8579ac03698b7aeec">9c4183eb</a></p></li>
+</ul>
+</section>
+<section id="changed-5">
+<h3>Changed<a class="headerlink" href="#changed-5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Clean up README -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/139706d85ffbe0c6febc94a350364ab8fb5673dc">139706d8</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-16">
+<h2>[3.10.0] - 2022-12-13<a class="headerlink" href="#section-16" title="Permalink to this headline">¶</a></h2>
+<section id="added-9">
+<h3>Added<a class="headerlink" href="#added-9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>GCP client and dependencies integration -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5fed1a1162fca23c13a35275205383cbcba0e15e">5fed1a11</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-17">
+<h2>[3.9.2] - 2022-11-01<a class="headerlink" href="#section-17" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-10">
+<h3>Fixed<a class="headerlink" href="#fixed-10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Apps build with licensing -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b94336324bbd600b80475039498c71dbf5571e36">b9433632</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-18">
+<h2>[3.9.1] - 2022-10-19<a class="headerlink" href="#section-18" title="Permalink to this headline">¶</a></h2>
+<section id="changed-6">
+<h3>Changed<a class="headerlink" href="#changed-6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Enable tests reporting in the CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9c5aa2211984b47115e78732c6b779b31d99de61">9c5aa221</a></p></li>
+<li><p>Update oneML-bootcamp tvm models -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6beb75fc71eaaeda2d0cc0c957407fd38614da0a">6beb75fc</a></p></li>
+<li><p>Update TensorRT -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c875ca55252aadb9a0b76f02b2683a7647447047">c875ca55</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-19">
+<h2>[3.9.0] - 2022-10-04<a class="headerlink" href="#section-19" title="Permalink to this headline">¶</a></h2>
+<section id="added-10">
+<h3>Added<a class="headerlink" href="#added-10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>EKYC bindings for C# -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/51c445b8f23b5d4bdc4ae90b82052916ed845185">51c445b8</a></p></li>
+<li><p>EKYC bindings for Go -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9e53e67ec6399ea7caab7c94caf8c10b6cf54a2b">9e53e67e</a></p></li>
+</ul>
+</section>
+<section id="changed-7">
+<h3>Changed<a class="headerlink" href="#changed-7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Improve tests with multi-params -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e75df9d574fb26fba746cee2f77505f0ec32045f">e75df9d5</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-20">
+<h2>[3.8.0] - 2022-09-20<a class="headerlink" href="#section-20" title="Permalink to this headline">¶</a></h2>
+<section id="added-11">
+<h3>Added<a class="headerlink" href="#added-11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>EKYC bindings for Python and Java -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/39b54919b60fc15959785e185f25c58022aa5b45">39b54919</a></p></li>
+</ul>
+</section>
+<section id="changed-8">
+<h3>Changed<a class="headerlink" href="#changed-8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Consolidate public APIs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/eadf11b97f1453310072c439018da3cba5f24432">eadf11b9</a></p></li>
+</ul>
+</section>
+<section id="fixed-11">
+<h3>Fixed<a class="headerlink" href="#fixed-11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Bindings usage report -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c9056cc6fa64fb5f8fddd9afa6c3c61bbc3bfa0c">c9056cc6</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-21">
+<h2>[3.7.0] - 2022-09-06<a class="headerlink" href="#section-21" title="Permalink to this headline">¶</a></h2>
+<section id="added-12">
+<h3>Added<a class="headerlink" href="#added-12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>EKYC module -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/1e6104f4ad7e8d5fa9e2462eeaee79a95433c34c">1e6104f4</a></p></li>
+<li><p>Usage report -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/1afcf598a375eef624a209d036bd1b5c23f74b47">1afcf598</a></p></li>
+</ul>
+</section>
+<section id="changed-9">
+<h3>Changed<a class="headerlink" href="#changed-9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Align test names -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/52cfb69c92710a5bc9f48f1dcfdc1f21f3461d38">52cfb69c</a></p></li>
+</ul>
+</section>
+<section id="fixed-12">
+<h3>Fixed<a class="headerlink" href="#fixed-12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Remove logs of unused statistics -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/96f095a49893bd530d01cf9d51fa7549d7ad391d">96f095a4</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-22">
+<h2>[3.6.2] - 2022-08-23<a class="headerlink" href="#section-22" title="Permalink to this headline">¶</a></h2>
+<section id="changed-10">
+<h3>Changed<a class="headerlink" href="#changed-10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Batch size preparation logic -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/19ba6fb4e044ab7a298e8ca3cbba14f3cf8284bb">19ba6fb4</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-23">
+<h2>[3.6.1] - 2022-07-26<a class="headerlink" href="#section-23" title="Permalink to this headline">¶</a></h2>
+<section id="changed-11">
+<h3>Changed<a class="headerlink" href="#changed-11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Update Yolov5 MNN model -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/80363dc63fbfbf458b053d85389707b49c59a392">80363dc6</a></p></li>
+<li><p>Align QC with API platform -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c62703a1bd2cacdd61feec8b2ea09c1eed1fbdf3">c62703a1</a></p></li>
+</ul>
+</section>
+<section id="fixed-13">
+<h3>Fixed<a class="headerlink" href="#fixed-13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Missing C# docs in release -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/698855c7b2f4cc097c0725fe67d33f72ed441ee8">698855c7</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-24">
+<h2>[3.6.0] - 2022-07-12<a class="headerlink" href="#section-24" title="Permalink to this headline">¶</a></h2>
+<section id="added-13">
+<h3>Added<a class="headerlink" href="#added-13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>C# Bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b6354b8b66df42a9713bbe4bcb21a0ca9a182a15">b6354b8b</a></p></li>
+</ul>
+</section>
+<section id="changed-12">
+<h3>Changed<a class="headerlink" href="#changed-12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Update Cryptlex version -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/845e64117d4552cdca025af09946ecd01d9fd1f0">845e6411</a></p></li>
+</ul>
+</section>
+<section id="fixed-14">
+<h3>Fixed<a class="headerlink" href="#fixed-14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Docutils version -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c45bf144d98ead319bf4a681d648bdc110760c30">c45bf144</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-25">
+<h2>[3.5.1] - 2022-06-28<a class="headerlink" href="#section-25" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-15">
+<h3>Fixed<a class="headerlink" href="#fixed-15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fix an issue that <code class="docutils literal notranslate"><span class="pre">oneML-bootcamp-x86_64-cuda</span></code> artifacts are not pushed to GCS -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/114acf0b17b991f926ccaea2b040f41fc3a48a5d">114acf0b</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-26">
+<h2>[3.5.0] - 2022-06-14<a class="headerlink" href="#section-26" title="Permalink to this headline">¶</a></h2>
+<section id="added-14">
+<h3>Added<a class="headerlink" href="#added-14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Update a Docker image for running apps -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/368e66dcd91bc2291c9690d1f39a64e1ae3d2c94">368e66dc</a></p></li>
+</ul>
+</section>
+<section id="changed-13">
+<h3>Changed<a class="headerlink" href="#changed-13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Align code conventions -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/cb07c54f504291c5e111f37d38a8905432d52fa1">cb07c54f</a></p></li>
+</ul>
+</section>
+<section id="fixed-16">
+<h3>Fixed<a class="headerlink" href="#fixed-16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Remove unnecessary dependency in CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c71178b3ccffad5923446bbe1465aafd578bdd6b">c71178b3</a></p></li>
+<li><p>Fix missing godoc in a library package -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/90f5931e5533c3026639574021de4a27768712c2">90f5931e</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-27">
+<h2>[3.4.2] - 2022-05-31<a class="headerlink" href="#section-27" title="Permalink to this headline">¶</a></h2>
+<section id="added-15">
+<h3>Added<a class="headerlink" href="#added-15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support for bootcamp-gpu -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/08d3333bfbf932b9e829cb78ccad3834b7372c14">08d3333b</a></p></li>
+</ul>
+</section>
+<section id="changed-14">
+<h3>Changed<a class="headerlink" href="#changed-14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Migrate Cryptlex credentials -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/112688af3d3d517d38371c01b6c4a3125030c320">112688af</a></p></li>
+</ul>
+</section>
+<section id="fixed-17">
+<h3>Fixed<a class="headerlink" href="#fixed-17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Missing header in FaceEmbedder release package -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/22c396a79863bf4d7050ceb06956a1059fdf7640">22c396a7</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-28">
+<h2>[3.4.1] - 2022-05-17<a class="headerlink" href="#section-28" title="Permalink to this headline">¶</a></h2>
+<section id="changed-15">
+<h3>Changed<a class="headerlink" href="#changed-15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Simplify apps and reformat CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/54ceb9f43635623035d4d18f182a215d814efebf">54ceb9f4</a></p></li>
+</ul>
+</section>
+<section id="fixed-18">
+<h3>Fixed<a class="headerlink" href="#fixed-18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>License doesn’t deactivate in CI jobs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/34b566f345fe3145fa199f8e3226a21413f4ba6e">34b566f3</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-29">
+<h2>[3.4.0] - 2022-05-03<a class="headerlink" href="#section-29" title="Permalink to this headline">¶</a></h2>
+<section id="added-16">
+<h3>Added<a class="headerlink" href="#added-16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Application-specific status codes for all modules -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/85353eedd60a2be53a8f7d0fd3d4552c920544ed">85353eed</a></p></li>
+</ul>
+</section>
+<section id="fixed-19">
+<h3>Fixed<a class="headerlink" href="#fixed-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Wrong licensing init for Android -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/1486041aa05d10460784974639cba3876414f8cd">1486041a</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-30">
+<h2>[3.3.0] - 2022-04-19<a class="headerlink" href="#section-30" title="Permalink to this headline">¶</a></h2>
+<section id="added-17">
+<h3>Added<a class="headerlink" href="#added-17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Flipped image embedding for bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/3139932bd08671a90bf62114b9083001c2ad921c">3139932b</a></p></li>
+</ul>
+</section>
+<section id="changed-16">
+<h3>Changed<a class="headerlink" href="#changed-16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Update Docker Git image -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c827380efabb9dd1e9ac7373f4016fe2277dffcb">c827380e</a></p></li>
+</ul>
+</section>
+<section id="fixed-20">
+<h3>Fixed<a class="headerlink" href="#fixed-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Go FaceEmbedder license app -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/820c1daf9d6c8db94a0bbf40d7ba01bebb1b7ebb">820c1daf</a></p></li>
+<li><p>Bindings result mismatch -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/f6a12cbea04eb306bdc244f80b2809410be92c18">f6a12cbe</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-31">
+<h2>[3.2.0] - 2022-04-05<a class="headerlink" href="#section-31" title="Permalink to this headline">¶</a></h2>
+<section id="added-18">
+<h3>Added<a class="headerlink" href="#added-18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Flipped image embedding support -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/01afddd2b47a3ad1d1883d4927d7dfeceac260bb">01afddd2</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-32">
+<h2>[3.1.0] - 2022-03-22<a class="headerlink" href="#section-32" title="Permalink to this headline">¶</a></h2>
+<section id="added-19">
+<h3>Added<a class="headerlink" href="#added-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>oneML bootcamp -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/2fa0d2a51a80fd32453add332cdd9c2388932e19">2fa0d2a5</a></p></li>
+</ul>
+</section>
+<section id="fixed-21">
+<h3>Fixed<a class="headerlink" href="#fixed-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Arm32 toolchains -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0536cb307f77258cae75c4c92e5b9baf7d54ed04">0536cb30</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-33">
+<h2>[3.0.0] - 2022-02-08<a class="headerlink" href="#section-33" title="Permalink to this headline">¶</a></h2>
+<section id="added-20">
+<h3>Added<a class="headerlink" href="#added-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>support for Nvidia Jetson devices -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/21412761c31cbe0aeb6be7870a32079227b532b3">21412761</a></p></li>
+</ul>
+</section>
+<section id="changed-17">
+<h3>Changed<a class="headerlink" href="#changed-17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>rebrand zenML to oneML -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4e638e65e738c5d7b47c9c30229c8c2b28d345c0">4e638e65</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-34">
+<h2>[2.6.0] - 2022-02-08<a class="headerlink" href="#section-34" title="Permalink to this headline">¶</a></h2>
+<section id="changed-18">
+<h3>Changed<a class="headerlink" href="#changed-18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>upgrade base OS image to Ubuntu 20.04 -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ba5a7776247225531304d0be368e62ff10a08bb5">ba5a7776</a></p></li>
+</ul>
+</section>
+<section id="fixed-22">
+<h3>Fixed<a class="headerlink" href="#fixed-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>wrong whiteeddge configuration file -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/bf117ef713ffd463f07d8698452e0138504308a6">bf117ef7</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-35">
+<h2>[2.5.2] - 2022-01-25<a class="headerlink" href="#section-35" title="Permalink to this headline">¶</a></h2>
+<section id="added-21">
+<h3>Added<a class="headerlink" href="#added-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>FRVT OpenVINO models -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/cc59fc7c5175fee67e78ff45f4f368d1446418ad">cc59fc7c</a></p></li>
+</ul>
+</section>
+<section id="changed-19">
+<h3>Changed<a class="headerlink" href="#changed-19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>update EKYC packages -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6474f5b3935750603e3012da5a9aa62c9f601930">6474f5b3</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-36">
+<h2>[2.5.1] - 2022-01-11<a class="headerlink" href="#section-36" title="Permalink to this headline">¶</a></h2>
+<section id="changed-20">
+<h3>Changed<a class="headerlink" href="#changed-20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>update TVM version to v0.8 -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0976ba3404de9c93e9048a29f3485100c45088c4">0976ba34</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-37">
+<h2>[2.5.0] - 2021-12-28<a class="headerlink" href="#section-37" title="Permalink to this headline">¶</a></h2>
+<section id="added-22">
+<h3>Added<a class="headerlink" href="#added-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>TensorRT runtime -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4b74b9f29025026d3431bb2994388c81c4529fdf">4b74b9f2</a></p></li>
+</ul>
+</section>
+<section id="changed-21">
+<h3>Changed<a class="headerlink" href="#changed-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>speed up tests -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/2076aa22ebf08c0baec5fe538a6c664abcc20731">2076aa22</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-38">
+<h2>[2.4.0] - 2021-12-15<a class="headerlink" href="#section-38" title="Permalink to this headline">¶</a></h2>
+<section id="added-23">
+<h3>Added<a class="headerlink" href="#added-23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>application-specific return status for ChallengeResponse and FacePad modules -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4aeb450c8a1be3dfef5dce4131dc61d69748ea5f">4aeb450c</a></p></li>
+</ul>
+</section>
+<section id="fix">
+<h3>Fix<a class="headerlink" href="#fix" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>iOS prebuild mismatch -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/43968cfc06a3a9814ab531107f157558d28999aa">43968cfc</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-39">
+<h2>[2.3.1] - 2021-11-30<a class="headerlink" href="#section-39" title="Permalink to this headline">¶</a></h2>
+<section id="changed-22">
+<h3>Changed<a class="headerlink" href="#changed-22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>machine code strategy update -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/dbe4001676f9bcf00e4368466911f384e05b30a3">dbe40016</a></p></li>
+<li><p>support machine code setting from users -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/dea5c50a2f3929a42a59a0aaf34333f250d6eb57">dea5c50a</a></p></li>
+</ul>
+</section>
+<section id="fix-1">
+<h3>Fix<a class="headerlink" href="#fix-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>changelog document -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e179ff378025453028b3e73001fd8811621b73d5">e179ff37</a></p></li>
+<li><p>duplicate license manger initialize log -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/323fe271f0517948f69551ffcd49744d941a2916">323fe271</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-40">
+<h2>[2.3.0] - 2021-11-16<a class="headerlink" href="#section-40" title="Permalink to this headline">¶</a></h2>
+<section id="added-24">
+<h3>Added<a class="headerlink" href="#added-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>support for MNN openCL precompiled kernels -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/71fb7cf697c845a32d275796d9dbaaef525310bc">71fb7cf6</a></p></li>
+<li><p>challenge response deployment job -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9c8bf419846183f83477e7dac9f884a32e23277c">9c8bf419</a></p></li>
+<li><p>face golang API service -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4a7b5a23c85102a88e8285e31031f2940bc2b60c">4a7b5a23</a></p></li>
+<li><p>openVINO PAD models and reformat tests -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/32826e9ba2daf55ce362bffb30f66ea19f6d4c11">32826e9b</a></p></li>
+</ul>
+</section>
+<section id="changed-23">
+<h3>Changed<a class="headerlink" href="#changed-23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>refactor face landmark tests -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b7eb97c2e99ec75829107f35bbd89609c4338cf0">b7eb97c2</a></p></li>
+<li><p>streamline deployment docs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/be951d91613879795a7711e2de9c1fa5ed1378f9">be951d91</a></p></li>
+</ul>
+</section>
+<section id="fix-2">
+<h3>Fix<a class="headerlink" href="#fix-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>python docs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/19f1482e8357c878d158c1bb32bc95d3b3cb837c">19f1482e</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-41">
+<h2>[2.2.0] - 2021-11-02<a class="headerlink" href="#section-41" title="Permalink to this headline">¶</a></h2>
+<section id="added-25">
+<h3>Added<a class="headerlink" href="#added-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>android java license tests on CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a2a947cc05509584a02704416eca875648522051">a2a947cc</a></p></li>
+<li><p>challenge response liveness score -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/63d68e0d030ca6082db305675811b419b041e5e9">63d68e0d</a></p></li>
+</ul>
+</section>
+<section id="changed-24">
+<h3>Changed<a class="headerlink" href="#changed-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>refactor PAD -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9cf878b5e8283b98dc7598aadd478d8076b367f3">9cf878b5</a></p></li>
+<li><p>reorganize headers -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c72082925b8b1e827a82dc2665b612785f83decc">c7208292</a></p></li>
+</ul>
+</section>
+<section id="fix-3">
+<h3>Fix<a class="headerlink" href="#fix-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>python setuptools -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b352caa38f35ffdcb9047e373cbcb84b6b5c00fe">b352caa3</a></p></li>
+<li><p>msvc build job hangs occasionally -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/12341250f8c56813a80959064b943b70ed392ba0">12341250</a></p></li>
+<li><p>android llvm error when link with mediandk -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/faac1edeb99ab2c613f0b6e005946461fa2bd0d3">faac1ede</a></p></li>
+<li><p>CI jobs pass when tests fail -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ef35969845c064747c307fd68f13839f970195ea">ef359698</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-42">
+<h2>[2.1.0] - 2021-10-19<a class="headerlink" href="#section-42" title="Permalink to this headline">¶</a></h2>
+<section id="added-26">
+<h3>Added<a class="headerlink" href="#added-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>support Java bindings for msvc build -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/fd24cf4999f24906f9c703b48b73b4dffbaead0c">fd24cf49</a></p></li>
+<li><p>support Python bindings for msvc build -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/2144d91a9ed703783a374af85fc75e46086ff027">2144d91a</a></p></li>
+<li><p>add new challenge response initialization logic -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4bff6d1ce1674f4726bc26418168e398f2fc1270">4bff6d1c</a></p></li>
+<li><p>support Cryptlex for Android -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e165dbdce33538bdfbf22c81973d282fbb63c9e6">e165dbdc</a></p></li>
+</ul>
+</section>
+<section id="changed-25">
+<h3>Changed<a class="headerlink" href="#changed-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>change data type in ear calculation -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/eff84c8df74bba0d8348c703d912c31ccc05aaa3">eff84c8d</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-43">
+<h2>[2.0.0] - 2021-10-05<a class="headerlink" href="#section-43" title="Permalink to this headline">¶</a></h2>
+<section id="added-27">
+<h3>Added<a class="headerlink" href="#added-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>support cryptlex for Windows -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5539172385f14b004ce11aeb1f9ee0f85e283781">55391723</a></p></li>
+<li><p>support cryptlex trial activation [PUBLIC API UPDATE] -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a88ba1f7f0dcee276341818422782b3b996c56d5">a88ba1f7</a></p></li>
+<li><p>MNN runtime -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4aa6e1e16af9ec6064886104b8e4833381bac566">4aa6e1e1</a></p></li>
+<li><p>video to images bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/147c96348c48c6900a77b2367686353726f9ad2d">147c9634</a></p></li>
+</ul>
+</section>
+<section id="changed-26">
+<h3>Changed<a class="headerlink" href="#changed-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>align namespaces between C++ and bindings [PUBLIC API UPDATE] -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e34d3466fea89bb8042ad964605e4c86b9a1968b">e34d3466</a></p></li>
+<li><p>generalize face landmark data structure [PUBLIC API UPDATE] -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/89ce5a0c714118e5f86f295923e08ef3f2c02e7b">89ce5a0c</a></p></li>
+<li><p>refactor and improve class templates -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4a9683270b7dcfb2c2b86d9e36d3dc9c35f0a95e">4a968327</a></p></li>
+<li><p>remove ModelType and improve flow -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/61fe09ec5b9e20317143992cc7249bfbf4d3d2f8">61fe09ec</a></p></li>
+</ul>
+</section>
+<section id="fix-4">
+<h3>Fix<a class="headerlink" href="#fix-4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>challenge response when face is not detected or not frontal -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/bdde1442ca6009b07cea490e09810f7860720542">bdde1442</a></p></li>
+<li><p>docs shall document APIs w/ and w/o licensing  -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/643ead8b83ada9cfc9f0c0be6e9f1be4f1567e03">643ead8b</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-44">
+<h2>[1.7.0] - 2021-09-21<a class="headerlink" href="#section-44" title="Permalink to this headline">¶</a></h2>
+<section id="added-28">
+<h3>Added<a class="headerlink" href="#added-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>automatic deactivate test key -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/f19fdf5b0ef71b581b8cf12e1eaf66c6fcee5d64">f19fdf5b</a></p></li>
+<li><p>center most bounding box selection function -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b3b691c3f268adb16361c8d563608f0325cb5b10">b3b691c3</a></p></li>
+<li><p>java bindings for challenge response -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5d7096594a0ccd1c44091aa00beb46f4733745c8">5d709659</a></p></li>
+<li><p>python get_best_frame bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/004bc64a15d86b5f448f3761ef9f46714b58a240">004bc64a</a></p></li>
+<li><p>go bindings for challenge response -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/809228392dbea7ff4cb745873a489579f056953b">80922839</a></p></li>
+<li><p>challange response module -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4209f11879a79ccdf882b3e9dc9b1f607369ad3e">4209f118</a></p></li>
+</ul>
+</section>
+<section id="changed-27">
+<h3>Changed<a class="headerlink" href="#changed-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>improve resource management -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5bf851277825c005db02546ecba681a610b8cc34">5bf85127</a></p></li>
+</ul>
+</section>
+<section id="fix-5">
+<h3>Fix<a class="headerlink" href="#fix-5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>challenge response output mismatch from python scripts -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9dd54eb201ad8b3c56466bd0daec930e9e06cfa3">9dd54eb2</a></p></li>
+<li><p>msvc resource -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/fab503b0c80818190873da40d096e9c39485f5e6">fab503b0</a></p></li>
+<li><p>document generation flow -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b8e7d4aba86ff98673e49aecd5026515b8b9d4f3">b8e7d4ab</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-45">
+<h2>[1.6.0] - 2021-09-07<a class="headerlink" href="#section-45" title="Permalink to this headline">¶</a></h2>
+<section id="added-29">
+<h3>Added<a class="headerlink" href="#added-29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>add multi-threading support for openvino -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/46c690e554ef977d1aba970617b7a318200da56f">46c690e5</a></p></li>
+<li><p>add MSVC build support -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6706f83b5c9937e2b102a02eb9ae7f4fbd35d4ec">6706f83b</a></p></li>
+<li><p>face landmark module -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a030f60338dd7437deb56023a7a2021cab4bb602">a030f603</a></p></li>
+<li><p>add face landmark in Java and Go bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/cb0855fb047d8d813cad47925fa9002318937960">cb0855fb</a></p></li>
+<li><p>add face landmark in Python bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/26276f84c99a2b58f84fb79f1f6975c398fca359">26276f84</a></p></li>
+<li><p>add Cryptlex as license management backend for Linux -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/bff6cc6716a93116348253d942d1511b9912f36f">bff6cc67</a></p></li>
+</ul>
+</section>
+<section id="changed-28">
+<h3>Changed<a class="headerlink" href="#changed-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>use Cryptlex’s keys in apps with license enabling -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0517aff60e2c7923fd48aebd19b9b1a145d73329">0517aff6</a></p></li>
+</ul>
+</section>
+<section id="fix-6">
+<h3>Fix<a class="headerlink" href="#fix-6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>jobs fails when concurrent jobs are allowed to run -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/1247c5724a83e02ff8964b08ef4cf9980c531b7c">1247c572</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-46">
+<h2>[1.5.1] - 2021-08-10<a class="headerlink" href="#section-46" title="Permalink to this headline">¶</a></h2>
+<section id="changed-29">
+<h3>Changed<a class="headerlink" href="#changed-29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>improved TVM runtime -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0af37155947966bd31233d7966ae07a321f7bace">0af37155</a></p></li>
+<li><p>refactor syslib models -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/34d48114351a02478415015dd87ef35e14dc7ff6">34d48114</a></p></li>
+</ul>
+</section>
+<section id="fix-7">
+<h3>Fix<a class="headerlink" href="#fix-7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>badge URL in README -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c87f60a4371d8fb00caa024dc128ba8decddda88">c87f60a4</a></p></li>
+<li><p>link rpath for artifacts -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/3b189428596732845b6e3303015baf0b208ce6f8">3b189428</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-47">
+<h2>[1.5.0] - 2021-07-28<a class="headerlink" href="#section-47" title="Permalink to this headline">¶</a></h2>
+<section id="added-30">
+<h3>Added<a class="headerlink" href="#added-30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>OpenVINO Runtime -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9cca898c35f20a933b1d08d973b6c01f0c7c3f95">9cca898c</a></p></li>
+<li><p>time utils -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/590eacd34d84b4b61ff3ea2f235c01549c2ca6ce">590eacd3</a></p></li>
+</ul>
+</section>
+<section id="changed-30">
+<h3>Changed<a class="headerlink" href="#changed-30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>improve CMake -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5bf2a01c5bdae791138316c4ecf2e098fed3ff99">5bf2a01c</a></p></li>
+</ul>
+</section>
+<section id="fix-8">
+<h3>Fix<a class="headerlink" href="#fix-8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>issue with dot in file name -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/439143c068a10a5dc9264bbc1d4d9c3cc5976a31">439143c0</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-48">
+<h2>[1.4.0] - 2021-07-13<a class="headerlink" href="#section-48" title="Permalink to this headline">¶</a></h2>
+<section id="added-31">
+<h3>Added<a class="headerlink" href="#added-31" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>go bindings for face-embedder and face-id -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/275e5f7d5343b3c541865c2c78cf40eb0d8972f2">275e5f7d</a></p></li>
+<li><p>support multiple modules with same build -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/401845aacd0f9fe9f2272e1d4cfac611b40a3706">401845aa</a></p></li>
+<li><p>go bindings for face detector -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/8610e7fe3bc7b125a922be4731b62527ac442f18">8610e7fe</a></p></li>
+<li><p>go bindings for vehicle detector -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/84722fb8024b5da9b628ca7c637055efbf0c2405">84722fb8</a></p></li>
+<li><p>go face verification app -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/730182ebc05ef9654ca63a1b8f3cf710146c603d">730182eb</a></p></li>
+</ul>
+</section>
+<section id="changed-31">
+<h3>Changed<a class="headerlink" href="#changed-31" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>update go doc generator -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b9d62e606290c304da0d2a23e4aeae6ab2579545">b9d62e60</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-49">
+<h2>[1.3.1] - 2021-06-30<a class="headerlink" href="#section-49" title="Permalink to this headline">¶</a></h2>
+<section id="fix-9">
+<h3>Fix<a class="headerlink" href="#fix-9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>warning and missing APLR bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/cabc4382de45ac4a8fa2f5046c45dcd576422538">cabc4382</a></p></li>
+<li><p>go module generate logic -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/665a199e8ab536f5f4409e59364be0727cc38161">665a199e</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-50">
+<h2>[1.3.0] - 2021-06-29<a class="headerlink" href="#section-50" title="Permalink to this headline">¶</a></h2>
+<section id="added-32">
+<h3>Added<a class="headerlink" href="#added-32" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>python bindings for vehicle detector -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6b55d1ffdfaffdc65c2acf6613abed8034c44b09">6b55d1ff</a></p></li>
+<li><p>java bindings for vehicle detector -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/67e7a1f761c324750b7c12ff6ebfd384540dba08">67e7a1f7</a></p></li>
+<li><p>EKYC models -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/edd80d807f4a312093c875917c36eb9f3c71b07f">edd80d80</a></p></li>
+<li><p>single image API for vehicle detector -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/1333224adb6d0e2c1766377745d4c82ff8245fcd">1333224a</a></p></li>
+<li><p>golang bindings for utils API -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/7f2dcede43d89fc0f8df2324f3300df26755b20c">7f2dcede</a></p></li>
+</ul>
+</section>
+<section id="changed-32">
+<h3>Changed<a class="headerlink" href="#changed-32" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>update blacktip -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/bc2e08c3b20b98a2fc08a625f30eb5735b426f6e">bc2e08c3</a></p></li>
+<li><p>separate build for different pad models -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5e15b84ded691d35620bd368fc6d308330a18a99">5e15b84d</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-51">
+<h2>[1.2.1] - 2021-06-15<a class="headerlink" href="#section-51" title="Permalink to this headline">¶</a></h2>
+<section id="added-33">
+<h3>Added<a class="headerlink" href="#added-33" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>broadnose face embedding model -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/8f9bec0dfc26da950abc400b79ff04ad35e4af83">8f9bec0d</a></p></li>
+</ul>
+</section>
+<section id="changed-33">
+<h3>Changed<a class="headerlink" href="#changed-33" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>remove face structures when not needed -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a0f21a6dfd7d314132d9c4eef6e3d6177233b30c">a0f21a6d</a></p></li>
+<li><p>revert to float bbox and fix centering issue -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9ef06c3d1f009c4229cff031cd5a77a224ab3134">9ef06c3d</a></p></li>
+<li><p>improve docs visualization and build process -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4da13a46f899cf1510832a53eb8ec6b26df1389f">4da13a46</a></p></li>
+</ul>
+</section>
+<section id="fixed-23">
+<h3>Fixed<a class="headerlink" href="#fixed-23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>realign NMS flow with FRVT -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/3d7ad241e0c3fd7266a98a7a6e058c4e8a171d2b">3d7ad241</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-52">
+<h2>[1.2.0] - 2021-06-01<a class="headerlink" href="#section-52" title="Permalink to this headline">¶</a></h2>
+<section id="added-34">
+<h3>Added<a class="headerlink" href="#added-34" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>vehicle detector module -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6135c56b7e68052661589fcbb2c09687a619b568">6135c56b</a></p></li>
+<li><p>support for single image API -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/01e4ae5e26c3e6c5c91094e48e6ee1f0530334e0">01e4ae5e</a></p></li>
+<li><p>build config for Telpo FaceScan app -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/96cbb39ecf7aadf20326a0fb4f135cdabd8d5f7a">96cbb39e</a></p></li>
+<li><p>support Windows build -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6ddff1b23516db42d883dea69a2093b1ff1e206a">6ddff1b2</a></p></li>
+</ul>
+</section>
+<section id="changed-34">
+<h3>Changed<a class="headerlink" href="#changed-34" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>improve build script and simplify configs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/97ebbdaf16c94f695ae8686fb500890356a21b2e">97ebbdaf</a></p></li>
+<li><p>update face detection threshold -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0af973207109ea60bb2498b205cbc8b64a8f93db">0af97320</a></p></li>
+</ul>
+</section>
+<section id="fixed-24">
+<h3>Fixed<a class="headerlink" href="#fixed-24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>docker CI job override bug -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/37cc05afd4841c97839599d482df1b13bd08f7c7">37cc05af</a></p></li>
+<li><p>docker CI job overrive bug 2 -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e444fc45e85bfe61b3f280c159b4e0fd7fa9e918">e444fc45</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-53">
+<h2>[1.1.0] - 2021-05-18<a class="headerlink" href="#section-53" title="Permalink to this headline">¶</a></h2>
+<section id="added-35">
+<h3>Added<a class="headerlink" href="#added-35" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>integration of machine code for licensing -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/fcc70ab5adeffed5f11cac4531ff0ddf35239d97">fcc70ab5</a></p></li>
+</ul>
+</section>
+<section id="changed-35">
+<h3>Changed<a class="headerlink" href="#changed-35" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>align code with FRVT -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0791c45cfe5fc83957c0b6e5c39a1464403d1b3e">0791c45c</a></p></li>
+</ul>
+</section>
+<section id="fixed-25">
+<h3>Fixed<a class="headerlink" href="#fixed-25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>java data lifetime bug -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0e5929fbee28f02d255fbc61e83a528c9b873a7a">0e5929fb</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-54">
+<h2>[1.0.1] - 2021-04-30<a class="headerlink" href="#section-54" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-26">
+<h3>Fixed<a class="headerlink" href="#fixed-26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>wrong config file for docs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5015e74433d6a2c62552ade5d168afb67017fbdc">5015e744</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-55">
+<h2>[1.0.0] - 2021-04-30<a class="headerlink" href="#section-55" title="Permalink to this headline">¶</a></h2>
+<section id="added-36">
+<h3>Added<a class="headerlink" href="#added-36" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>utils API to public API -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/32b47c0039ecba94104dab44bcb05a2795f8a3d4">32b47c00</a></p></li>
+</ul>
+</section>
+<section id="fixed-27">
+<h3>Fixed<a class="headerlink" href="#fixed-27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>java bindings for utils API -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/84817b291c23a791506459989e41e7b52dad1cbe">84817b29</a></p></li>
+<li><p>wrong config file in release package -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/f1066d7275bd06e2b350ee6d28026073386cfe73">f1066d72</a></p></li>
+<li><p>CMake logic in java bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0b528729c086a013eea647ffa6232d1f768e4ff5">0b528729</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-56">
+<h2>[0.14.0] - 2021-04-20<a class="headerlink" href="#section-56" title="Permalink to this headline">¶</a></h2>
+<section id="added-37">
+<h3>Added<a class="headerlink" href="#added-37" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>support java bindings fro Android -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e00ac537cee1e2d5c9a1ba1bed181004243e4f19">e00ac537</a></p></li>
+<li><p>support license management in bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9d0390d8ee92dc19990ca6a71e4375401e8bc322">9d0390d8</a></p></li>
+<li><p>method to generate unique machine id for android -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4b159fe15038b10e34b292e4f28e854732ecbc29">4b159fe1</a></p></li>
+</ul>
+</section>
+<section id="fixed-28">
+<h3>Fixed<a class="headerlink" href="#fixed-28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>docker build CI job logic -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4192e52e6a85de2f9b5a2c51adc0faf335d662e2">4192e52e</a></p></li>
+<li><p>Android integration bugs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4f644391da4aee161033ab2233871f9bca80042a">4f644391</a></p></li>
+<li><p>python documentation -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/f8ef495ac367adf8bbe708a023e554ddabcec60a">f8ef495a</a></p></li>
+<li><p>python release package -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4b54ceb1950717297bd298dac1746ef6a45e74f4">4b54ceb1</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-57">
+<h2>[0.13.1] - 2021-04-07<a class="headerlink" href="#section-57" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-29">
+<h3>Fixed<a class="headerlink" href="#fixed-29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>fix pages job in CI</p></li>
+</ul>
+</section>
+</section>
+<section id="section-58">
+<h2>[0.13.0] - 2021-04-06<a class="headerlink" href="#section-58" title="Permalink to this headline">¶</a></h2>
+<section id="added-38">
+<h3>Added<a class="headerlink" href="#added-38" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>java documentation -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b794c37a46470f9b61c6404392e7022d47a649bb">b794c37a</a></p></li>
+<li><p>support centralized ADB server -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/07a0474a11da41ca810a5caeac8b26641d97444c">07a0474a</a></p></li>
+</ul>
+</section>
+<section id="changed-36">
+<h3>Changed<a class="headerlink" href="#changed-36" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>update FACE thresholds and model names -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6c234944ba3dcf88843018738430a6571d1ac1ae">6c234944</a></p></li>
+<li><p>improve bindings packaging -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4e6fb358f95e2bc921aa528c949673dc93adcf80">4e6fb358</a></p></li>
+<li><p>update models config management -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a36e50fe003a895e0b5100e8de9201945eefb40e">a36e50fe</a></p></li>
+<li><p>improve java bindings packaging -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/50d67edef4b9f25d896e857aabe302b6117fbcf4">50d67ede</a></p></li>
+</ul>
+</section>
+<section id="fixed-30">
+<h3>Fixed<a class="headerlink" href="#fixed-30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>docs build and pages -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e6c685494fd1a98e9f8bc228f7b760071c594dd3">e6c68549</a></p></li>
+<li><p>FaceID java binding and its CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/908fc6473cd972564cc091684ab32d5951bbf045">908fc647</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-59">
+<h2>[0.12.0] - 2021-03-24<a class="headerlink" href="#section-59" title="Permalink to this headline">¶</a></h2>
+<section id="added-39">
+<h3>Added<a class="headerlink" href="#added-39" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>support for MACE v1.0.3 -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/92870dc274777f51a1c7682c1c5ebb27bd111c70">92870dc2</a></p></li>
+<li><p>method to generate unique machine id for linux -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/505c47141d50fbac6416601543ed8d904beb546e">505c4714</a></p></li>
+<li><p>add java bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/812db5f5fec786f563d7c28291f20bc06565c1ba">812db5f5</a></p></li>
+</ul>
+</section>
+<section id="changed-37">
+<h3>Changed<a class="headerlink" href="#changed-37" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>improve clean build policy -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/7fd22dce0a831f242f3f9d25d3b11228d7cffff6">7fd22dce</a></p></li>
+</ul>
+</section>
+<section id="fixed-31">
+<h3>Fixed<a class="headerlink" href="#fixed-31" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>aling timing logs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/f5b336bb1568c02310a4295a7f30dfbca04d74bd">f5b336bb</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-60">
+<h2>[0.11.1] - 2021-03-09<a class="headerlink" href="#section-60" title="Permalink to this headline">¶</a></h2>
+<section id="fixed-32">
+<h3>Fixed<a class="headerlink" href="#fixed-32" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>fix release job in CI</p></li>
+</ul>
+</section>
+</section>
+<section id="section-61">
+<h2>[0.11.0] - 2021-03-09<a class="headerlink" href="#section-61" title="Permalink to this headline">¶</a></h2>
+<section id="added-40">
+<h3>Added<a class="headerlink" href="#added-40" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>support multiple android device in CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ec1289f635719fe9fe49400613dd16ac04007267">ec1289f6</a></p></li>
+<li><p>support mutliple HW targets in same library for TVM -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/1b3aa135b72158051d3e57b76616f490b8b6292b">1b3aa135</a></p></li>
+<li><p>add automatic processing of TVM models -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/344083b2fca0a55acf59f2f8fcfd002f19875d1d">344083b2</a></p></li>
+<li><p>add automatic badges generation -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/98505f78a905f128579984de0d35d4bbf7df860d">98505f78</a></p></li>
+<li><p>support hybrid libraries -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/90f90e7d0a790b325d1484a5ef6cc5c9a92fb002">90f90e7d</a></p></li>
+</ul>
+</section>
+<section id="changed-38">
+<h3>Changed<a class="headerlink" href="#changed-38" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>improve CI stages and content to gain speed -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4760dd9bfa73d623de624826e604f9a9791e9a53">4760dd9b</a></p></li>
+<li><p>improve management of android devices in CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/3a14891d3ea5fbd698ca61cdc7f59d685418818d">3a14891d</a></p></li>
+</ul>
+</section>
+<section id="fixed-33">
+<h3>Fixed<a class="headerlink" href="#fixed-33" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>fix env check jobs in CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/02fe769f4869b15c4980135d5b4fa4c4fc8887c0">02fe769f</a></p></li>
+<li><p>fix CI DAG -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/12619ea66845e2ea1b5d1fd393c0da4865647670">12619ea6</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-62">
+<h2>[0.10.0] - 2021-02-23<a class="headerlink" href="#section-62" title="Permalink to this headline">¶</a></h2>
+<section id="added-41">
+<h3>Added<a class="headerlink" href="#added-41" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>support python bindings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b8ee9442bce2ecd543fe0711c9b80c60d3171ee0">b8ee9442</a></p></li>
+<li><p>support python packaging and pip -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c01ab20768f438d6ddb8602a6076e0fa58492af8">c01ab207</a></p></li>
+<li><p>build with configuration file -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/638172a68d2608f2cadcf9137ba08edde2463c64">638172a6</a></p></li>
+<li><p>public release of documentation -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b027eca2617fe6de2359a208a2219c7fbdb957d2">b027eca2</a></p></li>
+</ul>
+</section>
+<section id="changed-39">
+<h3>Changed<a class="headerlink" href="#changed-39" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>use MACE static libraries -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/3997dcd1bd78128b0852a30f4535119ae5313bab">3997dcd1</a></p></li>
+<li><p>use TVM static libraries -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/215fb4fa127c7dd7afd5b029dd31e2762914dce2">215fb4fa</a></p></li>
+</ul>
+</section>
+<section id="fixed-34">
+<h3>Fixed<a class="headerlink" href="#fixed-34" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>fix release package tag -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4e260d7d5395d81a018948674c162d83ae4a6f0e">4e260d7d</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-63">
+<h2>[0.9.0] - 2021-02-10<a class="headerlink" href="#section-63" title="Permalink to this headline">¶</a></h2>
+<section id="added-42">
+<h3>Added<a class="headerlink" href="#added-42" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>check for docker image availability -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5bcd798af979e3f1da13d5958f5eed1b99a6a9b1">5bcd798a</a></p></li>
+<li><p>support for cpack and install cmd -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9e042b945d8f6b8442b033731703640230825419">9e042b94</a></p></li>
+<li><p>support TVM android -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c8dffedfb939b08f6d5fe7dd3f942d7d3a62b509">c8dffedf</a></p></li>
+<li><p>build information in the library -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ef7d955f0af7494c4643312a3dd2dea50c880ccc">ef7d955f</a></p></li>
+</ul>
+</section>
+<section id="changed-40">
+<h3>Changed<a class="headerlink" href="#changed-40" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>suppress coverage logs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b52737e47c1870875780bc376dbfdedb5f89e77d">b52737e4</a></p></li>
+</ul>
+</section>
+<section id="fixed-35">
+<h3>Fixed<a class="headerlink" href="#fixed-35" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>fix mutex lock -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/b75642fa7ec157cf25162925a6ffb7963de5cdc5">b75642fa</a></p></li>
+<li><p>fix docs generation error -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e2cb90d7b7ba8932ed46880d4ba9d70ea70d148b">e2cb90d7</a></p></li>
+<li><p>fix gitlab CI trigger -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6cbca3f7542bf57f80d7f824d78660798bda18b7">6cbca3f7</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-64">
+<h2>[0.8.0] - 2021-01-26<a class="headerlink" href="#section-64" title="Permalink to this headline">¶</a></h2>
+<section id="added-43">
+<h3>Added<a class="headerlink" href="#added-43" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>timing logs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/65986d4f929f747e1979f96850484cc31a4c1932">65986d4</a></p></li>
+<li><p>tests for port module -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9bf16f7cf640d232ed8bec78da5482f13451f0d8">9bf16f7c</a></p></li>
+<li><p>support batch inference -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6c022f0bfe3b90e77550c270eb44df0f1bd9db97">6c022f0b</a></p></li>
+</ul>
+</section>
+<section id="changed-41">
+<h3>Changed<a class="headerlink" href="#changed-41" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>make tar quiet -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/acc95d1f933e0a8a098cc23ee59a8b66aed5ab9b">acc95d1f</a></p></li>
+<li><p>separate target ARCH and target HW -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/c58110eef3e425f6c45d52ab55067c3629677e48">c58110ee</a></p></li>
+<li><p>reformat public API -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4e75e1d4a8e03049ccf3246c0193347d775c3ae4">4e75e1d4</a></p></li>
+<li><p>improve documentation -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/a1107acce70f9155c8373338ba3dcc4b90d679bf">a1107acc</a></p></li>
+</ul>
+</section>
+<section id="fixed-36">
+<h3>Fixed<a class="headerlink" href="#fixed-36" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>fix concurrency of android CI -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/68acb6651c47114098d335a0abfda4ded8233171">68acb665</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-65">
+<h2>[0.7.0] - 2021-01-12<a class="headerlink" href="#section-65" title="Permalink to this headline">¶</a></h2>
+<section id="added-44">
+<h3>Added<a class="headerlink" href="#added-44" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>public API interface -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/352a6602b6c09c17866edbfb0bea603f9f3d90f4">352a6602</a></p></li>
+<li><p>support TVM threads -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/57d7becfcf66dc96525ce601616c67cc2160f122">57d7becf</a></p></li>
+<li><p>support license manager -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/3af4457234c68e5f2b59b9eec012e4e2fc4f1a83">3af44572</a></p></li>
+<li><p>support MACE openCL kernels -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/99076b60ddc2c8f093a3bd4ceecf32b96a0044a5">99076b60</a></p></li>
+</ul>
+</section>
+<section id="changed-42">
+<h3>Changed<a class="headerlink" href="#changed-42" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>use DVC cache -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4e08b7e498b4294613a51a114c64e51951b59863">4e08b7e4</a></p></li>
+<li><p>set default target_target to x86_64 -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/914cc1d89e04aed1e80a7fed52dc6f40322140d0">914cc1d8</a></p></li>
+<li><p>speedup address sanitizer -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0a734e7074a6e4a8c882106c9f120620e2b17ebc">0a734e70</a></p></li>
+<li><p>update docker dependencies -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/97c941c6e02c7eed398c0a088184720768bc4559">97c941c6</a></p></li>
+<li><p>fix LOG warnings -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/84a72434ba9e6fcc455b7df82f204f91d6cfe8d8">84a72434</a></p></li>
+<li><p>align file names convention -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/9e80e3827ff3542d2dd58bf42c13884d261094bc">9e80e382</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-66">
+<h2>[0.6.1] - 2020-12-29<a class="headerlink" href="#section-66" title="Permalink to this headline">¶</a></h2>
+<section id="changed-43">
+<h3>Changed<a class="headerlink" href="#changed-43" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>update droppy URL -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/15fb48e1f720fdc0c2ee89ada03a7e669cafeeef">15fb48e1</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-67">
+<h2>[0.6.0] - 2020-12-29<a class="headerlink" href="#section-67" title="Permalink to this headline">¶</a></h2>
+<section id="added-45">
+<h3>Added<a class="headerlink" href="#added-45" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>CI jobs to update dependencies -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/f1aa9869ffe6bd5e5c38b96eb7d974e231938a60">f1aa9869</a></p></li>
+<li><p>test NCHW and NHWC model output -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e0c03303c23946b4e377febd2d62c21a418af9b4">e0c03303</a></p></li>
+</ul>
+</section>
+<section id="changed-44">
+<h3>Changed<a class="headerlink" href="#changed-44" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>activate MACE GPU tests -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/2c03435d039badd1509d5a2246097a8053ff2d76">2c03435d</a></p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">ctest</span></code> to run tests -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/330527b36f7a0b0706937a9e5d4246b725be70f0">330527b3</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-68">
+<h2>[0.5.0] - 2020-12-16<a class="headerlink" href="#section-68" title="Permalink to this headline">¶</a></h2>
+<section id="added-46">
+<h3>Added<a class="headerlink" href="#added-46" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>DVC -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/4db768f333d7b25ea06edcd46c887d2c91701861">4db768f3</a></p></li>
+<li><p>Face ID and Embedder -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/203b4989d44bba5ae72dccb6a4949aee3733f0d2">203b4989</a></p></li>
+<li><p>Pad -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/97aeca7393ce7c7cce74b75adf49d53977993e0d">97aeca73</a></p></li>
+<li><p>ARM-toolchains -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/d2eb91ffc77a461ff4109b978a56437d9baaedb6">d2eb91ff</a></p></li>
+<li><p>Ctest -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ec254e2799a65e7ea6324e21a5776c8c2184a566">ec254e27</a>‘</p></li>
+</ul>
+</section>
+<section id="changed-45">
+<h3>Changed<a class="headerlink" href="#changed-45" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Suppress 3rd Warning -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/d56ebf8d38444ece0ca5be2485e7d28081b50cbf">d56ebf8d</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-69">
+<h2>[0.4.0] - 2020-12-01<a class="headerlink" href="#section-69" title="Permalink to this headline">¶</a></h2>
+<section id="added-47">
+<h3>Added<a class="headerlink" href="#added-47" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>add NeuralNetFactory -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/429868dfd8cae568541b0ff4b49de0f2441dd973">429868df</a></p></li>
+<li><p>add OneMLNet -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/70d44aae9929af99ccf3510e17284866d07a699e">70d44aae</a></p></li>
+<li><p>add MACE GPU -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/15dc102cfb8d0b73714fbc1e16966ee882472e15">15dc102c</a></p></li>
+<li><p>add Mat input preparation -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ffbd5c1f4b48d707de0f3c5388516f96a9c88912">ffbd5c1f</a></p></li>
+<li><p>add preproconfig -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/f66245ee548058a8f666f4604036fdd8c6e1790e">f66245ee</a></p></li>
+</ul>
+</section>
+<section id="changed-46">
+<h3>Changed<a class="headerlink" href="#changed-46" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>unify tests -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5e8141c37491a88a00a84ee86d2786cd6154bbe6">5e8141c3</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-70">
+<h2>[0.3.0] - 2020-11-17<a class="headerlink" href="#section-70" title="Permalink to this headline">¶</a></h2>
+<section id="added-48">
+<h3>Added<a class="headerlink" href="#added-48" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>add input preparer -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0a454f84aae03876ddeeeeb7156e0cbaf305496e">0a454f84</a></p></li>
+<li><p>add test coverage -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/beef76e99ed3d7fad9be9baed938ec31cbcfeab2">beef76e9</a></p></li>
+<li><p>add detect module -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/7b36b80b28eb17c95a64c1a15d096f71ca2f80f3">7b36b80b</a></p></li>
+<li><p>add classify module -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/d2c79b353489e407396e6d5caf1e02878eea096f">d2c79b35</a></p></li>
+<li><p>add face detector utils -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e33f0607de9be999bc4d2110c9b24dc783617d9a">e33f0607</a></p></li>
+</ul>
+</section>
+<section id="changed-47">
+<h3>Changed<a class="headerlink" href="#changed-47" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>optimize build script -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/ae35f5f0dd35000bc7a102621bf42a5af23e90f5">ae35f5f0</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-71">
+<h2>[0.2.0] - 2020-11-03<a class="headerlink" href="#section-71" title="Permalink to this headline">¶</a></h2>
+<section id="added-49">
+<h3>Added<a class="headerlink" href="#added-49" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>MACE backend -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/e4baa2f0952699b7371b0ae4711fa5d624325b5a">e4baa2f0</a></p></li>
+<li><p>docker environment -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/3fd36c464b307a6e84b51c9c2ea6cf25f978862d">3fd36c46</a></p></li>
+<li><p>document generator -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/59536271257c36f3a17ecd721699520085f64690">59536271</a></p></li>
+<li><p>add clang tools -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/57c684e7a5b836bded9b93e8fa89b458aec6dc6d">57c684e7</a></p></li>
+<li><p>add utils -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/6b53629cc375a4737744ffabe930d9da0830ab25">6b53629c</a></p></li>
+</ul>
+</section>
+<section id="changed-48">
+<h3>Changed<a class="headerlink" href="#changed-48" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>use static opencv -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/8abff6d19eb1c8334f43166b2156cf72990fcb37">8abff6d1</a></p></li>
+<li><p>update runtime to support multiple inputs, outputs -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/2482f6905172aa9fc29ffe0b334b14422e48b572">2482f690</a></p></li>
+<li><p>update doc theme -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/82688a5d52b0c5844d03ad02deed98a6f6796f46">82688a5d</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-72">
+<h2>[0.1.0] - 2020-10-21<a class="headerlink" href="#section-72" title="Permalink to this headline">¶</a></h2>
+<section id="added-50">
+<h3>Added<a class="headerlink" href="#added-50" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>TVM Runtime class -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/380836263ec672f2f95e2f8344f24cc72e6acb87">38083626</a></p></li>
+<li><p>port and utils -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/0bc3eb5345d2641c52bb3190edccb7d9c114d0a0">0bc3eb53</a></p></li>
+<li><p>Runtime abstract class -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/5a3992cac9a184725a2361bfeba186aa29d7d3ff">5a3992ca</a></p></li>
+</ul>
+</section>
+<section id="changed-49">
+<h3>Changed<a class="headerlink" href="#changed-49" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>CMake build strategy -&gt; <a class="reference external" href="https://gitlab.com/sertiscorp/mle/edge/oneml/-/commit/3713ffeac9ce76158b4b65bd51f8eb965c9cf28b">3713ffea</a></p></li>
+</ul>
+</section>
+</section>
+<section id="section-73">
+<h2>[0.0.1] - 2020-10-06<a class="headerlink" href="#section-73" title="Permalink to this headline">¶</a></h2>
+<section id="added-51">
+<h3>Added<a class="headerlink" href="#added-51" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Baseline implementation</p></li>
+<li><p>Folder structure</p></li>
+<li><p>Code formatting style</p></li>
+<li><p>READMEs</p></li>
+<li><p>3rdparty modules</p></li>
+<li><p>CMake files</p></li>
+<li><p>gitlab-CI</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="coverage/index.html" class="btn btn-neutral float-left" title="Coverage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Sertis Corp Co., Ltd..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

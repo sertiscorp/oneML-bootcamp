@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#c-data-structures">C++ Data Structures</a></li>
@@ -116,6 +122,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -188,48 +202,48 @@
   <section id="c-face-landmark-example">
 <span id="cpp-face-landmark-example"></span><h1>C++ Face Landmark Example<a class="headerlink" href="#c-face-landmark-example" title="Permalink to this headline">¶</a></h1>
 <p>Initialize face landmark model</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceLandmarkDetector</span><span class="w"> </span><span class="n">landmark_detector</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceLandmarkDetector</span><span class="w"> </span><span class="n">landmark_detector</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Initialize face landmark model with licensing</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">LicenseManager</span><span class="w"> </span><span class="n">license_manager</span><span class="p">;</span><span class="w"></span>
-<span class="n">license_manager</span><span class="p">.</span><span class="n">set_key</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">license_manager</span><span class="p">.</span><span class="n">activate_key</span><span class="p">();</span><span class="w"></span>
-<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceLandmarkDetector</span><span class="w"> </span><span class="nf">landmark_detector</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">LicenseManager</span><span class="w"> </span><span class="n">license_manager</span><span class="p">;</span>
+<span class="n">license_manager</span><span class="p">.</span><span class="n">set_key</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">);</span>
+<span class="n">license_manager</span><span class="p">.</span><span class="n">activate_key</span><span class="p">();</span>
+<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceLandmarkDetector</span><span class="w"> </span><span class="nf">landmark_detector</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Utils</span><span class="w"> </span><span class="n">utils</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils with licensing</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Utils</span><span class="w"> </span><span class="nf">utils</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Utils</span><span class="w"> </span><span class="nf">utils</span><span class="p">(</span><span class="n">license_manager</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Create oneML’s MultiImage input and outputs object</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">MultiImage</span><span class="w"> </span><span class="n">inputs</span><span class="p">{</span><span class="n">img1</span><span class="p">,</span><span class="w"> </span><span class="n">img2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w">  </span><span class="n">img4</span><span class="p">};</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceLandmarkResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">outputs</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">MultiImage</span><span class="w"> </span><span class="n">inputs</span><span class="p">{</span><span class="n">img1</span><span class="p">,</span><span class="w"> </span><span class="n">img2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w">  </span><span class="n">img4</span><span class="p">};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceLandmarkResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">outputs</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Create oneML’s Image input and output object</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Image</span><span class="w"> </span><span class="n">img</span><span class="p">;</span><span class="w"></span>
-<span class="n">utils</span><span class="p">.</span><span class="n">read_image_cv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">img</span><span class="p">);</span><span class="w"></span>
-<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceLandmarkResult</span><span class="w"> </span><span class="n">output</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">oneML</span><span class="o">::</span><span class="n">Image</span><span class="w"> </span><span class="n">img</span><span class="p">;</span>
+<span class="n">utils</span><span class="p">.</span><span class="n">read_image_cv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">img</span><span class="p">);</span>
+<span class="n">oneML</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">FaceLandmarkResult</span><span class="w"> </span><span class="n">output</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Run the model</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">landmark_detector</span><span class="p">.</span><span class="n">detect</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">landmark_detector</span><span class="p">.</span><span class="n">detect</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">landmark_detector</span><span class="p">.</span><span class="n">detect</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">landmark_detector</span><span class="p">.</span><span class="n">detect</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>And get the output</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">FaceLandmark106</span><span class="w"> </span><span class="n">landmarks</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">FaceLandmark106</span><span class="w"> </span><span class="n">landmarks</span><span class="p">;</span>
 
-<span class="n">output</span><span class="p">.</span><span class="n">get_landmarks</span><span class="p">(</span><span class="n">landmarks</span><span class="p">);</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">get_return_status</span><span class="p">();</span><span class="w"></span>
+<span class="n">output</span><span class="p">.</span><span class="n">get_landmarks</span><span class="p">(</span><span class="n">landmarks</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">.</span><span class="n">get_return_status</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>

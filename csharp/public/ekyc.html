@@ -39,7 +39,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="C# Utils API" href="utils.html" />
+    <link rel="next" title="C# Liveness PAD API" href="liveness_pad.html" />
     <link rel="prev" title="C# Challenge Response API" href="challenge_response.html" /> 
 </head>
 
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -126,6 +132,14 @@
 <p><span class="caption-text">Golang Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../go/index.html">Golang Examples</a></li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -205,18 +219,20 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError7DisposeEv">
-<span id="_CPPv3N19PhonyNameDueToError7DisposeEv"></span><span id="_CPPv2N19PhonyNameDueToError7DisposeEv"></span><span id="PhonyNameDueToError::Dispose"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_ops_1a0b4058663884c5b30eeb95776bc1aab5"></span>void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError7DisposeEv"></span><span id="_CPPv2N19PhonyNameDueToError7DisposeEv"></span><span id="PhonyNameDueToError::Dispose"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_ops_1a0b4058663884c5b30eeb95776bc1aab5"></span><em class="property">inline</em> void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N19PhonyNameDueToError7EKYCOpsEbb">
-<span id="_CPPv3N19PhonyNameDueToError7EKYCOpsEbb"></span><span id="_CPPv2N19PhonyNameDueToError7EKYCOpsEbb"></span><span id="PhonyNameDueToError::EKYCOps__b.b"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_ops_1a1892bbe67ab22938b3ebddb622b3214d"></span><code class="sig-name descname">EKYCOps</code><span class="sig-paren">(</span>bool <em>blur_check</em>, bool <em>pad_check</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N19PhonyNameDueToError7EKYCOpsEbbbb">
+<span id="_CPPv3N19PhonyNameDueToError7EKYCOpsEbbbb"></span><span id="_CPPv2N19PhonyNameDueToError7EKYCOpsEbbbb"></span><span id="PhonyNameDueToError::EKYCOps__b.b.b.b"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_ops_1a0545269c1474e1389f42d809cd214888"></span><em class="property">inline</em> <code class="sig-name descname">EKYCOps</code><span class="sig-paren">(</span>bool <em>blur_check</em>, bool <em>face_blur_check</em>, bool <em>pad_check</em>, bool <em>pose_check</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbbbb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct an EKYCOps object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">blur_check</span></code>: whether to run blur check. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">face_blur_check</span></code>: whether to run face blur check. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pad_check</span></code>: whether to run digital and paper pad checks. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pose_check</span></code>: whether to run face pose check. </p></li>
 </ul>
 </dd>
 </dl>
@@ -233,13 +249,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1ab80b8277b91c23169cf56bc4b1fa353d"></span>void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1ab80b8277b91c23169cf56bc4b1fa353d"></span><em class="property">inline</em> void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError4EKYCE14LicenseManager">
-<span id="_CPPv3N19PhonyNameDueToError4EKYCE14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1aa5e588291ad619ee3dac246d7d764988"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError4EKYCE14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1aa5e588291ad619ee3dac246d7d764988"></span><em class="property">inline</em> <code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct an EKYC object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -252,7 +268,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager">
-<span id="_CPPv3N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__FaceDetector.FaceEmbedder.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1ac83130d512719e98514118f90a3db690"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_detector.html#_CPPv4N19PhonyNameDueToError12FaceDetectorE14LicenseManager" title="PhonyNameDueToError::FaceDetector">FaceDetector</a> <em>face_detector</em>, <a class="reference internal" href="face_embedder.html#_CPPv4N19PhonyNameDueToError12FaceEmbedderE14LicenseManager" title="PhonyNameDueToError::FaceEmbedder">FaceEmbedder</a> <em>face_embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__FaceDetector.FaceEmbedder.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1ac83130d512719e98514118f90a3db690"></span><em class="property">inline</em> <code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_detector.html#_CPPv4N19PhonyNameDueToError12FaceDetectorE14LicenseManager" title="PhonyNameDueToError::FaceDetector">FaceDetector</a> <em>face_detector</em>, <a class="reference internal" href="face_embedder.html#_CPPv4N19PhonyNameDueToError12FaceEmbedderE14LicenseManager" title="PhonyNameDueToError::FaceEmbedder">FaceEmbedder</a> <em>face_embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct an EKYC object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -267,7 +283,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager">
-<span id="_CPPv3N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__FaceEmbedder.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1a93d43eb3ef126aa0fb746289aee6e191"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_embedder.html#_CPPv4N19PhonyNameDueToError12FaceEmbedderE14LicenseManager" title="PhonyNameDueToError::FaceEmbedder">FaceEmbedder</a> <em>face_embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__FaceEmbedder.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1a93d43eb3ef126aa0fb746289aee6e191"></span><em class="property">inline</em> <code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_embedder.html#_CPPv4N19PhonyNameDueToError12FaceEmbedderE14LicenseManager" title="PhonyNameDueToError::FaceEmbedder">FaceEmbedder</a> <em>face_embedder</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE12FaceEmbedder14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct an EKYC object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -281,7 +297,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager">
-<span id="_CPPv3N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__FaceDetector.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1abd3ce828fab056e02740f1f80e5ce729"></span><code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_detector.html#_CPPv4N19PhonyNameDueToError12FaceDetectorE14LicenseManager" title="PhonyNameDueToError::FaceDetector">FaceDetector</a> <em>face_detector</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager"></span><span id="_CPPv2N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager"></span><span id="PhonyNameDueToError::EKYC__FaceDetector.LicenseManager"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1abd3ce828fab056e02740f1f80e5ce729"></span><em class="property">inline</em> <code class="sig-name descname">EKYC</code><span class="sig-paren">(</span><a class="reference internal" href="face_detector.html#_CPPv4N19PhonyNameDueToError12FaceDetectorE14LicenseManager" title="PhonyNameDueToError::FaceDetector">FaceDetector</a> <em>face_detector</em>, <a class="reference internal" href="license_manager.html#_CPPv4N19PhonyNameDueToError14LicenseManagerEv" title="PhonyNameDueToError::LicenseManager">LicenseManager</a> <em>manager</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4EKYCE12FaceDetector14LicenseManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct an EKYC object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -294,19 +310,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N19PhonyNameDueToError8GetUsageEv">
-<span id="_CPPv3N19PhonyNameDueToError8GetUsageEv"></span><span id="_CPPv2N19PhonyNameDueToError8GetUsageEv"></span><span id="PhonyNameDueToError::GetUsage"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1a7ffaaa3e312262584baedc869d995448"></span>UsageReport <code class="sig-name descname">GetUsage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError8GetUsageEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get usage report. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>an instance of UsageReport. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps">
-<span id="_CPPv3N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps"></span><span id="_CPPv2N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps"></span><span id="PhonyNameDueToError::Run__Image.Image.EKYCOps.EKYCOps"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1a8281df0684d5a7be3812fb95697336bd"></span>EKYCResult <code class="sig-name descname">Run</code><span class="sig-paren">(</span>Image <em>image1</em>, Image <em>image2</em>, <a class="reference internal" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbb" title="PhonyNameDueToError::EKYCOps">EKYCOps</a> <em>image1_ops</em>, <a class="reference internal" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbb" title="PhonyNameDueToError::EKYCOps">EKYCOps</a> <em>image2_ops</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps"></span><span id="_CPPv2N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps"></span><span id="PhonyNameDueToError::Run__Image.Image.EKYCOps.EKYCOps"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1a8281df0684d5a7be3812fb95697336bd"></span><em class="property">inline</em> EKYCResult <code class="sig-name descname">Run</code><span class="sig-paren">(</span>Image <em>image1</em>, Image <em>image2</em>, <a class="reference internal" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbbbb" title="PhonyNameDueToError::EKYCOps">EKYCOps</a> <em>image1_ops</em>, <a class="reference internal" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbbbb" title="PhonyNameDueToError::EKYCOps">EKYCOps</a> <em>image2_ops</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOps" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Run EKYC pipeline. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>EKYCResult</strong>. </p>
@@ -316,6 +321,25 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">image2</span></code>: image2, an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image1_ops</span></code>: EKYCOps for image1. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image2_ops</span></code>: EKYCOps for image2. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOpsf">
+<span id="_CPPv3N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOpsf"></span><span id="_CPPv2N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOpsf"></span><span id="PhonyNameDueToError::Run__Image.Image.EKYCOps.EKYCOps.float"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_1a95b5de73a970ece48b8516953ff59586"></span><em class="property">inline</em> EKYCResult <code class="sig-name descname">Run</code><span class="sig-paren">(</span>Image <em>image1</em>, Image <em>image2</em>, <a class="reference internal" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbbbb" title="PhonyNameDueToError::EKYCOps">EKYCOps</a> <em>image1_ops</em>, <a class="reference internal" href="#_CPPv4N19PhonyNameDueToError7EKYCOpsEbbbb" title="PhonyNameDueToError::EKYCOps">EKYCOps</a> <em>image2_ops</em>, float <em>same_person_dist_threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError3RunE5Image5Image7EKYCOps7EKYCOpsf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Run EKYC pipeline. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>EKYCResult</strong>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">image1</span></code>: image1, an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image2</span></code>: image2, an instance of <strong><a class="reference internal" href="../common/face_struct.html#class_one_m_l_1_1_face_1_1_image"><span class="std std-ref">Image</span></a></strong>. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image1_ops</span></code>: EKYCOps for image1. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image2_ops</span></code>: EKYCOps for image2. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">same_person_dist_threshold</span></code>: same person distance threshold </p></li>
 </ul>
 </dd>
 </dl>
@@ -332,13 +356,13 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt>
-<span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1addedfba6b0142eff490e2592df07c52f"></span>void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1addedfba6b0142eff490e2592df07c52f"></span><em class="property">inline</em> void <code class="sig-name descname">Dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Gracefully destroy the object and free memory. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError11GetDistanceEv">
-<span id="_CPPv3N19PhonyNameDueToError11GetDistanceEv"></span><span id="_CPPv2N19PhonyNameDueToError11GetDistanceEv"></span><span id="PhonyNameDueToError::GetDistance"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a37650bfcd19ad0ab161b450caf98138f"></span>float <code class="sig-name descname">GetDistance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError11GetDistanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError11GetDistanceEv"></span><span id="_CPPv2N19PhonyNameDueToError11GetDistanceEv"></span><span id="PhonyNameDueToError::GetDistance"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a37650bfcd19ad0ab161b450caf98138f"></span><em class="property">inline</em> float <code class="sig-name descname">GetDistance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError11GetDistanceEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get distance between image1 and image2. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>float </p>
@@ -349,7 +373,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError12IsSamePersonEv">
-<span id="_CPPv3N19PhonyNameDueToError12IsSamePersonEv"></span><span id="_CPPv2N19PhonyNameDueToError12IsSamePersonEv"></span><span id="PhonyNameDueToError::IsSamePerson"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1aad2d54a3b0c1a7c2793d0c747dfd906d"></span>bool <code class="sig-name descname">IsSamePerson</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12IsSamePersonEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError12IsSamePersonEv"></span><span id="_CPPv2N19PhonyNameDueToError12IsSamePersonEv"></span><span id="PhonyNameDueToError::IsSamePerson"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1aad2d54a3b0c1a7c2793d0c747dfd906d"></span><em class="property">inline</em> bool <code class="sig-name descname">IsSamePerson</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12IsSamePersonEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return whether the two input images are the same person. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>bool </p>
@@ -360,7 +384,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError15GetReturnStatusEv">
-<span id="_CPPv3N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="_CPPv2N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="PhonyNameDueToError::GetReturnStatus"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1abafa2aed1f3e8067c2b4720c8b6438e9"></span>int <code class="sig-name descname">GetReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="_CPPv2N19PhonyNameDueToError15GetReturnStatusEv"></span><span id="PhonyNameDueToError::GetReturnStatus"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1abafa2aed1f3e8067c2b4720c8b6438e9"></span><em class="property">inline</em> int <code class="sig-name descname">GetReturnStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError15GetReturnStatusEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get return status. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>int </p>
@@ -371,7 +395,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError9GetBBoxesEv">
-<span id="_CPPv3N19PhonyNameDueToError9GetBBoxesEv"></span><span id="_CPPv2N19PhonyNameDueToError9GetBBoxesEv"></span><span id="PhonyNameDueToError::GetBBoxes"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a834f7e6d2712d6e37dcfe9608e6b3d2b"></span>BBoxList <code class="sig-name descname">GetBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9GetBBoxesEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError9GetBBoxesEv"></span><span id="_CPPv2N19PhonyNameDueToError9GetBBoxesEv"></span><span id="PhonyNameDueToError::GetBBoxes"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a834f7e6d2712d6e37dcfe9608e6b3d2b"></span><em class="property">inline</em> BBoxList <code class="sig-name descname">GetBBoxes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9GetBBoxesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the image1 and image2 cropped face BBox objects. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>BBoxList</strong>. </p>
@@ -381,8 +405,19 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv4N19PhonyNameDueToError13GetBBoxScoresEv">
+<span id="_CPPv3N19PhonyNameDueToError13GetBBoxScoresEv"></span><span id="_CPPv2N19PhonyNameDueToError13GetBBoxScoresEv"></span><span id="PhonyNameDueToError::GetBBoxScores"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a9d262c582ef67d1a9813718b426eec4c"></span><em class="property">inline</em> FloatList <code class="sig-name descname">GetBBoxScores</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError13GetBBoxScoresEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the image1 and image2 cropped face BBox scores. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>an instance of <strong>FloatList</strong>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError12GetLandmarksEv">
-<span id="_CPPv3N19PhonyNameDueToError12GetLandmarksEv"></span><span id="_CPPv2N19PhonyNameDueToError12GetLandmarksEv"></span><span id="PhonyNameDueToError::GetLandmarks"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a4d0eecb5e73252c309c749bfa99fc566"></span>Landmark5List <code class="sig-name descname">GetLandmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12GetLandmarksEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError12GetLandmarksEv"></span><span id="_CPPv2N19PhonyNameDueToError12GetLandmarksEv"></span><span id="PhonyNameDueToError::GetLandmarks"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1a4d0eecb5e73252c309c749bfa99fc566"></span><em class="property">inline</em> Landmark5List <code class="sig-name descname">GetLandmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12GetLandmarksEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the image1 and image2 cropped face FaceLandmark5 objects. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>Landmark5List</strong>. </p>
@@ -393,7 +428,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N19PhonyNameDueToError12GetFacePosesEv">
-<span id="_CPPv3N19PhonyNameDueToError12GetFacePosesEv"></span><span id="_CPPv2N19PhonyNameDueToError12GetFacePosesEv"></span><span id="PhonyNameDueToError::GetFacePoses"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1ad8c4a187e9d7ff40c9eb3ee5d35f7fdf"></span>FacePoseList <code class="sig-name descname">GetFacePoses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12GetFacePosesEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N19PhonyNameDueToError12GetFacePosesEv"></span><span id="_CPPv2N19PhonyNameDueToError12GetFacePosesEv"></span><span id="PhonyNameDueToError::GetFacePoses"></span><span class="target" id="class_one_m_l_1_1_face_1_1_e_k_y_c_result_1ad8c4a187e9d7ff40c9eb3ee5d35f7fdf"></span><em class="property">inline</em> FacePoseList <code class="sig-name descname">GetFacePoses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12GetFacePosesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the image1 and image2 cropped face Pose values. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>an instance of <strong>FacePostList</strong>. </p>
@@ -446,6 +481,11 @@
 <span id="_CPPv3N10EKYCStatus17FaceBlurCheckFailE"></span><span id="_CPPv2N10EKYCStatus17FaceBlurCheckFailE"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8ab3f70b868e7bb93979ef0795625e987d"></span><em class="property">enumerator </em><code class="sig-name descname">FaceBlurCheckFail</code><a class="headerlink" href="#_CPPv4N10EKYCStatus17FaceBlurCheckFailE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10EKYCStatus14FaceNotFrontalE">
+<span id="_CPPv3N10EKYCStatus14FaceNotFrontalE"></span><span id="_CPPv2N10EKYCStatus14FaceNotFrontalE"></span><span class="target" id="namespace_one_m_l_1_1_face_1aa67689f53952ca77ddbd33e355fe39d8a6e517f514364688c6c68439a2709747d"></span><em class="property">enumerator </em><code class="sig-name descname">FaceNotFrontal</code><a class="headerlink" href="#_CPPv4N10EKYCStatus14FaceNotFrontalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>
@@ -457,7 +497,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="utils.html" class="btn btn-neutral float-right" title="C# Utils API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="liveness_pad.html" class="btn btn-neutral float-right" title="C# Liveness PAD API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="challenge_response.html" class="btn btn-neutral float-left" title="C# Challenge Response API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

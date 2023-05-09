@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v3.11.1
+                v4.5.0
               </div>
             
           
@@ -89,7 +89,13 @@
               
             
             
-              <p><span class="caption-text">C++ Documentation</span></p>
+              <p><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../folder.html">Project Structure</a></li>
+</ul>
+<p><span class="caption-text">C++ Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html">C++ APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp/index.html#c-data-structures">C++ Data Structures</a></li>
@@ -124,6 +130,14 @@
 <li class="toctree-l2"><a class="reference internal" href="ekyc.html">Golang EKYC Example</a></li>
 </ul>
 </li>
+</ul>
+<p><span class="caption-text">Coverage Report</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coverage/index.html">Coverage</a></li>
+</ul>
+<p><span class="caption-text">Version History</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
             
@@ -196,50 +210,50 @@
   <section id="golang-face-embedder-example">
 <span id="go-face-embedder-example"></span><h1>Golang Face Embedder Example<a class="headerlink" href="#golang-face-embedder-example" title="Permalink to this headline">¶</a></h1>
 <p>Initialize face embedder model</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="nx">embedder</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewFaceEmbedder</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span>
+<span class="nx">embedder</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewFaceEmbedder</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Initialize face embedder model with licensing</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="nx">licenseManager</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewLicenseManager</span><span class="p">()</span><span class="w"></span>
-<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">SetKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">ActivateKey</span><span class="p">()</span><span class="w"></span>
-<span class="nx">embedder</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewFaceEmbedder</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;oneml/face&quot;</span><span class="p">)</span>
+<span class="nx">licenseManager</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewLicenseManager</span><span class="p">()</span>
+<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">SetKey</span><span class="p">(</span><span class="s">&quot;LICENSE_KEY_VALUE_HERE&quot;</span><span class="p">)</span>
+<span class="nx">licenseManager</span><span class="p">.</span><span class="nx">ActivateKey</span><span class="p">()</span>
+<span class="nx">embedder</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewFaceEmbedder</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">utils</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">utils</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Initialize oneML’s Utils with licensing</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">utils</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">utils</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">NewUtils</span><span class="p">(</span><span class="nx">licenseManager</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Read input as oneML’s Image</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">img</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">ReadImageCV</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">img</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">utils</span><span class="p">.</span><span class="nx">ReadImageCV</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run the model</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">results</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">embedder</span><span class="p">.</span><span class="nx">Embed</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">results</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">embedder</span><span class="p">.</span><span class="nx">Embed</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">embedder</span><span class="p">.</span><span class="nx">Embed</span><span class="p">(</span><span class="nx">img</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">embedder</span><span class="p">.</span><span class="nx">Embed</span><span class="p">(</span><span class="nx">img</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To enable flipped image embedding, run</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">embedder</span><span class="p">.</span><span class="nx">Embed</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">embedder</span><span class="p">.</span><span class="nx">Embed</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>And get the output</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">emb</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetEmbedding</span><span class="p">()</span><span class="w"></span>
-<span class="nx">status</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetReturnStatus</span><span class="p">()</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="nx">emb</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetEmbedding</span><span class="p">()</span>
+<span class="nx">status</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">GetReturnStatus</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Cleanup</p>
-<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteFaceEmbedder</span><span class="p">(</span><span class="nx">embedder</span><span class="p">)</span><span class="w"></span>
-<span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteUtils</span><span class="p">(</span><span class="nx">utils</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-golang notranslate"><div class="highlight"><pre><span></span><span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteFaceEmbedder</span><span class="p">(</span><span class="nx">embedder</span><span class="p">)</span>
+<span class="k">defer</span><span class="w"> </span><span class="nx">face</span><span class="p">.</span><span class="nx">DeleteUtils</span><span class="p">(</span><span class="nx">utils</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
