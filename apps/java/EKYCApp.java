@@ -32,7 +32,7 @@ public class EKYCApp {
         Image image1 = utils.readImageCV(path1);
         Image image2 = utils.readImageCV(path2);
 
-        EKYCOps ops = new EKYCOps(true, true);
+        EKYCOps ops = new EKYCOps(true);
         EKYCResult result = ekyc.run(image1, image2, ops, ops);
 
         BBoxList boxes = result.getBBoxes();
@@ -59,9 +59,6 @@ public class EKYCApp {
         
         System.out.println("Face 2");
         printResult(bbox2, lm2, pose2);
-
-        UsageReport report = ekyc.getUsage();
-        report.toLog();
 
         ekyc.delete();
         utils.delete();

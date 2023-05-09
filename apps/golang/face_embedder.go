@@ -37,6 +37,4 @@ func main() {
 	}
 	fmt.Printf("Embedding sum: %.5f\n", sum)
 
-	report := faceEmbedder.GetUsage()
-	report.ToLog()
 }

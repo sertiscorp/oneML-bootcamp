@@ -67,9 +67,6 @@ def main():
     print("Face 2")
     print_face_result(bbox2, pose2, lm2)
 
-    report = ekyc.get_usage()
-    report.to_log()
-
 
 if __name__ == "__main__":
     main()

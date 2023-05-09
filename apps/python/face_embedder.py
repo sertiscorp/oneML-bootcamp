@@ -32,9 +32,6 @@ def main():
     )
     print("Embedding sum: " + "".join("{:.5f}".format(sum(result.get_embedding()))))
 
-    report = embedder.get_usage()
-    report.to_log()
-
 
 if __name__ == "__main__":
     main()

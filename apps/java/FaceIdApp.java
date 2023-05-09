@@ -103,9 +103,6 @@ public class FaceIdApp {
         IdList idList = faceId.getIds();
         System.out.println("Gallery size: " + idList.size());
 
-        UsageReport report = faceId.getUsage();
-        report.toLog();
-
         embedder.delete();
         faceId.delete();
         utils.delete();
