@@ -31,8 +31,6 @@ class VehicleDetectorApp {
                 Console.WriteLine(print);
             }
 
-            UsageReport report = detector.GetUsage();
-            report.ToLog();
         }
     }
 }

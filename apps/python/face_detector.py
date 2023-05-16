@@ -60,9 +60,6 @@ def main():
                 )
             )
 
-    report = detector.get_usage()
-    report.to_log()
-
 
 if __name__ == "__main__":
     main()

@@ -41,6 +41,4 @@ func main() {
 		}
 	}
 
-	report := faceDetector.GetUsage()
-	report.ToLog()
 }

@@ -21,7 +21,7 @@ public class FaceDetectorApp {
 
         BBoxList boxes = result.getBBoxes();
         Landmark5List landmarks = result.getLandmarks();
-        ScoreList scores = result.getScores();
+        FloatList scores = result.getScores();
         FacePoseList poses = result.getPoses();
 
         for (int i = 0; i < result.getSize(); i++) {
@@ -39,9 +39,6 @@ public class FaceDetectorApp {
                 System.out.println(String.format("Landmark %d: (%.6f, %.6f)", j, landmark.getX().get(j), landmark.getY().get(j)));
             }
         }
-
-        UsageReport report = detector.getUsage();
-        report.toLog();
 
         detector.delete();
         utils.delete();

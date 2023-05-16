@@ -28,9 +28,6 @@ def main():
     print("Spoof probability: " + "".join("{:.6f}".format(result.get_spoof_prob())))
     print("Spoof classification: " + str(result.is_spoof()))
 
-    report = pad_rgb.get_usage()
-    report.to_log()
-
     # PAD PAPER
     img = utils.read_image_cv(
         os.path.join(assets_path, "pad-paper-set/spoof/1.jpg")
@@ -41,9 +38,6 @@ def main():
     print("Status: " + str(result.get_return_status()))
     print("Spoof probability: " + "".join("{:.6f}".format(result.get_spoof_prob())))
     print("Spoof classification: " + str(result.is_spoof()))
-
-    report = pad_paper.get_usage()
-    report.to_log()
 
 
 if __name__ == "__main__":

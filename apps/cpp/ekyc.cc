@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 
   // RUN
   oneML::face::EKYCResult output;
-  oneML::face::EKYCOps ops{true, true};
+  oneML::face::EKYCOps ops{true};
   ekyc.run(img1, img2, ops, ops, output);
 
   oneML::face::Pose pose1;
@@ -56,6 +56,4 @@ int main(int argc, char** argv) {
   std::cout << "Pose: " << pose2 << std::endl;
   std::cout << "Landmarks: " << landmarks2 << std::endl;
 
-  oneML::UsageReport report = ekyc.get_usage();
-  report.to_log();
 }

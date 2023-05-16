@@ -105,6 +105,4 @@ int main(int argc, char** argv) {
   face_id.get_ids(ids);
   std::cout << "Gallery size: " << ids.size() << std::endl;
 
-  oneML::UsageReport report = face_id.get_usage();
-  report.to_log();
 }

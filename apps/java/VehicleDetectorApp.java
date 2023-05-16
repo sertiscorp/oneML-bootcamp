@@ -20,7 +20,7 @@ public class VehicleDetectorApp {
 
         System.out.println("Vehicles: " + result.getSize());
 
-        ScoreList scores = result.getScores();
+        FloatList scores = result.getScores();
         BBoxList bboxes = result.getBBoxes();
 
         for (int i = 0; i < result.getSize(); i++) {
@@ -31,9 +31,6 @@ public class VehicleDetectorApp {
             String out = String.format("BBox[top=%.6f,left=%.6f,bottom=%.6f,right=%.6f]", box.getTop(), box.getLeft(), box.getBottom(), box.getRight());
             System.out.println(out);
         }
-
-        UsageReport report = detector.getUsage();
-        report.toLog();
 
         detector.delete();
         utils.delete();
