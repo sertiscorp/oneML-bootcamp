@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.11.0] - 2023-05-16
+### Changed
+- Update oneML artifacts to latest version -> [61948829](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/61948829f2aebdb3ab239df84a3b135de78378d0)
+
+### Fixed
+- CI failure because of new curl version -> [2e2ce546](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/2e2ce5466f13b2b0bae14e2218c8d44ca00ddb77)
+
 ## [0.10.1] - 2023-01-17
 ### Fixed
 - Build artifact download URLs -> [1aee8f63](https://gitlab.com/sertiscorp/mle/edge/oneml-bootcamp/-/commit/1aee8f631f465f43bc89beae35ee1e27f781f51a)
